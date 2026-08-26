@@ -1,6 +1,6 @@
-# Generated data — rebuild with `python setup_all.py`, never commit
-02_data/raw/
-02_data/_state/
+# Generated live-feed data — committed for the GitHub Actions feed
+# 02_data/raw/
+# 02_data/_state/
 02_data/curated/*.parquet
 
 # Python
@@ -17,3 +17,7 @@ __pycache__/
 # OS
 Thumbs.db
 .DS_Store
+# Frozen history � reproducible locally, not stored in GitHub
+02_data/raw/**/part-000.parquet
+
+# Keep live feed + watermark tracked
