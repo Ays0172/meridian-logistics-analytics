@@ -1,0 +1,49 @@
+ChargeCode,ChargeName,ChargeCategory,RevenueOrCost,IsAccessorial,IsPassThrough,IsSurcharge,IsDemurrageOrDetention,ChargeBasis,AppliesToMode,IsCreditNoteEligible,SortOrder,ChargeTypeKey
+#NA,Unknown,#NA,#NA,0,0,0,0,#NA,#NA,0,999,-1
+OFR,Ocean Freight,Base Freight,Revenue,0,0,0,0,Per Container,Ocean,1,1,1
+BAF,Bunker Adjustment Factor,Fuel Surcharge,Revenue,1,0,1,0,Per Container,Ocean,1,2,2
+THC,Terminal Handling Charge,Terminal,Both,1,1,0,0,Per Container,Ocean,1,3,3
+DEM,Demurrage,Detention & Demurrage,Revenue,1,0,0,1,Per Day,Ocean,1,4,4
+DET,Detention,Detention & Demurrage,Revenue,1,0,0,1,Per Day,Ocean,1,5,5
+CGS,Container Guarantee Surcharge,Terminal,Cost,1,1,0,0,Per Container,Ocean,0,6,6
+DOC,Documentation Fee,Documentation,Revenue,1,0,0,0,Per B/L,All,1,7,7
+ISPS,ISPS Security Fee,Security,Both,1,1,0,0,Per Container,Ocean,1,8,8
+VGM,VGM Declaration Fee,Documentation,Revenue,1,0,0,0,Per Container,Ocean,1,9,9
+LSS,Low Sulphur Surcharge,Fuel Surcharge,Revenue,1,0,1,0,Per Container,Ocean,1,10,10
+PSS,Peak Season Surcharge,Other,Revenue,1,0,1,0,Per Container,Ocean,1,11,11
+CAF,Currency Adjustment Factor,Other,Revenue,1,0,1,0,Per Container,Ocean,1,12,12
+EBS,Emergency Bunker Surcharge,Fuel Surcharge,Revenue,1,0,1,0,Per Container,Ocean,1,13,13
+WRS,War Risk Surcharge,Security,Revenue,1,0,1,0,Per Container,Ocean,1,14,14
+AMS,AMS Filing Fee,Customs,Both,1,1,0,0,Per B/L,Ocean,0,15,15
+ENS,ENS Filing Fee,Customs,Both,1,1,0,0,Per B/L,Ocean,0,16,16
+CFS,CFS Handling Fee,Warehousing,Both,1,1,0,0,Per CBM,Warehouse,1,17,17
+DRY,Dry Container Usage Fee,Equipment,Cost,1,0,0,0,Per Container,Ocean,0,18,18
+RAI,Rail Haulage Charge,Inland,Both,0,0,0,0,Per Container,Rail,1,19,19
+WHS,Warehousing Storage Fee,Warehousing,Revenue,1,0,0,0,Per Day,Warehouse,1,20,20
+PIC,Container Pickup Charge,Inland,Both,1,0,0,0,Per Container,Road,1,21,21
+AIR,Air Freight,Base Freight,Revenue,0,0,0,0,Per KG,Air,1,22,22
+FSC,Air Fuel Surcharge,Fuel Surcharge,Revenue,1,0,1,0,Per KG,Air,1,23,23
+SSC,Security Surcharge,Security,Revenue,1,0,1,0,Per KG,Air,1,24,24
+CUS,Customs Clearance Fee,Customs,Both,1,1,0,0,Per Shipment,All,1,25,25
+INS,Insurance Premium,Insurance,Revenue,1,0,0,0,Per Shipment,All,0,26,26
+ERS,Empty Repositioning Surcharge,Equipment,Cost,1,0,1,0,Per Container,Ocean,0,27,27
+GRI,General Rate Increase,Base Freight,Revenue,0,0,1,0,Per Container,Ocean,1,28,28
+CCF,Container Cleaning Fee,Equipment,Cost,1,0,0,0,Per Container,Ocean,0,29,29
+CDF,Chassis Usage Fee,Equipment,Both,1,0,0,0,Per Day,Road,1,30,30
+REP,Container Repair Fee,Equipment,Cost,1,0,0,0,Per Container,Ocean,0,31,31
+PLF,Port Lift Fee,Terminal,Cost,1,1,0,0,Per Container,Ocean,0,32,32
+WFG,Wharfage Fee,Terminal,Both,1,1,0,0,Per TEU,Ocean,1,33,33
+PCS,Panama Canal Surcharge,Other,Revenue,1,0,1,0,Per Container,Ocean,1,34,34
+SCS,Suez Canal Surcharge,Other,Revenue,1,0,1,0,Per Container,Ocean,1,35,35
+GOH,Genset Monitoring Fee,Equipment,Cost,1,0,0,0,Per Day,Ocean,0,36,36
+REE,Reefer Plug-in Fee,Equipment,Both,1,0,0,0,Per Day,Ocean,1,37,37
+HAZ,Hazmat Handling Fee,Other,Both,1,1,0,0,Per Container,All,1,38,38
+OWS,Overweight Surcharge,Other,Revenue,1,0,1,0,Per Container,Ocean,1,39,39
+LOLO,Lift On/Lift Off Charge,Terminal,Cost,1,1,0,0,Per Container,Ocean,0,40,40
+TRK,Drayage/Trucking Charge,Inland,Both,0,0,0,0,Per Container,Road,1,41,41
+FUM,Fumigation Fee,Other,Both,1,1,0,0,Per Container,All,0,42,42
+SEA,Seal Fee,Documentation,Cost,1,1,0,0,Per Container,Ocean,0,43,43
+BLF,Bill of Lading Fee,Documentation,Revenue,1,0,0,0,Per B/L,All,1,44,44
+AMF,Advance Manifest Fee,Customs,Cost,1,1,0,0,Per Shipment,All,0,45,45
+EXA,Export Customs Declaration,Customs,Both,1,1,0,0,Per Shipment,All,1,46,46
+CRN,Credit Note Adjustment,Other,Revenue,0,0,0,0,Flat,All,1,47,47

@@ -1,0 +1,16 @@
+{
+  "scale": "prod",
+  "seconds": {
+    "FactExchangeRate": 0.4,
+    "FactBooking": 6.3,
+    "FactShipment": 6.0,
+    "FactShipmentMilestone": 7.8,
+    "FactPortCall": 1.9,
+    "FactContainerMove": 14.9,
+    "FactFreightCharge": 39.5,
+    "FactTransportLeg": 6.0,
+    "FactWarehouseTask": 10.4,
+    "FactInventorySnapshot": 4.7,
+    "FactTarget": 0.8
+  }
+}

@@ -1,0 +1,901 @@
+HsCode6,HsCode4,HsCode2,HsChapterName,HsHeadingName,CommodityName,CommodityGroup,IsDangerousGoods,ImdgClass,UnNumber,IsTemperatureControlled,RequiredTempC,IsHighValue,AvgDensityKgPerCbm,TypicalStuffFactorTeu,CommodityKey
+#NA,#NA,#NA,Unknown,Unknown,Unknown,#NA,0,#NA,#NA,0,,0,0.0,0.0,-1
+020201,0202,02,Meat and Edible Meat Offal,Frozen Bovine Meat,Frozen Bovine Meat - Grade A,Perishable,0,#NA,#NA,1,-18.0,0,262.0,30.0,1
+020202,0202,02,Meat and Edible Meat Offal,Frozen Bovine Meat,Frozen Bovine Meat - Grade B,Perishable,0,#NA,#NA,1,-18.0,0,269.8,30.0,2
+020203,0202,02,Meat and Edible Meat Offal,Frozen Bovine Meat,Frozen Bovine Meat - Bulk,Perishable,0,#NA,#NA,1,-18.0,0,296.0,30.0,3
+020204,0202,02,Meat and Edible Meat Offal,Frozen Bovine Meat,Frozen Bovine Meat - Retail Pack,Perishable,0,#NA,#NA,1,-18.0,0,278.3,30.0,4
+020205,0202,02,Meat and Edible Meat Offal,Frozen Bovine Meat,Frozen Bovine Meat - Industrial Grade,Perishable,0,#NA,#NA,1,-18.0,0,339.3,30.0,5
+020206,0202,02,Meat and Edible Meat Offal,Frozen Bovine Meat,Frozen Bovine Meat - Premium,Perishable,0,#NA,#NA,1,-18.0,0,284.3,30.0,6
+020207,0202,02,Meat and Edible Meat Offal,Frozen Bovine Meat,Frozen Bovine Meat - Standard,Perishable,0,#NA,#NA,1,-18.0,0,266.0,30.0,7
+020208,0202,02,Meat and Edible Meat Offal,Frozen Bovine Meat,Frozen Bovine Meat - Economy,Perishable,0,#NA,#NA,1,-18.0,0,346.0,30.0,8
+020209,0202,02,Meat and Edible Meat Offal,Frozen Bovine Meat,Frozen Bovine Meat - Type I,Perishable,0,#NA,#NA,1,-18.0,0,284.9,30.0,9
+020210,0202,02,Meat and Edible Meat Offal,Frozen Bovine Meat,Frozen Bovine Meat - Type II,Perishable,0,#NA,#NA,1,-18.0,0,300.7,30.0,10
+020211,0202,02,Meat and Edible Meat Offal,Frozen Bovine Meat,Frozen Bovine Meat - Type III,Perishable,0,#NA,#NA,1,-18.0,0,346.8,30.0,11
+020212,0202,02,Meat and Edible Meat Offal,Frozen Bovine Meat,Frozen Bovine Meat - Class 1,Perishable,0,#NA,#NA,1,-18.0,0,264.1,30.0,12
+020213,0202,02,Meat and Edible Meat Offal,Frozen Bovine Meat,Frozen Bovine Meat - Class 2,Perishable,0,#NA,#NA,1,-18.0,0,313.3,30.0,13
+020214,0202,02,Meat and Edible Meat Offal,Frozen Bovine Meat,Frozen Bovine Meat - Export Grade,Perishable,0,#NA,#NA,1,-18.0,0,340.3,30.0,14
+020215,0202,02,Meat and Edible Meat Offal,Frozen Bovine Meat,Frozen Bovine Meat - Domestic Grade,Perishable,0,#NA,#NA,1,-18.0,0,299.4,30.0,15
+020216,0202,02,Meat and Edible Meat Offal,Frozen Bovine Meat,Frozen Bovine Meat - Carton Pack,Perishable,0,#NA,#NA,1,-18.0,0,311.6,30.0,16
+020217,0202,02,Meat and Edible Meat Offal,Frozen Bovine Meat,Frozen Bovine Meat - Palletized,Perishable,0,#NA,#NA,1,-18.0,0,315.4,30.0,17
+020218,0202,02,Meat and Edible Meat Offal,Frozen Bovine Meat,Frozen Bovine Meat - Loose,Perishable,0,#NA,#NA,1,-18.0,0,338.5,30.0,18
+020219,0202,02,Meat and Edible Meat Offal,Frozen Bovine Meat,Frozen Bovine Meat - Refined,Perishable,0,#NA,#NA,1,-18.0,0,270.1,30.0,19
+020220,0202,02,Meat and Edible Meat Offal,Frozen Bovine Meat,Frozen Bovine Meat - Processed,Perishable,0,#NA,#NA,1,-18.0,0,303.1,30.0,20
+030301,0303,03,"Fish and Crustaceans, Molluscs",Frozen Fish,Frozen Fish - Grade A,Perishable,0,#NA,#NA,1,-20.0,0,402.9,30.0,21
+030302,0303,03,"Fish and Crustaceans, Molluscs",Frozen Fish,Frozen Fish - Grade B,Perishable,0,#NA,#NA,1,-20.0,0,420.5,30.0,22
+030303,0303,03,"Fish and Crustaceans, Molluscs",Frozen Fish,Frozen Fish - Bulk,Perishable,0,#NA,#NA,1,-20.0,0,339.2,30.0,23
+030304,0303,03,"Fish and Crustaceans, Molluscs",Frozen Fish,Frozen Fish - Retail Pack,Perishable,0,#NA,#NA,1,-20.0,0,372.2,30.0,24
+030305,0303,03,"Fish and Crustaceans, Molluscs",Frozen Fish,Frozen Fish - Industrial Grade,Perishable,0,#NA,#NA,1,-20.0,0,306.5,30.0,25
+030306,0303,03,"Fish and Crustaceans, Molluscs",Frozen Fish,Frozen Fish - Premium,Perishable,0,#NA,#NA,1,-20.0,0,426.3,30.0,26
+030307,0303,03,"Fish and Crustaceans, Molluscs",Frozen Fish,Frozen Fish - Standard,Perishable,0,#NA,#NA,1,-20.0,0,440.0,30.0,27
+030308,0303,03,"Fish and Crustaceans, Molluscs",Frozen Fish,Frozen Fish - Economy,Perishable,0,#NA,#NA,1,-20.0,0,440.8,30.0,28
+030309,0303,03,"Fish and Crustaceans, Molluscs",Frozen Fish,Frozen Fish - Type I,Perishable,0,#NA,#NA,1,-20.0,0,354.4,30.0,29
+030310,0303,03,"Fish and Crustaceans, Molluscs",Frozen Fish,Frozen Fish - Type II,Perishable,0,#NA,#NA,1,-20.0,0,347.8,30.0,30
+030311,0303,03,"Fish and Crustaceans, Molluscs",Frozen Fish,Frozen Fish - Type III,Perishable,0,#NA,#NA,1,-20.0,0,327.5,30.0,31
+030312,0303,03,"Fish and Crustaceans, Molluscs",Frozen Fish,Frozen Fish - Class 1,Perishable,0,#NA,#NA,1,-20.0,0,315.6,30.0,32
+030313,0303,03,"Fish and Crustaceans, Molluscs",Frozen Fish,Frozen Fish - Class 2,Perishable,0,#NA,#NA,1,-20.0,0,305.7,30.0,33
+030314,0303,03,"Fish and Crustaceans, Molluscs",Frozen Fish,Frozen Fish - Export Grade,Perishable,0,#NA,#NA,1,-20.0,0,404.4,30.0,34
+030315,0303,03,"Fish and Crustaceans, Molluscs",Frozen Fish,Frozen Fish - Domestic Grade,Perishable,0,#NA,#NA,1,-20.0,0,406.6,30.0,35
+030316,0303,03,"Fish and Crustaceans, Molluscs",Frozen Fish,Frozen Fish - Carton Pack,Perishable,0,#NA,#NA,1,-20.0,0,433.2,30.0,36
+030317,0303,03,"Fish and Crustaceans, Molluscs",Frozen Fish,Frozen Fish - Palletized,Perishable,0,#NA,#NA,1,-20.0,0,390.2,30.0,37
+030318,0303,03,"Fish and Crustaceans, Molluscs",Frozen Fish,Frozen Fish - Loose,Perishable,0,#NA,#NA,1,-20.0,0,374.7,30.0,38
+030319,0303,03,"Fish and Crustaceans, Molluscs",Frozen Fish,Frozen Fish - Refined,Perishable,0,#NA,#NA,1,-20.0,0,407.7,30.0,39
+030320,0303,03,"Fish and Crustaceans, Molluscs",Frozen Fish,Frozen Fish - Processed,Perishable,0,#NA,#NA,1,-20.0,0,395.5,30.0,40
+040201,0402,04,Dairy Produce; Birds' Eggs; Natural Honey,"Milk and Cream, Concentrated or Sweetened","Milk and Cream, Concentrated or Sweetened - Grade A",Perishable,0,#NA,#NA,0,,0,500.0,30.0,41
+040202,0402,04,Dairy Produce; Birds' Eggs; Natural Honey,"Milk and Cream, Concentrated or Sweetened","Milk and Cream, Concentrated or Sweetened - Grade B",Perishable,0,#NA,#NA,0,,0,522.1,30.0,42
+040203,0402,04,Dairy Produce; Birds' Eggs; Natural Honey,"Milk and Cream, Concentrated or Sweetened","Milk and Cream, Concentrated or Sweetened - Bulk",Perishable,0,#NA,#NA,0,,0,507.8,30.0,43
+040204,0402,04,Dairy Produce; Birds' Eggs; Natural Honey,"Milk and Cream, Concentrated or Sweetened","Milk and Cream, Concentrated or Sweetened - Retail Pack",Perishable,0,#NA,#NA,0,,0,535.7,30.0,44
+040205,0402,04,Dairy Produce; Birds' Eggs; Natural Honey,"Milk and Cream, Concentrated or Sweetened","Milk and Cream, Concentrated or Sweetened - Industrial Grade",Perishable,0,#NA,#NA,0,,0,588.9,30.0,45
+040206,0402,04,Dairy Produce; Birds' Eggs; Natural Honey,"Milk and Cream, Concentrated or Sweetened","Milk and Cream, Concentrated or Sweetened - Premium",Perishable,0,#NA,#NA,0,,0,538.7,30.0,46
+040207,0402,04,Dairy Produce; Birds' Eggs; Natural Honey,"Milk and Cream, Concentrated or Sweetened","Milk and Cream, Concentrated or Sweetened - Standard",Perishable,0,#NA,#NA,0,,0,512.2,30.0,47
+040208,0402,04,Dairy Produce; Birds' Eggs; Natural Honey,"Milk and Cream, Concentrated or Sweetened","Milk and Cream, Concentrated or Sweetened - Economy",Perishable,0,#NA,#NA,0,,0,553.1,30.0,48
+040209,0402,04,Dairy Produce; Birds' Eggs; Natural Honey,"Milk and Cream, Concentrated or Sweetened","Milk and Cream, Concentrated or Sweetened - Type I",Perishable,0,#NA,#NA,0,,0,577.4,30.0,49
+040210,0402,04,Dairy Produce; Birds' Eggs; Natural Honey,"Milk and Cream, Concentrated or Sweetened","Milk and Cream, Concentrated or Sweetened - Type II",Perishable,0,#NA,#NA,0,,0,516.4,30.0,50
+040211,0402,04,Dairy Produce; Birds' Eggs; Natural Honey,"Milk and Cream, Concentrated or Sweetened","Milk and Cream, Concentrated or Sweetened - Type III",Perishable,0,#NA,#NA,0,,0,577.5,30.0,51
+040212,0402,04,Dairy Produce; Birds' Eggs; Natural Honey,"Milk and Cream, Concentrated or Sweetened","Milk and Cream, Concentrated or Sweetened - Class 1",Perishable,0,#NA,#NA,0,,0,501.8,30.0,52
+040213,0402,04,Dairy Produce; Birds' Eggs; Natural Honey,"Milk and Cream, Concentrated or Sweetened","Milk and Cream, Concentrated or Sweetened - Class 2",Perishable,0,#NA,#NA,0,,0,538.9,30.0,53
+040214,0402,04,Dairy Produce; Birds' Eggs; Natural Honey,"Milk and Cream, Concentrated or Sweetened","Milk and Cream, Concentrated or Sweetened - Export Grade",Perishable,0,#NA,#NA,0,,0,525.3,30.0,54
+040215,0402,04,Dairy Produce; Birds' Eggs; Natural Honey,"Milk and Cream, Concentrated or Sweetened","Milk and Cream, Concentrated or Sweetened - Domestic Grade",Perishable,0,#NA,#NA,0,,0,574.6,30.0,55
+040216,0402,04,Dairy Produce; Birds' Eggs; Natural Honey,"Milk and Cream, Concentrated or Sweetened","Milk and Cream, Concentrated or Sweetened - Carton Pack",Perishable,0,#NA,#NA,0,,0,513.0,30.0,56
+040217,0402,04,Dairy Produce; Birds' Eggs; Natural Honey,"Milk and Cream, Concentrated or Sweetened","Milk and Cream, Concentrated or Sweetened - Palletized",Perishable,0,#NA,#NA,0,,0,577.7,30.0,57
+040218,0402,04,Dairy Produce; Birds' Eggs; Natural Honey,"Milk and Cream, Concentrated or Sweetened","Milk and Cream, Concentrated or Sweetened - Loose",Perishable,0,#NA,#NA,0,,0,598.9,30.0,58
+040219,0402,04,Dairy Produce; Birds' Eggs; Natural Honey,"Milk and Cream, Concentrated or Sweetened","Milk and Cream, Concentrated or Sweetened - Refined",Perishable,0,#NA,#NA,0,,0,561.5,30.0,59
+040220,0402,04,Dairy Produce; Birds' Eggs; Natural Honey,"Milk and Cream, Concentrated or Sweetened","Milk and Cream, Concentrated or Sweetened - Processed",Perishable,0,#NA,#NA,0,,0,504.9,30.0,60
+080301,0803,08,Edible Fruit and Nuts,"Bananas, Fresh or Dried","Bananas, Fresh or Dried - Grade A",Perishable,0,#NA,#NA,1,13.0,0,347.2,30.0,61
+080302,0803,08,Edible Fruit and Nuts,"Bananas, Fresh or Dried","Bananas, Fresh or Dried - Grade B",Perishable,0,#NA,#NA,1,13.0,0,389.0,30.0,62
+080303,0803,08,Edible Fruit and Nuts,"Bananas, Fresh or Dried","Bananas, Fresh or Dried - Bulk",Perishable,0,#NA,#NA,1,13.0,0,314.6,30.0,63
+080304,0803,08,Edible Fruit and Nuts,"Bananas, Fresh or Dried","Bananas, Fresh or Dried - Retail Pack",Perishable,0,#NA,#NA,1,13.0,0,346.8,30.0,64
+080305,0803,08,Edible Fruit and Nuts,"Bananas, Fresh or Dried","Bananas, Fresh or Dried - Industrial Grade",Perishable,0,#NA,#NA,1,13.0,0,376.1,30.0,65
+080306,0803,08,Edible Fruit and Nuts,"Bananas, Fresh or Dried","Bananas, Fresh or Dried - Premium",Perishable,0,#NA,#NA,1,13.0,0,378.2,30.0,66
+080307,0803,08,Edible Fruit and Nuts,"Bananas, Fresh or Dried","Bananas, Fresh or Dried - Standard",Perishable,0,#NA,#NA,1,13.0,0,332.2,30.0,67
+080308,0803,08,Edible Fruit and Nuts,"Bananas, Fresh or Dried","Bananas, Fresh or Dried - Economy",Perishable,0,#NA,#NA,1,13.0,0,320.7,30.0,68
+080309,0803,08,Edible Fruit and Nuts,"Bananas, Fresh or Dried","Bananas, Fresh or Dried - Type I",Perishable,0,#NA,#NA,1,13.0,0,359.2,30.0,69
+080310,0803,08,Edible Fruit and Nuts,"Bananas, Fresh or Dried","Bananas, Fresh or Dried - Type II",Perishable,0,#NA,#NA,1,13.0,0,330.2,30.0,70
+080311,0803,08,Edible Fruit and Nuts,"Bananas, Fresh or Dried","Bananas, Fresh or Dried - Type III",Perishable,0,#NA,#NA,1,13.0,0,382.4,30.0,71
+080312,0803,08,Edible Fruit and Nuts,"Bananas, Fresh or Dried","Bananas, Fresh or Dried - Class 1",Perishable,0,#NA,#NA,1,13.0,0,359.3,30.0,72
+080313,0803,08,Edible Fruit and Nuts,"Bananas, Fresh or Dried","Bananas, Fresh or Dried - Class 2",Perishable,0,#NA,#NA,1,13.0,0,366.6,30.0,73
+080314,0803,08,Edible Fruit and Nuts,"Bananas, Fresh or Dried","Bananas, Fresh or Dried - Export Grade",Perishable,0,#NA,#NA,1,13.0,0,364.6,30.0,74
+080315,0803,08,Edible Fruit and Nuts,"Bananas, Fresh or Dried","Bananas, Fresh or Dried - Domestic Grade",Perishable,0,#NA,#NA,1,13.0,0,347.5,30.0,75
+080316,0803,08,Edible Fruit and Nuts,"Bananas, Fresh or Dried","Bananas, Fresh or Dried - Carton Pack",Perishable,0,#NA,#NA,1,13.0,0,363.9,30.0,76
+080317,0803,08,Edible Fruit and Nuts,"Bananas, Fresh or Dried","Bananas, Fresh or Dried - Palletized",Perishable,0,#NA,#NA,1,13.0,0,314.5,30.0,77
+080318,0803,08,Edible Fruit and Nuts,"Bananas, Fresh or Dried","Bananas, Fresh or Dried - Loose",Perishable,0,#NA,#NA,1,13.0,0,387.2,30.0,78
+080319,0803,08,Edible Fruit and Nuts,"Bananas, Fresh or Dried","Bananas, Fresh or Dried - Refined",Perishable,0,#NA,#NA,1,13.0,0,338.8,30.0,79
+080320,0803,08,Edible Fruit and Nuts,"Bananas, Fresh or Dried","Bananas, Fresh or Dried - Processed",Perishable,0,#NA,#NA,1,13.0,0,309.5,30.0,80
+080501,0805,08,Edible Fruit and Nuts,"Citrus Fruit, Fresh or Dried","Citrus Fruit, Fresh or Dried - Grade A",Perishable,0,#NA,#NA,1,7.0,0,419.4,30.0,81
+080502,0805,08,Edible Fruit and Nuts,"Citrus Fruit, Fresh or Dried","Citrus Fruit, Fresh or Dried - Grade B",Perishable,0,#NA,#NA,1,7.0,0,392.1,30.0,82
+080503,0805,08,Edible Fruit and Nuts,"Citrus Fruit, Fresh or Dried","Citrus Fruit, Fresh or Dried - Bulk",Perishable,0,#NA,#NA,1,7.0,0,388.1,30.0,83
+080504,0805,08,Edible Fruit and Nuts,"Citrus Fruit, Fresh or Dried","Citrus Fruit, Fresh or Dried - Retail Pack",Perishable,0,#NA,#NA,1,7.0,0,369.6,30.0,84
+080505,0805,08,Edible Fruit and Nuts,"Citrus Fruit, Fresh or Dried","Citrus Fruit, Fresh or Dried - Industrial Grade",Perishable,0,#NA,#NA,1,7.0,0,393.4,30.0,85
+080506,0805,08,Edible Fruit and Nuts,"Citrus Fruit, Fresh or Dried","Citrus Fruit, Fresh or Dried - Premium",Perishable,0,#NA,#NA,1,7.0,0,439.0,30.0,86
+080507,0805,08,Edible Fruit and Nuts,"Citrus Fruit, Fresh or Dried","Citrus Fruit, Fresh or Dried - Standard",Perishable,0,#NA,#NA,1,7.0,0,394.5,30.0,87
+080508,0805,08,Edible Fruit and Nuts,"Citrus Fruit, Fresh or Dried","Citrus Fruit, Fresh or Dried - Economy",Perishable,0,#NA,#NA,1,7.0,0,430.2,30.0,88
+080509,0805,08,Edible Fruit and Nuts,"Citrus Fruit, Fresh or Dried","Citrus Fruit, Fresh or Dried - Type I",Perishable,0,#NA,#NA,1,7.0,0,365.3,30.0,89
+080510,0805,08,Edible Fruit and Nuts,"Citrus Fruit, Fresh or Dried","Citrus Fruit, Fresh or Dried - Type II",Perishable,0,#NA,#NA,1,7.0,0,414.6,30.0,90
+080511,0805,08,Edible Fruit and Nuts,"Citrus Fruit, Fresh or Dried","Citrus Fruit, Fresh or Dried - Type III",Perishable,0,#NA,#NA,1,7.0,0,362.4,30.0,91
+080512,0805,08,Edible Fruit and Nuts,"Citrus Fruit, Fresh or Dried","Citrus Fruit, Fresh or Dried - Class 1",Perishable,0,#NA,#NA,1,7.0,0,373.2,30.0,92
+080513,0805,08,Edible Fruit and Nuts,"Citrus Fruit, Fresh or Dried","Citrus Fruit, Fresh or Dried - Class 2",Perishable,0,#NA,#NA,1,7.0,0,432.3,30.0,93
+080514,0805,08,Edible Fruit and Nuts,"Citrus Fruit, Fresh or Dried","Citrus Fruit, Fresh or Dried - Export Grade",Perishable,0,#NA,#NA,1,7.0,0,414.8,30.0,94
+080515,0805,08,Edible Fruit and Nuts,"Citrus Fruit, Fresh or Dried","Citrus Fruit, Fresh or Dried - Domestic Grade",Perishable,0,#NA,#NA,1,7.0,0,396.6,30.0,95
+080516,0805,08,Edible Fruit and Nuts,"Citrus Fruit, Fresh or Dried","Citrus Fruit, Fresh or Dried - Carton Pack",Perishable,0,#NA,#NA,1,7.0,0,431.8,30.0,96
+080517,0805,08,Edible Fruit and Nuts,"Citrus Fruit, Fresh or Dried","Citrus Fruit, Fresh or Dried - Palletized",Perishable,0,#NA,#NA,1,7.0,0,425.0,30.0,97
+080518,0805,08,Edible Fruit and Nuts,"Citrus Fruit, Fresh or Dried","Citrus Fruit, Fresh or Dried - Loose",Perishable,0,#NA,#NA,1,7.0,0,374.6,30.0,98
+080519,0805,08,Edible Fruit and Nuts,"Citrus Fruit, Fresh or Dried","Citrus Fruit, Fresh or Dried - Refined",Perishable,0,#NA,#NA,1,7.0,0,439.2,30.0,99
+080520,0805,08,Edible Fruit and Nuts,"Citrus Fruit, Fresh or Dried","Citrus Fruit, Fresh or Dried - Processed",Perishable,0,#NA,#NA,1,7.0,0,414.8,30.0,100
+100601,1006,10,Cereals,Rice,Rice - Grade A,Raw Materials,0,#NA,#NA,0,,0,815.4,26.67,101
+100602,1006,10,Cereals,Rice,Rice - Grade B,Raw Materials,0,#NA,#NA,0,,0,830.3,26.2,102
+100603,1006,10,Cereals,Rice,Rice - Bulk,Raw Materials,0,#NA,#NA,0,,0,800.3,27.18,103
+100604,1006,10,Cereals,Rice,Rice - Retail Pack,Raw Materials,0,#NA,#NA,0,,0,799.0,27.22,104
+100605,1006,10,Cereals,Rice,Rice - Industrial Grade,Raw Materials,0,#NA,#NA,0,,0,752.4,28.91,105
+100606,1006,10,Cereals,Rice,Rice - Premium,Raw Materials,0,#NA,#NA,0,,0,764.3,28.46,106
+100607,1006,10,Cereals,Rice,Rice - Standard,Raw Materials,0,#NA,#NA,0,,0,821.5,26.48,107
+100608,1006,10,Cereals,Rice,Rice - Economy,Raw Materials,0,#NA,#NA,0,,0,802.9,27.09,108
+100609,1006,10,Cereals,Rice,Rice - Type I,Raw Materials,0,#NA,#NA,0,,0,771.9,28.18,109
+100610,1006,10,Cereals,Rice,Rice - Type II,Raw Materials,0,#NA,#NA,0,,0,830.5,26.19,110
+100611,1006,10,Cereals,Rice,Rice - Type III,Raw Materials,0,#NA,#NA,0,,0,826.6,26.31,111
+100612,1006,10,Cereals,Rice,Rice - Class 1,Raw Materials,0,#NA,#NA,0,,0,752.6,28.9,112
+100613,1006,10,Cereals,Rice,Rice - Class 2,Raw Materials,0,#NA,#NA,0,,0,786.5,27.65,113
+100614,1006,10,Cereals,Rice,Rice - Export Grade,Raw Materials,0,#NA,#NA,0,,0,767.5,28.34,114
+100615,1006,10,Cereals,Rice,Rice - Domestic Grade,Raw Materials,0,#NA,#NA,0,,0,780.4,27.87,115
+100616,1006,10,Cereals,Rice,Rice - Carton Pack,Raw Materials,0,#NA,#NA,0,,0,789.4,27.55,116
+100617,1006,10,Cereals,Rice,Rice - Palletized,Raw Materials,0,#NA,#NA,0,,0,752.9,28.89,117
+100618,1006,10,Cereals,Rice,Rice - Loose,Raw Materials,0,#NA,#NA,0,,0,786.6,27.65,118
+100619,1006,10,Cereals,Rice,Rice - Refined,Raw Materials,0,#NA,#NA,0,,0,770.0,28.25,119
+100620,1006,10,Cereals,Rice,Rice - Processed,Raw Materials,0,#NA,#NA,0,,0,757.3,28.72,120
+151101,1511,15,Animal or Vegetable Fats and Oils,Palm Oil and Its Fractions,Palm Oil and Its Fractions - Grade A,Chemical,0,#NA,#NA,0,,0,909.0,23.93,121
+151102,1511,15,Animal or Vegetable Fats and Oils,Palm Oil and Its Fractions,Palm Oil and Its Fractions - Grade B,Chemical,0,#NA,#NA,0,,0,900.8,24.15,122
+151103,1511,15,Animal or Vegetable Fats and Oils,Palm Oil and Its Fractions,Palm Oil and Its Fractions - Bulk,Chemical,0,#NA,#NA,0,,0,913.5,23.81,123
+151104,1511,15,Animal or Vegetable Fats and Oils,Palm Oil and Its Fractions,Palm Oil and Its Fractions - Retail Pack,Chemical,0,#NA,#NA,0,,0,908.1,23.95,124
+151105,1511,15,Animal or Vegetable Fats and Oils,Palm Oil and Its Fractions,Palm Oil and Its Fractions - Industrial Grade,Chemical,0,#NA,#NA,0,,0,905.4,24.02,125
+151106,1511,15,Animal or Vegetable Fats and Oils,Palm Oil and Its Fractions,Palm Oil and Its Fractions - Premium,Chemical,0,#NA,#NA,0,,0,904.1,24.06,126
+151107,1511,15,Animal or Vegetable Fats and Oils,Palm Oil and Its Fractions,Palm Oil and Its Fractions - Standard,Chemical,0,#NA,#NA,0,,0,909.3,23.92,127
+151108,1511,15,Animal or Vegetable Fats and Oils,Palm Oil and Its Fractions,Palm Oil and Its Fractions - Economy,Chemical,0,#NA,#NA,0,,0,913.6,23.81,128
+151109,1511,15,Animal or Vegetable Fats and Oils,Palm Oil and Its Fractions,Palm Oil and Its Fractions - Type I,Chemical,0,#NA,#NA,0,,0,919.1,23.66,129
+151110,1511,15,Animal or Vegetable Fats and Oils,Palm Oil and Its Fractions,Palm Oil and Its Fractions - Type II,Chemical,0,#NA,#NA,0,,0,909.2,23.92,130
+151111,1511,15,Animal or Vegetable Fats and Oils,Palm Oil and Its Fractions,Palm Oil and Its Fractions - Type III,Chemical,0,#NA,#NA,0,,0,900.7,24.15,131
+151112,1511,15,Animal or Vegetable Fats and Oils,Palm Oil and Its Fractions,Palm Oil and Its Fractions - Class 1,Chemical,0,#NA,#NA,0,,0,909.5,23.91,132
+151113,1511,15,Animal or Vegetable Fats and Oils,Palm Oil and Its Fractions,Palm Oil and Its Fractions - Class 2,Chemical,0,#NA,#NA,0,,0,911.5,23.86,133
+151114,1511,15,Animal or Vegetable Fats and Oils,Palm Oil and Its Fractions,Palm Oil and Its Fractions - Export Grade,Chemical,0,#NA,#NA,0,,0,910.9,23.88,134
+151115,1511,15,Animal or Vegetable Fats and Oils,Palm Oil and Its Fractions,Palm Oil and Its Fractions - Domestic Grade,Chemical,0,#NA,#NA,0,,0,909.7,23.91,135
+151116,1511,15,Animal or Vegetable Fats and Oils,Palm Oil and Its Fractions,Palm Oil and Its Fractions - Carton Pack,Chemical,0,#NA,#NA,0,,0,914.6,23.78,136
+151117,1511,15,Animal or Vegetable Fats and Oils,Palm Oil and Its Fractions,Palm Oil and Its Fractions - Palletized,Chemical,0,#NA,#NA,0,,0,902.0,24.11,137
+151118,1511,15,Animal or Vegetable Fats and Oils,Palm Oil and Its Fractions,Palm Oil and Its Fractions - Loose,Chemical,0,#NA,#NA,0,,0,917.0,23.72,138
+151119,1511,15,Animal or Vegetable Fats and Oils,Palm Oil and Its Fractions,Palm Oil and Its Fractions - Refined,Chemical,0,#NA,#NA,0,,0,910.0,23.9,139
+151120,1511,15,Animal or Vegetable Fats and Oils,Palm Oil and Its Fractions,Palm Oil and Its Fractions - Processed,Chemical,0,#NA,#NA,0,,0,906.8,23.98,140
+170101,1701,17,Sugars and Sugar Confectionery,Cane or Beet Sugar,Cane or Beet Sugar - Grade A,Consumer Goods,0,#NA,#NA,0,,0,840.0,25.89,141
+170102,1701,17,Sugars and Sugar Confectionery,Cane or Beet Sugar,Cane or Beet Sugar - Grade B,Consumer Goods,0,#NA,#NA,0,,0,807.8,26.93,142
+170103,1701,17,Sugars and Sugar Confectionery,Cane or Beet Sugar,Cane or Beet Sugar - Bulk,Consumer Goods,0,#NA,#NA,0,,0,842.3,25.82,143
+170104,1701,17,Sugars and Sugar Confectionery,Cane or Beet Sugar,Cane or Beet Sugar - Retail Pack,Consumer Goods,0,#NA,#NA,0,,0,830.4,26.19,144
+170105,1701,17,Sugars and Sugar Confectionery,Cane or Beet Sugar,Cane or Beet Sugar - Industrial Grade,Consumer Goods,0,#NA,#NA,0,,0,845.6,25.72,145
+170106,1701,17,Sugars and Sugar Confectionery,Cane or Beet Sugar,Cane or Beet Sugar - Premium,Consumer Goods,0,#NA,#NA,0,,0,816.6,26.64,146
+170107,1701,17,Sugars and Sugar Confectionery,Cane or Beet Sugar,Cane or Beet Sugar - Standard,Consumer Goods,0,#NA,#NA,0,,0,849.1,25.61,147
+170108,1701,17,Sugars and Sugar Confectionery,Cane or Beet Sugar,Cane or Beet Sugar - Economy,Consumer Goods,0,#NA,#NA,0,,0,816.8,26.63,148
+170109,1701,17,Sugars and Sugar Confectionery,Cane or Beet Sugar,Cane or Beet Sugar - Type I,Consumer Goods,0,#NA,#NA,0,,0,826.1,26.33,149
+170110,1701,17,Sugars and Sugar Confectionery,Cane or Beet Sugar,Cane or Beet Sugar - Type II,Consumer Goods,0,#NA,#NA,0,,0,847.1,25.68,150
+170111,1701,17,Sugars and Sugar Confectionery,Cane or Beet Sugar,Cane or Beet Sugar - Type III,Consumer Goods,0,#NA,#NA,0,,0,845.2,25.73,151
+170112,1701,17,Sugars and Sugar Confectionery,Cane or Beet Sugar,Cane or Beet Sugar - Class 1,Consumer Goods,0,#NA,#NA,0,,0,817.6,26.6,152
+170113,1701,17,Sugars and Sugar Confectionery,Cane or Beet Sugar,Cane or Beet Sugar - Class 2,Consumer Goods,0,#NA,#NA,0,,0,812.9,26.76,153
+170114,1701,17,Sugars and Sugar Confectionery,Cane or Beet Sugar,Cane or Beet Sugar - Export Grade,Consumer Goods,0,#NA,#NA,0,,0,809.4,26.87,154
+170115,1701,17,Sugars and Sugar Confectionery,Cane or Beet Sugar,Cane or Beet Sugar - Domestic Grade,Consumer Goods,0,#NA,#NA,0,,0,841.8,25.84,155
+170116,1701,17,Sugars and Sugar Confectionery,Cane or Beet Sugar,Cane or Beet Sugar - Carton Pack,Consumer Goods,0,#NA,#NA,0,,0,830.7,26.18,156
+170117,1701,17,Sugars and Sugar Confectionery,Cane or Beet Sugar,Cane or Beet Sugar - Palletized,Consumer Goods,0,#NA,#NA,0,,0,830.2,26.2,157
+170118,1701,17,Sugars and Sugar Confectionery,Cane or Beet Sugar,Cane or Beet Sugar - Loose,Consumer Goods,0,#NA,#NA,0,,0,806.7,26.96,158
+170119,1701,17,Sugars and Sugar Confectionery,Cane or Beet Sugar,Cane or Beet Sugar - Refined,Consumer Goods,0,#NA,#NA,0,,0,815.0,26.69,159
+170120,1701,17,Sugars and Sugar Confectionery,Cane or Beet Sugar,Cane or Beet Sugar - Processed,Consumer Goods,0,#NA,#NA,0,,0,801.7,27.13,160
+180101,1801,18,Cocoa and Cocoa Preparations,"Cocoa Beans, Whole or Broken","Cocoa Beans, Whole or Broken - Grade A",Raw Materials,0,#NA,#NA,0,,0,569.2,30.0,161
+180102,1801,18,Cocoa and Cocoa Preparations,"Cocoa Beans, Whole or Broken","Cocoa Beans, Whole or Broken - Grade B",Raw Materials,0,#NA,#NA,0,,0,588.2,30.0,162
+180103,1801,18,Cocoa and Cocoa Preparations,"Cocoa Beans, Whole or Broken","Cocoa Beans, Whole or Broken - Bulk",Raw Materials,0,#NA,#NA,0,,0,540.5,30.0,163
+180104,1801,18,Cocoa and Cocoa Preparations,"Cocoa Beans, Whole or Broken","Cocoa Beans, Whole or Broken - Retail Pack",Raw Materials,0,#NA,#NA,0,,0,539.1,30.0,164
+180105,1801,18,Cocoa and Cocoa Preparations,"Cocoa Beans, Whole or Broken","Cocoa Beans, Whole or Broken - Industrial Grade",Raw Materials,0,#NA,#NA,0,,0,522.4,30.0,165
+180106,1801,18,Cocoa and Cocoa Preparations,"Cocoa Beans, Whole or Broken","Cocoa Beans, Whole or Broken - Premium",Raw Materials,0,#NA,#NA,0,,0,554.3,30.0,166
+180107,1801,18,Cocoa and Cocoa Preparations,"Cocoa Beans, Whole or Broken","Cocoa Beans, Whole or Broken - Standard",Raw Materials,0,#NA,#NA,0,,0,586.5,30.0,167
+180108,1801,18,Cocoa and Cocoa Preparations,"Cocoa Beans, Whole or Broken","Cocoa Beans, Whole or Broken - Economy",Raw Materials,0,#NA,#NA,0,,0,581.9,30.0,168
+180109,1801,18,Cocoa and Cocoa Preparations,"Cocoa Beans, Whole or Broken","Cocoa Beans, Whole or Broken - Type I",Raw Materials,0,#NA,#NA,0,,0,533.2,30.0,169
+180110,1801,18,Cocoa and Cocoa Preparations,"Cocoa Beans, Whole or Broken","Cocoa Beans, Whole or Broken - Type II",Raw Materials,0,#NA,#NA,0,,0,528.5,30.0,170
+180111,1801,18,Cocoa and Cocoa Preparations,"Cocoa Beans, Whole or Broken","Cocoa Beans, Whole or Broken - Type III",Raw Materials,0,#NA,#NA,0,,0,546.9,30.0,171
+180112,1801,18,Cocoa and Cocoa Preparations,"Cocoa Beans, Whole or Broken","Cocoa Beans, Whole or Broken - Class 1",Raw Materials,0,#NA,#NA,0,,0,580.2,30.0,172
+180113,1801,18,Cocoa and Cocoa Preparations,"Cocoa Beans, Whole or Broken","Cocoa Beans, Whole or Broken - Class 2",Raw Materials,0,#NA,#NA,0,,0,563.7,30.0,173
+180114,1801,18,Cocoa and Cocoa Preparations,"Cocoa Beans, Whole or Broken","Cocoa Beans, Whole or Broken - Export Grade",Raw Materials,0,#NA,#NA,0,,0,525.5,30.0,174
+180115,1801,18,Cocoa and Cocoa Preparations,"Cocoa Beans, Whole or Broken","Cocoa Beans, Whole or Broken - Domestic Grade",Raw Materials,0,#NA,#NA,0,,0,523.3,30.0,175
+180116,1801,18,Cocoa and Cocoa Preparations,"Cocoa Beans, Whole or Broken","Cocoa Beans, Whole or Broken - Carton Pack",Raw Materials,0,#NA,#NA,0,,0,562.2,30.0,176
+180117,1801,18,Cocoa and Cocoa Preparations,"Cocoa Beans, Whole or Broken","Cocoa Beans, Whole or Broken - Palletized",Raw Materials,0,#NA,#NA,0,,0,576.1,30.0,177
+180118,1801,18,Cocoa and Cocoa Preparations,"Cocoa Beans, Whole or Broken","Cocoa Beans, Whole or Broken - Loose",Raw Materials,0,#NA,#NA,0,,0,544.3,30.0,178
+180119,1801,18,Cocoa and Cocoa Preparations,"Cocoa Beans, Whole or Broken","Cocoa Beans, Whole or Broken - Refined",Raw Materials,0,#NA,#NA,0,,0,566.1,30.0,179
+180120,1801,18,Cocoa and Cocoa Preparations,"Cocoa Beans, Whole or Broken","Cocoa Beans, Whole or Broken - Processed",Raw Materials,0,#NA,#NA,0,,0,565.2,30.0,180
+220401,2204,22,"Beverages, Spirits and Vinegar",Wine of Fresh Grapes,Wine of Fresh Grapes - Grade A,Consumer Goods,0,#NA,#NA,0,,0,979.9,22.2,181
+220402,2204,22,"Beverages, Spirits and Vinegar",Wine of Fresh Grapes,Wine of Fresh Grapes - Grade B,Consumer Goods,0,#NA,#NA,0,,0,957.8,22.71,182
+220403,2204,22,"Beverages, Spirits and Vinegar",Wine of Fresh Grapes,Wine of Fresh Grapes - Bulk,Consumer Goods,0,#NA,#NA,0,,0,979.7,22.2,183
+220404,2204,22,"Beverages, Spirits and Vinegar",Wine of Fresh Grapes,Wine of Fresh Grapes - Retail Pack,Consumer Goods,0,#NA,#NA,0,,0,957.6,22.71,184
+220405,2204,22,"Beverages, Spirits and Vinegar",Wine of Fresh Grapes,Wine of Fresh Grapes - Industrial Grade,Consumer Goods,0,#NA,#NA,0,,0,971.7,22.38,185
+220406,2204,22,"Beverages, Spirits and Vinegar",Wine of Fresh Grapes,Wine of Fresh Grapes - Premium,Consumer Goods,0,#NA,#NA,0,,0,952.9,22.82,186
+220407,2204,22,"Beverages, Spirits and Vinegar",Wine of Fresh Grapes,Wine of Fresh Grapes - Standard,Consumer Goods,0,#NA,#NA,0,,0,967.6,22.48,187
+220408,2204,22,"Beverages, Spirits and Vinegar",Wine of Fresh Grapes,Wine of Fresh Grapes - Economy,Consumer Goods,0,#NA,#NA,0,,0,968.2,22.47,188
+220409,2204,22,"Beverages, Spirits and Vinegar",Wine of Fresh Grapes,Wine of Fresh Grapes - Type I,Consumer Goods,0,#NA,#NA,0,,0,971.6,22.39,189
+220410,2204,22,"Beverages, Spirits and Vinegar",Wine of Fresh Grapes,Wine of Fresh Grapes - Type II,Consumer Goods,0,#NA,#NA,0,,0,961.1,22.63,190
+220411,2204,22,"Beverages, Spirits and Vinegar",Wine of Fresh Grapes,Wine of Fresh Grapes - Type III,Consumer Goods,0,#NA,#NA,0,,0,953.6,22.81,191
+220412,2204,22,"Beverages, Spirits and Vinegar",Wine of Fresh Grapes,Wine of Fresh Grapes - Class 1,Consumer Goods,0,#NA,#NA,0,,0,953.3,22.81,192
+220413,2204,22,"Beverages, Spirits and Vinegar",Wine of Fresh Grapes,Wine of Fresh Grapes - Class 2,Consumer Goods,0,#NA,#NA,0,,0,956.9,22.73,193
+220414,2204,22,"Beverages, Spirits and Vinegar",Wine of Fresh Grapes,Wine of Fresh Grapes - Export Grade,Consumer Goods,0,#NA,#NA,0,,0,968.7,22.45,194
+220415,2204,22,"Beverages, Spirits and Vinegar",Wine of Fresh Grapes,Wine of Fresh Grapes - Domestic Grade,Consumer Goods,0,#NA,#NA,0,,0,973.8,22.34,195
+220416,2204,22,"Beverages, Spirits and Vinegar",Wine of Fresh Grapes,Wine of Fresh Grapes - Carton Pack,Consumer Goods,0,#NA,#NA,0,,0,963.1,22.58,196
+220417,2204,22,"Beverages, Spirits and Vinegar",Wine of Fresh Grapes,Wine of Fresh Grapes - Palletized,Consumer Goods,0,#NA,#NA,0,,0,955.8,22.76,197
+220418,2204,22,"Beverages, Spirits and Vinegar",Wine of Fresh Grapes,Wine of Fresh Grapes - Loose,Consumer Goods,0,#NA,#NA,0,,0,961.6,22.62,198
+220419,2204,22,"Beverages, Spirits and Vinegar",Wine of Fresh Grapes,Wine of Fresh Grapes - Refined,Consumer Goods,0,#NA,#NA,0,,0,974.9,22.31,199
+220420,2204,22,"Beverages, Spirits and Vinegar",Wine of Fresh Grapes,Wine of Fresh Grapes - Processed,Consumer Goods,0,#NA,#NA,0,,0,967.5,22.48,200
+220301,2203,22,"Beverages, Spirits and Vinegar",Beer Made from Malt,Beer Made from Malt - Grade A,Consumer Goods,0,#NA,#NA,0,,0,991.3,21.94,201
+220302,2203,22,"Beverages, Spirits and Vinegar",Beer Made from Malt,Beer Made from Malt - Grade B,Consumer Goods,0,#NA,#NA,0,,0,997.6,21.8,202
+220303,2203,22,"Beverages, Spirits and Vinegar",Beer Made from Malt,Beer Made from Malt - Bulk,Consumer Goods,0,#NA,#NA,0,,0,992.6,21.91,203
+220304,2203,22,"Beverages, Spirits and Vinegar",Beer Made from Malt,Beer Made from Malt - Retail Pack,Consumer Goods,0,#NA,#NA,0,,0,997.6,21.8,204
+220305,2203,22,"Beverages, Spirits and Vinegar",Beer Made from Malt,Beer Made from Malt - Industrial Grade,Consumer Goods,0,#NA,#NA,0,,0,990.2,21.97,205
+220306,2203,22,"Beverages, Spirits and Vinegar",Beer Made from Malt,Beer Made from Malt - Premium,Consumer Goods,0,#NA,#NA,0,,0,999.1,21.77,206
+220307,2203,22,"Beverages, Spirits and Vinegar",Beer Made from Malt,Beer Made from Malt - Standard,Consumer Goods,0,#NA,#NA,0,,0,999.2,21.77,207
+220308,2203,22,"Beverages, Spirits and Vinegar",Beer Made from Malt,Beer Made from Malt - Economy,Consumer Goods,0,#NA,#NA,0,,0,989.7,21.98,208
+220309,2203,22,"Beverages, Spirits and Vinegar",Beer Made from Malt,Beer Made from Malt - Type I,Consumer Goods,0,#NA,#NA,0,,0,999.3,21.77,209
+220310,2203,22,"Beverages, Spirits and Vinegar",Beer Made from Malt,Beer Made from Malt - Type II,Consumer Goods,0,#NA,#NA,0,,0,986.1,22.06,210
+220311,2203,22,"Beverages, Spirits and Vinegar",Beer Made from Malt,Beer Made from Malt - Type III,Consumer Goods,0,#NA,#NA,0,,0,983.5,22.11,211
+220312,2203,22,"Beverages, Spirits and Vinegar",Beer Made from Malt,Beer Made from Malt - Class 1,Consumer Goods,0,#NA,#NA,0,,0,988.9,21.99,212
+220313,2203,22,"Beverages, Spirits and Vinegar",Beer Made from Malt,Beer Made from Malt - Class 2,Consumer Goods,0,#NA,#NA,0,,0,988.4,22.01,213
+220314,2203,22,"Beverages, Spirits and Vinegar",Beer Made from Malt,Beer Made from Malt - Export Grade,Consumer Goods,0,#NA,#NA,0,,0,991.7,21.93,214
+220315,2203,22,"Beverages, Spirits and Vinegar",Beer Made from Malt,Beer Made from Malt - Domestic Grade,Consumer Goods,0,#NA,#NA,0,,0,986.4,22.05,215
+220316,2203,22,"Beverages, Spirits and Vinegar",Beer Made from Malt,Beer Made from Malt - Carton Pack,Consumer Goods,0,#NA,#NA,0,,0,984.5,22.09,216
+220317,2203,22,"Beverages, Spirits and Vinegar",Beer Made from Malt,Beer Made from Malt - Palletized,Consumer Goods,0,#NA,#NA,0,,0,995.9,21.84,217
+220318,2203,22,"Beverages, Spirits and Vinegar",Beer Made from Malt,Beer Made from Malt - Loose,Consumer Goods,0,#NA,#NA,0,,0,988.2,22.01,218
+220319,2203,22,"Beverages, Spirits and Vinegar",Beer Made from Malt,Beer Made from Malt - Refined,Consumer Goods,0,#NA,#NA,0,,0,992.7,21.91,219
+220320,2203,22,"Beverages, Spirits and Vinegar",Beer Made from Malt,Beer Made from Malt - Processed,Consumer Goods,0,#NA,#NA,0,,0,987.8,22.02,220
+271001,2710,27,"Mineral Fuels, Mineral Oils and Products of Their Distillation","Petroleum Oils, Refined","Petroleum Oils, Refined - Grade A",Chemical,1,3,UN1268,0,,0,819.7,26.54,221
+271002,2710,27,"Mineral Fuels, Mineral Oils and Products of Their Distillation","Petroleum Oils, Refined","Petroleum Oils, Refined - Grade B",Chemical,1,3,UN1268,0,,0,843.3,25.79,222
+271003,2710,27,"Mineral Fuels, Mineral Oils and Products of Their Distillation","Petroleum Oils, Refined","Petroleum Oils, Refined - Bulk",Chemical,1,3,UN1268,0,,0,808.6,26.9,223
+271004,2710,27,"Mineral Fuels, Mineral Oils and Products of Their Distillation","Petroleum Oils, Refined","Petroleum Oils, Refined - Retail Pack",Chemical,1,3,UN1268,0,,0,843.9,25.77,224
+271005,2710,27,"Mineral Fuels, Mineral Oils and Products of Their Distillation","Petroleum Oils, Refined","Petroleum Oils, Refined - Industrial Grade",Chemical,1,3,UN1268,0,,0,857.4,25.37,225
+271006,2710,27,"Mineral Fuels, Mineral Oils and Products of Their Distillation","Petroleum Oils, Refined","Petroleum Oils, Refined - Premium",Chemical,1,3,UN1268,0,,0,854.2,25.46,226
+271007,2710,27,"Mineral Fuels, Mineral Oils and Products of Their Distillation","Petroleum Oils, Refined","Petroleum Oils, Refined - Standard",Chemical,1,3,UN1268,0,,0,830.3,26.2,227
+271008,2710,27,"Mineral Fuels, Mineral Oils and Products of Their Distillation","Petroleum Oils, Refined","Petroleum Oils, Refined - Economy",Chemical,1,3,UN1268,0,,0,848.9,25.62,228
+271009,2710,27,"Mineral Fuels, Mineral Oils and Products of Their Distillation","Petroleum Oils, Refined","Petroleum Oils, Refined - Type I",Chemical,1,3,UN1268,0,,0,818.6,26.57,229
+271010,2710,27,"Mineral Fuels, Mineral Oils and Products of Their Distillation","Petroleum Oils, Refined","Petroleum Oils, Refined - Type II",Chemical,1,3,UN1268,0,,0,819.9,26.53,230
+271011,2710,27,"Mineral Fuels, Mineral Oils and Products of Their Distillation","Petroleum Oils, Refined","Petroleum Oils, Refined - Type III",Chemical,1,3,UN1268,0,,0,892.6,24.37,231
+271012,2710,27,"Mineral Fuels, Mineral Oils and Products of Their Distillation","Petroleum Oils, Refined","Petroleum Oils, Refined - Class 1",Chemical,1,3,UN1268,0,,0,803.9,27.05,232
+271013,2710,27,"Mineral Fuels, Mineral Oils and Products of Their Distillation","Petroleum Oils, Refined","Petroleum Oils, Refined - Class 2",Chemical,1,3,UN1268,0,,0,866.0,25.11,233
+271014,2710,27,"Mineral Fuels, Mineral Oils and Products of Their Distillation","Petroleum Oils, Refined","Petroleum Oils, Refined - Export Grade",Chemical,1,3,UN1268,0,,0,877.7,24.78,234
+271015,2710,27,"Mineral Fuels, Mineral Oils and Products of Their Distillation","Petroleum Oils, Refined","Petroleum Oils, Refined - Domestic Grade",Chemical,1,3,UN1268,0,,0,871.4,24.96,235
+271016,2710,27,"Mineral Fuels, Mineral Oils and Products of Their Distillation","Petroleum Oils, Refined","Petroleum Oils, Refined - Carton Pack",Chemical,1,3,UN1268,0,,0,848.3,25.64,236
+271017,2710,27,"Mineral Fuels, Mineral Oils and Products of Their Distillation","Petroleum Oils, Refined","Petroleum Oils, Refined - Palletized",Chemical,1,3,UN1268,0,,0,884.2,24.6,237
+271018,2710,27,"Mineral Fuels, Mineral Oils and Products of Their Distillation","Petroleum Oils, Refined","Petroleum Oils, Refined - Loose",Chemical,1,3,UN1268,0,,0,810.8,26.83,238
+271019,2710,27,"Mineral Fuels, Mineral Oils and Products of Their Distillation","Petroleum Oils, Refined","Petroleum Oils, Refined - Refined",Chemical,1,3,UN1268,0,,0,847.2,25.67,239
+271020,2710,27,"Mineral Fuels, Mineral Oils and Products of Their Distillation","Petroleum Oils, Refined","Petroleum Oils, Refined - Processed",Chemical,1,3,UN1268,0,,0,827.2,26.29,240
+281101,2811,28,Inorganic Chemicals,Other Inorganic Acids,Other Inorganic Acids - Grade A,Chemical,1,8,UN3264,0,,0,1375.0,15.82,241
+281102,2811,28,Inorganic Chemicals,Other Inorganic Acids,Other Inorganic Acids - Grade B,Chemical,1,8,UN3264,0,,0,1229.0,17.7,242
+281103,2811,28,Inorganic Chemicals,Other Inorganic Acids,Other Inorganic Acids - Bulk,Chemical,1,8,UN3264,0,,0,1319.0,16.49,243
+281104,2811,28,Inorganic Chemicals,Other Inorganic Acids,Other Inorganic Acids - Retail Pack,Chemical,1,8,UN3264,0,,0,1196.5,18.18,244
+281105,2811,28,Inorganic Chemicals,Other Inorganic Acids,Other Inorganic Acids - Industrial Grade,Chemical,1,8,UN3264,0,,0,1174.5,18.52,245
+281106,2811,28,Inorganic Chemicals,Other Inorganic Acids,Other Inorganic Acids - Premium,Chemical,1,8,UN3264,0,,0,1394.1,15.6,246
+281107,2811,28,Inorganic Chemicals,Other Inorganic Acids,Other Inorganic Acids - Standard,Chemical,1,8,UN3264,0,,0,1173.7,18.53,247
+281108,2811,28,Inorganic Chemicals,Other Inorganic Acids,Other Inorganic Acids - Economy,Chemical,1,8,UN3264,0,,0,1168.3,18.62,248
+281109,2811,28,Inorganic Chemicals,Other Inorganic Acids,Other Inorganic Acids - Type I,Chemical,1,8,UN3264,0,,0,1288.2,16.88,249
+281110,2811,28,Inorganic Chemicals,Other Inorganic Acids,Other Inorganic Acids - Type II,Chemical,1,8,UN3264,0,,0,1255.5,17.32,250
+281111,2811,28,Inorganic Chemicals,Other Inorganic Acids,Other Inorganic Acids - Type III,Chemical,1,8,UN3264,0,,0,1390.8,15.64,251
+281112,2811,28,Inorganic Chemicals,Other Inorganic Acids,Other Inorganic Acids - Class 1,Chemical,1,8,UN3264,0,,0,1200.6,18.12,252
+281113,2811,28,Inorganic Chemicals,Other Inorganic Acids,Other Inorganic Acids - Class 2,Chemical,1,8,UN3264,0,,0,1387.7,15.67,253
+281114,2811,28,Inorganic Chemicals,Other Inorganic Acids,Other Inorganic Acids - Export Grade,Chemical,1,8,UN3264,0,,0,1378.2,15.78,254
+281115,2811,28,Inorganic Chemicals,Other Inorganic Acids,Other Inorganic Acids - Domestic Grade,Chemical,1,8,UN3264,0,,0,1238.6,17.56,255
+281116,2811,28,Inorganic Chemicals,Other Inorganic Acids,Other Inorganic Acids - Carton Pack,Chemical,1,8,UN3264,0,,0,1127.4,19.29,256
+281117,2811,28,Inorganic Chemicals,Other Inorganic Acids,Other Inorganic Acids - Palletized,Chemical,1,8,UN3264,0,,0,1293.6,16.81,257
+281118,2811,28,Inorganic Chemicals,Other Inorganic Acids,Other Inorganic Acids - Loose,Chemical,1,8,UN3264,0,,0,1130.0,19.25,258
+281119,2811,28,Inorganic Chemicals,Other Inorganic Acids,Other Inorganic Acids - Refined,Chemical,1,8,UN3264,0,,0,1226.5,17.73,259
+281120,2811,28,Inorganic Chemicals,Other Inorganic Acids,Other Inorganic Acids - Processed,Chemical,1,8,UN3264,0,,0,1266.2,17.18,260
+280401,2804,28,Inorganic Chemicals,"Hydrogen, Rare Gases and Other Non-Metals","Hydrogen, Rare Gases and Other Non-Metals - Grade A",Chemical,1,2,UN1049,0,,0,50.8,30.0,261
+280402,2804,28,Inorganic Chemicals,"Hydrogen, Rare Gases and Other Non-Metals","Hydrogen, Rare Gases and Other Non-Metals - Grade B",Chemical,1,2,UN1049,0,,0,75.2,30.0,262
+280403,2804,28,Inorganic Chemicals,"Hydrogen, Rare Gases and Other Non-Metals","Hydrogen, Rare Gases and Other Non-Metals - Bulk",Chemical,1,2,UN1049,0,,0,70.6,30.0,263
+280404,2804,28,Inorganic Chemicals,"Hydrogen, Rare Gases and Other Non-Metals","Hydrogen, Rare Gases and Other Non-Metals - Retail Pack",Chemical,1,2,UN1049,0,,0,64.4,30.0,264
+280405,2804,28,Inorganic Chemicals,"Hydrogen, Rare Gases and Other Non-Metals","Hydrogen, Rare Gases and Other Non-Metals - Industrial Grade",Chemical,1,2,UN1049,0,,0,69.3,30.0,265
+280406,2804,28,Inorganic Chemicals,"Hydrogen, Rare Gases and Other Non-Metals","Hydrogen, Rare Gases and Other Non-Metals - Premium",Chemical,1,2,UN1049,0,,0,92.9,30.0,266
+280407,2804,28,Inorganic Chemicals,"Hydrogen, Rare Gases and Other Non-Metals","Hydrogen, Rare Gases and Other Non-Metals - Standard",Chemical,1,2,UN1049,0,,0,68.3,30.0,267
+280408,2804,28,Inorganic Chemicals,"Hydrogen, Rare Gases and Other Non-Metals","Hydrogen, Rare Gases and Other Non-Metals - Economy",Chemical,1,2,UN1049,0,,0,72.5,30.0,268
+280409,2804,28,Inorganic Chemicals,"Hydrogen, Rare Gases and Other Non-Metals","Hydrogen, Rare Gases and Other Non-Metals - Type I",Chemical,1,2,UN1049,0,,0,59.7,30.0,269
+280410,2804,28,Inorganic Chemicals,"Hydrogen, Rare Gases and Other Non-Metals","Hydrogen, Rare Gases and Other Non-Metals - Type II",Chemical,1,2,UN1049,0,,0,88.6,30.0,270
+280411,2804,28,Inorganic Chemicals,"Hydrogen, Rare Gases and Other Non-Metals","Hydrogen, Rare Gases and Other Non-Metals - Type III",Chemical,1,2,UN1049,0,,0,51.8,30.0,271
+280412,2804,28,Inorganic Chemicals,"Hydrogen, Rare Gases and Other Non-Metals","Hydrogen, Rare Gases and Other Non-Metals - Class 1",Chemical,1,2,UN1049,0,,0,64.5,30.0,272
+280413,2804,28,Inorganic Chemicals,"Hydrogen, Rare Gases and Other Non-Metals","Hydrogen, Rare Gases and Other Non-Metals - Class 2",Chemical,1,2,UN1049,0,,0,89.3,30.0,273
+280414,2804,28,Inorganic Chemicals,"Hydrogen, Rare Gases and Other Non-Metals","Hydrogen, Rare Gases and Other Non-Metals - Export Grade",Chemical,1,2,UN1049,0,,0,92.3,30.0,274
+280415,2804,28,Inorganic Chemicals,"Hydrogen, Rare Gases and Other Non-Metals","Hydrogen, Rare Gases and Other Non-Metals - Domestic Grade",Chemical,1,2,UN1049,0,,0,67.8,30.0,275
+280416,2804,28,Inorganic Chemicals,"Hydrogen, Rare Gases and Other Non-Metals","Hydrogen, Rare Gases and Other Non-Metals - Carton Pack",Chemical,1,2,UN1049,0,,0,58.2,30.0,276
+280417,2804,28,Inorganic Chemicals,"Hydrogen, Rare Gases and Other Non-Metals","Hydrogen, Rare Gases and Other Non-Metals - Palletized",Chemical,1,2,UN1049,0,,0,68.9,30.0,277
+280418,2804,28,Inorganic Chemicals,"Hydrogen, Rare Gases and Other Non-Metals","Hydrogen, Rare Gases and Other Non-Metals - Loose",Chemical,1,2,UN1049,0,,0,56.1,30.0,278
+280419,2804,28,Inorganic Chemicals,"Hydrogen, Rare Gases and Other Non-Metals","Hydrogen, Rare Gases and Other Non-Metals - Refined",Chemical,1,2,UN1049,0,,0,92.9,30.0,279
+280420,2804,28,Inorganic Chemicals,"Hydrogen, Rare Gases and Other Non-Metals","Hydrogen, Rare Gases and Other Non-Metals - Processed",Chemical,1,2,UN1049,0,,0,81.2,30.0,280
+290901,2909,29,Organic Chemicals,"Ethers, Alcohols, Peroxides","Ethers, Alcohols, Peroxides - Grade A",Chemical,1,3,UN1170,0,,0,835.8,26.02,281
+290902,2909,29,Organic Chemicals,"Ethers, Alcohols, Peroxides","Ethers, Alcohols, Peroxides - Grade B",Chemical,1,3,UN1170,0,,0,750.6,28.98,282
+290903,2909,29,Organic Chemicals,"Ethers, Alcohols, Peroxides","Ethers, Alcohols, Peroxides - Bulk",Chemical,1,3,UN1170,0,,0,867.0,25.09,283
+290904,2909,29,Organic Chemicals,"Ethers, Alcohols, Peroxides","Ethers, Alcohols, Peroxides - Retail Pack",Chemical,1,3,UN1170,0,,0,796.0,27.32,284
+290905,2909,29,Organic Chemicals,"Ethers, Alcohols, Peroxides","Ethers, Alcohols, Peroxides - Industrial Grade",Chemical,1,3,UN1170,0,,0,780.7,27.86,285
+290906,2909,29,Organic Chemicals,"Ethers, Alcohols, Peroxides","Ethers, Alcohols, Peroxides - Premium",Chemical,1,3,UN1170,0,,0,791.2,27.49,286
+290907,2909,29,Organic Chemicals,"Ethers, Alcohols, Peroxides","Ethers, Alcohols, Peroxides - Standard",Chemical,1,3,UN1170,0,,0,838.3,25.94,287
+290908,2909,29,Organic Chemicals,"Ethers, Alcohols, Peroxides","Ethers, Alcohols, Peroxides - Economy",Chemical,1,3,UN1170,0,,0,823.2,26.42,288
+290909,2909,29,Organic Chemicals,"Ethers, Alcohols, Peroxides","Ethers, Alcohols, Peroxides - Type I",Chemical,1,3,UN1170,0,,0,797.2,27.28,289
+290910,2909,29,Organic Chemicals,"Ethers, Alcohols, Peroxides","Ethers, Alcohols, Peroxides - Type II",Chemical,1,3,UN1170,0,,0,756.7,28.74,290
+290911,2909,29,Organic Chemicals,"Ethers, Alcohols, Peroxides","Ethers, Alcohols, Peroxides - Type III",Chemical,1,3,UN1170,0,,0,760.2,28.61,291
+290912,2909,29,Organic Chemicals,"Ethers, Alcohols, Peroxides","Ethers, Alcohols, Peroxides - Class 1",Chemical,1,3,UN1170,0,,0,829.1,26.23,292
+290913,2909,29,Organic Chemicals,"Ethers, Alcohols, Peroxides","Ethers, Alcohols, Peroxides - Class 2",Chemical,1,3,UN1170,0,,0,844.6,25.75,293
+290914,2909,29,Organic Chemicals,"Ethers, Alcohols, Peroxides","Ethers, Alcohols, Peroxides - Export Grade",Chemical,1,3,UN1170,0,,0,784.2,27.73,294
+290915,2909,29,Organic Chemicals,"Ethers, Alcohols, Peroxides","Ethers, Alcohols, Peroxides - Domestic Grade",Chemical,1,3,UN1170,0,,0,862.1,25.23,295
+290916,2909,29,Organic Chemicals,"Ethers, Alcohols, Peroxides","Ethers, Alcohols, Peroxides - Carton Pack",Chemical,1,3,UN1170,0,,0,757.0,28.73,296
+290917,2909,29,Organic Chemicals,"Ethers, Alcohols, Peroxides","Ethers, Alcohols, Peroxides - Palletized",Chemical,1,3,UN1170,0,,0,815.3,26.68,297
+290918,2909,29,Organic Chemicals,"Ethers, Alcohols, Peroxides","Ethers, Alcohols, Peroxides - Loose",Chemical,1,3,UN1170,0,,0,896.7,24.26,298
+290919,2909,29,Organic Chemicals,"Ethers, Alcohols, Peroxides","Ethers, Alcohols, Peroxides - Refined",Chemical,1,3,UN1170,0,,0,899.5,24.18,299
+290920,2909,29,Organic Chemicals,"Ethers, Alcohols, Peroxides","Ethers, Alcohols, Peroxides - Processed",Chemical,1,3,UN1170,0,,0,863.5,25.19,300
+300401,3004,30,Pharmaceutical Products,"Medicaments, Mixed or Unmixed","Medicaments, Mixed or Unmixed - Grade A",Chemical,0,#NA,#NA,1,5.0,1,442.4,30.0,301
+300402,3004,30,Pharmaceutical Products,"Medicaments, Mixed or Unmixed","Medicaments, Mixed or Unmixed - Grade B",Chemical,0,#NA,#NA,1,5.0,1,468.7,30.0,302
+300403,3004,30,Pharmaceutical Products,"Medicaments, Mixed or Unmixed","Medicaments, Mixed or Unmixed - Bulk",Chemical,0,#NA,#NA,1,5.0,1,490.9,30.0,303
+300404,3004,30,Pharmaceutical Products,"Medicaments, Mixed or Unmixed","Medicaments, Mixed or Unmixed - Retail Pack",Chemical,0,#NA,#NA,1,5.0,1,529.9,30.0,304
+300405,3004,30,Pharmaceutical Products,"Medicaments, Mixed or Unmixed","Medicaments, Mixed or Unmixed - Industrial Grade",Chemical,0,#NA,#NA,1,5.0,1,513.0,30.0,305
+300406,3004,30,Pharmaceutical Products,"Medicaments, Mixed or Unmixed","Medicaments, Mixed or Unmixed - Premium",Chemical,0,#NA,#NA,1,5.0,1,547.6,30.0,306
+300407,3004,30,Pharmaceutical Products,"Medicaments, Mixed or Unmixed","Medicaments, Mixed or Unmixed - Standard",Chemical,0,#NA,#NA,1,5.0,1,501.7,30.0,307
+300408,3004,30,Pharmaceutical Products,"Medicaments, Mixed or Unmixed","Medicaments, Mixed or Unmixed - Economy",Chemical,0,#NA,#NA,1,5.0,1,519.3,30.0,308
+300409,3004,30,Pharmaceutical Products,"Medicaments, Mixed or Unmixed","Medicaments, Mixed or Unmixed - Type I",Chemical,0,#NA,#NA,1,5.0,1,461.3,30.0,309
+300410,3004,30,Pharmaceutical Products,"Medicaments, Mixed or Unmixed","Medicaments, Mixed or Unmixed - Type II",Chemical,0,#NA,#NA,1,5.0,1,452.7,30.0,310
+300411,3004,30,Pharmaceutical Products,"Medicaments, Mixed or Unmixed","Medicaments, Mixed or Unmixed - Type III",Chemical,0,#NA,#NA,1,5.0,1,590.4,30.0,311
+300412,3004,30,Pharmaceutical Products,"Medicaments, Mixed or Unmixed","Medicaments, Mixed or Unmixed - Class 1",Chemical,0,#NA,#NA,1,5.0,1,454.3,30.0,312
+300413,3004,30,Pharmaceutical Products,"Medicaments, Mixed or Unmixed","Medicaments, Mixed or Unmixed - Class 2",Chemical,0,#NA,#NA,1,5.0,1,592.9,30.0,313
+300414,3004,30,Pharmaceutical Products,"Medicaments, Mixed or Unmixed","Medicaments, Mixed or Unmixed - Export Grade",Chemical,0,#NA,#NA,1,5.0,1,465.2,30.0,314
+300415,3004,30,Pharmaceutical Products,"Medicaments, Mixed or Unmixed","Medicaments, Mixed or Unmixed - Domestic Grade",Chemical,0,#NA,#NA,1,5.0,1,511.0,30.0,315
+300416,3004,30,Pharmaceutical Products,"Medicaments, Mixed or Unmixed","Medicaments, Mixed or Unmixed - Carton Pack",Chemical,0,#NA,#NA,1,5.0,1,464.3,30.0,316
+300417,3004,30,Pharmaceutical Products,"Medicaments, Mixed or Unmixed","Medicaments, Mixed or Unmixed - Palletized",Chemical,0,#NA,#NA,1,5.0,1,452.6,30.0,317
+300418,3004,30,Pharmaceutical Products,"Medicaments, Mixed or Unmixed","Medicaments, Mixed or Unmixed - Loose",Chemical,0,#NA,#NA,1,5.0,1,500.2,30.0,318
+300419,3004,30,Pharmaceutical Products,"Medicaments, Mixed or Unmixed","Medicaments, Mixed or Unmixed - Refined",Chemical,0,#NA,#NA,1,5.0,1,440.3,30.0,319
+300420,3004,30,Pharmaceutical Products,"Medicaments, Mixed or Unmixed","Medicaments, Mixed or Unmixed - Processed",Chemical,0,#NA,#NA,1,5.0,1,511.7,30.0,320
+310501,3105,31,Fertilisers,Mineral or Chemical Fertilisers,Mineral or Chemical Fertilisers - Grade A,Chemical,1,5,UN2067,0,,0,1058.0,20.56,321
+310502,3105,31,Fertilisers,Mineral or Chemical Fertilisers,Mineral or Chemical Fertilisers - Grade B,Chemical,1,5,UN2067,0,,0,1042.6,20.86,322
+310503,3105,31,Fertilisers,Mineral or Chemical Fertilisers,Mineral or Chemical Fertilisers - Bulk,Chemical,1,5,UN2067,0,,0,930.3,23.38,323
+310504,3105,31,Fertilisers,Mineral or Chemical Fertilisers,Mineral or Chemical Fertilisers - Retail Pack,Chemical,1,5,UN2067,0,,0,1014.0,21.45,324
+310505,3105,31,Fertilisers,Mineral or Chemical Fertilisers,Mineral or Chemical Fertilisers - Industrial Grade,Chemical,1,5,UN2067,0,,0,1087.0,20.01,325
+310506,3105,31,Fertilisers,Mineral or Chemical Fertilisers,Mineral or Chemical Fertilisers - Premium,Chemical,1,5,UN2067,0,,0,915.3,23.76,326
+310507,3105,31,Fertilisers,Mineral or Chemical Fertilisers,Mineral or Chemical Fertilisers - Standard,Chemical,1,5,UN2067,0,,0,965.8,22.52,327
+310508,3105,31,Fertilisers,Mineral or Chemical Fertilisers,Mineral or Chemical Fertilisers - Economy,Chemical,1,5,UN2067,0,,0,1024.5,21.23,328
+310509,3105,31,Fertilisers,Mineral or Chemical Fertilisers,Mineral or Chemical Fertilisers - Type I,Chemical,1,5,UN2067,0,,0,908.4,23.94,329
+310510,3105,31,Fertilisers,Mineral or Chemical Fertilisers,Mineral or Chemical Fertilisers - Type II,Chemical,1,5,UN2067,0,,0,980.7,22.18,330
+310511,3105,31,Fertilisers,Mineral or Chemical Fertilisers,Mineral or Chemical Fertilisers - Type III,Chemical,1,5,UN2067,0,,0,1040.9,20.9,331
+310512,3105,31,Fertilisers,Mineral or Chemical Fertilisers,Mineral or Chemical Fertilisers - Class 1,Chemical,1,5,UN2067,0,,0,1097.2,19.82,332
+310513,3105,31,Fertilisers,Mineral or Chemical Fertilisers,Mineral or Chemical Fertilisers - Class 2,Chemical,1,5,UN2067,0,,0,947.2,22.96,333
+310514,3105,31,Fertilisers,Mineral or Chemical Fertilisers,Mineral or Chemical Fertilisers - Export Grade,Chemical,1,5,UN2067,0,,0,1085.3,20.04,334
+310515,3105,31,Fertilisers,Mineral or Chemical Fertilisers,Mineral or Chemical Fertilisers - Domestic Grade,Chemical,1,5,UN2067,0,,0,917.4,23.71,335
+310516,3105,31,Fertilisers,Mineral or Chemical Fertilisers,Mineral or Chemical Fertilisers - Carton Pack,Chemical,1,5,UN2067,0,,0,907.4,23.97,336
+310517,3105,31,Fertilisers,Mineral or Chemical Fertilisers,Mineral or Chemical Fertilisers - Palletized,Chemical,1,5,UN2067,0,,0,963.0,22.59,337
+310518,3105,31,Fertilisers,Mineral or Chemical Fertilisers,Mineral or Chemical Fertilisers - Loose,Chemical,1,5,UN2067,0,,0,1021.2,21.3,338
+310519,3105,31,Fertilisers,Mineral or Chemical Fertilisers,Mineral or Chemical Fertilisers - Refined,Chemical,1,5,UN2067,0,,0,932.8,23.32,339
+310520,3105,31,Fertilisers,Mineral or Chemical Fertilisers,Mineral or Chemical Fertilisers - Processed,Chemical,1,5,UN2067,0,,0,1003.0,21.68,340
+330301,3303,33,Essential Oils and Resinoids; Perfumery,Perfumes and Toilet Waters,Perfumes and Toilet Waters - Grade A,Consumer Goods,1,3,UN1266,0,,1,746.1,29.15,341
+330302,3303,33,Essential Oils and Resinoids; Perfumery,Perfumes and Toilet Waters,Perfumes and Toilet Waters - Grade B,Consumer Goods,1,3,UN1266,0,,1,746.1,29.15,342
+330303,3303,33,Essential Oils and Resinoids; Perfumery,Perfumes and Toilet Waters,Perfumes and Toilet Waters - Bulk,Consumer Goods,1,3,UN1266,0,,1,603.8,30.0,343
+330304,3303,33,Essential Oils and Resinoids; Perfumery,Perfumes and Toilet Waters,Perfumes and Toilet Waters - Retail Pack,Consumer Goods,1,3,UN1266,0,,1,696.5,30.0,344
+330305,3303,33,Essential Oils and Resinoids; Perfumery,Perfumes and Toilet Waters,Perfumes and Toilet Waters - Industrial Grade,Consumer Goods,1,3,UN1266,0,,1,666.4,30.0,345
+330306,3303,33,Essential Oils and Resinoids; Perfumery,Perfumes and Toilet Waters,Perfumes and Toilet Waters - Premium,Consumer Goods,1,3,UN1266,0,,1,654.6,30.0,346
+330307,3303,33,Essential Oils and Resinoids; Perfumery,Perfumes and Toilet Waters,Perfumes and Toilet Waters - Standard,Consumer Goods,1,3,UN1266,0,,1,609.7,30.0,347
+330308,3303,33,Essential Oils and Resinoids; Perfumery,Perfumes and Toilet Waters,Perfumes and Toilet Waters - Economy,Consumer Goods,1,3,UN1266,0,,1,722.4,30.0,348
+330309,3303,33,Essential Oils and Resinoids; Perfumery,Perfumes and Toilet Waters,Perfumes and Toilet Waters - Type I,Consumer Goods,1,3,UN1266,0,,1,634.3,30.0,349
+330310,3303,33,Essential Oils and Resinoids; Perfumery,Perfumes and Toilet Waters,Perfumes and Toilet Waters - Type II,Consumer Goods,1,3,UN1266,0,,1,635.7,30.0,350
+330311,3303,33,Essential Oils and Resinoids; Perfumery,Perfumes and Toilet Waters,Perfumes and Toilet Waters - Type III,Consumer Goods,1,3,UN1266,0,,1,690.7,30.0,351
+330312,3303,33,Essential Oils and Resinoids; Perfumery,Perfumes and Toilet Waters,Perfumes and Toilet Waters - Class 1,Consumer Goods,1,3,UN1266,0,,1,617.9,30.0,352
+330313,3303,33,Essential Oils and Resinoids; Perfumery,Perfumes and Toilet Waters,Perfumes and Toilet Waters - Class 2,Consumer Goods,1,3,UN1266,0,,1,749.9,29.0,353
+330314,3303,33,Essential Oils and Resinoids; Perfumery,Perfumes and Toilet Waters,Perfumes and Toilet Waters - Export Grade,Consumer Goods,1,3,UN1266,0,,1,717.7,30.0,354
+330315,3303,33,Essential Oils and Resinoids; Perfumery,Perfumes and Toilet Waters,Perfumes and Toilet Waters - Domestic Grade,Consumer Goods,1,3,UN1266,0,,1,670.7,30.0,355
+330316,3303,33,Essential Oils and Resinoids; Perfumery,Perfumes and Toilet Waters,Perfumes and Toilet Waters - Carton Pack,Consumer Goods,1,3,UN1266,0,,1,626.2,30.0,356
+330317,3303,33,Essential Oils and Resinoids; Perfumery,Perfumes and Toilet Waters,Perfumes and Toilet Waters - Palletized,Consumer Goods,1,3,UN1266,0,,1,652.9,30.0,357
+330318,3303,33,Essential Oils and Resinoids; Perfumery,Perfumes and Toilet Waters,Perfumes and Toilet Waters - Loose,Consumer Goods,1,3,UN1266,0,,1,606.8,30.0,358
+330319,3303,33,Essential Oils and Resinoids; Perfumery,Perfumes and Toilet Waters,Perfumes and Toilet Waters - Refined,Consumer Goods,1,3,UN1266,0,,1,704.6,30.0,359
+330320,3303,33,Essential Oils and Resinoids; Perfumery,Perfumes and Toilet Waters,Perfumes and Toilet Waters - Processed,Consumer Goods,1,3,UN1266,0,,1,736.4,29.54,360
+340101,3401,34,"Soap, Organic Surface-Active Agents",Soap and Organic Surface-Active Products,Soap and Organic Surface-Active Products - Grade A,Consumer Goods,0,#NA,#NA,0,,0,636.0,30.0,361
+340102,3401,34,"Soap, Organic Surface-Active Agents",Soap and Organic Surface-Active Products,Soap and Organic Surface-Active Products - Grade B,Consumer Goods,0,#NA,#NA,0,,0,608.0,30.0,362
+340103,3401,34,"Soap, Organic Surface-Active Agents",Soap and Organic Surface-Active Products,Soap and Organic Surface-Active Products - Bulk,Consumer Goods,0,#NA,#NA,0,,0,533.1,30.0,363
+340104,3401,34,"Soap, Organic Surface-Active Agents",Soap and Organic Surface-Active Products,Soap and Organic Surface-Active Products - Retail Pack,Consumer Goods,0,#NA,#NA,0,,0,605.2,30.0,364
+340105,3401,34,"Soap, Organic Surface-Active Agents",Soap and Organic Surface-Active Products,Soap and Organic Surface-Active Products - Industrial Grade,Consumer Goods,0,#NA,#NA,0,,0,613.1,30.0,365
+340106,3401,34,"Soap, Organic Surface-Active Agents",Soap and Organic Surface-Active Products,Soap and Organic Surface-Active Products - Premium,Consumer Goods,0,#NA,#NA,0,,0,547.5,30.0,366
+340107,3401,34,"Soap, Organic Surface-Active Agents",Soap and Organic Surface-Active Products,Soap and Organic Surface-Active Products - Standard,Consumer Goods,0,#NA,#NA,0,,0,619.4,30.0,367
+340108,3401,34,"Soap, Organic Surface-Active Agents",Soap and Organic Surface-Active Products,Soap and Organic Surface-Active Products - Economy,Consumer Goods,0,#NA,#NA,0,,0,583.2,30.0,368
+340109,3401,34,"Soap, Organic Surface-Active Agents",Soap and Organic Surface-Active Products,Soap and Organic Surface-Active Products - Type I,Consumer Goods,0,#NA,#NA,0,,0,590.3,30.0,369
+340110,3401,34,"Soap, Organic Surface-Active Agents",Soap and Organic Surface-Active Products,Soap and Organic Surface-Active Products - Type II,Consumer Goods,0,#NA,#NA,0,,0,615.3,30.0,370
+340111,3401,34,"Soap, Organic Surface-Active Agents",Soap and Organic Surface-Active Products,Soap and Organic Surface-Active Products - Type III,Consumer Goods,0,#NA,#NA,0,,0,508.4,30.0,371
+340112,3401,34,"Soap, Organic Surface-Active Agents",Soap and Organic Surface-Active Products,Soap and Organic Surface-Active Products - Class 1,Consumer Goods,0,#NA,#NA,0,,0,577.4,30.0,372
+340113,3401,34,"Soap, Organic Surface-Active Agents",Soap and Organic Surface-Active Products,Soap and Organic Surface-Active Products - Class 2,Consumer Goods,0,#NA,#NA,0,,0,643.5,30.0,373
+340114,3401,34,"Soap, Organic Surface-Active Agents",Soap and Organic Surface-Active Products,Soap and Organic Surface-Active Products - Export Grade,Consumer Goods,0,#NA,#NA,0,,0,636.6,30.0,374
+340115,3401,34,"Soap, Organic Surface-Active Agents",Soap and Organic Surface-Active Products,Soap and Organic Surface-Active Products - Domestic Grade,Consumer Goods,0,#NA,#NA,0,,0,515.9,30.0,375
+340116,3401,34,"Soap, Organic Surface-Active Agents",Soap and Organic Surface-Active Products,Soap and Organic Surface-Active Products - Carton Pack,Consumer Goods,0,#NA,#NA,0,,0,586.0,30.0,376
+340117,3401,34,"Soap, Organic Surface-Active Agents",Soap and Organic Surface-Active Products,Soap and Organic Surface-Active Products - Palletized,Consumer Goods,0,#NA,#NA,0,,0,613.3,30.0,377
+340118,3401,34,"Soap, Organic Surface-Active Agents",Soap and Organic Surface-Active Products,Soap and Organic Surface-Active Products - Loose,Consumer Goods,0,#NA,#NA,0,,0,604.5,30.0,378
+340119,3401,34,"Soap, Organic Surface-Active Agents",Soap and Organic Surface-Active Products,Soap and Organic Surface-Active Products - Refined,Consumer Goods,0,#NA,#NA,0,,0,501.7,30.0,379
+340120,3401,34,"Soap, Organic Surface-Active Agents",Soap and Organic Surface-Active Products,Soap and Organic Surface-Active Products - Processed,Consumer Goods,0,#NA,#NA,0,,0,550.7,30.0,380
+360401,3604,36,Explosives; Pyrotechnic Products,"Fireworks, Signalling Flares","Fireworks, Signalling Flares - Grade A",Industrial,1,1,UN0335,0,,0,615.7,30.0,381
+360402,3604,36,Explosives; Pyrotechnic Products,"Fireworks, Signalling Flares","Fireworks, Signalling Flares - Grade B",Industrial,1,1,UN0335,0,,0,637.1,30.0,382
+360403,3604,36,Explosives; Pyrotechnic Products,"Fireworks, Signalling Flares","Fireworks, Signalling Flares - Bulk",Industrial,1,1,UN0335,0,,0,881.6,24.67,383
+360404,3604,36,Explosives; Pyrotechnic Products,"Fireworks, Signalling Flares","Fireworks, Signalling Flares - Retail Pack",Industrial,1,1,UN0335,0,,0,736.4,29.53,384
+360405,3604,36,Explosives; Pyrotechnic Products,"Fireworks, Signalling Flares","Fireworks, Signalling Flares - Industrial Grade",Industrial,1,1,UN0335,0,,0,802.8,27.09,385
+360406,3604,36,Explosives; Pyrotechnic Products,"Fireworks, Signalling Flares","Fireworks, Signalling Flares - Premium",Industrial,1,1,UN0335,0,,0,681.2,30.0,386
+360407,3604,36,Explosives; Pyrotechnic Products,"Fireworks, Signalling Flares","Fireworks, Signalling Flares - Standard",Industrial,1,1,UN0335,0,,0,774.4,28.09,387
+360408,3604,36,Explosives; Pyrotechnic Products,"Fireworks, Signalling Flares","Fireworks, Signalling Flares - Economy",Industrial,1,1,UN0335,0,,0,892.1,24.38,388
+360409,3604,36,Explosives; Pyrotechnic Products,"Fireworks, Signalling Flares","Fireworks, Signalling Flares - Type I",Industrial,1,1,UN0335,0,,0,788.2,27.59,389
+360410,3604,36,Explosives; Pyrotechnic Products,"Fireworks, Signalling Flares","Fireworks, Signalling Flares - Type II",Industrial,1,1,UN0335,0,,0,789.5,27.55,390
+360411,3604,36,Explosives; Pyrotechnic Products,"Fireworks, Signalling Flares","Fireworks, Signalling Flares - Type III",Industrial,1,1,UN0335,0,,0,843.2,25.79,391
+360412,3604,36,Explosives; Pyrotechnic Products,"Fireworks, Signalling Flares","Fireworks, Signalling Flares - Class 1",Industrial,1,1,UN0335,0,,0,804.9,27.02,392
+360413,3604,36,Explosives; Pyrotechnic Products,"Fireworks, Signalling Flares","Fireworks, Signalling Flares - Class 2",Industrial,1,1,UN0335,0,,0,683.6,30.0,393
+360414,3604,36,Explosives; Pyrotechnic Products,"Fireworks, Signalling Flares","Fireworks, Signalling Flares - Export Grade",Industrial,1,1,UN0335,0,,0,791.9,27.46,394
+360415,3604,36,Explosives; Pyrotechnic Products,"Fireworks, Signalling Flares","Fireworks, Signalling Flares - Domestic Grade",Industrial,1,1,UN0335,0,,0,617.2,30.0,395
+360416,3604,36,Explosives; Pyrotechnic Products,"Fireworks, Signalling Flares","Fireworks, Signalling Flares - Carton Pack",Industrial,1,1,UN0335,0,,0,853.5,25.48,396
+360417,3604,36,Explosives; Pyrotechnic Products,"Fireworks, Signalling Flares","Fireworks, Signalling Flares - Palletized",Industrial,1,1,UN0335,0,,0,731.9,29.72,397
+360418,3604,36,Explosives; Pyrotechnic Products,"Fireworks, Signalling Flares","Fireworks, Signalling Flares - Loose",Industrial,1,1,UN0335,0,,0,810.9,26.82,398
+360419,3604,36,Explosives; Pyrotechnic Products,"Fireworks, Signalling Flares","Fireworks, Signalling Flares - Refined",Industrial,1,1,UN0335,0,,0,690.0,30.0,399
+360420,3604,36,Explosives; Pyrotechnic Products,"Fireworks, Signalling Flares","Fireworks, Signalling Flares - Processed",Industrial,1,1,UN0335,0,,0,876.2,24.82,400
+380801,3808,38,Miscellaneous Chemical Products,"Insecticides, Pesticides, Disinfectants","Insecticides, Pesticides, Disinfectants - Grade A",Chemical,1,6,UN2902,0,,0,873.4,24.9,401
+380802,3808,38,Miscellaneous Chemical Products,"Insecticides, Pesticides, Disinfectants","Insecticides, Pesticides, Disinfectants - Grade B",Chemical,1,6,UN2902,0,,0,901.1,24.14,402
+380803,3808,38,Miscellaneous Chemical Products,"Insecticides, Pesticides, Disinfectants","Insecticides, Pesticides, Disinfectants - Bulk",Chemical,1,6,UN2902,0,,0,903.8,24.06,403
+380804,3808,38,Miscellaneous Chemical Products,"Insecticides, Pesticides, Disinfectants","Insecticides, Pesticides, Disinfectants - Retail Pack",Chemical,1,6,UN2902,0,,0,800.2,27.18,404
+380805,3808,38,Miscellaneous Chemical Products,"Insecticides, Pesticides, Disinfectants","Insecticides, Pesticides, Disinfectants - Industrial Grade",Chemical,1,6,UN2902,0,,0,812.4,26.77,405
+380806,3808,38,Miscellaneous Chemical Products,"Insecticides, Pesticides, Disinfectants","Insecticides, Pesticides, Disinfectants - Premium",Chemical,1,6,UN2902,0,,0,883.6,24.61,406
+380807,3808,38,Miscellaneous Chemical Products,"Insecticides, Pesticides, Disinfectants","Insecticides, Pesticides, Disinfectants - Standard",Chemical,1,6,UN2902,0,,0,717.0,30.0,407
+380808,3808,38,Miscellaneous Chemical Products,"Insecticides, Pesticides, Disinfectants","Insecticides, Pesticides, Disinfectants - Economy",Chemical,1,6,UN2902,0,,0,863.7,25.18,408
+380809,3808,38,Miscellaneous Chemical Products,"Insecticides, Pesticides, Disinfectants","Insecticides, Pesticides, Disinfectants - Type I",Chemical,1,6,UN2902,0,,0,779.2,27.91,409
+380810,3808,38,Miscellaneous Chemical Products,"Insecticides, Pesticides, Disinfectants","Insecticides, Pesticides, Disinfectants - Type II",Chemical,1,6,UN2902,0,,0,760.2,28.61,410
+380811,3808,38,Miscellaneous Chemical Products,"Insecticides, Pesticides, Disinfectants","Insecticides, Pesticides, Disinfectants - Type III",Chemical,1,6,UN2902,0,,0,790.4,27.52,411
+380812,3808,38,Miscellaneous Chemical Products,"Insecticides, Pesticides, Disinfectants","Insecticides, Pesticides, Disinfectants - Class 1",Chemical,1,6,UN2902,0,,0,832.2,26.14,412
+380813,3808,38,Miscellaneous Chemical Products,"Insecticides, Pesticides, Disinfectants","Insecticides, Pesticides, Disinfectants - Class 2",Chemical,1,6,UN2902,0,,0,804.3,27.04,413
+380814,3808,38,Miscellaneous Chemical Products,"Insecticides, Pesticides, Disinfectants","Insecticides, Pesticides, Disinfectants - Export Grade",Chemical,1,6,UN2902,0,,0,940.6,23.12,414
+380815,3808,38,Miscellaneous Chemical Products,"Insecticides, Pesticides, Disinfectants","Insecticides, Pesticides, Disinfectants - Domestic Grade",Chemical,1,6,UN2902,0,,0,879.8,24.72,415
+380816,3808,38,Miscellaneous Chemical Products,"Insecticides, Pesticides, Disinfectants","Insecticides, Pesticides, Disinfectants - Carton Pack",Chemical,1,6,UN2902,0,,0,790.3,27.52,416
+380817,3808,38,Miscellaneous Chemical Products,"Insecticides, Pesticides, Disinfectants","Insecticides, Pesticides, Disinfectants - Palletized",Chemical,1,6,UN2902,0,,0,825.4,26.35,417
+380818,3808,38,Miscellaneous Chemical Products,"Insecticides, Pesticides, Disinfectants","Insecticides, Pesticides, Disinfectants - Loose",Chemical,1,6,UN2902,0,,0,787.5,27.62,418
+380819,3808,38,Miscellaneous Chemical Products,"Insecticides, Pesticides, Disinfectants","Insecticides, Pesticides, Disinfectants - Refined",Chemical,1,6,UN2902,0,,0,814.4,26.71,419
+380820,3808,38,Miscellaneous Chemical Products,"Insecticides, Pesticides, Disinfectants","Insecticides, Pesticides, Disinfectants - Processed",Chemical,1,6,UN2902,0,,0,789.3,27.55,420
+390101,3901,39,Plastics and Articles Thereof,"Polymers of Ethylene, in Primary Forms","Polymers of Ethylene, in Primary Forms - Grade A",Industrial,0,#NA,#NA,0,,0,444.0,30.0,421
+390102,3901,39,Plastics and Articles Thereof,"Polymers of Ethylene, in Primary Forms","Polymers of Ethylene, in Primary Forms - Grade B",Industrial,0,#NA,#NA,0,,0,442.0,30.0,422
+390103,3901,39,Plastics and Articles Thereof,"Polymers of Ethylene, in Primary Forms","Polymers of Ethylene, in Primary Forms - Bulk",Industrial,0,#NA,#NA,0,,0,467.9,30.0,423
+390104,3901,39,Plastics and Articles Thereof,"Polymers of Ethylene, in Primary Forms","Polymers of Ethylene, in Primary Forms - Retail Pack",Industrial,0,#NA,#NA,0,,0,421.7,30.0,424
+390105,3901,39,Plastics and Articles Thereof,"Polymers of Ethylene, in Primary Forms","Polymers of Ethylene, in Primary Forms - Industrial Grade",Industrial,0,#NA,#NA,0,,0,439.7,30.0,425
+390106,3901,39,Plastics and Articles Thereof,"Polymers of Ethylene, in Primary Forms","Polymers of Ethylene, in Primary Forms - Premium",Industrial,0,#NA,#NA,0,,0,485.9,30.0,426
+390107,3901,39,Plastics and Articles Thereof,"Polymers of Ethylene, in Primary Forms","Polymers of Ethylene, in Primary Forms - Standard",Industrial,0,#NA,#NA,0,,0,528.6,30.0,427
+390108,3901,39,Plastics and Articles Thereof,"Polymers of Ethylene, in Primary Forms","Polymers of Ethylene, in Primary Forms - Economy",Industrial,0,#NA,#NA,0,,0,491.2,30.0,428
+390109,3901,39,Plastics and Articles Thereof,"Polymers of Ethylene, in Primary Forms","Polymers of Ethylene, in Primary Forms - Type I",Industrial,0,#NA,#NA,0,,0,528.0,30.0,429
+390110,3901,39,Plastics and Articles Thereof,"Polymers of Ethylene, in Primary Forms","Polymers of Ethylene, in Primary Forms - Type II",Industrial,0,#NA,#NA,0,,0,525.8,30.0,430
+390111,3901,39,Plastics and Articles Thereof,"Polymers of Ethylene, in Primary Forms","Polymers of Ethylene, in Primary Forms - Type III",Industrial,0,#NA,#NA,0,,0,464.6,30.0,431
+390112,3901,39,Plastics and Articles Thereof,"Polymers of Ethylene, in Primary Forms","Polymers of Ethylene, in Primary Forms - Class 1",Industrial,0,#NA,#NA,0,,0,421.3,30.0,432
+390113,3901,39,Plastics and Articles Thereof,"Polymers of Ethylene, in Primary Forms","Polymers of Ethylene, in Primary Forms - Class 2",Industrial,0,#NA,#NA,0,,0,492.6,30.0,433
+390114,3901,39,Plastics and Articles Thereof,"Polymers of Ethylene, in Primary Forms","Polymers of Ethylene, in Primary Forms - Export Grade",Industrial,0,#NA,#NA,0,,0,524.9,30.0,434
+390115,3901,39,Plastics and Articles Thereof,"Polymers of Ethylene, in Primary Forms","Polymers of Ethylene, in Primary Forms - Domestic Grade",Industrial,0,#NA,#NA,0,,0,536.5,30.0,435
+390116,3901,39,Plastics and Articles Thereof,"Polymers of Ethylene, in Primary Forms","Polymers of Ethylene, in Primary Forms - Carton Pack",Industrial,0,#NA,#NA,0,,0,503.2,30.0,436
+390117,3901,39,Plastics and Articles Thereof,"Polymers of Ethylene, in Primary Forms","Polymers of Ethylene, in Primary Forms - Palletized",Industrial,0,#NA,#NA,0,,0,408.5,30.0,437
+390118,3901,39,Plastics and Articles Thereof,"Polymers of Ethylene, in Primary Forms","Polymers of Ethylene, in Primary Forms - Loose",Industrial,0,#NA,#NA,0,,0,500.5,30.0,438
+390119,3901,39,Plastics and Articles Thereof,"Polymers of Ethylene, in Primary Forms","Polymers of Ethylene, in Primary Forms - Refined",Industrial,0,#NA,#NA,0,,0,464.1,30.0,439
+390120,3901,39,Plastics and Articles Thereof,"Polymers of Ethylene, in Primary Forms","Polymers of Ethylene, in Primary Forms - Processed",Industrial,0,#NA,#NA,0,,0,532.8,30.0,440
+392601,3926,39,Plastics and Articles Thereof,Other Articles of Plastics,Other Articles of Plastics - Grade A,Industrial,0,#NA,#NA,0,,0,329.2,30.0,441
+392602,3926,39,Plastics and Articles Thereof,Other Articles of Plastics,Other Articles of Plastics - Grade B,Industrial,0,#NA,#NA,0,,0,244.6,30.0,442
+392603,3926,39,Plastics and Articles Thereof,Other Articles of Plastics,Other Articles of Plastics - Bulk,Industrial,0,#NA,#NA,0,,0,266.3,30.0,443
+392604,3926,39,Plastics and Articles Thereof,Other Articles of Plastics,Other Articles of Plastics - Retail Pack,Industrial,0,#NA,#NA,0,,0,283.8,30.0,444
+392605,3926,39,Plastics and Articles Thereof,Other Articles of Plastics,Other Articles of Plastics - Industrial Grade,Industrial,0,#NA,#NA,0,,0,244.7,30.0,445
+392606,3926,39,Plastics and Articles Thereof,Other Articles of Plastics,Other Articles of Plastics - Premium,Industrial,0,#NA,#NA,0,,0,291.1,30.0,446
+392607,3926,39,Plastics and Articles Thereof,Other Articles of Plastics,Other Articles of Plastics - Standard,Industrial,0,#NA,#NA,0,,0,213.1,30.0,447
+392608,3926,39,Plastics and Articles Thereof,Other Articles of Plastics,Other Articles of Plastics - Economy,Industrial,0,#NA,#NA,0,,0,208.4,30.0,448
+392609,3926,39,Plastics and Articles Thereof,Other Articles of Plastics,Other Articles of Plastics - Type I,Industrial,0,#NA,#NA,0,,0,345.2,30.0,449
+392610,3926,39,Plastics and Articles Thereof,Other Articles of Plastics,Other Articles of Plastics - Type II,Industrial,0,#NA,#NA,0,,0,277.9,30.0,450
+392611,3926,39,Plastics and Articles Thereof,Other Articles of Plastics,Other Articles of Plastics - Type III,Industrial,0,#NA,#NA,0,,0,207.4,30.0,451
+392612,3926,39,Plastics and Articles Thereof,Other Articles of Plastics,Other Articles of Plastics - Class 1,Industrial,0,#NA,#NA,0,,0,230.1,30.0,452
+392613,3926,39,Plastics and Articles Thereof,Other Articles of Plastics,Other Articles of Plastics - Class 2,Industrial,0,#NA,#NA,0,,0,337.6,30.0,453
+392614,3926,39,Plastics and Articles Thereof,Other Articles of Plastics,Other Articles of Plastics - Export Grade,Industrial,0,#NA,#NA,0,,0,315.2,30.0,454
+392615,3926,39,Plastics and Articles Thereof,Other Articles of Plastics,Other Articles of Plastics - Domestic Grade,Industrial,0,#NA,#NA,0,,0,216.8,30.0,455
+392616,3926,39,Plastics and Articles Thereof,Other Articles of Plastics,Other Articles of Plastics - Carton Pack,Industrial,0,#NA,#NA,0,,0,337.5,30.0,456
+392617,3926,39,Plastics and Articles Thereof,Other Articles of Plastics,Other Articles of Plastics - Palletized,Industrial,0,#NA,#NA,0,,0,273.2,30.0,457
+392618,3926,39,Plastics and Articles Thereof,Other Articles of Plastics,Other Articles of Plastics - Loose,Industrial,0,#NA,#NA,0,,0,257.0,30.0,458
+392619,3926,39,Plastics and Articles Thereof,Other Articles of Plastics,Other Articles of Plastics - Refined,Industrial,0,#NA,#NA,0,,0,289.8,30.0,459
+392620,3926,39,Plastics and Articles Thereof,Other Articles of Plastics,Other Articles of Plastics - Processed,Industrial,0,#NA,#NA,0,,0,250.0,30.0,460
+401101,4011,40,Rubber and Articles Thereof,"New Pneumatic Tyres, of Rubber","New Pneumatic Tyres, of Rubber - Grade A",Industrial,0,#NA,#NA,0,,0,217.8,30.0,461
+401102,4011,40,Rubber and Articles Thereof,"New Pneumatic Tyres, of Rubber","New Pneumatic Tyres, of Rubber - Grade B",Industrial,0,#NA,#NA,0,,0,224.2,30.0,462
+401103,4011,40,Rubber and Articles Thereof,"New Pneumatic Tyres, of Rubber","New Pneumatic Tyres, of Rubber - Bulk",Industrial,0,#NA,#NA,0,,0,235.0,30.0,463
+401104,4011,40,Rubber and Articles Thereof,"New Pneumatic Tyres, of Rubber","New Pneumatic Tyres, of Rubber - Retail Pack",Industrial,0,#NA,#NA,0,,0,204.0,30.0,464
+401105,4011,40,Rubber and Articles Thereof,"New Pneumatic Tyres, of Rubber","New Pneumatic Tyres, of Rubber - Industrial Grade",Industrial,0,#NA,#NA,0,,0,161.3,30.0,465
+401106,4011,40,Rubber and Articles Thereof,"New Pneumatic Tyres, of Rubber","New Pneumatic Tyres, of Rubber - Premium",Industrial,0,#NA,#NA,0,,0,194.4,30.0,466
+401107,4011,40,Rubber and Articles Thereof,"New Pneumatic Tyres, of Rubber","New Pneumatic Tyres, of Rubber - Standard",Industrial,0,#NA,#NA,0,,0,197.1,30.0,467
+401108,4011,40,Rubber and Articles Thereof,"New Pneumatic Tyres, of Rubber","New Pneumatic Tyres, of Rubber - Economy",Industrial,0,#NA,#NA,0,,0,176.1,30.0,468
+401109,4011,40,Rubber and Articles Thereof,"New Pneumatic Tyres, of Rubber","New Pneumatic Tyres, of Rubber - Type I",Industrial,0,#NA,#NA,0,,0,175.1,30.0,469
+401110,4011,40,Rubber and Articles Thereof,"New Pneumatic Tyres, of Rubber","New Pneumatic Tyres, of Rubber - Type II",Industrial,0,#NA,#NA,0,,0,174.8,30.0,470
+401111,4011,40,Rubber and Articles Thereof,"New Pneumatic Tyres, of Rubber","New Pneumatic Tyres, of Rubber - Type III",Industrial,0,#NA,#NA,0,,0,189.0,30.0,471
+401112,4011,40,Rubber and Articles Thereof,"New Pneumatic Tyres, of Rubber","New Pneumatic Tyres, of Rubber - Class 1",Industrial,0,#NA,#NA,0,,0,169.6,30.0,472
+401113,4011,40,Rubber and Articles Thereof,"New Pneumatic Tyres, of Rubber","New Pneumatic Tyres, of Rubber - Class 2",Industrial,0,#NA,#NA,0,,0,236.9,30.0,473
+401114,4011,40,Rubber and Articles Thereof,"New Pneumatic Tyres, of Rubber","New Pneumatic Tyres, of Rubber - Export Grade",Industrial,0,#NA,#NA,0,,0,190.2,30.0,474
+401115,4011,40,Rubber and Articles Thereof,"New Pneumatic Tyres, of Rubber","New Pneumatic Tyres, of Rubber - Domestic Grade",Industrial,0,#NA,#NA,0,,0,243.8,30.0,475
+401116,4011,40,Rubber and Articles Thereof,"New Pneumatic Tyres, of Rubber","New Pneumatic Tyres, of Rubber - Carton Pack",Industrial,0,#NA,#NA,0,,0,184.2,30.0,476
+401117,4011,40,Rubber and Articles Thereof,"New Pneumatic Tyres, of Rubber","New Pneumatic Tyres, of Rubber - Palletized",Industrial,0,#NA,#NA,0,,0,165.6,30.0,477
+401118,4011,40,Rubber and Articles Thereof,"New Pneumatic Tyres, of Rubber","New Pneumatic Tyres, of Rubber - Loose",Industrial,0,#NA,#NA,0,,0,199.2,30.0,478
+401119,4011,40,Rubber and Articles Thereof,"New Pneumatic Tyres, of Rubber","New Pneumatic Tyres, of Rubber - Refined",Industrial,0,#NA,#NA,0,,0,215.5,30.0,479
+401120,4011,40,Rubber and Articles Thereof,"New Pneumatic Tyres, of Rubber","New Pneumatic Tyres, of Rubber - Processed",Industrial,0,#NA,#NA,0,,0,184.1,30.0,480
+440701,4407,44,Wood and Articles of Wood,Wood Sawn or Chipped Lengthwise,Wood Sawn or Chipped Lengthwise - Grade A,Raw Materials,0,#NA,#NA,0,,0,403.9,30.0,481
+440702,4407,44,Wood and Articles of Wood,Wood Sawn or Chipped Lengthwise,Wood Sawn or Chipped Lengthwise - Grade B,Raw Materials,0,#NA,#NA,0,,0,542.1,30.0,482
+440703,4407,44,Wood and Articles of Wood,Wood Sawn or Chipped Lengthwise,Wood Sawn or Chipped Lengthwise - Bulk,Raw Materials,0,#NA,#NA,0,,0,547.2,30.0,483
+440704,4407,44,Wood and Articles of Wood,Wood Sawn or Chipped Lengthwise,Wood Sawn or Chipped Lengthwise - Retail Pack,Raw Materials,0,#NA,#NA,0,,0,501.0,30.0,484
+440705,4407,44,Wood and Articles of Wood,Wood Sawn or Chipped Lengthwise,Wood Sawn or Chipped Lengthwise - Industrial Grade,Raw Materials,0,#NA,#NA,0,,0,562.6,30.0,485
+440706,4407,44,Wood and Articles of Wood,Wood Sawn or Chipped Lengthwise,Wood Sawn or Chipped Lengthwise - Premium,Raw Materials,0,#NA,#NA,0,,0,446.2,30.0,486
+440707,4407,44,Wood and Articles of Wood,Wood Sawn or Chipped Lengthwise,Wood Sawn or Chipped Lengthwise - Standard,Raw Materials,0,#NA,#NA,0,,0,416.2,30.0,487
+440708,4407,44,Wood and Articles of Wood,Wood Sawn or Chipped Lengthwise,Wood Sawn or Chipped Lengthwise - Economy,Raw Materials,0,#NA,#NA,0,,0,500.6,30.0,488
+440709,4407,44,Wood and Articles of Wood,Wood Sawn or Chipped Lengthwise,Wood Sawn or Chipped Lengthwise - Type I,Raw Materials,0,#NA,#NA,0,,0,584.6,30.0,489
+440710,4407,44,Wood and Articles of Wood,Wood Sawn or Chipped Lengthwise,Wood Sawn or Chipped Lengthwise - Type II,Raw Materials,0,#NA,#NA,0,,0,505.8,30.0,490
+440711,4407,44,Wood and Articles of Wood,Wood Sawn or Chipped Lengthwise,Wood Sawn or Chipped Lengthwise - Type III,Raw Materials,0,#NA,#NA,0,,0,588.7,30.0,491
+440712,4407,44,Wood and Articles of Wood,Wood Sawn or Chipped Lengthwise,Wood Sawn or Chipped Lengthwise - Class 1,Raw Materials,0,#NA,#NA,0,,0,565.7,30.0,492
+440713,4407,44,Wood and Articles of Wood,Wood Sawn or Chipped Lengthwise,Wood Sawn or Chipped Lengthwise - Class 2,Raw Materials,0,#NA,#NA,0,,0,558.7,30.0,493
+440714,4407,44,Wood and Articles of Wood,Wood Sawn or Chipped Lengthwise,Wood Sawn or Chipped Lengthwise - Export Grade,Raw Materials,0,#NA,#NA,0,,0,501.7,30.0,494
+440715,4407,44,Wood and Articles of Wood,Wood Sawn or Chipped Lengthwise,Wood Sawn or Chipped Lengthwise - Domestic Grade,Raw Materials,0,#NA,#NA,0,,0,520.1,30.0,495
+440716,4407,44,Wood and Articles of Wood,Wood Sawn or Chipped Lengthwise,Wood Sawn or Chipped Lengthwise - Carton Pack,Raw Materials,0,#NA,#NA,0,,0,417.7,30.0,496
+440717,4407,44,Wood and Articles of Wood,Wood Sawn or Chipped Lengthwise,Wood Sawn or Chipped Lengthwise - Palletized,Raw Materials,0,#NA,#NA,0,,0,520.8,30.0,497
+440718,4407,44,Wood and Articles of Wood,Wood Sawn or Chipped Lengthwise,Wood Sawn or Chipped Lengthwise - Loose,Raw Materials,0,#NA,#NA,0,,0,568.6,30.0,498
+440719,4407,44,Wood and Articles of Wood,Wood Sawn or Chipped Lengthwise,Wood Sawn or Chipped Lengthwise - Refined,Raw Materials,0,#NA,#NA,0,,0,502.1,30.0,499
+440720,4407,44,Wood and Articles of Wood,Wood Sawn or Chipped Lengthwise,Wood Sawn or Chipped Lengthwise - Processed,Raw Materials,0,#NA,#NA,0,,0,434.5,30.0,500
+480201,4802,48,Paper and Paperboard,Uncoated Paper and Paperboard,Uncoated Paper and Paperboard - Grade A,Industrial,0,#NA,#NA,0,,0,447.9,30.0,501
+480202,4802,48,Paper and Paperboard,Uncoated Paper and Paperboard,Uncoated Paper and Paperboard - Grade B,Industrial,0,#NA,#NA,0,,0,416.0,30.0,502
+480203,4802,48,Paper and Paperboard,Uncoated Paper and Paperboard,Uncoated Paper and Paperboard - Bulk,Industrial,0,#NA,#NA,0,,0,338.5,30.0,503
+480204,4802,48,Paper and Paperboard,Uncoated Paper and Paperboard,Uncoated Paper and Paperboard - Retail Pack,Industrial,0,#NA,#NA,0,,0,360.2,30.0,504
+480205,4802,48,Paper and Paperboard,Uncoated Paper and Paperboard,Uncoated Paper and Paperboard - Industrial Grade,Industrial,0,#NA,#NA,0,,0,380.0,30.0,505
+480206,4802,48,Paper and Paperboard,Uncoated Paper and Paperboard,Uncoated Paper and Paperboard - Premium,Industrial,0,#NA,#NA,0,,0,446.1,30.0,506
+480207,4802,48,Paper and Paperboard,Uncoated Paper and Paperboard,Uncoated Paper and Paperboard - Standard,Industrial,0,#NA,#NA,0,,0,446.5,30.0,507
+480208,4802,48,Paper and Paperboard,Uncoated Paper and Paperboard,Uncoated Paper and Paperboard - Economy,Industrial,0,#NA,#NA,0,,0,317.6,30.0,508
+480209,4802,48,Paper and Paperboard,Uncoated Paper and Paperboard,Uncoated Paper and Paperboard - Type I,Industrial,0,#NA,#NA,0,,0,405.3,30.0,509
+480210,4802,48,Paper and Paperboard,Uncoated Paper and Paperboard,Uncoated Paper and Paperboard - Type II,Industrial,0,#NA,#NA,0,,0,373.6,30.0,510
+480211,4802,48,Paper and Paperboard,Uncoated Paper and Paperboard,Uncoated Paper and Paperboard - Type III,Industrial,0,#NA,#NA,0,,0,310.9,30.0,511
+480212,4802,48,Paper and Paperboard,Uncoated Paper and Paperboard,Uncoated Paper and Paperboard - Class 1,Industrial,0,#NA,#NA,0,,0,316.9,30.0,512
+480213,4802,48,Paper and Paperboard,Uncoated Paper and Paperboard,Uncoated Paper and Paperboard - Class 2,Industrial,0,#NA,#NA,0,,0,331.9,30.0,513
+480214,4802,48,Paper and Paperboard,Uncoated Paper and Paperboard,Uncoated Paper and Paperboard - Export Grade,Industrial,0,#NA,#NA,0,,0,323.5,30.0,514
+480215,4802,48,Paper and Paperboard,Uncoated Paper and Paperboard,Uncoated Paper and Paperboard - Domestic Grade,Industrial,0,#NA,#NA,0,,0,363.1,30.0,515
+480216,4802,48,Paper and Paperboard,Uncoated Paper and Paperboard,Uncoated Paper and Paperboard - Carton Pack,Industrial,0,#NA,#NA,0,,0,444.6,30.0,516
+480217,4802,48,Paper and Paperboard,Uncoated Paper and Paperboard,Uncoated Paper and Paperboard - Palletized,Industrial,0,#NA,#NA,0,,0,449.8,30.0,517
+480218,4802,48,Paper and Paperboard,Uncoated Paper and Paperboard,Uncoated Paper and Paperboard - Loose,Industrial,0,#NA,#NA,0,,0,426.7,30.0,518
+480219,4802,48,Paper and Paperboard,Uncoated Paper and Paperboard,Uncoated Paper and Paperboard - Refined,Industrial,0,#NA,#NA,0,,0,391.7,30.0,519
+480220,4802,48,Paper and Paperboard,Uncoated Paper and Paperboard,Uncoated Paper and Paperboard - Processed,Industrial,0,#NA,#NA,0,,0,430.4,30.0,520
+610901,6109,61,"Articles of Apparel, Knitted or Crocheted","T-Shirts, Singlets, Knitted","T-Shirts, Singlets, Knitted - Grade A",Consumer Goods,0,#NA,#NA,0,,0,119.6,30.0,521
+610902,6109,61,"Articles of Apparel, Knitted or Crocheted","T-Shirts, Singlets, Knitted","T-Shirts, Singlets, Knitted - Grade B",Consumer Goods,0,#NA,#NA,0,,0,128.9,30.0,522
+610903,6109,61,"Articles of Apparel, Knitted or Crocheted","T-Shirts, Singlets, Knitted","T-Shirts, Singlets, Knitted - Bulk",Consumer Goods,0,#NA,#NA,0,,0,113.6,30.0,523
+610904,6109,61,"Articles of Apparel, Knitted or Crocheted","T-Shirts, Singlets, Knitted","T-Shirts, Singlets, Knitted - Retail Pack",Consumer Goods,0,#NA,#NA,0,,0,142.4,30.0,524
+610905,6109,61,"Articles of Apparel, Knitted or Crocheted","T-Shirts, Singlets, Knitted","T-Shirts, Singlets, Knitted - Industrial Grade",Consumer Goods,0,#NA,#NA,0,,0,110.0,30.0,525
+610906,6109,61,"Articles of Apparel, Knitted or Crocheted","T-Shirts, Singlets, Knitted","T-Shirts, Singlets, Knitted - Premium",Consumer Goods,0,#NA,#NA,0,,0,168.3,30.0,526
+610907,6109,61,"Articles of Apparel, Knitted or Crocheted","T-Shirts, Singlets, Knitted","T-Shirts, Singlets, Knitted - Standard",Consumer Goods,0,#NA,#NA,0,,0,121.9,30.0,527
+610908,6109,61,"Articles of Apparel, Knitted or Crocheted","T-Shirts, Singlets, Knitted","T-Shirts, Singlets, Knitted - Economy",Consumer Goods,0,#NA,#NA,0,,0,155.7,30.0,528
+610909,6109,61,"Articles of Apparel, Knitted or Crocheted","T-Shirts, Singlets, Knitted","T-Shirts, Singlets, Knitted - Type I",Consumer Goods,0,#NA,#NA,0,,0,133.8,30.0,529
+610910,6109,61,"Articles of Apparel, Knitted or Crocheted","T-Shirts, Singlets, Knitted","T-Shirts, Singlets, Knitted - Type II",Consumer Goods,0,#NA,#NA,0,,0,164.4,30.0,530
+610911,6109,61,"Articles of Apparel, Knitted or Crocheted","T-Shirts, Singlets, Knitted","T-Shirts, Singlets, Knitted - Type III",Consumer Goods,0,#NA,#NA,0,,0,124.8,30.0,531
+610912,6109,61,"Articles of Apparel, Knitted or Crocheted","T-Shirts, Singlets, Knitted","T-Shirts, Singlets, Knitted - Class 1",Consumer Goods,0,#NA,#NA,0,,0,115.8,30.0,532
+610913,6109,61,"Articles of Apparel, Knitted or Crocheted","T-Shirts, Singlets, Knitted","T-Shirts, Singlets, Knitted - Class 2",Consumer Goods,0,#NA,#NA,0,,0,131.1,30.0,533
+610914,6109,61,"Articles of Apparel, Knitted or Crocheted","T-Shirts, Singlets, Knitted","T-Shirts, Singlets, Knitted - Export Grade",Consumer Goods,0,#NA,#NA,0,,0,137.7,30.0,534
+610915,6109,61,"Articles of Apparel, Knitted or Crocheted","T-Shirts, Singlets, Knitted","T-Shirts, Singlets, Knitted - Domestic Grade",Consumer Goods,0,#NA,#NA,0,,0,120.6,30.0,535
+610916,6109,61,"Articles of Apparel, Knitted or Crocheted","T-Shirts, Singlets, Knitted","T-Shirts, Singlets, Knitted - Carton Pack",Consumer Goods,0,#NA,#NA,0,,0,119.4,30.0,536
+610917,6109,61,"Articles of Apparel, Knitted or Crocheted","T-Shirts, Singlets, Knitted","T-Shirts, Singlets, Knitted - Palletized",Consumer Goods,0,#NA,#NA,0,,0,117.0,30.0,537
+610918,6109,61,"Articles of Apparel, Knitted or Crocheted","T-Shirts, Singlets, Knitted","T-Shirts, Singlets, Knitted - Loose",Consumer Goods,0,#NA,#NA,0,,0,144.7,30.0,538
+610919,6109,61,"Articles of Apparel, Knitted or Crocheted","T-Shirts, Singlets, Knitted","T-Shirts, Singlets, Knitted - Refined",Consumer Goods,0,#NA,#NA,0,,0,155.4,30.0,539
+610920,6109,61,"Articles of Apparel, Knitted or Crocheted","T-Shirts, Singlets, Knitted","T-Shirts, Singlets, Knitted - Processed",Consumer Goods,0,#NA,#NA,0,,0,165.3,30.0,540
+620301,6203,62,"Articles of Apparel, Not Knitted","Men's Suits, Trousers, Not Knitted","Men's Suits, Trousers, Not Knitted - Grade A",Consumer Goods,0,#NA,#NA,0,,0,197.3,30.0,541
+620302,6203,62,"Articles of Apparel, Not Knitted","Men's Suits, Trousers, Not Knitted","Men's Suits, Trousers, Not Knitted - Grade B",Consumer Goods,0,#NA,#NA,0,,0,126.3,30.0,542
+620303,6203,62,"Articles of Apparel, Not Knitted","Men's Suits, Trousers, Not Knitted","Men's Suits, Trousers, Not Knitted - Bulk",Consumer Goods,0,#NA,#NA,0,,0,177.7,30.0,543
+620304,6203,62,"Articles of Apparel, Not Knitted","Men's Suits, Trousers, Not Knitted","Men's Suits, Trousers, Not Knitted - Retail Pack",Consumer Goods,0,#NA,#NA,0,,0,129.2,30.0,544
+620305,6203,62,"Articles of Apparel, Not Knitted","Men's Suits, Trousers, Not Knitted","Men's Suits, Trousers, Not Knitted - Industrial Grade",Consumer Goods,0,#NA,#NA,0,,0,129.0,30.0,545
+620306,6203,62,"Articles of Apparel, Not Knitted","Men's Suits, Trousers, Not Knitted","Men's Suits, Trousers, Not Knitted - Premium",Consumer Goods,0,#NA,#NA,0,,0,176.4,30.0,546
+620307,6203,62,"Articles of Apparel, Not Knitted","Men's Suits, Trousers, Not Knitted","Men's Suits, Trousers, Not Knitted - Standard",Consumer Goods,0,#NA,#NA,0,,0,163.2,30.0,547
+620308,6203,62,"Articles of Apparel, Not Knitted","Men's Suits, Trousers, Not Knitted","Men's Suits, Trousers, Not Knitted - Economy",Consumer Goods,0,#NA,#NA,0,,0,124.1,30.0,548
+620309,6203,62,"Articles of Apparel, Not Knitted","Men's Suits, Trousers, Not Knitted","Men's Suits, Trousers, Not Knitted - Type I",Consumer Goods,0,#NA,#NA,0,,0,197.9,30.0,549
+620310,6203,62,"Articles of Apparel, Not Knitted","Men's Suits, Trousers, Not Knitted","Men's Suits, Trousers, Not Knitted - Type II",Consumer Goods,0,#NA,#NA,0,,0,130.8,30.0,550
+620311,6203,62,"Articles of Apparel, Not Knitted","Men's Suits, Trousers, Not Knitted","Men's Suits, Trousers, Not Knitted - Type III",Consumer Goods,0,#NA,#NA,0,,0,134.1,30.0,551
+620312,6203,62,"Articles of Apparel, Not Knitted","Men's Suits, Trousers, Not Knitted","Men's Suits, Trousers, Not Knitted - Class 1",Consumer Goods,0,#NA,#NA,0,,0,196.6,30.0,552
+620313,6203,62,"Articles of Apparel, Not Knitted","Men's Suits, Trousers, Not Knitted","Men's Suits, Trousers, Not Knitted - Class 2",Consumer Goods,0,#NA,#NA,0,,0,163.3,30.0,553
+620314,6203,62,"Articles of Apparel, Not Knitted","Men's Suits, Trousers, Not Knitted","Men's Suits, Trousers, Not Knitted - Export Grade",Consumer Goods,0,#NA,#NA,0,,0,139.1,30.0,554
+620315,6203,62,"Articles of Apparel, Not Knitted","Men's Suits, Trousers, Not Knitted","Men's Suits, Trousers, Not Knitted - Domestic Grade",Consumer Goods,0,#NA,#NA,0,,0,185.2,30.0,555
+620316,6203,62,"Articles of Apparel, Not Knitted","Men's Suits, Trousers, Not Knitted","Men's Suits, Trousers, Not Knitted - Carton Pack",Consumer Goods,0,#NA,#NA,0,,0,173.5,30.0,556
+620317,6203,62,"Articles of Apparel, Not Knitted","Men's Suits, Trousers, Not Knitted","Men's Suits, Trousers, Not Knitted - Palletized",Consumer Goods,0,#NA,#NA,0,,0,183.1,30.0,557
+620318,6203,62,"Articles of Apparel, Not Knitted","Men's Suits, Trousers, Not Knitted","Men's Suits, Trousers, Not Knitted - Loose",Consumer Goods,0,#NA,#NA,0,,0,187.2,30.0,558
+620319,6203,62,"Articles of Apparel, Not Knitted","Men's Suits, Trousers, Not Knitted","Men's Suits, Trousers, Not Knitted - Refined",Consumer Goods,0,#NA,#NA,0,,0,177.5,30.0,559
+620320,6203,62,"Articles of Apparel, Not Knitted","Men's Suits, Trousers, Not Knitted","Men's Suits, Trousers, Not Knitted - Processed",Consumer Goods,0,#NA,#NA,0,,0,150.1,30.0,560
+640301,6403,64,"Footwear, Gaiters and the Like",Footwear with Leather Uppers,Footwear with Leather Uppers - Grade A,Consumer Goods,0,#NA,#NA,0,,0,157.4,30.0,561
+640302,6403,64,"Footwear, Gaiters and the Like",Footwear with Leather Uppers,Footwear with Leather Uppers - Grade B,Consumer Goods,0,#NA,#NA,0,,0,230.1,30.0,562
+640303,6403,64,"Footwear, Gaiters and the Like",Footwear with Leather Uppers,Footwear with Leather Uppers - Bulk,Consumer Goods,0,#NA,#NA,0,,0,209.4,30.0,563
+640304,6403,64,"Footwear, Gaiters and the Like",Footwear with Leather Uppers,Footwear with Leather Uppers - Retail Pack,Consumer Goods,0,#NA,#NA,0,,0,202.3,30.0,564
+640305,6403,64,"Footwear, Gaiters and the Like",Footwear with Leather Uppers,Footwear with Leather Uppers - Industrial Grade,Consumer Goods,0,#NA,#NA,0,,0,208.8,30.0,565
+640306,6403,64,"Footwear, Gaiters and the Like",Footwear with Leather Uppers,Footwear with Leather Uppers - Premium,Consumer Goods,0,#NA,#NA,0,,0,156.0,30.0,566
+640307,6403,64,"Footwear, Gaiters and the Like",Footwear with Leather Uppers,Footwear with Leather Uppers - Standard,Consumer Goods,0,#NA,#NA,0,,0,187.8,30.0,567
+640308,6403,64,"Footwear, Gaiters and the Like",Footwear with Leather Uppers,Footwear with Leather Uppers - Economy,Consumer Goods,0,#NA,#NA,0,,0,167.0,30.0,568
+640309,6403,64,"Footwear, Gaiters and the Like",Footwear with Leather Uppers,Footwear with Leather Uppers - Type I,Consumer Goods,0,#NA,#NA,0,,0,246.0,30.0,569
+640310,6403,64,"Footwear, Gaiters and the Like",Footwear with Leather Uppers,Footwear with Leather Uppers - Type II,Consumer Goods,0,#NA,#NA,0,,0,165.1,30.0,570
+640311,6403,64,"Footwear, Gaiters and the Like",Footwear with Leather Uppers,Footwear with Leather Uppers - Type III,Consumer Goods,0,#NA,#NA,0,,0,192.9,30.0,571
+640312,6403,64,"Footwear, Gaiters and the Like",Footwear with Leather Uppers,Footwear with Leather Uppers - Class 1,Consumer Goods,0,#NA,#NA,0,,0,221.1,30.0,572
+640313,6403,64,"Footwear, Gaiters and the Like",Footwear with Leather Uppers,Footwear with Leather Uppers - Class 2,Consumer Goods,0,#NA,#NA,0,,0,239.9,30.0,573
+640314,6403,64,"Footwear, Gaiters and the Like",Footwear with Leather Uppers,Footwear with Leather Uppers - Export Grade,Consumer Goods,0,#NA,#NA,0,,0,155.5,30.0,574
+640315,6403,64,"Footwear, Gaiters and the Like",Footwear with Leather Uppers,Footwear with Leather Uppers - Domestic Grade,Consumer Goods,0,#NA,#NA,0,,0,229.8,30.0,575
+640316,6403,64,"Footwear, Gaiters and the Like",Footwear with Leather Uppers,Footwear with Leather Uppers - Carton Pack,Consumer Goods,0,#NA,#NA,0,,0,178.9,30.0,576
+640317,6403,64,"Footwear, Gaiters and the Like",Footwear with Leather Uppers,Footwear with Leather Uppers - Palletized,Consumer Goods,0,#NA,#NA,0,,0,163.0,30.0,577
+640318,6403,64,"Footwear, Gaiters and the Like",Footwear with Leather Uppers,Footwear with Leather Uppers - Loose,Consumer Goods,0,#NA,#NA,0,,0,182.4,30.0,578
+640319,6403,64,"Footwear, Gaiters and the Like",Footwear with Leather Uppers,Footwear with Leather Uppers - Refined,Consumer Goods,0,#NA,#NA,0,,0,178.0,30.0,579
+640320,6403,64,"Footwear, Gaiters and the Like",Footwear with Leather Uppers,Footwear with Leather Uppers - Processed,Consumer Goods,0,#NA,#NA,0,,0,163.5,30.0,580
+720801,7208,72,Iron and Steel,Flat-Rolled Iron or Steel Products,Flat-Rolled Iron or Steel Products - Grade A,Raw Materials,0,#NA,#NA,0,,0,2482.6,8.76,581
+720802,7208,72,Iron and Steel,Flat-Rolled Iron or Steel Products,Flat-Rolled Iron or Steel Products - Grade B,Raw Materials,0,#NA,#NA,0,,0,2378.2,9.15,582
+720803,7208,72,Iron and Steel,Flat-Rolled Iron or Steel Products,Flat-Rolled Iron or Steel Products - Bulk,Raw Materials,0,#NA,#NA,0,,0,2452.9,8.87,583
+720804,7208,72,Iron and Steel,Flat-Rolled Iron or Steel Products,Flat-Rolled Iron or Steel Products - Retail Pack,Raw Materials,0,#NA,#NA,0,,0,2767.4,7.86,584
+720805,7208,72,Iron and Steel,Flat-Rolled Iron or Steel Products,Flat-Rolled Iron or Steel Products - Industrial Grade,Raw Materials,0,#NA,#NA,0,,0,3155.0,6.89,585
+720806,7208,72,Iron and Steel,Flat-Rolled Iron or Steel Products,Flat-Rolled Iron or Steel Products - Premium,Raw Materials,0,#NA,#NA,0,,0,3006.4,7.23,586
+720807,7208,72,Iron and Steel,Flat-Rolled Iron or Steel Products,Flat-Rolled Iron or Steel Products - Standard,Raw Materials,0,#NA,#NA,0,,0,2277.6,9.55,587
+720808,7208,72,Iron and Steel,Flat-Rolled Iron or Steel Products,Flat-Rolled Iron or Steel Products - Economy,Raw Materials,0,#NA,#NA,0,,0,3042.6,7.15,588
+720809,7208,72,Iron and Steel,Flat-Rolled Iron or Steel Products,Flat-Rolled Iron or Steel Products - Type I,Raw Materials,0,#NA,#NA,0,,0,3065.4,7.1,589
+720810,7208,72,Iron and Steel,Flat-Rolled Iron or Steel Products,Flat-Rolled Iron or Steel Products - Type II,Raw Materials,0,#NA,#NA,0,,0,2237.2,9.72,590
+720811,7208,72,Iron and Steel,Flat-Rolled Iron or Steel Products,Flat-Rolled Iron or Steel Products - Type III,Raw Materials,0,#NA,#NA,0,,0,2553.8,8.52,591
+720812,7208,72,Iron and Steel,Flat-Rolled Iron or Steel Products,Flat-Rolled Iron or Steel Products - Class 1,Raw Materials,0,#NA,#NA,0,,0,2603.6,8.35,592
+720813,7208,72,Iron and Steel,Flat-Rolled Iron or Steel Products,Flat-Rolled Iron or Steel Products - Class 2,Raw Materials,0,#NA,#NA,0,,0,2998.6,7.25,593
+720814,7208,72,Iron and Steel,Flat-Rolled Iron or Steel Products,Flat-Rolled Iron or Steel Products - Export Grade,Raw Materials,0,#NA,#NA,0,,0,2873.4,7.57,594
+720815,7208,72,Iron and Steel,Flat-Rolled Iron or Steel Products,Flat-Rolled Iron or Steel Products - Domestic Grade,Raw Materials,0,#NA,#NA,0,,0,2648.0,8.21,595
+720816,7208,72,Iron and Steel,Flat-Rolled Iron or Steel Products,Flat-Rolled Iron or Steel Products - Carton Pack,Raw Materials,0,#NA,#NA,0,,0,3128.8,6.95,596
+720817,7208,72,Iron and Steel,Flat-Rolled Iron or Steel Products,Flat-Rolled Iron or Steel Products - Palletized,Raw Materials,0,#NA,#NA,0,,0,2163.9,10.05,597
+720818,7208,72,Iron and Steel,Flat-Rolled Iron or Steel Products,Flat-Rolled Iron or Steel Products - Loose,Raw Materials,0,#NA,#NA,0,,0,2155.2,10.09,598
+720819,7208,72,Iron and Steel,Flat-Rolled Iron or Steel Products,Flat-Rolled Iron or Steel Products - Refined,Raw Materials,0,#NA,#NA,0,,0,2070.4,10.51,599
+720820,7208,72,Iron and Steel,Flat-Rolled Iron or Steel Products,Flat-Rolled Iron or Steel Products - Processed,Raw Materials,0,#NA,#NA,0,,0,2465.9,8.82,600
+730801,7308,73,Articles of Iron or Steel,Structures and Parts of Iron/Steel,Structures and Parts of Iron/Steel - Grade A,Industrial,0,#NA,#NA,0,,0,1006.3,21.61,601
+730802,7308,73,Articles of Iron or Steel,Structures and Parts of Iron/Steel,Structures and Parts of Iron/Steel - Grade B,Industrial,0,#NA,#NA,0,,0,676.6,30.0,602
+730803,7308,73,Articles of Iron or Steel,Structures and Parts of Iron/Steel,Structures and Parts of Iron/Steel - Bulk,Industrial,0,#NA,#NA,0,,0,983.1,22.12,603
+730804,7308,73,Articles of Iron or Steel,Structures and Parts of Iron/Steel,Structures and Parts of Iron/Steel - Retail Pack,Industrial,0,#NA,#NA,0,,0,886.2,24.54,604
+730805,7308,73,Articles of Iron or Steel,Structures and Parts of Iron/Steel,Structures and Parts of Iron/Steel - Industrial Grade,Industrial,0,#NA,#NA,0,,0,1007.2,21.6,605
+730806,7308,73,Articles of Iron or Steel,Structures and Parts of Iron/Steel,Structures and Parts of Iron/Steel - Premium,Industrial,0,#NA,#NA,0,,0,1075.1,20.23,606
+730807,7308,73,Articles of Iron or Steel,Structures and Parts of Iron/Steel,Structures and Parts of Iron/Steel - Standard,Industrial,0,#NA,#NA,0,,0,920.3,23.63,607
+730808,7308,73,Articles of Iron or Steel,Structures and Parts of Iron/Steel,Structures and Parts of Iron/Steel - Economy,Industrial,0,#NA,#NA,0,,0,1001.2,21.72,608
+730809,7308,73,Articles of Iron or Steel,Structures and Parts of Iron/Steel,Structures and Parts of Iron/Steel - Type I,Industrial,0,#NA,#NA,0,,0,605.4,30.0,609
+730810,7308,73,Articles of Iron or Steel,Structures and Parts of Iron/Steel,Structures and Parts of Iron/Steel - Type II,Industrial,0,#NA,#NA,0,,0,943.1,23.06,610
+730811,7308,73,Articles of Iron or Steel,Structures and Parts of Iron/Steel,Structures and Parts of Iron/Steel - Type III,Industrial,0,#NA,#NA,0,,0,993.6,21.89,611
+730812,7308,73,Articles of Iron or Steel,Structures and Parts of Iron/Steel,Structures and Parts of Iron/Steel - Class 1,Industrial,0,#NA,#NA,0,,0,1149.7,18.92,612
+730813,7308,73,Articles of Iron or Steel,Structures and Parts of Iron/Steel,Structures and Parts of Iron/Steel - Class 2,Industrial,0,#NA,#NA,0,,0,1131.0,19.23,613
+730814,7308,73,Articles of Iron or Steel,Structures and Parts of Iron/Steel,Structures and Parts of Iron/Steel - Export Grade,Industrial,0,#NA,#NA,0,,0,1047.4,20.76,614
+730815,7308,73,Articles of Iron or Steel,Structures and Parts of Iron/Steel,Structures and Parts of Iron/Steel - Domestic Grade,Industrial,0,#NA,#NA,0,,0,1054.1,20.63,615
+730816,7308,73,Articles of Iron or Steel,Structures and Parts of Iron/Steel,Structures and Parts of Iron/Steel - Carton Pack,Industrial,0,#NA,#NA,0,,0,910.9,23.88,616
+730817,7308,73,Articles of Iron or Steel,Structures and Parts of Iron/Steel,Structures and Parts of Iron/Steel - Palletized,Industrial,0,#NA,#NA,0,,0,1186.2,18.34,617
+730818,7308,73,Articles of Iron or Steel,Structures and Parts of Iron/Steel,Structures and Parts of Iron/Steel - Loose,Industrial,0,#NA,#NA,0,,0,884.2,24.6,618
+730819,7308,73,Articles of Iron or Steel,Structures and Parts of Iron/Steel,Structures and Parts of Iron/Steel - Refined,Industrial,0,#NA,#NA,0,,0,1075.4,20.22,619
+730820,7308,73,Articles of Iron or Steel,Structures and Parts of Iron/Steel,Structures and Parts of Iron/Steel - Processed,Industrial,0,#NA,#NA,0,,0,636.6,30.0,620
+740901,7409,74,Copper and Articles Thereof,"Copper Plates, Sheets and Strip","Copper Plates, Sheets and Strip - Grade A",Raw Materials,0,#NA,#NA,0,,0,4292.6,5.07,621
+740902,7409,74,Copper and Articles Thereof,"Copper Plates, Sheets and Strip","Copper Plates, Sheets and Strip - Grade B",Raw Materials,0,#NA,#NA,0,,0,4098.2,5.31,622
+740903,7409,74,Copper and Articles Thereof,"Copper Plates, Sheets and Strip","Copper Plates, Sheets and Strip - Bulk",Raw Materials,0,#NA,#NA,0,,0,3694.7,5.89,623
+740904,7409,74,Copper and Articles Thereof,"Copper Plates, Sheets and Strip","Copper Plates, Sheets and Strip - Retail Pack",Raw Materials,0,#NA,#NA,0,,0,3736.2,5.82,624
+740905,7409,74,Copper and Articles Thereof,"Copper Plates, Sheets and Strip","Copper Plates, Sheets and Strip - Industrial Grade",Raw Materials,0,#NA,#NA,0,,0,4155.1,5.23,625
+740906,7409,74,Copper and Articles Thereof,"Copper Plates, Sheets and Strip","Copper Plates, Sheets and Strip - Premium",Raw Materials,0,#NA,#NA,0,,0,3606.8,6.03,626
+740907,7409,74,Copper and Articles Thereof,"Copper Plates, Sheets and Strip","Copper Plates, Sheets and Strip - Standard",Raw Materials,0,#NA,#NA,0,,0,3181.2,6.84,627
+740908,7409,74,Copper and Articles Thereof,"Copper Plates, Sheets and Strip","Copper Plates, Sheets and Strip - Economy",Raw Materials,0,#NA,#NA,0,,0,3210.9,6.77,628
+740909,7409,74,Copper and Articles Thereof,"Copper Plates, Sheets and Strip","Copper Plates, Sheets and Strip - Type I",Raw Materials,0,#NA,#NA,0,,0,4285.7,5.07,629
+740910,7409,74,Copper and Articles Thereof,"Copper Plates, Sheets and Strip","Copper Plates, Sheets and Strip - Type II",Raw Materials,0,#NA,#NA,0,,0,3071.9,7.08,630
+740911,7409,74,Copper and Articles Thereof,"Copper Plates, Sheets and Strip","Copper Plates, Sheets and Strip - Type III",Raw Materials,0,#NA,#NA,0,,0,3999.0,5.44,631
+740912,7409,74,Copper and Articles Thereof,"Copper Plates, Sheets and Strip","Copper Plates, Sheets and Strip - Class 1",Raw Materials,0,#NA,#NA,0,,0,3371.7,6.45,632
+740913,7409,74,Copper and Articles Thereof,"Copper Plates, Sheets and Strip","Copper Plates, Sheets and Strip - Class 2",Raw Materials,0,#NA,#NA,0,,0,3288.8,6.61,633
+740914,7409,74,Copper and Articles Thereof,"Copper Plates, Sheets and Strip","Copper Plates, Sheets and Strip - Export Grade",Raw Materials,0,#NA,#NA,0,,0,3308.2,6.57,634
+740915,7409,74,Copper and Articles Thereof,"Copper Plates, Sheets and Strip","Copper Plates, Sheets and Strip - Domestic Grade",Raw Materials,0,#NA,#NA,0,,0,3320.2,6.55,635
+740916,7409,74,Copper and Articles Thereof,"Copper Plates, Sheets and Strip","Copper Plates, Sheets and Strip - Carton Pack",Raw Materials,0,#NA,#NA,0,,0,3172.3,6.86,636
+740917,7409,74,Copper and Articles Thereof,"Copper Plates, Sheets and Strip","Copper Plates, Sheets and Strip - Palletized",Raw Materials,0,#NA,#NA,0,,0,3336.9,6.52,637
+740918,7409,74,Copper and Articles Thereof,"Copper Plates, Sheets and Strip","Copper Plates, Sheets and Strip - Loose",Raw Materials,0,#NA,#NA,0,,0,3407.7,6.38,638
+740919,7409,74,Copper and Articles Thereof,"Copper Plates, Sheets and Strip","Copper Plates, Sheets and Strip - Refined",Raw Materials,0,#NA,#NA,0,,0,3658.6,5.94,639
+740920,7409,74,Copper and Articles Thereof,"Copper Plates, Sheets and Strip","Copper Plates, Sheets and Strip - Processed",Raw Materials,0,#NA,#NA,0,,0,3026.1,7.19,640
+760401,7604,76,Aluminium and Articles Thereof,"Aluminium Bars, Rods and Profiles","Aluminium Bars, Rods and Profiles - Grade A",Raw Materials,0,#NA,#NA,0,,0,1368.2,15.9,641
+760402,7604,76,Aluminium and Articles Thereof,"Aluminium Bars, Rods and Profiles","Aluminium Bars, Rods and Profiles - Grade B",Raw Materials,0,#NA,#NA,0,,0,1196.3,18.18,642
+760403,7604,76,Aluminium and Articles Thereof,"Aluminium Bars, Rods and Profiles","Aluminium Bars, Rods and Profiles - Bulk",Raw Materials,0,#NA,#NA,0,,0,1163.6,18.69,643
+760404,7604,76,Aluminium and Articles Thereof,"Aluminium Bars, Rods and Profiles","Aluminium Bars, Rods and Profiles - Retail Pack",Raw Materials,0,#NA,#NA,0,,0,1475.9,14.74,644
+760405,7604,76,Aluminium and Articles Thereof,"Aluminium Bars, Rods and Profiles","Aluminium Bars, Rods and Profiles - Industrial Grade",Raw Materials,0,#NA,#NA,0,,0,1248.8,17.42,645
+760406,7604,76,Aluminium and Articles Thereof,"Aluminium Bars, Rods and Profiles","Aluminium Bars, Rods and Profiles - Premium",Raw Materials,0,#NA,#NA,0,,0,1314.7,16.54,646
+760407,7604,76,Aluminium and Articles Thereof,"Aluminium Bars, Rods and Profiles","Aluminium Bars, Rods and Profiles - Standard",Raw Materials,0,#NA,#NA,0,,0,1321.7,16.46,647
+760408,7604,76,Aluminium and Articles Thereof,"Aluminium Bars, Rods and Profiles","Aluminium Bars, Rods and Profiles - Economy",Raw Materials,0,#NA,#NA,0,,0,1005.2,21.64,648
+760409,7604,76,Aluminium and Articles Thereof,"Aluminium Bars, Rods and Profiles","Aluminium Bars, Rods and Profiles - Type I",Raw Materials,0,#NA,#NA,0,,0,1353.5,16.07,649
+760410,7604,76,Aluminium and Articles Thereof,"Aluminium Bars, Rods and Profiles","Aluminium Bars, Rods and Profiles - Type II",Raw Materials,0,#NA,#NA,0,,0,1183.7,18.37,650
+760411,7604,76,Aluminium and Articles Thereof,"Aluminium Bars, Rods and Profiles","Aluminium Bars, Rods and Profiles - Type III",Raw Materials,0,#NA,#NA,0,,0,1280.7,16.98,651
+760412,7604,76,Aluminium and Articles Thereof,"Aluminium Bars, Rods and Profiles","Aluminium Bars, Rods and Profiles - Class 1",Raw Materials,0,#NA,#NA,0,,0,1402.5,15.51,652
+760413,7604,76,Aluminium and Articles Thereof,"Aluminium Bars, Rods and Profiles","Aluminium Bars, Rods and Profiles - Class 2",Raw Materials,0,#NA,#NA,0,,0,925.0,23.51,653
+760414,7604,76,Aluminium and Articles Thereof,"Aluminium Bars, Rods and Profiles","Aluminium Bars, Rods and Profiles - Export Grade",Raw Materials,0,#NA,#NA,0,,0,1409.3,15.43,654
+760415,7604,76,Aluminium and Articles Thereof,"Aluminium Bars, Rods and Profiles","Aluminium Bars, Rods and Profiles - Domestic Grade",Raw Materials,0,#NA,#NA,0,,0,1444.0,15.06,655
+760416,7604,76,Aluminium and Articles Thereof,"Aluminium Bars, Rods and Profiles","Aluminium Bars, Rods and Profiles - Carton Pack",Raw Materials,0,#NA,#NA,0,,0,1247.3,17.44,656
+760417,7604,76,Aluminium and Articles Thereof,"Aluminium Bars, Rods and Profiles","Aluminium Bars, Rods and Profiles - Palletized",Raw Materials,0,#NA,#NA,0,,0,929.7,23.4,657
+760418,7604,76,Aluminium and Articles Thereof,"Aluminium Bars, Rods and Profiles","Aluminium Bars, Rods and Profiles - Loose",Raw Materials,0,#NA,#NA,0,,0,1235.2,17.61,658
+760419,7604,76,Aluminium and Articles Thereof,"Aluminium Bars, Rods and Profiles","Aluminium Bars, Rods and Profiles - Refined",Raw Materials,0,#NA,#NA,0,,0,1295.4,16.79,659
+760420,7604,76,Aluminium and Articles Thereof,"Aluminium Bars, Rods and Profiles","Aluminium Bars, Rods and Profiles - Processed",Raw Materials,0,#NA,#NA,0,,0,1485.2,14.64,660
+847101,8471,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances",Automatic Data Processing Machines,Automatic Data Processing Machines - Grade A,Industrial,0,#NA,#NA,0,,1,205.8,30.0,661
+847102,8471,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances",Automatic Data Processing Machines,Automatic Data Processing Machines - Grade B,Industrial,0,#NA,#NA,0,,1,247.6,30.0,662
+847103,8471,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances",Automatic Data Processing Machines,Automatic Data Processing Machines - Bulk,Industrial,0,#NA,#NA,0,,1,233.5,30.0,663
+847104,8471,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances",Automatic Data Processing Machines,Automatic Data Processing Machines - Retail Pack,Industrial,0,#NA,#NA,0,,1,228.5,30.0,664
+847105,8471,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances",Automatic Data Processing Machines,Automatic Data Processing Machines - Industrial Grade,Industrial,0,#NA,#NA,0,,1,168.0,30.0,665
+847106,8471,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances",Automatic Data Processing Machines,Automatic Data Processing Machines - Premium,Industrial,0,#NA,#NA,0,,1,294.1,30.0,666
+847107,8471,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances",Automatic Data Processing Machines,Automatic Data Processing Machines - Standard,Industrial,0,#NA,#NA,0,,1,223.2,30.0,667
+847108,8471,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances",Automatic Data Processing Machines,Automatic Data Processing Machines - Economy,Industrial,0,#NA,#NA,0,,1,231.5,30.0,668
+847109,8471,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances",Automatic Data Processing Machines,Automatic Data Processing Machines - Type I,Industrial,0,#NA,#NA,0,,1,228.1,30.0,669
+847110,8471,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances",Automatic Data Processing Machines,Automatic Data Processing Machines - Type II,Industrial,0,#NA,#NA,0,,1,246.0,30.0,670
+847111,8471,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances",Automatic Data Processing Machines,Automatic Data Processing Machines - Type III,Industrial,0,#NA,#NA,0,,1,246.1,30.0,671
+847112,8471,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances",Automatic Data Processing Machines,Automatic Data Processing Machines - Class 1,Industrial,0,#NA,#NA,0,,1,266.6,30.0,672
+847113,8471,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances",Automatic Data Processing Machines,Automatic Data Processing Machines - Class 2,Industrial,0,#NA,#NA,0,,1,212.7,30.0,673
+847114,8471,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances",Automatic Data Processing Machines,Automatic Data Processing Machines - Export Grade,Industrial,0,#NA,#NA,0,,1,195.4,30.0,674
+847115,8471,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances",Automatic Data Processing Machines,Automatic Data Processing Machines - Domestic Grade,Industrial,0,#NA,#NA,0,,1,196.1,30.0,675
+847116,8471,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances",Automatic Data Processing Machines,Automatic Data Processing Machines - Carton Pack,Industrial,0,#NA,#NA,0,,1,177.9,30.0,676
+847117,8471,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances",Automatic Data Processing Machines,Automatic Data Processing Machines - Palletized,Industrial,0,#NA,#NA,0,,1,158.4,30.0,677
+847118,8471,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances",Automatic Data Processing Machines,Automatic Data Processing Machines - Loose,Industrial,0,#NA,#NA,0,,1,172.1,30.0,678
+847119,8471,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances",Automatic Data Processing Machines,Automatic Data Processing Machines - Refined,Industrial,0,#NA,#NA,0,,1,197.1,30.0,679
+847120,8471,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances",Automatic Data Processing Machines,Automatic Data Processing Machines - Processed,Industrial,0,#NA,#NA,0,,1,201.9,30.0,680
+848101,8481,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances","Taps, Cocks, Valves and Similar Appliances","Taps, Cocks, Valves and Similar Appliances - Grade A",Industrial,0,#NA,#NA,0,,0,317.0,30.0,681
+848102,8481,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances","Taps, Cocks, Valves and Similar Appliances","Taps, Cocks, Valves and Similar Appliances - Grade B",Industrial,0,#NA,#NA,0,,0,388.0,30.0,682
+848103,8481,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances","Taps, Cocks, Valves and Similar Appliances","Taps, Cocks, Valves and Similar Appliances - Bulk",Industrial,0,#NA,#NA,0,,0,354.6,30.0,683
+848104,8481,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances","Taps, Cocks, Valves and Similar Appliances","Taps, Cocks, Valves and Similar Appliances - Retail Pack",Industrial,0,#NA,#NA,0,,0,445.0,30.0,684
+848105,8481,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances","Taps, Cocks, Valves and Similar Appliances","Taps, Cocks, Valves and Similar Appliances - Industrial Grade",Industrial,0,#NA,#NA,0,,0,437.9,30.0,685
+848106,8481,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances","Taps, Cocks, Valves and Similar Appliances","Taps, Cocks, Valves and Similar Appliances - Premium",Industrial,0,#NA,#NA,0,,0,488.2,30.0,686
+848107,8481,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances","Taps, Cocks, Valves and Similar Appliances","Taps, Cocks, Valves and Similar Appliances - Standard",Industrial,0,#NA,#NA,0,,0,403.6,30.0,687
+848108,8481,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances","Taps, Cocks, Valves and Similar Appliances","Taps, Cocks, Valves and Similar Appliances - Economy",Industrial,0,#NA,#NA,0,,0,356.4,30.0,688
+848109,8481,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances","Taps, Cocks, Valves and Similar Appliances","Taps, Cocks, Valves and Similar Appliances - Type I",Industrial,0,#NA,#NA,0,,0,478.5,30.0,689
+848110,8481,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances","Taps, Cocks, Valves and Similar Appliances","Taps, Cocks, Valves and Similar Appliances - Type II",Industrial,0,#NA,#NA,0,,0,369.1,30.0,690
+848111,8481,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances","Taps, Cocks, Valves and Similar Appliances","Taps, Cocks, Valves and Similar Appliances - Type III",Industrial,0,#NA,#NA,0,,0,392.8,30.0,691
+848112,8481,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances","Taps, Cocks, Valves and Similar Appliances","Taps, Cocks, Valves and Similar Appliances - Class 1",Industrial,0,#NA,#NA,0,,0,433.3,30.0,692
+848113,8481,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances","Taps, Cocks, Valves and Similar Appliances","Taps, Cocks, Valves and Similar Appliances - Class 2",Industrial,0,#NA,#NA,0,,0,484.4,30.0,693
+848114,8481,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances","Taps, Cocks, Valves and Similar Appliances","Taps, Cocks, Valves and Similar Appliances - Export Grade",Industrial,0,#NA,#NA,0,,0,376.4,30.0,694
+848115,8481,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances","Taps, Cocks, Valves and Similar Appliances","Taps, Cocks, Valves and Similar Appliances - Domestic Grade",Industrial,0,#NA,#NA,0,,0,417.2,30.0,695
+848116,8481,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances","Taps, Cocks, Valves and Similar Appliances","Taps, Cocks, Valves and Similar Appliances - Carton Pack",Industrial,0,#NA,#NA,0,,0,322.8,30.0,696
+848117,8481,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances","Taps, Cocks, Valves and Similar Appliances","Taps, Cocks, Valves and Similar Appliances - Palletized",Industrial,0,#NA,#NA,0,,0,467.3,30.0,697
+848118,8481,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances","Taps, Cocks, Valves and Similar Appliances","Taps, Cocks, Valves and Similar Appliances - Loose",Industrial,0,#NA,#NA,0,,0,448.6,30.0,698
+848119,8481,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances","Taps, Cocks, Valves and Similar Appliances","Taps, Cocks, Valves and Similar Appliances - Refined",Industrial,0,#NA,#NA,0,,0,443.7,30.0,699
+848120,8481,84,"Nuclear Reactors, Boilers, Machinery and Mechanical Appliances","Taps, Cocks, Valves and Similar Appliances","Taps, Cocks, Valves and Similar Appliances - Processed",Industrial,0,#NA,#NA,0,,0,422.5,30.0,700
+851701,8517,85,Electrical Machinery and Equipment,"Telephone Sets, Smartphones","Telephone Sets, Smartphones - Grade A",Consumer Goods,0,#NA,#NA,0,,1,173.3,30.0,701
+851702,8517,85,Electrical Machinery and Equipment,"Telephone Sets, Smartphones","Telephone Sets, Smartphones - Grade B",Consumer Goods,0,#NA,#NA,0,,1,202.9,30.0,702
+851703,8517,85,Electrical Machinery and Equipment,"Telephone Sets, Smartphones","Telephone Sets, Smartphones - Bulk",Consumer Goods,0,#NA,#NA,0,,1,243.8,30.0,703
+851704,8517,85,Electrical Machinery and Equipment,"Telephone Sets, Smartphones","Telephone Sets, Smartphones - Retail Pack",Consumer Goods,0,#NA,#NA,0,,1,164.4,30.0,704
+851705,8517,85,Electrical Machinery and Equipment,"Telephone Sets, Smartphones","Telephone Sets, Smartphones - Industrial Grade",Consumer Goods,0,#NA,#NA,0,,1,199.3,30.0,705
+851706,8517,85,Electrical Machinery and Equipment,"Telephone Sets, Smartphones","Telephone Sets, Smartphones - Premium",Consumer Goods,0,#NA,#NA,0,,1,227.4,30.0,706
+851707,8517,85,Electrical Machinery and Equipment,"Telephone Sets, Smartphones","Telephone Sets, Smartphones - Standard",Consumer Goods,0,#NA,#NA,0,,1,159.1,30.0,707
+851708,8517,85,Electrical Machinery and Equipment,"Telephone Sets, Smartphones","Telephone Sets, Smartphones - Economy",Consumer Goods,0,#NA,#NA,0,,1,167.5,30.0,708
+851709,8517,85,Electrical Machinery and Equipment,"Telephone Sets, Smartphones","Telephone Sets, Smartphones - Type I",Consumer Goods,0,#NA,#NA,0,,1,180.3,30.0,709
+851710,8517,85,Electrical Machinery and Equipment,"Telephone Sets, Smartphones","Telephone Sets, Smartphones - Type II",Consumer Goods,0,#NA,#NA,0,,1,217.1,30.0,710
+851711,8517,85,Electrical Machinery and Equipment,"Telephone Sets, Smartphones","Telephone Sets, Smartphones - Type III",Consumer Goods,0,#NA,#NA,0,,1,225.1,30.0,711
+851712,8517,85,Electrical Machinery and Equipment,"Telephone Sets, Smartphones","Telephone Sets, Smartphones - Class 1",Consumer Goods,0,#NA,#NA,0,,1,224.6,30.0,712
+851713,8517,85,Electrical Machinery and Equipment,"Telephone Sets, Smartphones","Telephone Sets, Smartphones - Class 2",Consumer Goods,0,#NA,#NA,0,,1,225.1,30.0,713
+851714,8517,85,Electrical Machinery and Equipment,"Telephone Sets, Smartphones","Telephone Sets, Smartphones - Export Grade",Consumer Goods,0,#NA,#NA,0,,1,225.7,30.0,714
+851715,8517,85,Electrical Machinery and Equipment,"Telephone Sets, Smartphones","Telephone Sets, Smartphones - Domestic Grade",Consumer Goods,0,#NA,#NA,0,,1,177.9,30.0,715
+851716,8517,85,Electrical Machinery and Equipment,"Telephone Sets, Smartphones","Telephone Sets, Smartphones - Carton Pack",Consumer Goods,0,#NA,#NA,0,,1,214.5,30.0,716
+851717,8517,85,Electrical Machinery and Equipment,"Telephone Sets, Smartphones","Telephone Sets, Smartphones - Palletized",Consumer Goods,0,#NA,#NA,0,,1,238.6,30.0,717
+851718,8517,85,Electrical Machinery and Equipment,"Telephone Sets, Smartphones","Telephone Sets, Smartphones - Loose",Consumer Goods,0,#NA,#NA,0,,1,164.0,30.0,718
+851719,8517,85,Electrical Machinery and Equipment,"Telephone Sets, Smartphones","Telephone Sets, Smartphones - Refined",Consumer Goods,0,#NA,#NA,0,,1,170.0,30.0,719
+851720,8517,85,Electrical Machinery and Equipment,"Telephone Sets, Smartphones","Telephone Sets, Smartphones - Processed",Consumer Goods,0,#NA,#NA,0,,1,197.4,30.0,720
+852801,8528,85,Electrical Machinery and Equipment,Monitors and Projectors,Monitors and Projectors - Grade A,Consumer Goods,0,#NA,#NA,0,,1,191.0,30.0,721
+852802,8528,85,Electrical Machinery and Equipment,Monitors and Projectors,Monitors and Projectors - Grade B,Consumer Goods,0,#NA,#NA,0,,1,137.2,30.0,722
+852803,8528,85,Electrical Machinery and Equipment,Monitors and Projectors,Monitors and Projectors - Bulk,Consumer Goods,0,#NA,#NA,0,,1,156.9,30.0,723
+852804,8528,85,Electrical Machinery and Equipment,Monitors and Projectors,Monitors and Projectors - Retail Pack,Consumer Goods,0,#NA,#NA,0,,1,162.2,30.0,724
+852805,8528,85,Electrical Machinery and Equipment,Monitors and Projectors,Monitors and Projectors - Industrial Grade,Consumer Goods,0,#NA,#NA,0,,1,145.7,30.0,725
+852806,8528,85,Electrical Machinery and Equipment,Monitors and Projectors,Monitors and Projectors - Premium,Consumer Goods,0,#NA,#NA,0,,1,189.1,30.0,726
+852807,8528,85,Electrical Machinery and Equipment,Monitors and Projectors,Monitors and Projectors - Standard,Consumer Goods,0,#NA,#NA,0,,1,122.8,30.0,727
+852808,8528,85,Electrical Machinery and Equipment,Monitors and Projectors,Monitors and Projectors - Economy,Consumer Goods,0,#NA,#NA,0,,1,164.7,30.0,728
+852809,8528,85,Electrical Machinery and Equipment,Monitors and Projectors,Monitors and Projectors - Type I,Consumer Goods,0,#NA,#NA,0,,1,194.6,30.0,729
+852810,8528,85,Electrical Machinery and Equipment,Monitors and Projectors,Monitors and Projectors - Type II,Consumer Goods,0,#NA,#NA,0,,1,144.6,30.0,730
+852811,8528,85,Electrical Machinery and Equipment,Monitors and Projectors,Monitors and Projectors - Type III,Consumer Goods,0,#NA,#NA,0,,1,129.5,30.0,731
+852812,8528,85,Electrical Machinery and Equipment,Monitors and Projectors,Monitors and Projectors - Class 1,Consumer Goods,0,#NA,#NA,0,,1,151.2,30.0,732
+852813,8528,85,Electrical Machinery and Equipment,Monitors and Projectors,Monitors and Projectors - Class 2,Consumer Goods,0,#NA,#NA,0,,1,204.7,30.0,733
+852814,8528,85,Electrical Machinery and Equipment,Monitors and Projectors,Monitors and Projectors - Export Grade,Consumer Goods,0,#NA,#NA,0,,1,162.7,30.0,734
+852815,8528,85,Electrical Machinery and Equipment,Monitors and Projectors,Monitors and Projectors - Domestic Grade,Consumer Goods,0,#NA,#NA,0,,1,202.9,30.0,735
+852816,8528,85,Electrical Machinery and Equipment,Monitors and Projectors,Monitors and Projectors - Carton Pack,Consumer Goods,0,#NA,#NA,0,,1,134.6,30.0,736
+852817,8528,85,Electrical Machinery and Equipment,Monitors and Projectors,Monitors and Projectors - Palletized,Consumer Goods,0,#NA,#NA,0,,1,160.7,30.0,737
+852818,8528,85,Electrical Machinery and Equipment,Monitors and Projectors,Monitors and Projectors - Loose,Consumer Goods,0,#NA,#NA,0,,1,138.1,30.0,738
+852819,8528,85,Electrical Machinery and Equipment,Monitors and Projectors,Monitors and Projectors - Refined,Consumer Goods,0,#NA,#NA,0,,1,144.7,30.0,739
+852820,8528,85,Electrical Machinery and Equipment,Monitors and Projectors,Monitors and Projectors - Processed,Consumer Goods,0,#NA,#NA,0,,1,132.1,30.0,740
+850701,8507,85,Electrical Machinery and Equipment,Electric Accumulators (Batteries),Electric Accumulators (Batteries) - Grade A,Industrial,1,9,UN3480,0,,1,479.7,30.0,741
+850702,8507,85,Electrical Machinery and Equipment,Electric Accumulators (Batteries),Electric Accumulators (Batteries) - Grade B,Industrial,1,9,UN3480,0,,1,477.3,30.0,742
+850703,8507,85,Electrical Machinery and Equipment,Electric Accumulators (Batteries),Electric Accumulators (Batteries) - Bulk,Industrial,1,9,UN3480,0,,1,481.1,30.0,743
+850704,8507,85,Electrical Machinery and Equipment,Electric Accumulators (Batteries),Electric Accumulators (Batteries) - Retail Pack,Industrial,1,9,UN3480,0,,1,317.8,30.0,744
+850705,8507,85,Electrical Machinery and Equipment,Electric Accumulators (Batteries),Electric Accumulators (Batteries) - Industrial Grade,Industrial,1,9,UN3480,0,,1,306.4,30.0,745
+850706,8507,85,Electrical Machinery and Equipment,Electric Accumulators (Batteries),Electric Accumulators (Batteries) - Premium,Industrial,1,9,UN3480,0,,1,327.1,30.0,746
+850707,8507,85,Electrical Machinery and Equipment,Electric Accumulators (Batteries),Electric Accumulators (Batteries) - Standard,Industrial,1,9,UN3480,0,,1,444.5,30.0,747
+850708,8507,85,Electrical Machinery and Equipment,Electric Accumulators (Batteries),Electric Accumulators (Batteries) - Economy,Industrial,1,9,UN3480,0,,1,485.5,30.0,748
+850709,8507,85,Electrical Machinery and Equipment,Electric Accumulators (Batteries),Electric Accumulators (Batteries) - Type I,Industrial,1,9,UN3480,0,,1,303.3,30.0,749
+850710,8507,85,Electrical Machinery and Equipment,Electric Accumulators (Batteries),Electric Accumulators (Batteries) - Type II,Industrial,1,9,UN3480,0,,1,329.2,30.0,750
+850711,8507,85,Electrical Machinery and Equipment,Electric Accumulators (Batteries),Electric Accumulators (Batteries) - Type III,Industrial,1,9,UN3480,0,,1,440.2,30.0,751
+850712,8507,85,Electrical Machinery and Equipment,Electric Accumulators (Batteries),Electric Accumulators (Batteries) - Class 1,Industrial,1,9,UN3480,0,,1,393.1,30.0,752
+850713,8507,85,Electrical Machinery and Equipment,Electric Accumulators (Batteries),Electric Accumulators (Batteries) - Class 2,Industrial,1,9,UN3480,0,,1,350.6,30.0,753
+850714,8507,85,Electrical Machinery and Equipment,Electric Accumulators (Batteries),Electric Accumulators (Batteries) - Export Grade,Industrial,1,9,UN3480,0,,1,375.8,30.0,754
+850715,8507,85,Electrical Machinery and Equipment,Electric Accumulators (Batteries),Electric Accumulators (Batteries) - Domestic Grade,Industrial,1,9,UN3480,0,,1,394.7,30.0,755
+850716,8507,85,Electrical Machinery and Equipment,Electric Accumulators (Batteries),Electric Accumulators (Batteries) - Carton Pack,Industrial,1,9,UN3480,0,,1,319.0,30.0,756
+850717,8507,85,Electrical Machinery and Equipment,Electric Accumulators (Batteries),Electric Accumulators (Batteries) - Palletized,Industrial,1,9,UN3480,0,,1,301.2,30.0,757
+850718,8507,85,Electrical Machinery and Equipment,Electric Accumulators (Batteries),Electric Accumulators (Batteries) - Loose,Industrial,1,9,UN3480,0,,1,433.6,30.0,758
+850719,8507,85,Electrical Machinery and Equipment,Electric Accumulators (Batteries),Electric Accumulators (Batteries) - Refined,Industrial,1,9,UN3480,0,,1,486.9,30.0,759
+850720,8507,85,Electrical Machinery and Equipment,Electric Accumulators (Batteries),Electric Accumulators (Batteries) - Processed,Industrial,1,9,UN3480,0,,1,470.4,30.0,760
+870301,8703,87,Vehicles Other Than Railway or Tramway Rolling Stock,Motor Cars and Other Motor Vehicles,Motor Cars and Other Motor Vehicles - Grade A,Automotive,0,#NA,#NA,0,,1,369.2,30.0,761
+870302,8703,87,Vehicles Other Than Railway or Tramway Rolling Stock,Motor Cars and Other Motor Vehicles,Motor Cars and Other Motor Vehicles - Grade B,Automotive,0,#NA,#NA,0,,1,281.8,30.0,762
+870303,8703,87,Vehicles Other Than Railway or Tramway Rolling Stock,Motor Cars and Other Motor Vehicles,Motor Cars and Other Motor Vehicles - Bulk,Automotive,0,#NA,#NA,0,,1,258.1,30.0,763
+870304,8703,87,Vehicles Other Than Railway or Tramway Rolling Stock,Motor Cars and Other Motor Vehicles,Motor Cars and Other Motor Vehicles - Retail Pack,Automotive,0,#NA,#NA,0,,1,399.4,30.0,764
+870305,8703,87,Vehicles Other Than Railway or Tramway Rolling Stock,Motor Cars and Other Motor Vehicles,Motor Cars and Other Motor Vehicles - Industrial Grade,Automotive,0,#NA,#NA,0,,1,341.8,30.0,765
+870306,8703,87,Vehicles Other Than Railway or Tramway Rolling Stock,Motor Cars and Other Motor Vehicles,Motor Cars and Other Motor Vehicles - Premium,Automotive,0,#NA,#NA,0,,1,252.6,30.0,766
+870307,8703,87,Vehicles Other Than Railway or Tramway Rolling Stock,Motor Cars and Other Motor Vehicles,Motor Cars and Other Motor Vehicles - Standard,Automotive,0,#NA,#NA,0,,1,381.3,30.0,767
+870308,8703,87,Vehicles Other Than Railway or Tramway Rolling Stock,Motor Cars and Other Motor Vehicles,Motor Cars and Other Motor Vehicles - Economy,Automotive,0,#NA,#NA,0,,1,283.2,30.0,768
+870309,8703,87,Vehicles Other Than Railway or Tramway Rolling Stock,Motor Cars and Other Motor Vehicles,Motor Cars and Other Motor Vehicles - Type I,Automotive,0,#NA,#NA,0,,1,390.9,30.0,769
+870310,8703,87,Vehicles Other Than Railway or Tramway Rolling Stock,Motor Cars and Other Motor Vehicles,Motor Cars and Other Motor Vehicles - Type II,Automotive,0,#NA,#NA,0,,1,300.5,30.0,770
+870311,8703,87,Vehicles Other Than Railway or Tramway Rolling Stock,Motor Cars and Other Motor Vehicles,Motor Cars and Other Motor Vehicles - Type III,Automotive,0,#NA,#NA,0,,1,354.5,30.0,771
+870312,8703,87,Vehicles Other Than Railway or Tramway Rolling Stock,Motor Cars and Other Motor Vehicles,Motor Cars and Other Motor Vehicles - Class 1,Automotive,0,#NA,#NA,0,,1,333.6,30.0,772
+870313,8703,87,Vehicles Other Than Railway or Tramway Rolling Stock,Motor Cars and Other Motor Vehicles,Motor Cars and Other Motor Vehicles - Class 2,Automotive,0,#NA,#NA,0,,1,273.7,30.0,773
+870314,8703,87,Vehicles Other Than Railway or Tramway Rolling Stock,Motor Cars and Other Motor Vehicles,Motor Cars and Other Motor Vehicles - Export Grade,Automotive,0,#NA,#NA,0,,1,359.9,30.0,774
+870315,8703,87,Vehicles Other Than Railway or Tramway Rolling Stock,Motor Cars and Other Motor Vehicles,Motor Cars and Other Motor Vehicles - Domestic Grade,Automotive,0,#NA,#NA,0,,1,270.8,30.0,775
+870316,8703,87,Vehicles Other Than Railway or Tramway Rolling Stock,Motor Cars and Other Motor Vehicles,Motor Cars and Other Motor Vehicles - Carton Pack,Automotive,0,#NA,#NA,0,,1,326.2,30.0,776
+870317,8703,87,Vehicles Other Than Railway or Tramway Rolling Stock,Motor Cars and Other Motor Vehicles,Motor Cars and Other Motor Vehicles - Palletized,Automotive,0,#NA,#NA,0,,1,297.1,30.0,777
+870318,8703,87,Vehicles Other Than Railway or Tramway Rolling Stock,Motor Cars and Other Motor Vehicles,Motor Cars and Other Motor Vehicles - Loose,Automotive,0,#NA,#NA,0,,1,268.2,30.0,778
+870319,8703,87,Vehicles Other Than Railway or Tramway Rolling Stock,Motor Cars and Other Motor Vehicles,Motor Cars and Other Motor Vehicles - Refined,Automotive,0,#NA,#NA,0,,1,387.1,30.0,779
+870320,8703,87,Vehicles Other Than Railway or Tramway Rolling Stock,Motor Cars and Other Motor Vehicles,Motor Cars and Other Motor Vehicles - Processed,Automotive,0,#NA,#NA,0,,1,332.4,30.0,780
+870801,8708,87,Vehicles Other Than Railway or Tramway Rolling Stock,Parts and Accessories of Motor Vehicles,Parts and Accessories of Motor Vehicles - Grade A,Automotive,0,#NA,#NA,0,,0,303.4,30.0,781
+870802,8708,87,Vehicles Other Than Railway or Tramway Rolling Stock,Parts and Accessories of Motor Vehicles,Parts and Accessories of Motor Vehicles - Grade B,Automotive,0,#NA,#NA,0,,0,263.6,30.0,782
+870803,8708,87,Vehicles Other Than Railway or Tramway Rolling Stock,Parts and Accessories of Motor Vehicles,Parts and Accessories of Motor Vehicles - Bulk,Automotive,0,#NA,#NA,0,,0,317.1,30.0,783
+870804,8708,87,Vehicles Other Than Railway or Tramway Rolling Stock,Parts and Accessories of Motor Vehicles,Parts and Accessories of Motor Vehicles - Retail Pack,Automotive,0,#NA,#NA,0,,0,345.9,30.0,784
+870805,8708,87,Vehicles Other Than Railway or Tramway Rolling Stock,Parts and Accessories of Motor Vehicles,Parts and Accessories of Motor Vehicles - Industrial Grade,Automotive,0,#NA,#NA,0,,0,225.5,30.0,785
+870806,8708,87,Vehicles Other Than Railway or Tramway Rolling Stock,Parts and Accessories of Motor Vehicles,Parts and Accessories of Motor Vehicles - Premium,Automotive,0,#NA,#NA,0,,0,263.7,30.0,786
+870807,8708,87,Vehicles Other Than Railway or Tramway Rolling Stock,Parts and Accessories of Motor Vehicles,Parts and Accessories of Motor Vehicles - Standard,Automotive,0,#NA,#NA,0,,0,255.4,30.0,787
+870808,8708,87,Vehicles Other Than Railway or Tramway Rolling Stock,Parts and Accessories of Motor Vehicles,Parts and Accessories of Motor Vehicles - Economy,Automotive,0,#NA,#NA,0,,0,218.7,30.0,788
+870809,8708,87,Vehicles Other Than Railway or Tramway Rolling Stock,Parts and Accessories of Motor Vehicles,Parts and Accessories of Motor Vehicles - Type I,Automotive,0,#NA,#NA,0,,0,209.0,30.0,789
+870810,8708,87,Vehicles Other Than Railway or Tramway Rolling Stock,Parts and Accessories of Motor Vehicles,Parts and Accessories of Motor Vehicles - Type II,Automotive,0,#NA,#NA,0,,0,215.4,30.0,790
+870811,8708,87,Vehicles Other Than Railway or Tramway Rolling Stock,Parts and Accessories of Motor Vehicles,Parts and Accessories of Motor Vehicles - Type III,Automotive,0,#NA,#NA,0,,0,210.1,30.0,791
+870812,8708,87,Vehicles Other Than Railway or Tramway Rolling Stock,Parts and Accessories of Motor Vehicles,Parts and Accessories of Motor Vehicles - Class 1,Automotive,0,#NA,#NA,0,,0,299.4,30.0,792
+870813,8708,87,Vehicles Other Than Railway or Tramway Rolling Stock,Parts and Accessories of Motor Vehicles,Parts and Accessories of Motor Vehicles - Class 2,Automotive,0,#NA,#NA,0,,0,217.2,30.0,793
+870814,8708,87,Vehicles Other Than Railway or Tramway Rolling Stock,Parts and Accessories of Motor Vehicles,Parts and Accessories of Motor Vehicles - Export Grade,Automotive,0,#NA,#NA,0,,0,207.1,30.0,794
+870815,8708,87,Vehicles Other Than Railway or Tramway Rolling Stock,Parts and Accessories of Motor Vehicles,Parts and Accessories of Motor Vehicles - Domestic Grade,Automotive,0,#NA,#NA,0,,0,287.2,30.0,795
+870816,8708,87,Vehicles Other Than Railway or Tramway Rolling Stock,Parts and Accessories of Motor Vehicles,Parts and Accessories of Motor Vehicles - Carton Pack,Automotive,0,#NA,#NA,0,,0,216.3,30.0,796
+870817,8708,87,Vehicles Other Than Railway or Tramway Rolling Stock,Parts and Accessories of Motor Vehicles,Parts and Accessories of Motor Vehicles - Palletized,Automotive,0,#NA,#NA,0,,0,294.7,30.0,797
+870818,8708,87,Vehicles Other Than Railway or Tramway Rolling Stock,Parts and Accessories of Motor Vehicles,Parts and Accessories of Motor Vehicles - Loose,Automotive,0,#NA,#NA,0,,0,253.8,30.0,798
+870819,8708,87,Vehicles Other Than Railway or Tramway Rolling Stock,Parts and Accessories of Motor Vehicles,Parts and Accessories of Motor Vehicles - Refined,Automotive,0,#NA,#NA,0,,0,238.7,30.0,799
+870820,8708,87,Vehicles Other Than Railway or Tramway Rolling Stock,Parts and Accessories of Motor Vehicles,Parts and Accessories of Motor Vehicles - Processed,Automotive,0,#NA,#NA,0,,0,261.6,30.0,800
+880301,8803,88,"Aircraft, Spacecraft, and Parts Thereof","Parts of Balloons, Aircraft or Spacecraft","Parts of Balloons, Aircraft or Spacecraft - Grade A",Project Cargo,0,#NA,#NA,0,,1,206.5,30.0,801
+880302,8803,88,"Aircraft, Spacecraft, and Parts Thereof","Parts of Balloons, Aircraft or Spacecraft","Parts of Balloons, Aircraft or Spacecraft - Grade B",Project Cargo,0,#NA,#NA,0,,1,154.1,30.0,802
+880303,8803,88,"Aircraft, Spacecraft, and Parts Thereof","Parts of Balloons, Aircraft or Spacecraft","Parts of Balloons, Aircraft or Spacecraft - Bulk",Project Cargo,0,#NA,#NA,0,,1,275.6,30.0,803
+880304,8803,88,"Aircraft, Spacecraft, and Parts Thereof","Parts of Balloons, Aircraft or Spacecraft","Parts of Balloons, Aircraft or Spacecraft - Retail Pack",Project Cargo,0,#NA,#NA,0,,1,184.6,30.0,804
+880305,8803,88,"Aircraft, Spacecraft, and Parts Thereof","Parts of Balloons, Aircraft or Spacecraft","Parts of Balloons, Aircraft or Spacecraft - Industrial Grade",Project Cargo,0,#NA,#NA,0,,1,199.9,30.0,805
+880306,8803,88,"Aircraft, Spacecraft, and Parts Thereof","Parts of Balloons, Aircraft or Spacecraft","Parts of Balloons, Aircraft or Spacecraft - Premium",Project Cargo,0,#NA,#NA,0,,1,294.3,30.0,806
+880307,8803,88,"Aircraft, Spacecraft, and Parts Thereof","Parts of Balloons, Aircraft or Spacecraft","Parts of Balloons, Aircraft or Spacecraft - Standard",Project Cargo,0,#NA,#NA,0,,1,251.9,30.0,807
+880308,8803,88,"Aircraft, Spacecraft, and Parts Thereof","Parts of Balloons, Aircraft or Spacecraft","Parts of Balloons, Aircraft or Spacecraft - Economy",Project Cargo,0,#NA,#NA,0,,1,242.2,30.0,808
+880309,8803,88,"Aircraft, Spacecraft, and Parts Thereof","Parts of Balloons, Aircraft or Spacecraft","Parts of Balloons, Aircraft or Spacecraft - Type I",Project Cargo,0,#NA,#NA,0,,1,197.5,30.0,809
+880310,8803,88,"Aircraft, Spacecraft, and Parts Thereof","Parts of Balloons, Aircraft or Spacecraft","Parts of Balloons, Aircraft or Spacecraft - Type II",Project Cargo,0,#NA,#NA,0,,1,238.0,30.0,810
+880311,8803,88,"Aircraft, Spacecraft, and Parts Thereof","Parts of Balloons, Aircraft or Spacecraft","Parts of Balloons, Aircraft or Spacecraft - Type III",Project Cargo,0,#NA,#NA,0,,1,185.9,30.0,811
+880312,8803,88,"Aircraft, Spacecraft, and Parts Thereof","Parts of Balloons, Aircraft or Spacecraft","Parts of Balloons, Aircraft or Spacecraft - Class 1",Project Cargo,0,#NA,#NA,0,,1,295.5,30.0,812
+880313,8803,88,"Aircraft, Spacecraft, and Parts Thereof","Parts of Balloons, Aircraft or Spacecraft","Parts of Balloons, Aircraft or Spacecraft - Class 2",Project Cargo,0,#NA,#NA,0,,1,246.3,30.0,813
+880314,8803,88,"Aircraft, Spacecraft, and Parts Thereof","Parts of Balloons, Aircraft or Spacecraft","Parts of Balloons, Aircraft or Spacecraft - Export Grade",Project Cargo,0,#NA,#NA,0,,1,240.6,30.0,814
+880315,8803,88,"Aircraft, Spacecraft, and Parts Thereof","Parts of Balloons, Aircraft or Spacecraft","Parts of Balloons, Aircraft or Spacecraft - Domestic Grade",Project Cargo,0,#NA,#NA,0,,1,186.7,30.0,815
+880316,8803,88,"Aircraft, Spacecraft, and Parts Thereof","Parts of Balloons, Aircraft or Spacecraft","Parts of Balloons, Aircraft or Spacecraft - Carton Pack",Project Cargo,0,#NA,#NA,0,,1,249.4,30.0,816
+880317,8803,88,"Aircraft, Spacecraft, and Parts Thereof","Parts of Balloons, Aircraft or Spacecraft","Parts of Balloons, Aircraft or Spacecraft - Palletized",Project Cargo,0,#NA,#NA,0,,1,273.8,30.0,817
+880318,8803,88,"Aircraft, Spacecraft, and Parts Thereof","Parts of Balloons, Aircraft or Spacecraft","Parts of Balloons, Aircraft or Spacecraft - Loose",Project Cargo,0,#NA,#NA,0,,1,280.0,30.0,818
+880319,8803,88,"Aircraft, Spacecraft, and Parts Thereof","Parts of Balloons, Aircraft or Spacecraft","Parts of Balloons, Aircraft or Spacecraft - Refined",Project Cargo,0,#NA,#NA,0,,1,229.1,30.0,819
+880320,8803,88,"Aircraft, Spacecraft, and Parts Thereof","Parts of Balloons, Aircraft or Spacecraft","Parts of Balloons, Aircraft or Spacecraft - Processed",Project Cargo,0,#NA,#NA,0,,1,275.1,30.0,820
+890701,8907,89,"Ships, Boats and Floating Structures",Other Floating Structures,Other Floating Structures - Grade A,Project Cargo,0,#NA,#NA,0,,0,627.2,30.0,821
+890702,8907,89,"Ships, Boats and Floating Structures",Other Floating Structures,Other Floating Structures - Grade B,Project Cargo,0,#NA,#NA,0,,0,667.0,30.0,822
+890703,8907,89,"Ships, Boats and Floating Structures",Other Floating Structures,Other Floating Structures - Bulk,Project Cargo,0,#NA,#NA,0,,0,549.8,30.0,823
+890704,8907,89,"Ships, Boats and Floating Structures",Other Floating Structures,Other Floating Structures - Retail Pack,Project Cargo,0,#NA,#NA,0,,0,497.9,30.0,824
+890705,8907,89,"Ships, Boats and Floating Structures",Other Floating Structures,Other Floating Structures - Industrial Grade,Project Cargo,0,#NA,#NA,0,,0,687.0,30.0,825
+890706,8907,89,"Ships, Boats and Floating Structures",Other Floating Structures,Other Floating Structures - Premium,Project Cargo,0,#NA,#NA,0,,0,488.5,30.0,826
+890707,8907,89,"Ships, Boats and Floating Structures",Other Floating Structures,Other Floating Structures - Standard,Project Cargo,0,#NA,#NA,0,,0,402.7,30.0,827
+890708,8907,89,"Ships, Boats and Floating Structures",Other Floating Structures,Other Floating Structures - Economy,Project Cargo,0,#NA,#NA,0,,0,584.0,30.0,828
+890709,8907,89,"Ships, Boats and Floating Structures",Other Floating Structures,Other Floating Structures - Type I,Project Cargo,0,#NA,#NA,0,,0,523.2,30.0,829
+890710,8907,89,"Ships, Boats and Floating Structures",Other Floating Structures,Other Floating Structures - Type II,Project Cargo,0,#NA,#NA,0,,0,493.5,30.0,830
+890711,8907,89,"Ships, Boats and Floating Structures",Other Floating Structures,Other Floating Structures - Type III,Project Cargo,0,#NA,#NA,0,,0,486.6,30.0,831
+890712,8907,89,"Ships, Boats and Floating Structures",Other Floating Structures,Other Floating Structures - Class 1,Project Cargo,0,#NA,#NA,0,,0,604.6,30.0,832
+890713,8907,89,"Ships, Boats and Floating Structures",Other Floating Structures,Other Floating Structures - Class 2,Project Cargo,0,#NA,#NA,0,,0,775.9,28.03,833
+890714,8907,89,"Ships, Boats and Floating Structures",Other Floating Structures,Other Floating Structures - Export Grade,Project Cargo,0,#NA,#NA,0,,0,647.9,30.0,834
+890715,8907,89,"Ships, Boats and Floating Structures",Other Floating Structures,Other Floating Structures - Domestic Grade,Project Cargo,0,#NA,#NA,0,,0,602.1,30.0,835
+890716,8907,89,"Ships, Boats and Floating Structures",Other Floating Structures,Other Floating Structures - Carton Pack,Project Cargo,0,#NA,#NA,0,,0,706.4,30.0,836
+890717,8907,89,"Ships, Boats and Floating Structures",Other Floating Structures,Other Floating Structures - Palletized,Project Cargo,0,#NA,#NA,0,,0,417.9,30.0,837
+890718,8907,89,"Ships, Boats and Floating Structures",Other Floating Structures,Other Floating Structures - Loose,Project Cargo,0,#NA,#NA,0,,0,456.5,30.0,838
+890719,8907,89,"Ships, Boats and Floating Structures",Other Floating Structures,Other Floating Structures - Refined,Project Cargo,0,#NA,#NA,0,,0,717.8,30.0,839
+890720,8907,89,"Ships, Boats and Floating Structures",Other Floating Structures,Other Floating Structures - Processed,Project Cargo,0,#NA,#NA,0,,0,446.3,30.0,840
+901801,9018,90,"Optical, Photographic, Medical Instruments",Medical Instruments and Appliances,Medical Instruments and Appliances - Grade A,Industrial,0,#NA,#NA,0,,1,264.0,30.0,841
+901802,9018,90,"Optical, Photographic, Medical Instruments",Medical Instruments and Appliances,Medical Instruments and Appliances - Grade B,Industrial,0,#NA,#NA,0,,1,234.2,30.0,842
+901803,9018,90,"Optical, Photographic, Medical Instruments",Medical Instruments and Appliances,Medical Instruments and Appliances - Bulk,Industrial,0,#NA,#NA,0,,1,224.3,30.0,843
+901804,9018,90,"Optical, Photographic, Medical Instruments",Medical Instruments and Appliances,Medical Instruments and Appliances - Retail Pack,Industrial,0,#NA,#NA,0,,1,228.1,30.0,844
+901805,9018,90,"Optical, Photographic, Medical Instruments",Medical Instruments and Appliances,Medical Instruments and Appliances - Industrial Grade,Industrial,0,#NA,#NA,0,,1,283.7,30.0,845
+901806,9018,90,"Optical, Photographic, Medical Instruments",Medical Instruments and Appliances,Medical Instruments and Appliances - Premium,Industrial,0,#NA,#NA,0,,1,225.2,30.0,846
+901807,9018,90,"Optical, Photographic, Medical Instruments",Medical Instruments and Appliances,Medical Instruments and Appliances - Standard,Industrial,0,#NA,#NA,0,,1,321.1,30.0,847
+901808,9018,90,"Optical, Photographic, Medical Instruments",Medical Instruments and Appliances,Medical Instruments and Appliances - Economy,Industrial,0,#NA,#NA,0,,1,344.4,30.0,848
+901809,9018,90,"Optical, Photographic, Medical Instruments",Medical Instruments and Appliances,Medical Instruments and Appliances - Type I,Industrial,0,#NA,#NA,0,,1,325.8,30.0,849
+901810,9018,90,"Optical, Photographic, Medical Instruments",Medical Instruments and Appliances,Medical Instruments and Appliances - Type II,Industrial,0,#NA,#NA,0,,1,223.9,30.0,850
+901811,9018,90,"Optical, Photographic, Medical Instruments",Medical Instruments and Appliances,Medical Instruments and Appliances - Type III,Industrial,0,#NA,#NA,0,,1,204.8,30.0,851
+901812,9018,90,"Optical, Photographic, Medical Instruments",Medical Instruments and Appliances,Medical Instruments and Appliances - Class 1,Industrial,0,#NA,#NA,0,,1,211.0,30.0,852
+901813,9018,90,"Optical, Photographic, Medical Instruments",Medical Instruments and Appliances,Medical Instruments and Appliances - Class 2,Industrial,0,#NA,#NA,0,,1,227.6,30.0,853
+901814,9018,90,"Optical, Photographic, Medical Instruments",Medical Instruments and Appliances,Medical Instruments and Appliances - Export Grade,Industrial,0,#NA,#NA,0,,1,319.9,30.0,854
+901815,9018,90,"Optical, Photographic, Medical Instruments",Medical Instruments and Appliances,Medical Instruments and Appliances - Domestic Grade,Industrial,0,#NA,#NA,0,,1,349.6,30.0,855
+901816,9018,90,"Optical, Photographic, Medical Instruments",Medical Instruments and Appliances,Medical Instruments and Appliances - Carton Pack,Industrial,0,#NA,#NA,0,,1,338.0,30.0,856
+901817,9018,90,"Optical, Photographic, Medical Instruments",Medical Instruments and Appliances,Medical Instruments and Appliances - Palletized,Industrial,0,#NA,#NA,0,,1,288.6,30.0,857
+901818,9018,90,"Optical, Photographic, Medical Instruments",Medical Instruments and Appliances,Medical Instruments and Appliances - Loose,Industrial,0,#NA,#NA,0,,1,275.1,30.0,858
+901819,9018,90,"Optical, Photographic, Medical Instruments",Medical Instruments and Appliances,Medical Instruments and Appliances - Refined,Industrial,0,#NA,#NA,0,,1,227.1,30.0,859
+901820,9018,90,"Optical, Photographic, Medical Instruments",Medical Instruments and Appliances,Medical Instruments and Appliances - Processed,Industrial,0,#NA,#NA,0,,1,332.3,30.0,860
+940301,9403,94,"Furniture; Bedding, Mattresses",Other Furniture and Parts Thereof,Other Furniture and Parts Thereof - Grade A,Consumer Goods,0,#NA,#NA,0,,0,255.7,30.0,861
+940302,9403,94,"Furniture; Bedding, Mattresses",Other Furniture and Parts Thereof,Other Furniture and Parts Thereof - Grade B,Consumer Goods,0,#NA,#NA,0,,0,285.1,30.0,862
+940303,9403,94,"Furniture; Bedding, Mattresses",Other Furniture and Parts Thereof,Other Furniture and Parts Thereof - Bulk,Consumer Goods,0,#NA,#NA,0,,0,245.2,30.0,863
+940304,9403,94,"Furniture; Bedding, Mattresses",Other Furniture and Parts Thereof,Other Furniture and Parts Thereof - Retail Pack,Consumer Goods,0,#NA,#NA,0,,0,222.2,30.0,864
+940305,9403,94,"Furniture; Bedding, Mattresses",Other Furniture and Parts Thereof,Other Furniture and Parts Thereof - Industrial Grade,Consumer Goods,0,#NA,#NA,0,,0,235.4,30.0,865
+940306,9403,94,"Furniture; Bedding, Mattresses",Other Furniture and Parts Thereof,Other Furniture and Parts Thereof - Premium,Consumer Goods,0,#NA,#NA,0,,0,262.4,30.0,866
+940307,9403,94,"Furniture; Bedding, Mattresses",Other Furniture and Parts Thereof,Other Furniture and Parts Thereof - Standard,Consumer Goods,0,#NA,#NA,0,,0,265.1,30.0,867
+940308,9403,94,"Furniture; Bedding, Mattresses",Other Furniture and Parts Thereof,Other Furniture and Parts Thereof - Economy,Consumer Goods,0,#NA,#NA,0,,0,237.2,30.0,868
+940309,9403,94,"Furniture; Bedding, Mattresses",Other Furniture and Parts Thereof,Other Furniture and Parts Thereof - Type I,Consumer Goods,0,#NA,#NA,0,,0,192.3,30.0,869
+940310,9403,94,"Furniture; Bedding, Mattresses",Other Furniture and Parts Thereof,Other Furniture and Parts Thereof - Type II,Consumer Goods,0,#NA,#NA,0,,0,238.3,30.0,870
+940311,9403,94,"Furniture; Bedding, Mattresses",Other Furniture and Parts Thereof,Other Furniture and Parts Thereof - Type III,Consumer Goods,0,#NA,#NA,0,,0,161.5,30.0,871
+940312,9403,94,"Furniture; Bedding, Mattresses",Other Furniture and Parts Thereof,Other Furniture and Parts Thereof - Class 1,Consumer Goods,0,#NA,#NA,0,,0,169.7,30.0,872
+940313,9403,94,"Furniture; Bedding, Mattresses",Other Furniture and Parts Thereof,Other Furniture and Parts Thereof - Class 2,Consumer Goods,0,#NA,#NA,0,,0,271.5,30.0,873
+940314,9403,94,"Furniture; Bedding, Mattresses",Other Furniture and Parts Thereof,Other Furniture and Parts Thereof - Export Grade,Consumer Goods,0,#NA,#NA,0,,0,232.1,30.0,874
+940315,9403,94,"Furniture; Bedding, Mattresses",Other Furniture and Parts Thereof,Other Furniture and Parts Thereof - Domestic Grade,Consumer Goods,0,#NA,#NA,0,,0,199.4,30.0,875
+940316,9403,94,"Furniture; Bedding, Mattresses",Other Furniture and Parts Thereof,Other Furniture and Parts Thereof - Carton Pack,Consumer Goods,0,#NA,#NA,0,,0,255.2,30.0,876
+940317,9403,94,"Furniture; Bedding, Mattresses",Other Furniture and Parts Thereof,Other Furniture and Parts Thereof - Palletized,Consumer Goods,0,#NA,#NA,0,,0,157.7,30.0,877
+940318,9403,94,"Furniture; Bedding, Mattresses",Other Furniture and Parts Thereof,Other Furniture and Parts Thereof - Loose,Consumer Goods,0,#NA,#NA,0,,0,264.0,30.0,878
+940319,9403,94,"Furniture; Bedding, Mattresses",Other Furniture and Parts Thereof,Other Furniture and Parts Thereof - Refined,Consumer Goods,0,#NA,#NA,0,,0,171.9,30.0,879
+940320,9403,94,"Furniture; Bedding, Mattresses",Other Furniture and Parts Thereof,Other Furniture and Parts Thereof - Processed,Consumer Goods,0,#NA,#NA,0,,0,226.1,30.0,880
+950301,9503,95,"Toys, Games and Sports Requisites","Tricycles, Toys, Reduced-Size Models","Tricycles, Toys, Reduced-Size Models - Grade A",Consumer Goods,0,#NA,#NA,0,,0,136.7,30.0,881
+950302,9503,95,"Toys, Games and Sports Requisites","Tricycles, Toys, Reduced-Size Models","Tricycles, Toys, Reduced-Size Models - Grade B",Consumer Goods,0,#NA,#NA,0,,0,105.6,30.0,882
+950303,9503,95,"Toys, Games and Sports Requisites","Tricycles, Toys, Reduced-Size Models","Tricycles, Toys, Reduced-Size Models - Bulk",Consumer Goods,0,#NA,#NA,0,,0,134.5,30.0,883
+950304,9503,95,"Toys, Games and Sports Requisites","Tricycles, Toys, Reduced-Size Models","Tricycles, Toys, Reduced-Size Models - Retail Pack",Consumer Goods,0,#NA,#NA,0,,0,140.7,30.0,884
+950305,9503,95,"Toys, Games and Sports Requisites","Tricycles, Toys, Reduced-Size Models","Tricycles, Toys, Reduced-Size Models - Industrial Grade",Consumer Goods,0,#NA,#NA,0,,0,139.2,30.0,885
+950306,9503,95,"Toys, Games and Sports Requisites","Tricycles, Toys, Reduced-Size Models","Tricycles, Toys, Reduced-Size Models - Premium",Consumer Goods,0,#NA,#NA,0,,0,105.8,30.0,886
+950307,9503,95,"Toys, Games and Sports Requisites","Tricycles, Toys, Reduced-Size Models","Tricycles, Toys, Reduced-Size Models - Standard",Consumer Goods,0,#NA,#NA,0,,0,187.4,30.0,887
+950308,9503,95,"Toys, Games and Sports Requisites","Tricycles, Toys, Reduced-Size Models","Tricycles, Toys, Reduced-Size Models - Economy",Consumer Goods,0,#NA,#NA,0,,0,199.1,30.0,888
+950309,9503,95,"Toys, Games and Sports Requisites","Tricycles, Toys, Reduced-Size Models","Tricycles, Toys, Reduced-Size Models - Type I",Consumer Goods,0,#NA,#NA,0,,0,113.6,30.0,889
+950310,9503,95,"Toys, Games and Sports Requisites","Tricycles, Toys, Reduced-Size Models","Tricycles, Toys, Reduced-Size Models - Type II",Consumer Goods,0,#NA,#NA,0,,0,157.4,30.0,890
+950311,9503,95,"Toys, Games and Sports Requisites","Tricycles, Toys, Reduced-Size Models","Tricycles, Toys, Reduced-Size Models - Type III",Consumer Goods,0,#NA,#NA,0,,0,151.4,30.0,891
+950312,9503,95,"Toys, Games and Sports Requisites","Tricycles, Toys, Reduced-Size Models","Tricycles, Toys, Reduced-Size Models - Class 1",Consumer Goods,0,#NA,#NA,0,,0,123.3,30.0,892
+950313,9503,95,"Toys, Games and Sports Requisites","Tricycles, Toys, Reduced-Size Models","Tricycles, Toys, Reduced-Size Models - Class 2",Consumer Goods,0,#NA,#NA,0,,0,144.1,30.0,893
+950314,9503,95,"Toys, Games and Sports Requisites","Tricycles, Toys, Reduced-Size Models","Tricycles, Toys, Reduced-Size Models - Export Grade",Consumer Goods,0,#NA,#NA,0,,0,101.8,30.0,894
+950315,9503,95,"Toys, Games and Sports Requisites","Tricycles, Toys, Reduced-Size Models","Tricycles, Toys, Reduced-Size Models - Domestic Grade",Consumer Goods,0,#NA,#NA,0,,0,110.6,30.0,895
+950316,9503,95,"Toys, Games and Sports Requisites","Tricycles, Toys, Reduced-Size Models","Tricycles, Toys, Reduced-Size Models - Carton Pack",Consumer Goods,0,#NA,#NA,0,,0,174.3,30.0,896
+950317,9503,95,"Toys, Games and Sports Requisites","Tricycles, Toys, Reduced-Size Models","Tricycles, Toys, Reduced-Size Models - Palletized",Consumer Goods,0,#NA,#NA,0,,0,191.9,30.0,897
+950318,9503,95,"Toys, Games and Sports Requisites","Tricycles, Toys, Reduced-Size Models","Tricycles, Toys, Reduced-Size Models - Loose",Consumer Goods,0,#NA,#NA,0,,0,110.4,30.0,898
+950319,9503,95,"Toys, Games and Sports Requisites","Tricycles, Toys, Reduced-Size Models","Tricycles, Toys, Reduced-Size Models - Refined",Consumer Goods,0,#NA,#NA,0,,0,150.6,30.0,899

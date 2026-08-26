@@ -1,0 +1,45 @@
+ServiceCode,ServiceName,TradeLane,OriginRegion,DestinationRegion,LoopDurationDays,VesselsDeployed,ServiceFrequency,NominalTransitDays,IsAllianceService,IsActive,ServiceKey
+#NA,Unknown,#NA,#NA,#NA,0,0,#NA,0,0,0,-1
+AE1,Asia–N Europe Loop 1,Asia–N Europe,East Asia,N Europe,81,12,Weekly,32,0,1,1
+AE2,Asia–N Europe Loop 2,Asia–N Europe,East Asia,N Europe,82,12,Weekly,34,0,1,2
+AE3,Asia–N Europe Loop 3,Asia–N Europe,East Asia,N Europe,81,12,Weekly,32,0,1,3
+AE4,Asia–N Europe Loop 4,Asia–N Europe,East Asia,N Europe,80,11,Weekly,30,1,1,4
+AE5,Asia–N Europe Loop 5,Asia–N Europe,East Asia,N Europe,78,11,Weekly,32,0,1,5
+AM1,Asia–Mediterranean Loop 1,Asia–Mediterranean,East Asia,Mediterranean,66,9,Weekly,25,0,1,6
+AM2,Asia–Mediterranean Loop 2,Asia–Mediterranean,East Asia,Mediterranean,69,10,Weekly,27,1,1,7
+AM3,Asia–Mediterranean Loop 3,Asia–Mediterranean,East Asia,Mediterranean,70,10,Weekly,25,0,1,8
+AM4,Asia–Mediterranean Loop 4,Asia–Mediterranean,East Asia,Mediterranean,68,5,Fortnightly,25,0,1,9
+TP1,Transpacific East Loop 1,Transpacific East,East Asia,N America West,41,6,Weekly,14,0,1,10
+TP2,Transpacific East Loop 2,Transpacific East,East Asia,N America West,42,3,Fortnightly,15,0,1,11
+TP3,Transpacific East Loop 3,Transpacific East,East Asia,N America West,40,6,Weekly,15,1,1,12
+TP4,Transpacific East Loop 4,Transpacific East,East Asia,N America West,41,6,Weekly,15,0,1,13
+TP5,Transpacific East Loop 5,Transpacific East,East Asia,N America West,35,3,Fortnightly,16,0,1,14
+TP6,Transpacific East Loop 6,Transpacific East,East Asia,N America West,37,5,Weekly,16,0,1,15
+TW1,Transpacific West Loop 1,Transpacific West,N America West,East Asia,35,3,Fortnightly,14,0,1,16
+TW2,Transpacific West Loop 2,Transpacific West,N America West,East Asia,40,6,Weekly,15,1,1,17
+TW3,Transpacific West Loop 3,Transpacific West,N America West,East Asia,42,6,Weekly,14,1,1,18
+AI1,Asia–ISC Loop 1,Asia–ISC,SE Asia,South Asia,33,5,Weekly,12,1,1,19
+AI2,Asia–ISC Loop 2,Asia–ISC,SE Asia,South Asia,33,3,Fortnightly,10,1,1,20
+AI3,Asia–ISC Loop 3,Asia–ISC,SE Asia,South Asia,29,4,Weekly,13,0,1,21
+AI4,Asia–ISC Loop 4,Asia–ISC,SE Asia,South Asia,34,5,Weekly,10,1,1,22
+AI5,Asia–ISC Loop 5,Asia–ISC,SE Asia,South Asia,32,5,Weekly,11,0,1,23
+IE1,ISC–Europe Loop 1,ISC–Europe,South Asia,N Europe,44,6,Weekly,18,1,0,24
+IE2,ISC–Europe Loop 2,ISC–Europe,South Asia,N Europe,44,6,Weekly,20,0,1,25
+IE3,ISC–Europe Loop 3,ISC–Europe,South Asia,N Europe,48,7,Weekly,22,1,1,26
+IE4,ISC–Europe Loop 4,ISC–Europe,South Asia,N Europe,48,7,Weekly,20,0,1,27
+IA1,Intra-Asia Loop 1,Intra-Asia,SE Asia,East Asia,15,3,Weekly,4,0,1,28
+IA2,Intra-Asia Loop 2,Intra-Asia,SE Asia,East Asia,19,3,Weekly,7,0,1,29
+IA3,Intra-Asia Loop 3,Intra-Asia,SE Asia,East Asia,17,3,Fortnightly,5,1,1,30
+IA4,Intra-Asia Loop 4,Intra-Asia,SE Asia,East Asia,21,3,Weekly,4,0,1,31
+IA5,Intra-Asia Loop 5,Intra-Asia,SE Asia,East Asia,17,3,Weekly,5,1,1,32
+IA6,Intra-Asia Loop 6,Intra-Asia,SE Asia,East Asia,21,3,Weekly,6,0,1,33
+AG1,Asia–MEA Loop 1,Asia–MEA,East Asia,Middle East,31,4,Weekly,16,0,1,34
+AG2,Asia–MEA Loop 2,Asia–MEA,East Asia,Middle East,34,3,Fortnightly,14,0,1,35
+AG3,Asia–MEA Loop 3,Asia–MEA,East Asia,Middle East,33,5,Weekly,13,1,1,36
+AG4,Asia–MEA Loop 4,Asia–MEA,East Asia,Middle East,35,5,Weekly,12,0,1,37
+EL1,Europe–LatAm Loop 1,Europe–LatAm,N Europe,LatAm East,42,3,Fortnightly,22,0,1,38
+EL2,Europe–LatAm Loop 2,Europe–LatAm,N Europe,LatAm East,46,3,Fortnightly,22,1,1,39
+EL3,Europe–LatAm Loop 3,Europe–LatAm,N Europe,LatAm East,49,7,Weekly,22,1,1,40
+AL1,Asia–LatAm Loop 1,Asia–LatAm,East Asia,LatAm West,60,9,Weekly,31,0,1,41
+AL2,Asia–LatAm Loop 2,Asia–LatAm,East Asia,LatAm West,57,8,Weekly,34,1,1,42
+TA1,Transatlantic Loop 1,Transatlantic,N Europe,N America East,32,5,Weekly,11,1,1,43

@@ -1,0 +1,43 @@
+EventCode,EventName,EventJourney,EventClassifier,MilestoneSequence,MilestoneGroup,IsCustomerVisible,IsSlaMilestone,EdifactMessageType,MilestoneKey
+GTIN,Gate In,Equipment,Actual,5,Origin,1,1,CODECO,1
+GTOT,Gate Out,Equipment,Actual,6,Origin,1,1,CODECO,2
+LOAD,Vessel Load,Equipment,Actual,10,Main Carriage,0,1,BAPLIE,3
+DISC,Vessel Discharge,Equipment,Actual,17,Destination,0,1,BAPLIE,4
+STUF,Container Stuffing,Equipment,Actual,7,Origin,0,0,CODECO,5
+STRP,Container Stripping,Equipment,Actual,18,Destination,0,0,CODECO,6
+PICK,Empty Container Pickup,Equipment,Actual,8,Origin,1,1,CODECO,7
+DROP,Empty Container Drop-off,Equipment,Actual,19,Destination,1,1,CODECO,8
+INSP,Equipment Inspection,Equipment,Actual,9,Origin,1,0,CODECO,9
+CUSR,Customs Release,Equipment,Actual,20,Destination,1,1,#NA,10
+RSEA,Seal Affixed,Equipment,Actual,5,Origin,0,0,CODECO,11
+AVPU,Available for Pickup,Equipment,Actual,17,Destination,1,0,CODECO,12
+AVDO,Available for Drop-off,Equipment,Actual,6,Origin,1,0,CODECO,13
+RAIO,Rail Loaded,Equipment,Actual,11,Main Carriage,0,0,IFTSTA,14
+RAII,Rail Discharged,Equipment,Actual,12,Main Carriage,0,0,IFTSTA,15
+EXPT,Export Customs Cleared,Equipment,Actual,7,Origin,1,0,#NA,16
+IMPT,Import Customs Cleared,Equipment,Actual,18,Destination,1,0,#NA,17
+EMTY,Empty Container Returned,Equipment,Actual,19,Destination,1,0,CODECO,18
+FULL,Full Container Gated In,Equipment,Actual,8,Origin,0,0,CODECO,19
+ARRI,Vessel Arrival,Transport,Actual,13,Main Carriage,1,1,IFTSTA,20
+DEPA,Vessel Departure,Transport,Actual,14,Main Carriage,1,1,IFTSTA,21
+BERT,Vessel Berthed,Transport,Actual,10,Main Carriage,0,0,IFTSTA,22
+UNBR,Vessel Unberthed,Transport,Actual,11,Main Carriage,0,0,IFTSTA,23
+WAYP,Waypoint Passed,Transport,Estimated,15,Transhipment,0,0,IFTSTA,24
+XFER,Transhipment Transfer,Transport,Actual,16,Transhipment,0,0,IFTSTA,25
+TRAN,In Transit at Transhipment Port,Transport,Actual,15,Transhipment,0,0,IFTSTA,26
+CONF,Booking Confirmed,Shipment,Actual,1,Documentation,1,0,COPARN,27
+ISSU,Bill of Lading Issued,Shipment,Actual,2,Documentation,1,0,IFTMBF,28
+SURR,Bill of Lading Surrendered,Shipment,Actual,3,Documentation,1,0,IFTMBF,29
+APPR,Booking Approved,Shipment,Actual,4,Documentation,1,0,IFTMBF,30
+REJE,Booking Rejected,Shipment,Actual,1,Documentation,1,0,IFTMBF,31
+RECE,Cargo Received,Shipment,Actual,9,Origin,1,0,COPARN,32
+DRFT,Draft Bill of Lading Issued,Shipment,Planned,2,Documentation,0,0,COPARN,33
+PEND,Booking Pending,Shipment,Planned,3,Documentation,0,0,COPARN,34
+SUBM,Booking Submitted,Shipment,Planned,4,Documentation,1,0,IFTMIN,35
+COMP,Shipment Completed,Shipment,Actual,20,Destination,1,1,IFTMIN,36
+AMND,Booking Amended,Shipment,Actual,1,Documentation,1,0,IFTMIN,37
+CANC,Booking Cancelled,Shipment,Actual,2,Documentation,1,0,IFTMIN,38
+HOLD,Shipment On Hold,Shipment,Planned,3,Documentation,1,0,IFTMIN,39
+RELS,Cargo Released,Shipment,Actual,4,Documentation,1,1,IFTMBF,40
+NOTF,Arrival Notice Sent,Shipment,Planned,17,Destination,1,0,IFTSTA,41
+DLVR,Cargo Delivered,Shipment,Actual,18,Destination,1,1,IFTSTA,42

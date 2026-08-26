@@ -1,0 +1,181 @@
+CarrierCode,CarrierName,CarrierType,IsOwnFleet,HomeCountryCode,HomeCountryName,AllianceName,ContractRateBasis,PreferredTier,OnTimeTargetPct,IsActive,CarrierKey
+#NA,Unknown,#NA,0,#NA,Unknown,#NA,#NA,#NA,0.0,0,-1
+MGLU,Meridian Global Logistics,Ocean Carrier,1,SG,Singapore,Meridian Own,Fixed,Tier 2,89.2,1,1
+MAEU,Maersk Line,Ocean Carrier,0,DK,Denmark,Alliance Pacific,Spot,Tier 1,91.6,1,2
+MSCU,Mediterranean Shipping Company,Ocean Carrier,0,CH,Switzerland,Alliance Pacific,Fixed,Tier 1,93.7,1,3
+CMDU,CMA CGM,Ocean Carrier,0,FR,France,Alliance Pacific,Fixed,Tier 2,94.9,1,4
+HLCU,Hapag-Lloyd,Ocean Carrier,0,DE,Germany,Independent,Index-Linked,Tier 2,89.4,1,5
+ONEY,Ocean Network Express,Ocean Carrier,0,JP,Japan,Alliance North,Index-Linked,Tier 3,81.8,1,6
+EGLV,Evergreen Line,Ocean Carrier,0,TW,Taiwan,Independent,Fixed,Tier 2,91.6,0,7
+COSU,COSCO Shipping Lines,Ocean Carrier,0,CN,China,Alliance North,Index-Linked,Tier 3,84.9,1,8
+YMLU,Yang Ming Marine Transport,Ocean Carrier,0,TW,Taiwan,Alliance Pacific,Index-Linked,Tier 1,94.3,1,9
+HDMU,HMM,Ocean Carrier,0,KR,South Korea,Independent,Index-Linked,Tier 3,83.9,1,10
+OOLU,OOCL,Ocean Carrier,0,HK,Hong Kong,Alliance Pacific,Fixed,Tier 2,88.0,1,11
+ZIMU,ZIM Integrated Shipping Lines,Ocean Carrier,0,IL,Israel,Alliance Pacific,Spot,Tier 2,91.8,1,12
+WHLC,Wan Hai Lines,Ocean Carrier,0,TW,Taiwan,Alliance Pacific,Index-Linked,Tier 1,97.5,1,13
+PILU,Pacific International Lines,Ocean Carrier,0,SG,Singapore,Independent,Fixed,Tier 3,86.7,1,14
+ECAR,Emirates SkyCargo,Airline,0,AE,United Arab Emirates,#NA,Spot,Tier 3,87.0,1,15
+CPAC,Cathay Pacific Cargo,Airline,0,HK,Hong Kong,#NA,Spot,Tier 2,86.0,1,16
+LHCA,Lufthansa Cargo,Airline,0,DE,Germany,#NA,Index-Linked,Tier 3,86.0,1,17
+SIAC,Singapore Airlines Cargo,Airline,0,SG,Singapore,#NA,Fixed,Tier 3,85.7,1,18
+QRCA,Qatar Airways Cargo,Airline,0,QA,Qatar,#NA,Index-Linked,Tier 2,95.3,1,19
+KLMC,KLM Cargo,Airline,0,NL,Netherlands,#NA,Index-Linked,Tier 2,94.0,1,20
+ANAC,ANA Cargo,Airline,0,JP,Japan,#NA,Fixed,Tier 2,93.8,1,21
+FEDX,FedEx Express,Airline,0,US,United States,#NA,Index-Linked,Tier 3,85.1,1,22
+BNSF,BNSF Railway,Rail Operator,0,US,United States,#NA,Spot,Tier 1,91.0,1,23
+UPRR,Union Pacific Railroad,Rail Operator,0,US,United States,#NA,Fixed,Tier 2,87.5,1,24
+DBSR,DB Cargo,Rail Operator,0,DE,Germany,#NA,Fixed,Tier 2,86.6,1,25
+CRCT,China Railway Container Transport,Rail Operator,0,CN,China,#NA,Index-Linked,Tier 2,92.4,1,26
+HMSS,Crown Ocean Carriers,Ocean Carrier,0,IN,India,Alliance North,Index-Linked,Tier 2,83.3,1,27
+VJBD,Liberty Container Lines,Ocean Carrier,0,AU,Australia,Independent,Index-Linked,Tier 2,88.8,1,28
+EWZM,Equator Ocean Carriers,Ocean Carrier,0,JP,Japan,Alliance North,Spot,Tier 2,90.9,1,29
+KXMM,Horizon Ocean Carriers,Ocean Carrier,0,SG,Singapore,Alliance Pacific,Index-Linked,Tier 1,93.4,1,30
+YQHP,Coastal Marine Transport,Ocean Carrier,0,TH,Thailand,Alliance North,Index-Linked,Tier 1,96.0,1,31
+AAUW,Harbor Ocean Carriers,Ocean Carrier,0,NL,Netherlands,Alliance North,Index-Linked,Tier 1,93.2,1,32
+JJRK,Silver Line Marine Transport,Ocean Carrier,0,HK,Hong Kong,Alliance North,Spot,Tier 1,92.5,1,33
+QGEB,Amber Ocean Carriers,Ocean Carrier,0,AU,Australia,Independent,Index-Linked,Tier 2,88.8,1,34
+XWYU,Cobalt Shipping Line,Ocean Carrier,0,IT,Italy,Alliance North,Index-Linked,Tier 1,95.7,1,35
+NNJE,Crown Container Lines,Ocean Carrier,0,NL,Netherlands,Independent,Index-Linked,Tier 2,88.0,1,36
+BVUE,Ironclad Ocean Carriers,Ocean Carrier,0,DE,Germany,Alliance Pacific,Fixed,Tier 2,91.2,1,37
+QZRM,Equator Container Lines,Ocean Carrier,0,ZA,South Africa,Alliance North,Index-Linked,Tier 3,87.0,1,38
+NSBB,Horizon Marine Transport,Ocean Carrier,0,IT,Italy,Independent,Fixed,Tier 1,87.4,1,39
+RCAH,Apex Marine Transport,Ocean Carrier,0,CA,Canada,Alliance North,Fixed,Tier 2,88.5,1,40
+SSZX,Vertex Ocean Carriers,Ocean Carrier,0,TW,Taiwan,Independent,Spot,Tier 2,90.0,1,41
+KYLU,Titan Ocean Carriers,Ocean Carrier,0,ZA,South Africa,Alliance North,Index-Linked,Tier 3,91.2,1,42
+GCUQ,Apex Ocean Carriers,Ocean Carrier,0,CA,Canada,Alliance Pacific,Index-Linked,Tier 3,84.1,1,43
+NRNS,Latitude Container Lines,Ocean Carrier,0,TW,Taiwan,Alliance North,Spot,Tier 2,89.6,1,44
+DEFB,Vertex Marine Transport,Ocean Carrier,0,ZA,South Africa,Independent,Fixed,Tier 3,87.1,1,45
+DKGB,Vantage Marine Transport,Ocean Carrier,0,BR,Brazil,Alliance North,Index-Linked,Tier 2,90.6,1,46
+ITIH,Prime Marine Transport,Ocean Carrier,0,MY,Malaysia,Alliance Pacific,Index-Linked,Tier 2,90.7,1,47
+AXJE,Voyager Ocean Carriers,Ocean Carrier,0,US,United States,Alliance North,Fixed,Tier 3,85.2,1,48
+TZGS,Granite Marine Transport,Ocean Carrier,0,IT,Italy,Alliance Pacific,Index-Linked,Tier 2,89.9,1,49
+QIFV,Pioneer Container Lines,Ocean Carrier,0,JP,Japan,Independent,Index-Linked,Tier 2,94.2,1,50
+YAHK,Summit Marine Transport,Ocean Carrier,0,MY,Malaysia,Alliance North,Spot,Tier 2,88.5,1,51
+TODF,Orion Container Lines,Ocean Carrier,0,ZA,South Africa,Independent,Fixed,Tier 2,86.9,1,52
+OTUB,Redwood Ocean Carriers,Ocean Carrier,0,JP,Japan,Independent,Spot,Tier 3,87.9,1,53
+RADR,Liberty Ocean Carriers,Ocean Carrier,0,KR,South Korea,Alliance Pacific,Spot,Tier 2,87.8,1,54
+RDXA,Meridian Star Marine Transport,Ocean Carrier,0,BR,Brazil,Independent,Index-Linked,Tier 2,87.3,1,55
+LGMA,Beacon Ocean Carriers,Ocean Carrier,0,NL,Netherlands,Alliance Pacific,Index-Linked,Tier 1,90.2,1,56
+HWFT,Granite Container Lines,Ocean Carrier,0,AU,Australia,Independent,Index-Linked,Tier 1,94.1,1,57
+IFYO,Union Road Transport,Road Haulier,0,KR,South Korea,#NA,Fixed,Tier 1,93.0,1,58
+YWNX,Beacon Freight Lines,Road Haulier,0,CA,Canada,#NA,Fixed,Tier 2,88.8,1,59
+MWGF,Golden Gate Road Transport,Road Haulier,0,AU,Australia,#NA,Fixed,Tier 2,86.7,1,60
+TUVL,Atlas Trucking,Road Haulier,0,ZA,South Africa,#NA,Fixed,Tier 2,90.7,1,61
+TUGS,Meridian Star Road Transport,Road Haulier,0,MX,Mexico,#NA,Fixed,Tier 3,86.5,1,62
+YHQE,Onyx Trucking,Road Haulier,0,CN,China,#NA,Spot,Tier 3,84.5,1,63
+LOKN,Pacific Rim Freight Lines,Road Haulier,0,ES,Spain,#NA,Spot,Tier 2,91.6,1,64
+LSMY,Delta Trucking,Road Haulier,0,AU,Australia,#NA,Spot,Tier 2,92.4,1,65
+KOFS,Compass Freight Lines,Road Haulier,0,TW,Taiwan,#NA,Index-Linked,Tier 3,87.4,1,66
+CODW,Granite Road Transport,Road Haulier,0,IT,Italy,#NA,Fixed,Tier 3,85.9,1,67
+DKVE,Latitude Freight Lines,Road Haulier,0,CN,China,#NA,Spot,Tier 1,93.9,1,68
+KPTN,Voyager Trucking,Road Haulier,0,TH,Thailand,#NA,Spot,Tier 3,88.5,1,69
+QEKX,Cascade Road Transport,Road Haulier,0,DE,Germany,#NA,Fixed,Tier 3,86.5,1,70
+XJRF,Redwood Trucking,Road Haulier,0,US,United States,#NA,Index-Linked,Tier 2,91.0,0,71
+NFFG,Redwood Freight Lines,Road Haulier,0,TH,Thailand,#NA,Fixed,Tier 3,87.0,1,72
+DTEO,Sentinel Trucking,Road Haulier,0,MX,Mexico,#NA,Fixed,Tier 3,86.5,1,73
+YVTZ,Atlas Road Transport,Road Haulier,0,ZA,South Africa,#NA,Index-Linked,Tier 2,88.8,1,74
+VSCT,Frontier Road Transport,Road Haulier,0,US,United States,#NA,Fixed,Tier 1,96.3,1,75
+KERB,Northstar Road Transport,Road Haulier,0,ZA,South Africa,#NA,Index-Linked,Tier 3,87.8,1,76
+RGHJ,Ridgeline Freight Lines,Road Haulier,0,JP,Japan,#NA,Fixed,Tier 3,86.9,1,77
+OXWM,Pioneer Trucking,Road Haulier,0,SG,Singapore,#NA,Spot,Tier 3,85.2,1,78
+PACL,Falcon Haulage,Road Haulier,0,AE,United Arab Emirates,#NA,Spot,Tier 2,93.9,1,79
+FWLN,Golden Gate Freight Lines,Road Haulier,0,AE,United Arab Emirates,#NA,Spot,Tier 3,83.7,1,80
+BCDS,Compass Road Transport,Road Haulier,0,MY,Malaysia,#NA,Fixed,Tier 3,87.6,1,81
+VPMQ,Titan Freight Lines,Road Haulier,0,GB,United Kingdom,#NA,Index-Linked,Tier 1,93.0,1,82
+BVQL,Vantage Trucking,Road Haulier,0,MX,Mexico,#NA,Fixed,Tier 2,87.6,1,83
+UAWE,Monsoon Road Transport,Road Haulier,0,IT,Italy,#NA,Index-Linked,Tier 2,88.7,1,84
+RAZJ,Coastal Road Transport,Road Haulier,0,CA,Canada,#NA,Fixed,Tier 3,84.0,1,85
+ZMJX,Pacific Rim Trucking,Road Haulier,0,NL,Netherlands,#NA,Spot,Tier 2,90.9,1,86
+HVDA,Monsoon Haulage,Road Haulier,0,ES,Spain,#NA,Spot,Tier 2,91.9,1,87
+DNEP,Ironclad Freight Lines,Road Haulier,0,IN,India,#NA,Fixed,Tier 1,92.6,1,88
+LVDG,Cobalt Road Transport,Road Haulier,0,CA,Canada,#NA,Fixed,Tier 2,89.7,1,89
+XPUZ,Liberty Haulage,Road Haulier,0,AE,United Arab Emirates,#NA,Fixed,Tier 2,91.1,1,90
+XQYD,Orion Haulage,Road Haulier,0,TH,Thailand,#NA,Fixed,Tier 3,85.6,1,91
+OKNK,Vantage Freight Lines,Road Haulier,0,CA,Canada,#NA,Index-Linked,Tier 1,93.0,1,92
+DNJV,Ironclad Road Transport,Road Haulier,0,MX,Mexico,#NA,Fixed,Tier 2,89.3,0,93
+DIVQ,Liberty Freight Lines,Road Haulier,0,HK,Hong Kong,#NA,Spot,Tier 3,80.3,1,94
+OQNK,Cascade Trucking,Road Haulier,0,HK,Hong Kong,#NA,Fixed,Tier 3,83.1,1,95
+DDKT,Skyline Haulage,Road Haulier,0,AU,Australia,#NA,Spot,Tier 2,88.7,1,96
+PWWN,Cascade Freight Lines,Road Haulier,0,BR,Brazil,#NA,Spot,Tier 3,87.1,1,97
+KNHC,Orion Railway,Rail Operator,0,ZA,South Africa,#NA,Fixed,Tier 1,94.2,1,98
+DRLZ,Beacon Rail Freight,Rail Operator,0,HK,Hong Kong,#NA,Spot,Tier 3,86.0,1,99
+RTDV,Meridian Star Rail Freight,Rail Operator,0,MX,Mexico,#NA,Index-Linked,Tier 2,87.4,1,100
+SULC,Vertex Rail Logistics,Rail Operator,0,NL,Netherlands,#NA,Index-Linked,Tier 2,92.1,1,101
+KUBC,Beacon Railway,Rail Operator,0,TW,Taiwan,#NA,Index-Linked,Tier 2,86.2,1,102
+RYAX,Longitude Rail Logistics,Rail Operator,0,KR,South Korea,#NA,Fixed,Tier 3,81.6,1,103
+IWLS,Nova Rail Logistics,Rail Operator,0,CN,China,#NA,Fixed,Tier 1,94.8,1,104
+RSGA,Amber Rail Logistics,Rail Operator,0,MY,Malaysia,#NA,Index-Linked,Tier 2,87.0,1,105
+FVWV,Skyline Railway,Rail Operator,0,FR,France,#NA,Fixed,Tier 2,94.5,1,106
+HYOO,Granite Railway,Rail Operator,0,SG,Singapore,#NA,Fixed,Tier 1,91.5,1,107
+RZGE,Pioneer Rail Freight,Rail Operator,0,NL,Netherlands,#NA,Fixed,Tier 1,94.9,1,108
+BWRY,Longitude Rail Freight,Rail Operator,0,IN,India,#NA,Fixed,Tier 2,95.6,1,109
+CMVS,Mosaic Rail Logistics,Rail Operator,0,IN,India,#NA,Spot,Tier 1,93.2,1,110
+SNDP,Prime Railway,Rail Operator,0,KR,South Korea,#NA,Fixed,Tier 2,94.1,1,111
+YQOS,Falcon Rail Freight,Rail Operator,0,MY,Malaysia,#NA,Spot,Tier 3,83.0,1,112
+HLMY,Blue Wave Railway,Rail Operator,0,FR,France,#NA,Spot,Tier 1,96.9,1,113
+CNEO,Skyline Air Cargo,Airline,0,HK,Hong Kong,#NA,Index-Linked,Tier 2,88.5,1,114
+OXAF,Delta Air Cargo,Airline,0,AU,Australia,#NA,Spot,Tier 3,87.9,1,115
+OLAO,Mosaic Air Cargo,Airline,0,US,United States,#NA,Spot,Tier 2,91.6,1,116
+HPFA,Northstar Air Cargo,Airline,0,SG,Singapore,#NA,Fixed,Tier 2,86.4,1,117
+AZRA,Vertex Airlines Cargo,Airline,0,ZA,South Africa,#NA,Index-Linked,Tier 2,88.7,0,118
+RFTF,Atlas Air Cargo,Airline,0,VN,Vietnam,#NA,Index-Linked,Tier 3,83.6,1,119
+UGQL,Onyx Airlines Cargo,Airline,0,ES,Spain,#NA,Fixed,Tier 2,89.6,1,120
+RASS,Titan Air Cargo,Airline,0,CN,China,#NA,Index-Linked,Tier 2,89.4,1,121
+PVKQ,Latitude Air Cargo,Airline,0,DE,Germany,#NA,Index-Linked,Tier 2,88.1,1,122
+WDMT,Prime Air Cargo,Airline,0,GB,United Kingdom,#NA,Index-Linked,Tier 1,91.6,1,123
+GULB,Blue Wave Airlines Cargo,Airline,0,IN,India,#NA,Index-Linked,Tier 2,88.4,1,124
+EZBF,Union Airlines Cargo,Airline,0,US,United States,#NA,Index-Linked,Tier 3,84.3,1,125
+DRLH,Atlas Airlines Cargo,Airline,0,AU,Australia,#NA,Spot,Tier 1,98.8,1,126
+EEOR,Anchor Airlines Cargo,Airline,0,MX,Mexico,#NA,Spot,Tier 1,95.2,1,127
+HJGB,Ironclad Air Freight,Airline,0,AU,Australia,#NA,Spot,Tier 3,83.2,1,128
+GZUQ,Voyager Airlines Cargo,Airline,0,VN,Vietnam,#NA,Index-Linked,Tier 3,85.7,1,129
+EWBZ,Liberty Air Freight,Airline,0,ZA,South Africa,#NA,Index-Linked,Tier 1,94.5,1,130
+AKOV,Granite Barge Lines,Barge Operator,0,TH,Thailand,#NA,Spot,Tier 2,90.2,1,131
+EABB,Titan River Transport,Barge Operator,0,NL,Netherlands,#NA,Fixed,Tier 3,86.0,1,132
+XCAG,Summit Inland Waterways,Barge Operator,0,CA,Canada,#NA,Fixed,Tier 3,86.7,1,133
+XIHJ,Apex Barge Lines,Barge Operator,0,HK,Hong Kong,#NA,Fixed,Tier 2,88.7,1,134
+UDIP,Liberty River Transport,Barge Operator,0,BR,Brazil,#NA,Fixed,Tier 2,93.4,1,135
+AWAY,Silver Line Inland Waterways,Barge Operator,0,IT,Italy,#NA,Index-Linked,Tier 1,95.0,1,136
+BKZK,Anchor Barge Lines,Barge Operator,0,SG,Singapore,#NA,Index-Linked,Tier 1,92.1,1,137
+ODIC,Anchor River Transport,Barge Operator,0,NL,Netherlands,#NA,Fixed,Tier 2,87.4,0,138
+DMOA,Coastal River Transport,Barge Operator,0,MY,Malaysia,#NA,Fixed,Tier 2,89.8,1,139
+QBIA,Redwood Inland Waterways,Barge Operator,0,HK,Hong Kong,#NA,Fixed,Tier 3,85.4,1,140
+RLYO,Atlas Barge Lines,Barge Operator,0,JP,Japan,#NA,Index-Linked,Tier 2,84.5,1,141
+SWZH,Ridgeline Barge Lines,Barge Operator,0,BR,Brazil,#NA,Fixed,Tier 2,91.9,1,142
+VXAC,Solstice River Transport,Barge Operator,0,IN,India,#NA,Fixed,Tier 3,88.8,1,143
+RKPR,Monsoon River Transport,Barge Operator,0,US,United States,#NA,Fixed,Tier 1,96.2,1,144
+VXSF,Meridian Star River Transport,Barge Operator,0,GB,United Kingdom,#NA,Index-Linked,Tier 1,92.2,1,145
+OMRD,Pioneer Container Trucking,Drayage,0,CN,China,#NA,Fixed,Tier 2,90.7,1,146
+RKFV,Horizon Container Trucking,Drayage,0,TW,Taiwan,#NA,Fixed,Tier 1,93.7,1,147
+SSKZ,Northstar Intermodal Services,Drayage,0,CA,Canada,#NA,Spot,Tier 1,93.1,1,148
+KENV,Anchor Intermodal Services,Drayage,0,IT,Italy,#NA,Spot,Tier 2,89.9,1,149
+FIFI,Onyx Intermodal Services,Drayage,0,SG,Singapore,#NA,Spot,Tier 3,83.5,1,150
+REYB,Trans Container Trucking,Drayage,0,ES,Spain,#NA,Index-Linked,Tier 3,82.4,1,151
+UUWY,Solstice Intermodal Services,Drayage,0,KR,South Korea,#NA,Fixed,Tier 2,91.8,1,152
+DGUH,Apex Container Trucking,Drayage,0,AE,United Arab Emirates,#NA,Fixed,Tier 2,91.1,1,153
+ADDD,Equator Intermodal Services,Drayage,0,IN,India,#NA,Fixed,Tier 1,95.7,1,154
+XPQR,Blue Wave Container Trucking,Drayage,0,AE,United Arab Emirates,#NA,Spot,Tier 1,92.2,1,155
+XQTP,Coastal Drayage Services,Drayage,0,MY,Malaysia,#NA,Fixed,Tier 3,86.2,1,156
+DNBA,Apex Drayage Services,Drayage,0,TH,Thailand,#NA,Spot,Tier 2,89.1,1,157
+EMYT,Longitude Intermodal Services,Drayage,0,ZA,South Africa,#NA,Fixed,Tier 2,88.3,1,158
+LAOL,Harbor Container Trucking,Drayage,0,AE,United Arab Emirates,#NA,Fixed,Tier 3,84.7,1,159
+LEKQ,Orion Drayage Services,Drayage,0,TH,Thailand,#NA,Fixed,Tier 2,93.2,1,160
+YLGG,Monsoon Container Trucking,Drayage,0,FR,France,#NA,Fixed,Tier 2,94.5,1,161
+FVCA,Cascade Intermodal Services,Drayage,0,ZA,South Africa,#NA,Spot,Tier 2,91.2,1,162
+YNJY,Voyager Container Trucking,Drayage,0,AU,Australia,#NA,Spot,Tier 3,84.1,1,163
+SXRL,Titan Drayage Services,Drayage,0,NL,Netherlands,#NA,Spot,Tier 3,88.4,1,164
+AJVV,Golden Gate Drayage Services,Drayage,0,AU,Australia,#NA,Fixed,Tier 3,84.6,1,165
+NLTT,Falcon Drayage Services,Drayage,0,ES,Spain,#NA,Fixed,Tier 2,94.5,1,166
+UPLN,Vertex Container Trucking,Drayage,0,CA,Canada,#NA,Spot,Tier 2,93.4,1,167
+SUKE,Vertex Intermodal Services,Drayage,0,IN,India,#NA,Spot,Tier 2,93.4,1,168
+BSOM,Harbor Drayage Services,Drayage,0,SG,Singapore,#NA,Spot,Tier 2,86.9,1,169
+OBYD,Delta Container Trucking,Drayage,0,TH,Thailand,#NA,Spot,Tier 2,89.5,1,170
+ENFC,Crown Container Trucking,Drayage,0,HK,Hong Kong,#NA,Spot,Tier 3,83.2,1,171
+YAAH,Orion Intermodal Services,Drayage,0,NL,Netherlands,#NA,Spot,Tier 2,91.9,1,172
+DPNY,Amber Container Trucking,Drayage,0,AE,United Arab Emirates,#NA,Index-Linked,Tier 2,97.0,1,173
+YBZU,Voyager Intermodal Services,Drayage,0,DE,Germany,#NA,Fixed,Tier 3,84.3,1,174
+WOSD,Northstar Drayage Services,Drayage,0,NL,Netherlands,#NA,Spot,Tier 3,85.5,1,175
+PVUQ,Silver Line Intermodal Services,Drayage,0,IN,India,#NA,Fixed,Tier 2,93.7,1,176
+FCKX,Nova Intermodal Services,Drayage,0,CA,Canada,#NA,Spot,Tier 1,96.6,1,177
+RPVS,Pioneer Intermodal Services,Drayage,0,US,United States,#NA,Spot,Tier 3,82.8,1,178
+WIAP,Golden Gate Intermodal Services,Drayage,0,ES,Spain,#NA,Spot,Tier 2,87.2,1,179

@@ -1,0 +1,421 @@
+LocationCode,LocationName,LocationType,CountryCode,CountryName,Region,TradeRegion,SubRegion,Latitude,Longitude,TimezoneOffset,IsGateway,IsTranshipmentHub,AnnualTeuCapacityM,BerthCount,CraneCount,IataCode,IsBondedFacility,CustomsRegime,LocationKey
+#NA,Unknown,#NA,#NA,Unknown,#NA,#NA,#NA,0.0,0.0,0.0,0,0,0.0,0,0,#NA,0,#NA,-1
+INNSA,Nhava Sheva (JNPT),Seaport,IN,India,South Asia,Asia,Indian Subcontinent,18.95,72.95,5.5,1,0,5.6,20,40,#NA,0,Domestic,1
+INMAA,Chennai Port,Seaport,IN,India,South Asia,Asia,Indian Subcontinent,13.1,80.29,5.5,1,0,1.6,24,20,#NA,0,Domestic,2
+INMUN,Mundra Port,Seaport,IN,India,South Asia,Asia,Indian Subcontinent,22.84,69.72,5.5,1,0,7.5,30,45,#NA,0,Domestic,3
+INCOK,Cochin Port,Seaport,IN,India,South Asia,Asia,Indian Subcontinent,9.97,76.27,5.5,0,0,1.0,12,10,#NA,0,Domestic,4
+INPAV,Pipavav Port,Seaport,IN,India,South Asia,Asia,Indian Subcontinent,20.92,71.55,5.5,0,0,1.35,8,8,#NA,0,Domestic,5
+CNSHA,Port of Shanghai,Seaport,CN,China,East Asia,Asia,Greater China,31.23,121.47,8.0,1,1,47.0,90,180,#NA,0,Domestic,6
+CNNGB,Port of Ningbo-Zhoushan,Seaport,CN,China,East Asia,Asia,Greater China,29.87,121.55,8.0,1,0,33.5,70,140,#NA,0,Domestic,7
+CNYTN,Yantian Port (Shenzhen),Seaport,CN,China,East Asia,Asia,Greater China,22.58,114.27,8.0,1,0,14.5,26,60,#NA,0,Domestic,8
+CNTAO,Port of Qingdao,Seaport,CN,China,East Asia,Asia,Greater China,36.07,120.38,8.0,1,0,24.0,45,90,#NA,0,Domestic,9
+HKHKG,Port of Hong Kong,Seaport,HK,Hong Kong,East Asia,Asia,Greater China,22.3,114.17,8.0,1,1,17.0,24,60,#NA,0,Domestic,10
+SGSIN,Port of Singapore,Seaport,SG,Singapore,SE Asia,Asia,Maritime SE Asia,1.29,103.85,8.0,1,1,37.0,67,150,#NA,0,Domestic,11
+MYPKG,Port Klang,Seaport,MY,Malaysia,SE Asia,Asia,Maritime SE Asia,3.0,101.39,8.0,1,1,13.7,32,60,#NA,0,Domestic,12
+MYTPP,Port of Tanjung Pelepas,Seaport,MY,Malaysia,SE Asia,Asia,Maritime SE Asia,1.36,103.55,8.0,1,1,10.5,20,50,#NA,0,Domestic,13
+VNSGN,Port of Ho Chi Minh City,Seaport,VN,Vietnam,SE Asia,Asia,Mainland SE Asia,10.78,106.7,7.0,1,0,6.8,22,30,#NA,0,Domestic,14
+THLCH,Laem Chabang Port,Seaport,TH,Thailand,SE Asia,Asia,Mainland SE Asia,13.08,100.88,7.0,1,0,8.4,18,35,#NA,0,Domestic,15
+IDJKT,Tanjung Priok Port,Seaport,ID,Indonesia,SE Asia,Asia,Maritime SE Asia,-6.1,106.88,7.0,1,0,7.6,20,35,#NA,0,Domestic,16
+KRPUS,Port of Busan,Seaport,KR,South Korea,East Asia,Asia,Korean Peninsula,35.1,129.04,9.0,1,1,22.0,40,80,#NA,0,Domestic,17
+JPYOK,Port of Yokohama,Seaport,JP,Japan,East Asia,Asia,Japan,35.44,139.64,9.0,1,0,3.0,16,25,#NA,0,Domestic,18
+JPUKB,Port of Kobe,Seaport,JP,Japan,East Asia,Asia,Japan,34.68,135.2,9.0,0,0,2.9,14,22,#NA,0,Domestic,19
+TWKHH,Port of Kaohsiung,Seaport,TW,Taiwan,East Asia,Asia,Greater China,22.61,120.28,8.0,1,0,10.3,24,40,#NA,0,Domestic,20
+NLRTM,Port of Rotterdam,Seaport,NL,Netherlands,N Europe,Europe,Benelux,51.95,4.14,1.0,1,1,15.3,40,70,#NA,0,Domestic,21
+DEHAM,Port of Hamburg,Seaport,DE,Germany,N Europe,Europe,Central Europe,53.54,9.97,1.0,1,0,8.7,30,55,#NA,0,Domestic,22
+BEANR,Port of Antwerp-Bruges,Seaport,BE,Belgium,N Europe,Europe,Benelux,51.26,4.4,1.0,1,1,12.0,28,50,#NA,0,Domestic,23
+GBFXT,Port of Felixstowe,Seaport,GB,United Kingdom,N Europe,Europe,British Isles,51.96,1.35,0.0,1,0,4.0,9,20,#NA,0,Domestic,24
+GBLGP,London Gateway,Seaport,GB,United Kingdom,N Europe,Europe,British Isles,51.51,0.45,0.0,0,0,3.5,6,14,#NA,0,Domestic,25
+FRLEH,Port of Le Havre,Seaport,FR,France,N Europe,Europe,Western Europe,49.49,0.11,1.0,1,0,2.9,14,24,#NA,0,Domestic,26
+ESVLC,Port of Valencia,Seaport,ES,Spain,Mediterranean,Europe,Iberia,39.44,-0.32,1.0,1,1,5.4,20,34,#NA,0,Domestic,27
+ESALG,Port of Algeciras,Seaport,ES,Spain,Mediterranean,Europe,Iberia,36.13,-5.44,1.0,1,1,5.1,16,26,#NA,0,Domestic,28
+ITGOA,Port of Genoa,Seaport,IT,Italy,Mediterranean,Europe,Southern Europe,44.41,8.93,1.0,1,0,2.6,14,20,#NA,0,Domestic,29
+GRPIR,Port of Piraeus,Seaport,GR,Greece,Mediterranean,Europe,Southern Europe,37.94,23.65,2.0,1,1,5.6,16,24,#NA,0,Domestic,30
+TRAMB,Port of Ambarli,Seaport,TR,Turkey,Mediterranean,Europe,Southern Europe,40.96,28.68,3.0,1,0,3.4,12,18,#NA,0,Domestic,31
+EGPSD,Port Said,Seaport,EG,Egypt,Middle East,MEA,North Africa,31.26,32.28,2.0,1,1,5.0,14,20,#NA,0,Domestic,32
+EGSUZ,Port of Suez,Seaport,EG,Egypt,Middle East,MEA,North Africa,29.97,32.55,2.0,0,0,1.2,8,10,#NA,0,Domestic,33
+AEJEA,Jebel Ali Port,Seaport,AE,United Arab Emirates,Middle East,MEA,Gulf,25.02,55.06,4.0,1,1,15.0,26,60,#NA,0,Domestic,34
+AEKLF,Khalifa Port,Seaport,AE,United Arab Emirates,Middle East,MEA,Gulf,24.81,54.65,4.0,0,0,2.5,8,14,#NA,0,Domestic,35
+SAJED,Jeddah Islamic Port,Seaport,SA,Saudi Arabia,Middle East,MEA,Gulf,21.48,39.17,3.0,1,0,7.2,20,32,#NA,0,Domestic,36
+OMSLL,Port of Salalah,Seaport,OM,Oman,Middle East,MEA,Gulf,16.94,54.01,4.0,1,1,4.5,14,20,#NA,0,Domestic,37
+USLAX,Port of Los Angeles,Seaport,US,United States,N America West,Americas,Pacific Coast,33.74,-118.26,-8.0,1,0,10.7,27,40,#NA,0,Domestic,38
+USLGB,  port of long beach  	,Seaport,US,United States,N America West,Americas,Pacific Coast,33.75,-118.19,-8.0,1,0,9.4,22,36,#NA,0,Domestic,39
+USOAK,Port of Oakland,Seaport,US,United States,N America West,Americas,Pacific Coast,37.8,-122.28,-8.0,0,0,2.4,12,18,#NA,0,Domestic,40
+USSEA,Port of Seattle,Seaport,US,United States,N America West,Americas,Pacific Coast,47.58,-122.35,-8.0,0,0,2.0,10,14,#NA,0,Domestic,41
+USNYC,  port of new york/new jersey  	,Seaport,US,United States,N America East,Americas,Atlantic Coast,40.67,-74.13,-5.0,1,0,8.4,24,35,#NA,0,Domestic,42
+USSAV,Port of Savannah,Seaport,US,United States,N America East,Americas,Atlantic Coast,32.08,-81.1,-5.0,1,0,5.6,18,28,#NA,0,Domestic,43
+USHOU,Port of Houston,Seaport,US,United States,N America East,Americas,Gulf Coast,29.73,-95.27,-6.0,0,0,3.4,16,20,#NA,0,Domestic,44
+USCHS,Port of Charleston,Seaport,US,United States,N America East,Americas,Atlantic Coast,32.79,-79.92,-5.0,0,0,2.7,10,16,#NA,0,Domestic,45
+CAVAN,Port of Vancouver,Seaport,CA,Canada,N America West,Americas,Pacific Coast,49.29,-123.11,-8.0,1,0,3.5,14,20,#NA,0,Domestic,46
+CAMTR,Port of Montreal,Seaport,CA,Canada,N America East,Americas,Atlantic Coast,45.55,-73.55,-5.0,0,0,1.7,10,14,#NA,0,Domestic,47
+MXZLO,Port of Manzanillo,Seaport,MX,Mexico,LatAm West,Americas,North America,19.06,-104.32,-6.0,1,0,3.5,12,18,#NA,0,Domestic,48
+PABLB,Port of Balboa,Seaport,PA,Panama,LatAm West,Americas,Central America,8.95,-79.57,-5.0,1,1,5.0,10,20,#NA,0,Domestic,49
+BRSSZ,Port of Santos,Seaport,BR,Brazil,LatAm East,Americas,South America,-23.96,-46.33,-3.0,1,0,4.5,20,24,#NA,0,Domestic,50
+BRRIG,Port of Rio Grande,Seaport,BR,Brazil,LatAm East,Americas,South America,-32.03,-52.1,-3.0,0,0,1.1,8,10,#NA,0,Domestic,51
+CLSAI,Port of San Antonio,Seaport,CL,Chile,LatAm West,Americas,South America,-33.6,-71.62,-4.0,1,0,1.8,10,14,#NA,0,Domestic,52
+PECLL,Port of Callao,Seaport,PE,Peru,LatAm West,Americas,South America,-12.05,-77.15,-5.0,1,0,2.2,12,16,#NA,0,Domestic,53
+ZADUR,Port of Durban,Seaport,ZA,South Africa,Africa,MEA,Southern Africa,-29.87,31.03,2.0,1,0,2.9,16,20,#NA,0,Domestic,54
+MAPTM,Tanger Med Port,Seaport,MA,Morocco,Africa,MEA,North Africa,35.88,-5.51,0.0,1,1,9.0,18,30,#NA,0,Domestic,55
+AUSYD,Port Botany (Sydney),Seaport,AU,Australia,Oceania,Oceania,Australia,-33.97,151.23,10.0,1,0,2.8,10,16,#NA,0,Domestic,56
+AUMEL,Port of Melbourne,Seaport,AU,Australia,Oceania,Oceania,Australia,-37.83,144.93,10.0,1,0,3.1,12,18,#NA,0,Domestic,57
+NZAKL,Port of Auckland,Seaport,NZ,New Zealand,Oceania,Oceania,New Zealand,-36.84,174.77,12.0,0,0,1.0,6,8,#NA,0,Domestic,58
+TWTAI,Port of Taichung,Seaport,TW,Taiwan,East Asia,Asia,Greater China,22.8433,120.8715,8.0,0,0,0.65,7,20,#NA,0,Domestic,59
+FRMAR,Port of Marseille,Seaport,FR,France,N Europe,Europe,Western Europe,45.4986,-0.253,1.0,1,0,3.24,8,14,#NA,0,Domestic,60
+KRGWA,Port of Gwangyang,Seaport,KR,"Korea, Republic of",East Asia,Asia,Korean Peninsula,40.5914,134.2015,9.0,0,0,2.02,8,22,#NA,0,Domestic,61
+INHYD,  pORT OF hYDERABAD  	,Seaport,IN,India,South Asia,Asia,Indian Subcontinent,17.1837,75.6934,5.5,0,0,2.07,8,22,#NA,0,Domestic,62
+OMMUS,Port of Muscat,Seaport,OM,Oman,Middle East,MEA,Gulf,21.8206,53.7095,4.0,0,0,0.76,7,7,#NA,0,Domestic,63
+THBAN,Port of Bangkok,Seaport,TH,Thailand,SE Asia,Asia,Mainland SE Asia,11.6695,111.199,7.0,1,0,1.36,4,11,#NA,0,Domestic,64
+GRTHE,Port of Thessaloniki,Seaport,GR,Greece,Mediterranean,Europe,Southern Europe,39.2513,28.4305,2.0,0,0,0.46,6,21,#NA,0,Domestic,65
+AESHA,Port of Sharjah,Seaport,AE,United Arab Emirates,Middle East,MEA,Gulf,20.4363,49.0324,4.0,0,0,3.03,6,23,#NA,0,Domestic,66
+CNSHE,Port of Shenzhen,Seaport,CN,China,East Asia,Asia,Greater China,39.3764,105.0104,8.0,0,0,2.62,9,20,#NA,0,Domestic,67
+OMSOH,Port of Sohar,Seaport,OM,Oman,Middle East,MEA,Gulf,19.9229,59.0581,4.0,0,0,1.43,6,18,#NA,0,Domestic,68
+EGALE,Port of Alexandria,Seaport,EG,Egypt,Middle East,MEA,North Africa,27.1608,23.1195,2.0,0,0,1.99,13,11,#NA,1,Free Trade Zone,69
+VNDAN,Port of Da Nang,Seaport,VN,Vietnam,SE Asia,Asia,Mainland SE Asia,13.0324,110.1843,7.0,0,0,2.52,11,18,#NA,0,Domestic,70
+SARIY,Port of Riyadh,Seaport,SA,Saudi Arabia,Middle East,MEA,Gulf,24.1024,49.7906,3.0,0,0,0.95,15,15,#NA,1,Bonded,71
+AEABU,Port of Abu Dhabi,Seaport,AE,United Arab Emirates,Middle East,MEA,Gulf,27.1516,51.3723,4.0,0,0,0.31,8,19,#NA,0,Domestic,72
+USMIA,Port of Miami,Seaport,US,United States,N America East,Americas,Atlantic Coast,38.1925,-103.3282,-5.0,0,0,3.0,13,9,#NA,0,Domestic,73
+CNSZN,Port of Shenzhen,Seaport,CN,China,East Asia,Asia,Greater China,30.7447,111.7639,8.0,0,0,0.37,10,12,#NA,0,Domestic,74
+ESBIL,Port of Bilbao,Seaport,ES,Spain,Mediterranean,Europe,Iberia,36.9338,3.4375,1.0,0,0,3.16,15,6,#NA,0,Domestic,75
+MAAGA,Port of Agadir,Seaport,MA,Morocco,Africa,MEA,North Africa,30.7111,-4.6112,0.0,1,0,1.22,9,23,#NA,0,Domestic,76
+PACOL,Port of Colon,Seaport,PA,Panama,LatAm West,Americas,Central America,10.3769,-79.1124,-5.0,0,0,0.64,4,18,#NA,0,Domestic,77
+BEZEE,Port of Zeebrugge,Seaport,BE,Belgium,N Europe,Europe,Benelux,51.4478,5.2095,1.0,0,0,2.59,5,17,#NA,0,Domestic,78
+INKOL,Port of Kolkata,Seaport,IN,India,South Asia,Asia,Indian Subcontinent,25.0693,79.193,5.5,0,0,1.71,10,16,#NA,0,Domestic,79
+FRMEE,Port of Marseille,Seaport,FR,France,N Europe,Europe,Western Europe,48.5982,2.1537,1.0,0,0,2.11,4,10,#NA,0,Domestic,80
+MAADR,Port of Agadir,Seaport,MA,Morocco,Africa,MEA,North Africa,28.3101,-8.3863,0.0,0,0,1.39,11,14,#NA,0,Domestic,81
+ZAPOR,Port of Port Elizabeth,Seaport,ZA,South Africa,Africa,MEA,Southern Africa,-36.6271,24.5152,2.0,0,0,2.7,4,11,#NA,0,Domestic,82
+CACAL,Port of Calgary,Seaport,CA,Canada,N America West,Americas,Inland,61.0198,-117.8496,-8.0,0,0,2.07,9,9,#NA,0,Domestic,83
+EGANA,Port of Alexandria,Seaport,EG,Egypt,Middle East,MEA,North Africa,29.9149,39.6732,2.0,0,0,1.79,11,7,#NA,0,Domestic,84
+AESRH,Port of Sharjah,Seaport,AE,United Arab Emirates,Middle East,MEA,Gulf,26.01,57.9861,4.0,1,0,2.12,11,23,#NA,0,Domestic,85
+THBGK,Port of Bangkok,Seaport,TH,Thailand,SE Asia,Asia,Mainland SE Asia,12.6067,98.4854,7.0,0,0,3.33,14,21,#NA,0,Domestic,86
+ITLAS,Port of La Spezia,Seaport,IT,Italy,Mediterranean,Europe,Southern Europe,39.6608,20.5117,1.0,0,0,1.89,12,16,#NA,0,Domestic,87
+SGJUR,Port of Jurong,Seaport,SG,Singapore,SE Asia,Asia,Maritime SE Asia,2.2491,102.1095,8.0,0,0,1.83,14,16,#NA,0,Domestic,88
+OMSHR,Port of Sohar,Seaport,OM,Oman,Middle East,MEA,Gulf,21.5347,55.2534,4.0,0,0,0.32,13,10,#NA,0,Domestic,89
+ESBBO,Port of Bilbao,Seaport,ES,Spain,Mediterranean,Europe,Iberia,41.7044,-3.9356,1.0,0,0,0.91,11,20,#NA,1,Free Trade Zone,90
+MACAS,  port of casablanca  	,Seaport,MA,Morocco,Africa,MEA,North Africa,30.7581,-11.5448,0.0,0,0,0.9,12,21,#NA,0,Domestic,91
+ESBLA,Port of Bilbao,Seaport,ES,Spain,Mediterranean,Europe,Iberia,38.4096,-2.7763,1.0,0,0,1.15,8,18,#NA,0,Domestic,92
+THBNK,Port of Bangkok,Seaport,TH,Thailand,SE Asia,Asia,Mainland SE Asia,15.4712,94.7354,7.0,1,0,2.7,4,15,#NA,1,Bonded,93
+ZACAP,Port of Cape Town,Seaport,ZA,South Africa,Africa,MEA,Southern Africa,-27.3231,26.0747,2.0,0,0,0.46,7,6,#NA,0,Domestic,94
+ITLEA,Port of La Spezia,Seaport,IT,Italy,Mediterranean,Europe,Southern Europe,40.1017,1.6436,1.0,0,0,1.2,8,16,#NA,0,Domestic,95
+GBLIV,Port of Liverpool,Seaport,GB,United Kingdom,N Europe,Europe,British Isles,48.7175,-0.8586,0.0,0,0,2.99,11,11,#NA,0,Domestic,96
+TWTHG,Port of Taichung,Seaport,TW,Taiwan,East Asia,Asia,Greater China,23.9172,123.7907,8.0,1,0,3.03,11,6,#NA,0,Domestic,97
+BRRIO,Rio de Janeiro Inland Container Depot,Inland Depot,BR,Brazil,LatAm East,Americas,South America,-10.2252,-55.5704,-3.0,0,0,0.0,0,0,#NA,1,Free Trade Zone,98
+BEZRE,Zeebrugge Inland Container Depot,Inland Depot,BE,Belgium,N Europe,Europe,Benelux,48.036,6.5514,1.0,0,0,0.0,0,0,#NA,1,Free Trade Zone,99
+KRGGG,Gwangyang Inland Container Depot,Inland Depot,KR,"Korea, Republic of",East Asia,Asia,Korean Peninsula,36.2698,120.6121,9.0,0,0,0.0,0,0,#NA,0,Domestic,100
+SGTUA,Tuas Inland Container Depot,Inland Depot,SG,Singapore,SE Asia,Asia,Maritime SE Asia,-1.755,104.6836,8.0,0,0,0.0,0,0,#NA,1,Bonded,101
+GBTIL,Tilbury Inland Container Depot,Inland Depot,GB,United Kingdom,N Europe,Europe,British Isles,48.1384,5.5902,0.0,0,0,0.0,0,0,#NA,0,Domestic,102
+MAAAI,Agadir Inland Container Depot,Inland Depot,MA,Morocco,Africa,MEA,North Africa,29.7346,-9.2393,0.0,0,0,0.0,0,0,#NA,0,Domestic,103
+MXTIJ,Tijuana Inland Container Depot,Inland Depot,MX,Mexico,LatAm West,Americas,North America,25.6208,-97.9248,-6.0,0,0,0.0,0,0,#NA,0,Domestic,104
+DEDUI,Duisburg Inland Container Depot,Inland Depot,DE,Germany,N Europe,Europe,Central Europe,46.8629,14.0745,1.0,0,0,0.0,0,0,#NA,0,Domestic,105
+JPTOK,Tokyo Inland Container Depot,Inland Depot,JP,Japan,East Asia,Asia,Japan,36.1018,138.172,9.0,0,0,0.0,0,0,#NA,1,Bonded,106
+GRTLI,Thessaloniki Inland Container Depot,Inland Depot,GR,Greece,Mediterranean,Europe,Southern Europe,40.1011,26.8044,2.0,0,0,0.0,0,0,#NA,0,Domestic,107
+VNDAG,Da Nang Inland Container Depot,Inland Depot,VN,Vietnam,SE Asia,Asia,Mainland SE Asia,10.1676,108.2283,7.0,0,0,0.0,0,0,#NA,1,Free Trade Zone,108
+SADAM,Dammam Inland Container Depot,Inland Depot,SA,Saudi Arabia,Middle East,MEA,Gulf,26.304,53.0865,3.0,0,0,0.0,0,0,#NA,0,Domestic,109
+KRGAG,Gwangyang Inland Container Depot,Inland Depot,KR,"Korea, Republic of",East Asia,Asia,Korean Peninsula,35.549,126.8026,9.0,0,0,0.0,0,0,#NA,0,Domestic,110
+OMMCT,Muscat Inland Container Depot,Inland Depot,OM,Oman,Middle East,MEA,Gulf,20.1009,57.4105,4.0,0,0,0.0,0,0,#NA,0,Domestic,111
+GRTES,Thessaloniki Inland Container Depot,Inland Depot,GR,Greece,Mediterranean,Europe,Southern Europe,44.8422,13.5552,2.0,0,0,0.0,0,0,#NA,0,Domestic,112
+THSON,Songkhla Inland Container Depot,Inland Depot,TH,Thailand,SE Asia,Asia,Mainland SE Asia,7.5607,99.3718,7.0,0,0,0.0,0,0,#NA,1,Bonded,113
+GRRMC,Thessaloniki Inland Container Depot,Inland Depot,GR,Greece,Mediterranean,Europe,Southern Europe,35.5711,12.9034,2.0,0,0,0.0,0,0,#NA,1,Free Trade Zone,114
+NLAMS,Amsterdam Inland Container Depot,Inland Depot,NL,Netherlands,N Europe,Europe,Benelux,52.6891,1.8378,1.0,0,0,0.0,0,0,#NA,1,Bonded,115
+FRMRE,Marseille Inland Container Depot,Inland Depot,FR,France,N Europe,Europe,Western Europe,50.568,11.3753,1.0,0,0,0.0,0,0,#NA,0,Domestic,116
+ESXCH,Bilbao Inland Container Depot,Inland Depot,ES,Spain,Mediterranean,Europe,Iberia,46.7273,-4.1264,1.0,0,0,0.0,0,0,#NA,0,Domestic,117
+JPTKO,Tokyo Inland Container Depot,Inland Depot,JP,Japan,East Asia,Asia,Japan,36.3259,128.1004,9.0,0,0,0.0,0,0,#NA,1,Bonded,118
+CNXIA,Xiamen Inland Container Depot,Inland Depot,CN,China,East Asia,Asia,Greater China,31.4431,105.0619,8.0,0,0,0.0,0,0,#NA,1,Bonded,119
+BEZER,Zeebrugge Inland Container Depot,Inland Depot,BE,Belgium,N Europe,Europe,Benelux,54.8281,6.1301,1.0,0,0,0.0,0,0,#NA,1,Free Trade Zone,120
+BEGHE,Ghent Inland Container Depot,Inland Depot,BE,Belgium,N Europe,Europe,Benelux,52.5898,5.9767,1.0,0,0,0.0,0,0,#NA,0,Domestic,121
+TWTIH,  tAICHUNG iNLAND cONTAINER dEPOT  	,Inland Depot,TW,Taiwan,East Asia,Asia,Greater China,23.6908,107.2766,8.0,0,0,0.0,0,0,#NA,0,Domestic,122
+SGTAS,Tuas Inland Container Depot,Inland Depot,SG,Singapore,SE Asia,Asia,Maritime SE Asia,-0.4459,104.8029,8.0,0,0,0.0,0,0,#NA,0,Domestic,123
+CLSAN,Santiago Inland Container Depot,Inland Depot,CL,Chile,LatAm West,Americas,South America,-38.5062,-76.4035,-4.0,0,0,0.0,0,0,#NA,1,Bonded,124
+NZTAU,Tauranga Inland Container Depot,Inland Depot,NZ,New Zealand,Oceania,Oceania,New Zealand,-41.2634,177.5955,12.0,0,0,0.0,0,0,#NA,1,Bonded,125
+FRDUN,Dunkirk Inland Container Depot,Inland Depot,FR,France,N Europe,Europe,Western Europe,42.1597,5.9795,1.0,0,0,0.0,0,0,#NA,1,Bonded,126
+BEGET,Ghent Inland Container Depot,Inland Depot,BE,Belgium,N Europe,Europe,Benelux,51.2128,11.7414,1.0,0,0,0.0,0,0,#NA,0,Domestic,127
+NZTAA,  TAURANGA INLAND CONTAINER DEPOT  	,Inland Depot,NZ,New Zealand,Oceania,Oceania,New Zealand,-40.0146,179.4323,12.0,0,0,0.0,0,0,#NA,1,Free Trade Zone,128
+CLSIO,Santiago Inland Container Depot,Inland Depot,CL,Chile,LatAm West,Americas,South America,-34.1651,-73.4886,-4.0,0,0,0.0,0,0,#NA,1,Free Trade Zone,129
+SGTAX,Tuas Inland Container Depot,Inland Depot,SG,Singapore,SE Asia,Asia,Maritime SE Asia,-2.2033,111.4023,8.0,0,0,0.0,0,0,#NA,0,Domestic,130
+INHRD,Hyderabad Inland Container Depot,Inland Depot,IN,India,South Asia,Asia,Indian Subcontinent,27.1228,76.5647,5.5,0,0,0.0,0,0,#NA,0,Domestic,131
+NLAEM,  AMSTERDAM INLAND CONTAINER DEPOT  	,Inland Depot,NL,Netherlands,N Europe,Europe,Benelux,57.4345,4.4736,1.0,0,0,0.0,0,0,#NA,0,Domestic,132
+VNHAI,Hai Phong Inland Container Depot,Inland Depot,VN,Vietnam,SE Asia,Asia,Mainland SE Asia,17.6331,110.9683,7.0,0,0,0.0,0,0,#NA,1,Bonded,133
+HKKWA,Kwai Chung Inland Container Depot,Inland Depot,HK,Hong Kong,East Asia,Asia,Greater China,22.1999,112.0335,8.0,0,0,0.0,0,0,#NA,0,Domestic,134
+JPDFB,Tokyo Inland Container Depot,Inland Depot,JP,Japan,East Asia,Asia,Japan,40.4401,136.6257,9.0,0,0,0.0,0,0,#NA,1,Free Trade Zone,135
+AEDUB,Dubai Inland Container Depot,Inland Depot,AE,United Arab Emirates,Middle East,MEA,Gulf,26.8699,49.5214,4.0,0,0,0.0,0,0,#NA,0,Domestic,136
+THSKA,Songkhla Inland Container Depot,Inland Depot,TH,Thailand,SE Asia,Asia,Mainland SE Asia,13.0114,103.5792,7.0,0,0,0.0,0,0,#NA,1,Bonded,137
+DEDBG,Duisburg Inland Container Depot,Inland Depot,DE,Germany,N Europe,Europe,Central Europe,45.6002,6.0765,1.0,0,0,0.0,0,0,#NA,0,Domestic,138
+BEMQI,Zeebrugge Inland Container Depot,Inland Depot,BE,Belgium,N Europe,Europe,Benelux,48.8267,2.8691,1.0,0,0,0.0,0,0,#NA,0,Domestic,139
+AUADE,Adelaide Inland Container Depot,Inland Depot,AU,Australia,Oceania,Oceania,Australia,-27.1832,132.3033,10.0,0,0,0.0,0,0,#NA,0,Domestic,140
+ZAPIH,Port Elizabeth Inland Container Depot,Inland Depot,ZA,South Africa,Africa,MEA,Southern Africa,-32.2803,19.1382,2.0,0,0,0.0,0,0,#NA,1,Free Trade Zone,141
+CAHAL,  halifax inland container depot  	,Inland Depot,CA,Canada,N America East,Americas,Atlantic Coast,51.8036,-100.054,-5.0,0,0,0.0,0,0,#NA,0,Domestic,142
+SGJOG,Jurong Inland Container Depot,Inland Depot,SG,Singapore,SE Asia,Asia,Maritime SE Asia,5.5925,100.8722,8.0,0,0,0.0,0,0,#NA,1,Bonded,143
+INKKA,Kolkata Inland Container Depot,Inland Depot,IN,India,South Asia,Asia,Indian Subcontinent,21.4458,79.5325,5.5,0,0,0.0,0,0,#NA,0,Domestic,144
+CNDAL,Dalian Inland Container Depot,Inland Depot,CN,China,East Asia,Asia,Greater China,33.3703,114.043,8.0,0,0,0.0,0,0,#NA,1,Bonded,145
+MYKUA,Kuantan Inland Container Depot,Inland Depot,MY,Malaysia,SE Asia,Asia,Maritime SE Asia,7.9967,95.0199,8.0,0,0,0.0,0,0,#NA,0,Domestic,146
+NLASE,Amsterdam Inland Container Depot,Inland Depot,NL,Netherlands,N Europe,Europe,Benelux,53.136,0.8768,1.0,0,0,0.0,0,0,#NA,0,Domestic,147
+MACLA,Casablanca Inland Container Depot,Inland Depot,MA,Morocco,Africa,MEA,North Africa,34.1479,-14.9464,0.0,0,0,0.0,0,0,#NA,1,Bonded,148
+MYPEN,Penang Inland Container Depot,Inland Depot,MY,Malaysia,SE Asia,Asia,Maritime SE Asia,1.3058,101.8847,8.0,0,0,0.0,0,0,#NA,1,Bonded,149
+OMAZQ,Sohar Inland Container Depot,Inland Depot,OM,Oman,Middle East,MEA,Gulf,18.1944,64.0358,4.0,0,0,0.0,0,0,#NA,0,Domestic,150
+USSAN,San Diego Inland Container Depot,Inland Depot,US,United States,N America West,Americas,Pacific Coast,43.5106,-90.6855,-8.0,0,0,0.0,0,0,#NA,0,Domestic,151
+GRMUO,Thessaloniki Inland Container Depot,Inland Depot,GR,Greece,Mediterranean,Europe,Southern Europe,37.1336,19.5489,2.0,0,0,0.0,0,0,#NA,0,Domestic,152
+IDSEM,Semarang Inland Container Depot,Inland Depot,ID,Indonesia,SE Asia,Asia,Maritime SE Asia,-1.6864,113.0932,7.0,0,0,0.0,0,0,#NA,1,Bonded,153
+NZWEL,Wellington Inland Container Depot,Inland Depot,NZ,New Zealand,Oceania,Oceania,New Zealand,-37.3053,173.6364,12.0,0,0,0.0,0,0,#NA,0,Domestic,154
+OMMSA,Muscat Inland Container Depot,Inland Depot,OM,Oman,Middle East,MEA,Gulf,18.7101,60.6705,4.0,0,0,0.0,0,0,#NA,1,Free Trade Zone,155
+CLVAL,Valparaiso Inland Container Depot,Inland Depot,CL,Chile,LatAm West,Americas,South America,-36.2775,-73.5439,-4.0,0,0,0.0,0,0,#NA,1,Bonded,156
+EGAEA,Alexandria Inland Container Depot,Inland Depot,EG,Egypt,Middle East,MEA,North Africa,28.0277,26.1311,2.0,0,0,0.0,0,0,#NA,1,Bonded,157
+CNXMN,Xiamen Inland Container Depot,Inland Depot,CN,China,East Asia,Asia,Greater China,29.7665,107.3268,8.0,0,0,0.0,0,0,#NA,0,Domestic,158
+BRSAO,Sao Paulo Inland Container Depot,Inland Depot,BR,Brazil,LatAm East,Americas,South America,-14.2475,-51.4285,-3.0,0,0,0.0,0,0,#NA,0,Domestic,159
+DEBRE,Bremerhaven Inland Container Depot,Inland Depot,DE,Germany,N Europe,Europe,Central Europe,43.0458,3.373,1.0,0,0,0.0,0,0,#NA,0,Domestic,160
+CNTIA,Tianjin Inland Container Depot,Inland Depot,CN,China,East Asia,Asia,Greater China,37.0925,103.8616,8.0,0,0,0.0,0,0,#NA,0,Domestic,161
+CATOR,Toronto Inland Container Depot,Inland Depot,CA,Canada,N America East,Americas,Inland,57.2659,-101.1234,-5.0,0,0,0.0,0,0,#NA,0,Domestic,162
+NZWNN,  WELLINGTON INLAND CONTAINER DEPOT  	,Inland Depot,NZ,New Zealand,Oceania,Oceania,New Zealand,-36.5295,175.3123,12.0,0,0,0.0,0,0,#NA,0,Domestic,163
+ESFTF,Bilbao Inland Container Depot,Inland Depot,ES,Spain,Mediterranean,Europe,Iberia,39.9601,-1.1598,1.0,0,0,0.0,0,0,#NA,0,Domestic,164
+PACLN,Colon Inland Container Depot,Inland Depot,PA,Panama,LatAm West,Americas,Central America,5.9599,-82.0295,-5.0,0,0,0.0,0,0,#NA,0,Domestic,165
+TRMER,Mersin Inland Container Depot,Inland Depot,TR,Turkey,Mediterranean,Europe,Southern Europe,41.4117,30.0432,3.0,0,0,0.0,0,0,#NA,0,Domestic,166
+FRAZL,Marseille Inland Container Depot,Inland Depot,FR,France,N Europe,Europe,Western Europe,44.105,5.2807,1.0,0,0,0.0,0,0,#NA,1,Free Trade Zone,167
+FRRIM,  MARSEILLE INLAND CONTAINER DEPOT  	,Inland Depot,FR,France,N Europe,Europe,Western Europe,49.9782,0.3009,1.0,0,0,0.0,0,0,#NA,0,Domestic,168
+JPYUT,Tokyo Inland Container Depot,Inland Depot,JP,Japan,East Asia,Asia,Japan,31.7577,135.4422,9.0,0,0,0.0,0,0,#NA,1,Bonded,169
+USNOR,Norfolk Inland Container Depot,Inland Depot,US,United States,N America East,Americas,Atlantic Coast,39.2306,-100.6447,-5.0,0,0,0.0,0,0,#NA,1,Bonded,170
+NLVLI,Vlissingen Inland Container Depot,Inland Depot,NL,Netherlands,N Europe,Europe,Benelux,47.1149,13.4736,1.0,0,0,0.0,0,0,#NA,1,Bonded,171
+TWWEQ,Taichung Inland Container Depot,Inland Depot,TW,Taiwan,East Asia,Asia,Greater China,23.9687,120.9709,8.0,0,0,0.0,0,0,#NA,0,Domestic,172
+BRITA,Itajai Inland Container Depot,Inland Depot,BR,Brazil,LatAm East,Americas,South America,-16.3366,-49.8765,-3.0,0,0,0.0,0,0,#NA,1,Bonded,173
+CLVRO,  VALPARAISO INLAND CONTAINER DEPOT  	,Inland Depot,CL,Chile,LatAm West,Americas,South America,-38.7213,-73.5909,-4.0,0,0,0.0,0,0,#NA,0,Domestic,174
+MYJOH,Johor Bahru Inland Container Depot,Inland Depot,MY,Malaysia,SE Asia,Asia,Maritime SE Asia,0.126,95.8862,8.0,0,0,0.0,0,0,#NA,0,Domestic,175
+BEKBH,Ghent Inland Container Depot,Inland Depot,BE,Belgium,N Europe,Europe,Benelux,52.7274,0.606,1.0,0,0,0.0,0,0,#NA,0,Domestic,176
+NLVIN,Vlissingen Inland Container Depot,Inland Depot,NL,Netherlands,N Europe,Europe,Benelux,50.8515,18.0894,1.0,0,0,0.0,0,0,#NA,0,Domestic,177
+CNGUA,  gUANGZHOU iNLAND cONTAINER dEPOT  	,Inland Depot,CN,China,East Asia,Asia,Greater China,34.828,105.8386,8.0,0,0,0.0,0,0,#NA,1,Bonded,178
+TRMSN,  MERSIN INLAND CONTAINER DEPOT  	,Inland Depot,TR,Turkey,Mediterranean,Europe,Southern Europe,42.5656,37.4831,3.0,0,0,0.0,0,0,#NA,0,Domestic,179
+VNVUN,Vung Tau Inland Container Depot,Inland Depot,VN,Vietnam,SE Asia,Asia,Mainland SE Asia,12.6887,111.3339,7.0,0,0,0.0,0,0,#NA,1,Bonded,180
+CATOO,Toronto Inland Container Depot,Inland Depot,CA,Canada,N America East,Americas,Inland,55.2606,-106.7578,-5.0,0,0,0.0,0,0,#NA,1,Bonded,181
+EGDAM,Damietta Inland Container Depot,Inland Depot,EG,Egypt,Middle East,MEA,North Africa,27.1037,30.9055,2.0,0,0,0.0,0,0,#NA,0,Domestic,182
+JPNAG,Nagoya Inland Container Depot,Inland Depot,JP,Japan,East Asia,Asia,Japan,34.2109,140.5374,9.0,0,0,0.0,0,0,#NA,1,Bonded,183
+USNEW,New Orleans Inland Container Depot,Inland Depot,US,United States,N America East,Americas,Gulf Coast,39.1207,-101.5263,-5.0,0,0,0.0,0,0,#NA,1,Bonded,184
+VNVGU,Vung Tau Inland Container Depot,Inland Depot,VN,Vietnam,SE Asia,Asia,Mainland SE Asia,11.0189,106.5602,7.0,0,0,0.0,0,0,#NA,1,Bonded,185
+ITLIV,Livorno Inland Container Depot,Inland Depot,IT,Italy,Mediterranean,Europe,Southern Europe,37.6379,20.9138,1.0,0,0,0.0,0,0,#NA,0,Domestic,186
+JPPEM,Tokyo Inland Container Depot,Inland Depot,JP,Japan,East Asia,Asia,Japan,36.0496,128.7777,9.0,0,0,0.0,0,0,#NA,0,Domestic,187
+THSNK,Songkhla Container Freight Station,CFS,TH,Thailand,SE Asia,Asia,Mainland SE Asia,14.0423,101.9222,7.0,0,0,0.0,0,0,#NA,1,Free Trade Zone,188
+TWTPI,Taipei Container Freight Station,CFS,TW,Taiwan,East Asia,Asia,Greater China,26.0391,127.5207,8.0,0,0,0.0,0,0,#NA,0,Domestic,189
+AESAJ,Sharjah Container Freight Station,CFS,AE,United Arab Emirates,Middle East,MEA,Gulf,19.4188,53.1279,4.0,0,0,0.0,0,0,#NA,1,Free Trade Zone,190
+GRBJT,Thessaloniki Container Freight Station,CFS,GR,Greece,Mediterranean,Europe,Southern Europe,44.7865,13.9493,2.0,0,0,0.0,0,0,#NA,0,Domestic,191
+MACSB,Casablanca Container Freight Station,CFS,MA,Morocco,Africa,MEA,North Africa,36.047,-12.6508,0.0,0,0,0.0,0,0,#NA,0,Domestic,192
+OMRSV,Sohar Container Freight Station,CFS,OM,Oman,Middle East,MEA,Gulf,18.3504,49.0131,4.0,0,0,0.0,0,0,#NA,0,Domestic,193
+SADMM,Dammam Container Freight Station,CFS,SA,Saudi Arabia,Middle East,MEA,Gulf,24.1497,48.4123,3.0,0,0,0.0,0,0,#NA,1,Free Trade Zone,194
+ESLVH,Bilbao Container Freight Station,CFS,ES,Spain,Mediterranean,Europe,Iberia,36.2099,1.424,1.0,0,0,0.0,0,0,#NA,1,Bonded,195
+ITLSE,La Spezia Container Freight Station,CFS,IT,Italy,Mediterranean,Europe,Southern Europe,44.1661,15.571,1.0,0,0,0.0,0,0,#NA,0,Domestic,196
+BEAIJ,Zeebrugge Container Freight Station,CFS,BE,Belgium,N Europe,Europe,Benelux,51.5914,0.0565,1.0,0,0,0.0,0,0,#NA,1,Free Trade Zone,197
+GRKMI,Thessaloniki Container Freight Station,CFS,GR,Greece,Mediterranean,Europe,Southern Europe,40.7284,8.0015,2.0,0,0,0.0,0,0,#NA,1,Free Trade Zone,198
+CACGY,Calgary Container Freight Station,CFS,CA,Canada,N America West,Americas,Inland,54.7994,-104.3762,-8.0,0,0,0.0,0,0,#NA,0,Domestic,199
+SARAH,Riyadh Container Freight Station,CFS,SA,Saudi Arabia,Middle East,MEA,Gulf,19.5598,41.9835,3.0,0,0,0.0,0,0,#NA,0,Domestic,200
+ESBAR,  barcelona container freight station  	,CFS,ES,Spain,Mediterranean,Europe,Iberia,40.0219,-9.4894,1.0,0,0,0.0,0,0,#NA,0,Domestic,201
+MAHGH,Casablanca Container Freight Station,CFS,MA,Morocco,Africa,MEA,North Africa,30.9606,-2.036,0.0,0,0,0.0,0,0,#NA,1,Free Trade Zone,202
+GBSOU,Southampton Container Freight Station,CFS,GB,United Kingdom,N Europe,Europe,British Isles,50.2149,0.2915,0.0,0,0,0.0,0,0,#NA,0,Domestic,203
+MXVER,Veracruz Container Freight Station,CFS,MX,Mexico,LatAm West,Americas,North America,21.484,-104.0523,-6.0,0,0,0.0,0,0,#NA,0,Domestic,204
+VNHHG,Hai Phong Container Freight Station,CFS,VN,Viet Nam,SE Asia,Asia,Mainland SE Asia,17.4252,109.3305,7.0,0,0,0.0,0,0,#NA,0,Domestic,205
+CACLA,Calgary Container Freight Station,CFS,CA,Canada,N America West,Americas,Inland,56.6252,-102.4346,-8.0,0,0,0.0,0,0,#NA,1,Bonded,206
+MXTUA,Tijuana Container Freight Station,CFS,MX,Mexico,LatAm West,Americas,North America,22.4096,-97.6143,-6.0,0,0,0.0,0,0,#NA,1,Bonded,207
+GBSAN,Southampton Container Freight Station,CFS,GB,United Kingdom,N Europe,Europe,British Isles,54.2406,-2.3456,0.0,0,0,0.0,0,0,#NA,1,Bonded,208
+VNVNT,Vung Tau Container Freight Station,CFS,VN,Viet Nam,SE Asia,Asia,Mainland SE Asia,7.6692,121.8344,7.0,0,0,0.0,0,0,#NA,1,Bonded,209
+THUOM,Bangkok Container Freight Station,CFS,TH,Thailand,SE Asia,Asia,Mainland SE Asia,13.6279,102.8752,7.0,0,0,0.0,0,0,#NA,1,Bonded,210
+VNHIH,Hai Phong Container Freight Station,CFS,VN,Viet Nam,SE Asia,Asia,Mainland SE Asia,14.488,109.8251,7.0,0,0,0.0,0,0,#NA,1,Bonded,211
+EGHYM,  aLEXANDRIA cONTAINER fREIGHT sTATION  	,CFS,EG,Egypt,Middle East,MEA,North Africa,27.4809,31.4362,2.0,0,0,0.0,0,0,#NA,0,Domestic,212
+SGJHD,Tuas Container Freight Station,CFS,SG,Singapore,SE Asia,Asia,Maritime SE Asia,-1.8999,100.1809,8.0,0,0,0.0,0,0,#NA,0,Domestic,213
+ITVSY,La Spezia Container Freight Station,CFS,IT,Italy,Mediterranean,Europe,Southern Europe,44.9333,8.4347,1.0,0,0,0.0,0,0,#NA,1,Bonded,214
+TWTIE,Taipei Container Freight Station,CFS,TW,Taiwan,East Asia,Asia,Greater China,17.2616,116.5695,8.0,0,0,0.0,0,0,#NA,1,Bonded,215
+HKYAU,Yau Tong Container Freight Station,CFS,HK,Hong Kong,East Asia,Asia,Greater China,29.6014,110.2363,8.0,0,0,0.0,0,0,#NA,1,Bonded,216
+GBLRL,Liverpool Container Freight Station,CFS,GB,United Kingdom,N Europe,Europe,British Isles,50.0066,-2.2831,0.0,0,0,0.0,0,0,#NA,0,Domestic,217
+OMVVB,  SOHAR CONTAINER FREIGHT STATION  	,CFS,OM,Oman,Middle East,MEA,Gulf,19.4189,47.2027,4.0,0,0,0.0,0,0,#NA,1,Bonded,218
+MXVCZ,Veracruz Container Freight Station,CFS,MX,Mexico,LatAm West,Americas,North America,24.3182,-99.421,-6.0,0,0,0.0,0,0,#NA,0,Domestic,219
+BRIJI,Itajai Container Freight Station,CFS,BR,Brazil,LatAm East,Americas,South America,-16.8244,-57.7256,-3.0,0,0,0.0,0,0,#NA,1,Free Trade Zone,220
+ITWYS,La Spezia Container Freight Station,CFS,IT,Italy,Mediterranean,Europe,Southern Europe,43.0265,16.9022,1.0,0,0,0.0,0,0,#NA,0,Domestic,221
+SGCHA,Changi Container Freight Station,CFS,SG,Singapore,SE Asia,Asia,Maritime SE Asia,2.0481,109.9988,8.0,0,0,0.0,0,0,#NA,0,Domestic,222
+TRMRI,Mersin Container Freight Station,CFS,TR,Turkey,Mediterranean,Europe,Southern Europe,45.056,30.877,3.0,0,0,0.0,0,0,#NA,1,Bonded,223
+ZACTN,Cape Town Container Freight Station,CFS,ZA,South Africa,Africa,MEA,Southern Africa,-34.9242,19.1586,2.0,0,0,0.0,0,0,#NA,0,Domestic,224
+PEPAI,Paita Container Freight Station,CFS,PE,Peru,LatAm West,Americas,South America,-6.4452,-73.2304,-5.0,0,0,0.0,0,0,#NA,1,Free Trade Zone,225
+ZAPRE,Port Elizabeth Container Freight Station,CFS,ZA,South Africa,Africa,MEA,Southern Africa,-32.1514,9.5998,2.0,0,0,0.0,0,0,#NA,0,Domestic,226
+CLVLA,Valparaiso Container Freight Station,CFS,CL,Chile,LatAm West,Americas,South America,-36.4071,-76.906,-4.0,0,0,0.0,0,0,#NA,0,Domestic,227
+OMRLN,Sohar Container Freight Station,CFS,OM,Oman,Middle East,MEA,Gulf,28.4803,56.4962,4.0,0,0,0.0,0,0,#NA,0,Domestic,228
+SARYD,Riyadh Container Freight Station,CFS,SA,Saudi Arabia,Middle East,MEA,Gulf,21.9656,45.1908,3.0,0,0,0.0,0,0,#NA,0,Domestic,229
+JPOSA,Osaka Container Freight Station,CFS,JP,Japan,East Asia,Asia,Japan,34.6201,132.762,9.0,0,0,0.0,0,0,#NA,1,Bonded,230
+SADMA,Dammam Container Freight Station,CFS,SA,Saudi Arabia,Middle East,MEA,Gulf,30.6183,43.1065,3.0,0,0,0.0,0,0,#NA,0,Domestic,231
+SGCNI,  CHANGI CONTAINER FREIGHT STATION  	,CFS,SG,Singapore,SE Asia,Asia,Maritime SE Asia,-0.1578,104.7578,8.0,0,0,0.0,0,0,#NA,0,Domestic,232
+MYKNN,Kuantan Container Freight Station,CFS,MY,Malaysia,SE Asia,Asia,Maritime SE Asia,4.7932,99.9122,8.0,0,0,0.0,0,0,#NA,1,Free Trade Zone,233
+CLSNI,Santiago Container Freight Station,CFS,CL,Chile,LatAm West,Americas,South America,-36.9939,-75.2949,-4.0,0,0,0.0,0,0,#NA,0,Domestic,234
+CLKLL,Santiago Container Freight Station,CFS,CL,Chile,LatAm West,Americas,South America,-36.1402,-67.2104,-4.0,0,0,0.0,0,0,#NA,1,Bonded,235
+MYPAG,Penang Container Freight Station,CFS,MY,Malaysia,SE Asia,Asia,Maritime SE Asia,4.9273,105.0479,8.0,0,0,0.0,0,0,#NA,1,Free Trade Zone,236
+AEDBI,Dubai Container Freight Station,CFS,AE,United Arab Emirates,Middle East,MEA,Gulf,22.9665,59.2444,4.0,0,0,0.0,0,0,#NA,0,Domestic,237
+SGJRN,Jurong International Airport,Airport,SG,Singapore,SE Asia,Asia,Maritime SE Asia,0.511,106.5305,8.0,0,0,0.0,0,0,JUR,0,Domestic,238
+SGVUA,Jurong International Airport,Airport,SG,Singapore,SE Asia,Asia,Maritime SE Asia,-1.1877,113.7164,8.0,0,0,0.0,0,0,JNG,0,Domestic,239
+MACNW,Agadir International Airport,Airport,MA,Morocco,Africa,MEA,North Africa,28.1247,-9.496,0.0,0,0,0.0,0,0,AGA,0,Domestic,240
+MAMRC,Casablanca International Airport,Airport,MA,Morocco,Africa,MEA,North Africa,33.5839,-5.0863,0.0,0,0,0.0,0,0,CAS,0,Domestic,241
+AUBRI,  brisbane international airport  	,Airport,AU,Australia,Oceania,Oceania,Australia,-27.6854,141.7882,10.0,0,0,0.0,0,0,BRI,0,Domestic,242
+SATGM,Riyadh International Airport,Airport,SA,Saudi Arabia,Middle East,MEA,Gulf,22.2831,43.7956,3.0,0,0,0.0,0,0,RIY,0,Domestic,243
+USCHI,Chicago International Airport,Airport,US,United States,N America East,Americas,Inland,38.1589,-99.2683,-5.0,0,0,0.0,0,0,CHI,0,Domestic,244
+BEEVV,Zeebrugge International Airport,Airport,BE,Belgium,N Europe,Europe,Benelux,49.5977,6.7073,1.0,0,0,0.0,0,0,ZEE,0,Domestic,245
+ESCWU,Bilbao International Airport,Airport,ES,Spain,Mediterranean,Europe,Iberia,41.9513,-1.0352,1.0,0,0,0.0,0,0,BIL,1,Bonded,246
+AUAAE,Adelaide International Airport,Airport,AU,Australia,Oceania,Oceania,Australia,-23.7453,126.4935,10.0,0,0,0.0,0,0,ADE,0,Domestic,247
+JPOAA,Osaka International Airport,Airport,JP,Japan,East Asia,Asia,Japan,32.7219,138.7377,9.0,0,0,0.0,0,0,OSA,0,Domestic,248
+MAYYC,Casablanca International Airport,Airport,MA,Morocco,Africa,MEA,North Africa,37.3794,-2.827,0.0,0,0,0.0,0,0,CCA,0,Domestic,249
+THZKM,Songkhla International Airport,Airport,TH,Thailand,SE Asia,Asia,Mainland SE Asia,15.731,104.1228,7.0,0,0,0.0,0,0,SON,0,Domestic,250
+NLVIS,  vlissingen international airport  	,Airport,NL,Netherlands,N Europe,Europe,Benelux,54.5519,5.188,1.0,0,0,0.0,0,0,VLI,0,Domestic,251
+MALHJ,Casablanca International Airport,Airport,MA,Morocco,Africa,MEA,North Africa,28.1222,-15.0538,0.0,0,0,0.0,0,0,BYE,1,Bonded,252
+DEDIB,Duisburg International Airport,Airport,DE,Germany,N Europe,Europe,Central Europe,51.66,10.6365,1.0,0,0,0.0,0,0,DUI,0,Domestic,253
+MXTJA,Tijuana International Airport,Airport,MX,Mexico,LatAm West,Americas,North America,24.4748,-95.5818,-6.0,0,0,0.0,0,0,TIJ,0,Domestic,254
+CLPNK,Valparaiso International Airport,Airport,CL,Chile,LatAm West,Americas,South America,-37.6811,-78.9027,-4.0,0,0,0.0,0,0,VAL,1,Free Trade Zone,255
+TROTT,Mersin International Airport,Airport,TR,Turkey,Mediterranean,Europe,Southern Europe,42.5607,39.0811,3.0,0,0,0.0,0,0,MER,0,Domestic,256
+PELIM,Lima International Airport,Airport,PE,Peru,LatAm West,Americas,South America,-13.3079,-70.7398,-5.0,0,0,0.0,0,0,LIM,0,Domestic,257
+OMNEU,Sohar International Airport,Airport,OM,Oman,Middle East,MEA,Gulf,16.7721,60.5404,4.0,0,0,0.0,0,0,SOH,0,Domestic,258
+TWJQL,Taipei International Airport,Airport,TW,Taiwan,East Asia,Asia,Greater China,22.3926,119.2758,8.0,0,0,0.0,0,0,TAI,0,Domestic,259
+GRUMF,Thessaloniki International Airport,Airport,GR,Greece,Mediterranean,Europe,Southern Europe,38.0177,19.7546,2.0,0,0,0.0,0,0,THE,0,Domestic,260
+CLWGZ,Santiago International Airport,Airport,CL,Chile,LatAm West,Americas,South America,-33.7703,-73.4023,-4.0,0,0,0.0,0,0,SAN,0,Domestic,261
+NZTUA,Tauranga International Airport,Airport,NZ,New Zealand,Oceania,Oceania,New Zealand,-37.5102,172.884,12.0,0,0,0.0,0,0,TAU,0,Domestic,262
+ITLOO,Livorno International Airport,Airport,IT,Italy,Mediterranean,Europe,Southern Europe,47.7759,18.5493,1.0,0,0,0.0,0,0,LIV,0,Domestic,263
+SGWSP,Tuas International Airport,Airport,SG,Singapore,SE Asia,Asia,Maritime SE Asia,4.5518,99.309,8.0,0,0,0.0,0,0,TUA,0,Domestic,264
+THUOO,  bANGKOK iNTERNATIONAL aIRPORT  	,Airport,TH,Thailand,SE Asia,Asia,Mainland SE Asia,9.8871,109.8534,7.0,0,0,0.0,0,0,BAN,0,Domestic,265
+FROPE,  mARSEILLE iNTERNATIONAL aIRPORT  	,Airport,FR,France,N Europe,Europe,Western Europe,45.7413,4.5164,1.0,0,0,0.0,0,0,MAR,1,Bonded,266
+ESBEA,Barcelona International Airport,Airport,ES,Spain,Mediterranean,Europe,Iberia,39.2572,0.9706,1.0,0,0,0.0,0,0,BAR,0,Domestic,267
+BEJRQ,Zeebrugge International Airport,Airport,BE,Belgium,N Europe,Europe,Benelux,53.6535,5.9203,1.0,0,0,0.0,0,0,ZGE,1,Free Trade Zone,268
+HKYTG,Yau Tong International Airport,Airport,HK,Hong Kong,East Asia,Asia,Greater China,17.0211,114.5494,8.0,0,0,0.0,0,0,YAU,0,Domestic,269
+SGJUQ,Tuas International Airport,Airport,SG,Singapore,SE Asia,Asia,Maritime SE Asia,5.1464,97.5124,8.0,0,0,0.0,0,0,TAS,0,Domestic,270
+CATRN,Toronto International Airport,Airport,CA,Canada,N America East,Americas,Inland,56.5701,-107.6782,-5.0,0,0,0.0,0,0,TOR,0,Domestic,271
+DEHKM,Duisburg International Airport,Airport,DE,Germany,N Europe,Europe,Central Europe,50.773,13.412,1.0,0,0,0.0,0,0,DRG,0,Domestic,272
+PELMA,Lima International Airport,Airport,PE,Peru,LatAm West,Americas,South America,-10.9463,-74.3211,-5.0,0,0,0.0,0,0,LMA,0,Domestic,273
+ESENM,Bilbao International Airport,Airport,ES,Spain,Mediterranean,Europe,Iberia,41.59,-1.9288,1.0,0,0,0.0,0,0,BAO,0,Domestic,274
+IDMED,Medan International Airport,Airport,ID,Indonesia,SE Asia,Asia,Maritime SE Asia,2.0323,114.8991,7.0,0,0,0.0,0,0,MED,0,Domestic,275
+BRSOA,Sao Paulo International Airport,Airport,BR,Brazil,LatAm East,Americas,South America,-12.5275,-52.0449,-3.0,0,0,0.0,0,0,SAO,0,Domestic,276
+DEONO,Duisburg International Airport,Airport,DE,Germany,N Europe,Europe,Central Europe,51.5623,11.3395,1.0,0,0,0.0,0,0,KMU,0,Domestic,277
+NZWLI,Wellington International Airport,Airport,NZ,New Zealand,Oceania,Oceania,New Zealand,-40.6682,174.1469,12.0,0,0,0.0,0,0,WEL,0,Domestic,278
+TREIE,Mersin International Airport,Airport,TR,Turkey,Mediterranean,Europe,Southern Europe,39.2074,36.791,3.0,0,0,0.0,0,0,MIN,0,Domestic,279
+IDSRG,Semarang International Airport,Airport,ID,Indonesia,SE Asia,Asia,Maritime SE Asia,-7.0144,120.7224,7.0,0,0,0.0,0,0,SEM,0,Domestic,280
+CAIXL,  cALGARY iNTERNATIONAL aIRPORT  	,Airport,CA,Canada,N America West,Americas,Inland,52.5772,-110.5743,-8.0,0,0,0.0,0,0,CAL,1,Free Trade Zone,281
+KRULS,Ulsan International Airport,Airport,KR,"Korea, Republic of",East Asia,Asia,Korean Peninsula,40.7735,131.7465,9.0,0,0,0.0,0,0,ULS,0,Domestic,282
+CAWOG,  calgary international airport  	,Airport,CA,Canada,N America West,Americas,Inland,57.0988,-108.853,-8.0,0,0,0.0,0,0,CRY,0,Domestic,283
+TRHHE,  mersin international airport  	,Airport,TR,Turkey,Mediterranean,Europe,Southern Europe,37.9224,38.2366,3.0,0,0,0.0,0,0,JIU,1,Bonded,284
+INHDR,Hyderabad International Airport,Airport,IN,India,South Asia,Asia,Indian Subcontinent,19.1901,86.4325,5.5,0,0,0.0,0,0,HYD,0,Domestic,285
+JPAPO,Tokyo International Airport,Airport,JP,Japan,East Asia,Asia,Japan,33.8947,130.3791,9.0,0,0,0.0,0,0,TOK,0,Domestic,286
+OMVEE,Sohar International Airport,Airport,OM,Oman,Middle East,MEA,Gulf,23.7051,52.1936,4.0,0,0,0.0,0,0,SAR,0,Domestic,287
+JPBMV,Tokyo International Airport,Airport,JP,Japan,East Asia,Asia,Japan,37.8262,145.3932,9.0,0,0,0.0,0,0,TYO,0,Domestic,288
+ESDFB,Bilbao International Airport,Airport,ES,Spain,Mediterranean,Europe,Iberia,36.4237,-6.1436,1.0,0,0,0.0,0,0,WFV,0,Domestic,289
+SGCAG,Changi International Airport,Airport,SG,Singapore,SE Asia,Asia,Maritime SE Asia,1.9185,105.0633,8.0,0,0,0.0,0,0,CHA,0,Domestic,290
+BENCX,Ghent International Airport,Airport,BE,Belgium,N Europe,Europe,Benelux,55.1667,6.3942,1.0,0,0,0.0,0,0,GHE,0,Domestic,291
+SAYFV,Riyadh International Airport,Airport,SA,Saudi Arabia,Middle East,MEA,Gulf,23.3926,45.8098,3.0,0,0,0.0,0,0,RDH,0,Domestic,292
+CLBBG,Santiago International Airport,Airport,CL,Chile,LatAm West,Americas,South America,-34.6566,-72.7142,-4.0,0,0,0.0,0,0,SGO,1,Bonded,293
+CAJBY,  tORONTO iNTERNATIONAL aIRPORT  	,Airport,CA,Canada,N America East,Americas,Inland,56.4766,-98.1532,-5.0,0,0,0.0,0,0,TTO,0,Domestic,294
+NLLBE,Vlissingen International Airport,Airport,NL,Netherlands,N Europe,Europe,Benelux,46.4087,2.8136,1.0,0,0,0.0,0,0,VEN,0,Domestic,295
+HKTSI,Tsing Yi International Airport,Airport,HK,Hong Kong,East Asia,Asia,Greater China,22.2652,107.7822,8.0,0,0,0.0,0,0,TSI,0,Domestic,296
+CNDIN,Dalian International Airport,Airport,CN,China,East Asia,Asia,Greater China,35.5598,110.9972,8.0,0,0,0.0,0,0,DAL,0,Domestic,297
+MXLAZ,Lazaro Cardenas International Airport,Airport,MX,Mexico,LatAm West,Americas,North America,24.8554,-96.311,-6.0,0,0,0.0,0,0,LAZ,0,Domestic,298
+BRIAA,Itajai International Airport,Airport,BR,Brazil,LatAm East,Americas,South America,-13.8984,-49.2073,-3.0,0,0,0.0,0,0,ITA,0,Domestic,299
+AUFRE,Fremantle International Airport,Airport,AU,Australia,Oceania,Oceania,Australia,-21.3573,140.2129,10.0,0,0,0.0,0,0,FRE,0,Domestic,300
+ITQJR,La Spezia International Airport,Airport,IT,Italy,Mediterranean,Europe,Southern Europe,46.7105,12.2662,1.0,0,0,0.0,0,0,LAS,0,Domestic,301
+JPWHA,Osaka International Airport,Airport,JP,Japan,East Asia,Asia,Japan,43.3367,141.953,9.0,0,0,0.0,0,0,OKA,0,Domestic,302
+IDSMR,Semarang International Airport,Airport,ID,Indonesia,SE Asia,Asia,Maritime SE Asia,-6.1002,122.8447,7.0,0,0,0.0,0,0,SNG,0,Domestic,303
+ITKNW,La Spezia International Airport,Airport,IT,Italy,Mediterranean,Europe,Southern Europe,41.6715,12.9383,1.0,0,0,0.0,0,0,LIA,0,Domestic,304
+FRGXZ,Marseille International Airport,Airport,FR,France,N Europe,Europe,Western Europe,46.7866,7.8148,1.0,0,0,0.0,0,0,MLE,0,Domestic,305
+INPUN,Pune International Airport,Airport,IN,India,South Asia,Asia,Indian Subcontinent,17.463,73.3474,5.5,0,0,0.0,0,0,PUN,0,Domestic,306
+MXVRC,Veracruz International Airport,Airport,MX,Mexico,LatAm West,Americas,North America,23.7453,-106.4276,-6.0,0,0,0.0,0,0,VER,0,Domestic,307
+EGPOE,Alexandria Logistics Park,Warehouse,EG,Egypt,Middle East,MEA,North Africa,29.0076,30.986,2.0,0,0,0.0,0,0,#NA,0,Domestic,308
+MAUGI,Casablanca Logistics Park,Warehouse,MA,Morocco,Africa,MEA,North Africa,36.8266,-2.3704,0.0,0,0,0.0,0,0,#NA,0,Domestic,309
+THGNC,Songkhla Logistics Park,Warehouse,TH,Thailand,SE Asia,Asia,Mainland SE Asia,14.9749,105.5691,7.0,0,0,0.0,0,0,#NA,0,Domestic,310
+PELMX,Lima Logistics Park,Warehouse,PE,Peru,LatAm West,Americas,South America,-8.9639,-70.3743,-5.0,0,0,0.0,0,0,#NA,0,Domestic,311
+PETMJ,Lima Logistics Park,Warehouse,PE,Peru,LatAm West,Americas,South America,-10.8619,-84.3528,-5.0,0,0,0.0,0,0,#NA,1,Bonded,312
+SAYSD,Dammam Logistics Park,Warehouse,SA,Saudi Arabia,Middle East,MEA,Gulf,22.3321,49.9654,3.0,0,0,0.0,0,0,#NA,0,Domestic,313
+AERMB,Sharjah Logistics Park,Warehouse,AE,United Arab Emirates,Middle East,MEA,Gulf,22.525,48.1462,4.0,0,0,0.0,0,0,#NA,0,Domestic,314
+VNYON,Hai Phong Logistics Park,Warehouse,VN,Vietnam,SE Asia,Asia,Mainland SE Asia,15.5752,103.1432,7.0,0,0,0.0,0,0,#NA,1,Free Trade Zone,315
+BEZYJ,Ghent Logistics Park,Warehouse,BE,Belgium,N Europe,Europe,Benelux,49.1046,-0.6846,1.0,0,0,0.0,0,0,#NA,0,Domestic,316
+NZAIA,Tauranga Logistics Park,Warehouse,NZ,New Zealand,Oceania,Oceania,New Zealand,-40.9909,-179.7497,12.0,0,0,0.0,0,0,#NA,0,Domestic,317
+IDMDN,Medan Logistics Park,Warehouse,ID,Indonesia,SE Asia,Asia,Maritime SE Asia,-4.2495,125.8341,7.0,0,0,0.0,0,0,#NA,0,Domestic,318
+VNKIT,Hai Phong Logistics Park,Warehouse,VN,Vietnam,SE Asia,Asia,Mainland SE Asia,13.9588,113.1005,7.0,0,0,0.0,0,0,#NA,0,Domestic,319
+VNSMA,Hai Phong Logistics Park,Warehouse,VN,Vietnam,SE Asia,Asia,Mainland SE Asia,12.6297,114.4171,7.0,0,0,0.0,0,0,#NA,0,Domestic,320
+ITCMC,La Spezia Logistics Park,Warehouse,IT,Italy,Mediterranean,Europe,Southern Europe,45.0036,8.4096,1.0,0,0,0.0,0,0,#NA,0,Domestic,321
+BRIZC,  SAO PAULO LOGISTICS PARK  	,Warehouse,BR,Brazil,LatAm East,Americas,South America,-20.2093,-48.2499,-3.0,0,0,0.0,0,0,#NA,0,Domestic,322
+BEZEK,Zeebrugge Logistics Park,Warehouse,BE,Belgium,N Europe,Europe,Benelux,56.0757,7.9093,1.0,0,0,0.0,0,0,#NA,1,Bonded,323
+NZUPX,Wellington Logistics Park,Warehouse,NZ,New Zealand,Oceania,Oceania,New Zealand,-43.2563,177.3812,12.0,0,0,0.0,0,0,#NA,0,Domestic,324
+KRINC,Incheon Logistics Park,Warehouse,KR,South Korea,East Asia,Asia,Korean Peninsula,39.1813,128.3577,9.0,0,0,0.0,0,0,#NA,0,Domestic,325
+CLKJV,Valparaiso Logistics Park,Warehouse,CL,Chile,LatAm West,Americas,South America,-33.9148,-71.3483,-4.0,0,0,0.0,0,0,#NA,0,Domestic,326
+BRJYT,Itajai Logistics Park,Warehouse,BR,Brazil,LatAm East,Americas,South America,-7.3346,-43.8435,-3.0,0,0,0.0,0,0,#NA,0,Domestic,327
+JPJNU,Tokyo Logistics Park,Warehouse,JP,Japan,East Asia,Asia,Japan,35.1897,140.3428,9.0,0,0,0.0,0,0,#NA,1,Free Trade Zone,328
+SAMJQ,Riyadh Logistics Park,Warehouse,SA,Saudi Arabia,Middle East,MEA,Gulf,26.1885,37.1076,3.0,0,0,0.0,0,0,#NA,1,Bonded,329
+ESBRE,  BARCELONA LOGISTICS PARK  	,Warehouse,ES,Spain,Mediterranean,Europe,Iberia,34.6169,3.8273,1.0,0,0,0.0,0,0,#NA,0,Domestic,330
+BREJK,Itajai Logistics Park,Warehouse,BR,Brazil,LatAm East,Americas,South America,-11.1182,-44.2985,-3.0,0,0,0.0,0,0,#NA,0,Domestic,331
+PALUN,Colon Logistics Park,Warehouse,PA,Panama,LatAm West,Americas,Central America,5.5142,-78.9271,-5.0,0,0,0.0,0,0,#NA,0,Domestic,332
+HKTNI,Tsing Yi Logistics Park,Warehouse,HK,Hong Kong,East Asia,Asia,Greater China,22.6557,104.2285,8.0,0,0,0.0,0,0,#NA,0,Domestic,333
+THEZQ,Bangkok Logistics Park,Warehouse,TH,Thailand,SE Asia,Asia,Mainland SE Asia,14.576,105.2977,7.0,0,0,0.0,0,0,#NA,0,Domestic,334
+MXSVO,Tijuana Logistics Park,Warehouse,MX,Mexico,LatAm West,Americas,North America,17.4888,-100.0006,-6.0,0,0,0.0,0,0,#NA,0,Domestic,335
+NZIGX,Wellington Logistics Park,Warehouse,NZ,New Zealand,Oceania,Oceania,New Zealand,-42.4302,165.5396,12.0,0,0,0.0,0,0,#NA,0,Domestic,336
+NZFVZ,Wellington Logistics Park,Warehouse,NZ,New Zealand,Oceania,Oceania,New Zealand,-34.1451,170.4654,12.0,0,0,0.0,0,0,#NA,0,Domestic,337
+USDAL,Dallas Logistics Park,Warehouse,US,United States,N America East,Americas,Inland,39.8569,-100.7412,-5.0,0,0,0.0,0,0,#NA,0,Domestic,338
+CNGGU,Guangzhou Logistics Park,Warehouse,CN,China,East Asia,Asia,Greater China,34.5618,99.1043,8.0,0,0,0.0,0,0,#NA,0,Domestic,339
+JPSOU,  oSAKA lOGISTICS pARK  	,Warehouse,JP,Japan,East Asia,Asia,Japan,41.2817,139.2741,9.0,0,0,0.0,0,0,#NA,0,Domestic,340
+PAXIC,Colon Logistics Park,Warehouse,PA,Panama,LatAm West,Americas,Central America,10.7397,-72.0637,-5.0,0,0,0.0,0,0,#NA,0,Domestic,341
+USATL,Atlanta Logistics Park,Warehouse,US,United States,N America East,Americas,Inland,37.2182,-99.8279,-5.0,0,0,0.0,0,0,#NA,0,Domestic,342
+KRIHN,Incheon Logistics Park,Warehouse,KR,"Korea, Republic of",East Asia,Asia,Korean Peninsula,34.6071,132.0806,9.0,0,0,0.0,0,0,#NA,0,Domestic,343
+MAHQV,Casablanca Logistics Park,Warehouse,MA,Morocco,Africa,MEA,North Africa,33.5457,-6.6747,0.0,0,0,0.0,0,0,#NA,0,Domestic,344
+ESYBD,Bilbao Logistics Park,Warehouse,ES,Spain,Mediterranean,Europe,Iberia,41.7524,5.5452,1.0,0,0,0.0,0,0,#NA,0,Domestic,345
+PEPIA,Paita Logistics Park,Warehouse,PE,Peru,LatAm West,Americas,South America,-8.2464,-85.9944,-5.0,0,0,0.0,0,0,#NA,0,Domestic,346
+CAHIX,Halifax Logistics Park,Warehouse,CA,Canada,N America East,Americas,Atlantic Coast,56.0026,-109.6458,-5.0,0,0,0.0,0,0,#NA,1,Bonded,347
+KRICE,Incheon Logistics Park,Warehouse,KR,"Korea, Republic of",East Asia,Asia,Korean Peninsula,40.3307,125.3684,9.0,0,0,0.0,0,0,#NA,0,Domestic,348
+ESWXB,Barcelona Logistics Park,Warehouse,ES,Spain,Mediterranean,Europe,Iberia,39.5141,-3.0548,1.0,0,0,0.0,0,0,#NA,0,Domestic,349
+SGSNX,Jurong Logistics Park,Warehouse,SG,Singapore,SE Asia,Asia,Maritime SE Asia,1.5558,102.8594,8.0,0,0,0.0,0,0,#NA,0,Domestic,350
+USDLS,Dallas Logistics Park,Warehouse,US,United States,N America East,Americas,Inland,36.9387,-95.8571,-5.0,0,0,0.0,0,0,#NA,1,Free Trade Zone,351
+JPNOA,Nagoya Logistics Park,Warehouse,JP,Japan,East Asia,Asia,Japan,33.2044,138.2524,9.0,0,0,0.0,0,0,#NA,1,Free Trade Zone,352
+DEIUF,Duisburg Logistics Park,Warehouse,DE,Germany,N Europe,Europe,Central Europe,55.0534,7.1218,1.0,0,0,0.0,0,0,#NA,0,Domestic,353
+NLKKE,Amsterdam Logistics Park,Warehouse,NL,Netherlands,N Europe,Europe,Benelux,48.483,12.3357,1.0,0,0,0.0,0,0,#NA,0,Domestic,354
+PEJEQ,Lima Logistics Park,Warehouse,PE,Peru,LatAm West,Americas,South America,-6.9959,-81.317,-5.0,0,0,0.0,0,0,#NA,0,Domestic,355
+MAFPK,Casablanca Logistics Park,Warehouse,MA,Morocco,Africa,MEA,North Africa,28.3619,-18.6089,0.0,0,0,0.0,0,0,#NA,1,Bonded,356
+TRIZM,  IZMIR LOGISTICS PARK  	,Warehouse,TR,Turkey,Mediterranean,Europe,Southern Europe,39.6443,37.251,3.0,0,0,0.0,0,0,#NA,0,Domestic,357
+IDSUR,Surabaya Logistics Park,Warehouse,ID,Indonesia,SE Asia,Asia,Maritime SE Asia,4.2711,124.0835,7.0,0,0,0.0,0,0,#NA,0,Domestic,358
+AEAHI,  abu dhabi logistics park  	,Warehouse,AE,United Arab Emirates,Middle East,MEA,Gulf,24.6949,58.582,4.0,0,0,0.0,0,0,#NA,0,Domestic,359
+JPNGY,Nagoya Logistics Park,Warehouse,JP,Japan,East Asia,Asia,Japan,39.3708,136.8304,9.0,0,0,0.0,0,0,#NA,0,Domestic,360
+INFXG,Hyderabad Logistics Park,Warehouse,IN,India,South Asia,Asia,Indian Subcontinent,18.3083,72.8968,5.5,0,0,0.0,0,0,#NA,0,Domestic,361
+BENGF,Zeebrugge Logistics Park,Warehouse,BE,Belgium,N Europe,Europe,Benelux,46.5297,4.7982,1.0,0,0,0.0,0,0,#NA,0,Domestic,362
+THQVB,Bangkok Logistics Park,Warehouse,TH,Thailand,SE Asia,Asia,Mainland SE Asia,11.6123,99.2957,7.0,0,0,0.0,0,0,#NA,0,Domestic,363
+BEIFL,Zeebrugge Logistics Park,Warehouse,BE,Belgium,N Europe,Europe,Benelux,51.6812,1.8338,1.0,0,0,0.0,0,0,#NA,0,Domestic,364
+MXWMA,Tijuana Logistics Park,Warehouse,MX,Mexico,LatAm West,Americas,North America,22.2679,-104.7818,-6.0,0,0,0.0,0,0,#NA,0,Domestic,365
+JPIWO,Osaka Logistics Park,Warehouse,JP,Japan,East Asia,Asia,Japan,34.1108,137.8385,9.0,0,0,0.0,0,0,#NA,0,Domestic,366
+GBTBY,Tilbury Logistics Park,Warehouse,GB,United Kingdom,N Europe,Europe,British Isles,48.9031,-0.224,0.0,0,0,0.0,0,0,#NA,0,Domestic,367
+PENRG,Paita Rail Terminal,Rail Terminal,PE,Peru,LatAm West,Americas,South America,-13.2493,-84.2226,-5.0,0,0,0.0,0,0,#NA,0,Domestic,368
+JPISB,Tokyo Rail Terminal,Rail Terminal,JP,Japan,East Asia,Asia,Japan,38.3857,139.1252,9.0,0,0,0.0,0,0,#NA,0,Domestic,369
+HKTIG,Tsing Yi Rail Terminal,Rail Terminal,HK,Hong Kong,East Asia,Asia,Greater China,21.7548,115.0874,8.0,0,0,0.0,0,0,#NA,0,Domestic,370
+KRXCN,Gwangyang Rail Terminal,Rail Terminal,KR,South Korea,East Asia,Asia,Korean Peninsula,41.1371,126.6294,9.0,0,0,0.0,0,0,#NA,0,Domestic,371
+CAVIA,Calgary Rail Terminal,Rail Terminal,CA,Canada,N America West,Americas,Inland,53.0107,-108.6001,-8.0,0,0,0.0,0,0,#NA,0,Domestic,372
+DEWGL,Duisburg Rail Terminal,Rail Terminal,DE,Germany,N Europe,Europe,Central Europe,52.4391,15.5657,1.0,0,0,0.0,0,0,#NA,0,Domestic,373
+MYPNN,Penang Rail Terminal,Rail Terminal,MY,Malaysia,SE Asia,Asia,Maritime SE Asia,3.9153,99.0143,8.0,0,0,0.0,0,0,#NA,0,Domestic,374
+CNXAE,Xiamen Rail Terminal,Rail Terminal,CN,China,East Asia,Asia,Greater China,39.769,112.548,8.0,0,0,0.0,0,0,#NA,0,Domestic,375
+CARTS,Toronto Rail Terminal,Rail Terminal,CA,Canada,N America East,Americas,Inland,54.7547,-108.6097,-5.0,0,0,0.0,0,0,#NA,1,Bonded,376
+GBSUH,Southampton Rail Terminal,Rail Terminal,GB,United Kingdom,N Europe,Europe,British Isles,53.1359,-3.7068,0.0,0,0,0.0,0,0,#NA,1,Free Trade Zone,377
+HKKCG,Kwai Chung Rail Terminal,Rail Terminal,HK,Hong Kong,East Asia,Asia,Greater China,22.798,125.1044,8.0,0,0,0.0,0,0,#NA,0,Domestic,378
+MXLAS,Lazaro Cardenas Rail Terminal,Rail Terminal,MX,Mexico,LatAm West,Americas,North America,17.3534,-103.0686,-6.0,0,0,0.0,0,0,#NA,0,Domestic,379
+THCDD,Songkhla Rail Terminal,Rail Terminal,TH,Thailand,SE Asia,Asia,Mainland SE Asia,13.829,98.593,7.0,0,0,0.0,0,0,#NA,0,Domestic,380
+NZSQN,Wellington Rail Terminal,Rail Terminal,NZ,New Zealand,Oceania,Oceania,New Zealand,-39.8572,171.199,12.0,0,0,0.0,0,0,#NA,0,Domestic,381
+VNOOF,Vung Tau Rail Terminal,Rail Terminal,VN,Vietnam,SE Asia,Asia,Mainland SE Asia,12.1486,102.8458,7.0,0,0,0.0,0,0,#NA,0,Domestic,382
+USDLA,Dallas Rail Terminal,Rail Terminal,US,United States,N America East,Americas,Inland,38.8093,-85.2364,-5.0,0,0,0.0,0,0,#NA,0,Domestic,383
+ESIUQ,Bilbao Rail Terminal,Rail Terminal,ES,Spain,Mediterranean,Europe,Iberia,39.1016,-0.7495,1.0,0,0,0.0,0,0,#NA,0,Domestic,384
+PEZKZ,Paita Rail Terminal,Rail Terminal,PE,Peru,LatAm West,Americas,South America,-1.9371,-77.6927,-5.0,0,0,0.0,0,0,#NA,1,Bonded,385
+MANVB,Agadir Rail Terminal,Rail Terminal,MA,Morocco,Africa,MEA,North Africa,30.3221,-6.0628,0.0,0,0,0.0,0,0,#NA,0,Domestic,386
+AEWHC,Dubai Rail Terminal,Rail Terminal,AE,United Arab Emirates,Middle East,MEA,Gulf,21.1645,53.1266,4.0,0,0,0.0,0,0,#NA,0,Domestic,387
+CLHFW,Santiago Rail Terminal,Rail Terminal,CL,Chile,LatAm West,Americas,South America,-37.9296,-66.9494,-4.0,0,0,0.0,0,0,#NA,1,Bonded,388
+OMUSG,Muscat Rail Terminal,Rail Terminal,OM,Oman,Middle East,MEA,Gulf,20.104,57.2601,4.0,0,0,0.0,0,0,#NA,0,Domestic,389
+VNBYR,  VUNG TAU RAIL TERMINAL  	,Rail Terminal,VN,Vietnam,SE Asia,Asia,Mainland SE Asia,20.2158,110.2711,7.0,0,0,0.0,0,0,#NA,0,Domestic,390
+TWAVZ,Taipei Rail Terminal,Rail Terminal,TW,Taiwan,East Asia,Asia,Greater China,21.11,128.1661,8.0,0,0,0.0,0,0,#NA,0,Domestic,391
+VNFRU,Vung Tau Rail Terminal,Rail Terminal,VN,Vietnam,SE Asia,Asia,Mainland SE Asia,16.4025,102.2059,7.0,0,0,0.0,0,0,#NA,0,Domestic,392
+EGDEA,Damietta Rail Terminal,Rail Terminal,EG,Egypt,Middle East,MEA,North Africa,21.4895,40.0897,2.0,0,0,0.0,0,0,#NA,0,Domestic,393
+GBLIC,Southampton Rail Terminal,Rail Terminal,GB,United Kingdom,N Europe,Europe,British Isles,56.5775,2.4039,0.0,0,0,0.0,0,0,#NA,1,Bonded,394
+TWVQG,Taichung Rail Terminal,Rail Terminal,TW,Taiwan,East Asia,Asia,Greater China,22.8275,123.4051,8.0,0,0,0.0,0,0,#NA,0,Domestic,395
+KRRGQ,Gwangyang Rail Terminal,Rail Terminal,KR,South Korea,East Asia,Asia,Korean Peninsula,42.261,126.756,9.0,0,0,0.0,0,0,#NA,0,Domestic,396
+PEZWM,Paita Rail Terminal,Rail Terminal,PE,Peru,LatAm West,Americas,South America,-12.1612,-80.6913,-5.0,0,0,0.0,0,0,#NA,0,Domestic,397
+IDSBA,Surabaya Rail Terminal,Rail Terminal,ID,Indonesia,SE Asia,Asia,Maritime SE Asia,-0.2391,117.0635,7.0,0,0,0.0,0,0,#NA,0,Domestic,398
+DEBRN,Bremerhaven Rail Terminal,Rail Terminal,DE,Germany,N Europe,Europe,Central Europe,52.3779,13.8084,1.0,0,0,0.0,0,0,#NA,0,Domestic,399
+FRDKK,Dunkirk Rail Terminal,Rail Terminal,FR,France,N Europe,Europe,Western Europe,43.437,2.988,1.0,0,0,0.0,0,0,#NA,0,Domestic,400
+BEYEK,Ghent Rail Terminal,Rail Terminal,BE,Belgium,N Europe,Europe,Benelux,47.6947,-3.581,1.0,0,0,0.0,0,0,#NA,0,Domestic,401
+IDSUZ,Medan Rail Terminal,Rail Terminal,ID,Indonesia,SE Asia,Asia,Maritime SE Asia,0.0227,114.7729,7.0,0,0,0.0,0,0,#NA,0,Domestic,402
+GBLVR,  LIVERPOOL RAIL TERMINAL  	,Rail Terminal,GB,United Kingdom,N Europe,Europe,British Isles,47.0236,0.9776,0.0,0,0,0.0,0,0,#NA,0,Domestic,403
+CNBEI,Beijing Rail Terminal,Rail Terminal,CN,China,East Asia,Asia,Greater China,31.4177,110.9931,8.0,0,0,0.0,0,0,#NA,1,Free Trade Zone,404
+SACTH,Riyadh Rail Terminal,Rail Terminal,SA,Saudi Arabia,Middle East,MEA,Gulf,24.7672,37.3715,3.0,0,0,0.0,0,0,#NA,0,Domestic,405
+CATOQ,Calgary Rail Terminal,Rail Terminal,CA,Canada,N America West,Americas,Inland,54.0707,-106.4841,-8.0,0,0,0.0,0,0,#NA,0,Domestic,406
+EGDME,Damietta Rail Terminal,Rail Terminal,EG,Egypt,Middle East,MEA,North Africa,30.4374,23.6676,2.0,0,0,0.0,0,0,#NA,1,Bonded,407
+AEUDT,Dubai Rail Terminal,Rail Terminal,AE,United Arab Emirates,Middle East,MEA,Gulf,28.8526,52.6771,4.0,0,0,0.0,0,0,#NA,0,Domestic,408
+SGKMY,  JURONG RAIL TERMINAL  	,Rail Terminal,SG,Singapore,SE Asia,Asia,Maritime SE Asia,5.4129,106.3876,8.0,0,0,0.0,0,0,#NA,0,Domestic,409
+FRDNI,Dunkirk Rail Terminal,Rail Terminal,FR,France,N Europe,Europe,Western Europe,48.2733,7.3882,1.0,0,0,0.0,0,0,#NA,0,Domestic,410
+KRIEJ,Gwangyang Rail Terminal,Rail Terminal,KR,South Korea,East Asia,Asia,Korean Peninsula,35.0846,130.8173,9.0,0,0,0.0,0,0,#NA,0,Domestic,411
+CLXLQ,Valparaiso Rail Terminal,Rail Terminal,CL,Chile,LatAm West,Americas,South America,-32.6391,-70.4992,-4.0,0,0,0.0,0,0,#NA,0,Domestic,412
+BEMOH,Zeebrugge Rail Terminal,Rail Terminal,BE,Belgium,N Europe,Europe,Benelux,54.9205,-7.8705,1.0,0,0,0.0,0,0,#NA,0,Domestic,413
+GRSXT,Thessaloniki Rail Terminal,Rail Terminal,GR,Greece,Mediterranean,Europe,Southern Europe,38.8539,26.5201,2.0,0,0,0.0,0,0,#NA,0,Domestic,414
+HKKAC,  kwai chung rail terminal  	,Rail Terminal,HK,Hong Kong,East Asia,Asia,Greater China,21.1102,108.5065,8.0,0,0,0.0,0,0,#NA,0,Domestic,415
+FRSSU,Marseille Rail Terminal,Rail Terminal,FR,France,N Europe,Europe,Western Europe,49.1201,-4.7671,1.0,0,0,0.0,0,0,#NA,0,Domestic,416
+BELHV,Ghent Rail Terminal,Rail Terminal,BE,Belgium,N Europe,Europe,Benelux,46.6103,4.958,1.0,0,0,0.0,0,0,#NA,1,Free Trade Zone,417
+BRBCR,Sao Paulo Rail Terminal,Rail Terminal,BR,Brazil,LatAm East,Americas,South America,-9.8247,-54.5094,-3.0,0,0,0.0,0,0,#NA,1,Free Trade Zone,418
+MXLZR,Lazaro Cardenas Rail Terminal,Rail Terminal,MX,Mexico,LatAm West,Americas,North America,17.2133,-108.7505,-6.0,0,0,0.0,0,0,#NA,0,Domestic,419

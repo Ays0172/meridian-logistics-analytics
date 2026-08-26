@@ -1,0 +1,5 @@
+ScenarioCode,ScenarioName,SortOrder,ScenarioKey
+ACT,Actual,1,1
+BUD,Budget,2,2
+FCT,Forecast,3,3
+PLN,Plan,4,4

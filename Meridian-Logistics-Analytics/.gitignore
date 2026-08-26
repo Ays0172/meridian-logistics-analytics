@@ -1,0 +1,19 @@
+# Generated data — rebuild with `python setup_all.py`, never commit
+02_data/raw/
+02_data/_state/
+02_data/curated/*.parquet
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Power BI
+03_powerbi/*.pbix
+03_powerbi/.pbi/
+*.tmp
+
+# OS
+Thumbs.db
+.DS_Store

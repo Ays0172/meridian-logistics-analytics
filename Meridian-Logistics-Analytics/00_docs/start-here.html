@@ -1,0 +1,368 @@
+<title>Meridian Day Zero</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<style>
+  :root {
+    --paper:#EDF1F0; --surface:#F9FBFA; --surface-2:#E3EAE9;
+    --ink:#0C222A; --ink-2:#46606A; --ink-3:#6C858D;
+    --rule:#C6D2D1; --rule-soft:#DBE3E2;
+    --accent:#0C6874; --signal:#C24F14; --good:#2C6E4B; --warn:#9A6608;
+    --f-display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+    --f-body:"Source Serif 4",Georgia,"Times New Roman",serif;
+    --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+    --pad: clamp(1.15rem,4vw,3rem);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:#081A20; --surface:#0E262E; --surface-2:#143039;
+      --ink:#E2EAE9; --ink-2:#9BB2B7; --ink-3:#78949B;
+      --rule:#23444E; --rule-soft:#1A353E;
+      --accent:#58B9C2; --signal:#F08340; --good:#6FC494; --warn:#D9A63C;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:#081A20; --surface:#0E262E; --surface-2:#143039;
+    --ink:#E2EAE9; --ink-2:#9BB2B7; --ink-3:#78949B;
+    --rule:#23444E; --rule-soft:#1A353E;
+    --accent:#58B9C2; --signal:#F08340; --good:#6FC494; --warn:#D9A63C;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);
+       font-size:1.02rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:52rem;margin:0 auto;padding:0 var(--pad)}
+
+  header.top{border-bottom:1px solid var(--rule);padding:clamp(2.5rem,7vw,4.5rem) 0 clamp(1.5rem,4vw,2.25rem)}
+  .eyebrow{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;
+           color:var(--ink-3);margin-bottom:1.4rem}
+  h1{font-family:var(--f-display);font-weight:700;font-size:clamp(2.1rem,6.5vw,3.4rem);
+     line-height:1;letter-spacing:-.022em;margin:0 0 1rem;text-wrap:balance}
+  .standfirst{font-size:clamp(1.03rem,2.3vw,1.18rem);color:var(--ink-2);margin:0;max-width:46ch}
+  .standfirst strong{color:var(--ink);font-weight:600}
+
+  section{padding:clamp(2.25rem,6vw,3.5rem) 0;border-bottom:1px solid var(--rule-soft)}
+  h2{font-family:var(--f-display);font-weight:600;font-size:clamp(1.4rem,3.6vw,1.9rem);
+     line-height:1.1;letter-spacing:-.015em;margin:0 0 1.1rem;text-wrap:balance;
+     display:flex;gap:.85rem;align-items:baseline}
+  .stepno{font-family:var(--f-mono);font-size:.78rem;color:var(--signal);flex:0 0 auto;
+          letter-spacing:.06em;padding-top:.3rem}
+  h3{font-family:var(--f-display);font-weight:600;font-size:1.08rem;margin:1.9rem 0 .6rem}
+  h4{font-family:var(--f-mono);font-weight:500;font-size:.7rem;letter-spacing:.13em;
+     text-transform:uppercase;color:var(--ink-3);margin:1.7rem 0 .55rem}
+  p{margin:0 0 .95rem}
+  a{color:var(--accent);text-underline-offset:2px}
+  ul,ol{margin:0 0 1.05rem;padding-left:1.2rem}
+  li{margin-bottom:.42rem}
+  li::marker{color:var(--ink-3)}
+  code{font-family:var(--f-mono);font-size:.85em;background:var(--surface-2);
+       padding:.1em .34em;border-radius:2px}
+  pre{font-family:var(--f-mono);font-size:.8rem;line-height:1.6;background:var(--surface);
+      border:1px solid var(--rule);border-left:2px solid var(--accent);
+      padding:.85rem 1rem;overflow-x:auto;margin:1rem 0}
+  pre code{background:none;padding:0;font-size:inherit}
+  .lede{font-size:1.05rem;color:var(--ink-2)}
+  .lede strong{color:var(--ink);font-weight:600}
+
+  .callout{border-left:2px solid var(--signal);background:var(--surface);
+           padding:.9rem 1.1rem;margin:1.4rem 0;font-size:.95rem}
+  .callout p:last-child{margin-bottom:0}
+  .callout h4{margin-top:0;color:var(--signal)}
+  .callout.ok{border-left-color:var(--good)}
+  .callout.ok h4{color:var(--good)}
+
+  .scroller{overflow-x:auto;margin:1.2rem 0 1.5rem;border:1px solid var(--rule);background:var(--surface)}
+  table{border-collapse:collapse;width:100%;font-size:.86rem}
+  thead th{font-family:var(--f-mono);font-weight:500;font-size:.64rem;letter-spacing:.11em;
+           text-transform:uppercase;color:var(--ink-3);text-align:left;padding:.62rem .8rem;
+           border-bottom:1px solid var(--rule);background:var(--surface-2);white-space:nowrap}
+  tbody td{padding:.58rem .8rem;border-bottom:1px solid var(--rule-soft);vertical-align:top}
+  tbody tr:last-child td{border-bottom:0}
+  td.mono{font-family:var(--f-mono);font-size:.79rem;white-space:nowrap}
+
+  .checklist{list-style:none;padding-left:0}
+  .checklist li{padding-left:1.7rem;position:relative;margin-bottom:.55rem}
+  .checklist li::before{content:"";position:absolute;left:0;top:.42em;width:.78rem;height:.78rem;
+    border:1px solid var(--ink-3);border-radius:2px}
+
+  footer.end{padding:2.5rem 0 4rem;color:var(--ink-3);font-family:var(--f-mono);
+             font-size:.7rem;letter-spacing:.1em;text-transform:uppercase}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <div class="eyebrow">Meridian Logistics Analytics · Day Zero</div>
+    <h1>Start here</h1>
+    <p class="standfirst">Everything you need to do before Monday, assuming <strong>no prior setup and no assumed knowledge</strong>. Roughly two hours, most of it waiting for installers.</p>
+  </div>
+</header>
+
+<main>
+
+<section>
+  <div class="wrap">
+    <h2><span class="stepno">00</span>What you actually have</h2>
+    <p class="lede">Before the steps, the picture — because it is much easier to follow instructions when you know what they are building towards.</p>
+
+    <p>You are building a <strong>portfolio project</strong> that stands in for real work experience. It has three parts:</p>
+    <ol>
+      <li><strong>A fake but realistic logistics company</strong> called Meridian Global Logistics. It ships containers by sea, moves them by truck and rail, runs warehouses, and flies air freight. None of it is real, but all of it behaves like the real thing.</li>
+      <li><strong>7.5 million rows of its operating data</strong>, generated by a Python program on your machine. Because a program makes it, you can regenerate it, make it bigger, or change how it behaves — and you can explain exactly why every number looks the way it does. That is a much stronger interview position than "I downloaded a spreadsheet".</li>
+      <li><strong>A six-week course</strong> that teaches you to model that data properly in Power BI and build five dashboards from it.</li>
+    </ol>
+
+    <p>The reason this works is that the data is not random. It has a Lunar New Year slump, a peak season, a nine-week port congestion crisis in 2025, and a night shift that makes more picking errors than the day shift. Those things are hidden in the numbers, and finding them is the training.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="stepno">01</span>Install five things</h2>
+    <p class="lede">Do these in any order. Two are large downloads, so start them first and read on while they run.</p>
+
+    <div class="scroller">
+      <table>
+        <thead><tr><th>What</th><th>Why you need it</th><th>Where</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Power BI Desktop</strong></td><td>The main tool. Free forever, no account needed to build locally.</td><td>Microsoft Store, or <a href="https://powerbi.microsoft.com/desktop/">powerbi.microsoft.com/desktop</a></td></tr>
+          <tr><td><strong>Python 3.12</strong></td><td>Runs the data generator. Tick <em>"Add python.exe to PATH"</em> in the installer — this matters.</td><td><a href="https://www.python.org/downloads/">python.org/downloads</a></td></tr>
+          <tr><td><strong>DAX Studio</strong></td><td>Shows you what your measures actually do and how slow they are. You meet it in Week 3.</td><td><a href="https://daxstudio.org">daxstudio.org</a></td></tr>
+          <tr><td><strong>Tabular Editor 2</strong></td><td>Free. Lets you edit the model as text instead of clicking. Week 2 onwards.</td><td><a href="https://tabulareditor.com">tabulareditor.com</a></td></tr>
+          <tr><td><strong>Git</strong></td><td>Saves a snapshot of your work each day, so you can never lose it and can show progress.</td><td><a href="https://git-scm.com/download/win">git-scm.com</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <h4>The one that trips everyone</h4>
+      <p>When the Python installer opens, there is a checkbox at the bottom of the first screen: <strong>"Add python.exe to PATH"</strong>. Tick it. If you miss it, the commands in Step 3 will say <code>'python' is not recognized</code>, and the fix is to re-run the installer and choose Modify.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="stepno">02</span>Unpack the project</h2>
+    <p>The project archive is already on your machine, in your <code>Data</code> folder. Unpack it in place.</p>
+    <p>Open <strong>PowerShell</strong> (press Start, type <code>powershell</code>, hit Enter) and paste these two lines, one at a time:</p>
+<pre><code>cd "$HOME\Data\Meridian-Logistics-Analytics"
+tar -xzf meridian-phase2.tar.gz</code></pre>
+    <p>Windows 10 and 11 both ship with <code>tar</code>, so this works without installing anything. When it finishes, you should have these folders:</p>
+
+    <div class="scroller">
+      <table>
+        <thead><tr><th>Folder</th><th>What lives in it</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">00_docs</td><td>The schema contract, the KPI dictionary, this guide, and design decision records. Reference material.</td></tr>
+          <tr><td class="mono">01_generator</td><td>The Python program that makes the data.</td></tr>
+          <tr><td class="mono">02_data</td><td>Where the data lands. Empty until you run Step 3.</td></tr>
+          <tr><td class="mono">03_powerbi</td><td>Your Power BI files will live here.</td></tr>
+          <tr><td class="mono">04_learning</td><td>The 36 daily lessons, and a separate <code>solutions</code> folder. Don't peek.</td></tr>
+          <tr><td class="mono">05_sql</td><td>The SQL practice track. Week 5.</td></tr>
+          <tr><td class="mono">06_portfolio</td><td>Empty for now. Your case study and README end up here.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="stepno">03</span>Generate the data</h2>
+    <p class="lede">This is the step that turns an empty folder into 7.5 million rows spanning five years. It takes about <strong>three minutes</strong> of computer time.</p>
+
+    <p><strong>The short version.</strong> From the project root, run
+    <code>.\SETUP.ps1</code> and walk away. It makes the virtual environment,
+    installs the libraries, and runs every step below in order, stopping if any of
+    them fails. That is all you need.</p>
+
+    <p>The rest of this section is what <code>SETUP.ps1</code> actually does, because
+    you should know what it did before you trust its output. Read it; you do not have
+    to type it.</p>
+
+    <p>Still in PowerShell, from the same folder:</p>
+<pre><code>cd 01_generator
+pip install -r requirements.txt
+python build_dims.py --scale prod
+python revise_voyage_rotations.py
+python build_facts.py --scale prod
+python validate.py
+python audit.py
+python crosscheck.py
+python live_feed.py</code></pre>
+
+    <p>What each line does, in order:</p>
+    <ul>
+      <li><code>pip install</code> — fetches the four Python libraries the generator needs.</li>
+      <li><code>build_dims.py</code> — creates the 19 <em>dimension</em> tables: the lists of ports, customers, vessels, containers, and so on. About 20 seconds.</li>
+      <li><code>revise_voyage_rotations.py</code> — lengthens each shipping service's port rotation to a realistic 10–20 calls. Must run before the next step; there is a written explanation of why in <code>00_docs/ADR</code>.</li>
+      <li><code>build_facts.py</code> — creates the 11 <em>fact</em> tables: the actual bookings, shipments, container movements, invoices, truck trips and warehouse tasks. About 100 seconds.</li>
+      <li><code>validate.py</code> — checks the result against the 14 quality rules the schema contract sets.</li>
+      <li><code>audit.py</code> — a second, adversarial pass that checks 67 things the contract does <em>not</em> state: unique keys, dates that can't run backwards, arithmetic that has to balance. Written to try to break the data rather than confirm it.</li>
+      <li><code>crosscheck.py</code> — a third pass on what the other two both miss: relationships <em>between</em> tables (does a demurrage charge tie back to a container that actually overstayed?), statistical fingerprints of synthetic generation, whether every dimension member is really used, and whether the live feed's rows are distributionally continuous with the history they extend.</li>
+      <li><code>live_feed.py</code> — brings the data up to today and, from then on, adds one new day each time it runs.</li>
+    </ul>
+
+    <div class="callout ok">
+      <h4>How you know it worked</h4>
+      <p><code>validate.py</code> should finish with <strong><code>14/14 gates passed</code></strong>, and both <code>audit.py</code> and <code>crosscheck.py</code> with <strong><code>0 errors</code></strong>. If it does, your data is correct: every key resolves, every container number has a valid ISO 6346 check digit, invoices reconcile to shipment revenue, and the congestion crisis is present at the right magnitude. If any gate fails, send me the output and I will fix it — do not start Week 1 on data that fails validation.</p>
+    </div>
+
+    <h4>Dimension and fact — the only jargon you need today</h4>
+    <p>A <strong>fact</strong> table records things that <em>happened</em>: a booking was placed, a container was loaded, an invoice line was raised. It is long and thin, mostly numbers and ID codes, and it grows forever.</p>
+    <p>A <strong>dimension</strong> table describes the things involved: which port, which customer, which type of container. It is short and wide, mostly text, and it barely grows.</p>
+    <p>Nearly everything in Week 1 comes back to keeping those two straight. You do not need to understand it deeply yet — Day 3 spends three hours on it.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="stepno">04</span>Take the baseline test</h2>
+    <p>Before you learn anything, measure where you are. Open <code>04_learning/week1/D07-checkpoint-1.md</code>, and answer the 25 questions <strong>cold, without reading anything first</strong>.</p>
+    <p>You will do badly. That is the entire point — you will sit the same test at the end of Week 1, and the gap between the two scores is the only honest evidence that the week worked. Write your score in a file called <code>04_learning/progress.md</code> and leave it alone.</p>
+    <div class="callout">
+      <h4>Do not read the solutions folder</h4>
+      <p><code>04_learning/solutions/</code> has full worked answers for every day. It exists so you can check yourself <em>after</em> attempting something. Reading it first feels productive and teaches you nothing — it is the single easiest way to waste these six weeks.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="stepno">05</span>Set up the daily habit</h2>
+    <p class="lede">Every weekday session is the same five blocks, about two and a half hours. The shape matters more than the total.</p>
+
+    <div class="scroller">
+      <table>
+        <thead><tr><th>Minutes</th><th>Block</th><th>What you do</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">10</td><td>Recall</td><td>Six questions from earlier days, closed book. Painful and effective.</td></tr>
+          <tr><td class="mono">35</td><td>Concept</td><td>Read the day's lesson. Take notes in your own words, not mine.</td></tr>
+          <tr><td class="mono">60</td><td>Drill</td><td>The exercises. Write your predicted answer <em>before</em> running anything.</td></tr>
+          <tr><td class="mono">50</td><td>Ship</td><td>Build the day's artefact and commit it.</td></tr>
+          <tr><td class="mono">15</td><td>Log</td><td>Three lines: what clicked, what didn't, what to re-ask tomorrow.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Weekends are longer — four to five hours — because the dashboard builds need uninterrupted time. Day 7 of each week is a short checkpoint.</p>
+
+    <h4>Committing your work</h4>
+    <p>Once, at the start:</p>
+<pre><code>cd "$HOME\Data\Meridian-Logistics-Analytics"
+git init
+git add .
+git commit -m "Day 0: project setup and data generated"</code></pre>
+    <p>Then at the end of every session:</p>
+<pre><code>git add .
+git commit -m "Day 4: curated layer built in Power Query"</code></pre>
+    <p>This is not bureaucracy. Six weeks of daily commits is visible evidence of consistency, and it means a mistake is never unrecoverable.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="stepno">06</span>Monday morning</h2>
+    <p>Open <code>04_learning/week1/D01-domain-foundations.md</code> and work through it.</p>
+    <p>Day 1 is pure domain knowledge — what a carrier actually sells, how a booking becomes a shipment becomes a container becomes a bill of lading, why demurrage and detention exist, what headhaul and backhaul mean. <strong>No Power BI, no data, no code.</strong> Just the vocabulary that makes you sound like someone who has worked in shipping.</p>
+    <p>Days 1, 2 and 3 need no data at all. Day 4 is where you first load the Parquet files into Power BI.</p>
+
+    <h4>The six days of Week 1</h4>
+    <ul class="checklist">
+      <li><strong>D1</strong> — Domain foundations: the language of container shipping</li>
+      <li><strong>D2</strong> — Code systems: UN/LOCODE, ISO 6346, HS codes, Incoterms 2020</li>
+      <li><strong>D3</strong> — Dimensional modelling: grain, facts, dimensions, star schemas</li>
+      <li><strong>D4</strong> — Power Query: loading and cleaning the raw Parquet</li>
+      <li><strong>D5</strong> — Relationships: wiring the star schema together</li>
+      <li><strong>D6</strong> — Dates and slowly changing dimensions</li>
+      <li><strong>D7</strong> — Checkpoint: the 25 questions again, plus explaining your model aloud</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="stepno">07</span>Keeping it live</h2>
+    <p class="lede">The five years of history are <strong>frozen</strong>. Everything from today onwards arrives one day at a time, and the history can never be altered by it.</p>
+
+    <p>Run this whenever you like — once a day, or once a week:</p>
+<pre><code>python live_feed.py</code></pre>
+    <p>It works out which days are missing and appends only those. Run it twice in one day and the second run does nothing. Leave it a fortnight and it fills the fortnight in, one day at a time.</p>
+
+    <h4>Why it cannot corrupt what you already have</h4>
+    <ul>
+      <li><strong>Append-only.</strong> New rows go into new files named for the date they carry, like <code>part-20260827-00.parquet</code>. The code has no path that opens an existing file.</li>
+      <li><strong>Date-seeded.</strong> Each day's rows come from a seed derived from that date. So 27 August always produces the same rows, whether you generate it on the day or backfill it a month later.</li>
+      <li><strong>Reproducible from the seed alone.</strong> The whole build was run twice, in separate processes, and all 689 data files came out byte-for-byte identical. That is why this package ships the generator rather than 515 MB of data files: running it gives you the dataset that was verified, not a lookalike. It was not always true — see <code>00_docs/ADR/ADR-002-build-determinism.md</code> for the bug that broke it and how it was found.</li>
+      <li><strong>Individually reversible.</strong> <code>python live_feed.py --redo 2026-08-27</code> removes exactly that one day. Its neighbours are untouched, and regenerating it gives byte-identical rows back.</li>
+      <li><strong>Self-checking.</strong> After each day it re-reads the tables and refuses to continue if it finds a duplicate key. You get told on the run that caused it, not three weeks later in a dashboard.</li>
+    </ul>
+
+    <h4>Want a lot of data quickly?</h4>
+    <p>Don't wait for the calendar. Drive it forward directly:</p>
+<pre><code>python live_feed.py --until 2026-12-31</code></pre>
+    <p>That's about four months of daily data in roughly four minutes, and it is identical to what you'd have got by waiting four months.</p>
+
+    <h4>Making it automatic</h4>
+    <p>Windows Task Scheduler is the simplest route and costs nothing — create a one-line <code>.bat</code> that calls <code>live_feed.py</code>, then schedule it daily. Because the script works out what's missing rather than assuming it ran yesterday, it doesn't matter if your machine was asleep.</p>
+    <p>The GitHub Actions route, which also gives you a real HTTPS endpoint Power BI can read, is Week 5. <code>00_docs/LIVE_FEED.md</code> has both setups written out, plus the licensing traps worth avoiding.</p>
+
+    <div class="callout">
+      <h4>Useful commands</h4>
+      <p style="font-family:var(--f-mono); font-size:.8rem; line-height:1.9; margin:0;">
+      live_feed.py --status &nbsp;&nbsp;what's been appended so far<br>
+      live_feed.py --until DATE &nbsp;fast-forward to a date<br>
+      live_feed.py --redo DATE &nbsp;&nbsp;undo one day<br>
+      live_feed.py --reset &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;remove all appended days, keep history
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="stepno">08</span>When something breaks</h2>
+
+    <div class="scroller">
+      <table>
+        <thead><tr><th>Symptom</th><th>Cause and fix</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">'python' is not recognized</td><td>Python isn't on PATH. Re-run the installer, choose Modify, tick "Add python.exe to PATH", restart PowerShell.</td></tr>
+          <tr><td class="mono">'pip' is not recognized</td><td>Same cause. Or use <code>python -m pip install -r requirements.txt</code> instead.</td></tr>
+          <tr><td class="mono">ModuleNotFoundError: pyarrow</td><td>The <code>pip install</code> step didn't complete. Run it again and read the output for the real error.</td></tr>
+          <tr><td class="mono">DimVoyage rotations average…</td><td>You skipped <code>revise_voyage_rotations.py</code>. Run it, then <code>build_facts.py</code> again.</td></tr>
+          <tr><td class="mono">MemoryError during build_facts</td><td>Close Chrome and Power BI, then use <code>--scale dev</code> instead of <code>--scale prod</code>. That gives 1M rows, which is fine for Weeks 1–2.</td></tr>
+          <tr><td class="mono">Power BI is very slow</td><td>Expected at 5.5M rows on first load, and Week 3 Day 20 is entirely about fixing it. Use the <code>dev</code> dataset while learning.</td></tr>
+          <tr><td class="mono">Fewer than 14 gates pass</td><td>Send me the <code>validate.py</code> output. Don't work around it.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4>Rerunning from scratch</h4>
+    <p>The generator is seeded, which means it produces <em>identical</em> data every time. So deleting <code>02_data</code> and rerunning the four commands is always safe, and always gives you the same numbers back. Nothing you do to the data is irreversible.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2><span class="stepno">08</span>Today's checklist</h2>
+    <ul class="checklist">
+      <li>Power BI Desktop, Python 3.12 (with PATH ticked), DAX Studio, Tabular Editor 2, Git installed</li>
+      <li>Archive unpacked in <code>Data\Meridian-Logistics-Analytics</code></li>
+      <li>Four generator commands run</li>
+      <li><code>validate.py</code> reports 14/14 gates; <code>audit.py</code> and <code>crosscheck.py</code> both report 0 errors</li>
+      <li>Baseline test taken cold, score written in <code>04_learning/progress.md</code></li>
+      <li><code>git init</code> and a first commit made</li>
+      <li><code>D01-domain-foundations.md</code> open and ready for Monday</li>
+    </ul>
+    <p>That's Day Zero. Everything after this is in the daily modules.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="end">
+  <div class="wrap">Meridian Global Logistics is a fictional operator created for portfolio use · Day Zero guide · 21 Aug 2026</div>
+</footer>

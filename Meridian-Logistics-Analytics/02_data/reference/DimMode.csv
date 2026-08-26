@@ -1,0 +1,9 @@
+ModeCode,ModeName,ModeGroup,IsConsolidated,ChargeableWeightRule,TypicalTransitDaysBand,Co2GramsPerTonneKm,SortOrder,ModeKey
+#NA,Unknown,#NA,0,#NA,#NA,0.0,8,-1
+FCL,Full Container Load,Ocean,0,Ocean 1:1000,15-35 days,11.0,1,1
+LCL,Less than Container Load,Ocean,1,Ocean 1:1000,18-40 days,16.0,2,2
+AIR,Air Freight,Air,0,Air 1:6000,1-5 days,500.0,3,3
+ROA,Road Freight,Land,0,Actual Weight,1-7 days,62.0,4,4
+RAI,Rail Freight,Land,0,Actual Weight,3-10 days,22.0,5,5
+BAR,Barge / Inland Waterway,Land,0,Actual Weight,2-6 days,31.0,6,6
+MMD,Multimodal,Multimodal,1,Actual Weight,5-20 days,80.0,7,7

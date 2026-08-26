@@ -1,0 +1,23 @@
+CurrencyCode,CurrencyName,CurrencySymbol,DecimalPlaces,IsReportingCurrency,RegionUsed,CurrencyKey
+#NA,Unknown,#NA,0,0,#NA,-1
+USD,US Dollar,$,2,1,North America,1
+EUR,Euro,€,2,0,Europe,2
+GBP,British Pound,£,2,0,Europe,3
+CNY,Chinese Yuan,¥,2,0,East Asia,4
+JPY,Japanese Yen,¥,0,0,East Asia,5
+KRW,South Korean Won,₩,0,0,East Asia,6
+INR,Indian Rupee,₹,2,0,South Asia,7
+SGD,Singapore Dollar,S$,2,0,SE Asia,8
+HKD,Hong Kong Dollar,HK$,2,0,East Asia,9
+MYR,Malaysian Ringgit,RM,2,0,SE Asia,10
+THB,Thai Baht,฿,2,0,SE Asia,11
+VND,Vietnamese Dong,₫,0,0,SE Asia,12
+IDR,Indonesian Rupiah,Rp,0,0,SE Asia,13
+AED,UAE Dirham,AED,2,0,Middle East,14
+SAR,Saudi Riyal,SAR,2,0,Middle East,15
+AUD,Australian Dollar,A$,2,0,Oceania,16
+NZD,New Zealand Dollar,NZ$,2,0,Oceania,17
+BRL,Brazilian Real,R$,2,0,LatAm East,18
+MXN,Mexican Peso,MX$,2,0,LatAm West,19
+ZAR,South African Rand,R,2,0,Africa,20
+TRY,Turkish Lira,₺,2,0,Mediterranean,21

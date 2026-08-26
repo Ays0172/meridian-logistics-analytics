@@ -1,0 +1,409 @@
+{
+  "checks": 67,
+  "errors": 0,
+  "warnings": 1,
+  "findings": [
+    {
+      "check": "FactBooking.BookingKey unique",
+      "pass": true,
+      "detail": "0 duplicates in 573,300 rows",
+      "severity": "error"
+    },
+    {
+      "check": "FactShipment.ShipmentKey unique",
+      "pass": true,
+      "detail": "0 duplicates in 491,400 rows",
+      "severity": "error"
+    },
+    {
+      "check": "FactShipmentMilestone.ShipmentKey unique",
+      "pass": true,
+      "detail": "0 duplicates in 491,400 rows",
+      "severity": "error"
+    },
+    {
+      "check": "FactContainerMove.ContainerMoveKey unique",
+      "pass": true,
+      "detail": "0 duplicates in 1,938,200 rows",
+      "severity": "error"
+    },
+    {
+      "check": "FactPortCall.PortCallKey unique",
+      "pass": true,
+      "detail": "0 duplicates in 131,000 rows",
+      "severity": "error"
+    },
+    {
+      "check": "FactFreightCharge.ChargeLineKey unique",
+      "pass": true,
+      "detail": "0 duplicates in 1,610,600 rows",
+      "severity": "error"
+    },
+    {
+      "check": "FactTransportLeg.TransportLegKey unique",
+      "pass": true,
+      "detail": "0 duplicates in 436,800 rows",
+      "severity": "error"
+    },
+    {
+      "check": "FactWarehouseTask.WarehouseTaskKey unique",
+      "pass": true,
+      "detail": "0 duplicates in 736,820 rows",
+      "severity": "error"
+    },
+    {
+      "check": "FactInventorySnapshot.InventorySnapshotKey unique",
+      "pass": true,
+      "detail": "0 duplicates in 982,688 rows",
+      "severity": "error"
+    },
+    {
+      "check": "FactExchangeRate.ExchangeRateKey unique",
+      "pass": true,
+      "detail": "0 duplicates in 38,346 rows",
+      "severity": "error"
+    },
+    {
+      "check": "FactTarget.TargetKey unique",
+      "pass": true,
+      "detail": "0 duplicates in 51,900 rows",
+      "severity": "error"
+    },
+    {
+      "check": "FactShipment no negative measures",
+      "pass": true,
+      "detail": "clean",
+      "severity": "error"
+    },
+    {
+      "check": "FactContainerMove no negative measures",
+      "pass": true,
+      "detail": "clean",
+      "severity": "error"
+    },
+    {
+      "check": "FactPortCall no negative measures",
+      "pass": true,
+      "detail": "clean",
+      "severity": "error"
+    },
+    {
+      "check": "FactTransportLeg no negative measures",
+      "pass": true,
+      "detail": "clean",
+      "severity": "error"
+    },
+    {
+      "check": "FactWarehouseTask no negative measures",
+      "pass": true,
+      "detail": "clean",
+      "severity": "error"
+    },
+    {
+      "check": "FactInventorySnapshot no negative measures",
+      "pass": true,
+      "detail": "clean",
+      "severity": "error"
+    },
+    {
+      "check": "FactBooking no negative measures",
+      "pass": true,
+      "detail": "clean",
+      "severity": "error"
+    },
+    {
+      "check": "shipment: arrival not before departure",
+      "pass": true,
+      "detail": "0 violations",
+      "severity": "error"
+    },
+    {
+      "check": "shipment: delivery not before arrival",
+      "pass": true,
+      "detail": "0 violations",
+      "severity": "error"
+    },
+    {
+      "check": "shipment: ETA not before departure",
+      "pass": true,
+      "detail": "0 violations",
+      "severity": "error"
+    },
+    {
+      "check": "shipment: TransitVarianceDays = actual - planned",
+      "pass": true,
+      "detail": "0 mismatches",
+      "severity": "error"
+    },
+    {
+      "check": "booking: requested departure after booking date",
+      "pass": true,
+      "detail": "0 violations",
+      "severity": "error"
+    },
+    {
+      "check": "booking: LeadTimeDays matches the two dates",
+      "pass": true,
+      "detail": "0 mismatches",
+      "severity": "error"
+    },
+    {
+      "check": "port call: berth after arrival",
+      "pass": true,
+      "detail": "0 violations",
+      "severity": "error"
+    },
+    {
+      "check": "port call: departure after unberth",
+      "pass": true,
+      "detail": "0 violations",
+      "severity": "error"
+    },
+    {
+      "check": "port call: ArrivalDelayHours matches ATA - promised ETA",
+      "pass": true,
+      "detail": "max abs diff 0.0000 h",
+      "severity": "error"
+    },
+    {
+      "check": "port call: IsOnTimeArrival agrees with the +/-24h rule",
+      "pass": true,
+      "detail": "0 rows disagree of 131,000",
+      "severity": "error"
+    },
+    {
+      "check": "FactBooking.BookingDateKey within horizon",
+      "pass": true,
+      "detail": "0 rows after 2026-08-20",
+      "severity": "error"
+    },
+    {
+      "check": "FactShipment.ShipmentDateKey within horizon",
+      "pass": true,
+      "detail": "0 rows after 2026-08-20",
+      "severity": "warn"
+    },
+    {
+      "check": "FactContainerMove.EventDateKey within horizon",
+      "pass": true,
+      "detail": "0 rows after 2026-08-20",
+      "severity": "error"
+    },
+    {
+      "check": "FactPortCall.AtaDateKey within horizon",
+      "pass": true,
+      "detail": "0 rows after 2026-08-20",
+      "severity": "error"
+    },
+    {
+      "check": "FactFreightCharge.ChargeDateKey within horizon",
+      "pass": true,
+      "detail": "0 rows after 2026-08-20",
+      "severity": "error"
+    },
+    {
+      "check": "FactWarehouseTask.TaskDateKey within horizon",
+      "pass": true,
+      "detail": "0 rows after 2026-08-20",
+      "severity": "error"
+    },
+    {
+      "check": "FactInventorySnapshot.SnapshotDateKey within horizon",
+      "pass": true,
+      "detail": "0 rows after 2026-08-20",
+      "severity": "error"
+    },
+    {
+      "check": "FactShipment.BookingKey resolves to FactBooking",
+      "pass": true,
+      "detail": "0 orphans",
+      "severity": "error"
+    },
+    {
+      "check": "FactShipmentMilestone.ShipmentKey resolves or is -1",
+      "pass": true,
+      "detail": "0 orphans",
+      "severity": "error"
+    },
+    {
+      "check": "FactContainerMove.ShipmentKey resolves or is -1",
+      "pass": true,
+      "detail": "0 orphans",
+      "severity": "error"
+    },
+    {
+      "check": "FactFreightCharge.ShipmentKey resolves or is -1",
+      "pass": true,
+      "detail": "0 orphans",
+      "severity": "error"
+    },
+    {
+      "check": "FactTransportLeg.ShipmentKey resolves or is -1",
+      "pass": true,
+      "detail": "0 orphans",
+      "severity": "error"
+    },
+    {
+      "check": "FactWarehouseTask.ShipmentKey resolves or is -1",
+      "pass": true,
+      "detail": "0 orphans",
+      "severity": "error"
+    },
+    {
+      "check": "FactShipmentMilestone is 1:1 with FactShipment",
+      "pass": true,
+      "detail": "491,400 milestone rows vs 491,400 shipments",
+      "severity": "error"
+    },
+    {
+      "check": "shipment: revenue - cost = gross profit",
+      "pass": true,
+      "detail": "max abs diff 0.004",
+      "severity": "error"
+    },
+    {
+      "check": "shipment: GrossMarginPct = profit / revenue",
+      "pass": true,
+      "detail": "max abs diff 0.00000",
+      "severity": "error"
+    },
+    {
+      "check": "charge: Amount_doc x FxRateUsed = Amount_usd",
+      "pass": true,
+      "detail": "p99.9 relative error 0.00000",
+      "severity": "error"
+    },
+    {
+      "check": "charge: revenue + cost split equals amount",
+      "pass": true,
+      "detail": "max abs diff 0.0000",
+      "severity": "error"
+    },
+    {
+      "check": "charge: IsRevenue and IsCost are mutually exclusive",
+      "pass": true,
+      "detail": "0 rows violate",
+      "severity": "error"
+    },
+    {
+      "check": "transport: loaded + empty = distance",
+      "pass": true,
+      "detail": "max abs diff 0.0002 km",
+      "severity": "error"
+    },
+    {
+      "check": "transport: cost components sum to total",
+      "pass": true,
+      "detail": "max abs diff 0.0002",
+      "severity": "error"
+    },
+    {
+      "check": "inventory: allocated + available = on hand",
+      "pass": true,
+      "detail": "max abs diff 0",
+      "severity": "error"
+    },
+    {
+      "check": "inventory: IsStockout iff OnHandUnits = 0",
+      "pass": true,
+      "detail": "0 disagreements",
+      "severity": "error"
+    },
+    {
+      "check": "container move: Teu equals the equipment's TEU factor",
+      "pass": true,
+      "detail": "max abs diff 0.0000",
+      "severity": "error"
+    },
+    {
+      "check": "booking: TeuBooked = containers x TEU factor",
+      "pass": true,
+      "detail": "consistent",
+      "severity": "error"
+    },
+    {
+      "check": "port call: discharge + load = total moves",
+      "pass": true,
+      "detail": "0 mismatches",
+      "severity": "error"
+    },
+    {
+      "check": "port call: moves per crane-hour net is consistent",
+      "pass": true,
+      "detail": "max rel diff 0.00000",
+      "severity": "error"
+    },
+    {
+      "check": "exactly one current row per customer",
+      "pass": true,
+      "detail": "0 customers violate",
+      "severity": "error"
+    },
+    {
+      "check": "valid-from never after valid-to",
+      "pass": true,
+      "detail": "0 violations",
+      "severity": "error"
+    },
+    {
+      "check": "no overlapping validity windows",
+      "pass": true,
+      "detail": "0 overlaps",
+      "severity": "error"
+    },
+    {
+      "check": "shipments point at the customer version valid on that date",
+      "pass": true,
+      "detail": "39 temporally-invalid references (landmine #6 injects up to 47)",
+      "severity": "warn"
+    },
+    {
+      "check": "#3 casing/whitespace in LocationName",
+      "pass": true,
+      "detail": "147 rows",
+      "severity": "error"
+    },
+    {
+      "check": "#4 two spellings of one country",
+      "pass": true,
+      "detail": "2 country codes with >1 name",
+      "severity": "error"
+    },
+    {
+      "check": "#2 duplicated BookingNo",
+      "pass": true,
+      "detail": "312 duplicates",
+      "severity": "error"
+    },
+    {
+      "check": "#5 negative credit-note lines",
+      "pass": true,
+      "detail": "4815 negative lines",
+      "severity": "error"
+    },
+    {
+      "check": "#8 implausible vessel capacity outliers",
+      "pass": true,
+      "detail": "3 outliers",
+      "severity": "error"
+    },
+    {
+      "check": "#1 unset optional fields",
+      "pass": true,
+      "detail": "55.8% RevisedEtaDateKey unset",
+      "severity": "error"
+    },
+    {
+      "check": "no all-null columns",
+      "pass": true,
+      "detail": "none",
+      "severity": "error"
+    },
+    {
+      "check": "no unintentionally constant columns",
+      "pass": false,
+      "detail": "FactTarget.CurrencyKey=np.int32(1)",
+      "severity": "warn"
+    }
+  ]
+}

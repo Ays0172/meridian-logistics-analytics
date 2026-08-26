@@ -1,0 +1,107 @@
+MERIDIAN LOGISTICS ANALYTICS - package manifest
+Generated: 2026-08-21
+
+Every file shipped in the archive. 02_data/raw/ is NOT shipped - it is rebuilt
+byte-identically by setup_all.py from SEED = 20260824. Verified by building the
+unpacked archive from scratch and comparing all 699 partitions against the
+reference build: 699 identical, 0 different.
+
+Verify integrity after transfer:
+  Windows : Get-FileHash -Algorithm SHA256 <file>
+  Unix    : sha256sum <file>
+
+SHA-256 (first 16)      BYTES  PATH
+------------------------------------------------------------------------------
+605f2ae7b4e5e057          255  .gitignore
+aa36081846ceda42        3,694  00_docs/ADR/ADR-001-voyage-rotation-length.md
+7e523770d31faaf1        5,781  00_docs/ADR/ADR-002-build-determinism.md
+faacd4c255c7e562      116,293  00_docs/KPI_DICTIONARY.md
+187264e25597ee15        8,033  00_docs/LANDMINES.md
+4c15404e02cbcf1f        8,112  00_docs/LIVE_FEED.md
+60c750a3f3ac84c1       30,170  00_docs/SCHEMA_CONTRACT.md
+e142f2543d643270       24,908  00_docs/start-here.html
+3ed731b65d06150c           37  01_generator/.pytest_cache/.gitignore
+37dc88ef9a0abedd          191  01_generator/.pytest_cache/CACHEDIR.TAG
+73fd6fccdd802c41          302  01_generator/.pytest_cache/README.md
+449f7ef5249b8536        1,419  01_generator/.pytest_cache/v/cache/nodeids
+353ec1f9415949d9       19,475  01_generator/audit.py
+f90630ba9cda41ed        3,964  01_generator/build_dims.py
+1930266185470b27        6,992  01_generator/build_facts.py
+2a07f5b323741042        2,228  01_generator/config/scale.yaml
+0da86d2ed5eb3c47       17,036  01_generator/crosscheck.py
+f2a1e71c4ccff548       21,721  01_generator/live_feed.py
+8639478ce04e5547          258  01_generator/meridian/__init__.py
+cf80c35e8d93ad68        4,841  01_generator/meridian/config.py
+f58a47dd85eb069c      130,555  01_generator/meridian/dims.py
+07ca5845ae648e04       49,576  01_generator/meridian/dims_manifest.json
+5102daa35752a2e7        7,815  01_generator/meridian/factio.py
+2478218e201c2e88       54,365  01_generator/meridian/facts_core.py
+035cba68f95a084b       31,156  01_generator/meridian/facts_land.py
+981aa6f4491af48d       47,284  01_generator/meridian/facts_ops.py
+3444d37cc99180a2       11,586  01_generator/meridian/util.py
+f3d3c86eb5a46989          596  01_generator/requirements.txt
+db34144ad249aca2        6,892  01_generator/revise_voyage_rotations.py
+1318126068a6142e        4,923  01_generator/tests/test_determinism.py
+07255df60d660ccc        8,405  01_generator/tests/test_util.py
+a15ce22cc78ebfae       12,472  01_generator/validate.py
+58c8e5f4f1c91293       10,534  02_data/_validation/audit_report.json
+1781c33fa3cc0dd7          357  02_data/_validation/build_timings.json
+f83c80355f3a5ec0        7,600  02_data/_validation/crosscheck_report.json
+531fad9157f2bc31       10,833  02_data/_validation/facts_manifest.json
+801726c23b7c8267        2,454  02_data/_validation/integrity_report.json
+cee69bd19e47845a           43  02_data/curated/.gitkeep
+4650a87eeedc7ab0       15,488  02_data/reference/DimCarrier.csv
+6a643690af841de1        3,698  02_data/reference/DimChargeType.csv
+a4eb35b06af41bd3      148,856  02_data/reference/DimCommodity.csv
+9e4a754562b4be0a          922  02_data/reference/DimCurrency.csv
+4e59573c01c8cc6a      814,217  02_data/reference/DimCustomer.csv
+926e5f80bebc8264      325,555  02_data/reference/DimDate.csv
+fc3f625348b32ee2      126,442  02_data/reference/DimEmployee.csv
+e7821dbeda0022e2        7,966  02_data/reference/DimEquipment.csv
+a4190a214037a78f        1,107  02_data/reference/DimIncoterm.csv
+439311003b6beed5       56,925  02_data/reference/DimLocation.csv
+f7392c4d0221dae5        3,015  02_data/reference/DimMilestone.csv
+54114b1da06d86b0          587  02_data/reference/DimMode.csv
+0c69de615b6d5ae7          108  02_data/reference/DimScenario.csv
+524928eb5f9e48b7        3,838  02_data/reference/DimService.csv
+831ccb2423b10d1c    2,149,811  02_data/reference/DimSku.csv
+88c04889e70d9eb7       55,112  02_data/reference/DimTime.csv
+b616038345323253       28,199  02_data/reference/DimVessel.csv
+3fa643e4981f389c    1,618,861  02_data/reference/DimVoyage.csv
+be6013a96a3c7c80        3,496  02_data/reference/DimWarehouse.csv
+cee69bd19e47845a           43  03_powerbi/.gitkeep
+0d48a02ab412b7bc        9,831  04_learning/solutions/week1/D01-solutions.md
+f17d899d747c9322        8,569  04_learning/solutions/week1/D02-solutions.md
+402bde1aeb7b7e2e        9,945  04_learning/solutions/week1/D03-solutions.md
+029787a966e520d5        8,481  04_learning/solutions/week1/D04-solutions.md
+926b57d0535777ab        8,496  04_learning/solutions/week1/D05-solutions.md
+8dc9177bd32f914e        8,502  04_learning/solutions/week1/D06-solutions.md
+c86decd3a5cd81ae       19,291  04_learning/solutions/week1/D07-solutions.md
+b3d8fa1960833768        7,585  04_learning/solutions/week2/D08-solutions.md
+d3359ce95352e602        8,037  04_learning/solutions/week2/D09-solutions.md
+42713eb8e1bd3641       10,387  04_learning/solutions/week2/D10-solutions.md
+bceff319ce697686       12,939  04_learning/solutions/week2/D11-solutions.md
+28d2f536fe2f5783       28,701  04_learning/week1/D01-domain-foundations.md
+e2005ffad703c4fd       24,047  04_learning/week1/D02-code-systems.md
+f5065043eec737a3       22,919  04_learning/week1/D03-dimensional-modelling.md
+1bfa8e8150bec4f5       23,091  04_learning/week1/D04-power-query.md
+6aa3b2aea12d4b82       22,920  04_learning/week1/D05-relationships.md
+f258f0353b3bd049       21,567  04_learning/week1/D06-dates-and-scd2.md
+f0017b30caf4ff87       14,202  04_learning/week1/D07-checkpoint-1.md
+4886de6a0794516f        9,811  04_learning/week2/D08-row-and-filter-context.md
+19bff96502177e95       10,797  04_learning/week2/D09-calculate-and-the-averaging-trap.md
+2a5a25ba720da85c       10,010  04_learning/week2/D10-iterators-variables-weighted.md
+eef947fa55f0eefa       11,960  04_learning/week2/D11-time-intelligence.md
+f7dc71a40f7b731c        5,020  04_learning/week2/_reference_answers.json
+c7b6f42265635f55       14,048  04_learning/week2/build_reference_answers.py
+cee69bd19e47845a           43  04_learning/week3/.gitkeep
+cee69bd19e47845a           43  04_learning/week4/.gitkeep
+cee69bd19e47845a           43  04_learning/week5/.gitkeep
+cee69bd19e47845a           43  04_learning/week6/.gitkeep
+cee69bd19e47845a           43  05_sql/.gitkeep
+cee69bd19e47845a           43  06_portfolio/.gitkeep
+7314e00d85ba622c       17,907  README.md
+e253f68357398ce2        2,141  SETUP.ps1
+1da3d13ee0c2ad57        4,817  setup_all.py
+------------------------------------------------------------------------------
+91 files, 6,393,681 bytes (6.4 MB)

@@ -1,0 +1,277 @@
+{
+  "checks": 45,
+  "errors": 0,
+  "warnings": 1,
+  "findings": [
+    {
+      "check": "container journeys per shipment <= its ContainerCount",
+      "pass": true,
+      "detail": "0 shipments have more distinct boxes than containers booked",
+      "severity": "error"
+    },
+    {
+      "check": "container move TEU matches the shipment's per-box TEU",
+      "pass": true,
+      "detail": "0 of 213,823 shipments disagree",
+      "severity": "error"
+    },
+    {
+      "check": "every demurrage line ties to a container past free time",
+      "pass": true,
+      "detail": "0 of 22,709 demurrage lines unsupported",
+      "severity": "error"
+    },
+    {
+      "check": "every detention line ties to a container past free time",
+      "pass": true,
+      "detail": "0 of 39,480 unsupported",
+      "severity": "error"
+    },
+    {
+      "check": "slots used never exceed the vessel's nominal capacity",
+      "pass": true,
+      "detail": "0 of 131,296 calls over capacity",
+      "severity": "error"
+    },
+    {
+      "check": "SlotCapacityTeu equals the vessel's nominal capacity",
+      "pass": true,
+      "detail": "0 calls disagree",
+      "severity": "warn"
+    },
+    {
+      "check": "turnaround >= berth occupancy",
+      "pass": true,
+      "detail": "0 of 131,296 calls violate",
+      "severity": "error"
+    },
+    {
+      "check": "HS code hierarchy is internally consistent",
+      "pass": true,
+      "detail": "0 HsCode4 and 0 HsCode2 mismatches of 899",
+      "severity": "error"
+    },
+    {
+      "check": "dangerous goods all carry an IMDG class",
+      "pass": true,
+      "detail": "0 DG commodities with no class",
+      "severity": "error"
+    },
+    {
+      "check": "SKU price exceeds cost",
+      "pass": true,
+      "detail": "0 of 11,999 SKUs priced at or below cost",
+      "severity": "error"
+    },
+    {
+      "check": "SKU implied density is physically plausible (5-8000 kg/m3)",
+      "pass": true,
+      "detail": "0 of 11,999 SKUs outside range",
+      "severity": "warn"
+    },
+    {
+      "check": "equipment TeuFactor follows its length",
+      "pass": true,
+      "detail": "0 of 59 equipment types wrong",
+      "severity": "error"
+    },
+    {
+      "check": "FfeFactor is exactly half TeuFactor",
+      "pass": true,
+      "detail": "0 of 59 wrong",
+      "severity": "error"
+    },
+    {
+      "check": "max payload exceeds tare weight",
+      "pass": true,
+      "detail": "0 equipment types inverted",
+      "severity": "error"
+    },
+    {
+      "check": "vessel length correlates with capacity (excl. landmine #8 outliers)",
+      "pass": true,
+      "detail": "Pearson r = 0.933 over 237 vessels",
+      "severity": "error"
+    },
+    {
+      "check": "landmine #8 capacity outliers still present",
+      "pass": true,
+      "detail": "2 implausible-capacity vessels",
+      "severity": "error"
+    },
+    {
+      "check": "coordinates within valid earth bounds",
+      "pass": true,
+      "detail": "0 out of range",
+      "severity": "error"
+    },
+    {
+      "check": "UN/LOCODE prefix matches CountryCode",
+      "pass": true,
+      "detail": "0 of 419 locations disagree",
+      "severity": "error"
+    },
+    {
+      "check": "DimCommodity members used by FactShipment",
+      "pass": true,
+      "detail": "899/899 (100%)",
+      "severity": "warn"
+    },
+    {
+      "check": "DimLocation members used by FactShipment",
+      "pass": true,
+      "detail": "419/419 (100%)",
+      "severity": "warn"
+    },
+    {
+      "check": "DimCarrier members used by FactShipment",
+      "pass": true,
+      "detail": "45/179 (25%)",
+      "severity": "warn"
+    },
+    {
+      "check": "DimVessel members used by FactPortCall",
+      "pass": true,
+      "detail": "153/239 (64%)",
+      "severity": "warn"
+    },
+    {
+      "check": "DimSku members used by FactWarehouseTask",
+      "pass": true,
+      "detail": "11999/11999 (100%)",
+      "severity": "warn"
+    },
+    {
+      "check": "DimEmployee members used by FactWarehouseTask",
+      "pass": true,
+      "detail": "1799/1799 (100%)",
+      "severity": "warn"
+    },
+    {
+      "check": "DimChargeType members used by FactFreightCharge",
+      "pass": true,
+      "detail": "14/47 (30%)",
+      "severity": "warn"
+    },
+    {
+      "check": "DimEquipment members used by FactShipment",
+      "pass": true,
+      "detail": "59/59 (100%)",
+      "severity": "warn"
+    },
+    {
+      "check": "DimVoyage members used by FactPortCall",
+      "pass": true,
+      "detail": "9227/9269 (100%)",
+      "severity": "warn"
+    },
+    {
+      "check": "DimMilestone members used by FactContainerMove",
+      "pass": false,
+      "detail": "9/42 (21%)",
+      "severity": "warn"
+    },
+    {
+      "check": "cost per km has no single piled-up ceiling value",
+      "pass": true,
+      "detail": "max 3.451, 1 rows exactly at max, p99.9 3.290",
+      "severity": "warn"
+    },
+    {
+      "check": "FactShipment.Revenue_usd is right-skewed like real money",
+      "pass": true,
+      "detail": "skew = 2.57",
+      "severity": "error"
+    },
+    {
+      "check": "FactFreightCharge.RevenueAmount_usd is right-skewed like real money",
+      "pass": true,
+      "detail": "skew = 3.06",
+      "severity": "error"
+    },
+    {
+      "check": "no -1 sentinel in measure columns",
+      "pass": true,
+      "detail": "clean",
+      "severity": "error"
+    },
+    {
+      "check": "no integer column above 50% of its dtype range",
+      "pass": true,
+      "detail": "clean",
+      "severity": "warn"
+    },
+    {
+      "check": "live rows exist",
+      "pass": true,
+      "detail": "1,112 live shipment rows",
+      "severity": "error"
+    },
+    {
+      "check": "live vs history mean of Revenue_usd within 30%",
+      "pass": true,
+      "detail": "history 3938.741 vs live 4600.093 (+16.8%)",
+      "severity": "warn"
+    },
+    {
+      "check": "live vs history mean of Teu within 25%",
+      "pass": true,
+      "detail": "history 4.051 vs live 3.997 (+1.3%)",
+      "severity": "warn"
+    },
+    {
+      "check": "live vs history mean of GrossMarginPct within 15%",
+      "pass": true,
+      "detail": "history 0.180 vs live 0.183 (+1.8%)",
+      "severity": "warn"
+    },
+    {
+      "check": "live vs history mean of ActualTransitDays within 25%",
+      "pass": true,
+      "detail": "history 19.747 vs live 19.719 (+0.1%)",
+      "severity": "warn"
+    },
+    {
+      "check": "live vs history mean of ContainerCount within 25%",
+      "pass": true,
+      "detail": "history 2.398 vs live 2.346 (+2.1%)",
+      "severity": "warn"
+    },
+    {
+      "check": "live vs history rate of IsOnTime within 8pp",
+      "pass": true,
+      "detail": "history 0.918 vs live 0.914",
+      "severity": "warn"
+    },
+    {
+      "check": "live vs history rate of IsPerfectOrder within 8pp",
+      "pass": true,
+      "detail": "history 0.861 vs live 0.858",
+      "severity": "warn"
+    },
+    {
+      "check": "mode mix drift between history and live under 10%",
+      "pass": true,
+      "detail": "total variation distance 0.019",
+      "severity": "warn"
+    },
+    {
+      "check": "no dead weeks in the interior of the series",
+      "pass": true,
+      "detail": "0 interior weeks with zero bookings",
+      "severity": "error"
+    },
+    {
+      "check": "weekly volume variation is realistic (CV 0.05-0.45)",
+      "pass": true,
+      "detail": "coefficient of variation 0.147",
+      "severity": "error"
+    },
+    {
+      "check": "compound annual growth between 2 and 10%",
+      "pass": true,
+      "detail": "5.89% per year across [2022, 2023, 2024, 2025]",
+      "severity": "error"
+    }
+  ]
+}

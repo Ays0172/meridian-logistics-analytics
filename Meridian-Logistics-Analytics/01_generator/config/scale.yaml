@@ -1,0 +1,75 @@
+# Meridian Global Logistics -- scale dial
+#
+# Implements SCHEMA_CONTRACT.md SS0 "Scale dial". `prod` is the default.
+#
+# REVISION R2: history extended from 3.67 years (2023-01-01..2026-08-31) to a
+# full 5 years (2021-08-21..2026-08-20, ending yesterday so the live feed can
+# append from today). Every fact row count was scaled by 1.3636 to hold DAILY
+# intensity constant -- the dataset is longer, not denser. DimVoyage rose from
+# 6,800 to 9,270 because five years of weekly loops need more voyages, and
+# DimDate from 1,461 to 2,191 rows.
+#
+# Dimension row counts do not vary with `scale`.
+scales:
+  dev:
+    description: daily drills, fast refresh (~1.4 M fact rows)
+    facts:
+      FactBooking: 105100
+      FactShipment: 90100
+      FactShipmentMilestone: 90100
+      FactContainerMove: 354900
+      FactPortCall: 24000
+      FactFreightCharge: 295000
+      FactTransportLeg: 80000
+      FactWarehouseTask: 135000
+      FactInventorySnapshot: 179900
+      FactExchangeRate: 7000
+      FactTarget: 9600
+  prod:
+    description: default -- the portfolio dataset, 5 years of history (~7.5 M fact rows)
+    facts:
+      FactBooking: 573300
+      FactShipment: 491400
+      FactShipmentMilestone: 491400
+      FactContainerMove: 1938200
+      FactPortCall: 131000
+      FactFreightCharge: 1610600
+      FactTransportLeg: 436800
+      FactWarehouseTask: 737100
+      FactInventorySnapshot: 982700
+      FactExchangeRate: 38200
+      FactTarget: 51900
+  stress:
+    description: Week 5 performance work (~34 M fact rows)
+    facts:
+      FactBooking: 2624000
+      FactShipment: 2249400
+      FactShipmentMilestone: 2249400
+      FactContainerMove: 8871900
+      FactPortCall: 599200
+      FactFreightCharge: 7372400
+      FactTransportLeg: 1999600
+      FactWarehouseTask: 3374100
+      FactInventorySnapshot: 4498700
+      FactExchangeRate: 175000
+      FactTarget: 237500
+dimensions:
+  DimDate: 2191
+  DimTime: 1440
+  DimLocation: 420
+  DimCustomer: 4180
+  DimCarrier: 180
+  DimVessel: 240
+  DimVoyage: 9270
+  DimService: 44
+  DimEquipment: 60
+  DimCommodity: 900
+  DimIncoterm: 12
+  DimChargeType: 48
+  DimMilestone: 42
+  DimMode: 8
+  DimWarehouse: 26
+  DimSku: 12000
+  DimEmployee: 1800
+  DimCurrency: 22
+  DimScenario: 4

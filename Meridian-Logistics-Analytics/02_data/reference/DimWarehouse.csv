@@ -1,0 +1,27 @@
+WarehouseCode,WarehouseName,LocationKey,WarehouseType,GrossAreaSqm,StorageAreaSqm,PalletPositions,RackingType,DockDoorCount,HasTemperatureZones,TempZoneCount,ShiftPattern,WmsSystem,IsAutomated,CommissionedYear,OperatingModel,WarehouseKey
+#NA,Unknown,-1,#NA,0,0,0,#NA,0,0,0,#NA,#NA,0,0,#NA,-1
+WH-EGPOE-01,Alexandria Distribution Centre,308,Distribution Centre,18161,12446,4978,Push-Back,24,0,0,2-Shift,MERIDIAN-WMS,0,2008,Multi-User,1
+WH-DEIUF-01,Duisburg Distribution Centre,353,Distribution Centre,28487,20592,8237,Drive-In,22,0,0,2-Shift,MERIDIAN-WMS,0,2000,Multi-User,2
+WH-JPJNU-01,Tokyo Bonded Warehouse,328,Bonded Warehouse,30440,20145,8058,Cantilever,7,1,3,3-Shift,MERIDIAN-WMS,1,1995,Dedicated,3
+WH-BEZEK-01,Zeebrugge Bonded Warehouse,323,Bonded Warehouse,16066,13653,5461,Push-Back,28,1,2,Day Only,MERIDIAN-WMS,0,2012,Dedicated,4
+WH-NZFVZ-01,Wellington Cross-Dock,337,Cross-Dock,35567,25953,10381,Push-Back,14,0,0,Day Only,Client WMS,0,2010,Dedicated,5
+WH-CLKJV-01,Valparaiso Hazmat Store,326,Hazmat Store,45624,38428,15371,Cantilever,6,0,0,2-Shift,Legacy,1,2021,Dedicated,6
+WH-ITCMC-01,La Spezia Cold Store,321,Cold Store,23313,19495,7798,Drive-In,23,1,3,2-Shift,MERIDIAN-WMS,0,2016,Multi-User,7
+WH-JPNOA-01,Nagoya Cross-Dock,352,Cross-Dock,18151,14749,5900,Drive-In,14,0,0,Day Only,Legacy,0,2019,Multi-User,8
+WH-INFXG-01,Hyderabad Distribution Centre,361,Distribution Centre,46588,38170,15268,Bulk Floor Stack,15,0,0,2-Shift,MERIDIAN-WMS,0,2006,Multi-User,9
+WH-MXSVO-01,Tijuana Distribution Centre,335,Distribution Centre,44101,30915,12366,Drive-In,16,0,0,2-Shift,Legacy,0,2020,Dedicated,10
+WH-PELMX-01,Lima CFS,311,CFS,50745,35275,14110,Bulk Floor Stack,25,0,0,2-Shift,MERIDIAN-WMS,0,1998,Dedicated,11
+WH-AERMB-01,Sharjah Bonded Warehouse,314,Bonded Warehouse,52787,42218,16887,Push-Back,11,0,0,Day Only,MERIDIAN-WMS,0,1999,Dedicated,12
+WH-SGSNX-01,Jurong CFS,350,CFS,8684,6229,2492,Push-Back,29,0,0,Day Only,MERIDIAN-WMS,0,2005,Multi-User,13
+WH-BENGF-01,Zeebrugge Distribution Centre,362,Distribution Centre,44647,33239,13296,Bulk Floor Stack,29,0,0,3-Shift,Legacy,1,2023,Dedicated,14
+WH-SAMJQ-01,Riyadh Cold Store,329,Cold Store,15032,11874,4750,Push-Back,8,1,1,2-Shift,MERIDIAN-WMS,1,2003,Dedicated,15
+WH-NZUPX-01,Wellington Cold Store,324,Cold Store,21077,17776,7110,Cantilever,29,1,1,3-Shift,MERIDIAN-WMS,0,1998,Multi-User,16
+WH-JPNGY-01,Nagoya CFS,360,CFS,10261,8508,3403,Push-Back,14,0,0,3-Shift,Client WMS,0,1995,Dedicated,17
+WH-MAFPK-01,Casablanca Bonded Warehouse,356,Bonded Warehouse,53742,36342,14537,Drive-In,19,0,0,Day Only,Legacy,0,2021,Multi-User,18
+WH-ESWXB-01,Barcelona Cold Store,349,Cold Store,7305,5865,2346,Cantilever,11,1,1,3-Shift,MERIDIAN-WMS,0,2019,Dedicated,19
+WH-IDMDN-01,Medan Cold Store,318,Cold Store,50005,37420,14968,Push-Back,35,1,2,3-Shift,MERIDIAN-WMS,0,2014,Multi-User,20
+WH-MXWMA-01,Tijuana Hazmat Store,365,Hazmat Store,28182,21148,8459,Cantilever,30,0,0,3-Shift,MERIDIAN-WMS,0,2017,Dedicated,21
+WH-ESYBD-01,Bilbao Distribution Centre,345,Distribution Centre,41927,31189,12476,Drive-In,22,0,0,3-Shift,Client WMS,0,2017,Multi-User,22
+WH-CAHIX-01,Halifax Distribution Centre,347,Distribution Centre,57448,39642,15857,Push-Back,10,0,0,3-Shift,MERIDIAN-WMS,0,2005,Dedicated,23
+WH-GBTBY-01,Tilbury Hazmat Store,367,Hazmat Store,42697,30772,12309,Bulk Floor Stack,24,0,0,Day Only,Client WMS,0,1998,Dedicated,24
+WH-USATL-01,Atlanta Distribution Centre,342,Distribution Centre,18205,14643,5857,Selective,23,0,0,Day Only,MERIDIAN-WMS,0,2002,Multi-User,25

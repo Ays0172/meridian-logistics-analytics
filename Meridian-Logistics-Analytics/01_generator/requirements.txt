@@ -1,0 +1,15 @@
+# Meridian generator dependencies.
+#
+# Ranges, not exact pins. Exact pins fail on a fresh install whenever a wheel
+# for the running Python version is not published, which is the most common way
+# a first-time setup dies. Reproducibility of the seeded data does not depend on
+# the pin: numpy guarantees that a given BitGenerator and seed produce the same
+# stream across versions (NEP 19), and every random draw in this generator goes
+# through np.random.default_rng.
+numpy>=2.2,<3
+pandas>=2.2,<4
+pyarrow>=15
+PyYAML>=6
+
+# Optional, for running the check-digit unit tests:
+#   pip install pytest

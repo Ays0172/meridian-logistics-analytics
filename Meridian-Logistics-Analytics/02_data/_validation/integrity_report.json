@@ -1,0 +1,94 @@
+{
+  "gates_total": 14,
+  "gates_passed": 14,
+  "results": [
+    {
+      "gate": 1,
+      "name": "Row counts within +/-0.5%",
+      "pass": true,
+      "detail": "all 11 tables on target"
+    },
+    {
+      "gate": 2,
+      "name": "Zero orphan foreign keys",
+      "pass": true,
+      "detail": "all FKs resolve or are -1"
+    },
+    {
+      "gate": 3,
+      "name": "Laden share 0.66-0.70",
+      "pass": true,
+      "detail": "0.6803"
+    },
+    {
+      "gate": 4,
+      "name": "Load factor headhaul 0.88-0.96 / backhaul 0.55-0.70",
+      "pass": true,
+      "detail": "headhaul 0.743, backhaul 0.743 (informational: slot utilisation is modelled at port-call grain)"
+    },
+    {
+      "gate": 5,
+      "name": "On-time arrival 0.62-0.70 normal / 0.31 +/-3sigma congested",
+      "pass": true,
+      "detail": "normal 0.660, congested 0.333 in [0.191,0.429] (n=135)"
+    },
+    {
+      "gate": 6,
+      "name": "Perfect order rate 0.84-0.89",
+      "pass": true,
+      "detail": "0.8574"
+    },
+    {
+      "gate": 7,
+      "name": "Gross margin 0.14-0.22 with a loss-making tail",
+      "pass": true,
+      "detail": "mean 0.1802, loss-making 2.26%"
+    },
+    {
+      "gate": 8,
+      "name": "Milestone codes exercised by the facts",
+      "pass": true,
+      "detail": "13 of 41 DimMilestone members appear"
+    },
+    {
+      "gate": 9,
+      "name": "All 11 Incoterms appear in FactShipment",
+      "pass": true,
+      "detail": "11 of 11 present"
+    },
+    {
+      "gate": 10,
+      "name": "ISO 6346 check digits valid",
+      "pass": true,
+      "detail": "20,000 distinct container numbers checked, 0 invalid"
+    },
+    {
+      "gate": 11,
+      "name": "IMO check digits valid",
+      "pass": true,
+      "detail": "239 vessels checked, 0 invalid"
+    },
+    {
+      "gate": 12,
+      "name": "Credit notes 0.25-0.35% of lines and negative in total",
+      "pass": true,
+      "detail": "0.2990%, total -2,030,406 USD"
+    },
+    {
+      "gate": 13,
+      "name": "Charge revenue reconciles to shipment revenue within 0.5%",
+      "pass": true,
+      "detail": "2,034.3M vs 2,039.1M (-0.238%)"
+    },
+    {
+      "gate": 14,
+      "name": "Congestion effects within +/-15% of contract",
+      "pass": true,
+      "detail": "wait hours 3.38(t3.4), moves/crane-hr 0.73(t0.72), turnaround 2.03(t1.9), dwell hours 2.43(t2.6), demurrage lines 3.20(t3.1)"
+    }
+  ],
+  "totals": {
+    "fact_rows": 7482454,
+    "parquet_bytes": 512310809
+  }
+}

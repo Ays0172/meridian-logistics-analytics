@@ -1,0 +1,13 @@
+IncotermCode,IncotermName,IncotermGroup,ModeApplicability,SellerRiskEndsAt,WhoPaysMainCarriage,WhoInsures,IsSeaOnly,SortOrder,IncotermKey
+#NA,Unknown,#NA,#NA,#NA,#NA,#NA,0,99,-1
+EXW,Ex Works,E,Any Mode,Seller's Premises,Buyer,Not Required,0,1,1
+FCA,Free Carrier,F,Any Mode,Named Place (Carrier),Buyer,Not Required,0,2,2
+FAS,Free Alongside Ship,F,Sea and Inland Waterway,Alongside Vessel,Buyer,Not Required,1,3,3
+FOB,Free on Board,F,Sea and Inland Waterway,On Board Vessel,Buyer,Not Required,1,4,4
+CFR,Cost and Freight,C,Sea and Inland Waterway,On Board Vessel,Seller,Not Required,1,5,5
+CIF,"Cost, Insurance and Freight",C,Sea and Inland Waterway,On Board Vessel,Seller,Seller,1,6,6
+CPT,Carriage Paid To,C,Any Mode,First Carrier,Seller,Not Required,0,7,7
+CIP,Carriage and Insurance Paid To,C,Any Mode,First Carrier,Seller,Seller,0,8,8
+DAP,Delivered at Place,D,Any Mode,Named Destination,Seller,Not Required,0,9,9
+DPU,Delivered at Place Unloaded,D,Any Mode,"Named Destination, Unloaded",Seller,Not Required,0,10,10
+DDP,Delivered Duty Paid,D,Any Mode,"Named Destination, Duty Paid",Seller,Not Required,0,11,11

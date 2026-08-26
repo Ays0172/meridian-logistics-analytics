@@ -1,0 +1,1801 @@
+EmployeeCode,EmployeeName,WarehouseKey,RoleName,ShiftKey,ShiftName,EmploymentType,HireDate,TenureBand,IsCertifiedForklift,IsActive,EmployeeKey
+#NA,Unknown,-1,Unknown,-1,Unknown,#NA,9999-12-31,#NA,0,0,-1
+EMP00001,Ravi Sharma,21,Picker,3,C,Permanent,2020-12-21,5y+,0,1,1
+EMP00002,Ravi Mensah,9,Supervisor,2,B,Permanent,2022-04-18,2-5y,1,1,2
+EMP00003,Ravi Sharma,9,Packer,1,A,Permanent,2017-11-07,5y+,0,1,3
+EMP00004,Ingrid Torres,19,Receiver,3,C,Seasonal,2016-08-03,5y+,1,1,4
+EMP00005,Grace Costa,7,Picker,3,C,Permanent,2020-09-15,5y+,0,1,5
+EMP00006,Fatima Khalid,12,Receiver,3,C,Agency,2017-01-10,5y+,0,0,6
+EMP00007,Li Rossi,20,Team Lead,3,C,Permanent,2023-02-03,2-5y,0,1,7
+EMP00008,Maria Wang,15,Team Lead,3,C,Agency,2016-06-04,5y+,1,1,8
+EMP00009,Priya Rossi,20,Picker,1,A,Agency,2023-01-19,2-5y,0,1,9
+EMP00010,Marco Kumar,18,Packer,2,B,Agency,2020-03-02,5y+,0,1,10
+EMP00011,Siti Kumar,15,Team Lead,2,B,Permanent,2025-03-07,1-2y,0,1,11
+EMP00012,John Costa,3,Checker,1,A,Permanent,2024-12-18,1-2y,0,1,12
+EMP00013,Sofia Fernandes,15,Receiver,2,B,Agency,2024-12-21,1-2y,0,1,13
+EMP00014,Ingrid Rahman,25,Picker,2,B,Permanent,2017-12-25,5y+,0,1,14
+EMP00015,Ahmed Khalid,10,Packer,3,C,Permanent,2024-02-28,2-5y,0,1,15
+EMP00016,Sofia Wang,1,Forklift Operator,1,A,Seasonal,2016-10-21,5y+,1,1,16
+EMP00017,Ingrid Al-Amin,18,Packer,3,C,Seasonal,2022-06-17,2-5y,1,1,17
+EMP00018,Sofia Rahman,3,Receiver,1,A,Permanent,2018-02-04,5y+,0,1,18
+EMP00019,Marco Rossi,2,Checker,2,B,Permanent,2020-09-16,5y+,1,1,19
+EMP00020,Anita Mensah,13,Checker,2,B,Permanent,2018-10-27,5y+,0,1,20
+EMP00021,Ingrid Khalid,18,Packer,2,B,Permanent,2017-09-03,5y+,0,1,21
+EMP00022,Carlos Al-Amin,2,Team Lead,1,A,Permanent,2022-07-19,2-5y,0,1,22
+EMP00023,Ahmed Kumar,15,Forklift Operator,1,A,Agency,2026-08-05,<6m,1,1,23
+EMP00024,Ahmed Berg,18,Picker,1,A,Permanent,2025-05-09,1-2y,0,1,24
+EMP00025,Siti Kumar,14,Receiver,3,C,Agency,2020-04-22,5y+,0,1,25
+EMP00026,Anita Rahman,19,Checker,3,C,Agency,2025-03-21,1-2y,1,0,26
+EMP00027,Fatima Al-Amin,25,Packer,3,C,Permanent,2019-10-26,5y+,0,1,27
+EMP00028,Marco Wang,3,Packer,2,B,Agency,2024-04-19,2-5y,0,1,28
+EMP00029,Carlos Haddad,7,Packer,2,B,Permanent,2018-03-25,5y+,0,1,29
+EMP00030,John Nguyen,9,Team Lead,2,B,Agency,2023-05-03,2-5y,0,1,30
+EMP00031,Fatima Haddad,5,Picker,1,A,Seasonal,2019-07-30,5y+,0,1,31
+EMP00032,Kenji Torres,25,Picker,1,A,Permanent,2023-11-10,2-5y,0,1,32
+EMP00033,Maria Gomez,18,Picker,2,B,Permanent,2020-04-07,5y+,0,1,33
+EMP00034,Ingrid Kumar,3,Packer,2,B,Seasonal,2017-07-27,5y+,0,1,34
+EMP00035,Ravi Mensah,14,Picker,2,B,Agency,2025-01-24,1-2y,0,1,35
+EMP00036,Hassan Rossi,5,Packer,3,C,Agency,2020-12-10,5y+,0,1,36
+EMP00037,Priya Al-Amin,2,Forklift Operator,1,A,Permanent,2022-08-26,2-5y,1,0,37
+EMP00038,John Rossi,5,Packer,3,C,Seasonal,2018-11-18,5y+,0,1,38
+EMP00039,Sofia Zhang,10,Forklift Operator,3,C,Permanent,2020-04-22,5y+,1,1,39
+EMP00040,John Gomez,7,Picker,1,A,Permanent,2024-01-01,2-5y,1,1,40
+EMP00041,Ravi Costa,25,Supervisor,1,A,Permanent,2016-02-25,5y+,0,1,41
+EMP00042,Siti Rahman,11,Packer,3,C,Permanent,2020-01-14,5y+,0,1,42
+EMP00043,Maria Costa,6,Team Lead,3,C,Permanent,2018-11-20,5y+,0,1,43
+EMP00044,Carlos Silva,6,Packer,2,B,Permanent,2025-01-20,1-2y,0,1,44
+EMP00045,Sofia Kumar,18,Receiver,2,B,Agency,2021-07-13,5y+,0,1,45
+EMP00046,Anita Sharma,22,Picker,3,C,Agency,2024-03-13,2-5y,0,1,46
+EMP00047,Kenji Fernandes,21,Supervisor,1,A,Agency,2025-12-31,6-12m,0,1,47
+EMP00048,John Nguyen,9,Forklift Operator,2,B,Permanent,2018-09-16,5y+,1,1,48
+EMP00049,Ravi Costa,24,Packer,2,B,Permanent,2023-04-09,2-5y,0,1,49
+EMP00050,Diego Nguyen,23,Checker,2,B,Permanent,2022-11-04,2-5y,0,1,50
+EMP00051,Fatima Berg,5,Packer,3,C,Agency,2016-07-09,5y+,0,1,51
+EMP00052,Priya Berg,21,Picker,3,C,Seasonal,2021-02-03,5y+,0,1,52
+EMP00053,Wei Gomez,19,Packer,1,A,Agency,2019-09-11,5y+,0,1,53
+EMP00054,Ingrid Smith,18,Receiver,1,A,Seasonal,2018-02-03,5y+,0,1,54
+EMP00055,Diego Sato,21,Picker,1,A,Permanent,2016-06-04,5y+,0,1,55
+EMP00056,Carlos Costa,21,Receiver,2,B,Permanent,2023-11-19,2-5y,0,1,56
+EMP00057,Maria Fernandes,22,Picker,2,B,Permanent,2020-07-17,5y+,0,1,57
+EMP00058,John Nguyen,3,Packer,1,A,Permanent,2025-06-22,1-2y,0,1,58
+EMP00059,Anita Rahman,8,Receiver,2,B,Agency,2019-06-27,5y+,0,1,59
+EMP00060,Marco Fernandes,19,Checker,2,B,Agency,2021-11-20,2-5y,0,1,60
+EMP00061,Siti Sato,5,Forklift Operator,2,B,Permanent,2023-07-20,2-5y,1,1,61
+EMP00062,Li Costa,19,Picker,2,B,Seasonal,2024-05-03,2-5y,0,1,62
+EMP00063,Hassan Torres,23,Picker,2,B,Agency,2016-05-21,5y+,0,1,63
+EMP00064,Li Kumar,24,Receiver,2,B,Permanent,2018-12-19,5y+,0,1,64
+EMP00065,Sofia Silva,19,Supervisor,1,A,Permanent,2017-08-29,5y+,0,1,65
+EMP00066,Elena Costa,14,Forklift Operator,1,A,Permanent,2024-10-30,1-2y,1,1,66
+EMP00067,Hassan Silva,9,Team Lead,1,A,Agency,2018-07-24,5y+,0,1,67
+EMP00068,Carlos Torres,16,Picker,3,C,Agency,2026-07-07,<6m,0,1,68
+EMP00069,Elena Khalid,25,Packer,2,B,Permanent,2022-10-31,2-5y,0,1,69
+EMP00070,Elena Costa,12,Picker,3,C,Agency,2026-04-25,<6m,0,1,70
+EMP00071,Fatima Al-Amin,25,Packer,1,A,Permanent,2016-08-08,5y+,0,1,71
+EMP00072,Marco Rahman,8,Supervisor,2,B,Permanent,2016-09-26,5y+,0,1,72
+EMP00073,Fatima Torres,18,Forklift Operator,3,C,Seasonal,2017-11-23,5y+,1,1,73
+EMP00074,Priya Al-Amin,3,Picker,1,A,Agency,2017-11-25,5y+,0,1,74
+EMP00075,Hassan Nguyen,10,Forklift Operator,3,C,Agency,2022-03-17,2-5y,1,1,75
+EMP00076,Ingrid Rahman,6,Packer,1,A,Permanent,2018-02-06,5y+,0,1,76
+EMP00077,Li Novak,2,Receiver,2,B,Permanent,2020-07-17,5y+,0,1,77
+EMP00078,Priya Mensah,12,Forklift Operator,2,B,Permanent,2024-10-31,1-2y,1,1,78
+EMP00079,Ravi Rahman,2,Packer,2,B,Agency,2018-07-21,5y+,0,1,79
+EMP00080,Diego Berg,21,Team Lead,2,B,Permanent,2022-04-24,2-5y,0,1,80
+EMP00081,Kenji Haddad,15,Forklift Operator,3,C,Permanent,2021-12-28,2-5y,1,1,81
+EMP00082,Liam Wang,23,Forklift Operator,1,A,Seasonal,2025-10-29,6-12m,0,1,82
+EMP00083,Ingrid Al-Amin,17,Picker,1,A,Permanent,2020-10-22,5y+,0,1,83
+EMP00084,Wei Zhang,9,Picker,2,B,Agency,2024-03-25,2-5y,0,1,84
+EMP00085,Sofia Nguyen,13,Picker,1,A,Permanent,2016-04-06,5y+,0,1,85
+EMP00086,Wei Mensah,23,Packer,1,A,Permanent,2025-01-29,1-2y,0,1,86
+EMP00087,Maria Berg,25,Checker,2,B,Permanent,2019-03-13,5y+,0,0,87
+EMP00088,Marco Kumar,4,Picker,2,B,Permanent,2022-06-06,2-5y,0,0,88
+EMP00089,Ingrid Haddad,6,Packer,3,C,Permanent,2016-03-04,5y+,0,1,89
+EMP00090,Hassan Rossi,23,Picker,2,B,Seasonal,2021-01-07,5y+,0,1,90
+EMP00091,Ahmed Rahman,3,Picker,3,C,Agency,2019-01-18,5y+,0,1,91
+EMP00092,Wei Kumar,5,Receiver,1,A,Seasonal,2024-08-30,1-2y,0,1,92
+EMP00093,Elena Wang,25,Packer,1,A,Agency,2017-01-29,5y+,1,1,93
+EMP00094,John Wang,2,Checker,1,A,Permanent,2026-07-23,<6m,1,1,94
+EMP00095,Wei Al-Amin,13,Picker,2,B,Permanent,2026-02-06,6-12m,0,1,95
+EMP00096,Siti Gomez,12,Forklift Operator,2,B,Permanent,2017-04-29,5y+,1,1,96
+EMP00097,Maria Sharma,17,Picker,2,B,Permanent,2024-02-09,2-5y,0,1,97
+EMP00098,John Gomez,23,Picker,1,A,Permanent,2018-01-27,5y+,1,1,98
+EMP00099,John Sharma,4,Forklift Operator,2,B,Permanent,2016-03-20,5y+,1,1,99
+EMP00100,Priya Gomez,14,Supervisor,2,B,Permanent,2020-01-23,5y+,0,1,100
+EMP00101,John Torres,5,Team Lead,3,C,Permanent,2024-03-13,2-5y,0,0,101
+EMP00102,Elena Smith,21,Forklift Operator,1,A,Seasonal,2026-04-08,<6m,1,1,102
+EMP00103,Carlos Smith,20,Checker,2,B,Permanent,2017-07-18,5y+,0,1,103
+EMP00104,Liam Wang,10,Picker,1,A,Permanent,2026-03-31,<6m,1,1,104
+EMP00105,Diego Sato,2,Checker,3,C,Permanent,2024-04-10,2-5y,0,1,105
+EMP00106,Maria Novak,11,Forklift Operator,3,C,Permanent,2025-04-02,1-2y,1,1,106
+EMP00107,Maria Nguyen,15,Checker,2,B,Permanent,2016-01-29,5y+,0,1,107
+EMP00108,Ahmed Berg,23,Packer,3,C,Permanent,2021-10-23,2-5y,0,1,108
+EMP00109,Grace Rahman,13,Forklift Operator,2,B,Permanent,2019-11-24,5y+,1,1,109
+EMP00110,Carlos Rossi,11,Forklift Operator,2,B,Permanent,2024-10-14,1-2y,1,0,110
+EMP00111,Hassan Kumar,7,Forklift Operator,1,A,Permanent,2024-04-26,2-5y,1,1,111
+EMP00112,Maria Smith,10,Packer,1,A,Permanent,2024-09-28,1-2y,0,1,112
+EMP00113,Elena Khalid,24,Team Lead,3,C,Permanent,2023-04-27,2-5y,0,1,113
+EMP00114,Ravi Silva,15,Checker,2,B,Agency,2023-11-30,2-5y,1,1,114
+EMP00115,Fatima Khalid,16,Team Lead,3,C,Permanent,2018-09-19,5y+,0,1,115
+EMP00116,Carlos Smith,2,Packer,3,C,Seasonal,2025-07-07,1-2y,0,1,116
+EMP00117,Ingrid Mensah,17,Picker,3,C,Permanent,2022-04-15,2-5y,0,1,117
+EMP00118,Elena Sato,13,Team Lead,1,A,Permanent,2016-01-29,5y+,0,1,118
+EMP00119,Priya Zhang,3,Checker,3,C,Permanent,2021-10-08,2-5y,0,1,119
+EMP00120,Ahmed Smith,19,Picker,2,B,Permanent,2017-03-20,5y+,0,1,120
+EMP00121,Ingrid Haddad,1,Team Lead,2,B,Permanent,2021-04-14,5y+,0,0,121
+EMP00122,Fatima Haddad,20,Checker,3,C,Agency,2025-11-18,6-12m,0,1,122
+EMP00123,Grace Kumar,1,Forklift Operator,1,A,Permanent,2019-02-20,5y+,0,1,123
+EMP00124,Fatima Berg,10,Packer,2,B,Permanent,2021-08-22,2-5y,0,1,124
+EMP00125,Hassan Sato,6,Picker,1,A,Permanent,2017-03-19,5y+,0,1,125
+EMP00126,John Fernandes,22,Supervisor,2,B,Permanent,2026-05-12,<6m,0,1,126
+EMP00127,Fatima Nguyen,3,Picker,1,A,Seasonal,2017-08-11,5y+,0,1,127
+EMP00128,Maria Al-Amin,18,Packer,3,C,Agency,2024-04-30,2-5y,0,1,128
+EMP00129,Ingrid Rossi,25,Checker,2,B,Permanent,2019-03-08,5y+,0,1,129
+EMP00130,Ahmed Mensah,4,Checker,2,B,Seasonal,2019-04-16,5y+,0,1,130
+EMP00131,Wei Novak,22,Picker,3,C,Permanent,2016-06-28,5y+,0,1,131
+EMP00132,John Wang,2,Picker,1,A,Agency,2026-02-27,<6m,0,1,132
+EMP00133,Diego Smith,3,Checker,2,B,Agency,2019-12-22,5y+,0,1,133
+EMP00134,Siti Wang,10,Packer,2,B,Permanent,2020-02-13,5y+,0,0,134
+EMP00135,Anita Sharma,10,Picker,1,A,Agency,2022-07-05,2-5y,0,0,135
+EMP00136,Marco Berg,19,Forklift Operator,1,A,Permanent,2021-08-06,5y+,1,1,136
+EMP00137,Elena Sato,11,Picker,1,A,Permanent,2023-08-25,2-5y,0,1,137
+EMP00138,Marco Silva,19,Forklift Operator,3,C,Permanent,2025-03-04,1-2y,1,1,138
+EMP00139,Siti Al-Amin,3,Picker,3,C,Permanent,2024-04-27,2-5y,0,1,139
+EMP00140,Carlos Khalid,6,Receiver,3,C,Permanent,2016-07-18,5y+,1,1,140
+EMP00141,Elena Sharma,18,Picker,3,C,Permanent,2019-12-07,5y+,0,1,141
+EMP00142,Maria Novak,18,Receiver,3,C,Permanent,2024-09-23,1-2y,0,1,142
+EMP00143,Sofia Fernandes,16,Checker,2,B,Seasonal,2026-05-23,<6m,0,1,143
+EMP00144,Ahmed Sharma,20,Checker,2,B,Permanent,2025-09-20,6-12m,0,1,144
+EMP00145,Ravi Fernandes,24,Picker,1,A,Permanent,2023-06-19,2-5y,0,1,145
+EMP00146,Priya Fernandes,24,Picker,3,C,Permanent,2020-01-15,5y+,0,0,146
+EMP00147,Maria Costa,23,Packer,1,A,Agency,2021-10-21,2-5y,1,1,147
+EMP00148,Grace Smith,2,Packer,1,A,Permanent,2022-04-15,2-5y,0,1,148
+EMP00149,Anita Mensah,9,Supervisor,2,B,Permanent,2017-01-01,5y+,0,1,149
+EMP00150,Fatima Nguyen,9,Forklift Operator,2,B,Permanent,2023-05-22,2-5y,1,1,150
+EMP00151,Li Mensah,24,Packer,3,C,Agency,2023-06-12,2-5y,0,1,151
+EMP00152,Wei Rossi,19,Team Lead,3,C,Agency,2019-04-17,5y+,0,1,152
+EMP00153,Diego Smith,16,Picker,3,C,Agency,2026-05-20,<6m,0,1,153
+EMP00154,Li Nguyen,8,Picker,1,A,Agency,2023-05-12,2-5y,0,1,154
+EMP00155,Liam Rossi,18,Packer,3,C,Permanent,2025-06-04,1-2y,0,1,155
+EMP00156,Fatima Rahman,3,Packer,2,B,Permanent,2024-04-26,2-5y,0,1,156
+EMP00157,Anita Zhang,3,Checker,1,A,Agency,2022-07-13,2-5y,0,1,157
+EMP00158,Priya Costa,15,Picker,1,A,Seasonal,2024-02-11,2-5y,0,1,158
+EMP00159,Priya Gomez,24,Packer,2,B,Permanent,2024-08-23,1-2y,0,1,159
+EMP00160,Elena Wang,7,Receiver,1,A,Permanent,2018-03-13,5y+,0,1,160
+EMP00161,Fatima Al-Amin,21,Packer,2,B,Permanent,2021-04-22,5y+,0,1,161
+EMP00162,Grace Sharma,10,Forklift Operator,2,B,Permanent,2022-06-08,2-5y,1,0,162
+EMP00163,Ravi Rahman,14,Picker,2,B,Permanent,2022-08-16,2-5y,0,1,163
+EMP00164,Ravi Novak,5,Forklift Operator,3,C,Permanent,2024-01-09,2-5y,1,1,164
+EMP00165,Anita Mensah,10,Receiver,3,C,Permanent,2020-06-17,5y+,0,1,165
+EMP00166,Liam Berg,5,Packer,2,B,Permanent,2020-06-29,5y+,0,1,166
+EMP00167,Hassan Fernandes,20,Receiver,1,A,Permanent,2020-03-15,5y+,0,1,167
+EMP00168,Grace Gomez,20,Picker,3,C,Agency,2019-11-12,5y+,0,1,168
+EMP00169,Siti Fernandes,22,Picker,3,C,Permanent,2016-06-21,5y+,0,1,169
+EMP00170,Kenji Rahman,17,Supervisor,1,A,Permanent,2021-12-03,2-5y,0,1,170
+EMP00171,Ravi Smith,12,Packer,3,C,Agency,2024-01-19,2-5y,0,1,171
+EMP00172,John Torres,14,Packer,1,A,Permanent,2021-01-30,5y+,0,1,172
+EMP00173,Li Silva,8,Team Lead,3,C,Agency,2023-04-26,2-5y,0,1,173
+EMP00174,Kenji Kumar,4,Packer,1,A,Permanent,2025-02-05,1-2y,0,1,174
+EMP00175,Carlos Torres,22,Packer,2,B,Permanent,2026-02-18,6-12m,0,1,175
+EMP00176,John Gomez,12,Packer,3,C,Agency,2026-07-16,<6m,0,1,176
+EMP00177,Anita Novak,8,Packer,2,B,Seasonal,2018-09-02,5y+,0,1,177
+EMP00178,Carlos Silva,22,Picker,1,A,Permanent,2023-11-17,2-5y,0,0,178
+EMP00179,Li Rossi,2,Picker,2,B,Permanent,2019-04-20,5y+,0,1,179
+EMP00180,Carlos Berg,6,Receiver,3,C,Seasonal,2025-12-02,6-12m,0,1,180
+EMP00181,Ravi Sato,3,Packer,3,C,Permanent,2017-06-11,5y+,0,1,181
+EMP00182,Ravi Khalid,22,Checker,1,A,Seasonal,2023-02-11,2-5y,0,1,182
+EMP00183,Ingrid Torres,6,Picker,2,B,Permanent,2026-05-05,<6m,0,1,183
+EMP00184,Ahmed Novak,12,Picker,1,A,Seasonal,2016-08-12,5y+,0,1,184
+EMP00185,Marco Wang,13,Receiver,2,B,Permanent,2022-12-08,2-5y,0,1,185
+EMP00186,Maria Nguyen,5,Picker,3,C,Agency,2020-06-22,5y+,0,1,186
+EMP00187,Fatima Torres,14,Picker,1,A,Agency,2024-12-28,1-2y,0,1,187
+EMP00188,Ravi Khalid,21,Packer,3,C,Permanent,2021-09-27,2-5y,1,1,188
+EMP00189,Siti Khalid,16,Forklift Operator,2,B,Permanent,2017-04-17,5y+,1,1,189
+EMP00190,Ahmed Gomez,4,Picker,2,B,Permanent,2023-09-26,2-5y,0,0,190
+EMP00191,Grace Wang,25,Packer,1,A,Permanent,2016-11-28,5y+,0,1,191
+EMP00192,Siti Torres,22,Packer,1,A,Seasonal,2019-01-03,5y+,0,1,192
+EMP00193,Priya Al-Amin,17,Picker,3,C,Agency,2025-06-15,1-2y,0,1,193
+EMP00194,Fatima Novak,6,Team Lead,3,C,Permanent,2020-06-25,5y+,0,1,194
+EMP00195,John Novak,20,Checker,3,C,Agency,2023-01-19,2-5y,0,1,195
+EMP00196,Anita Novak,5,Picker,3,C,Permanent,2016-02-01,5y+,0,1,196
+EMP00197,Liam Fernandes,3,Picker,1,A,Permanent,2023-10-18,2-5y,1,1,197
+EMP00198,Ingrid Kumar,5,Forklift Operator,1,A,Permanent,2022-09-05,2-5y,1,1,198
+EMP00199,Ravi Smith,21,Picker,1,A,Agency,2026-01-09,6-12m,0,1,199
+EMP00200,Sofia Rahman,8,Picker,2,B,Permanent,2017-10-11,5y+,0,1,200
+EMP00201,Ravi Gomez,17,Picker,2,B,Seasonal,2024-06-09,2-5y,0,1,201
+EMP00202,Ravi Smith,17,Picker,1,A,Seasonal,2023-11-25,2-5y,1,1,202
+EMP00203,Liam Novak,11,Checker,2,B,Permanent,2023-02-17,2-5y,0,1,203
+EMP00204,Marco Khalid,13,Picker,1,A,Seasonal,2023-11-11,2-5y,0,1,204
+EMP00205,Marco Haddad,24,Forklift Operator,2,B,Agency,2016-01-21,5y+,1,1,205
+EMP00206,Marco Kumar,21,Team Lead,2,B,Permanent,2019-06-30,5y+,0,1,206
+EMP00207,John Berg,16,Supervisor,2,B,Permanent,2025-03-22,1-2y,1,1,207
+EMP00208,Maria Mensah,18,Checker,3,C,Agency,2024-12-08,1-2y,0,1,208
+EMP00209,John Berg,19,Forklift Operator,1,A,Permanent,2024-09-19,1-2y,1,1,209
+EMP00210,Kenji Novak,16,Picker,1,A,Seasonal,2025-12-09,6-12m,0,1,210
+EMP00211,Liam Costa,25,Packer,1,A,Permanent,2016-12-09,5y+,0,1,211
+EMP00212,Sofia Zhang,22,Checker,3,C,Seasonal,2025-03-19,1-2y,0,1,212
+EMP00213,Wei Wang,12,Receiver,1,A,Permanent,2019-12-29,5y+,0,1,213
+EMP00214,John Mensah,15,Picker,1,A,Permanent,2024-05-11,2-5y,0,1,214
+EMP00215,John Sharma,1,Picker,2,B,Permanent,2016-06-03,5y+,0,1,215
+EMP00216,Siti Smith,23,Packer,1,A,Agency,2023-11-09,2-5y,0,1,216
+EMP00217,Ravi Sharma,22,Forklift Operator,1,A,Permanent,2020-12-23,5y+,1,1,217
+EMP00218,Ravi Nguyen,6,Picker,2,B,Permanent,2019-11-29,5y+,0,1,218
+EMP00219,Ravi Novak,1,Checker,1,A,Permanent,2022-07-18,2-5y,0,1,219
+EMP00220,Li Smith,1,Packer,1,A,Seasonal,2022-07-14,2-5y,0,1,220
+EMP00221,Maria Sharma,8,Forklift Operator,2,B,Seasonal,2025-05-12,1-2y,1,1,221
+EMP00222,Elena Gomez,7,Team Lead,1,A,Permanent,2022-12-17,2-5y,0,1,222
+EMP00223,Hassan Gomez,15,Forklift Operator,1,A,Permanent,2020-10-21,5y+,1,1,223
+EMP00224,Carlos Smith,21,Picker,1,A,Agency,2016-12-06,5y+,0,1,224
+EMP00225,Carlos Costa,6,Picker,3,C,Agency,2025-04-18,1-2y,0,1,225
+EMP00226,Grace Novak,9,Packer,1,A,Seasonal,2024-12-14,1-2y,0,1,226
+EMP00227,Marco Khalid,15,Packer,3,C,Seasonal,2020-04-01,5y+,0,1,227
+EMP00228,Anita Gomez,6,Picker,2,B,Seasonal,2021-09-28,2-5y,0,1,228
+EMP00229,Elena Nguyen,12,Picker,2,B,Permanent,2025-03-01,1-2y,0,1,229
+EMP00230,Elena Sharma,20,Forklift Operator,3,C,Permanent,2021-11-30,2-5y,1,1,230
+EMP00231,Fatima Zhang,7,Forklift Operator,2,B,Permanent,2026-03-18,<6m,1,1,231
+EMP00232,Marco Kumar,18,Picker,2,B,Agency,2021-10-22,2-5y,0,1,232
+EMP00233,Ingrid Sato,9,Receiver,1,A,Agency,2018-12-18,5y+,0,1,233
+EMP00234,Wei Smith,17,Packer,1,A,Agency,2022-10-16,2-5y,0,1,234
+EMP00235,Elena Haddad,17,Forklift Operator,3,C,Permanent,2018-01-05,5y+,1,1,235
+EMP00236,Diego Rahman,21,Checker,1,A,Agency,2016-02-20,5y+,0,1,236
+EMP00237,Ravi Berg,7,Checker,2,B,Permanent,2025-10-06,6-12m,0,0,237
+EMP00238,Ingrid Torres,5,Checker,1,A,Agency,2025-11-02,6-12m,0,1,238
+EMP00239,Fatima Fernandes,8,Forklift Operator,1,A,Permanent,2021-11-17,2-5y,1,1,239
+EMP00240,Carlos Sharma,25,Checker,1,A,Agency,2017-07-07,5y+,0,1,240
+EMP00241,Anita Costa,21,Forklift Operator,3,C,Permanent,2021-03-24,5y+,1,1,241
+EMP00242,Grace Wang,11,Team Lead,3,C,Permanent,2019-02-05,5y+,0,1,242
+EMP00243,Sofia Costa,22,Checker,2,B,Permanent,2023-12-06,2-5y,0,1,243
+EMP00244,Ahmed Sharma,13,Forklift Operator,2,B,Agency,2025-08-26,6-12m,1,1,244
+EMP00245,Li Haddad,25,Picker,2,B,Permanent,2016-03-24,5y+,0,1,245
+EMP00246,John Zhang,9,Packer,2,B,Seasonal,2016-04-15,5y+,0,1,246
+EMP00247,Ravi Smith,6,Receiver,2,B,Agency,2019-03-10,5y+,0,1,247
+EMP00248,Fatima Smith,10,Supervisor,1,A,Permanent,2023-11-18,2-5y,0,1,248
+EMP00249,Li Nguyen,17,Packer,1,A,Permanent,2017-05-06,5y+,0,1,249
+EMP00250,Grace Kumar,3,Picker,2,B,Permanent,2020-05-04,5y+,0,1,250
+EMP00251,Kenji Costa,11,Picker,1,A,Permanent,2026-08-12,<6m,0,1,251
+EMP00252,Ravi Al-Amin,16,Picker,2,B,Permanent,2022-02-14,2-5y,0,1,252
+EMP00253,Elena Sharma,14,Packer,3,C,Permanent,2026-02-10,6-12m,0,1,253
+EMP00254,Priya Kumar,12,Packer,1,A,Agency,2022-01-16,2-5y,0,1,254
+EMP00255,Liam Zhang,24,Picker,2,B,Agency,2023-12-28,2-5y,0,1,255
+EMP00256,Liam Novak,25,Receiver,3,C,Permanent,2020-10-07,5y+,0,1,256
+EMP00257,Diego Gomez,21,Checker,2,B,Permanent,2019-02-03,5y+,0,1,257
+EMP00258,Ravi Berg,7,Receiver,1,A,Permanent,2025-03-07,1-2y,0,1,258
+EMP00259,Sofia Nguyen,12,Picker,1,A,Permanent,2025-07-05,1-2y,1,1,259
+EMP00260,Kenji Rossi,17,Forklift Operator,1,A,Permanent,2020-09-21,5y+,1,1,260
+EMP00261,Liam Mensah,12,Picker,3,C,Permanent,2016-04-24,5y+,0,0,261
+EMP00262,Ingrid Fernandes,19,Packer,1,A,Permanent,2021-02-02,5y+,0,1,262
+EMP00263,Marco Rossi,5,Picker,2,B,Permanent,2021-12-04,2-5y,0,1,263
+EMP00264,Fatima Costa,4,Forklift Operator,1,A,Agency,2025-03-02,1-2y,1,0,264
+EMP00265,Kenji Rahman,15,Picker,3,C,Permanent,2018-02-27,5y+,0,1,265
+EMP00266,Ahmed Haddad,24,Packer,2,B,Permanent,2024-10-04,1-2y,0,1,266
+EMP00267,Ahmed Rossi,18,Receiver,1,A,Permanent,2016-08-07,5y+,0,1,267
+EMP00268,Anita Berg,24,Packer,3,C,Seasonal,2026-05-18,<6m,0,1,268
+EMP00269,Kenji Sato,22,Team Lead,1,A,Permanent,2026-04-17,<6m,0,1,269
+EMP00270,Diego Silva,22,Picker,3,C,Agency,2018-05-26,5y+,0,0,270
+EMP00271,Maria Silva,2,Packer,3,C,Permanent,2024-01-14,2-5y,0,1,271
+EMP00272,Diego Mensah,3,Forklift Operator,2,B,Agency,2025-03-13,1-2y,1,1,272
+EMP00273,Li Torres,12,Picker,1,A,Agency,2017-02-17,5y+,0,1,273
+EMP00274,Fatima Gomez,20,Receiver,3,C,Permanent,2018-05-03,5y+,1,1,274
+EMP00275,Priya Novak,1,Packer,2,B,Permanent,2019-08-11,5y+,0,1,275
+EMP00276,Kenji Sato,20,Packer,3,C,Seasonal,2016-10-01,5y+,1,1,276
+EMP00277,Elena Wang,7,Packer,3,C,Permanent,2016-01-01,5y+,0,1,277
+EMP00278,Diego Sato,4,Packer,1,A,Agency,2026-07-14,<6m,0,1,278
+EMP00279,Anita Torres,8,Packer,3,C,Permanent,2023-05-22,2-5y,0,1,279
+EMP00280,Carlos Fernandes,11,Picker,2,B,Permanent,2023-02-06,2-5y,1,1,280
+EMP00281,John Novak,24,Packer,2,B,Permanent,2023-09-20,2-5y,0,1,281
+EMP00282,Anita Zhang,15,Checker,3,C,Permanent,2026-01-16,6-12m,1,1,282
+EMP00283,Priya Fernandes,9,Team Lead,1,A,Agency,2026-07-13,<6m,0,1,283
+EMP00284,Liam Berg,12,Team Lead,2,B,Agency,2025-03-20,1-2y,0,1,284
+EMP00285,Carlos Rossi,2,Packer,3,C,Agency,2020-01-09,5y+,0,1,285
+EMP00286,Ahmed Costa,21,Forklift Operator,3,C,Permanent,2018-11-22,5y+,1,1,286
+EMP00287,Fatima Sharma,13,Picker,1,A,Permanent,2020-04-20,5y+,0,1,287
+EMP00288,Grace Rahman,17,Picker,3,C,Permanent,2022-06-21,2-5y,0,1,288
+EMP00289,Liam Costa,19,Receiver,3,C,Agency,2016-09-20,5y+,0,1,289
+EMP00290,John Silva,22,Picker,3,C,Permanent,2016-03-26,5y+,0,1,290
+EMP00291,Priya Al-Amin,23,Forklift Operator,2,B,Permanent,2023-10-29,2-5y,1,1,291
+EMP00292,Anita Kumar,23,Picker,3,C,Permanent,2023-04-30,2-5y,0,1,292
+EMP00293,John Novak,10,Packer,3,C,Permanent,2025-10-02,6-12m,0,1,293
+EMP00294,Anita Silva,19,Supervisor,2,B,Permanent,2023-05-15,2-5y,0,1,294
+EMP00295,Wei Sato,25,Team Lead,1,A,Permanent,2020-02-12,5y+,0,1,295
+EMP00296,Fatima Berg,23,Picker,1,A,Permanent,2024-11-05,1-2y,0,1,296
+EMP00297,Siti Nguyen,3,Packer,2,B,Agency,2016-01-10,5y+,0,0,297
+EMP00298,Elena Khalid,4,Picker,3,C,Permanent,2021-03-28,5y+,0,1,298
+EMP00299,Wei Smith,19,Picker,2,B,Permanent,2019-08-22,5y+,0,1,299
+EMP00300,Ravi Torres,5,Team Lead,1,A,Agency,2017-07-24,5y+,0,1,300
+EMP00301,John Haddad,16,Forklift Operator,1,A,Permanent,2021-10-02,2-5y,1,1,301
+EMP00302,Ingrid Silva,12,Picker,3,C,Permanent,2021-06-29,5y+,0,1,302
+EMP00303,Maria Nguyen,3,Packer,2,B,Permanent,2016-08-28,5y+,0,0,303
+EMP00304,Carlos Smith,16,Picker,1,A,Agency,2020-08-26,5y+,0,1,304
+EMP00305,Wei Gomez,7,Picker,3,C,Permanent,2026-06-23,<6m,1,1,305
+EMP00306,Ingrid Khalid,3,Checker,3,C,Permanent,2018-10-30,5y+,0,1,306
+EMP00307,Grace Zhang,5,Picker,3,C,Seasonal,2020-07-06,5y+,0,1,307
+EMP00308,Grace Costa,6,Picker,1,A,Permanent,2018-11-17,5y+,0,1,308
+EMP00309,Ahmed Haddad,15,Packer,3,C,Permanent,2021-03-12,5y+,0,1,309
+EMP00310,Ingrid Fernandes,19,Packer,1,A,Permanent,2023-09-08,2-5y,0,1,310
+EMP00311,Kenji Sharma,4,Checker,2,B,Seasonal,2019-08-30,5y+,0,0,311
+EMP00312,Kenji Haddad,21,Forklift Operator,1,A,Permanent,2020-10-15,5y+,1,1,312
+EMP00313,Siti Berg,17,Forklift Operator,2,B,Permanent,2022-10-29,2-5y,1,1,313
+EMP00314,Wei Wang,23,Picker,3,C,Agency,2020-08-06,5y+,0,1,314
+EMP00315,Sofia Silva,22,Picker,1,A,Seasonal,2021-12-29,2-5y,0,1,315
+EMP00316,Ahmed Sharma,14,Picker,2,B,Agency,2018-04-30,5y+,1,1,316
+EMP00317,Elena Gomez,4,Packer,3,C,Permanent,2024-10-05,1-2y,0,0,317
+EMP00318,Grace Sato,21,Picker,3,C,Agency,2025-04-08,1-2y,0,0,318
+EMP00319,Maria Kumar,2,Picker,2,B,Agency,2023-02-16,2-5y,0,1,319
+EMP00320,Diego Nguyen,11,Packer,2,B,Agency,2025-07-14,1-2y,0,1,320
+EMP00321,Carlos Rahman,7,Packer,2,B,Permanent,2016-12-27,5y+,0,1,321
+EMP00322,Liam Rahman,2,Picker,2,B,Seasonal,2018-11-30,5y+,0,1,322
+EMP00323,Priya Gomez,8,Forklift Operator,3,C,Permanent,2017-08-17,5y+,1,1,323
+EMP00324,Anita Gomez,24,Team Lead,2,B,Permanent,2019-06-03,5y+,1,1,324
+EMP00325,Ingrid Sharma,7,Supervisor,3,C,Agency,2023-12-09,2-5y,0,1,325
+EMP00326,Ahmed Berg,20,Team Lead,3,C,Permanent,2020-09-03,5y+,0,1,326
+EMP00327,Wei Fernandes,4,Picker,3,C,Permanent,2019-09-23,5y+,0,1,327
+EMP00328,Hassan Al-Amin,3,Picker,2,B,Permanent,2016-01-12,5y+,0,1,328
+EMP00329,Grace Zhang,9,Forklift Operator,3,C,Permanent,2018-03-31,5y+,1,1,329
+EMP00330,Fatima Berg,24,Receiver,1,A,Agency,2018-06-05,5y+,0,1,330
+EMP00331,Anita Sato,8,Packer,1,A,Permanent,2019-11-20,5y+,0,1,331
+EMP00332,Ingrid Gomez,12,Receiver,1,A,Permanent,2022-07-01,2-5y,0,1,332
+EMP00333,Li Kumar,15,Forklift Operator,2,B,Permanent,2021-11-03,2-5y,1,1,333
+EMP00334,Fatima Al-Amin,23,Picker,3,C,Agency,2022-07-09,2-5y,0,1,334
+EMP00335,Elena Zhang,24,Checker,1,A,Permanent,2020-01-08,5y+,0,1,335
+EMP00336,Carlos Wang,15,Packer,2,B,Permanent,2022-07-22,2-5y,1,1,336
+EMP00337,Marco Silva,20,Picker,3,C,Agency,2017-05-11,5y+,0,1,337
+EMP00338,Grace Berg,23,Team Lead,2,B,Seasonal,2022-10-29,2-5y,0,1,338
+EMP00339,Li Costa,9,Receiver,2,B,Seasonal,2019-03-20,5y+,0,1,339
+EMP00340,Liam Rossi,7,Packer,3,C,Permanent,2018-09-07,5y+,1,1,340
+EMP00341,John Al-Amin,16,Picker,3,C,Permanent,2021-12-30,2-5y,0,1,341
+EMP00342,Ingrid Torres,19,Receiver,1,A,Agency,2022-07-06,2-5y,0,0,342
+EMP00343,Marco Rossi,8,Checker,3,C,Permanent,2023-01-19,2-5y,0,1,343
+EMP00344,John Novak,12,Packer,3,C,Agency,2017-07-20,5y+,0,1,344
+EMP00345,Marco Berg,7,Picker,2,B,Agency,2024-08-10,2-5y,0,1,345
+EMP00346,Fatima Gomez,6,Checker,1,A,Agency,2022-03-16,2-5y,0,1,346
+EMP00347,Siti Silva,19,Team Lead,2,B,Permanent,2024-05-26,2-5y,0,1,347
+EMP00348,Ahmed Costa,9,Supervisor,1,A,Permanent,2020-03-07,5y+,0,1,348
+EMP00349,John Mensah,24,Receiver,1,A,Permanent,2019-06-16,5y+,0,1,349
+EMP00350,Marco Sato,7,Forklift Operator,3,C,Permanent,2019-12-28,5y+,1,1,350
+EMP00351,Sofia Costa,11,Team Lead,3,C,Permanent,2024-03-15,2-5y,0,1,351
+EMP00352,Ahmed Silva,3,Forklift Operator,1,A,Permanent,2020-03-23,5y+,1,1,352
+EMP00353,Priya Torres,14,Picker,1,A,Permanent,2016-01-13,5y+,0,1,353
+EMP00354,Priya Rossi,10,Picker,1,A,Agency,2019-10-21,5y+,0,0,354
+EMP00355,Sofia Wang,10,Packer,2,B,Permanent,2021-03-07,5y+,0,1,355
+EMP00356,Hassan Sato,7,Packer,1,A,Permanent,2024-01-06,2-5y,0,1,356
+EMP00357,Ravi Haddad,16,Picker,1,A,Permanent,2024-12-14,1-2y,0,1,357
+EMP00358,Siti Sharma,13,Picker,1,A,Permanent,2016-01-06,5y+,0,1,358
+EMP00359,Elena Kumar,3,Picker,3,C,Permanent,2019-12-10,5y+,0,0,359
+EMP00360,Priya Rahman,13,Picker,3,C,Permanent,2022-03-03,2-5y,0,1,360
+EMP00361,Priya Sharma,2,Receiver,1,A,Permanent,2026-05-30,<6m,0,1,361
+EMP00362,Liam Rahman,15,Supervisor,3,C,Agency,2025-12-13,6-12m,0,1,362
+EMP00363,Hassan Haddad,17,Checker,1,A,Seasonal,2020-08-15,5y+,0,1,363
+EMP00364,Anita Berg,20,Packer,1,A,Permanent,2018-07-29,5y+,0,1,364
+EMP00365,Fatima Kumar,6,Receiver,2,B,Permanent,2020-09-25,5y+,0,1,365
+EMP00366,Ingrid Wang,20,Supervisor,2,B,Permanent,2018-06-04,5y+,0,1,366
+EMP00367,Li Torres,6,Checker,1,A,Permanent,2019-12-15,5y+,0,0,367
+EMP00368,Li Al-Amin,10,Supervisor,3,C,Agency,2019-02-14,5y+,0,1,368
+EMP00369,Priya Torres,25,Team Lead,1,A,Permanent,2019-07-01,5y+,0,1,369
+EMP00370,Ahmed Nguyen,23,Packer,2,B,Permanent,2022-06-28,2-5y,0,1,370
+EMP00371,Maria Nguyen,2,Picker,2,B,Seasonal,2017-02-23,5y+,0,1,371
+EMP00372,Wei Smith,10,Picker,2,B,Permanent,2020-01-30,5y+,0,1,372
+EMP00373,Elena Nguyen,22,Packer,3,C,Agency,2020-10-31,5y+,0,1,373
+EMP00374,Diego Rahman,3,Picker,3,C,Permanent,2017-06-25,5y+,0,1,374
+EMP00375,Ingrid Sato,10,Packer,3,C,Permanent,2023-07-28,2-5y,0,1,375
+EMP00376,John Al-Amin,21,Team Lead,2,B,Permanent,2018-04-16,5y+,0,1,376
+EMP00377,Ravi Costa,4,Picker,3,C,Agency,2026-04-09,<6m,0,1,377
+EMP00378,Anita Kumar,5,Forklift Operator,3,C,Agency,2020-04-05,5y+,1,1,378
+EMP00379,Hassan Sharma,23,Receiver,3,C,Seasonal,2026-01-18,6-12m,1,1,379
+EMP00380,John Novak,17,Forklift Operator,1,A,Permanent,2018-04-15,5y+,1,1,380
+EMP00381,Priya Al-Amin,25,Receiver,1,A,Agency,2018-07-09,5y+,0,1,381
+EMP00382,Li Mensah,24,Team Lead,3,C,Permanent,2018-08-15,5y+,0,1,382
+EMP00383,Sofia Fernandes,23,Team Lead,1,A,Agency,2016-02-13,5y+,0,1,383
+EMP00384,Marco Gomez,4,Picker,1,A,Permanent,2020-12-18,5y+,0,1,384
+EMP00385,Carlos Berg,7,Picker,1,A,Agency,2025-03-06,1-2y,0,1,385
+EMP00386,Ahmed Rossi,15,Team Lead,1,A,Agency,2022-10-07,2-5y,0,1,386
+EMP00387,Carlos Khalid,18,Checker,3,C,Permanent,2016-10-14,5y+,0,1,387
+EMP00388,Kenji Al-Amin,2,Receiver,1,A,Permanent,2023-07-17,2-5y,0,1,388
+EMP00389,Li Zhang,10,Team Lead,3,C,Agency,2024-05-24,2-5y,1,1,389
+EMP00390,Anita Smith,18,Picker,3,C,Permanent,2023-04-25,2-5y,0,1,390
+EMP00391,Siti Smith,10,Checker,2,B,Permanent,2026-03-04,<6m,1,1,391
+EMP00392,Maria Zhang,2,Forklift Operator,2,B,Permanent,2019-06-23,5y+,1,1,392
+EMP00393,Hassan Kumar,10,Forklift Operator,3,C,Permanent,2023-02-22,2-5y,1,1,393
+EMP00394,Anita Al-Amin,4,Forklift Operator,1,A,Agency,2023-06-18,2-5y,1,1,394
+EMP00395,Diego Costa,18,Checker,1,A,Permanent,2022-12-21,2-5y,0,1,395
+EMP00396,Diego Wang,19,Packer,1,A,Permanent,2025-08-05,1-2y,0,1,396
+EMP00397,Ingrid Kumar,4,Forklift Operator,2,B,Seasonal,2026-02-19,<6m,1,1,397
+EMP00398,Wei Nguyen,21,Forklift Operator,1,A,Permanent,2017-05-12,5y+,1,1,398
+EMP00399,Diego Silva,5,Receiver,3,C,Agency,2019-12-26,5y+,0,1,399
+EMP00400,Ahmed Kumar,24,Checker,3,C,Agency,2021-06-23,5y+,0,1,400
+EMP00401,Sofia Rossi,10,Packer,3,C,Permanent,2025-12-27,6-12m,0,1,401
+EMP00402,Carlos Mensah,23,Receiver,1,A,Permanent,2026-02-23,<6m,0,1,402
+EMP00403,Liam Gomez,25,Picker,1,A,Seasonal,2025-06-01,1-2y,0,1,403
+EMP00404,Siti Smith,9,Packer,3,C,Permanent,2023-11-16,2-5y,0,1,404
+EMP00405,Priya Costa,15,Team Lead,3,C,Permanent,2023-10-18,2-5y,1,1,405
+EMP00406,Fatima Sharma,20,Checker,3,C,Agency,2018-09-02,5y+,0,1,406
+EMP00407,Diego Berg,5,Checker,3,C,Permanent,2020-02-18,5y+,0,1,407
+EMP00408,Priya Novak,22,Packer,2,B,Agency,2023-04-21,2-5y,0,1,408
+EMP00409,Liam Torres,22,Picker,2,B,Agency,2019-02-13,5y+,0,1,409
+EMP00410,Ravi Fernandes,8,Forklift Operator,2,B,Permanent,2021-07-14,5y+,1,1,410
+EMP00411,Siti Rossi,13,Picker,3,C,Permanent,2017-08-10,5y+,1,1,411
+EMP00412,Marco Kumar,23,Picker,2,B,Permanent,2020-12-26,5y+,0,1,412
+EMP00413,Anita Sato,8,Checker,3,C,Permanent,2023-03-24,2-5y,0,1,413
+EMP00414,Priya Wang,18,Checker,2,B,Seasonal,2022-10-24,2-5y,0,1,414
+EMP00415,Fatima Silva,21,Checker,2,B,Permanent,2021-09-21,2-5y,0,1,415
+EMP00416,Fatima Novak,22,Forklift Operator,1,A,Seasonal,2026-01-04,6-12m,1,1,416
+EMP00417,Li Sato,17,Forklift Operator,3,C,Permanent,2019-05-16,5y+,1,1,417
+EMP00418,Ahmed Zhang,14,Forklift Operator,3,C,Permanent,2017-10-05,5y+,1,1,418
+EMP00419,Ahmed Costa,21,Packer,2,B,Permanent,2017-09-24,5y+,1,1,419
+EMP00420,John Torres,3,Picker,3,C,Permanent,2023-05-29,2-5y,0,1,420
+EMP00421,Sofia Al-Amin,14,Receiver,1,A,Permanent,2024-04-01,2-5y,0,1,421
+EMP00422,Hassan Haddad,2,Supervisor,2,B,Seasonal,2021-05-30,5y+,0,1,422
+EMP00423,Marco Costa,1,Picker,1,A,Permanent,2021-05-24,5y+,0,1,423
+EMP00424,Maria Khalid,18,Checker,3,C,Agency,2018-06-06,5y+,0,1,424
+EMP00425,John Al-Amin,22,Picker,2,B,Permanent,2024-11-25,1-2y,0,1,425
+EMP00426,Li Novak,1,Receiver,1,A,Permanent,2019-04-14,5y+,0,1,426
+EMP00427,Ahmed Nguyen,5,Packer,1,A,Permanent,2023-10-08,2-5y,0,1,427
+EMP00428,Diego Nguyen,8,Forklift Operator,2,B,Agency,2019-02-11,5y+,1,1,428
+EMP00429,Anita Gomez,13,Receiver,3,C,Permanent,2025-10-10,6-12m,1,1,429
+EMP00430,Hassan Fernandes,20,Team Lead,1,A,Permanent,2016-12-20,5y+,0,1,430
+EMP00431,Hassan Silva,21,Picker,1,A,Permanent,2025-08-03,1-2y,0,1,431
+EMP00432,Marco Novak,2,Picker,1,A,Agency,2016-03-07,5y+,1,1,432
+EMP00433,Hassan Sato,20,Forklift Operator,1,A,Permanent,2026-03-04,<6m,1,1,433
+EMP00434,Ahmed Wang,1,Forklift Operator,2,B,Permanent,2019-03-24,5y+,1,1,434
+EMP00435,Anita Wang,12,Forklift Operator,1,A,Permanent,2022-05-12,2-5y,1,1,435
+EMP00436,Hassan Haddad,6,Forklift Operator,3,C,Permanent,2020-01-12,5y+,1,1,436
+EMP00437,Liam Rossi,23,Supervisor,3,C,Permanent,2023-09-09,2-5y,0,1,437
+EMP00438,Ravi Nguyen,14,Picker,2,B,Permanent,2018-07-21,5y+,1,1,438
+EMP00439,Siti Wang,9,Checker,1,A,Permanent,2019-09-25,5y+,0,1,439
+EMP00440,Ravi Khalid,16,Packer,1,A,Permanent,2021-12-14,2-5y,0,1,440
+EMP00441,Li Nguyen,19,Forklift Operator,3,C,Agency,2018-01-09,5y+,1,1,441
+EMP00442,Diego Sharma,17,Packer,3,C,Agency,2018-01-12,5y+,0,1,442
+EMP00443,John Gomez,9,Packer,2,B,Permanent,2024-04-11,2-5y,0,1,443
+EMP00444,Priya Torres,24,Checker,2,B,Permanent,2023-03-06,2-5y,0,1,444
+EMP00445,Hassan Nguyen,10,Packer,1,A,Permanent,2020-02-08,5y+,0,1,445
+EMP00446,Hassan Haddad,15,Packer,3,C,Agency,2016-06-21,5y+,0,1,446
+EMP00447,Wei Novak,11,Packer,2,B,Agency,2020-01-10,5y+,0,1,447
+EMP00448,Fatima Al-Amin,20,Packer,3,C,Agency,2016-03-30,5y+,0,1,448
+EMP00449,Maria Al-Amin,4,Forklift Operator,1,A,Permanent,2016-04-29,5y+,1,1,449
+EMP00450,Maria Silva,25,Receiver,1,A,Permanent,2025-01-07,1-2y,0,1,450
+EMP00451,Priya Torres,2,Packer,3,C,Permanent,2026-02-05,6-12m,0,1,451
+EMP00452,Kenji Berg,3,Picker,1,A,Seasonal,2025-11-25,6-12m,0,1,452
+EMP00453,Liam Khalid,20,Supervisor,3,C,Agency,2019-08-14,5y+,0,1,453
+EMP00454,Anita Haddad,15,Picker,2,B,Agency,2021-04-23,5y+,0,1,454
+EMP00455,John Zhang,9,Picker,3,C,Permanent,2023-03-01,2-5y,1,1,455
+EMP00456,Carlos Mensah,20,Picker,2,B,Permanent,2021-08-14,5y+,0,1,456
+EMP00457,Liam Wang,17,Forklift Operator,2,B,Permanent,2019-08-25,5y+,1,1,457
+EMP00458,Ingrid Al-Amin,23,Checker,1,A,Permanent,2016-07-14,5y+,0,1,458
+EMP00459,Ravi Nguyen,8,Team Lead,1,A,Permanent,2025-05-04,1-2y,1,1,459
+EMP00460,Maria Rahman,3,Team Lead,1,A,Permanent,2020-12-02,5y+,0,1,460
+EMP00461,Priya Mensah,22,Picker,2,B,Agency,2018-06-10,5y+,0,1,461
+EMP00462,Kenji Zhang,18,Packer,1,A,Agency,2026-07-03,<6m,0,1,462
+EMP00463,Carlos Khalid,11,Forklift Operator,3,C,Permanent,2024-07-16,2-5y,1,0,463
+EMP00464,Liam Al-Amin,12,Receiver,3,C,Permanent,2025-06-13,1-2y,0,1,464
+EMP00465,Fatima Fernandes,25,Team Lead,3,C,Agency,2021-01-01,5y+,1,1,465
+EMP00466,Marco Nguyen,14,Picker,1,A,Permanent,2016-09-09,5y+,0,1,466
+EMP00467,Liam Sharma,10,Supervisor,3,C,Permanent,2019-11-01,5y+,0,1,467
+EMP00468,Hassan Zhang,21,Checker,1,A,Permanent,2019-01-10,5y+,0,1,468
+EMP00469,Diego Rossi,18,Team Lead,3,C,Agency,2016-11-11,5y+,0,1,469
+EMP00470,Liam Gomez,12,Team Lead,2,B,Permanent,2020-12-30,5y+,0,1,470
+EMP00471,Li Novak,13,Receiver,1,A,Seasonal,2024-10-20,1-2y,1,1,471
+EMP00472,Ahmed Berg,9,Forklift Operator,1,A,Agency,2022-01-14,2-5y,1,1,472
+EMP00473,Sofia Mensah,17,Packer,2,B,Permanent,2022-04-04,2-5y,0,1,473
+EMP00474,Anita Khalid,19,Packer,2,B,Agency,2021-08-28,2-5y,0,1,474
+EMP00475,Grace Haddad,4,Checker,3,C,Agency,2023-07-31,2-5y,0,1,475
+EMP00476,Li Torres,2,Picker,1,A,Agency,2023-04-08,2-5y,0,1,476
+EMP00477,Anita Al-Amin,13,Picker,1,A,Permanent,2016-07-06,5y+,0,0,477
+EMP00478,Diego Mensah,5,Picker,2,B,Seasonal,2019-05-10,5y+,0,1,478
+EMP00479,Grace Novak,7,Forklift Operator,3,C,Permanent,2020-06-17,5y+,1,1,479
+EMP00480,Marco Nguyen,15,Packer,1,A,Permanent,2020-11-02,5y+,0,1,480
+EMP00481,John Smith,18,Picker,3,C,Permanent,2017-04-29,5y+,1,1,481
+EMP00482,Maria Gomez,13,Receiver,2,B,Agency,2016-12-28,5y+,0,1,482
+EMP00483,Fatima Zhang,6,Picker,1,A,Permanent,2023-12-02,2-5y,1,0,483
+EMP00484,Elena Wang,20,Picker,1,A,Permanent,2023-11-14,2-5y,0,1,484
+EMP00485,Ingrid Haddad,14,Team Lead,3,C,Agency,2024-08-06,2-5y,0,1,485
+EMP00486,Grace Al-Amin,15,Packer,1,A,Permanent,2025-10-08,6-12m,0,1,486
+EMP00487,Kenji Zhang,18,Picker,3,C,Agency,2017-08-06,5y+,0,1,487
+EMP00488,Sofia Haddad,6,Packer,2,B,Agency,2024-08-05,2-5y,0,1,488
+EMP00489,Ravi Nguyen,8,Receiver,1,A,Permanent,2018-06-10,5y+,0,1,489
+EMP00490,Kenji Gomez,24,Packer,2,B,Permanent,2018-01-22,5y+,0,1,490
+EMP00491,Grace Rossi,10,Packer,2,B,Permanent,2018-07-20,5y+,0,1,491
+EMP00492,Maria Wang,20,Picker,3,C,Permanent,2019-07-01,5y+,0,1,492
+EMP00493,Li Fernandes,1,Picker,3,C,Agency,2017-05-10,5y+,0,1,493
+EMP00494,Ahmed Wang,18,Team Lead,3,C,Seasonal,2020-12-19,5y+,0,1,494
+EMP00495,Ingrid Fernandes,6,Picker,2,B,Permanent,2020-08-04,5y+,0,1,495
+EMP00496,Carlos Silva,16,Supervisor,2,B,Agency,2025-08-29,6-12m,1,1,496
+EMP00497,Ravi Wang,8,Packer,2,B,Permanent,2021-04-16,5y+,0,1,497
+EMP00498,John Gomez,6,Picker,3,C,Seasonal,2022-04-22,2-5y,0,1,498
+EMP00499,Wei Mensah,6,Receiver,3,C,Permanent,2022-03-10,2-5y,0,1,499
+EMP00500,Liam Wang,19,Forklift Operator,3,C,Seasonal,2023-08-20,2-5y,1,1,500
+EMP00501,Wei Fernandes,12,Checker,1,A,Agency,2021-02-13,5y+,0,1,501
+EMP00502,Wei Al-Amin,12,Checker,1,A,Agency,2021-10-26,2-5y,0,1,502
+EMP00503,Marco Berg,5,Picker,3,C,Agency,2023-12-03,2-5y,1,1,503
+EMP00504,Ingrid Sato,16,Receiver,3,C,Permanent,2021-04-10,5y+,0,1,504
+EMP00505,Grace Rossi,5,Picker,1,A,Agency,2020-07-11,5y+,0,1,505
+EMP00506,Fatima Kumar,6,Picker,3,C,Permanent,2023-05-02,2-5y,0,1,506
+EMP00507,Priya Novak,1,Team Lead,3,C,Agency,2025-01-04,1-2y,0,1,507
+EMP00508,Marco Sharma,2,Checker,1,A,Permanent,2019-08-08,5y+,0,1,508
+EMP00509,Priya Novak,4,Picker,1,A,Permanent,2024-08-06,2-5y,0,1,509
+EMP00510,Marco Gomez,23,Receiver,2,B,Permanent,2022-05-01,2-5y,0,1,510
+EMP00511,Wei Zhang,3,Receiver,3,C,Permanent,2022-04-10,2-5y,0,1,511
+EMP00512,John Khalid,21,Checker,3,C,Agency,2018-02-05,5y+,0,1,512
+EMP00513,Kenji Novak,5,Packer,3,C,Permanent,2022-04-13,2-5y,1,1,513
+EMP00514,Grace Silva,5,Packer,1,A,Permanent,2025-06-10,1-2y,0,1,514
+EMP00515,Diego Khalid,4,Packer,2,B,Permanent,2019-04-11,5y+,0,1,515
+EMP00516,Ahmed Gomez,23,Receiver,2,B,Permanent,2017-10-09,5y+,0,0,516
+EMP00517,Li Sato,1,Team Lead,1,A,Permanent,2023-12-18,2-5y,1,1,517
+EMP00518,Fatima Haddad,16,Team Lead,1,A,Agency,2018-07-20,5y+,0,1,518
+EMP00519,Ingrid Zhang,4,Packer,3,C,Permanent,2023-06-17,2-5y,0,1,519
+EMP00520,Ravi Sharma,5,Checker,1,A,Permanent,2018-02-22,5y+,0,1,520
+EMP00521,Ingrid Berg,6,Forklift Operator,1,A,Permanent,2020-04-15,5y+,1,1,521
+EMP00522,Carlos Kumar,17,Packer,3,C,Agency,2026-02-01,6-12m,0,1,522
+EMP00523,Kenji Gomez,13,Packer,3,C,Permanent,2026-07-10,<6m,0,1,523
+EMP00524,Fatima Kumar,10,Receiver,3,C,Agency,2022-03-17,2-5y,0,1,524
+EMP00525,Ravi Nguyen,8,Checker,1,A,Permanent,2023-09-17,2-5y,0,1,525
+EMP00526,Elena Smith,24,Team Lead,2,B,Permanent,2016-03-01,5y+,0,1,526
+EMP00527,Li Mensah,22,Checker,2,B,Permanent,2022-03-08,2-5y,0,1,527
+EMP00528,Carlos Smith,7,Packer,2,B,Permanent,2024-11-23,1-2y,0,1,528
+EMP00529,Carlos Gomez,4,Picker,1,A,Permanent,2018-07-01,5y+,0,1,529
+EMP00530,Siti Fernandes,13,Team Lead,1,A,Permanent,2022-12-16,2-5y,0,1,530
+EMP00531,Grace Silva,2,Checker,1,A,Agency,2021-05-31,5y+,0,1,531
+EMP00532,Ahmed Gomez,1,Picker,3,C,Permanent,2022-06-15,2-5y,0,1,532
+EMP00533,John Torres,21,Forklift Operator,2,B,Permanent,2019-06-20,5y+,1,1,533
+EMP00534,Liam Nguyen,21,Team Lead,3,C,Agency,2021-06-04,5y+,0,1,534
+EMP00535,Carlos Silva,18,Picker,2,B,Permanent,2021-01-27,5y+,0,1,535
+EMP00536,Hassan Berg,14,Receiver,1,A,Agency,2023-06-24,2-5y,0,1,536
+EMP00537,Maria Mensah,11,Picker,3,C,Permanent,2025-02-19,1-2y,0,1,537
+EMP00538,Ingrid Zhang,23,Picker,2,B,Permanent,2026-03-21,<6m,0,1,538
+EMP00539,Anita Costa,19,Supervisor,1,A,Permanent,2024-09-27,1-2y,1,1,539
+EMP00540,Siti Rahman,16,Forklift Operator,1,A,Agency,2023-07-11,2-5y,1,1,540
+EMP00541,Siti Kumar,17,Picker,3,C,Permanent,2017-10-04,5y+,0,1,541
+EMP00542,Carlos Wang,22,Forklift Operator,1,A,Permanent,2017-04-25,5y+,1,1,542
+EMP00543,Hassan Rahman,3,Checker,2,B,Permanent,2023-03-19,2-5y,0,1,543
+EMP00544,Ahmed Sharma,7,Supervisor,3,C,Permanent,2016-06-30,5y+,0,1,544
+EMP00545,Kenji Sato,15,Receiver,3,C,Permanent,2018-11-14,5y+,0,1,545
+EMP00546,Sofia Costa,17,Packer,3,C,Permanent,2018-09-04,5y+,0,1,546
+EMP00547,Kenji Rossi,12,Forklift Operator,2,B,Permanent,2018-02-12,5y+,1,1,547
+EMP00548,Ahmed Khalid,14,Receiver,3,C,Seasonal,2021-04-30,5y+,0,1,548
+EMP00549,John Mensah,10,Picker,2,B,Permanent,2017-11-17,5y+,1,1,549
+EMP00550,Li Sato,17,Packer,2,B,Permanent,2020-07-17,5y+,0,1,550
+EMP00551,Ingrid Novak,1,Picker,2,B,Permanent,2026-08-02,<6m,0,1,551
+EMP00552,Ravi Haddad,8,Receiver,2,B,Permanent,2025-08-25,6-12m,0,1,552
+EMP00553,Fatima Wang,8,Forklift Operator,1,A,Permanent,2021-10-23,2-5y,1,1,553
+EMP00554,Ingrid Nguyen,18,Receiver,1,A,Seasonal,2018-01-28,5y+,0,1,554
+EMP00555,Priya Smith,21,Picker,1,A,Agency,2018-06-20,5y+,0,1,555
+EMP00556,Ahmed Sato,22,Packer,3,C,Permanent,2019-04-29,5y+,0,1,556
+EMP00557,Ahmed Nguyen,4,Packer,2,B,Permanent,2023-08-14,2-5y,1,1,557
+EMP00558,Priya Costa,19,Packer,1,A,Agency,2024-06-27,2-5y,0,1,558
+EMP00559,Ingrid Sharma,22,Receiver,3,C,Permanent,2020-07-16,5y+,0,1,559
+EMP00560,Maria Khalid,20,Supervisor,3,C,Permanent,2025-10-16,6-12m,1,1,560
+EMP00561,Ravi Rossi,6,Packer,1,A,Permanent,2020-03-03,5y+,0,1,561
+EMP00562,Maria Novak,20,Picker,2,B,Permanent,2020-08-24,5y+,0,0,562
+EMP00563,Liam Silva,1,Forklift Operator,1,A,Permanent,2020-11-06,5y+,1,1,563
+EMP00564,Liam Mensah,9,Forklift Operator,1,A,Permanent,2018-09-27,5y+,1,1,564
+EMP00565,Maria Khalid,4,Forklift Operator,3,C,Seasonal,2021-08-21,2-5y,1,1,565
+EMP00566,Carlos Rahman,18,Forklift Operator,2,B,Agency,2022-07-28,2-5y,1,1,566
+EMP00567,Siti Mensah,16,Picker,3,C,Permanent,2018-09-09,5y+,0,1,567
+EMP00568,Sofia Sharma,11,Packer,2,B,Permanent,2018-01-19,5y+,0,1,568
+EMP00569,Li Haddad,12,Team Lead,1,A,Permanent,2021-12-18,2-5y,0,1,569
+EMP00570,Grace Torres,6,Team Lead,3,C,Permanent,2025-06-28,1-2y,0,1,570
+EMP00571,Priya Rahman,18,Receiver,2,B,Agency,2025-01-11,1-2y,0,1,571
+EMP00572,Grace Fernandes,20,Picker,3,C,Seasonal,2023-07-08,2-5y,0,1,572
+EMP00573,Siti Mensah,22,Receiver,1,A,Permanent,2025-10-08,6-12m,0,1,573
+EMP00574,Ravi Khalid,9,Packer,3,C,Permanent,2026-01-15,6-12m,1,1,574
+EMP00575,Li Costa,10,Receiver,2,B,Permanent,2017-11-28,5y+,0,1,575
+EMP00576,Diego Sato,19,Forklift Operator,1,A,Agency,2025-07-10,1-2y,1,1,576
+EMP00577,Ahmed Haddad,19,Packer,2,B,Agency,2019-09-12,5y+,0,1,577
+EMP00578,Sofia Costa,1,Packer,2,B,Seasonal,2021-07-27,5y+,0,0,578
+EMP00579,Li Al-Amin,20,Picker,2,B,Permanent,2021-02-09,5y+,0,1,579
+EMP00580,Wei Mensah,20,Packer,2,B,Permanent,2017-09-11,5y+,1,1,580
+EMP00581,Maria Sato,5,Supervisor,1,A,Agency,2020-04-26,5y+,1,1,581
+EMP00582,Grace Gomez,24,Packer,2,B,Agency,2019-09-07,5y+,0,1,582
+EMP00583,Fatima Rossi,10,Receiver,2,B,Permanent,2018-03-31,5y+,0,1,583
+EMP00584,Maria Novak,1,Supervisor,3,C,Agency,2020-11-25,5y+,0,1,584
+EMP00585,Grace Sharma,23,Forklift Operator,3,C,Permanent,2026-07-08,<6m,1,1,585
+EMP00586,Sofia Al-Amin,21,Receiver,3,C,Agency,2023-01-19,2-5y,0,1,586
+EMP00587,Ingrid Zhang,18,Packer,3,C,Permanent,2024-09-04,1-2y,0,1,587
+EMP00588,Ravi Berg,16,Forklift Operator,3,C,Permanent,2018-06-23,5y+,1,1,588
+EMP00589,Grace Fernandes,21,Picker,2,B,Seasonal,2025-09-03,6-12m,0,1,589
+EMP00590,Priya Kumar,1,Packer,1,A,Permanent,2016-07-20,5y+,0,1,590
+EMP00591,Fatima Wang,9,Checker,3,C,Agency,2022-04-20,2-5y,0,1,591
+EMP00592,Priya Rossi,16,Receiver,2,B,Permanent,2024-12-17,1-2y,0,1,592
+EMP00593,Li Al-Amin,10,Picker,2,B,Permanent,2022-06-04,2-5y,0,1,593
+EMP00594,Ahmed Kumar,18,Picker,2,B,Permanent,2026-02-03,6-12m,0,1,594
+EMP00595,Ahmed Berg,22,Team Lead,3,C,Agency,2025-01-20,1-2y,0,0,595
+EMP00596,Sofia Nguyen,16,Packer,2,B,Permanent,2023-11-20,2-5y,0,1,596
+EMP00597,Wei Zhang,4,Receiver,1,A,Agency,2016-09-14,5y+,0,1,597
+EMP00598,John Khalid,7,Picker,1,A,Agency,2022-11-05,2-5y,0,1,598
+EMP00599,Hassan Rahman,16,Forklift Operator,2,B,Permanent,2025-03-20,1-2y,1,0,599
+EMP00600,Diego Gomez,10,Forklift Operator,3,C,Permanent,2016-12-30,5y+,1,1,600
+EMP00601,Diego Mensah,20,Team Lead,3,C,Permanent,2024-05-13,2-5y,0,1,601
+EMP00602,Marco Costa,3,Checker,3,C,Agency,2023-09-19,2-5y,1,1,602
+EMP00603,Diego Wang,23,Packer,2,B,Permanent,2018-10-21,5y+,0,1,603
+EMP00604,Hassan Mensah,11,Packer,3,C,Agency,2024-06-07,2-5y,0,1,604
+EMP00605,Siti Al-Amin,22,Receiver,1,A,Agency,2025-03-15,1-2y,0,1,605
+EMP00606,John Fernandes,24,Packer,1,A,Permanent,2019-05-12,5y+,0,1,606
+EMP00607,Diego Khalid,12,Checker,1,A,Permanent,2016-07-11,5y+,0,1,607
+EMP00608,Carlos Rossi,10,Receiver,3,C,Agency,2019-04-24,5y+,0,1,608
+EMP00609,Marco Gomez,4,Receiver,1,A,Permanent,2021-07-29,5y+,0,1,609
+EMP00610,Fatima Rossi,2,Packer,1,A,Agency,2018-10-25,5y+,0,1,610
+EMP00611,Marco Rahman,24,Picker,1,A,Permanent,2022-08-08,2-5y,0,1,611
+EMP00612,Maria Torres,19,Packer,2,B,Permanent,2016-05-30,5y+,0,1,612
+EMP00613,Ravi Khalid,21,Picker,2,B,Agency,2025-02-21,1-2y,0,1,613
+EMP00614,Li Rossi,2,Picker,1,A,Permanent,2023-02-18,2-5y,0,1,614
+EMP00615,Liam Torres,25,Team Lead,2,B,Permanent,2025-06-21,1-2y,0,1,615
+EMP00616,Grace Fernandes,23,Picker,1,A,Permanent,2019-11-13,5y+,0,1,616
+EMP00617,Elena Rossi,1,Packer,1,A,Agency,2024-10-07,1-2y,0,1,617
+EMP00618,Maria Khalid,23,Forklift Operator,3,C,Agency,2022-03-29,2-5y,1,1,618
+EMP00619,John Sharma,12,Receiver,1,A,Agency,2017-08-12,5y+,0,1,619
+EMP00620,Sofia Gomez,18,Picker,2,B,Agency,2024-01-07,2-5y,0,1,620
+EMP00621,Grace Kumar,22,Checker,2,B,Seasonal,2016-12-23,5y+,0,1,621
+EMP00622,Ahmed Sato,17,Forklift Operator,3,C,Permanent,2016-03-09,5y+,1,1,622
+EMP00623,Grace Haddad,14,Picker,2,B,Permanent,2018-06-28,5y+,1,1,623
+EMP00624,Li Mensah,8,Picker,2,B,Agency,2026-01-25,6-12m,0,1,624
+EMP00625,Anita Nguyen,15,Packer,2,B,Agency,2026-08-20,<6m,0,1,625
+EMP00626,Kenji Al-Amin,9,Team Lead,1,A,Permanent,2021-02-25,5y+,0,1,626
+EMP00627,Liam Sato,21,Checker,3,C,Permanent,2024-10-31,1-2y,0,1,627
+EMP00628,Anita Zhang,14,Picker,3,C,Agency,2016-03-24,5y+,0,1,628
+EMP00629,Wei Mensah,4,Packer,2,B,Agency,2022-02-23,2-5y,0,1,629
+EMP00630,Wei Wang,6,Picker,1,A,Seasonal,2021-06-24,5y+,0,1,630
+EMP00631,John Wang,20,Forklift Operator,2,B,Agency,2025-03-04,1-2y,1,1,631
+EMP00632,Ingrid Haddad,10,Packer,3,C,Permanent,2019-08-04,5y+,0,1,632
+EMP00633,Grace Sato,6,Packer,1,A,Permanent,2023-03-11,2-5y,0,1,633
+EMP00634,Marco Torres,22,Picker,2,B,Permanent,2022-10-13,2-5y,0,1,634
+EMP00635,Fatima Torres,22,Picker,3,C,Permanent,2017-07-16,5y+,0,1,635
+EMP00636,Maria Wang,9,Picker,3,C,Agency,2023-11-15,2-5y,0,1,636
+EMP00637,Marco Costa,20,Forklift Operator,3,C,Permanent,2025-04-01,1-2y,1,1,637
+EMP00638,Li Sato,1,Supervisor,3,C,Permanent,2021-07-11,5y+,0,0,638
+EMP00639,Priya Wang,20,Packer,1,A,Permanent,2022-12-03,2-5y,0,1,639
+EMP00640,Diego Khalid,2,Forklift Operator,2,B,Permanent,2026-04-28,<6m,1,1,640
+EMP00641,Anita Fernandes,22,Picker,3,C,Agency,2020-06-21,5y+,0,1,641
+EMP00642,Anita Al-Amin,3,Picker,1,A,Permanent,2018-05-23,5y+,0,1,642
+EMP00643,Ravi Silva,10,Checker,3,C,Agency,2025-03-18,1-2y,1,1,643
+EMP00644,Grace Khalid,5,Receiver,1,A,Permanent,2017-10-17,5y+,0,1,644
+EMP00645,Elena Silva,4,Receiver,3,C,Permanent,2018-11-30,5y+,0,1,645
+EMP00646,Wei Silva,15,Checker,3,C,Permanent,2020-10-27,5y+,0,1,646
+EMP00647,Kenji Novak,12,Checker,1,A,Permanent,2019-05-08,5y+,0,1,647
+EMP00648,Liam Mensah,12,Picker,2,B,Permanent,2017-05-27,5y+,0,1,648
+EMP00649,Marco Berg,19,Receiver,3,C,Permanent,2024-03-03,2-5y,0,1,649
+EMP00650,Siti Novak,1,Checker,2,B,Permanent,2021-12-07,2-5y,0,1,650
+EMP00651,Hassan Costa,21,Team Lead,2,B,Permanent,2016-07-07,5y+,0,1,651
+EMP00652,Wei Smith,2,Packer,2,B,Permanent,2022-08-29,2-5y,0,1,652
+EMP00653,Carlos Smith,17,Picker,2,B,Agency,2020-11-27,5y+,0,1,653
+EMP00654,Elena Al-Amin,1,Team Lead,3,C,Permanent,2021-02-09,5y+,1,1,654
+EMP00655,Fatima Khalid,16,Packer,1,A,Agency,2016-09-20,5y+,0,1,655
+EMP00656,Li Rahman,25,Packer,3,C,Permanent,2016-12-26,5y+,1,1,656
+EMP00657,Diego Novak,17,Picker,3,C,Agency,2018-08-01,5y+,0,1,657
+EMP00658,Siti Kumar,9,Checker,2,B,Permanent,2023-03-11,2-5y,0,1,658
+EMP00659,Anita Silva,25,Packer,2,B,Permanent,2020-02-27,5y+,0,1,659
+EMP00660,Anita Fernandes,12,Forklift Operator,1,A,Permanent,2016-03-27,5y+,1,1,660
+EMP00661,Marco Fernandes,7,Packer,1,A,Agency,2024-02-23,2-5y,0,1,661
+EMP00662,Maria Haddad,5,Checker,3,C,Permanent,2016-07-04,5y+,0,1,662
+EMP00663,Carlos Costa,11,Checker,1,A,Agency,2016-04-01,5y+,1,1,663
+EMP00664,Ravi Kumar,22,Receiver,1,A,Seasonal,2026-06-08,<6m,1,1,664
+EMP00665,Siti Gomez,1,Picker,1,A,Permanent,2021-07-25,5y+,0,1,665
+EMP00666,Hassan Smith,1,Picker,3,C,Agency,2026-04-11,<6m,0,1,666
+EMP00667,Maria Gomez,3,Forklift Operator,2,B,Permanent,2025-09-16,6-12m,1,1,667
+EMP00668,Marco Al-Amin,12,Packer,1,A,Agency,2018-10-26,5y+,0,1,668
+EMP00669,Priya Al-Amin,17,Team Lead,1,A,Agency,2017-06-07,5y+,0,1,669
+EMP00670,Carlos Khalid,15,Receiver,1,A,Permanent,2026-04-22,<6m,0,1,670
+EMP00671,Ingrid Novak,11,Receiver,2,B,Permanent,2023-09-28,2-5y,0,1,671
+EMP00672,Maria Sharma,1,Receiver,2,B,Agency,2026-03-22,<6m,1,1,672
+EMP00673,Ingrid Rahman,5,Picker,3,C,Permanent,2017-11-27,5y+,0,1,673
+EMP00674,Marco Wang,17,Picker,2,B,Permanent,2022-08-12,2-5y,1,1,674
+EMP00675,Ahmed Berg,24,Checker,1,A,Permanent,2019-05-03,5y+,0,1,675
+EMP00676,Priya Torres,4,Picker,3,C,Permanent,2016-10-16,5y+,0,1,676
+EMP00677,Marco Al-Amin,16,Checker,2,B,Permanent,2025-09-06,6-12m,0,1,677
+EMP00678,Marco Sharma,13,Receiver,3,C,Permanent,2019-06-08,5y+,0,1,678
+EMP00679,Kenji Sato,17,Checker,1,A,Permanent,2026-05-27,<6m,0,1,679
+EMP00680,Ingrid Sharma,17,Packer,3,C,Permanent,2019-07-26,5y+,0,1,680
+EMP00681,Anita Sato,19,Packer,1,A,Permanent,2020-06-05,5y+,0,1,681
+EMP00682,Anita Wang,12,Picker,3,C,Agency,2024-10-17,1-2y,0,1,682
+EMP00683,Kenji Berg,11,Packer,3,C,Seasonal,2020-09-17,5y+,0,1,683
+EMP00684,Wei Silva,24,Picker,1,A,Agency,2020-08-26,5y+,0,1,684
+EMP00685,Fatima Sato,22,Supervisor,2,B,Seasonal,2025-08-16,1-2y,0,1,685
+EMP00686,John Haddad,2,Packer,1,A,Permanent,2017-11-29,5y+,0,1,686
+EMP00687,Wei Al-Amin,23,Picker,1,A,Permanent,2024-12-11,1-2y,0,0,687
+EMP00688,Hassan Khalid,25,Picker,2,B,Seasonal,2026-04-17,<6m,0,1,688
+EMP00689,Ravi Zhang,3,Receiver,3,C,Agency,2025-02-16,1-2y,0,1,689
+EMP00690,Carlos Khalid,1,Forklift Operator,2,B,Permanent,2017-01-06,5y+,1,1,690
+EMP00691,Kenji Torres,18,Picker,1,A,Permanent,2017-07-18,5y+,0,1,691
+EMP00692,Siti Gomez,22,Forklift Operator,1,A,Permanent,2024-08-31,1-2y,1,1,692
+EMP00693,Liam Wang,5,Forklift Operator,3,C,Permanent,2017-02-16,5y+,1,1,693
+EMP00694,Ahmed Gomez,7,Packer,3,C,Permanent,2023-12-30,2-5y,0,1,694
+EMP00695,John Fernandes,20,Picker,2,B,Seasonal,2026-04-21,<6m,0,1,695
+EMP00696,Fatima Sharma,11,Forklift Operator,1,A,Agency,2025-12-21,6-12m,1,1,696
+EMP00697,Grace Al-Amin,14,Receiver,3,C,Permanent,2023-11-01,2-5y,0,1,697
+EMP00698,Hassan Smith,13,Receiver,2,B,Permanent,2017-02-19,5y+,0,1,698
+EMP00699,Ravi Berg,7,Forklift Operator,1,A,Agency,2024-06-03,2-5y,1,0,699
+EMP00700,Ingrid Rahman,25,Forklift Operator,2,B,Agency,2017-11-13,5y+,1,1,700
+EMP00701,Hassan Rahman,10,Team Lead,3,C,Permanent,2019-11-27,5y+,1,1,701
+EMP00702,Diego Smith,20,Forklift Operator,3,C,Agency,2022-09-02,2-5y,1,1,702
+EMP00703,Ingrid Novak,10,Receiver,1,A,Permanent,2018-12-18,5y+,0,1,703
+EMP00704,Grace Wang,20,Checker,3,C,Permanent,2024-05-10,2-5y,0,1,704
+EMP00705,Wei Mensah,8,Forklift Operator,3,C,Permanent,2016-12-17,5y+,1,1,705
+EMP00706,Anita Mensah,17,Receiver,3,C,Agency,2019-11-22,5y+,0,1,706
+EMP00707,Li Fernandes,4,Picker,2,B,Permanent,2017-03-23,5y+,0,1,707
+EMP00708,Wei Nguyen,12,Packer,3,C,Permanent,2016-06-13,5y+,0,1,708
+EMP00709,Wei Silva,6,Forklift Operator,1,A,Permanent,2025-01-20,1-2y,1,1,709
+EMP00710,Siti Haddad,15,Team Lead,2,B,Seasonal,2025-10-20,6-12m,0,1,710
+EMP00711,Wei Nguyen,15,Receiver,1,A,Seasonal,2019-06-27,5y+,0,1,711
+EMP00712,Wei Smith,6,Forklift Operator,1,A,Permanent,2018-04-17,5y+,1,1,712
+EMP00713,John Wang,3,Picker,1,A,Permanent,2022-07-17,2-5y,1,1,713
+EMP00714,Hassan Sato,21,Picker,3,C,Permanent,2025-09-20,6-12m,0,1,714
+EMP00715,Maria Wang,15,Picker,2,B,Permanent,2022-03-06,2-5y,0,1,715
+EMP00716,Elena Sato,7,Picker,3,C,Permanent,2022-10-29,2-5y,0,1,716
+EMP00717,John Zhang,6,Supervisor,1,A,Agency,2022-12-22,2-5y,0,1,717
+EMP00718,Grace Fernandes,6,Supervisor,3,C,Permanent,2026-01-20,6-12m,0,1,718
+EMP00719,Anita Rossi,20,Picker,1,A,Permanent,2024-10-12,1-2y,0,1,719
+EMP00720,Sofia Rahman,20,Receiver,2,B,Permanent,2024-11-07,1-2y,0,1,720
+EMP00721,Carlos Mensah,4,Receiver,3,C,Permanent,2017-07-01,5y+,0,1,721
+EMP00722,Ingrid Zhang,20,Forklift Operator,1,A,Agency,2017-10-23,5y+,1,1,722
+EMP00723,Sofia Torres,3,Receiver,3,C,Permanent,2017-07-28,5y+,1,1,723
+EMP00724,Grace Zhang,21,Receiver,2,B,Agency,2020-08-01,5y+,0,1,724
+EMP00725,John Costa,6,Team Lead,2,B,Permanent,2018-02-11,5y+,0,1,725
+EMP00726,Fatima Sato,19,Packer,2,B,Permanent,2021-12-21,2-5y,0,1,726
+EMP00727,Ahmed Wang,1,Receiver,3,C,Seasonal,2017-09-13,5y+,0,1,727
+EMP00728,Grace Haddad,12,Picker,3,C,Permanent,2018-07-07,5y+,0,1,728
+EMP00729,Priya Rahman,17,Picker,3,C,Permanent,2019-02-02,5y+,0,1,729
+EMP00730,Elena Haddad,10,Forklift Operator,3,C,Agency,2021-05-27,5y+,1,1,730
+EMP00731,Grace Smith,20,Checker,3,C,Permanent,2023-07-04,2-5y,0,1,731
+EMP00732,Ahmed Nguyen,3,Packer,2,B,Permanent,2016-08-31,5y+,0,1,732
+EMP00733,Ravi Wang,9,Picker,1,A,Agency,2018-02-13,5y+,0,1,733
+EMP00734,Diego Silva,1,Forklift Operator,1,A,Agency,2024-03-14,2-5y,1,1,734
+EMP00735,Kenji Berg,22,Picker,2,B,Permanent,2019-06-13,5y+,0,1,735
+EMP00736,Anita Nguyen,3,Forklift Operator,3,C,Permanent,2026-02-03,6-12m,1,1,736
+EMP00737,Maria Khalid,24,Forklift Operator,2,B,Permanent,2019-01-11,5y+,1,1,737
+EMP00738,Priya Silva,11,Forklift Operator,1,A,Agency,2018-01-02,5y+,1,1,738
+EMP00739,Ravi Zhang,6,Forklift Operator,1,A,Permanent,2025-06-26,1-2y,0,1,739
+EMP00740,John Berg,19,Packer,1,A,Permanent,2021-06-02,5y+,0,1,740
+EMP00741,Ravi Al-Amin,7,Forklift Operator,2,B,Permanent,2017-10-27,5y+,1,1,741
+EMP00742,Ingrid Sato,15,Picker,3,C,Permanent,2020-05-20,5y+,0,1,742
+EMP00743,Li Novak,24,Picker,3,C,Permanent,2017-11-19,5y+,0,1,743
+EMP00744,John Rahman,10,Picker,1,A,Agency,2016-03-09,5y+,0,1,744
+EMP00745,Sofia Costa,21,Picker,3,C,Agency,2020-01-04,5y+,0,1,745
+EMP00746,Maria Wang,17,Receiver,2,B,Agency,2018-09-10,5y+,0,1,746
+EMP00747,Marco Kumar,13,Picker,3,C,Permanent,2019-07-30,5y+,0,1,747
+EMP00748,Grace Novak,1,Picker,2,B,Permanent,2025-10-24,6-12m,0,0,748
+EMP00749,Liam Costa,21,Picker,1,A,Permanent,2024-11-23,1-2y,0,1,749
+EMP00750,Sofia Haddad,5,Picker,1,A,Permanent,2023-04-27,2-5y,0,1,750
+EMP00751,Hassan Nguyen,25,Packer,3,C,Permanent,2016-01-07,5y+,0,1,751
+EMP00752,Li Haddad,3,Forklift Operator,1,A,Permanent,2019-05-06,5y+,1,1,752
+EMP00753,Ravi Sharma,19,Packer,1,A,Permanent,2023-10-10,2-5y,0,1,753
+EMP00754,Elena Zhang,18,Picker,3,C,Permanent,2021-11-26,2-5y,0,1,754
+EMP00755,Hassan Sato,2,Packer,1,A,Permanent,2023-03-16,2-5y,0,1,755
+EMP00756,Priya Mensah,11,Supervisor,2,B,Seasonal,2025-10-01,6-12m,0,1,756
+EMP00757,Fatima Sharma,9,Packer,2,B,Permanent,2019-04-08,5y+,0,1,757
+EMP00758,Ahmed Nguyen,8,Supervisor,2,B,Permanent,2017-05-17,5y+,0,1,758
+EMP00759,Marco Novak,1,Picker,3,C,Permanent,2024-12-24,1-2y,0,0,759
+EMP00760,Elena Costa,8,Team Lead,3,C,Seasonal,2018-07-04,5y+,0,1,760
+EMP00761,Hassan Sato,5,Packer,1,A,Agency,2024-06-11,2-5y,0,1,761
+EMP00762,Diego Gomez,19,Receiver,1,A,Permanent,2020-01-29,5y+,0,0,762
+EMP00763,Ravi Nguyen,5,Packer,3,C,Permanent,2019-06-30,5y+,0,1,763
+EMP00764,Siti Wang,18,Forklift Operator,2,B,Permanent,2021-11-29,2-5y,1,1,764
+EMP00765,Diego Fernandes,24,Picker,3,C,Permanent,2026-06-19,<6m,0,1,765
+EMP00766,Marco Silva,17,Receiver,2,B,Agency,2018-12-19,5y+,0,1,766
+EMP00767,Liam Rossi,12,Checker,3,C,Permanent,2023-02-02,2-5y,0,1,767
+EMP00768,Ravi Novak,18,Packer,3,C,Permanent,2024-07-17,2-5y,0,1,768
+EMP00769,Sofia Sharma,14,Picker,1,A,Seasonal,2021-03-19,5y+,0,1,769
+EMP00770,Sofia Fernandes,8,Picker,1,A,Permanent,2026-03-03,<6m,0,0,770
+EMP00771,Kenji Torres,11,Packer,1,A,Permanent,2019-07-22,5y+,0,1,771
+EMP00772,Kenji Sharma,21,Checker,2,B,Permanent,2022-01-08,2-5y,0,1,772
+EMP00773,Hassan Fernandes,22,Supervisor,3,C,Permanent,2025-05-31,1-2y,0,1,773
+EMP00774,Siti Haddad,11,Supervisor,2,B,Permanent,2023-06-30,2-5y,0,1,774
+EMP00775,Maria Torres,17,Packer,1,A,Seasonal,2018-05-14,5y+,0,1,775
+EMP00776,Ahmed Berg,24,Receiver,2,B,Seasonal,2022-08-17,2-5y,0,1,776
+EMP00777,Ingrid Sato,10,Supervisor,1,A,Permanent,2017-07-11,5y+,0,1,777
+EMP00778,John Sharma,12,Checker,2,B,Permanent,2025-12-20,6-12m,0,1,778
+EMP00779,Sofia Khalid,1,Packer,1,A,Permanent,2023-04-14,2-5y,1,1,779
+EMP00780,Ravi Al-Amin,11,Picker,1,A,Permanent,2024-03-01,2-5y,0,1,780
+EMP00781,Liam Torres,7,Picker,2,B,Agency,2016-04-28,5y+,1,0,781
+EMP00782,Elena Mensah,14,Picker,3,C,Agency,2024-10-08,1-2y,0,1,782
+EMP00783,Siti Silva,3,Packer,2,B,Seasonal,2021-01-31,5y+,0,1,783
+EMP00784,Hassan Khalid,8,Receiver,1,A,Permanent,2018-04-19,5y+,0,1,784
+EMP00785,Priya Smith,10,Supervisor,3,C,Seasonal,2024-05-29,2-5y,0,1,785
+EMP00786,Ahmed Zhang,3,Picker,1,A,Seasonal,2018-08-14,5y+,0,0,786
+EMP00787,Ravi Nguyen,25,Forklift Operator,3,C,Agency,2022-10-10,2-5y,1,1,787
+EMP00788,Sofia Sharma,4,Picker,2,B,Permanent,2023-09-03,2-5y,0,0,788
+EMP00789,Elena Wang,10,Forklift Operator,1,A,Permanent,2025-04-01,1-2y,1,1,789
+EMP00790,Fatima Zhang,22,Forklift Operator,1,A,Seasonal,2016-07-31,5y+,0,1,790
+EMP00791,John Costa,21,Checker,3,C,Agency,2020-01-01,5y+,0,1,791
+EMP00792,Liam Torres,4,Supervisor,2,B,Seasonal,2018-08-29,5y+,0,1,792
+EMP00793,Kenji Nguyen,22,Packer,2,B,Permanent,2018-08-14,5y+,0,1,793
+EMP00794,Wei Fernandes,3,Receiver,3,C,Agency,2020-01-14,5y+,0,1,794
+EMP00795,Ingrid Rahman,19,Receiver,3,C,Seasonal,2019-01-05,5y+,0,1,795
+EMP00796,John Kumar,3,Picker,3,C,Permanent,2017-12-09,5y+,0,1,796
+EMP00797,Diego Gomez,18,Picker,1,A,Permanent,2023-03-30,2-5y,0,1,797
+EMP00798,Liam Costa,15,Forklift Operator,3,C,Permanent,2022-06-13,2-5y,1,1,798
+EMP00799,Hassan Gomez,15,Receiver,1,A,Permanent,2022-11-21,2-5y,0,1,799
+EMP00800,Wei Gomez,10,Receiver,3,C,Permanent,2023-02-27,2-5y,0,1,800
+EMP00801,Kenji Nguyen,11,Team Lead,3,C,Agency,2021-03-14,5y+,0,1,801
+EMP00802,Sofia Smith,8,Packer,1,A,Permanent,2021-07-31,5y+,0,1,802
+EMP00803,Siti Zhang,6,Picker,2,B,Seasonal,2016-07-26,5y+,0,1,803
+EMP00804,Ahmed Zhang,18,Picker,3,C,Permanent,2016-05-24,5y+,0,1,804
+EMP00805,Wei Rahman,10,Receiver,3,C,Permanent,2017-04-18,5y+,0,1,805
+EMP00806,Sofia Sharma,16,Picker,1,A,Permanent,2024-11-08,1-2y,0,1,806
+EMP00807,Fatima Rahman,7,Receiver,1,A,Permanent,2017-12-05,5y+,0,1,807
+EMP00808,Carlos Wang,10,Supervisor,3,C,Permanent,2025-01-01,1-2y,0,1,808
+EMP00809,John Haddad,16,Forklift Operator,2,B,Permanent,2016-03-31,5y+,1,1,809
+EMP00810,Sofia Kumar,17,Checker,3,C,Permanent,2020-11-19,5y+,0,1,810
+EMP00811,Ahmed Novak,1,Receiver,1,A,Permanent,2016-09-19,5y+,1,1,811
+EMP00812,Ingrid Gomez,18,Team Lead,2,B,Agency,2023-05-14,2-5y,0,1,812
+EMP00813,Priya Sharma,13,Receiver,2,B,Seasonal,2020-10-22,5y+,0,1,813
+EMP00814,Wei Smith,8,Checker,1,A,Permanent,2021-10-23,2-5y,1,1,814
+EMP00815,Maria Fernandes,1,Picker,3,C,Permanent,2019-03-11,5y+,0,1,815
+EMP00816,Elena Al-Amin,19,Picker,2,B,Agency,2024-07-13,2-5y,0,1,816
+EMP00817,Diego Torres,13,Receiver,2,B,Permanent,2017-09-04,5y+,1,1,817
+EMP00818,Fatima Fernandes,22,Packer,3,C,Permanent,2021-01-07,5y+,0,1,818
+EMP00819,Grace Gomez,11,Packer,3,C,Permanent,2025-05-11,1-2y,0,1,819
+EMP00820,Hassan Mensah,12,Supervisor,1,A,Permanent,2018-01-09,5y+,0,1,820
+EMP00821,Priya Smith,24,Picker,3,C,Permanent,2020-04-09,5y+,0,1,821
+EMP00822,Li Costa,7,Receiver,2,B,Permanent,2019-06-02,5y+,0,1,822
+EMP00823,Maria Silva,18,Team Lead,2,B,Agency,2016-10-28,5y+,1,1,823
+EMP00824,Marco Al-Amin,23,Picker,1,A,Permanent,2022-08-31,2-5y,0,1,824
+EMP00825,Wei Gomez,9,Receiver,1,A,Agency,2026-06-02,<6m,0,1,825
+EMP00826,Carlos Nguyen,15,Picker,2,B,Permanent,2020-07-02,5y+,0,1,826
+EMP00827,Fatima Zhang,2,Checker,3,C,Agency,2023-03-03,2-5y,0,1,827
+EMP00828,Carlos Haddad,4,Receiver,2,B,Permanent,2018-12-07,5y+,0,1,828
+EMP00829,Anita Novak,7,Supervisor,2,B,Agency,2019-12-21,5y+,0,1,829
+EMP00830,Li Silva,2,Picker,2,B,Agency,2026-01-30,6-12m,0,1,830
+EMP00831,Ingrid Al-Amin,5,Packer,1,A,Permanent,2016-08-21,5y+,0,1,831
+EMP00832,Priya Al-Amin,13,Picker,3,C,Agency,2021-09-11,2-5y,0,0,832
+EMP00833,Hassan Sato,18,Packer,1,A,Permanent,2026-01-15,6-12m,0,1,833
+EMP00834,Elena Novak,25,Forklift Operator,2,B,Permanent,2019-03-17,5y+,1,1,834
+EMP00835,Priya Khalid,6,Picker,2,B,Permanent,2019-04-05,5y+,0,1,835
+EMP00836,Ingrid Rossi,19,Packer,1,A,Agency,2020-02-26,5y+,0,1,836
+EMP00837,Carlos Wang,2,Checker,3,C,Permanent,2016-11-10,5y+,0,1,837
+EMP00838,Ingrid Kumar,22,Packer,2,B,Permanent,2018-12-09,5y+,0,1,838
+EMP00839,Ravi Torres,7,Picker,3,C,Permanent,2024-01-22,2-5y,0,1,839
+EMP00840,Carlos Sato,24,Packer,3,C,Permanent,2019-11-01,5y+,0,1,840
+EMP00841,Anita Silva,25,Receiver,2,B,Agency,2021-12-12,2-5y,1,1,841
+EMP00842,Priya Al-Amin,13,Packer,1,A,Permanent,2018-09-08,5y+,0,1,842
+EMP00843,Priya Sharma,25,Team Lead,2,B,Agency,2016-06-22,5y+,0,1,843
+EMP00844,Elena Khalid,7,Checker,1,A,Agency,2019-05-26,5y+,0,1,844
+EMP00845,Elena Sato,17,Checker,3,C,Agency,2020-02-04,5y+,1,1,845
+EMP00846,Ravi Khalid,3,Receiver,2,B,Permanent,2016-01-30,5y+,0,1,846
+EMP00847,Fatima Kumar,8,Picker,3,C,Permanent,2022-07-22,2-5y,0,1,847
+EMP00848,Siti Torres,9,Picker,1,A,Agency,2019-06-27,5y+,0,0,848
+EMP00849,Fatima Zhang,24,Checker,3,C,Agency,2022-05-13,2-5y,0,1,849
+EMP00850,John Khalid,9,Receiver,3,C,Permanent,2024-03-03,2-5y,0,1,850
+EMP00851,Ingrid Smith,7,Packer,2,B,Permanent,2024-10-26,1-2y,0,1,851
+EMP00852,John Kumar,17,Picker,3,C,Agency,2017-01-08,5y+,0,1,852
+EMP00853,Marco Haddad,5,Receiver,2,B,Seasonal,2020-10-16,5y+,0,1,853
+EMP00854,Kenji Wang,5,Picker,3,C,Permanent,2019-04-13,5y+,0,1,854
+EMP00855,Sofia Rahman,4,Team Lead,1,A,Permanent,2016-05-26,5y+,0,1,855
+EMP00856,Priya Berg,7,Picker,1,A,Seasonal,2023-10-10,2-5y,0,1,856
+EMP00857,Priya Sato,5,Picker,1,A,Permanent,2024-12-25,1-2y,0,1,857
+EMP00858,Fatima Mensah,5,Forklift Operator,1,A,Permanent,2024-01-24,2-5y,1,1,858
+EMP00859,Sofia Rahman,16,Checker,2,B,Permanent,2016-08-09,5y+,0,1,859
+EMP00860,Ingrid Costa,18,Forklift Operator,1,A,Permanent,2016-09-07,5y+,1,1,860
+EMP00861,Grace Zhang,25,Receiver,1,A,Permanent,2016-12-16,5y+,1,1,861
+EMP00862,Marco Zhang,7,Checker,2,B,Agency,2019-05-14,5y+,0,1,862
+EMP00863,Diego Berg,11,Forklift Operator,1,A,Agency,2024-10-20,1-2y,1,1,863
+EMP00864,Siti Khalid,14,Forklift Operator,1,A,Permanent,2019-02-22,5y+,0,1,864
+EMP00865,Carlos Nguyen,25,Packer,3,C,Permanent,2025-09-21,6-12m,0,1,865
+EMP00866,Fatima Al-Amin,20,Supervisor,1,A,Permanent,2018-03-29,5y+,0,1,866
+EMP00867,John Costa,5,Packer,2,B,Agency,2021-06-06,5y+,0,1,867
+EMP00868,Wei Khalid,10,Checker,1,A,Seasonal,2016-03-09,5y+,0,1,868
+EMP00869,Grace Zhang,3,Picker,2,B,Permanent,2023-11-25,2-5y,1,1,869
+EMP00870,Sofia Al-Amin,4,Picker,3,C,Agency,2017-11-27,5y+,0,1,870
+EMP00871,Hassan Mensah,24,Forklift Operator,3,C,Agency,2018-09-15,5y+,1,1,871
+EMP00872,Siti Gomez,5,Forklift Operator,2,B,Permanent,2023-07-17,2-5y,1,1,872
+EMP00873,Marco Haddad,23,Checker,2,B,Seasonal,2021-01-29,5y+,0,1,873
+EMP00874,Ingrid Fernandes,12,Team Lead,1,A,Permanent,2021-03-27,5y+,0,1,874
+EMP00875,Hassan Kumar,9,Forklift Operator,3,C,Agency,2016-06-22,5y+,1,1,875
+EMP00876,Liam Gomez,9,Picker,3,C,Permanent,2024-03-20,2-5y,1,1,876
+EMP00877,Siti Kumar,14,Picker,1,A,Seasonal,2026-05-13,<6m,0,1,877
+EMP00878,Marco Torres,14,Checker,2,B,Permanent,2020-12-25,5y+,0,1,878
+EMP00879,Li Costa,9,Checker,2,B,Permanent,2021-09-26,2-5y,0,1,879
+EMP00880,Maria Silva,15,Checker,3,C,Permanent,2020-02-21,5y+,0,1,880
+EMP00881,Siti Kumar,2,Checker,3,C,Permanent,2024-03-19,2-5y,0,1,881
+EMP00882,Kenji Kumar,22,Packer,1,A,Permanent,2022-02-22,2-5y,0,1,882
+EMP00883,Sofia Rossi,22,Packer,2,B,Permanent,2018-02-21,5y+,1,1,883
+EMP00884,Priya Smith,16,Checker,3,C,Permanent,2023-03-11,2-5y,0,1,884
+EMP00885,Ravi Costa,24,Picker,3,C,Permanent,2026-03-07,<6m,0,1,885
+EMP00886,Kenji Smith,3,Picker,1,A,Permanent,2016-03-29,5y+,0,1,886
+EMP00887,Grace Fernandes,5,Team Lead,2,B,Permanent,2022-05-02,2-5y,0,1,887
+EMP00888,Sofia Wang,11,Packer,3,C,Permanent,2018-03-22,5y+,0,1,888
+EMP00889,Maria Torres,7,Picker,3,C,Agency,2019-06-20,5y+,0,1,889
+EMP00890,Ingrid Smith,16,Forklift Operator,3,C,Permanent,2022-02-21,2-5y,1,1,890
+EMP00891,Ahmed Silva,25,Receiver,3,C,Permanent,2018-04-06,5y+,0,1,891
+EMP00892,Anita Kumar,2,Team Lead,2,B,Agency,2020-03-20,5y+,0,1,892
+EMP00893,Grace Al-Amin,1,Picker,3,C,Seasonal,2026-03-12,<6m,0,1,893
+EMP00894,Ahmed Kumar,3,Picker,1,A,Permanent,2019-07-09,5y+,0,1,894
+EMP00895,Kenji Rossi,17,Receiver,1,A,Permanent,2021-09-26,2-5y,0,1,895
+EMP00896,Liam Kumar,5,Picker,1,A,Permanent,2019-04-14,5y+,0,1,896
+EMP00897,Wei Novak,11,Picker,1,A,Permanent,2020-11-12,5y+,0,1,897
+EMP00898,Priya Sharma,17,Receiver,3,C,Permanent,2019-01-07,5y+,0,1,898
+EMP00899,Priya Fernandes,24,Receiver,3,C,Permanent,2021-08-11,5y+,0,1,899
+EMP00900,John Kumar,10,Supervisor,2,B,Seasonal,2021-08-17,5y+,0,1,900
+EMP00901,Grace Gomez,8,Packer,3,C,Agency,2025-05-15,1-2y,0,0,901
+EMP00902,Kenji Torres,21,Picker,2,B,Permanent,2019-08-28,5y+,0,1,902
+EMP00903,Sofia Rahman,24,Receiver,2,B,Agency,2023-09-10,2-5y,0,0,903
+EMP00904,John Kumar,13,Picker,3,C,Permanent,2022-03-09,2-5y,0,1,904
+EMP00905,Wei Gomez,14,Receiver,3,C,Agency,2021-06-08,5y+,0,1,905
+EMP00906,Wei Rahman,24,Picker,3,C,Permanent,2018-09-04,5y+,0,1,906
+EMP00907,Liam Sato,23,Checker,2,B,Seasonal,2017-09-02,5y+,0,1,907
+EMP00908,Liam Al-Amin,19,Packer,2,B,Permanent,2025-06-08,1-2y,0,1,908
+EMP00909,Grace Wang,8,Packer,3,C,Permanent,2018-12-13,5y+,0,1,909
+EMP00910,Anita Al-Amin,13,Picker,1,A,Permanent,2018-12-31,5y+,0,1,910
+EMP00911,Marco Sato,3,Packer,3,C,Permanent,2019-02-24,5y+,0,1,911
+EMP00912,Grace Smith,19,Supervisor,3,C,Agency,2021-05-16,5y+,0,1,912
+EMP00913,Anita Sharma,16,Receiver,1,A,Agency,2025-03-18,1-2y,1,1,913
+EMP00914,Siti Berg,22,Receiver,1,A,Permanent,2019-12-25,5y+,0,1,914
+EMP00915,Ahmed Mensah,6,Picker,3,C,Permanent,2023-05-23,2-5y,0,1,915
+EMP00916,Kenji Novak,13,Picker,3,C,Permanent,2024-06-06,2-5y,0,1,916
+EMP00917,Sofia Khalid,2,Picker,3,C,Permanent,2016-07-17,5y+,0,1,917
+EMP00918,Elena Khalid,13,Receiver,1,A,Permanent,2024-06-14,2-5y,0,1,918
+EMP00919,Siti Rossi,17,Forklift Operator,3,C,Agency,2019-04-29,5y+,1,1,919
+EMP00920,Siti Kumar,20,Receiver,1,A,Seasonal,2018-12-09,5y+,0,1,920
+EMP00921,Carlos Zhang,22,Forklift Operator,3,C,Permanent,2019-06-02,5y+,1,1,921
+EMP00922,Priya Sharma,22,Checker,1,A,Agency,2026-06-25,<6m,0,1,922
+EMP00923,Grace Fernandes,6,Packer,3,C,Agency,2024-05-11,2-5y,0,1,923
+EMP00924,Ahmed Al-Amin,24,Forklift Operator,1,A,Permanent,2023-06-23,2-5y,1,1,924
+EMP00925,Ahmed Fernandes,10,Picker,1,A,Agency,2019-04-06,5y+,0,1,925
+EMP00926,Ahmed Kumar,19,Forklift Operator,1,A,Permanent,2023-02-06,2-5y,1,1,926
+EMP00927,Carlos Nguyen,2,Picker,1,A,Permanent,2026-07-29,<6m,0,1,927
+EMP00928,Siti Novak,6,Supervisor,1,A,Agency,2020-02-28,5y+,1,1,928
+EMP00929,Maria Kumar,25,Picker,2,B,Permanent,2023-07-13,2-5y,0,1,929
+EMP00930,Marco Rossi,15,Packer,3,C,Permanent,2020-05-11,5y+,0,1,930
+EMP00931,Elena Smith,10,Picker,2,B,Permanent,2025-02-22,1-2y,0,1,931
+EMP00932,Grace Torres,3,Checker,3,C,Permanent,2016-09-12,5y+,0,1,932
+EMP00933,Li Torres,6,Packer,2,B,Permanent,2024-12-11,1-2y,0,1,933
+EMP00934,Ingrid Mensah,9,Picker,2,B,Seasonal,2016-11-21,5y+,0,1,934
+EMP00935,Elena Nguyen,8,Supervisor,3,C,Permanent,2019-03-14,5y+,0,1,935
+EMP00936,Marco Gomez,20,Forklift Operator,1,A,Permanent,2021-10-30,2-5y,1,1,936
+EMP00937,Priya Mensah,17,Checker,1,A,Permanent,2016-07-09,5y+,0,1,937
+EMP00938,Sofia Torres,25,Picker,2,B,Permanent,2025-04-14,1-2y,0,1,938
+EMP00939,Ahmed Gomez,23,Picker,2,B,Permanent,2016-12-20,5y+,0,1,939
+EMP00940,Anita Silva,25,Checker,3,C,Agency,2020-09-03,5y+,0,1,940
+EMP00941,Li Gomez,10,Receiver,1,A,Permanent,2016-02-23,5y+,0,1,941
+EMP00942,Wei Kumar,22,Forklift Operator,2,B,Permanent,2025-03-02,1-2y,1,1,942
+EMP00943,Ahmed Al-Amin,22,Picker,2,B,Permanent,2018-10-18,5y+,0,0,943
+EMP00944,Ingrid Kumar,3,Picker,2,B,Permanent,2022-02-21,2-5y,0,1,944
+EMP00945,Fatima Kumar,3,Team Lead,2,B,Permanent,2018-04-17,5y+,0,1,945
+EMP00946,Li Berg,22,Checker,3,C,Permanent,2017-04-10,5y+,0,0,946
+EMP00947,Fatima Silva,5,Team Lead,1,A,Seasonal,2017-11-21,5y+,0,1,947
+EMP00948,Sofia Sharma,22,Checker,3,C,Permanent,2026-03-26,<6m,0,0,948
+EMP00949,Priya Haddad,8,Packer,3,C,Permanent,2025-09-19,6-12m,0,0,949
+EMP00950,Liam Costa,25,Packer,3,C,Permanent,2018-10-27,5y+,0,1,950
+EMP00951,Diego Silva,6,Receiver,3,C,Agency,2022-05-30,2-5y,0,1,951
+EMP00952,Liam Khalid,15,Picker,1,A,Permanent,2024-05-27,2-5y,0,1,952
+EMP00953,Diego Kumar,11,Forklift Operator,2,B,Permanent,2024-04-24,2-5y,1,1,953
+EMP00954,Liam Khalid,6,Team Lead,3,C,Permanent,2020-05-31,5y+,0,1,954
+EMP00955,Liam Gomez,17,Supervisor,3,C,Permanent,2017-09-17,5y+,0,1,955
+EMP00956,Wei Wang,19,Picker,2,B,Permanent,2019-01-11,5y+,0,1,956
+EMP00957,Ravi Sharma,14,Forklift Operator,3,C,Agency,2020-11-14,5y+,1,1,957
+EMP00958,Hassan Berg,4,Picker,3,C,Agency,2025-02-11,1-2y,0,1,958
+EMP00959,Siti Zhang,1,Checker,3,C,Permanent,2022-06-21,2-5y,0,0,959
+EMP00960,Siti Costa,25,Checker,2,B,Agency,2017-01-17,5y+,0,1,960
+EMP00961,Diego Wang,24,Packer,2,B,Permanent,2018-02-14,5y+,1,1,961
+EMP00962,Hassan Al-Amin,7,Checker,2,B,Seasonal,2018-12-05,5y+,0,1,962
+EMP00963,Ingrid Gomez,8,Picker,2,B,Agency,2017-09-27,5y+,0,1,963
+EMP00964,Grace Gomez,1,Receiver,3,C,Permanent,2022-01-22,2-5y,0,1,964
+EMP00965,Ahmed Mensah,20,Picker,1,A,Permanent,2022-09-30,2-5y,0,1,965
+EMP00966,Liam Berg,16,Picker,2,B,Agency,2017-07-16,5y+,0,1,966
+EMP00967,Liam Nguyen,6,Forklift Operator,1,A,Permanent,2022-10-20,2-5y,1,1,967
+EMP00968,Wei Fernandes,19,Receiver,1,A,Agency,2019-11-30,5y+,0,0,968
+EMP00969,Ravi Rossi,19,Picker,1,A,Permanent,2016-11-13,5y+,0,1,969
+EMP00970,Hassan Mensah,13,Checker,3,C,Permanent,2021-03-23,5y+,0,1,970
+EMP00971,Wei Gomez,20,Team Lead,2,B,Agency,2018-01-06,5y+,0,1,971
+EMP00972,Wei Sharma,21,Supervisor,2,B,Permanent,2024-06-04,2-5y,1,1,972
+EMP00973,Liam Novak,18,Packer,3,C,Agency,2020-10-02,5y+,0,1,973
+EMP00974,Liam Costa,8,Picker,1,A,Permanent,2021-07-09,5y+,0,1,974
+EMP00975,Ravi Rahman,20,Packer,2,B,Permanent,2021-05-03,5y+,0,1,975
+EMP00976,Li Al-Amin,2,Receiver,2,B,Permanent,2016-01-03,5y+,0,1,976
+EMP00977,Grace Smith,5,Checker,1,A,Agency,2021-05-04,5y+,0,1,977
+EMP00978,Ingrid Sato,2,Forklift Operator,3,C,Agency,2022-09-06,2-5y,1,1,978
+EMP00979,Kenji Sharma,6,Packer,1,A,Permanent,2022-04-09,2-5y,0,1,979
+EMP00980,Wei Torres,23,Picker,1,A,Agency,2024-11-02,1-2y,0,1,980
+EMP00981,Ravi Fernandes,12,Supervisor,1,A,Permanent,2025-03-08,1-2y,1,1,981
+EMP00982,Kenji Kumar,1,Picker,3,C,Seasonal,2023-07-14,2-5y,0,1,982
+EMP00983,Diego Gomez,6,Picker,1,A,Agency,2024-12-20,1-2y,1,1,983
+EMP00984,Kenji Wang,25,Forklift Operator,1,A,Permanent,2026-05-22,<6m,1,1,984
+EMP00985,Ahmed Silva,20,Picker,3,C,Agency,2020-05-21,5y+,0,1,985
+EMP00986,Elena Mensah,13,Picker,2,B,Permanent,2024-10-29,1-2y,0,1,986
+EMP00987,Wei Sharma,15,Forklift Operator,3,C,Permanent,2017-06-20,5y+,1,1,987
+EMP00988,John Nguyen,6,Picker,2,B,Permanent,2017-09-21,5y+,1,1,988
+EMP00989,Ravi Silva,24,Picker,3,C,Seasonal,2025-02-13,1-2y,0,1,989
+EMP00990,Priya Silva,17,Forklift Operator,1,A,Permanent,2018-06-26,5y+,1,1,990
+EMP00991,Hassan Silva,11,Checker,3,C,Permanent,2019-04-17,5y+,0,1,991
+EMP00992,Grace Haddad,21,Checker,2,B,Permanent,2019-07-18,5y+,0,1,992
+EMP00993,Liam Haddad,3,Picker,1,A,Permanent,2018-11-22,5y+,0,1,993
+EMP00994,Ahmed Khalid,22,Checker,3,C,Permanent,2020-08-19,5y+,0,1,994
+EMP00995,Priya Smith,10,Picker,2,B,Agency,2025-07-14,1-2y,0,1,995
+EMP00996,Kenji Rossi,9,Packer,2,B,Agency,2017-12-03,5y+,0,1,996
+EMP00997,Grace Khalid,20,Forklift Operator,1,A,Agency,2025-02-16,1-2y,1,1,997
+EMP00998,Ahmed Smith,6,Packer,2,B,Agency,2025-06-02,1-2y,1,0,998
+EMP00999,John Khalid,9,Team Lead,1,A,Agency,2025-10-17,6-12m,1,1,999
+EMP01000,Marco Gomez,1,Forklift Operator,3,C,Agency,2021-07-08,5y+,1,1,1000
+EMP01001,Priya Haddad,2,Checker,3,C,Permanent,2026-01-30,6-12m,0,1,1001
+EMP01002,John Rossi,23,Picker,3,C,Agency,2022-06-24,2-5y,0,1,1002
+EMP01003,Elena Al-Amin,10,Picker,3,C,Permanent,2025-01-20,1-2y,0,1,1003
+EMP01004,John Torres,3,Picker,3,C,Seasonal,2022-02-27,2-5y,0,1,1004
+EMP01005,Kenji Sato,20,Picker,2,B,Permanent,2025-09-06,6-12m,0,1,1005
+EMP01006,Li Nguyen,1,Picker,1,A,Seasonal,2022-07-26,2-5y,0,1,1006
+EMP01007,Hassan Kumar,23,Picker,1,A,Seasonal,2018-03-07,5y+,1,1,1007
+EMP01008,Carlos Wang,5,Picker,2,B,Permanent,2018-11-24,5y+,1,1,1008
+EMP01009,Maria Kumar,14,Supervisor,2,B,Permanent,2024-11-18,1-2y,1,1,1009
+EMP01010,Diego Mensah,8,Picker,3,C,Agency,2020-11-29,5y+,0,1,1010
+EMP01011,Liam Rahman,19,Packer,1,A,Agency,2022-10-16,2-5y,0,1,1011
+EMP01012,Ravi Costa,10,Team Lead,3,C,Permanent,2023-12-01,2-5y,0,1,1012
+EMP01013,Liam Nguyen,22,Team Lead,2,B,Permanent,2020-07-24,5y+,0,1,1013
+EMP01014,Anita Al-Amin,11,Picker,2,B,Agency,2019-10-07,5y+,0,1,1014
+EMP01015,Priya Berg,11,Picker,2,B,Agency,2023-07-09,2-5y,0,1,1015
+EMP01016,Elena Sharma,24,Packer,3,C,Agency,2017-09-24,5y+,0,1,1016
+EMP01017,Wei Wang,16,Packer,2,B,Permanent,2023-08-01,2-5y,0,0,1017
+EMP01018,Priya Novak,12,Receiver,3,C,Agency,2022-02-11,2-5y,0,1,1018
+EMP01019,Fatima Gomez,1,Picker,3,C,Permanent,2016-05-23,5y+,0,1,1019
+EMP01020,Marco Rahman,15,Receiver,3,C,Permanent,2019-12-11,5y+,0,1,1020
+EMP01021,John Wang,13,Forklift Operator,1,A,Permanent,2019-01-14,5y+,1,1,1021
+EMP01022,Sofia Sharma,22,Picker,1,A,Agency,2020-08-09,5y+,0,1,1022
+EMP01023,Hassan Smith,21,Forklift Operator,2,B,Permanent,2018-10-23,5y+,1,1,1023
+EMP01024,Wei Sato,3,Receiver,1,A,Permanent,2017-06-25,5y+,0,1,1024
+EMP01025,Diego Fernandes,10,Picker,2,B,Seasonal,2022-04-16,2-5y,1,1,1025
+EMP01026,Siti Sato,25,Checker,1,A,Agency,2019-04-25,5y+,0,1,1026
+EMP01027,John Novak,3,Packer,3,C,Seasonal,2024-07-16,2-5y,0,1,1027
+EMP01028,Ravi Wang,5,Picker,2,B,Permanent,2026-05-02,<6m,0,1,1028
+EMP01029,Siti Zhang,3,Packer,3,C,Agency,2022-03-08,2-5y,1,1,1029
+EMP01030,Liam Gomez,9,Picker,2,B,Agency,2018-05-22,5y+,0,1,1030
+EMP01031,Maria Torres,2,Picker,2,B,Permanent,2025-08-20,6-12m,0,1,1031
+EMP01032,Maria Torres,7,Packer,1,A,Permanent,2024-08-18,2-5y,0,1,1032
+EMP01033,Kenji Zhang,12,Forklift Operator,2,B,Permanent,2016-07-17,5y+,1,1,1033
+EMP01034,Kenji Nguyen,11,Packer,3,C,Seasonal,2019-10-13,5y+,0,1,1034
+EMP01035,Maria Fernandes,6,Forklift Operator,3,C,Agency,2026-05-02,<6m,1,1,1035
+EMP01036,Kenji Costa,21,Picker,1,A,Seasonal,2017-06-22,5y+,0,1,1036
+EMP01037,Priya Fernandes,19,Receiver,1,A,Permanent,2018-03-06,5y+,0,1,1037
+EMP01038,Li Novak,5,Receiver,3,C,Permanent,2026-03-04,<6m,0,1,1038
+EMP01039,Ingrid Al-Amin,3,Packer,2,B,Permanent,2026-05-29,<6m,0,1,1039
+EMP01040,Carlos Torres,23,Checker,1,A,Permanent,2022-04-22,2-5y,0,1,1040
+EMP01041,Maria Zhang,24,Packer,2,B,Agency,2023-04-03,2-5y,0,1,1041
+EMP01042,John Costa,9,Packer,2,B,Permanent,2023-10-10,2-5y,0,1,1042
+EMP01043,Siti Torres,1,Receiver,3,C,Permanent,2016-06-18,5y+,0,1,1043
+EMP01044,Ravi Khalid,3,Checker,2,B,Agency,2024-04-12,2-5y,0,1,1044
+EMP01045,Wei Rossi,6,Receiver,3,C,Permanent,2025-07-05,1-2y,0,1,1045
+EMP01046,Ravi Smith,24,Checker,3,C,Permanent,2023-04-07,2-5y,0,1,1046
+EMP01047,Priya Wang,7,Receiver,1,A,Permanent,2018-02-21,5y+,1,1,1047
+EMP01048,Sofia Fernandes,3,Packer,3,C,Permanent,2022-01-10,2-5y,0,1,1048
+EMP01049,Sofia Zhang,10,Team Lead,3,C,Agency,2026-03-20,<6m,0,0,1049
+EMP01050,Grace Torres,11,Picker,3,C,Permanent,2016-11-26,5y+,0,1,1050
+EMP01051,Grace Torres,7,Checker,2,B,Permanent,2019-06-13,5y+,0,1,1051
+EMP01052,John Al-Amin,21,Forklift Operator,2,B,Agency,2017-05-02,5y+,1,1,1052
+EMP01053,Ahmed Al-Amin,19,Picker,3,C,Permanent,2016-10-04,5y+,0,1,1053
+EMP01054,Elena Khalid,16,Picker,2,B,Permanent,2023-03-09,2-5y,0,1,1054
+EMP01055,Anita Berg,7,Packer,2,B,Permanent,2024-01-01,2-5y,0,1,1055
+EMP01056,Wei Costa,20,Picker,3,C,Agency,2021-11-01,2-5y,0,1,1056
+EMP01057,Ahmed Silva,14,Picker,1,A,Seasonal,2025-09-25,6-12m,0,1,1057
+EMP01058,Priya Kumar,6,Forklift Operator,1,A,Agency,2026-06-13,<6m,1,1,1058
+EMP01059,Li Nguyen,11,Team Lead,1,A,Permanent,2019-09-14,5y+,0,1,1059
+EMP01060,Ahmed Smith,11,Picker,2,B,Permanent,2018-10-04,5y+,1,0,1060
+EMP01061,John Mensah,10,Picker,3,C,Seasonal,2025-04-23,1-2y,0,1,1061
+EMP01062,Fatima Novak,22,Packer,1,A,Agency,2019-01-15,5y+,0,0,1062
+EMP01063,Marco Novak,1,Picker,2,B,Permanent,2023-06-06,2-5y,0,1,1063
+EMP01064,John Al-Amin,9,Picker,2,B,Agency,2021-07-22,5y+,0,1,1064
+EMP01065,Carlos Haddad,17,Forklift Operator,2,B,Permanent,2025-09-30,6-12m,1,1,1065
+EMP01066,Fatima Wang,6,Forklift Operator,2,B,Permanent,2016-07-30,5y+,1,1,1066
+EMP01067,Wei Khalid,2,Picker,1,A,Permanent,2019-04-19,5y+,0,1,1067
+EMP01068,Elena Khalid,10,Receiver,3,C,Permanent,2022-01-26,2-5y,0,1,1068
+EMP01069,Ingrid Wang,19,Picker,1,A,Permanent,2017-08-02,5y+,0,0,1069
+EMP01070,Ahmed Berg,8,Forklift Operator,3,C,Seasonal,2025-05-14,1-2y,1,1,1070
+EMP01071,Anita Gomez,16,Checker,3,C,Permanent,2024-10-18,1-2y,0,1,1071
+EMP01072,Priya Sharma,2,Team Lead,1,A,Agency,2017-12-12,5y+,0,1,1072
+EMP01073,Marco Wang,15,Receiver,3,C,Permanent,2024-12-11,1-2y,1,0,1073
+EMP01074,Ingrid Kumar,14,Checker,2,B,Agency,2021-10-23,2-5y,1,1,1074
+EMP01075,Grace Mensah,24,Packer,3,C,Permanent,2022-08-19,2-5y,0,1,1075
+EMP01076,Ahmed Novak,20,Forklift Operator,3,C,Permanent,2019-03-15,5y+,1,1,1076
+EMP01077,Ravi Berg,25,Forklift Operator,1,A,Agency,2023-12-18,2-5y,1,1,1077
+EMP01078,Kenji Wang,5,Receiver,3,C,Agency,2016-01-06,5y+,0,1,1078
+EMP01079,Marco Novak,9,Picker,3,C,Permanent,2025-04-06,1-2y,0,1,1079
+EMP01080,John Nguyen,10,Picker,1,A,Permanent,2019-04-03,5y+,1,0,1080
+EMP01081,Liam Khalid,3,Packer,1,A,Permanent,2023-09-19,2-5y,0,1,1081
+EMP01082,John Smith,1,Packer,2,B,Permanent,2022-10-10,2-5y,0,0,1082
+EMP01083,Fatima Wang,10,Packer,1,A,Agency,2016-08-03,5y+,0,0,1083
+EMP01084,Priya Khalid,21,Forklift Operator,1,A,Permanent,2023-06-26,2-5y,1,1,1084
+EMP01085,Priya Novak,13,Receiver,2,B,Permanent,2016-10-01,5y+,0,1,1085
+EMP01086,Ahmed Khalid,23,Picker,2,B,Permanent,2021-05-18,5y+,0,1,1086
+EMP01087,Hassan Smith,8,Picker,2,B,Agency,2024-07-18,2-5y,0,1,1087
+EMP01088,Maria Sato,9,Receiver,1,A,Permanent,2017-10-15,5y+,0,1,1088
+EMP01089,Siti Wang,11,Picker,1,A,Seasonal,2016-02-18,5y+,0,1,1089
+EMP01090,Wei Berg,24,Receiver,3,C,Agency,2018-08-14,5y+,0,1,1090
+EMP01091,Wei Mensah,11,Checker,1,A,Seasonal,2021-03-03,5y+,0,1,1091
+EMP01092,Kenji Mensah,11,Picker,1,A,Permanent,2025-08-02,1-2y,1,1,1092
+EMP01093,Priya Rahman,22,Receiver,2,B,Permanent,2024-02-07,2-5y,0,1,1093
+EMP01094,Diego Rahman,20,Receiver,2,B,Seasonal,2025-04-04,1-2y,0,0,1094
+EMP01095,Carlos Sato,8,Packer,1,A,Permanent,2024-02-22,2-5y,0,1,1095
+EMP01096,Ahmed Khalid,23,Packer,1,A,Seasonal,2017-11-26,5y+,0,1,1096
+EMP01097,Carlos Novak,20,Checker,1,A,Permanent,2021-04-17,5y+,1,1,1097
+EMP01098,Ahmed Haddad,15,Supervisor,2,B,Seasonal,2025-09-30,6-12m,0,1,1098
+EMP01099,Ahmed Novak,14,Picker,1,A,Agency,2019-01-26,5y+,0,1,1099
+EMP01100,Ahmed Torres,4,Picker,2,B,Permanent,2021-05-30,5y+,0,1,1100
+EMP01101,Maria Torres,19,Picker,3,C,Permanent,2021-10-27,2-5y,0,0,1101
+EMP01102,Diego Novak,11,Checker,1,A,Agency,2022-03-22,2-5y,0,1,1102
+EMP01103,Anita Haddad,17,Forklift Operator,1,A,Permanent,2022-08-10,2-5y,1,1,1103
+EMP01104,Fatima Costa,7,Forklift Operator,2,B,Permanent,2016-05-19,5y+,1,1,1104
+EMP01105,Sofia Sharma,19,Picker,1,A,Seasonal,2021-05-10,5y+,0,1,1105
+EMP01106,Siti Zhang,3,Checker,2,B,Agency,2021-06-27,5y+,1,1,1106
+EMP01107,Liam Sharma,18,Supervisor,3,C,Permanent,2022-06-29,2-5y,0,1,1107
+EMP01108,Diego Haddad,2,Packer,1,A,Permanent,2018-02-04,5y+,1,1,1108
+EMP01109,Maria Torres,4,Picker,2,B,Permanent,2020-05-25,5y+,0,1,1109
+EMP01110,Carlos Costa,3,Picker,1,A,Permanent,2025-11-22,6-12m,0,1,1110
+EMP01111,Elena Nguyen,13,Supervisor,1,A,Seasonal,2022-02-09,2-5y,0,1,1111
+EMP01112,Sofia Novak,25,Checker,1,A,Permanent,2024-06-16,2-5y,1,1,1112
+EMP01113,Ravi Zhang,6,Picker,1,A,Permanent,2016-11-25,5y+,0,1,1113
+EMP01114,Marco Rossi,15,Picker,3,C,Permanent,2016-06-23,5y+,0,1,1114
+EMP01115,John Costa,16,Checker,3,C,Permanent,2026-03-03,<6m,0,1,1115
+EMP01116,Anita Sato,6,Supervisor,3,C,Permanent,2025-09-19,6-12m,1,1,1116
+EMP01117,Ahmed Sharma,16,Picker,1,A,Permanent,2022-03-29,2-5y,0,1,1117
+EMP01118,Elena Nguyen,24,Packer,2,B,Seasonal,2020-11-18,5y+,0,1,1118
+EMP01119,Sofia Zhang,19,Picker,3,C,Permanent,2023-07-16,2-5y,0,1,1119
+EMP01120,Liam Khalid,24,Forklift Operator,1,A,Seasonal,2025-11-19,6-12m,1,1,1120
+EMP01121,Siti Haddad,21,Picker,1,A,Permanent,2026-02-04,6-12m,0,0,1121
+EMP01122,Wei Wang,2,Checker,3,C,Permanent,2017-04-27,5y+,1,1,1122
+EMP01123,Siti Novak,1,Checker,2,B,Permanent,2026-02-04,6-12m,0,1,1123
+EMP01124,Anita Gomez,22,Checker,3,C,Agency,2023-07-08,2-5y,0,1,1124
+EMP01125,Ingrid Fernandes,2,Picker,3,C,Permanent,2024-10-06,1-2y,0,1,1125
+EMP01126,Wei Fernandes,22,Forklift Operator,1,A,Agency,2021-10-31,2-5y,1,1,1126
+EMP01127,Hassan Sato,23,Packer,3,C,Permanent,2024-04-14,2-5y,0,1,1127
+EMP01128,Anita Gomez,9,Picker,3,C,Permanent,2026-04-02,<6m,0,1,1128
+EMP01129,Carlos Sharma,9,Picker,1,A,Permanent,2021-06-28,5y+,0,1,1129
+EMP01130,Sofia Rahman,15,Picker,2,B,Permanent,2025-10-19,6-12m,1,1,1130
+EMP01131,Ravi Zhang,20,Supervisor,3,C,Agency,2021-06-20,5y+,0,1,1131
+EMP01132,Marco Nguyen,21,Picker,2,B,Permanent,2017-05-16,5y+,1,1,1132
+EMP01133,Carlos Costa,22,Picker,2,B,Permanent,2018-12-07,5y+,1,1,1133
+EMP01134,Li Rahman,21,Picker,3,C,Agency,2021-07-12,5y+,0,1,1134
+EMP01135,Marco Silva,2,Checker,3,C,Permanent,2023-09-21,2-5y,0,1,1135
+EMP01136,John Smith,8,Picker,1,A,Agency,2024-10-13,1-2y,0,1,1136
+EMP01137,Siti Sato,5,Picker,2,B,Permanent,2024-08-28,1-2y,0,1,1137
+EMP01138,Anita Gomez,3,Checker,3,C,Permanent,2018-08-05,5y+,0,1,1138
+EMP01139,Sofia Smith,16,Checker,1,A,Seasonal,2017-06-22,5y+,0,1,1139
+EMP01140,Siti Khalid,6,Forklift Operator,3,C,Agency,2023-03-29,2-5y,1,1,1140
+EMP01141,Diego Haddad,6,Checker,3,C,Agency,2024-07-28,2-5y,0,1,1141
+EMP01142,Carlos Rahman,15,Team Lead,1,A,Agency,2022-12-28,2-5y,0,1,1142
+EMP01143,Ingrid Haddad,16,Team Lead,3,C,Permanent,2017-11-06,5y+,0,1,1143
+EMP01144,Carlos Rahman,5,Picker,3,C,Permanent,2017-07-24,5y+,0,1,1144
+EMP01145,Fatima Rossi,17,Supervisor,1,A,Permanent,2021-12-26,2-5y,1,1,1145
+EMP01146,Maria Gomez,1,Team Lead,2,B,Permanent,2021-05-08,5y+,0,1,1146
+EMP01147,Diego Haddad,19,Receiver,2,B,Seasonal,2016-05-01,5y+,0,1,1147
+EMP01148,Carlos Novak,13,Team Lead,1,A,Permanent,2016-02-20,5y+,0,1,1148
+EMP01149,Anita Rossi,4,Packer,3,C,Permanent,2019-02-12,5y+,0,1,1149
+EMP01150,Li Smith,20,Receiver,2,B,Permanent,2025-06-06,1-2y,0,1,1150
+EMP01151,Marco Gomez,21,Packer,2,B,Permanent,2020-10-14,5y+,0,1,1151
+EMP01152,Fatima Rahman,20,Packer,3,C,Permanent,2019-07-17,5y+,0,1,1152
+EMP01153,John Nguyen,9,Checker,3,C,Permanent,2022-09-02,2-5y,0,1,1153
+EMP01154,Maria Costa,25,Checker,3,C,Seasonal,2016-06-12,5y+,0,1,1154
+EMP01155,Ravi Torres,17,Forklift Operator,1,A,Agency,2016-07-05,5y+,1,1,1155
+EMP01156,Sofia Nguyen,19,Packer,3,C,Seasonal,2021-11-12,2-5y,0,1,1156
+EMP01157,Ahmed Sharma,9,Picker,2,B,Seasonal,2019-01-11,5y+,0,0,1157
+EMP01158,John Rahman,8,Receiver,2,B,Permanent,2022-04-07,2-5y,0,1,1158
+EMP01159,Carlos Kumar,25,Forklift Operator,2,B,Agency,2020-05-07,5y+,1,1,1159
+EMP01160,Siti Haddad,14,Forklift Operator,2,B,Agency,2026-01-02,6-12m,1,1,1160
+EMP01161,Sofia Rahman,17,Packer,2,B,Agency,2019-06-04,5y+,0,0,1161
+EMP01162,Priya Novak,23,Receiver,1,A,Permanent,2021-03-25,5y+,0,1,1162
+EMP01163,Carlos Fernandes,1,Picker,3,C,Agency,2025-11-30,6-12m,0,1,1163
+EMP01164,Liam Khalid,20,Packer,2,B,Permanent,2018-03-14,5y+,1,1,1164
+EMP01165,Diego Al-Amin,4,Picker,2,B,Permanent,2018-01-01,5y+,0,1,1165
+EMP01166,Fatima Sato,8,Picker,2,B,Permanent,2025-08-02,1-2y,0,0,1166
+EMP01167,Priya Haddad,15,Packer,2,B,Agency,2026-08-08,<6m,0,1,1167
+EMP01168,Diego Gomez,9,Packer,1,A,Permanent,2020-12-18,5y+,0,1,1168
+EMP01169,Carlos Haddad,14,Forklift Operator,1,A,Permanent,2016-07-10,5y+,1,1,1169
+EMP01170,Li Mensah,7,Packer,1,A,Permanent,2025-01-21,1-2y,0,1,1170
+EMP01171,Sofia Rahman,15,Picker,2,B,Permanent,2020-10-16,5y+,0,1,1171
+EMP01172,Anita Sharma,8,Team Lead,3,C,Agency,2019-09-09,5y+,0,1,1172
+EMP01173,Kenji Kumar,12,Picker,2,B,Permanent,2019-05-31,5y+,0,1,1173
+EMP01174,Liam Sharma,1,Receiver,2,B,Permanent,2025-09-03,6-12m,0,1,1174
+EMP01175,Siti Rahman,6,Picker,2,B,Agency,2018-06-06,5y+,0,0,1175
+EMP01176,Hassan Fernandes,22,Team Lead,1,A,Agency,2022-10-22,2-5y,0,1,1176
+EMP01177,Carlos Smith,11,Picker,2,B,Permanent,2024-05-05,2-5y,1,1,1177
+EMP01178,John Berg,9,Picker,2,B,Agency,2021-11-16,2-5y,0,1,1178
+EMP01179,Grace Al-Amin,8,Checker,3,C,Permanent,2019-08-05,5y+,0,1,1179
+EMP01180,Ingrid Rahman,18,Receiver,3,C,Seasonal,2017-06-10,5y+,1,1,1180
+EMP01181,Kenji Haddad,10,Picker,1,A,Permanent,2023-12-31,2-5y,0,1,1181
+EMP01182,John Costa,22,Checker,3,C,Permanent,2018-07-08,5y+,0,1,1182
+EMP01183,Anita Berg,19,Forklift Operator,1,A,Agency,2020-03-03,5y+,1,1,1183
+EMP01184,Grace Nguyen,20,Checker,2,B,Seasonal,2016-05-08,5y+,0,1,1184
+EMP01185,Sofia Berg,2,Picker,3,C,Permanent,2018-03-17,5y+,0,1,1185
+EMP01186,Li Mensah,19,Checker,3,C,Permanent,2021-01-08,5y+,0,1,1186
+EMP01187,Priya Novak,9,Receiver,3,C,Permanent,2019-01-22,5y+,0,1,1187
+EMP01188,Grace Khalid,17,Team Lead,2,B,Permanent,2018-11-22,5y+,0,0,1188
+EMP01189,Elena Smith,5,Packer,2,B,Agency,2026-03-20,<6m,0,1,1189
+EMP01190,Ravi Nguyen,5,Team Lead,2,B,Permanent,2016-06-26,5y+,0,1,1190
+EMP01191,Carlos Rahman,1,Picker,2,B,Permanent,2025-10-23,6-12m,0,1,1191
+EMP01192,Maria Rossi,14,Picker,2,B,Agency,2022-02-02,2-5y,0,1,1192
+EMP01193,Sofia Fernandes,14,Forklift Operator,1,A,Permanent,2017-03-15,5y+,0,1,1193
+EMP01194,Siti Berg,5,Team Lead,1,A,Permanent,2020-05-01,5y+,0,1,1194
+EMP01195,Priya Silva,11,Packer,1,A,Permanent,2018-11-26,5y+,0,1,1195
+EMP01196,Carlos Novak,20,Forklift Operator,3,C,Permanent,2018-07-07,5y+,1,1,1196
+EMP01197,Diego Al-Amin,13,Packer,3,C,Permanent,2020-07-05,5y+,0,1,1197
+EMP01198,Wei Rahman,18,Checker,2,B,Permanent,2016-09-27,5y+,0,1,1198
+EMP01199,Sofia Novak,1,Picker,1,A,Permanent,2023-06-23,2-5y,0,1,1199
+EMP01200,Kenji Berg,1,Packer,3,C,Seasonal,2021-07-15,5y+,0,1,1200
+EMP01201,Maria Gomez,15,Checker,1,A,Permanent,2022-06-06,2-5y,1,1,1201
+EMP01202,Siti Rahman,17,Picker,1,A,Seasonal,2024-06-02,2-5y,0,1,1202
+EMP01203,Hassan Haddad,6,Team Lead,2,B,Permanent,2021-11-01,2-5y,0,1,1203
+EMP01204,Fatima Sato,15,Forklift Operator,1,A,Seasonal,2025-09-23,6-12m,1,0,1204
+EMP01205,Elena Nguyen,25,Packer,2,B,Permanent,2025-05-23,1-2y,0,1,1205
+EMP01206,Li Novak,6,Packer,1,A,Permanent,2024-10-19,1-2y,0,1,1206
+EMP01207,Grace Torres,24,Packer,1,A,Permanent,2019-09-08,5y+,0,1,1207
+EMP01208,Liam Al-Amin,20,Picker,1,A,Agency,2023-07-30,2-5y,0,1,1208
+EMP01209,Siti Haddad,22,Forklift Operator,3,C,Permanent,2025-10-17,6-12m,1,0,1209
+EMP01210,Siti Zhang,9,Receiver,1,A,Permanent,2019-02-25,5y+,0,1,1210
+EMP01211,Carlos Rossi,24,Packer,2,B,Permanent,2022-09-27,2-5y,0,1,1211
+EMP01212,Elena Silva,9,Picker,2,B,Permanent,2021-08-16,5y+,1,1,1212
+EMP01213,Ingrid Rahman,16,Packer,3,C,Permanent,2017-07-18,5y+,0,1,1213
+EMP01214,Marco Zhang,19,Receiver,3,C,Agency,2023-09-15,2-5y,1,1,1214
+EMP01215,Carlos Khalid,24,Forklift Operator,1,A,Permanent,2026-05-19,<6m,1,1,1215
+EMP01216,Wei Mensah,9,Team Lead,3,C,Agency,2024-07-15,2-5y,0,1,1216
+EMP01217,Ahmed Haddad,3,Packer,3,C,Agency,2025-01-21,1-2y,1,1,1217
+EMP01218,Carlos Mensah,11,Picker,2,B,Agency,2018-04-20,5y+,0,1,1218
+EMP01219,Anita Nguyen,25,Forklift Operator,3,C,Permanent,2019-03-22,5y+,1,1,1219
+EMP01220,Marco Novak,16,Packer,3,C,Permanent,2017-03-22,5y+,0,1,1220
+EMP01221,Wei Torres,6,Picker,2,B,Permanent,2018-02-10,5y+,0,1,1221
+EMP01222,Priya Gomez,5,Checker,3,C,Permanent,2019-08-23,5y+,0,1,1222
+EMP01223,Diego Al-Amin,6,Forklift Operator,1,A,Agency,2022-10-07,2-5y,1,1,1223
+EMP01224,Li Costa,15,Picker,1,A,Agency,2016-03-18,5y+,0,1,1224
+EMP01225,Kenji Al-Amin,17,Picker,2,B,Permanent,2019-03-25,5y+,0,1,1225
+EMP01226,Elena Smith,10,Packer,3,C,Permanent,2019-08-24,5y+,0,1,1226
+EMP01227,John Novak,14,Receiver,2,B,Permanent,2024-01-17,2-5y,0,1,1227
+EMP01228,Priya Wang,3,Packer,2,B,Permanent,2023-09-25,2-5y,0,1,1228
+EMP01229,Ahmed Haddad,4,Checker,2,B,Agency,2025-02-11,1-2y,0,1,1229
+EMP01230,Elena Rahman,19,Packer,3,C,Permanent,2024-04-21,2-5y,0,1,1230
+EMP01231,John Kumar,25,Picker,1,A,Permanent,2020-07-30,5y+,0,1,1231
+EMP01232,Kenji Khalid,24,Picker,1,A,Seasonal,2019-02-09,5y+,0,1,1232
+EMP01233,John Gomez,7,Picker,2,B,Agency,2020-08-10,5y+,0,1,1233
+EMP01234,Liam Al-Amin,1,Packer,3,C,Permanent,2022-07-11,2-5y,1,1,1234
+EMP01235,Fatima Haddad,7,Receiver,2,B,Permanent,2025-07-24,1-2y,0,1,1235
+EMP01236,Carlos Zhang,3,Checker,3,C,Agency,2023-12-30,2-5y,0,1,1236
+EMP01237,Kenji Berg,11,Team Lead,2,B,Permanent,2019-09-05,5y+,0,0,1237
+EMP01238,Marco Silva,7,Forklift Operator,3,C,Permanent,2016-10-16,5y+,1,1,1238
+EMP01239,Fatima Khalid,11,Team Lead,2,B,Permanent,2022-12-27,2-5y,0,1,1239
+EMP01240,Ahmed Costa,1,Receiver,1,A,Agency,2018-01-24,5y+,0,1,1240
+EMP01241,Siti Fernandes,16,Packer,1,A,Permanent,2024-07-17,2-5y,0,1,1241
+EMP01242,Li Sato,15,Picker,1,A,Permanent,2022-05-21,2-5y,0,1,1242
+EMP01243,Ingrid Rossi,13,Picker,3,C,Agency,2022-06-04,2-5y,0,1,1243
+EMP01244,John Gomez,23,Packer,2,B,Permanent,2021-12-18,2-5y,0,1,1244
+EMP01245,Elena Haddad,17,Team Lead,2,B,Agency,2022-05-28,2-5y,0,1,1245
+EMP01246,Ahmed Sato,3,Packer,2,B,Permanent,2019-04-14,5y+,0,1,1246
+EMP01247,Hassan Sharma,2,Receiver,2,B,Permanent,2023-07-03,2-5y,0,1,1247
+EMP01248,Ravi Silva,20,Team Lead,1,A,Agency,2023-09-07,2-5y,0,1,1248
+EMP01249,Ravi Wang,21,Packer,1,A,Permanent,2019-04-25,5y+,0,1,1249
+EMP01250,Hassan Silva,12,Checker,3,C,Permanent,2022-07-15,2-5y,0,1,1250
+EMP01251,Fatima Haddad,2,Forklift Operator,3,C,Agency,2017-03-29,5y+,0,1,1251
+EMP01252,Siti Mensah,6,Picker,1,A,Agency,2020-10-18,5y+,0,1,1252
+EMP01253,Ravi Berg,8,Picker,1,A,Agency,2021-02-16,5y+,0,1,1253
+EMP01254,Elena Torres,25,Picker,1,A,Agency,2018-05-29,5y+,0,1,1254
+EMP01255,John Berg,14,Forklift Operator,1,A,Seasonal,2018-10-08,5y+,1,1,1255
+EMP01256,John Nguyen,24,Packer,3,C,Seasonal,2025-11-26,6-12m,1,1,1256
+EMP01257,Liam Khalid,1,Packer,3,C,Permanent,2017-06-20,5y+,0,1,1257
+EMP01258,Kenji Novak,16,Picker,3,C,Permanent,2024-12-04,1-2y,0,1,1258
+EMP01259,Hassan Kumar,18,Receiver,2,B,Agency,2024-02-27,2-5y,1,1,1259
+EMP01260,Carlos Mensah,12,Receiver,1,A,Permanent,2026-06-29,<6m,0,0,1260
+EMP01261,Priya Haddad,18,Team Lead,1,A,Agency,2018-12-25,5y+,0,1,1261
+EMP01262,Ingrid Zhang,17,Checker,3,C,Seasonal,2020-03-07,5y+,0,1,1262
+EMP01263,Liam Gomez,11,Receiver,1,A,Agency,2018-04-19,5y+,0,1,1263
+EMP01264,Liam Haddad,19,Receiver,1,A,Agency,2023-02-20,2-5y,0,1,1264
+EMP01265,Carlos Sharma,13,Packer,2,B,Seasonal,2023-06-21,2-5y,0,1,1265
+EMP01266,Siti Haddad,10,Packer,1,A,Permanent,2020-09-09,5y+,0,1,1266
+EMP01267,Priya Khalid,21,Receiver,2,B,Permanent,2016-08-13,5y+,0,1,1267
+EMP01268,Marco Mensah,10,Team Lead,2,B,Agency,2017-11-25,5y+,0,1,1268
+EMP01269,Sofia Nguyen,15,Packer,3,C,Seasonal,2018-07-02,5y+,0,1,1269
+EMP01270,Siti Fernandes,16,Packer,2,B,Permanent,2018-08-06,5y+,0,1,1270
+EMP01271,Liam Kumar,10,Supervisor,2,B,Agency,2016-05-21,5y+,0,1,1271
+EMP01272,Maria Sato,25,Team Lead,2,B,Permanent,2026-05-20,<6m,0,1,1272
+EMP01273,Wei Berg,10,Team Lead,2,B,Agency,2017-10-08,5y+,0,1,1273
+EMP01274,Ahmed Fernandes,25,Picker,2,B,Permanent,2026-04-10,<6m,0,1,1274
+EMP01275,Ingrid Al-Amin,14,Checker,1,A,Permanent,2019-05-07,5y+,0,1,1275
+EMP01276,Li Sharma,20,Team Lead,3,C,Permanent,2025-04-18,1-2y,0,1,1276
+EMP01277,Ingrid Novak,23,Packer,2,B,Agency,2016-08-10,5y+,0,1,1277
+EMP01278,Ravi Gomez,5,Receiver,3,C,Permanent,2025-06-09,1-2y,0,1,1278
+EMP01279,Carlos Costa,17,Forklift Operator,2,B,Seasonal,2024-02-24,2-5y,1,1,1279
+EMP01280,Elena Costa,22,Forklift Operator,2,B,Permanent,2025-03-25,1-2y,1,1,1280
+EMP01281,Li Smith,12,Picker,3,C,Permanent,2025-02-27,1-2y,0,1,1281
+EMP01282,Grace Wang,20,Supervisor,1,A,Seasonal,2023-03-28,2-5y,0,1,1282
+EMP01283,Carlos Fernandes,10,Picker,1,A,Permanent,2022-01-04,2-5y,0,1,1283
+EMP01284,Maria Berg,13,Picker,2,B,Seasonal,2024-12-07,1-2y,0,1,1284
+EMP01285,Maria Gomez,5,Picker,2,B,Agency,2017-10-06,5y+,0,1,1285
+EMP01286,John Gomez,9,Supervisor,2,B,Permanent,2025-07-18,1-2y,0,1,1286
+EMP01287,Sofia Costa,2,Picker,3,C,Permanent,2017-12-24,5y+,0,1,1287
+EMP01288,Wei Haddad,23,Packer,3,C,Agency,2023-11-05,2-5y,0,1,1288
+EMP01289,John Rahman,25,Packer,2,B,Agency,2020-01-25,5y+,0,1,1289
+EMP01290,John Gomez,24,Packer,2,B,Permanent,2023-02-08,2-5y,0,1,1290
+EMP01291,Priya Torres,20,Checker,2,B,Agency,2016-05-31,5y+,0,1,1291
+EMP01292,Ahmed Sharma,24,Picker,3,C,Permanent,2021-10-02,2-5y,0,1,1292
+EMP01293,Elena Smith,20,Receiver,3,C,Seasonal,2019-07-16,5y+,0,1,1293
+EMP01294,Maria Fernandes,20,Picker,3,C,Agency,2018-09-25,5y+,0,1,1294
+EMP01295,Grace Rossi,5,Picker,1,A,Permanent,2024-05-03,2-5y,0,1,1295
+EMP01296,Anita Silva,11,Picker,1,A,Permanent,2026-01-26,6-12m,0,1,1296
+EMP01297,Siti Berg,16,Picker,3,C,Agency,2019-08-29,5y+,0,1,1297
+EMP01298,Marco Rahman,4,Picker,1,A,Permanent,2020-01-05,5y+,0,0,1298
+EMP01299,Grace Wang,24,Picker,2,B,Agency,2021-04-24,5y+,0,1,1299
+EMP01300,Hassan Haddad,7,Picker,3,C,Permanent,2017-07-14,5y+,0,1,1300
+EMP01301,Sofia Rahman,23,Picker,1,A,Permanent,2023-03-15,2-5y,0,1,1301
+EMP01302,Ahmed Zhang,19,Picker,1,A,Permanent,2019-02-11,5y+,1,1,1302
+EMP01303,Hassan Kumar,25,Picker,1,A,Permanent,2023-07-07,2-5y,0,1,1303
+EMP01304,Sofia Torres,15,Forklift Operator,3,C,Agency,2018-03-11,5y+,1,1,1304
+EMP01305,Grace Sato,21,Receiver,1,A,Permanent,2025-08-17,1-2y,0,1,1305
+EMP01306,Marco Fernandes,15,Supervisor,3,C,Permanent,2018-12-27,5y+,0,1,1306
+EMP01307,Priya Nguyen,25,Packer,1,A,Permanent,2019-04-15,5y+,0,1,1307
+EMP01308,Anita Silva,10,Picker,3,C,Permanent,2025-11-24,6-12m,0,1,1308
+EMP01309,Priya Al-Amin,23,Receiver,2,B,Permanent,2025-10-18,6-12m,0,1,1309
+EMP01310,Anita Sharma,4,Packer,1,A,Permanent,2020-11-01,5y+,0,1,1310
+EMP01311,Sofia Novak,19,Team Lead,1,A,Permanent,2016-11-15,5y+,0,1,1311
+EMP01312,Liam Nguyen,14,Receiver,2,B,Permanent,2019-12-23,5y+,0,1,1312
+EMP01313,Maria Sharma,10,Receiver,1,A,Permanent,2019-05-16,5y+,0,1,1313
+EMP01314,Maria Fernandes,25,Checker,1,A,Permanent,2025-05-21,1-2y,0,1,1314
+EMP01315,Marco Rahman,17,Forklift Operator,3,C,Permanent,2023-10-27,2-5y,1,1,1315
+EMP01316,Diego Nguyen,10,Picker,2,B,Permanent,2020-09-05,5y+,0,1,1316
+EMP01317,Sofia Silva,13,Picker,3,C,Permanent,2016-01-22,5y+,0,1,1317
+EMP01318,Siti Torres,14,Picker,3,C,Permanent,2026-03-02,<6m,1,1,1318
+EMP01319,Diego Sharma,14,Receiver,1,A,Permanent,2023-01-24,2-5y,0,1,1319
+EMP01320,Grace Rahman,17,Packer,3,C,Seasonal,2022-07-30,2-5y,0,1,1320
+EMP01321,Carlos Zhang,20,Forklift Operator,1,A,Permanent,2022-08-06,2-5y,1,1,1321
+EMP01322,Wei Sharma,22,Packer,1,A,Agency,2020-11-02,5y+,0,1,1322
+EMP01323,Ahmed Silva,6,Packer,3,C,Seasonal,2019-03-07,5y+,0,1,1323
+EMP01324,Hassan Costa,21,Supervisor,2,B,Permanent,2022-07-26,2-5y,0,1,1324
+EMP01325,Maria Smith,18,Receiver,2,B,Permanent,2016-06-05,5y+,0,1,1325
+EMP01326,Grace Rahman,10,Packer,3,C,Agency,2019-04-22,5y+,0,0,1326
+EMP01327,Diego Rahman,9,Forklift Operator,2,B,Agency,2016-06-01,5y+,1,1,1327
+EMP01328,Elena Kumar,7,Packer,1,A,Permanent,2020-10-03,5y+,1,1,1328
+EMP01329,Maria Khalid,11,Packer,3,C,Agency,2021-12-25,2-5y,0,1,1329
+EMP01330,John Kumar,20,Picker,2,B,Permanent,2017-08-18,5y+,0,1,1330
+EMP01331,Hassan Wang,17,Picker,2,B,Agency,2018-06-02,5y+,0,1,1331
+EMP01332,Wei Kumar,2,Packer,2,B,Seasonal,2016-11-06,5y+,0,1,1332
+EMP01333,Hassan Berg,18,Packer,2,B,Agency,2017-07-09,5y+,1,1,1333
+EMP01334,Ravi Rahman,25,Picker,1,A,Seasonal,2019-06-11,5y+,0,1,1334
+EMP01335,Ravi Rahman,7,Picker,3,C,Permanent,2025-03-19,1-2y,1,1,1335
+EMP01336,Hassan Novak,5,Checker,3,C,Permanent,2026-07-09,<6m,1,1,1336
+EMP01337,Kenji Haddad,4,Picker,3,C,Permanent,2019-05-07,5y+,0,1,1337
+EMP01338,Liam Silva,5,Forklift Operator,1,A,Permanent,2025-07-26,1-2y,1,1,1338
+EMP01339,Hassan Novak,2,Packer,1,A,Permanent,2021-12-29,2-5y,0,1,1339
+EMP01340,Hassan Berg,9,Picker,3,C,Permanent,2016-07-21,5y+,1,1,1340
+EMP01341,Kenji Zhang,14,Picker,3,C,Seasonal,2016-08-03,5y+,1,1,1341
+EMP01342,Ingrid Rossi,6,Packer,1,A,Permanent,2019-10-18,5y+,0,1,1342
+EMP01343,John Zhang,25,Packer,2,B,Agency,2016-07-26,5y+,0,0,1343
+EMP01344,Siti Nguyen,18,Picker,1,A,Seasonal,2019-03-04,5y+,0,1,1344
+EMP01345,Elena Haddad,9,Picker,3,C,Agency,2019-01-15,5y+,0,1,1345
+EMP01346,Carlos Rossi,16,Packer,1,A,Permanent,2018-05-03,5y+,0,1,1346
+EMP01347,Priya Torres,13,Picker,1,A,Agency,2025-06-18,1-2y,0,0,1347
+EMP01348,Kenji Silva,6,Packer,3,C,Permanent,2017-12-09,5y+,0,1,1348
+EMP01349,Carlos Wang,6,Receiver,3,C,Permanent,2021-03-11,5y+,0,1,1349
+EMP01350,Liam Torres,17,Team Lead,1,A,Permanent,2023-05-10,2-5y,0,1,1350
+EMP01351,Liam Fernandes,17,Checker,1,A,Permanent,2020-07-13,5y+,0,1,1351
+EMP01352,Ingrid Berg,20,Team Lead,2,B,Permanent,2018-11-12,5y+,0,1,1352
+EMP01353,Carlos Nguyen,25,Forklift Operator,1,A,Permanent,2024-04-04,2-5y,1,1,1353
+EMP01354,Fatima Gomez,16,Packer,1,A,Permanent,2023-01-22,2-5y,0,1,1354
+EMP01355,Hassan Wang,1,Supervisor,2,B,Permanent,2024-07-12,2-5y,0,1,1355
+EMP01356,John Silva,12,Picker,2,B,Permanent,2020-01-04,5y+,0,1,1356
+EMP01357,Li Wang,7,Packer,3,C,Agency,2025-12-25,6-12m,0,1,1357
+EMP01358,Liam Khalid,18,Forklift Operator,3,C,Agency,2017-01-04,5y+,1,1,1358
+EMP01359,Wei Rahman,6,Picker,3,C,Permanent,2025-07-27,1-2y,0,1,1359
+EMP01360,Carlos Rahman,14,Team Lead,1,A,Permanent,2022-05-17,2-5y,0,1,1360
+EMP01361,Liam Costa,19,Team Lead,2,B,Permanent,2019-11-18,5y+,0,1,1361
+EMP01362,Fatima Rossi,4,Checker,2,B,Permanent,2019-08-19,5y+,0,1,1362
+EMP01363,Liam Rahman,12,Picker,2,B,Agency,2024-05-07,2-5y,0,1,1363
+EMP01364,Liam Kumar,21,Receiver,1,A,Agency,2023-10-11,2-5y,0,1,1364
+EMP01365,Elena Nguyen,3,Packer,3,C,Permanent,2024-08-13,2-5y,0,1,1365
+EMP01366,Li Novak,7,Forklift Operator,1,A,Seasonal,2025-06-25,1-2y,1,1,1366
+EMP01367,Siti Zhang,13,Picker,2,B,Agency,2023-06-23,2-5y,0,1,1367
+EMP01368,Grace Khalid,18,Packer,1,A,Permanent,2024-08-27,1-2y,0,1,1368
+EMP01369,Grace Silva,23,Picker,3,C,Permanent,2019-10-23,5y+,1,1,1369
+EMP01370,Marco Smith,19,Forklift Operator,3,C,Permanent,2021-09-06,2-5y,1,1,1370
+EMP01371,Carlos Rahman,16,Receiver,1,A,Permanent,2023-04-12,2-5y,0,1,1371
+EMP01372,Carlos Khalid,3,Supervisor,3,C,Seasonal,2018-01-15,5y+,0,1,1372
+EMP01373,Maria Gomez,15,Checker,2,B,Permanent,2024-10-16,1-2y,0,1,1373
+EMP01374,Li Wang,25,Picker,1,A,Agency,2016-08-23,5y+,0,1,1374
+EMP01375,Kenji Wang,12,Forklift Operator,3,C,Permanent,2021-11-02,2-5y,1,1,1375
+EMP01376,Maria Nguyen,6,Picker,1,A,Permanent,2017-12-19,5y+,0,1,1376
+EMP01377,Diego Zhang,21,Packer,1,A,Agency,2018-04-15,5y+,0,1,1377
+EMP01378,Wei Torres,6,Supervisor,2,B,Permanent,2026-03-24,<6m,0,0,1378
+EMP01379,Elena Zhang,14,Picker,3,C,Agency,2017-12-16,5y+,0,1,1379
+EMP01380,Li Gomez,17,Team Lead,2,B,Permanent,2025-09-24,6-12m,0,1,1380
+EMP01381,Wei Novak,22,Packer,3,C,Permanent,2019-12-03,5y+,0,1,1381
+EMP01382,Liam Torres,14,Team Lead,2,B,Permanent,2026-01-13,6-12m,0,1,1382
+EMP01383,Wei Kumar,3,Receiver,2,B,Seasonal,2023-10-06,2-5y,0,1,1383
+EMP01384,Marco Rossi,1,Packer,2,B,Permanent,2018-10-05,5y+,0,1,1384
+EMP01385,Grace Fernandes,15,Checker,2,B,Permanent,2022-05-08,2-5y,0,1,1385
+EMP01386,Priya Al-Amin,15,Picker,3,C,Permanent,2021-09-10,2-5y,0,1,1386
+EMP01387,Sofia Kumar,14,Picker,3,C,Seasonal,2022-10-24,2-5y,1,1,1387
+EMP01388,Elena Gomez,12,Picker,2,B,Permanent,2020-01-22,5y+,0,1,1388
+EMP01389,Hassan Wang,16,Picker,1,A,Permanent,2018-08-10,5y+,0,1,1389
+EMP01390,Siti Smith,7,Packer,1,A,Permanent,2022-11-20,2-5y,1,1,1390
+EMP01391,John Wang,11,Picker,2,B,Agency,2020-08-11,5y+,0,0,1391
+EMP01392,Fatima Sato,25,Checker,1,A,Permanent,2024-01-07,2-5y,0,1,1392
+EMP01393,Ravi Costa,16,Forklift Operator,1,A,Agency,2020-05-05,5y+,1,1,1393
+EMP01394,Priya Costa,4,Forklift Operator,3,C,Permanent,2016-07-29,5y+,0,1,1394
+EMP01395,Anita Khalid,22,Picker,1,A,Permanent,2023-12-26,2-5y,0,1,1395
+EMP01396,John Berg,23,Forklift Operator,2,B,Permanent,2017-01-10,5y+,1,1,1396
+EMP01397,Liam Zhang,8,Picker,2,B,Permanent,2024-05-01,2-5y,0,1,1397
+EMP01398,John Haddad,7,Packer,3,C,Permanent,2025-11-14,6-12m,0,1,1398
+EMP01399,Ingrid Costa,12,Packer,2,B,Permanent,2021-05-19,5y+,0,1,1399
+EMP01400,Diego Al-Amin,10,Team Lead,2,B,Permanent,2020-11-28,5y+,1,0,1400
+EMP01401,Ravi Gomez,5,Receiver,2,B,Permanent,2025-04-24,1-2y,0,1,1401
+EMP01402,John Haddad,8,Packer,2,B,Agency,2024-01-23,2-5y,0,1,1402
+EMP01403,Elena Sharma,4,Forklift Operator,2,B,Permanent,2020-09-26,5y+,1,1,1403
+EMP01404,Anita Haddad,20,Forklift Operator,3,C,Agency,2018-09-03,5y+,1,1,1404
+EMP01405,John Silva,13,Packer,3,C,Permanent,2019-08-01,5y+,0,1,1405
+EMP01406,Liam Wang,8,Supervisor,1,A,Agency,2026-05-19,<6m,0,1,1406
+EMP01407,Maria Silva,1,Receiver,3,C,Permanent,2025-08-31,6-12m,0,1,1407
+EMP01408,Kenji Sharma,25,Picker,1,A,Permanent,2025-11-21,6-12m,0,1,1408
+EMP01409,Liam Rossi,4,Checker,3,C,Permanent,2023-11-25,2-5y,0,1,1409
+EMP01410,Li Rossi,4,Picker,1,A,Permanent,2020-07-25,5y+,0,1,1410
+EMP01411,Sofia Rahman,25,Picker,3,C,Permanent,2017-06-23,5y+,0,1,1411
+EMP01412,Fatima Al-Amin,15,Picker,2,B,Agency,2021-02-17,5y+,0,1,1412
+EMP01413,Grace Torres,15,Packer,3,C,Permanent,2019-01-19,5y+,0,1,1413
+EMP01414,Ingrid Wang,17,Packer,1,A,Permanent,2018-06-05,5y+,1,1,1414
+EMP01415,Ahmed Sato,1,Forklift Operator,2,B,Permanent,2021-06-02,5y+,1,1,1415
+EMP01416,Siti Al-Amin,17,Receiver,1,A,Permanent,2026-05-07,<6m,0,1,1416
+EMP01417,Carlos Sato,12,Receiver,1,A,Permanent,2017-12-15,5y+,0,1,1417
+EMP01418,Marco Silva,12,Picker,3,C,Agency,2020-08-03,5y+,0,1,1418
+EMP01419,Diego Al-Amin,25,Packer,3,C,Agency,2017-02-27,5y+,1,0,1419
+EMP01420,Ravi Silva,2,Supervisor,3,C,Seasonal,2018-11-21,5y+,0,1,1420
+EMP01421,Anita Silva,8,Supervisor,2,B,Permanent,2020-04-05,5y+,1,1,1421
+EMP01422,Hassan Nguyen,20,Forklift Operator,3,C,Permanent,2024-09-23,1-2y,1,1,1422
+EMP01423,Carlos Zhang,6,Supervisor,2,B,Permanent,2017-12-30,5y+,0,1,1423
+EMP01424,Marco Fernandes,23,Forklift Operator,1,A,Seasonal,2026-02-19,<6m,1,1,1424
+EMP01425,Fatima Rahman,10,Picker,1,A,Permanent,2025-05-27,1-2y,0,1,1425
+EMP01426,Diego Silva,19,Receiver,3,C,Permanent,2025-10-26,6-12m,0,1,1426
+EMP01427,Anita Khalid,5,Forklift Operator,3,C,Permanent,2018-08-13,5y+,1,1,1427
+EMP01428,Sofia Al-Amin,14,Packer,2,B,Agency,2017-09-15,5y+,0,1,1428
+EMP01429,Marco Al-Amin,7,Packer,2,B,Permanent,2021-05-19,5y+,0,1,1429
+EMP01430,Diego Costa,7,Supervisor,1,A,Permanent,2018-03-01,5y+,0,1,1430
+EMP01431,Elena Gomez,18,Forklift Operator,1,A,Permanent,2023-06-19,2-5y,1,1,1431
+EMP01432,Hassan Costa,17,Picker,1,A,Seasonal,2024-06-12,2-5y,0,1,1432
+EMP01433,Priya Haddad,20,Team Lead,1,A,Agency,2024-09-21,1-2y,0,1,1433
+EMP01434,Siti Berg,17,Forklift Operator,3,C,Agency,2016-07-13,5y+,1,1,1434
+EMP01435,Grace Costa,22,Picker,2,B,Agency,2026-07-03,<6m,0,1,1435
+EMP01436,Hassan Silva,17,Forklift Operator,2,B,Permanent,2017-01-15,5y+,1,1,1436
+EMP01437,Ahmed Mensah,19,Receiver,1,A,Permanent,2019-08-18,5y+,0,1,1437
+EMP01438,Ahmed Rahman,25,Picker,1,A,Agency,2025-01-05,1-2y,0,1,1438
+EMP01439,Wei Al-Amin,3,Checker,2,B,Permanent,2017-05-01,5y+,0,1,1439
+EMP01440,Li Fernandes,8,Packer,2,B,Agency,2017-07-02,5y+,1,1,1440
+EMP01441,Siti Nguyen,18,Picker,2,B,Permanent,2020-05-02,5y+,0,1,1441
+EMP01442,Elena Nguyen,14,Forklift Operator,2,B,Permanent,2022-01-12,2-5y,1,1,1442
+EMP01443,Sofia Rossi,15,Packer,2,B,Seasonal,2020-03-09,5y+,0,1,1443
+EMP01444,Anita Zhang,25,Checker,1,A,Agency,2018-10-05,5y+,0,1,1444
+EMP01445,Elena Smith,23,Packer,1,A,Permanent,2016-04-24,5y+,0,1,1445
+EMP01446,Marco Al-Amin,12,Packer,1,A,Permanent,2016-07-26,5y+,0,1,1446
+EMP01447,Ravi Khalid,14,Picker,1,A,Agency,2016-12-08,5y+,1,1,1447
+EMP01448,Maria Al-Amin,23,Checker,3,C,Agency,2025-09-09,6-12m,0,0,1448
+EMP01449,Sofia Khalid,14,Supervisor,1,A,Permanent,2018-08-27,5y+,0,1,1449
+EMP01450,Marco Novak,22,Checker,2,B,Permanent,2018-10-20,5y+,0,1,1450
+EMP01451,Siti Sharma,14,Forklift Operator,1,A,Permanent,2019-10-06,5y+,1,0,1451
+EMP01452,Wei Mensah,19,Packer,2,B,Agency,2025-12-29,6-12m,0,1,1452
+EMP01453,Marco Khalid,18,Packer,1,A,Permanent,2024-04-08,2-5y,0,1,1453
+EMP01454,Siti Haddad,20,Picker,3,C,Agency,2017-12-22,5y+,0,1,1454
+EMP01455,Hassan Torres,20,Packer,2,B,Seasonal,2025-02-21,1-2y,0,1,1455
+EMP01456,Li Berg,1,Forklift Operator,3,C,Agency,2017-10-02,5y+,1,1,1456
+EMP01457,Elena Haddad,8,Packer,3,C,Agency,2017-10-03,5y+,0,1,1457
+EMP01458,Fatima Sharma,4,Team Lead,2,B,Agency,2023-01-30,2-5y,0,0,1458
+EMP01459,Liam Torres,3,Checker,2,B,Permanent,2021-11-11,2-5y,0,1,1459
+EMP01460,Priya Silva,20,Picker,2,B,Agency,2022-12-21,2-5y,0,1,1460
+EMP01461,Elena Kumar,25,Picker,1,A,Permanent,2025-01-15,1-2y,0,1,1461
+EMP01462,Sofia Kumar,12,Picker,3,C,Permanent,2020-09-24,5y+,0,1,1462
+EMP01463,Fatima Novak,2,Forklift Operator,2,B,Permanent,2022-12-28,2-5y,1,1,1463
+EMP01464,Li Mensah,14,Team Lead,1,A,Agency,2017-11-02,5y+,0,1,1464
+EMP01465,Grace Haddad,1,Packer,2,B,Agency,2024-01-20,2-5y,0,1,1465
+EMP01466,Liam Zhang,17,Receiver,1,A,Agency,2018-07-19,5y+,0,1,1466
+EMP01467,Grace Khalid,20,Team Lead,2,B,Permanent,2016-06-11,5y+,0,1,1467
+EMP01468,Siti Rahman,10,Picker,2,B,Agency,2021-06-13,5y+,0,1,1468
+EMP01469,Ravi Wang,10,Picker,3,C,Permanent,2017-04-13,5y+,0,1,1469
+EMP01470,Diego Sato,12,Forklift Operator,2,B,Permanent,2016-02-15,5y+,1,1,1470
+EMP01471,Diego Sato,7,Checker,3,C,Permanent,2016-10-09,5y+,0,1,1471
+EMP01472,Elena Sato,13,Packer,2,B,Permanent,2023-04-26,2-5y,0,1,1472
+EMP01473,John Novak,19,Checker,3,C,Permanent,2024-09-16,1-2y,0,0,1473
+EMP01474,Liam Silva,23,Forklift Operator,3,C,Permanent,2019-04-03,5y+,1,1,1474
+EMP01475,Wei Mensah,15,Receiver,3,C,Agency,2020-07-22,5y+,0,0,1475
+EMP01476,Maria Nguyen,9,Team Lead,3,C,Permanent,2025-04-12,1-2y,0,1,1476
+EMP01477,Anita Zhang,19,Forklift Operator,1,A,Permanent,2024-03-15,2-5y,1,1,1477
+EMP01478,John Silva,24,Checker,2,B,Permanent,2024-02-18,2-5y,0,1,1478
+EMP01479,Ahmed Rahman,24,Supervisor,1,A,Agency,2016-02-16,5y+,0,1,1479
+EMP01480,Diego Zhang,12,Picker,3,C,Agency,2019-02-22,5y+,0,1,1480
+EMP01481,Anita Silva,25,Packer,2,B,Agency,2021-01-30,5y+,0,1,1481
+EMP01482,Grace Rossi,25,Forklift Operator,2,B,Permanent,2023-06-08,2-5y,1,1,1482
+EMP01483,Siti Wang,21,Checker,1,A,Permanent,2019-07-18,5y+,0,0,1483
+EMP01484,Liam Novak,8,Receiver,2,B,Agency,2018-01-02,5y+,0,1,1484
+EMP01485,Ahmed Khalid,16,Picker,3,C,Permanent,2019-11-29,5y+,0,1,1485
+EMP01486,Siti Berg,21,Picker,3,C,Permanent,2024-11-11,1-2y,1,1,1486
+EMP01487,Ahmed Rahman,21,Packer,1,A,Permanent,2019-01-26,5y+,0,1,1487
+EMP01488,Li Gomez,17,Checker,3,C,Permanent,2024-10-17,1-2y,0,1,1488
+EMP01489,Anita Khalid,5,Packer,3,C,Seasonal,2019-10-03,5y+,0,1,1489
+EMP01490,Ahmed Zhang,13,Packer,1,A,Agency,2019-05-11,5y+,0,1,1490
+EMP01491,John Costa,22,Receiver,1,A,Permanent,2019-12-25,5y+,0,1,1491
+EMP01492,Siti Rossi,14,Packer,1,A,Permanent,2019-08-20,5y+,0,1,1492
+EMP01493,Ahmed Berg,6,Supervisor,1,A,Permanent,2025-05-27,1-2y,0,1,1493
+EMP01494,Ingrid Sharma,4,Receiver,2,B,Permanent,2025-01-17,1-2y,0,1,1494
+EMP01495,Ahmed Rahman,18,Team Lead,2,B,Permanent,2020-08-02,5y+,0,1,1495
+EMP01496,Fatima Costa,18,Packer,3,C,Permanent,2025-01-11,1-2y,0,1,1496
+EMP01497,Ahmed Novak,1,Packer,1,A,Agency,2017-06-17,5y+,0,1,1497
+EMP01498,Siti Sharma,13,Forklift Operator,1,A,Permanent,2023-11-25,2-5y,1,1,1498
+EMP01499,John Costa,4,Supervisor,2,B,Permanent,2022-02-23,2-5y,0,1,1499
+EMP01500,Marco Khalid,7,Picker,2,B,Agency,2018-01-14,5y+,0,1,1500
+EMP01501,Grace Sato,12,Picker,2,B,Agency,2022-05-21,2-5y,0,1,1501
+EMP01502,Ahmed Gomez,12,Packer,1,A,Permanent,2018-09-17,5y+,0,1,1502
+EMP01503,Grace Al-Amin,5,Picker,2,B,Permanent,2024-04-26,2-5y,0,1,1503
+EMP01504,Hassan Haddad,14,Forklift Operator,3,C,Permanent,2020-05-27,5y+,1,1,1504
+EMP01505,Ravi Smith,21,Picker,3,C,Permanent,2020-04-30,5y+,0,1,1505
+EMP01506,Anita Khalid,25,Checker,2,B,Permanent,2019-09-06,5y+,0,1,1506
+EMP01507,Sofia Novak,5,Packer,3,C,Permanent,2018-12-19,5y+,1,1,1507
+EMP01508,Grace Fernandes,7,Picker,3,C,Agency,2022-10-23,2-5y,0,0,1508
+EMP01509,Ravi Mensah,11,Picker,1,A,Permanent,2016-05-20,5y+,0,1,1509
+EMP01510,Ingrid Sharma,9,Picker,3,C,Permanent,2026-04-24,<6m,0,1,1510
+EMP01511,Siti Gomez,10,Packer,2,B,Permanent,2025-04-29,1-2y,0,1,1511
+EMP01512,Elena Berg,1,Checker,2,B,Permanent,2019-04-08,5y+,0,1,1512
+EMP01513,Ingrid Mensah,24,Receiver,2,B,Seasonal,2023-05-27,2-5y,0,1,1513
+EMP01514,Siti Haddad,9,Forklift Operator,3,C,Permanent,2020-03-22,5y+,1,1,1514
+EMP01515,Elena Torres,4,Picker,2,B,Permanent,2017-12-13,5y+,0,1,1515
+EMP01516,Wei Wang,11,Packer,1,A,Permanent,2019-06-01,5y+,0,1,1516
+EMP01517,Elena Gomez,11,Team Lead,1,A,Permanent,2020-12-29,5y+,0,0,1517
+EMP01518,Kenji Fernandes,21,Picker,1,A,Permanent,2021-09-24,2-5y,0,1,1518
+EMP01519,Kenji Wang,11,Forklift Operator,3,C,Permanent,2019-11-12,5y+,0,1,1519
+EMP01520,Grace Nguyen,5,Picker,2,B,Permanent,2016-01-08,5y+,0,1,1520
+EMP01521,Siti Nguyen,20,Picker,2,B,Permanent,2018-03-04,5y+,0,1,1521
+EMP01522,Liam Rahman,9,Picker,3,C,Seasonal,2020-12-26,5y+,0,1,1522
+EMP01523,Maria Al-Amin,6,Picker,2,B,Permanent,2020-04-10,5y+,0,1,1523
+EMP01524,Maria Rahman,19,Packer,2,B,Permanent,2022-03-20,2-5y,1,1,1524
+EMP01525,Ingrid Smith,18,Packer,1,A,Permanent,2021-05-03,5y+,1,1,1525
+EMP01526,Diego Nguyen,24,Team Lead,3,C,Permanent,2020-04-20,5y+,0,1,1526
+EMP01527,Ravi Fernandes,9,Checker,1,A,Agency,2018-09-29,5y+,0,1,1527
+EMP01528,Ravi Fernandes,5,Packer,1,A,Permanent,2025-09-07,6-12m,0,0,1528
+EMP01529,Liam Haddad,1,Forklift Operator,3,C,Agency,2019-12-01,5y+,1,1,1529
+EMP01530,Maria Torres,17,Picker,1,A,Agency,2022-05-20,2-5y,0,1,1530
+EMP01531,Fatima Rossi,19,Receiver,1,A,Seasonal,2024-08-17,2-5y,0,1,1531
+EMP01532,Liam Rahman,4,Picker,1,A,Permanent,2023-12-28,2-5y,0,1,1532
+EMP01533,Maria Sharma,7,Picker,3,C,Permanent,2022-07-17,2-5y,0,1,1533
+EMP01534,Ravi Mensah,16,Picker,3,C,Agency,2018-05-13,5y+,0,1,1534
+EMP01535,Grace Torres,13,Team Lead,2,B,Agency,2024-04-14,2-5y,0,1,1535
+EMP01536,Sofia Rossi,17,Team Lead,2,B,Permanent,2016-12-30,5y+,0,0,1536
+EMP01537,Grace Costa,9,Receiver,1,A,Permanent,2024-06-06,2-5y,0,0,1537
+EMP01538,Anita Khalid,4,Packer,3,C,Agency,2024-12-04,1-2y,0,1,1538
+EMP01539,Grace Silva,11,Checker,3,C,Agency,2022-06-24,2-5y,0,1,1539
+EMP01540,Elena Smith,24,Forklift Operator,1,A,Agency,2020-12-06,5y+,1,1,1540
+EMP01541,John Rahman,9,Checker,1,A,Permanent,2023-02-09,2-5y,0,1,1541
+EMP01542,Siti Zhang,9,Forklift Operator,2,B,Permanent,2021-08-15,5y+,1,1,1542
+EMP01543,Priya Al-Amin,18,Checker,3,C,Permanent,2022-09-13,2-5y,0,1,1543
+EMP01544,Grace Smith,16,Checker,3,C,Permanent,2025-11-20,6-12m,0,1,1544
+EMP01545,Ingrid Fernandes,6,Picker,3,C,Agency,2020-02-27,5y+,0,1,1545
+EMP01546,Kenji Rahman,4,Forklift Operator,1,A,Permanent,2022-02-13,2-5y,1,1,1546
+EMP01547,John Khalid,1,Receiver,3,C,Agency,2021-01-16,5y+,0,1,1547
+EMP01548,Carlos Kumar,17,Receiver,2,B,Seasonal,2021-03-11,5y+,0,1,1548
+EMP01549,Carlos Costa,16,Checker,3,C,Permanent,2026-02-18,6-12m,0,1,1549
+EMP01550,Anita Rahman,8,Forklift Operator,1,A,Permanent,2026-05-23,<6m,1,1,1550
+EMP01551,Ingrid Zhang,1,Team Lead,2,B,Permanent,2023-11-13,2-5y,0,1,1551
+EMP01552,Liam Gomez,19,Team Lead,1,A,Seasonal,2019-11-06,5y+,0,1,1552
+EMP01553,Grace Sharma,17,Forklift Operator,3,C,Agency,2022-08-08,2-5y,1,1,1553
+EMP01554,Elena Mensah,7,Forklift Operator,2,B,Agency,2026-04-23,<6m,1,1,1554
+EMP01555,Sofia Kumar,2,Picker,3,C,Seasonal,2024-03-18,2-5y,0,1,1555
+EMP01556,Carlos Zhang,10,Receiver,1,A,Permanent,2026-05-21,<6m,0,1,1556
+EMP01557,Hassan Nguyen,10,Packer,2,B,Seasonal,2021-10-08,2-5y,0,0,1557
+EMP01558,Elena Haddad,19,Picker,2,B,Seasonal,2019-04-30,5y+,0,1,1558
+EMP01559,Carlos Rahman,1,Checker,2,B,Seasonal,2023-08-12,2-5y,1,1,1559
+EMP01560,Li Zhang,5,Checker,3,C,Permanent,2018-08-26,5y+,0,1,1560
+EMP01561,Ingrid Khalid,13,Picker,2,B,Permanent,2026-02-02,6-12m,0,1,1561
+EMP01562,Fatima Nguyen,12,Picker,3,C,Permanent,2016-08-20,5y+,0,1,1562
+EMP01563,Carlos Haddad,5,Packer,3,C,Agency,2019-06-30,5y+,0,1,1563
+EMP01564,Elena Berg,5,Packer,1,A,Seasonal,2024-06-18,2-5y,0,0,1564
+EMP01565,Carlos Haddad,2,Picker,1,A,Permanent,2026-06-23,<6m,0,1,1565
+EMP01566,Kenji Berg,13,Picker,1,A,Permanent,2020-09-30,5y+,0,1,1566
+EMP01567,Anita Novak,24,Packer,2,B,Agency,2020-12-24,5y+,0,1,1567
+EMP01568,Marco Haddad,21,Supervisor,3,C,Permanent,2019-07-09,5y+,0,1,1568
+EMP01569,Siti Fernandes,12,Packer,2,B,Permanent,2025-12-14,6-12m,0,1,1569
+EMP01570,Hassan Rossi,12,Picker,3,C,Permanent,2022-12-11,2-5y,0,1,1570
+EMP01571,Kenji Fernandes,5,Packer,1,A,Permanent,2016-03-25,5y+,0,0,1571
+EMP01572,Carlos Gomez,17,Packer,2,B,Permanent,2020-02-14,5y+,0,1,1572
+EMP01573,Kenji Rossi,18,Team Lead,3,C,Permanent,2023-09-16,2-5y,1,1,1573
+EMP01574,Sofia Sharma,11,Picker,1,A,Permanent,2020-07-23,5y+,0,0,1574
+EMP01575,Marco Haddad,14,Picker,3,C,Permanent,2017-09-19,5y+,0,1,1575
+EMP01576,Li Mensah,22,Checker,1,A,Permanent,2017-07-20,5y+,1,1,1576
+EMP01577,Liam Costa,18,Forklift Operator,3,C,Permanent,2020-08-19,5y+,1,1,1577
+EMP01578,Ingrid Berg,9,Forklift Operator,2,B,Agency,2020-10-11,5y+,1,1,1578
+EMP01579,Grace Torres,8,Receiver,2,B,Permanent,2016-11-11,5y+,0,1,1579
+EMP01580,Marco Wang,3,Picker,3,C,Permanent,2016-01-30,5y+,0,1,1580
+EMP01581,Ahmed Costa,16,Picker,3,C,Seasonal,2018-06-07,5y+,0,1,1581
+EMP01582,John Wang,8,Packer,1,A,Permanent,2018-11-25,5y+,1,1,1582
+EMP01583,Marco Costa,19,Checker,2,B,Permanent,2025-06-15,1-2y,0,1,1583
+EMP01584,Grace Haddad,24,Checker,1,A,Agency,2018-02-12,5y+,0,1,1584
+EMP01585,Siti Haddad,18,Receiver,2,B,Permanent,2019-03-17,5y+,0,1,1585
+EMP01586,Hassan Novak,9,Receiver,2,B,Seasonal,2018-03-20,5y+,0,1,1586
+EMP01587,Hassan Kumar,10,Picker,2,B,Permanent,2020-08-10,5y+,0,1,1587
+EMP01588,Fatima Berg,5,Forklift Operator,2,B,Seasonal,2017-06-22,5y+,1,1,1588
+EMP01589,Ingrid Gomez,2,Forklift Operator,2,B,Seasonal,2018-02-13,5y+,1,1,1589
+EMP01590,Elena Wang,24,Receiver,2,B,Agency,2026-08-20,<6m,0,1,1590
+EMP01591,Hassan Torres,19,Receiver,1,A,Permanent,2018-01-20,5y+,0,1,1591
+EMP01592,Li Sharma,19,Picker,3,C,Permanent,2025-06-02,1-2y,1,1,1592
+EMP01593,Grace Kumar,14,Picker,2,B,Seasonal,2025-01-18,1-2y,0,1,1593
+EMP01594,Hassan Mensah,21,Packer,2,B,Permanent,2018-06-22,5y+,0,1,1594
+EMP01595,Priya Silva,10,Team Lead,1,A,Agency,2020-11-29,5y+,0,1,1595
+EMP01596,Elena Wang,7,Checker,2,B,Permanent,2024-09-11,1-2y,0,1,1596
+EMP01597,Maria Mensah,23,Picker,3,C,Permanent,2020-10-04,5y+,0,1,1597
+EMP01598,Marco Sato,11,Receiver,1,A,Agency,2019-08-04,5y+,0,1,1598
+EMP01599,Elena Al-Amin,12,Picker,3,C,Permanent,2020-02-17,5y+,0,1,1599
+EMP01600,Carlos Al-Amin,22,Picker,1,A,Permanent,2018-04-15,5y+,0,1,1600
+EMP01601,Grace Fernandes,4,Checker,2,B,Permanent,2017-09-14,5y+,0,1,1601
+EMP01602,Ahmed Nguyen,3,Receiver,3,C,Permanent,2025-08-31,6-12m,0,1,1602
+EMP01603,Carlos Al-Amin,14,Picker,2,B,Permanent,2024-10-09,1-2y,0,1,1603
+EMP01604,Siti Rahman,5,Checker,2,B,Agency,2023-10-20,2-5y,0,1,1604
+EMP01605,Ravi Silva,15,Supervisor,3,C,Permanent,2019-05-19,5y+,0,1,1605
+EMP01606,Fatima Rahman,4,Packer,1,A,Permanent,2018-04-06,5y+,0,1,1606
+EMP01607,John Rahman,22,Team Lead,2,B,Seasonal,2021-05-03,5y+,0,1,1607
+EMP01608,Ahmed Gomez,11,Checker,1,A,Permanent,2017-03-26,5y+,0,0,1608
+EMP01609,Siti Gomez,14,Receiver,2,B,Seasonal,2024-07-24,2-5y,0,1,1609
+EMP01610,Carlos Fernandes,19,Picker,2,B,Permanent,2016-05-31,5y+,0,1,1610
+EMP01611,Ahmed Sharma,21,Supervisor,2,B,Permanent,2018-03-30,5y+,0,1,1611
+EMP01612,Anita Costa,19,Packer,1,A,Agency,2023-03-26,2-5y,1,1,1612
+EMP01613,Ingrid Khalid,15,Picker,1,A,Seasonal,2022-10-20,2-5y,0,1,1613
+EMP01614,Ingrid Rossi,24,Packer,3,C,Permanent,2024-12-15,1-2y,0,1,1614
+EMP01615,Wei Costa,12,Team Lead,1,A,Agency,2026-01-30,6-12m,0,1,1615
+EMP01616,Siti Costa,4,Picker,2,B,Permanent,2019-07-10,5y+,0,1,1616
+EMP01617,Maria Rossi,10,Packer,3,C,Agency,2017-08-02,5y+,0,1,1617
+EMP01618,Hassan Gomez,16,Picker,3,C,Permanent,2023-11-17,2-5y,0,1,1618
+EMP01619,Kenji Khalid,15,Picker,3,C,Permanent,2021-02-05,5y+,0,0,1619
+EMP01620,Li Sato,25,Packer,1,A,Permanent,2022-09-10,2-5y,0,1,1620
+EMP01621,Siti Fernandes,11,Team Lead,2,B,Permanent,2024-07-03,2-5y,0,1,1621
+EMP01622,Liam Sato,1,Forklift Operator,1,A,Permanent,2022-10-07,2-5y,1,1,1622
+EMP01623,Marco Novak,7,Picker,1,A,Permanent,2020-12-03,5y+,0,1,1623
+EMP01624,Li Silva,10,Packer,2,B,Permanent,2026-07-13,<6m,0,0,1624
+EMP01625,Maria Fernandes,22,Picker,3,C,Agency,2018-10-16,5y+,0,1,1625
+EMP01626,Sofia Rahman,8,Packer,1,A,Permanent,2016-08-25,5y+,0,1,1626
+EMP01627,Ahmed Kumar,9,Forklift Operator,1,A,Permanent,2019-11-20,5y+,1,1,1627
+EMP01628,Li Rahman,24,Packer,3,C,Permanent,2025-10-18,6-12m,0,1,1628
+EMP01629,Hassan Sato,20,Forklift Operator,1,A,Agency,2022-08-26,2-5y,1,1,1629
+EMP01630,Grace Silva,19,Packer,3,C,Permanent,2022-04-25,2-5y,0,1,1630
+EMP01631,Li Rossi,6,Forklift Operator,3,C,Permanent,2023-05-18,2-5y,1,1,1631
+EMP01632,Sofia Novak,19,Picker,3,C,Agency,2026-01-15,6-12m,0,1,1632
+EMP01633,Ahmed Costa,7,Receiver,2,B,Permanent,2018-07-09,5y+,0,1,1633
+EMP01634,Elena Smith,15,Picker,2,B,Permanent,2021-03-31,5y+,0,0,1634
+EMP01635,Priya Smith,1,Receiver,3,C,Agency,2016-01-31,5y+,0,1,1635
+EMP01636,Grace Kumar,17,Receiver,1,A,Permanent,2022-11-22,2-5y,0,1,1636
+EMP01637,Ingrid Haddad,12,Packer,2,B,Permanent,2018-04-28,5y+,0,1,1637
+EMP01638,Marco Wang,10,Receiver,1,A,Permanent,2019-01-11,5y+,0,1,1638
+EMP01639,Elena Novak,4,Packer,1,A,Agency,2025-01-09,1-2y,0,1,1639
+EMP01640,Li Haddad,25,Packer,2,B,Permanent,2020-08-18,5y+,0,1,1640
+EMP01641,Ahmed Smith,18,Packer,2,B,Agency,2026-05-09,<6m,0,1,1641
+EMP01642,Diego Fernandes,20,Packer,2,B,Permanent,2018-09-04,5y+,1,1,1642
+EMP01643,Siti Zhang,6,Picker,1,A,Permanent,2024-06-01,2-5y,0,1,1643
+EMP01644,Liam Torres,8,Checker,3,C,Permanent,2024-07-15,2-5y,0,1,1644
+EMP01645,Ahmed Rahman,1,Forklift Operator,2,B,Seasonal,2016-06-04,5y+,1,1,1645
+EMP01646,Wei Rahman,6,Team Lead,3,C,Permanent,2019-05-12,5y+,0,1,1646
+EMP01647,Fatima Haddad,17,Forklift Operator,2,B,Permanent,2019-08-01,5y+,1,1,1647
+EMP01648,Liam Novak,13,Forklift Operator,2,B,Permanent,2017-01-20,5y+,1,1,1648
+EMP01649,Wei Berg,2,Picker,2,B,Agency,2023-11-25,2-5y,1,1,1649
+EMP01650,Priya Haddad,6,Packer,3,C,Permanent,2021-04-04,5y+,0,1,1650
+EMP01651,Kenji Berg,4,Picker,3,C,Permanent,2018-10-22,5y+,0,1,1651
+EMP01652,Hassan Smith,17,Receiver,3,C,Permanent,2022-10-15,2-5y,0,0,1652
+EMP01653,Ingrid Costa,2,Forklift Operator,1,A,Agency,2019-01-14,5y+,1,1,1653
+EMP01654,Priya Haddad,1,Packer,1,A,Permanent,2021-06-23,5y+,0,1,1654
+EMP01655,Marco Novak,1,Packer,1,A,Agency,2023-04-15,2-5y,0,1,1655
+EMP01656,Li Zhang,25,Checker,1,A,Permanent,2024-09-27,1-2y,0,1,1656
+EMP01657,Diego Khalid,20,Checker,1,A,Seasonal,2018-08-09,5y+,0,1,1657
+EMP01658,Hassan Rahman,25,Receiver,3,C,Permanent,2016-04-02,5y+,1,1,1658
+EMP01659,Carlos Nguyen,14,Checker,3,C,Permanent,2024-06-10,2-5y,0,1,1659
+EMP01660,Sofia Sharma,8,Supervisor,1,A,Seasonal,2026-04-12,<6m,0,1,1660
+EMP01661,Anita Torres,13,Picker,2,B,Agency,2023-07-23,2-5y,0,1,1661
+EMP01662,Elena Berg,5,Team Lead,3,C,Permanent,2016-12-23,5y+,0,1,1662
+EMP01663,Kenji Sharma,18,Packer,2,B,Permanent,2023-03-05,2-5y,1,1,1663
+EMP01664,Marco Novak,16,Team Lead,3,C,Permanent,2024-11-11,1-2y,0,1,1664
+EMP01665,Kenji Berg,6,Checker,1,A,Permanent,2021-03-19,5y+,0,1,1665
+EMP01666,Ingrid Nguyen,11,Picker,2,B,Agency,2016-03-03,5y+,0,1,1666
+EMP01667,Sofia Gomez,12,Checker,2,B,Agency,2025-02-10,1-2y,0,1,1667
+EMP01668,Priya Fernandes,20,Receiver,2,B,Permanent,2024-06-03,2-5y,0,1,1668
+EMP01669,Wei Al-Amin,9,Receiver,3,C,Permanent,2025-04-25,1-2y,0,1,1669
+EMP01670,Li Mensah,3,Receiver,3,C,Permanent,2016-04-08,5y+,0,0,1670
+EMP01671,John Torres,7,Packer,1,A,Seasonal,2024-10-10,1-2y,0,1,1671
+EMP01672,Maria Novak,1,Picker,3,C,Agency,2016-09-29,5y+,1,1,1672
+EMP01673,Marco Rossi,8,Picker,2,B,Permanent,2023-09-08,2-5y,0,1,1673
+EMP01674,Liam Torres,23,Checker,1,A,Permanent,2024-01-30,2-5y,0,1,1674
+EMP01675,Ravi Wang,14,Checker,2,B,Permanent,2025-07-19,1-2y,1,1,1675
+EMP01676,Fatima Sato,14,Packer,3,C,Permanent,2021-02-27,5y+,1,1,1676
+EMP01677,Priya Torres,13,Packer,3,C,Permanent,2022-03-12,2-5y,0,1,1677
+EMP01678,Elena Silva,18,Picker,3,C,Permanent,2026-07-17,<6m,0,1,1678
+EMP01679,Ahmed Rossi,8,Forklift Operator,3,C,Permanent,2017-09-23,5y+,1,1,1679
+EMP01680,Fatima Berg,17,Team Lead,2,B,Agency,2017-03-31,5y+,0,1,1680
+EMP01681,Maria Silva,24,Forklift Operator,3,C,Seasonal,2023-11-11,2-5y,1,1,1681
+EMP01682,Siti Rossi,10,Receiver,3,C,Permanent,2021-06-14,5y+,0,1,1682
+EMP01683,Siti Nguyen,16,Packer,3,C,Permanent,2025-08-08,1-2y,0,1,1683
+EMP01684,Siti Kumar,24,Receiver,2,B,Permanent,2022-09-06,2-5y,0,1,1684
+EMP01685,Ravi Smith,13,Receiver,1,A,Seasonal,2024-02-10,2-5y,0,1,1685
+EMP01686,Liam Smith,23,Forklift Operator,3,C,Permanent,2019-03-07,5y+,1,1,1686
+EMP01687,Ingrid Zhang,3,Receiver,1,A,Agency,2021-02-25,5y+,1,1,1687
+EMP01688,Kenji Torres,21,Team Lead,2,B,Permanent,2025-04-28,1-2y,0,1,1688
+EMP01689,Carlos Khalid,7,Receiver,3,C,Permanent,2016-07-25,5y+,0,1,1689
+EMP01690,Hassan Kumar,14,Forklift Operator,3,C,Permanent,2024-04-12,2-5y,1,1,1690
+EMP01691,Anita Rahman,17,Picker,2,B,Permanent,2020-07-07,5y+,0,1,1691
+EMP01692,Liam Rossi,17,Supervisor,1,A,Agency,2016-12-22,5y+,0,1,1692
+EMP01693,Li Silva,4,Packer,1,A,Agency,2025-07-20,1-2y,0,1,1693
+EMP01694,John Rossi,1,Picker,1,A,Agency,2025-10-04,6-12m,0,1,1694
+EMP01695,Marco Gomez,3,Packer,3,C,Agency,2025-10-23,6-12m,1,1,1695
+EMP01696,Li Al-Amin,23,Forklift Operator,3,C,Permanent,2021-03-07,5y+,1,1,1696
+EMP01697,Liam Nguyen,24,Packer,1,A,Permanent,2020-08-24,5y+,0,1,1697
+EMP01698,Fatima Nguyen,16,Receiver,1,A,Permanent,2022-10-03,2-5y,0,0,1698
+EMP01699,Maria Novak,3,Checker,1,A,Agency,2024-09-24,1-2y,0,1,1699
+EMP01700,Priya Rahman,18,Packer,1,A,Agency,2024-05-18,2-5y,0,1,1700
+EMP01701,Liam Khalid,11,Picker,3,C,Agency,2019-09-28,5y+,0,1,1701
+EMP01702,Fatima Al-Amin,20,Receiver,2,B,Permanent,2016-12-02,5y+,0,1,1702
+EMP01703,Li Khalid,3,Forklift Operator,1,A,Permanent,2022-02-16,2-5y,1,1,1703
+EMP01704,Diego Nguyen,20,Receiver,1,A,Agency,2023-07-29,2-5y,0,1,1704
+EMP01705,Maria Torres,18,Packer,2,B,Permanent,2022-10-09,2-5y,0,1,1705
+EMP01706,Maria Khalid,24,Team Lead,3,C,Permanent,2023-04-05,2-5y,1,1,1706
+EMP01707,Carlos Berg,14,Picker,1,A,Agency,2020-07-11,5y+,0,1,1707
+EMP01708,Kenji Al-Amin,18,Picker,3,C,Agency,2016-06-16,5y+,0,1,1708
+EMP01709,Liam Wang,10,Supervisor,3,C,Permanent,2019-03-04,5y+,0,1,1709
+EMP01710,Sofia Sharma,7,Packer,1,A,Permanent,2022-10-10,2-5y,0,1,1710
+EMP01711,Maria Zhang,21,Checker,2,B,Permanent,2022-06-01,2-5y,0,1,1711
+EMP01712,Liam Smith,5,Receiver,1,A,Permanent,2017-06-06,5y+,0,1,1712
+EMP01713,Anita Wang,11,Packer,1,A,Permanent,2025-03-14,1-2y,0,1,1713
+EMP01714,Li Khalid,11,Picker,1,A,Permanent,2025-02-15,1-2y,1,1,1714
+EMP01715,Wei Sharma,17,Picker,2,B,Agency,2025-02-21,1-2y,0,1,1715
+EMP01716,Diego Rossi,7,Checker,1,A,Permanent,2023-08-12,2-5y,0,1,1716
+EMP01717,John Silva,3,Packer,3,C,Permanent,2017-05-11,5y+,0,1,1717
+EMP01718,Ingrid Rossi,4,Forklift Operator,1,A,Permanent,2025-02-14,1-2y,1,1,1718
+EMP01719,Grace Rahman,18,Picker,2,B,Permanent,2026-06-19,<6m,0,1,1719
+EMP01720,Wei Kumar,17,Packer,2,B,Seasonal,2024-12-18,1-2y,0,1,1720
+EMP01721,Diego Novak,19,Picker,1,A,Agency,2019-03-04,5y+,0,1,1721
+EMP01722,John Berg,19,Receiver,3,C,Seasonal,2024-09-19,1-2y,0,1,1722
+EMP01723,Ravi Haddad,5,Packer,3,C,Permanent,2024-04-04,2-5y,0,1,1723
+EMP01724,Grace Zhang,18,Receiver,2,B,Permanent,2025-01-31,1-2y,0,0,1724
+EMP01725,Liam Rossi,6,Checker,2,B,Agency,2024-12-22,1-2y,0,1,1725
+EMP01726,Kenji Smith,13,Picker,2,B,Seasonal,2017-05-06,5y+,0,1,1726
+EMP01727,Ravi Rossi,6,Packer,3,C,Permanent,2016-11-25,5y+,0,1,1727
+EMP01728,Sofia Kumar,4,Forklift Operator,1,A,Permanent,2026-01-23,6-12m,0,1,1728
+EMP01729,Ravi Costa,22,Packer,2,B,Permanent,2023-05-13,2-5y,0,1,1729
+EMP01730,Ravi Novak,13,Receiver,1,A,Permanent,2022-09-10,2-5y,0,1,1730
+EMP01731,Ravi Costa,21,Picker,2,B,Permanent,2022-03-20,2-5y,0,1,1731
+EMP01732,Fatima Zhang,1,Picker,2,B,Agency,2025-08-07,1-2y,1,1,1732
+EMP01733,Hassan Kumar,23,Checker,1,A,Agency,2020-05-05,5y+,0,1,1733
+EMP01734,Sofia Novak,24,Receiver,1,A,Permanent,2023-03-17,2-5y,0,1,1734
+EMP01735,Sofia Kumar,5,Picker,2,B,Permanent,2021-12-03,2-5y,1,1,1735
+EMP01736,Ahmed Silva,21,Picker,3,C,Permanent,2022-04-30,2-5y,0,1,1736
+EMP01737,Ravi Wang,24,Checker,1,A,Agency,2022-05-30,2-5y,0,1,1737
+EMP01738,Elena Kumar,3,Forklift Operator,3,C,Permanent,2020-08-07,5y+,1,1,1738
+EMP01739,Li Rahman,18,Receiver,3,C,Permanent,2017-10-23,5y+,0,1,1739
+EMP01740,Grace Berg,19,Receiver,2,B,Seasonal,2017-03-13,5y+,0,1,1740
+EMP01741,Ravi Gomez,16,Checker,2,B,Permanent,2020-06-03,5y+,0,1,1741
+EMP01742,Marco Khalid,1,Receiver,3,C,Agency,2021-01-01,5y+,0,1,1742
+EMP01743,Grace Haddad,5,Packer,2,B,Agency,2017-10-09,5y+,0,1,1743
+EMP01744,Hassan Silva,5,Picker,1,A,Permanent,2022-07-16,2-5y,0,1,1744
+EMP01745,Diego Al-Amin,23,Supervisor,1,A,Seasonal,2025-12-01,6-12m,0,1,1745
+EMP01746,Siti Sato,16,Checker,1,A,Permanent,2021-04-28,5y+,0,1,1746
+EMP01747,John Mensah,24,Picker,1,A,Agency,2017-05-06,5y+,0,1,1747
+EMP01748,Anita Rossi,24,Picker,2,B,Permanent,2020-08-27,5y+,0,0,1748
+EMP01749,Priya Torres,23,Picker,3,C,Permanent,2017-07-25,5y+,0,1,1749
+EMP01750,Siti Zhang,3,Packer,2,B,Permanent,2026-01-18,6-12m,0,1,1750
+EMP01751,John Sato,15,Packer,2,B,Agency,2022-06-02,2-5y,0,1,1751
+EMP01752,Wei Rahman,11,Picker,3,C,Permanent,2024-12-27,1-2y,0,1,1752
+EMP01753,Wei Khalid,13,Receiver,2,B,Seasonal,2025-09-12,6-12m,0,1,1753
+EMP01754,Grace Rahman,9,Checker,3,C,Permanent,2020-07-25,5y+,0,1,1754
+EMP01755,Liam Novak,18,Picker,1,A,Permanent,2025-06-18,1-2y,0,1,1755
+EMP01756,Maria Gomez,14,Forklift Operator,2,B,Agency,2019-08-21,5y+,1,1,1756
+EMP01757,Fatima Berg,10,Receiver,3,C,Agency,2023-04-11,2-5y,1,1,1757
+EMP01758,Ahmed Wang,13,Receiver,2,B,Permanent,2016-05-17,5y+,0,1,1758
+EMP01759,Hassan Novak,11,Forklift Operator,1,A,Permanent,2016-04-30,5y+,1,0,1759
+EMP01760,Sofia Nguyen,10,Picker,2,B,Permanent,2026-01-28,6-12m,0,1,1760
+EMP01761,Marco Haddad,19,Forklift Operator,1,A,Permanent,2025-08-15,1-2y,1,1,1761
+EMP01762,Priya Rossi,7,Packer,2,B,Permanent,2021-11-29,2-5y,0,1,1762
+EMP01763,Kenji Kumar,7,Packer,2,B,Agency,2017-04-27,5y+,0,1,1763
+EMP01764,Kenji Rahman,18,Supervisor,1,A,Agency,2026-08-14,<6m,0,1,1764
+EMP01765,Maria Zhang,24,Checker,2,B,Permanent,2018-07-05,5y+,1,1,1765
+EMP01766,Wei Berg,9,Forklift Operator,2,B,Permanent,2021-05-18,5y+,1,1,1766
+EMP01767,Marco Silva,16,Checker,3,C,Agency,2019-07-05,5y+,0,1,1767
+EMP01768,Elena Rahman,25,Picker,3,C,Permanent,2019-01-03,5y+,0,1,1768
+EMP01769,Anita Fernandes,8,Picker,2,B,Seasonal,2024-05-07,2-5y,0,1,1769
+EMP01770,Anita Haddad,22,Picker,2,B,Permanent,2019-03-25,5y+,0,1,1770
+EMP01771,Carlos Khalid,22,Checker,1,A,Agency,2020-07-25,5y+,0,1,1771
+EMP01772,Siti Rossi,8,Checker,2,B,Permanent,2020-04-27,5y+,0,1,1772
+EMP01773,Wei Costa,9,Picker,2,B,Permanent,2021-08-29,2-5y,1,1,1773
+EMP01774,Elena Gomez,16,Picker,2,B,Permanent,2017-07-02,5y+,0,1,1774
+EMP01775,Siti Gomez,23,Picker,1,A,Agency,2020-07-04,5y+,0,1,1775
+EMP01776,Diego Rahman,18,Receiver,2,B,Permanent,2025-10-22,6-12m,0,1,1776
+EMP01777,Wei Kumar,2,Forklift Operator,2,B,Permanent,2017-12-22,5y+,1,1,1777
+EMP01778,Kenji Sharma,15,Team Lead,3,C,Permanent,2025-05-11,1-2y,0,1,1778
+EMP01779,Li Kumar,25,Packer,2,B,Agency,2024-03-26,2-5y,0,1,1779
+EMP01780,Wei Mensah,19,Receiver,2,B,Permanent,2020-01-07,5y+,0,1,1780
+EMP01781,Ingrid Nguyen,18,Forklift Operator,3,C,Permanent,2019-03-08,5y+,1,1,1781
+EMP01782,Priya Khalid,12,Receiver,3,C,Permanent,2020-12-29,5y+,0,1,1782
+EMP01783,Kenji Sato,7,Forklift Operator,2,B,Permanent,2016-05-22,5y+,1,1,1783
+EMP01784,Li Fernandes,21,Supervisor,1,A,Permanent,2018-09-06,5y+,0,1,1784
+EMP01785,Priya Berg,22,Picker,1,A,Permanent,2017-10-07,5y+,0,0,1785
+EMP01786,Siti Rahman,4,Receiver,2,B,Permanent,2018-12-22,5y+,0,1,1786
+EMP01787,Liam Wang,17,Packer,1,A,Permanent,2016-05-25,5y+,0,1,1787
+EMP01788,John Novak,4,Receiver,1,A,Permanent,2022-01-21,2-5y,0,1,1788
+EMP01789,Carlos Khalid,16,Packer,1,A,Permanent,2024-06-21,2-5y,0,1,1789
+EMP01790,Carlos Al-Amin,6,Checker,3,C,Agency,2025-03-26,1-2y,0,1,1790
+EMP01791,Elena Wang,5,Packer,3,C,Permanent,2025-03-26,1-2y,1,1,1791
+EMP01792,Marco Rossi,14,Team Lead,2,B,Agency,2021-09-17,2-5y,0,1,1792
+EMP01793,Sofia Al-Amin,23,Picker,3,C,Permanent,2017-01-10,5y+,0,1,1793
+EMP01794,Ingrid Sharma,8,Packer,2,B,Permanent,2025-08-23,6-12m,0,1,1794
+EMP01795,Hassan Nguyen,23,Forklift Operator,1,A,Permanent,2018-08-09,5y+,1,1,1795
+EMP01796,Diego Fernandes,2,Picker,2,B,Permanent,2023-02-26,2-5y,0,1,1796
+EMP01797,Ahmed Sato,11,Picker,1,A,Permanent,2016-10-31,5y+,0,1,1797
+EMP01798,Liam Fernandes,21,Forklift Operator,2,B,Seasonal,2026-04-27,<6m,1,1,1798
+EMP01799,Wei Haddad,1,Picker,2,B,Permanent,2016-05-10,5y+,1,0,1799
