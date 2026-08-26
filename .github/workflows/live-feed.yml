@@ -1,4 +1,4 @@
-name: Live Feed
+﻿name: Live Feed
 
 on:
   schedule:
@@ -27,17 +27,23 @@ jobs:
         id: history-cache
         uses: actions/cache@v4
         with:
-          path: 02_data/raw
-          key: history-v2
+          path: 02_data/_frozen_cache
+          key: frozen-history-v1
 
       - name: Download frozen history (cache miss only)
         if: steps.history-cache.outputs.cache-hit != 'true'
         run: |
+          mkdir -p 02_data/_frozen_cache
           gh release download history-v1 --pattern "meridian-history.zip" --dir .
-          unzip -q -o meridian-history.zip -d 02_data/raw
+          unzip -q meridian-history.zip -d 02_data/_frozen_cache
           rm meridian-history.zip
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Merge frozen history into raw (never touches live files)
+        run: |
+          mkdir -p 02_data/raw
+          cp -rn 02_data/_frozen_cache/. 02_data/raw/
 
       - name: Run Live Feed
         run: |
