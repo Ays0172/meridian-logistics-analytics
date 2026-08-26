@@ -1,42 +1,55 @@
-name: Live Feed
+﻿name: Live Feed
 
 on:
-  workflow_dispatch:
   schedule:
-    - cron: "0 2 * * *"
+    - cron: '0 1 * * *'
+  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  live-feed:
+  generate:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
+      - name: Checkout Repo
         uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: '3.12'
 
-      - name: Install dependencies
-        run: |
-          pip install -r Meridian-Logistics-Analytics/01_generator/requirements.txt
+      - name: Install Dependencies
+        run: pip install -r 01_generator/requirements.txt
 
-      - name: Run live feed
-        working-directory: Meridian-Logistics-Analytics/01_generator
+      - name: Cache frozen history
+        id: history-cache
+        uses: actions/cache@v4
+        with:
+          path: 02_data/raw
+          key: history-v1
+
+      - name: Download frozen history (cache miss only)
+        if: steps.history-cache.outputs.cache-hit != 'true'
         run: |
+          gh release download history-v1 --pattern "meridian-history.zip" --dir .
+          unzip -q meridian-history.zip -d 02_data/raw
+          rm meridian-history.zip
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Run Live Feed
+        run: |
+          cd 01_generator
           python live_feed.py
 
-      - name: Commit changes
+      - name: Commit New Data
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git add Meridian-Logistics-Analytics/02_data/raw/
-          git add Meridian-Logistics-Analytics/02_data/_state/watermark.json
-
-          git diff --cached --quiet || git commit -m "Daily live feed update"
-          git push
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add 02_data/
+          git diff --cached --quiet || (
+            git commit -m "Daily live feed update"
+            git push
+          )
