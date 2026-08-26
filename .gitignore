@@ -21,3 +21,5 @@ Thumbs.db
 02_data/raw/**/part-000.parquet
 
 # Keep live feed + watermark tracked
+
+02_data/_frozen_cache/
