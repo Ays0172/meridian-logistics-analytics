@@ -1,7 +1,7 @@
 {
   "history_start": "2021-08-21",
   "history_end": "2026-08-20",
-  "last_appended_date": "2026-08-24",
+  "last_appended_date": "2026-08-26",
   "daily_rows": {
     "FactBooking": 313.96,
     "FactShipment": 269.11,
@@ -76,32 +76,32 @@
       "date": "2026-08-21",
       "files": {
         "FactBooking": [
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactBooking/year=2026/month=08/part-20260821-00.parquet"
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactBooking/year=2026/month=08/part-20260821-00.parquet"
         ],
         "FactShipment": [
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactShipment/year=2026/month=08/part-20260821-00.parquet"
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactShipment/year=2026/month=08/part-20260821-00.parquet"
         ],
         "FactShipmentMilestone": [
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactShipmentMilestone/year=1900/month=01/part-20260821-00.parquet",
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactShipmentMilestone/year=2026/month=08/part-20260821-00.parquet"
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactShipmentMilestone/year=1900/month=01/part-20260821-00.parquet",
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactShipmentMilestone/year=2026/month=08/part-20260821-00.parquet"
         ],
         "FactContainerMove": [
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactContainerMove/year=2026/month=08/part-20260821-00.parquet"
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactContainerMove/year=2026/month=08/part-20260821-00.parquet"
         ],
         "FactFreightCharge": [
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactFreightCharge/year=2026/month=08/part-20260821-00.parquet"
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactFreightCharge/year=2026/month=08/part-20260821-00.parquet"
         ],
         "FactTransportLeg": [
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactTransportLeg/year=2026/month=08/part-20260821-00.parquet"
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactTransportLeg/year=2026/month=08/part-20260821-00.parquet"
         ],
         "FactWarehouseTask": [
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactWarehouseTask/year=2026/month=08/part-20260821-00.parquet"
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactWarehouseTask/year=2026/month=08/part-20260821-00.parquet"
         ],
         "FactPortCall": [
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactPortCall/year=2026/month=08/part-20260821-00.parquet"
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactPortCall/year=2026/month=08/part-20260821-00.parquet"
         ],
         "FactInventorySnapshot": [
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactInventorySnapshot/year=2026/month=08/part-20260821-00.parquet"
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactInventorySnapshot/year=2026/month=08/part-20260821-00.parquet"
         ]
       },
       "rows": {
@@ -120,32 +120,32 @@
       "date": "2026-08-22",
       "files": {
         "FactBooking": [
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactBooking/year=2026/month=08/part-20260822-00.parquet"
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactBooking/year=2026/month=08/part-20260822-00.parquet"
         ],
         "FactShipment": [
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactShipment/year=2026/month=08/part-20260822-00.parquet"
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactShipment/year=2026/month=08/part-20260822-00.parquet"
         ],
         "FactShipmentMilestone": [
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactShipmentMilestone/year=1900/month=01/part-20260822-00.parquet",
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactShipmentMilestone/year=2026/month=08/part-20260822-00.parquet"
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactShipmentMilestone/year=1900/month=01/part-20260822-00.parquet",
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactShipmentMilestone/year=2026/month=08/part-20260822-00.parquet"
         ],
         "FactContainerMove": [
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactContainerMove/year=2026/month=08/part-20260822-00.parquet"
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactContainerMove/year=2026/month=08/part-20260822-00.parquet"
         ],
         "FactFreightCharge": [
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactFreightCharge/year=2026/month=08/part-20260822-00.parquet"
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactFreightCharge/year=2026/month=08/part-20260822-00.parquet"
         ],
         "FactTransportLeg": [
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactTransportLeg/year=2026/month=08/part-20260822-00.parquet"
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactTransportLeg/year=2026/month=08/part-20260822-00.parquet"
         ],
         "FactWarehouseTask": [
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactWarehouseTask/year=2026/month=08/part-20260822-00.parquet"
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactWarehouseTask/year=2026/month=08/part-20260822-00.parquet"
         ],
         "FactPortCall": [
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactPortCall/year=2026/month=08/part-20260822-00.parquet"
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactPortCall/year=2026/month=08/part-20260822-00.parquet"
         ],
         "FactInventorySnapshot": [
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactInventorySnapshot/year=2026/month=08/part-20260822-00.parquet"
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactInventorySnapshot/year=2026/month=08/part-20260822-00.parquet"
         ]
       },
       "rows": {
@@ -164,32 +164,32 @@
       "date": "2026-08-23",
       "files": {
         "FactBooking": [
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactBooking/year=2026/month=08/part-20260823-00.parquet"
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactBooking/year=2026/month=08/part-20260823-00.parquet"
         ],
         "FactShipment": [
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactShipment/year=2026/month=08/part-20260823-00.parquet"
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactShipment/year=2026/month=08/part-20260823-00.parquet"
         ],
         "FactShipmentMilestone": [
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactShipmentMilestone/year=1900/month=01/part-20260823-00.parquet",
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactShipmentMilestone/year=2026/month=08/part-20260823-00.parquet"
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactShipmentMilestone/year=1900/month=01/part-20260823-00.parquet",
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactShipmentMilestone/year=2026/month=08/part-20260823-00.parquet"
         ],
         "FactContainerMove": [
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactContainerMove/year=2026/month=08/part-20260823-00.parquet"
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactContainerMove/year=2026/month=08/part-20260823-00.parquet"
         ],
         "FactFreightCharge": [
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactFreightCharge/year=2026/month=08/part-20260823-00.parquet"
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactFreightCharge/year=2026/month=08/part-20260823-00.parquet"
         ],
         "FactTransportLeg": [
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactTransportLeg/year=2026/month=08/part-20260823-00.parquet"
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactTransportLeg/year=2026/month=08/part-20260823-00.parquet"
         ],
         "FactWarehouseTask": [
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactWarehouseTask/year=2026/month=08/part-20260823-00.parquet"
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactWarehouseTask/year=2026/month=08/part-20260823-00.parquet"
         ],
         "FactPortCall": [
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactPortCall/year=2026/month=08/part-20260823-00.parquet"
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactPortCall/year=2026/month=08/part-20260823-00.parquet"
         ],
         "FactInventorySnapshot": [
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactInventorySnapshot/year=2026/month=08/part-20260823-00.parquet"
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactInventorySnapshot/year=2026/month=08/part-20260823-00.parquet"
         ]
       },
       "rows": {
@@ -208,32 +208,32 @@
       "date": "2026-08-24",
       "files": {
         "FactBooking": [
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactBooking/year=2026/month=08/part-20260824-00.parquet"
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactBooking/year=2026/month=08/part-20260824-00.parquet"
         ],
         "FactShipment": [
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactShipment/year=2026/month=08/part-20260824-00.parquet"
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactShipment/year=2026/month=08/part-20260824-00.parquet"
         ],
         "FactShipmentMilestone": [
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactShipmentMilestone/year=1900/month=01/part-20260824-00.parquet",
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactShipmentMilestone/year=2026/month=08/part-20260824-00.parquet"
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactShipmentMilestone/year=1900/month=01/part-20260824-00.parquet",
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactShipmentMilestone/year=2026/month=08/part-20260824-00.parquet"
         ],
         "FactContainerMove": [
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactContainerMove/year=2026/month=08/part-20260824-00.parquet"
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactContainerMove/year=2026/month=08/part-20260824-00.parquet"
         ],
         "FactFreightCharge": [
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactFreightCharge/year=2026/month=08/part-20260824-00.parquet"
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactFreightCharge/year=2026/month=08/part-20260824-00.parquet"
         ],
         "FactTransportLeg": [
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactTransportLeg/year=2026/month=08/part-20260824-00.parquet"
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactTransportLeg/year=2026/month=08/part-20260824-00.parquet"
         ],
         "FactWarehouseTask": [
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactWarehouseTask/year=2026/month=08/part-20260824-00.parquet"
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactWarehouseTask/year=2026/month=08/part-20260824-00.parquet"
         ],
         "FactPortCall": [
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactPortCall/year=2026/month=08/part-20260824-00.parquet"
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactPortCall/year=2026/month=08/part-20260824-00.parquet"
         ],
         "FactInventorySnapshot": [
-          "C:/Users/AyushSood/Desktop/Data/Meridian-Logistics-Analytics/02_data/raw/FactInventorySnapshot/year=2026/month=08/part-20260824-00.parquet"
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactInventorySnapshot/year=2026/month=08/part-20260824-00.parquet"
         ]
       },
       "rows": {
@@ -242,6 +242,94 @@
         "FactShipmentMilestone": 363,
         "FactContainerMove": 1442,
         "FactFreightCharge": 1202,
+        "FactTransportLeg": 325,
+        "FactWarehouseTask": 548,
+        "FactPortCall": 97,
+        "FactInventorySnapshot": 574
+      }
+    },
+    {
+      "date": "2026-08-25",
+      "files": {
+        "FactBooking": [
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactBooking/year=2026/month=08/part-20260825-00.parquet"
+        ],
+        "FactShipment": [
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactShipment/year=2026/month=08/part-20260825-00.parquet"
+        ],
+        "FactShipmentMilestone": [
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactShipmentMilestone/year=1900/month=01/part-20260825-00.parquet",
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactShipmentMilestone/year=2026/month=08/part-20260825-00.parquet"
+        ],
+        "FactContainerMove": [
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactContainerMove/year=2026/month=08/part-20260825-00.parquet"
+        ],
+        "FactFreightCharge": [
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactFreightCharge/year=2026/month=08/part-20260825-00.parquet"
+        ],
+        "FactTransportLeg": [
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactTransportLeg/year=2026/month=08/part-20260825-00.parquet"
+        ],
+        "FactWarehouseTask": [
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactWarehouseTask/year=2026/month=08/part-20260825-00.parquet"
+        ],
+        "FactPortCall": [
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactPortCall/year=2026/month=08/part-20260825-00.parquet"
+        ],
+        "FactInventorySnapshot": [
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactInventorySnapshot/year=2026/month=08/part-20260825-00.parquet"
+        ]
+      },
+      "rows": {
+        "FactBooking": 427,
+        "FactShipment": 366,
+        "FactShipmentMilestone": 366,
+        "FactContainerMove": 1442,
+        "FactFreightCharge": 1215,
+        "FactTransportLeg": 325,
+        "FactWarehouseTask": 548,
+        "FactPortCall": 97,
+        "FactInventorySnapshot": 574
+      }
+    },
+    {
+      "date": "2026-08-26",
+      "files": {
+        "FactBooking": [
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactBooking/year=2026/month=08/part-20260826-00.parquet"
+        ],
+        "FactShipment": [
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactShipment/year=2026/month=08/part-20260826-00.parquet"
+        ],
+        "FactShipmentMilestone": [
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactShipmentMilestone/year=1900/month=01/part-20260826-00.parquet",
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactShipmentMilestone/year=2026/month=08/part-20260826-00.parquet"
+        ],
+        "FactContainerMove": [
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactContainerMove/year=2026/month=08/part-20260826-00.parquet"
+        ],
+        "FactFreightCharge": [
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactFreightCharge/year=2026/month=08/part-20260826-00.parquet"
+        ],
+        "FactTransportLeg": [
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactTransportLeg/year=2026/month=08/part-20260826-00.parquet"
+        ],
+        "FactWarehouseTask": [
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactWarehouseTask/year=2026/month=08/part-20260826-00.parquet"
+        ],
+        "FactPortCall": [
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactPortCall/year=2026/month=08/part-20260826-00.parquet"
+        ],
+        "FactInventorySnapshot": [
+          "C:/Users/AyushSood/Data/Meridian-Logistics-Analytics/02_data/raw/FactInventorySnapshot/year=2026/month=08/part-20260826-00.parquet"
+        ]
+      },
+      "rows": {
+        "FactBooking": 427,
+        "FactShipment": 366,
+        "FactShipmentMilestone": 366,
+        "FactContainerMove": 1443,
+        "FactFreightCharge": 1210,
         "FactTransportLeg": 325,
         "FactWarehouseTask": 548,
         "FactPortCall": 97,

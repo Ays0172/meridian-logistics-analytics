@@ -12,25 +12,25 @@
     {
       "check": "container move TEU matches the shipment's per-box TEU",
       "pass": true,
-      "detail": "0 of 213,823 shipments disagree",
+      "detail": "0 of 214,131 shipments disagree",
       "severity": "error"
     },
     {
       "check": "every demurrage line ties to a container past free time",
       "pass": true,
-      "detail": "0 of 22,709 demurrage lines unsupported",
+      "detail": "0 of 22,733 demurrage lines unsupported",
       "severity": "error"
     },
     {
       "check": "every detention line ties to a container past free time",
       "pass": true,
-      "detail": "0 of 39,480 unsupported",
+      "detail": "0 of 39,555 unsupported",
       "severity": "error"
     },
     {
       "check": "slots used never exceed the vessel's nominal capacity",
       "pass": true,
-      "detail": "0 of 131,296 calls over capacity",
+      "detail": "0 of 131,490 calls over capacity",
       "severity": "error"
     },
     {
@@ -42,7 +42,7 @@
     {
       "check": "turnaround >= berth occupancy",
       "pass": true,
-      "detail": "0 of 131,296 calls violate",
+      "detail": "0 of 131,490 calls violate",
       "severity": "error"
     },
     {
@@ -174,7 +174,7 @@
     {
       "check": "cost per km has no single piled-up ceiling value",
       "pass": true,
-      "detail": "max 3.451, 1 rows exactly at max, p99.9 3.290",
+      "detail": "max 3.451, 1 rows exactly at max, p99.9 3.291",
       "severity": "warn"
     },
     {
@@ -204,19 +204,19 @@
     {
       "check": "live rows exist",
       "pass": true,
-      "detail": "1,112 live shipment rows",
+      "detail": "1,844 live shipment rows",
       "severity": "error"
     },
     {
       "check": "live vs history mean of Revenue_usd within 30%",
       "pass": true,
-      "detail": "history 3938.741 vs live 4600.093 (+16.8%)",
+      "detail": "history 3938.741 vs live 4613.633 (+17.1%)",
       "severity": "warn"
     },
     {
       "check": "live vs history mean of Teu within 25%",
       "pass": true,
-      "detail": "history 4.051 vs live 3.997 (+1.3%)",
+      "detail": "history 4.051 vs live 3.957 (+2.3%)",
       "severity": "warn"
     },
     {
@@ -228,31 +228,31 @@
     {
       "check": "live vs history mean of ActualTransitDays within 25%",
       "pass": true,
-      "detail": "history 19.747 vs live 19.719 (+0.1%)",
+      "detail": "history 19.747 vs live 19.792 (+0.2%)",
       "severity": "warn"
     },
     {
       "check": "live vs history mean of ContainerCount within 25%",
       "pass": true,
-      "detail": "history 2.398 vs live 2.346 (+2.1%)",
+      "detail": "history 2.398 vs live 2.339 (+2.4%)",
       "severity": "warn"
     },
     {
       "check": "live vs history rate of IsOnTime within 8pp",
       "pass": true,
-      "detail": "history 0.918 vs live 0.914",
+      "detail": "history 0.918 vs live 0.918",
       "severity": "warn"
     },
     {
       "check": "live vs history rate of IsPerfectOrder within 8pp",
       "pass": true,
-      "detail": "history 0.861 vs live 0.858",
+      "detail": "history 0.861 vs live 0.864",
       "severity": "warn"
     },
     {
       "check": "mode mix drift between history and live under 10%",
       "pass": true,
-      "detail": "total variation distance 0.019",
+      "detail": "total variation distance 0.012",
       "severity": "warn"
     },
     {
