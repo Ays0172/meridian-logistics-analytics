@@ -28,13 +28,13 @@ jobs:
         uses: actions/cache@v4
         with:
           path: 02_data/raw
-          key: history-v1
+          key: history-v2
 
       - name: Download frozen history (cache miss only)
         if: steps.history-cache.outputs.cache-hit != 'true'
         run: |
           gh release download history-v1 --pattern "meridian-history.zip" --dir .
-          unzip -q -o meridian-history.zip -d 02_data/raw || true
+          unzip -q -o meridian-history.zip -d 02_data/raw
           rm meridian-history.zip
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
