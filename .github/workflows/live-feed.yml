@@ -1,4 +1,4 @@
-﻿name: Live Feed
+name: Live Feed
 
 on:
   schedule:
@@ -54,7 +54,7 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add 02_data/
+          git add 02_data/raw/ 02_data/_state/ 02_data/_validation/
           git diff --cached --quiet || (
             git commit -m "Daily live feed update"
             git push
