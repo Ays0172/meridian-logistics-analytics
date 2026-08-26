@@ -34,7 +34,7 @@ jobs:
         if: steps.history-cache.outputs.cache-hit != 'true'
         run: |
           gh release download history-v1 --pattern "meridian-history.zip" --dir .
-          unzip -q -o meridian-history.zip -d 02_data/raw
+          unzip -q -o meridian-history.zip -d 02_data/raw || true
           rm meridian-history.zip
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
