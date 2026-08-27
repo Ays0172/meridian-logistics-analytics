@@ -14,7 +14,6 @@ import json
 import re
 import os
 from pathlib import Path
-from datetime import datetime, timezone
 
 REPO = "Ays0172/meridian-logistics-analytics"
 BRANCH = "main"
@@ -40,7 +39,6 @@ def main():
             tables[table] = urls
 
     manifest = {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
         "repo": REPO,
         "branch": BRANCH,
         "note": "Live-feed files only. Frozen history ships separately as a GitHub Release asset (history-v1) and should be loaded once, locally.",
