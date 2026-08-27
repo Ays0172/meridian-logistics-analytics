@@ -49,6 +49,7 @@ jobs:
         run: |
           cd 01_generator
           python live_feed.py
+          python build_manifest.py
 
       - name: Commit New Data
         run: |
