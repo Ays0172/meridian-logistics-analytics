@@ -106,10 +106,11 @@ columns between consecutive milestones, plus `MilestonesCompleted`,
 
 Two things to hold at once:
 
-**The `Lag*` columns are ordinary additive/averageable numbers** — `AVERAGE` or
-`SUM` on `LagTotalDoorToDoor` behaves exactly like any transaction-fact measure,
-because a lag is a duration computed once per shipment, not a balance sampled
-repeatedly.
+**The `Lag*` columns are non-additive but safely averageable** — like Day 3's
+`FactContainerMove[DwellHours]`, summing `LagTotalDoorToDoor` across unrelated
+shipments produces a number with no business meaning, but `AVERAGE` behaves
+exactly like any transaction-fact measure, because a lag is a duration computed
+once per shipment, not a balance sampled repeatedly.
 
 **The milestone date-key columns are not that.** A milestone not yet reached holds
 `-1`, per this project's fixed convention (never `BLANK()` for a not-yet-happened

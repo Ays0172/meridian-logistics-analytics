@@ -86,8 +86,11 @@ and it will not throw a warning; the number will simply look plausible.
 3. A column is semi-additive when it is meaningful to sum across some dimensions
    (SKU, warehouse, customer) but not across time, because it represents a balance
    sampled repeatedly rather than an event. `FactInventorySnapshot[OnHandValueUsd]`
-   is semi-additive; `FactShipmentMilestone[LagTotalDoorToDoor]` is fully additive
-   (well, averageable) because it is computed once per shipment, not resampled.
+   is semi-additive; `FactShipmentMilestone[LagTotalDoorToDoor]` is non-additive —
+   summing a duration across unrelated shipments has no business meaning, the same
+   classification Day 3 gave `FactContainerMove[DwellHours]` — but it is safe to
+   *average*, unlike a semi-additive balance column, because it is computed once
+   per shipment rather than resampled at every snapshot date.
 4. Reach for `TREATAS` when two tables that need to filter each other share a
    real-world concept but no physical relationship can connect them — different
    grain, or a text column instead of a key. Always verify, with `DISTINCT` on

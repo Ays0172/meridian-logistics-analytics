@@ -204,13 +204,14 @@ for that same service — always false — so `COUNTROWS` returns blank, and `+ 
 makes every row 1.
 
 **Everything shows 1** is the signature of a comparison measure whose captured
-value was not captured. It sits alongDay 8's two other diagnostics:
+value was not captured. It sits alongside two other diagnostics from earlier this
+week — one from Day 8, one from Day 9:
 
 | Symptom | Cause |
 |---|---|
-| Every row shows the same large total | Missing context transition |
-| Every row shows the same non-total number | Filter replaced instead of intersected (missing `KEEPFILTERS`) |
-| Every row shows 1, or 0, or blank | Variable evaluated in the wrong context |
+| Every row shows the same large total | Missing context transition (Day 8) |
+| Every row shows the same non-total number | Filter replaced instead of intersected, missing `KEEPFILTERS` (Day 9) |
+| Every row shows 1, or 0, or blank | Variable evaluated in the wrong context (today) |
 
 Those three cover most of what goes wrong in practice. Learn to read the symptom
 and you can skip most of the debugging.

@@ -12,7 +12,7 @@ Read this only after attempting the exercises.
 ## Spaced recall answers
 
 1. **`FactContainerMove` grain:** one row is one equipment event on one leg of one
-   container's journey. 1,938,200 rows.
+   container's journey. 1,939,641 rows (README §1).
 2. **`FactInventorySnapshot` is a periodic snapshot.** Summing `OnHandUnits` across
    a date range double-counts: the same physical box appears on every day's
    snapshot. It is semi-additive — additive across SKU and site, non-additive
@@ -43,8 +43,8 @@ Read this only after attempting the exercises.
 a single value for the column cannot be determined.
 
 **Why:** a measure is evaluated in filter context only. There is no row context, so
-"the value of `Revenue_usd`" is not a well-defined question — there are 491,400
-candidate values. The error is DAX telling you it has no row to read.
+"the value of `Revenue_usd`" is not a well-defined question — there are 491,765
+candidate values (README §1's `FactShipment` row count). The error is DAX telling you it has no row to read.
 
 The same expression as a **calculated column** works, because a calculated column
 is evaluated once per row and therefore always has a row context.

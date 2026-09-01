@@ -92,8 +92,8 @@ between the rate and the weight.
 **What would make it far off:** any week with unusually low volume and an unusual
 rate. A blank-sailing week during Lunar New Year has few calls; if those few
 happened to be badly delayed, the naive average would give that sparse week the same
-weight as a full one. Meridian has ~1.5% blank sailings concentrated in the LNY
-windows, which is not enough to bite — but a carrier with heavy seasonal
+weight as a full one. Meridian has ~1.1% blank sailings (102 of 9,270 voyages, `DimVoyage.csv`)
+concentrated in the LNY windows, which is not enough to bite — but a carrier with heavy seasonal
 service suspensions would see a real gap.
 
 **Ship the pooled version anyway.** The gap being small in this data is a fact about
