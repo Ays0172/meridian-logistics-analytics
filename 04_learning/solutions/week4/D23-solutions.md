@@ -86,7 +86,7 @@ belongs on an operational early-warning dashboard rather than only a financial o
    whether today's overall answer is "fine" or "not fine."
 2. Reliability trend: without it, a reader sees the current dip with no way to
    judge whether it is new or a known recurring pattern.
-3. Reliability-vs-volume scatter: without it, exactly the Day 1 sorting trap
+3. Reliability-vs-volume scatter: without it, exactly the Day 11 sorting trap
    recurs - a reader reaches for a sorted list and misses the real crisis ports.
 4. Headhaul/backhaul revenue per FFE: without it, a reader might flag backhaul
    yield as a problem to "fix," when it is structural and the real question is

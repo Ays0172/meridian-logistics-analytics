@@ -21,8 +21,9 @@
    top-of-funnel win rate, because a quote that was requested and never came back
    as any booking row at all is invisible to the measure - `FactBooking` is the
    only table carrying `QuoteKey`, and it only contains quotes that got that far.
-4. Landside used a 100%-stacked reconciliation bar (Deadhead % / Truck Utilisation
-   %) so a data-quality gap shows up visually rather than requiring trust in an
+4. Landside used a stacked (not 100%-stacked, which would renormalise and hide the
+   gap) reconciliation bar (Deadhead % / Truck Utilisation %) so a data-quality gap
+   shows up visually rather than requiring trust in an
    isolated number. The analogous opportunity here is the chargeable-weight donut:
    segmenting by rule (rather than blending into one total) makes the "these three
    conventions are not interchangeable" fact visible in the chart itself.

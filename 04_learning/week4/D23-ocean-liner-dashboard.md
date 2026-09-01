@@ -45,7 +45,7 @@ tooltip, for the reader who wants depth.
 |---|---|---|---|---|
 | 1 | Header KPI cards | `Schedule Reliability Rolling 8wk`, `Headhaul Load Factor`, `Backhaul Load Factor`, `Revenue per FFE` | Cards, conditional icon | The five-second read: is the network healthy right now, at a glance, before anyone reads a chart. |
 | 2 | Reliability trend | `Schedule Reliability Rolling 8wk` by week | Line, with a shaded region for 14 Jul-14 Sep 2025 | Is the current dip a blip or a trend, and does it line up with a known event. |
-| 3 | Reliability vs. call volume | `Schedule Reliability Rolling 8wk` (y), port call count (x), TEU (size), by port | Scatter | Surfaces which ports are actually dragging the network, without the Day 1 sorting trap (see below). |
+| 3 | Reliability vs. call volume | `Schedule Reliability Rolling 8wk` (y), port call count (x), TEU (size), by port | Scatter | Surfaces which ports are actually dragging the network, without the Day 11 sorting trap (see below). |
 | 4 | Revenue per FFE, headhaul vs. backhaul | `Revenue per FFE` by `DimVoyage[Direction]` and `TradeLane` | Clustered bar | Is the structural imbalance from Day 1 §5 showing up as expected, or has a lane moved out of its normal band. |
 | 5 | The congestion callout | `Demurrage Revenue`, `Detention Revenue`, `Avg Waiting for Berth Hours`, `Avg Container Dwell Hours` | Combo chart + annotation card | The page's single most important message: rising D&D revenue during the window is a symptom, not a win. |
 | 6 | Terminal crane productivity | `Moves per Crane-Hour Net`, `Moves per Crane-Hour Gross` | Table, by terminal | Which terminals are the operational bottleneck, net vs. gross split so a "productive-looking" terminal with a bad gross number doesn't hide. |
@@ -60,7 +60,7 @@ resisting the urge to add them is itself the design decision worth remembering.
 
 ### Why the scatter, not a sorted bar, for visual #3
 
-Day 1 named the trap directly: sorting ports ascending by reliability does **not**
+Day 11 named the trap directly: sorting ports ascending by reliability does **not**
 surface the congestion crisis, because sparse ports with a handful of calls rank
 below Rotterdam and Los Angeles on a pure reliability sort, and a reader's eye goes
 to the top of the list. A scatter with call volume on the x-axis forces the
@@ -121,10 +121,10 @@ congestion window). Predict which of the two bands you'll actually use for the
 conditional-formatting thresholds, and why one is more defensible for *this*
 dataset than the industry-wide one, before writing the `SWITCH`.
 
-### Exercise 23.2: the scatter, verified against the Day 1 sorting trap (30 min)
+### Exercise 23.2: the scatter, verified against the Day 11 sorting trap (30 min)
 Build visual #3. Before adding any interactivity, sort the underlying table by
 reliability ascending and confirm for yourself that Rotterdam and Los Angeles do
-**not** appear at the top - this is the exact failure Day 1 described, reproduced
+**not** appear at the top - this is the exact failure Day 11 described, reproduced
 on purpose. Then build the scatter and confirm the two ports separate visually as
 predicted. Write one sentence on what a reader who only ever sees sorted tables,
 never scatter plots, would miss about this dataset.
@@ -148,8 +148,10 @@ honestly, even if you already built it.
 
 Build page `1 Ocean Liner` in the report, all seven visuals wired, the congestion
 callout styled with the theme's `bad` accent and its tooltip attached. Add the
-status measure from Exercise 23.1 to `_Measures`, display folder `05 Report
-Status`. Update `06_portfolio/notes-report-design.md` with the one sentence per
+status measure from Exercise 23.1 to `_Measures`, display folder `05 Ocean
+Liner\Rate & Utilisation` (alongside `Schedule Reliability Rolling 8wk` itself,
+per Week 3 Day 15's taxonomy). Update `06_portfolio/notes-report-design.md` with
+the one sentence per
 visual from Exercise 23.4 - that file is now becoming the design rationale
 document a portfolio write-up in Week 6 will draw on directly.
 
@@ -171,7 +173,7 @@ What clicked / what did not / what to re-ask.
 - [ ] Page `1 Ocean Liner` exists with all seven visuals, on-theme, nav bar intact
       from Day 22.
 - [ ] You can state, without notes, why the scatter (not a sorted bar) is the
-      right chart for reliability-by-port, referencing the Day 1 sorting trap by
+      right chart for reliability-by-port, referencing the Day 11 sorting trap by
       name.
 - [ ] The congestion callout exists, is visually distinct (theme `bad` accent),
       and its tooltip works when hovered outside the shaded date window.

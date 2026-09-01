@@ -167,5 +167,5 @@ rather than assumed it was fine, turned up the most surprising gap?
 - [ ] You can state, without notes, why the nav bar's "you are here" state uses
       static per-page styling rather than a dynamic bookmark, and can defend or
       revise that choice from your own build experience.
-- [ ] Week 4 committed in full: five domain pages, the Executive Summary, the
+- [ ] Week 4 committed in full: four domain pages, the Executive Summary, the
       nav shell, and this checkpoint's audit notes.
