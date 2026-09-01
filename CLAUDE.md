@@ -181,6 +181,25 @@ needs checking against the actual data it generalizes over (here,
 `KPI_DICTIONARY.md`'s real segment lists), not just internal consistency with the
 surrounding prose. Wrong-but-consistent is still wrong.
 
+### The lesson prose itself needs the same discipline, not just the status docs
+
+A full adversarial pass over Weeks 4–6 (42 day files + solutions, previously
+unaudited beyond Week 3) turned up ~30 more real defects, none of them structural
+— wrong day-citations (a technique attributed to the wrong day, e.g. "Day 1" for
+something that's actually Day 11), KPI/domain counts that don't match
+`KPI_DICTIONARY.md`, arithmetic that doesn't reduce (a stated total that isn't the
+sum of its own line items), DAX that isn't valid syntax or uses the wrong function
+variant, and — the most load-bearing category — the same fact stated two
+different, contradictory ways in two different files (a bug's symptom described
+as "wrong" in one file and "returns nothing" in another; a design decision from
+one day flatly contradicted by a "recap" of it in a later day's solutions). None
+of these announce themselves — they read as fluent, confident prose exactly like
+the correct material around them. Before trusting or extending any specific claim
+in a day/solutions file (a number, a day cross-reference, a DAX snippet, "X is the
+largest/smallest of Y"), check it against the file it actually depends on
+(`KPI_DICTIONARY.md`, `SCHEMA_CONTRACT.md`, README §6, the cited day itself) rather
+than the file that states it.
+
 ## Conventions worth knowing before editing generator or model code
 
 - Surrogate keys: `int32`, named `<Table>Key`. Unknown member is always `-1` /
