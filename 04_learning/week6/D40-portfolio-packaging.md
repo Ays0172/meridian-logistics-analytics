@@ -16,8 +16,9 @@ credible instead of just claimed.
 1. Name the five report pages (Week 4) and which one is built to be "the thing you
    put in front of a CFO."
 2. What are this project's headline numbers, from README §6, schedule
-   reliability, OTIF, perfect order rate, revenue per FFE headhaul/backhaul, total
-   revenue, and revenue CAGR?
+   reliability, delivery on-time rate, perfect order rate, revenue per FFE
+   headhaul/backhaul, total revenue, and revenue CAGR? (Not OTIF — that number,
+   ~0.867, is Week 3's `WHS.QLT.OTIF`, not a README §6 headline.)
 3. What does `.pbip`/TMDL source control let you show in a portfolio that a
    `.pbix`-only project cannot (Day 33)?
 4. Pick one of Day 39's four STAR stories and state its Result in one sentence,

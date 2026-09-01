@@ -37,7 +37,7 @@ SELECT COUNT(*) FROM DimVoyage;      -- 9,270
 SELECT COUNT(*) FROM DimLocation;    -- 420
 ```
 
-Ranking (largest to smallest, of the four facts queried): `FactShipment` >
+Ranking (largest to smallest, of the three fact tables queried): `FactShipment` >
 `FactPortCall` > `FactTarget`. If your prediction ranked `FactPortCall` above
 `FactShipment`, the likely reason is intuitive but wrong: one shipment usually
 touches several port calls indirectly through its voyage, so it *feels* like port
@@ -73,19 +73,23 @@ the wrong key or mixing headhaul and backhaul together before grouping.
 ```sql
 SELECT AVG(IsOnTime) AS on_time_rate,        -- 0.9130
        AVG(IsPerfectOrder) AS perfect_rate,  -- 0.8574
-       AVG(IsInFull) AS in_full_rate         -- ≈0.987
+       AVG(IsInFull) AS in_full_rate         -- ≈0.962
 FROM FactShipment;
 ```
 
-`IsInFull` lands close to the **perfect-order** rate (0.8574), not the on-time
-rate (0.9130), because `IsPerfectOrder` is a conjunction of four conditions
-(`IsOnTime AND IsInFull AND NOT IsDamaged AND IsDocumentationClean`) each of which
-independently knocks a few shipments out. `IsInFull` alone (~98.7%) is the highest
-of the four component rates, so it is the *least* limiting factor: on-time
-(91.3%) is the one doing most of the work dragging the composite down to 85.7%.
-This is the SQL-side confirmation of exactly the OTIF-decomposition idea the KPI
-dictionary uses for warehouse OTIF (DIF × DOQ × DOT): a composite rate is bounded
-above by its weakest component, never its strongest.
+`AVG(IsInFull)` is exactly `WHS.QLT.OTIF`'s `DIF` component
+(`KPI_DICTIONARY.md` §3: `DIF = AVERAGE(IsInFull) ≈ 0.962`) — don't confuse it
+with `DOQ = AVERAGE(1 - IsDamaged) ≈ 0.987`, a different component built from a
+different column. `IsInFull` (0.962) lands **closer to the on-time rate**
+(0.913, a gap of 0.049) **than to the perfect-order rate** (0.857, a gap of
+0.105), and it is *not* the highest of the underlying component rates —
+`1 - IsDamaged` (≈0.987) is. `IsPerfectOrder` is a conjunction of four
+conditions (`IsOnTime AND IsInFull AND NOT IsDamaged AND IsDocumentationClean`)
+each of which independently knocks a few shipments out, so the composite
+(0.857) sits below all four of its own components — this is the SQL-side
+confirmation of exactly the OTIF-decomposition idea the KPI dictionary uses for
+warehouse OTIF (DIF × DOQ × DOT): a composite rate is bounded above by its
+weakest component, never its strongest.
 
 ---
 

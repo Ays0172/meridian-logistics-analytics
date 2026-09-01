@@ -341,8 +341,10 @@ Verified numbers you should be able to quote:
 
 Two facts that trip up almost everyone, both deliberately modelled:
 
-- **Schedule reliability (0.66) and delivery OTIF (0.91) are different metrics on
-  different fact tables.** One measures a vessel against its published schedule, the
+- **Schedule reliability (0.66) and delivery on-time (0.91) are different metrics on
+  different fact tables** — and neither one is OTIF, which is a separate, third
+  figure (~0.867, `WHS.QLT.OTIF`, Week 3). One measures a vessel against its
+  published schedule, the
   other measures cargo against a promise that carries slack. Conflating them is the
   single most common logistics-analytics error, and being able to explain the
   difference cold is worth more in an interview than any DAX trick.

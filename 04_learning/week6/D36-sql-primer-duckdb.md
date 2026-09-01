@@ -107,6 +107,9 @@ CREATE VIEW FactTarget AS
         '02_data/raw/FactTarget/year=*/month=*/part-*.parquet',
         hive_partitioning = true
     );
+
+CREATE VIEW DimScenario AS
+    SELECT * FROM read_parquet('02_data/raw/DimScenario/part-000.parquet');
 ```
 
 `hive_partitioning = true` recovers `year`/`month` as real columns from the folder
@@ -155,7 +158,7 @@ This is the easiest re-derivation of the day, and worth noticing *why* it's easy
 
 ```sql
 SELECT
-    AVG(IsOnTime)      AS on_time_rate,       -- Day 9 Q4's "delivery OTIF", 0.9130
+    AVG(IsOnTime)      AS on_time_rate,       -- README §6's delivery on-time rate, 0.9130 (not OTIF -- OTIF is ~0.867, WHS.QLT.OTIF)
     AVG(IsPerfectOrder) AS perfect_order_rate  -- README §6, 0.8574
 FROM FactShipment;
 ```
@@ -230,14 +233,20 @@ as Day 13 made you verify with `DISTINCT`, but there is no special function for 
 SELECT
     ft.KpiCode,
     ft.Region,
-    ft.ScenarioCode,
+    ds.ScenarioCode,
     ft.TargetValue
 FROM FactTarget ft
+JOIN DimScenario ds ON ft.ScenarioKey = ds.ScenarioKey
 WHERE ft.KpiCode = 'OCN.REL.SCHED'
   AND ft.Region = 'Americas'
-  AND ft.ScenarioCode = 'ACT'
+  AND ds.ScenarioCode = 'ACT'
   AND ft.TargetMonthDateKey = 20250601;
 ```
+
+(`FactTarget` itself carries `ScenarioKey`, not `ScenarioCode` -- the code lives
+on `DimScenario`, per `SCHEMA_CONTRACT.md` §1.19/§2.11, so the scenario filter
+needs this join; `KpiCode`, `Region` and `TargetMonthDateKey` are already columns
+on `FactTarget` directly and need no join at all.)
 
 versus the recomputed figure, joined the ordinary way through `DimLocation`:
 
@@ -267,10 +276,12 @@ Predict first, every time: write the prediction down before you run anything.
 
 ### Exercise 36.1, set up DuckDB, count the tables (15 min)
 Install DuckDB (`pip install duckdb`, or the CLI) and create the views for
-`FactShipment`, `FactPortCall`, `FactTarget`, `DimDate`, `DimVoyage`, `DimLocation`
-as shown above. Before running `COUNT(*)` on each, predict which fact table will
-have the most rows and which the fewest, ranking all four from memory of README
-§1's row-count table. Then verify. Note which ranking you got wrong, if any.
+`FactShipment`, `FactPortCall`, `FactTarget`, `DimDate`, `DimVoyage`, `DimLocation`,
+`DimScenario` as shown above. Before running `COUNT(*)` on each, predict which of
+the **three fact tables** (`FactShipment`, `FactPortCall`, `FactTarget` — the rest
+in the list are dimensions) will have the most rows and which the fewest, ranking
+all three from memory of README §1's row-count table. Then verify. Note which
+ranking you got wrong, if any.
 
 ### Exercise 36.2, the averaging trap, in SQL (20 min)
 Build both revenue-per-FFE queries. Predict, before running: will the SQL pooled

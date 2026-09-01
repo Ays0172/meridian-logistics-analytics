@@ -59,7 +59,7 @@ in the moment than on replay.
 
 ## Drill
 
-### Exercise 41.1, the ten-question mock (75 min)
+### Exercise 41.1, the ten-question mock (85 min)
 
 Run straight through. Do not read ahead to the next question before finishing the
 current one's time.
