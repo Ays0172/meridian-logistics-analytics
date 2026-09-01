@@ -23,7 +23,7 @@
    checker that validates row counts, key uniqueness, or referential
    integrity within a table has nothing to say about which column a
    cross-table relationship happens to be drawn on.
-5. Archive 4 years / incremental 13 months, partitioned on each table's
+5. Archive 5 years / incremental 13 months, partitioned on each table's
    primary date key (`BookingDateKey`, `ShipmentDateKey`,
    `BookingConfirmedDateKey`, `EventDateKey`, `AtaDateKey`, `ChargeDateKey`,
    `ActualPickupDateKey`, `TaskDateKey`, `SnapshotDateKey`) — chosen because

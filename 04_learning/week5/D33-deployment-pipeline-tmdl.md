@@ -21,8 +21,8 @@ project work. Today is that work.
 3. Name the two things `data_quality_findings.md` records as "still open, not
    part of this pass" besides the TMDL export itself.
 4. What did the relationship audit find and fix on `FactContainerMove`, and
-   why didn't `validate.py`/`crosscheck.py` catch it (13 of 14 gates still
-   passed)?
+   why couldn't `validate.py`/`crosscheck.py` ever have caught it, regardless
+   of how many of their gates passed?
 5. State the incremental refresh archive/incremental window sizes from Day
    30, and which column each table's partition boundary is built on.
 
@@ -185,8 +185,9 @@ expect" discipline as Exercise 29.1, one layer up the stack.
 Look at `FactContainerMove`'s relationship to `DimDate` in the current
 (fixed) `relationships.tmdl`. Write two sentences: what would a PR reviewer
 reading only the `.tmdl` diff of the original bug (joined on
-`FactContainerMoveKey` instead of `EventDateKey`) have been able to catch
-just from the column names in the diff, without running any DAX at all?
+`ContainerMoveKey`, the table's own row-sequence surrogate key, instead of
+`EventDateKey`) have been able to catch just from the column names in the
+diff, without running any DAX at all?
 
 ---
 

@@ -107,16 +107,18 @@ LATE_ARRIVING_CUSTOMER_ROWS = 47
 exactly 47 `FactShipment` rows' `CustomerKey` with one drawn from the 200
 most-recently-onboarded current customers. The gap between 47 (seeded) and
 38 (observed in the shipped data) is real, not a measurement error on either
-side — and it has a specific, nameable cause: **`clip_and_trim`**
-(`factio.py`, covered in Day 30's Concept section), which drops rows *at
-random* to bring a table down to its exact target row count after
-generation. Nothing in `clip_and_trim`'s logic protects a deliberately
-injected landmine row from being one of the ones trimmed away — it has no
-knowledge that some rows are special. **9 of the 47 originally-injected
-landmine rows were most likely removed by this same random trimming step**,
-which is the same mechanism, applied incidentally, that Day 30 flagged as a
-reason not to assume "oldest partition" is always safe to treat uniformly —
-here it's "seeded-landmine row" that isn't safe to assume survives, either.
+side — and it has a specific, nameable cause: **`clip_and_trim`** in
+`factio.py` (not covered in any earlier day — this is the first time it comes
+up), which drops rows *at random* to bring a table down to its exact target
+row count after generation. Nothing in `clip_and_trim`'s logic protects a
+deliberately injected landmine row from being one of the ones trimmed away —
+it has no knowledge that some rows are special. **9 of the 47
+originally-injected landmine rows were most likely removed by this same
+random trimming step** — a "seeded-landmine row" is not safe to assume
+survives to the shipped data, the same way Day 30's `year=1900` sentinel
+bucket is not safe to assume is "just the oldest partition" (a different
+mechanism, same underlying discipline: verify what a row-count or
+partition-order assumption is actually resting on before trusting it).
 
 ---
 
