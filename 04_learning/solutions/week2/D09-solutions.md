@@ -16,11 +16,13 @@ All figures computed from the built dataset. Reference values in
    filters; `CALCULATE` filter arguments; row-level security; context transition
    from a surrounding iterator; cross-filtering from another visual.
 4. Schedule reliability is on `FactPortCall` (vessel arrival vs originally
-   published ETA, **0.6596**); delivery OTIF is on `FactShipment` (**0.9131**).
-   They differ because the door-delivery promise carries slack the published vessel
+   published ETA, **0.6598**); delivery on-time rate is on `FactShipment`
+   (**0.9130**) — and neither one is OTIF, which is a separate, third figure
+   (~0.867, `WHS.QLT.OTIF`, Week 3). Schedule reliability and delivery on-time
+   differ because the door-delivery promise carries slack the published vessel
    schedule does not.
 5. Dry containers get 5 free days, reefers 3. The shorter clock is why reefers are
-   **8.7% of container moves but about 20% of D&D charges** — over-representation
+   **8.3% of container moves but about 20% of D&D charges** — over-representation
    that emerges from the free-time rule rather than being coded in.
 
 ---
@@ -84,8 +86,17 @@ lane. That is the pattern for any "share of parent" column.
 |---|---|---|
 | `Lines Per Labour Hour` (pooled) | **38.48** | — |
 | `LPH Naive` (mean of per-task ratios) | **46.89** | **+21.9%** |
-| `Revenue per FFE` (pooled) | **1,889.30** | — |
+| `Revenue per FFE` (pooled, `Ffe > 0` scope) | **1,889.30** | — |
 | `Revenue per FFE Naive` | **1,889.40** | **+0.01%** |
+
+`Revenue per FFE`'s `KEEPFILTERS(FactShipment[Ffe] > 0)` restriction is not
+optional here, unlike `Lines Per Labour Hour`: `FactWarehouseTask` has no
+population-mixing problem, but `FactShipment` does — 39,096 air shipments carry
+real `Revenue_usd` and `Ffe = 0`, so the unrestricted `DIVIDE(SUM(Revenue_usd),
+SUM(Ffe))` returns **2,052.11**, an 8.61% overstatement, by including air revenue
+in a ratio air contributes nothing to the denominator of. `Revenue per FFE Naive`
+needs no such restriction: `DIVIDE` returns blank on every air row, and
+`AVERAGEX` skips blanks, so it restricts itself automatically.
 
 The naive version errs **high** in both cases, but by three orders of magnitude
 different amounts.

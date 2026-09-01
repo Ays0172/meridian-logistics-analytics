@@ -170,17 +170,39 @@ magnitude of `Bad Weight` before you look.
 Then explain why `Total TEU Recomputed` and `SUM(FactShipment[Teu])` should agree,
 and what it would mean about the data if they did not.
 
-### Exercise 10.2 — the correct weighted rate, three ways (20 min)
-Compute revenue per FFE three ways at the grand total and by trade lane:
+### Exercise 10.2 — the correct weighted rate, and a fourth trap (20 min)
+Compute revenue per FFE four ways at the grand total and by trade lane:
 ```dax
-RPF Pooled  := DIVIDE ( SUM ( FactShipment[Revenue_usd] ), SUM ( FactShipment[Ffe] ) )
-RPF SumX    := DIVIDE ( SUMX ( FactShipment, FactShipment[Revenue_usd] ),
-                        SUMX ( FactShipment, FactShipment[Ffe] ) )
+RPF Pooled  :=
+CALCULATE (
+    DIVIDE ( SUM ( FactShipment[Revenue_usd] ), SUM ( FactShipment[Ffe] ) ),
+    KEEPFILTERS ( FactShipment[Ffe] > 0 )
+)
+
+RPF SumX    :=
+CALCULATE (
+    DIVIDE ( SUMX ( FactShipment, FactShipment[Revenue_usd] ),
+             SUMX ( FactShipment, FactShipment[Ffe] ) ),
+    KEEPFILTERS ( FactShipment[Ffe] > 0 )
+)
+
 RPF Naive   := AVERAGEX ( FactShipment, DIVIDE ( FactShipment[Revenue_usd], FactShipment[Ffe] ) )
+
+RPF Mismatched Scope := DIVIDE ( SUM ( FactShipment[Revenue_usd] ), SUM ( FactShipment[Ffe] ) )
 ```
-Predict which two agree and which is the odd one out. Then predict what happens to
-`RPF Naive` specifically on **air freight rows**, where `Ffe = 0` — and check
-whether `DIVIDE`'s blank changes the `AVERAGEX` result.
+`RPF Pooled` and `RPF SumX` both restrict to container traffic (`Ffe > 0`) with
+`KEEPFILTERS`, so the restriction intersects with whatever the visual is already
+filtering rather than replacing it. `RPF Mismatched Scope` is the same
+numerator/denominator with **no** such restriction — it looks almost identical to
+`RPF Pooled` on the page, which is exactly what makes it dangerous.
+
+Predict which two of the four agree, which is close-but-not-identical, and which
+is the dangerous outlier. Then predict what happens to `RPF Naive` specifically on
+**air freight rows**, where `Ffe = 0` — and check whether `DIVIDE`'s blank changes
+the `AVERAGEX` result. Separately, predict `RPF Mismatched Scope`'s value and by
+how much it overstates the correctly-scoped figure — the dataset holds 39,096 air
+shipments carrying real `Revenue_usd` and zero `Ffe`, so a numerator that includes
+them with a denominator that structurally cannot is not a rounding artefact.
 
 That last part is the exercise. Work out whether blanks are skipped or counted as
 zero, and what that does to your number.
@@ -223,9 +245,9 @@ Add to `_Measures` in display folder `03 Iterators`: `Total TEU Recomputed`,
 `RPF Pooled`, `Lane Rank by Yield`, `Lane Rank by Revenue`,
 `Chargeable Weight Basis`, `Rank Within Lane`.
 
-Delete `Bad Weight` and `RPF Naive` once you have recorded their values in
-`predictions.md` — you have learned what they teach, and leaving a wrong measure in
-a model is how it ends up on a report.
+Delete `Bad Weight`, `RPF Naive` and `RPF Mismatched Scope` once you have recorded
+their values in `predictions.md` — you have learned what they teach, and leaving a
+wrong measure in a model is how it ends up on a report.
 
 ```
 git add .

@@ -102,7 +102,11 @@ P90 Transit Variance Days  := PERCENTILEX.INC ( FactShipment, FactShipment[Trans
 Avg Vessel Turnaround Hours   := AVERAGE ( FactPortCall[TurnaroundHours] )
 Avg Waiting for Berth Hours   := AVERAGE ( FactPortCall[WaitingForBerthHours] )
 
-Gross Profit per FFE := DIVIDE ( SUM ( FactShipment[GrossProfit_usd] ), SUM ( FactShipment[Ffe] ) )
+Gross Profit per FFE :=
+CALCULATE (
+    DIVIDE ( SUM ( FactShipment[GrossProfit_usd] ), SUM ( FactShipment[Ffe] ) ),
+    KEEPFILTERS ( FactShipment[Ffe] > 0 )
+)
 
 BAF Recovery Ratio :=
 VAR BilledBaf = CALCULATE ( SUM ( FactFreightCharge[RevenueAmount_usd] ), RELATED ( DimChargeType[ChargeCode] ) = "BAF" )

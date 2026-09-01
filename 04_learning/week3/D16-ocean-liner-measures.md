@@ -161,7 +161,7 @@ already exists verbatim in `KPI_DICTIONARY.md` §1, pull it, don't rederive it.
 - [ ] `OCN.OPS.WAIT`, Avg Waiting for Berth Hours (the congestion leading
       indicator, degrades before schedule reliability does)
 - [ ] `OCN.REV.FFE`, already shipped Day 9/15, just confirm folder+description
-- [ ] `OCN.REV.GP.FFE`, Gross Profit per FFE: `DIVIDE(SUM(GrossProfit_usd), SUM(Ffe))`
+- [ ] `OCN.REV.GP.FFE`, Gross Profit per FFE: `CALCULATE(DIVIDE(SUM(GrossProfit_usd), SUM(Ffe)), KEEPFILTERS(Ffe > 0))` — same `Ffe > 0` scope restriction as `Revenue per FFE`, for the same reason (air shipments carry real `GrossProfit_usd` with `Ffe = 0`)
 - [ ] `OCN.REV.BAF`, BAF Recovery Ratio (billed-vs-retained proxy; read the
       dictionary's watch-out on why this is *not* a bunker-cost-pass-through ratio
       before shipping the description)

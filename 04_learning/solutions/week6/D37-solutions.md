@@ -163,7 +163,11 @@ value.
 
 **Compute (pooled, indexed to each direction's own baseline).**
 ```dax
-Revenue per FFE := DIVIDE ( SUM ( FactShipment[Revenue_usd] ), SUM ( FactShipment[Ffe] ) )
+Revenue per FFE :=
+CALCULATE (
+    DIVIDE ( SUM ( FactShipment[Revenue_usd] ), SUM ( FactShipment[Ffe] ) ),
+    KEEPFILTERS ( FactShipment[Ffe] > 0 )
+)
 -- computed per Direction, per period (pre / during / post 14 Jul–14 Sep 2025)
 ```
 Headhaul pre-crisis baseline sits near the full-period figure of **2,482.78**;

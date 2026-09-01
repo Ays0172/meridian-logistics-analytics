@@ -18,7 +18,7 @@ All figures computed from the built dataset. Reference values in
    `AVERAGEX(table, [Measure])` is a different quantity.
 5. `FactPortCall.IsOnTimeArrival` (vessel arrival against the originally published
    ETA, ±24 h) and `FactShipment.IsOnTime` (cargo delivered against the promised
-   delivery date). 0.6596 and 0.9131 respectively.
+   delivery date). 0.6598 and 0.9130 respectively.
 
 ---
 
@@ -44,46 +44,45 @@ Only the second respects each row's own pairing of quantity and rate.
 
 ---
 
-## Exercise 10.2 — the correct weighted rate, and two traps that interact
+## Exercise 10.2 — the correct weighted rate, and a fourth trap
 
 ### The four numbers
 
 | Measure | Value |
 |---|---|
-| `RPF Pooled` (ocean revenue ÷ ocean FFE) | **1,889.30** |
+| `RPF Pooled` (ocean revenue ÷ ocean FFE, `KEEPFILTERS`-scoped) | **1,889.30** |
 | `RPF SumX` | **1,889.30** — identical |
 | `RPF Naive` (`AVERAGEX` of per-row ratios) | **1,889.40** |
-| **Mismatched scope** (all revenue ÷ ocean FFE) | **2,052.11** |
+| `RPF Mismatched Scope` (all revenue ÷ ocean FFE, no restriction) | **2,052.11** |
 
-`RPF Pooled` and `RPF SumX` agree, because `SUM` *is* `SUMX`. `RPF Naive` is the odd
-one out by construction — but only by 0.01%, for the reason you measured yesterday:
-revenue per FFE is essentially uncorrelated with FFE.
+`RPF Pooled` and `RPF SumX` agree, because `SUM` *is* `SUMX`. `RPF Naive` is close
+but not identical — off by only 0.01%, for the reason you measured yesterday:
+revenue per FFE is essentially uncorrelated with FFE. `RPF Mismatched Scope` is the
+dangerous outlier, and it is the version most people write first.
 
 ### The trap that actually matters here
 
-The dangerous number is the fourth one, and it is the one most people write first.
-
 The dataset holds **39,096 air shipments** carrying **161.9M USD of revenue** — 7.9%
-of the total — and **zero FFE**, because an air consignment is not a container. If
-your numerator is `SUM(FactShipment[Revenue_usd])` over everything while your
-denominator only has ocean rows to work with, you have put air revenue on top of
-ocean containers:
+of the total — and **zero FFE**, because an air consignment is not a container.
+`RPF Mismatched Scope`'s numerator is `SUM(FactShipment[Revenue_usd])` over
+everything while its denominator only has ocean rows to contribute to (`Ffe = 0`
+for every air row), so it puts air revenue on top of ocean containers:
 
 ```dax
 -- WRONG: numerator includes air, denominator cannot
-Revenue per FFE Wrong :=
+RPF Mismatched Scope :=
 DIVIDE ( SUM ( FactShipment[Revenue_usd] ), SUM ( FactShipment[Ffe] ) )
 ```
 
-That returns **2,052.11** — an **8.61% overstatement**. It is not a rounding
-artefact and it is not obviously wrong on sight: 2,053 USD per FFE is a perfectly
-plausible figure. It would sail through a review.
-
-The fix is to make both sides agree on scope:
+That returns **2,052.11** — an **8.61% overstatement** against the correctly-scoped
+1,889.30. It is not a rounding artefact and it is not obviously wrong on sight:
+2,053 USD per FFE is a perfectly plausible figure. It would sail through a review —
+which is exactly why `RPF Pooled` and `RPF SumX` restrict scope explicitly rather
+than relying on how the formula happens to look:
 
 ```dax
 -- RIGHT: both sides restricted to container traffic
-Revenue per FFE :=
+RPF Pooled :=
 CALCULATE (
     DIVIDE ( SUM ( FactShipment[Revenue_usd] ), SUM ( FactShipment[Ffe] ) ),
     KEEPFILTERS ( FactShipment[Ffe] > 0 )

@@ -8,7 +8,7 @@
    existing filter on that column instead of replacing it. You need it whenever the
    column you're filtering in `CALCULATE` is one the visual (rows/columns/slicer)
    is already filtering.
-2. `Revenue per FFE := DIVIDE(SUM(FactShipment[Revenue_usd]), SUM(FactShipment[Ffe]))`.
+2. `Revenue per FFE := CALCULATE(DIVIDE(SUM(FactShipment[Revenue_usd]), SUM(FactShipment[Ffe])), KEEPFILTERS(FactShipment[Ffe] > 0))`.
    The naive `AVERAGEX` version gives a 0.1-FFE LCL shipment and a 500-FFE FCL
    contract shipment equal weight in the average, which is nonsensical for a rate
    meant to represent dollars per unit of capacity actually sold.

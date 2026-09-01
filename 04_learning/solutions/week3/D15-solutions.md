@@ -62,11 +62,17 @@ fleet are never numerically comparable as a combined figure, only side by side.
 ## Exercise 15.3: re-foldering Week 2 measures
 
 ```dax
-Revenue per FFE := DIVIDE ( SUM ( FactShipment[Revenue_usd] ), SUM ( FactShipment[Ffe] ) )
+Revenue per FFE :=
+CALCULATE (
+    DIVIDE ( SUM ( FactShipment[Revenue_usd] ), SUM ( FactShipment[Ffe] ) ),
+    KEEPFILTERS ( FactShipment[Ffe] > 0 )
+)
 -- folder: 05 Ocean Liner\Revenue & Cost   (OCN.REV.FFE -> REV)
 -- description: [OCN.REV.FFE] Average commercial yield per FFE carried; excludes
 -- empty repositioning by construction (no Revenue_usd row exists for an empty
--- move). Non-additive weighted ratio, never average lane-level rates.
+-- move) and restricts to Ffe > 0 so air shipments' revenue doesn't ride along
+-- with nothing in the denominator. Non-additive weighted ratio, never average
+-- lane-level rates.
 
 Lines Per Labour Hour := DIVIDE ( SUM ( FactWarehouseTask[LinesProcessed] ), SUM ( FactWarehouseTask[LabourHours] ) )
 -- folder: 07 Warehouse & Inventory\Rate & Utilisation   (WHS.PRD.LPH -> PRD)

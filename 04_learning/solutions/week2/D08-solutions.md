@@ -29,8 +29,8 @@ Read this only after attempting the exercises.
 5. **Schedule reliability lives on `FactPortCall`,** not `FactShipment`. It compares
    vessel `AtaTs` against the originally published `PromisedEtaTs`. `FactShipment`
    carries *delivery* on-time (`IsOnTime`), which is a different promise with more
-   slack. Actual values: schedule reliability **0.6596**, delivery on-time
-   **0.9131**. Conflating them is the most common error in this domain.
+   slack. Actual values: schedule reliability **0.6598**, delivery on-time
+   **0.9130**. Conflating them is the most common error in this domain.
 6. **Fourth character of an ISO 6346 owner prefix** is the equipment category
    identifier: `U` for freight containers, `J` for detachable freight-container
    equipment, `Z` for trailers and chassis.

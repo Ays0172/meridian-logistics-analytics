@@ -98,6 +98,30 @@ LPH Naive := AVERAGEX ( FactWarehouseTask,
 The pooled version weights each row by its denominator. The naive version gives a
 task that took six minutes the same vote as one that took four hours.
 
+`Revenue per FFE` needs one more thing the pattern above doesn't show, because
+`FactShipment` mixes populations in a way `FactWarehouseTask` doesn't: air
+shipments carry real `Revenue_usd` but always `Ffe = 0` (an air consignment isn't a
+container), so a plain `SUM(Revenue_usd) / SUM(Ffe)` puts air revenue on top of
+ocean containers — mathematically well-formed, silently wrong. The scope has to be
+made explicit on **both** sides of the ratio:
+
+```dax
+-- POOLED, scope-restricted to container traffic
+Revenue per FFE :=
+CALCULATE (
+    DIVIDE ( SUM ( FactShipment[Revenue_usd] ), SUM ( FactShipment[Ffe] ) ),
+    KEEPFILTERS ( FactShipment[Ffe] > 0 )
+)
+
+-- UNWEIGHTED MEAN OF PER-ROW RATIOS (DIVIDE returns blank on air rows,
+-- and AVERAGEX skips blanks, so this one restricts itself automatically)
+Revenue per FFE Naive := AVERAGEX ( FactShipment,
+                                    DIVIDE ( FactShipment[Revenue_usd], FactShipment[Ffe] ) )
+```
+
+`KEEPFILTERS` matters here for the same reason it mattered above: the restriction
+should intersect with whatever a visual is already filtering, not replace it.
+
 **How far apart they land depends on the correlation between the per-row ratio and
 its own denominator.** If small denominators come with large ratios, the naive
 average over-weights the inflated ones and reads high. If the ratio is unrelated
@@ -113,7 +137,12 @@ You can see both cases in Meridian, and the numbers are in today's solutions:
 Short tasks are efficient per hour, long tasks are not — so lines-per-hour and
 labour-hours move against each other, and the naive average is out by roughly a
 fifth. Freight rate per FFE, by contrast, does not systematically depend on how
-many FFE are on the booking, so the naive average is out by about two percent.
+many FFE are on the booking, so the naive average lands within **0.01%** of the
+pooled figure — as close to "doesn't matter" as this dataset ever gets, precisely
+because `corr(ratio, denominator) ≈ 0` here. (A *different* averaging mistake on
+this same measure — an unweighted mean across trade lanes, rather than across
+individual shipments — does move the number by about two percent; that's a
+separate exercise later this week, not this row-level comparison.)
 
 This is worth internalising for two reasons. First, it tells you *where to look*:
 the ratios most corrupted by naive averaging are the ones whose denominator is a

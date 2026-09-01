@@ -367,8 +367,8 @@ RETURN DIVIDE ( Rolled, Base )
 **Watch-out.** Rollover ratio and cancellation rate are frequently confused in commentary — a carrier can simultaneously improve rollover (by not rolling anyone) and get there by cancelling more bookings outright, which is not an improvement from the customer's perspective.
 
 ### OCN.REV.FFE — Revenue per FFE
-**Definition.** Average commercial yield per forty-foot-equivalent unit carried.
-**Formula.** `Σ Revenue_usd ÷ Σ Ffe`, computed over `FactShipment` only. Convention: this **excludes empty repositioning by construction** — empty moves have no `ShipmentKey`/`Revenue_usd` row at all, so the denominator never includes non-revenue FFE. This is deliberate: revenue-per-FFE is a *commercial yield* metric, and blending in cost-driven empty-repositioning volume would understate true laden yield and conflate two different management questions (yield vs. empty-container logistics cost).
+**Definition.** Average commercial yield per forty-foot-equivalent unit carried, on container (ocean) traffic.
+**Formula.** `Σ Revenue_usd ÷ Σ Ffe`, computed over `FactShipment`, **restricted to `Ffe > 0`**. Two different populations have to be kept out of this ratio, for two different reasons: empty repositioning is excluded **by construction** — empty moves have no `ShipmentKey`/`Revenue_usd` row at all, so the denominator never includes non-revenue FFE, no filter needed. Air freight is a second, unrelated problem that **does** need an explicit filter: an air shipment carries real `Revenue_usd` but always `Ffe = 0` (an air consignment isn't a container), so an unrestricted `Σ Revenue_usd ÷ Σ Ffe` puts air revenue on top of ocean containers — mathematically well-formed, silently wrong, and not obviously wrong on sight (the resulting number is a perfectly plausible-looking rate). Both restrictions matter for the same underlying reason: revenue-per-FFE is a *commercial yield* metric, and blending in either cost-driven empty-repositioning volume or a different mode's revenue would misstate true laden ocean yield.
 **Grain.** Shipment / lane / period — **non-additive**; a weighted rate, never averaged.
 **Source.** `FactShipment.Revenue_usd`, `Ffe`.
 **DAX.**
@@ -377,23 +377,40 @@ RETURN DIVIDE ( Rolled, Base )
 Revenue per FFE (naive) := AVERAGEX ( FactShipment, DIVIDE ( FactShipment[Revenue_usd], FactShipment[Ffe] ) )
 -- WRONG: averages one rate per shipment, so a 0.1-FFE LCL shipment and a 500-FFE FCL
 -- contract shipment carry equal weight in the "average rate" — nonsensical for a metric
--- meant to represent dollars earned per unit of capacity actually sold.
+-- meant to represent dollars earned per unit of capacity actually sold. (This variant
+-- needs no explicit Ffe > 0 filter: DIVIDE returns blank on air's Ffe = 0 rows, and
+-- AVERAGEX skips blanks, so it restricts itself automatically — it is still wrong, just
+-- not for the scope-mismatch reason the pooled version below has to guard against.)
+
+-- ALSO WRONG, a different and more dangerous trap: looks like the fix, isn't
+Revenue per FFE (mismatched scope) := DIVIDE ( SUM ( FactShipment[Revenue_usd] ), SUM ( FactShipment[Ffe] ) )
+-- WRONG: no restriction on the numerator, so every air shipment's revenue rides
+-- along in Σ Revenue_usd while contributing nothing to Σ Ffe — an 8-9 point
+-- overstatement in this dataset, and the version most people write first.
 
 -- CORRECT
-Revenue per FFE := DIVIDE ( SUM ( FactShipment[Revenue_usd] ), SUM ( FactShipment[Ffe] ) )
+Revenue per FFE :=
+CALCULATE (
+    DIVIDE ( SUM ( FactShipment[Revenue_usd] ), SUM ( FactShipment[Ffe] ) ),
+    KEEPFILTERS ( FactShipment[Ffe] > 0 )
+)
 ```
 **Target/benchmark.** Directional and highly lane-dependent; contract behavioural spec: backhaul revenue/FFE runs ~0.52× headhaul (§3.2) — a useful internal cross-check rather than an external benchmark.
 **Owner.** Commercial.
-**Watch-out.** Never average this measure across lanes without re-pooling — a "network average revenue per FFE" computed as the mean of lane-level rates hides exactly the headhaul/backhaul imbalance the business needs to see.
+**Watch-out.** Never average this measure across lanes without re-pooling — a "network average revenue per FFE" computed as the mean of lane-level rates hides exactly the headhaul/backhaul imbalance the business needs to see. Separately, never drop the `Ffe > 0` restriction "to simplify the DAX" — the unrestricted version is not a rounding artefact, it is a materially overstated number that would sail through a casual review.
 
 ### OCN.REV.GP.FFE — Gross Profit per FFE
-**Definition.** Average margin dollars earned per FFE carried, after direct cost.
-**Formula.** `Σ GrossProfit_usd ÷ Σ Ffe`, same laden-only convention as OCN.REV.FFE (empty moves carry no shipment-level P&L).
+**Definition.** Average margin dollars earned per FFE carried, on container (ocean) traffic, after direct cost.
+**Formula.** `Σ GrossProfit_usd ÷ Σ Ffe`, restricted to `Ffe > 0` — same convention as OCN.REV.FFE and the same two reasons: empty moves carry no shipment-level P&L at all (excluded by construction, no filter needed), but air shipments carry real `GrossProfit_usd` with `Ffe = 0` and need the explicit restriction, or their margin dollars land on top of ocean containers the same way OCN.REV.FFE's numerator does without it.
 **Grain.** Shipment / lane / period — **non-additive weighted ratio**.
 **Source.** `FactShipment.GrossProfit_usd`, `Ffe`, `GrossMarginPct`.
 **DAX.**
 ```dax
-Gross Profit per FFE := DIVIDE ( SUM ( FactShipment[GrossProfit_usd] ), SUM ( FactShipment[Ffe] ) )
+Gross Profit per FFE :=
+CALCULATE (
+    DIVIDE ( SUM ( FactShipment[GrossProfit_usd] ), SUM ( FactShipment[Ffe] ) ),
+    KEEPFILTERS ( FactShipment[Ffe] > 0 )
+)
 ```
 **Target/benchmark.** Directional; contract validation gate on the related margin percentage is 14–22% mean gross margin, with a loss-making left tail (§4) — expect a wide spread in profit/FFE across the book, not a tight band.
 **Owner.** Commercial.
@@ -1420,7 +1437,7 @@ Interview-ready shortlist — code, name, formula only. If asked in a room with 
 
 1. **`OCN.REL.SCHED`** — Schedule Reliability: `COUNT(calls, |ATA − PromisedETA| ≤ 24h) ÷ COUNT(calls)`, trailing 56 days, always vs the never-revised promised ETA.
 2. **`OCN.UTL.LF.HEAD`** — Headhaul Load Factor: `Σ SlotsUsedTeu ÷ Σ SlotCapacityTeu`, capacity-weighted, never averaged per call.
-3. **`OCN.REV.FFE`** — Revenue per FFE: `Σ Revenue_usd ÷ Σ Ffe`, laden shipments only (empties excluded by construction).
+3. **`OCN.REV.FFE`** — Revenue per FFE: `Σ Revenue_usd ÷ Σ Ffe`, restricted to `Ffe > 0` — empties are excluded by construction, but air shipments (real revenue, `Ffe = 0`) need the explicit filter or they inflate the numerator alone.
 4. **`OCN.OPS.MPCH.NET`** — Moves per Crane-Hour (Net): `Σ TotalMoves ÷ Σ CraneHoursNet`, pooled, not the average of per-call ratios.
 5. **`LND.SVC.DIFOT`** — DIFOT: `COUNT(legs, on-time AND in-full) ÷ COUNT(legs)` — the joint condition, not the product of two independently-computed marginals.
 6. **`WHS.QLT.OTIF`** — OTIF: `DIF × DOQ × DOT` (multiplicative, not averaged) — three ~90%+ marginals compound to a headline in the mid-80s.
