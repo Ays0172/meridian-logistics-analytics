@@ -117,13 +117,16 @@ gap. I traced it in two steps. First I verified the join between the two data
 sources was actually bridging on the right column: there were two columns
 encoding the same concept at different granularities, and it's easy to join on the
 wrong one and get a plausible-but-wrong number with no error. Once I confirmed the
-join was correct, the remaining gap traced to the stored figure itself: it had
-been built as an unweighted average across a group with very different volumes,
-the same kind of averaging error you'd catch in any DAX measure, just baked into a
-static table that nothing had validated. I'd recommend the recomputed, volume-
-weighted figure for the board deck, and flag the upstream fix, how that planning
-table's actuals get produced, as a separate follow-up, not something to patch by
-just picking whichever number looks better this month."
+join was correct, the remaining gap traced to the stored figure itself. My first
+guess was the same averaging error you'd catch in any DAX measure, an unweighted
+mean baked into a static table nothing had validated — but checking it against
+the code that actually built the table ruled that out: the stored 'actual' had
+been drawn from an independent random distribution with no read of the
+transactional source at all, so it carried no arithmetic relationship to the live
+number to begin with. I'd recommend the recomputed, call-weighted figure for the
+board deck, and flag the upstream fix, how that planning table's actuals get
+produced, as a separate follow-up, not something to patch by just picking
+whichever number looks better this month."
 
 **Follow-up to anticipate:** "How do you know which number to trust when both look
 plausible?" Trust the one whose construction method you've actually verified,

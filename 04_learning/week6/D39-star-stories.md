@@ -226,8 +226,8 @@ every measure built on this table going forward.
 ### Story 4: the TREATAS budget-vs-actual reconciliation gap
 
 **Headline:** "Reconciled a budget-vs-actual discrepancy that turned out to be
-two separate problems stacked on top of each other: a grain mismatch and a
-recurring averaging error, in a table that had nothing physically wrong with it."
+two separate problems stacked on top of each other: a grain mismatch, and a
+comparison figure that had no real relationship to the live data at all."
 
 **Situation.** `FactTarget` stores planning figures (budget/forecast/plan/actual)
 at Region × TradeLane × Month grain, with no physical relationship to any
@@ -248,33 +248,38 @@ obvious-looking `DimLocation[Region]`, which encodes a finer geography
 column was the right one. With the correct bridge in place, the live-recomputed
 figure for Americas/June 2025 came out to **66.22%**. `FactTarget`'s own stored
 `Actual` scenario for the same KPI, region, and month read **74.71%**: an
-**8.5-point gap**. I traced the gap and found it wasn't the bridge column (already
-verified correct); it was that `FactTarget`'s own "Actual" row had itself been
-populated as an **unweighted mean across trade lanes**, the exact same
-naive-averaging error that a call-weighted pooled figure avoids: the identical
-mechanism as the "never average an average" lesson, just recurring inside a static
-planning table instead of a live DAX measure, which is why nothing in ordinary
-model validation had caught it.
+**8.5-point gap**. My first hypothesis was a familiar one — an unweighted mean
+across trade lanes baked into the stored figure, the same averaging mistake a
+call-weighted pooled measure avoids. I did not stop at "that would explain it,
+report it": I traced the actual generation code for `FactTarget` and found the
+real cause was less flattering to the pattern-match and more important to know —
+`FactTarget`'s `Actual` values, for every KPI and every scenario including
+`Actual` itself, are drawn from an independent random distribution with no read
+of any transactional table whatsoever. The two figures were never going to
+reconcile, by construction; the gap has nothing to do with weighting.
 
 **Result.** Identified and explained an 8.5-point discrepancy between two
 plausible-looking "correct" numbers, traced it to its actual two-part cause (a
-subtle-but-verified grain bridge, plus a genuinely wrong averaging method baked
-into the comparison data itself), and recommended the call-weighted recomputed
-figure as the more defensible one for reporting, with the underlying fix flagged
-as belonging upstream (in how `FactTarget`'s actuals get produced), not as a
-one-off patch.
+subtle-but-verified grain bridge, plus discovering that the comparison figure
+itself is synthetic and carries no arithmetic relationship to the live data),
+and recommended the call-weighted recomputed figure as the only one of the two
+actually derived from real operational events, with the underlying finding
+flagged upstream (`FactTarget`'s "Actual" scenario should not be presented as a
+real actual until that's fixed at the source), not patched over in one report.
 
 **Likely follow-ups:**
-- *"How did you know which of the two numbers to trust?"* By understanding the
-  mechanism behind each one, not by picking the number that "felt right." A
-  pooled, call-weighted figure computed directly from the underlying events is
-  more defensible than a static planning-table figure whose own construction
-  method wasn't verified.
+- *"How did you know which of the two numbers to trust?"* By checking the
+  mechanism behind each one against its actual source rather than picking the
+  number that "felt right," and by not settling for the first explanation that
+  would plausibly fit — a pooled, call-weighted figure computed directly from
+  the underlying events is defensible; a static planning-table figure with no
+  verified provenance is not, regardless of how the gap looked at first glance.
 - *"Isn't this the same mistake twice: first almost joining the wrong column,
-  then finding the comparison figure was wrong too?"* Yes, and that's the
-  point worth making explicitly: real reconciliation problems are often two
-  independent issues stacked together, and fixing only the more obvious one (the
-  join) would have left you confidently reporting a still-wrong number.
+  then reaching for a too-easy explanation of the comparison figure?"* Yes, and
+  that's the point worth making explicitly: real reconciliation problems are
+  often two independent issues stacked together, and stopping at a plausible
+  first explanation for the second one would have left me confidently reporting
+  the wrong root cause even after fixing the join correctly.
 
 ### Exercise 39.5: the 15-second versions (20 min)
 

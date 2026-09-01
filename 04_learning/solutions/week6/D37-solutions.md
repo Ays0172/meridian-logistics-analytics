@@ -140,17 +140,21 @@ yourself directly against it:
 | Recomputed via `TREATAS`/`DimLocation[TradeRegion]` join | **66.22%** |
 | Gap | **8.5 points** |
 
-**Mechanism, in one paragraph (this is the graded part):** `FactTarget`'s stored
-`ACT` figure for this KPI was itself built as an unweighted mean across trade
-lanes rather than a call-weighted pooled figure: the same shape of error Day 9
-measured for lines-per-labour-hour, except this time baked into a static planning
-table rather than a live DAX measure, which is why nobody caught it in Week 2. The
-recomputed, call-weighted figure (66.22%) is the more defensible number.
+**Mechanism, in one paragraph (this is the graded part):** the tempting first
+guess is an unweighted mean across trade lanes baked into `FactTarget`'s stored
+`ACT` figure — the same shape of error Day 9 measured for lines-per-labour-hour.
+Checked against `build_fact_target` (`01_generator/meridian/facts_land.py`), that
+guess doesn't hold: every `TargetValue`, `ACT` scenario included, is drawn from an
+independent random distribution with no read of any transactional fact table at
+all. `FactTarget`'s "Actual" carries no arithmetic relationship to the live data,
+so it was never going to reconcile — a different and more important finding than
+a fixable averaging error. The recomputed, call-weighted figure (66.22%) is the
+one actually derived from real events, and is the defensible number.
 
-If your write-up did not name the mechanism, just said "they use different
-definitions" without saying *which* averaging error causes it: that is the
-specific gap to close before Day 39, because this exact finding is one of the four
-STAR stories.
+If your write-up stopped at "they use different definitions" or reached for the
+Day 9 averaging-trap explanation without checking it against the generator: that
+is the specific gap to close before Day 39, because this exact finding is one of
+the four STAR stories.
 
 **Recommend.** Board deck should carry the recomputed figure with a one-line note
 on the discrepancy; the upstream fix (how `FactTarget.ACT` rows get produced)

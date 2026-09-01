@@ -138,7 +138,7 @@ weekly-average lessons.
 
 | Source | Value |
 |---|---|
-| `FactTarget` stored `ACT`, Americas, June 2025 | **74.71%** (unweighted mean across lanes, per Day 13) |
+| `FactTarget` stored `ACT`, Americas, June 2025 | **74.71%** (independently generated, no relationship to the live data — Day 13) |
 | Recomputed via `DimLocation[TradeRegion]` join | **66.22%** |
 
 The SQL figure matches the DAX `TREATAS`-based figure from Day 13 **exactly**:

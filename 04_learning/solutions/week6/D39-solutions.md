@@ -8,10 +8,13 @@ them, plus notes on adapting them to a specific interview.
 
 ## Spaced recall answers
 
-1. `FactTarget`'s stored "Actual" was itself built as an unweighted mean across
-   trade lanes rather than a call-weighted pooled figure: the identical
-   arithmetic error Day 9 measured for lines-per-labour-hour, just sitting inside
-   a static planning table instead of a live DAX measure.
+1. `FactTarget`'s stored "Actual" carries no relationship to the transactional
+   data at all — `build_fact_target` draws every `TargetValue`, `Actual` scenario
+   included, from an independent random distribution, with no read of any
+   fact table. The tempting first guess (an unweighted mean across trade lanes,
+   the same arithmetic error Day 9 measured for lines-per-labour-hour) turned
+   out not to be what actually happened here, which is the story's real point:
+   check a mechanism against its source before reporting it.
 2. `-1` is the fixed sentinel for numeric surrogate keys and not-yet-happened
    dates, and its own row's text attributes carry the label `"Unknown"`
    (README §7 — originally `"#NA"`, itself one of Story 2's twelve cosmetic

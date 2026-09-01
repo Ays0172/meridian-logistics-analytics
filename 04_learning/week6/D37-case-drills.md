@@ -156,19 +156,24 @@ definition wrong) is different information each time.
   `TradeRegion` bridge reads **66.22%**, an 8.5-point gap (Days 13 and 36 already
   built both sides of this; today's job is to explain it in one paragraph a
   finance director will trust).
-- The mechanism: `FactTarget`'s "Actual" figure is itself an **unweighted mean
-  across trade lanes**, not a call-weighted pooled figure, the same naive-
-  averaging error Day 9 taught you to distrust, except this time it is sitting in
-  a static planning table instead of a live measure, which is why it never got
-  caught by anything you built in Week 2.
+- The mechanism: the tempting first guess is an unweighted mean across trade
+  lanes baked into `FactTarget`'s stored `ACT` figure — the same shape of error
+  Day 9 measured for lines-per-labour-hour. Checked against `build_fact_target`
+  (`01_generator/meridian/facts_land.py`), that guess doesn't hold: every
+  `TargetValue`, `ACT` scenario included, is drawn from an independent random
+  distribution with no read of any transactional fact table at all.
+  `FactTarget`'s "Actual" carries no arithmetic relationship to the live data,
+  so it was never going to reconcile — a different and more important finding
+  than a fixable averaging error.
 - A clear recommendation, not a shrug: the recomputed, pooled, call-weighted
   figure is the more defensible number for a board deck, and the fix belongs
   upstream, in how `FactTarget`'s `ACT` rows get produced, not in picking
   whichever number is more flattering this month.
 - One sentence anticipating the obvious follow-up: "will this happen for other
-  KPIs in `FactTarget`?" Yes, wherever the planning table's actuals were built
-  as an unweighted roll-up across an uneven population, which is worth a
-  standing check rather than a one-off fix.
+  KPIs in `FactTarget`?" Yes, for every KPI code the planning table carries,
+  since all of them are generated the same way — independently of any
+  transactional table — which is worth a standing check rather than a one-off
+  fix.
 
 ### Case 37.5, the board wants one slide on lane recovery (30 min)
 

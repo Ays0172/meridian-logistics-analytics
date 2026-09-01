@@ -84,8 +84,9 @@ Four issues, each traced to root cause and fixed:
 3. **A ~500× semi-additive overstatement:** a naive sum of inventory value
    across ~581 repeated snapshot dates returned ~$1.3T against a true balance of
    ~$2B.
-4. **An 8.5-point budget-vs-actual gap:** traced to a naive, unweighted average
-   baked into a planning table's own "Actual" figures.
+4. **An 8.5-point budget-vs-actual gap:** traced to a planning table's own
+   "Actual" figures being independently random-generated, with no arithmetic
+   relationship to the live transactional data at all.
 
 Full write-ups, STAR-formatted: [`06_portfolio/star-stories.md`](06_portfolio/star-stories.md).
 ```
