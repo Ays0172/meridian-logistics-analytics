@@ -28,10 +28,10 @@ After the quiz, you record a five-minute spoken narration of your own model — 
 |---|---|---|
 | Domain (Q1–8) | Day 1, Day 2 | The entity chain and cardinality table; the Incoterms decision table; the DCSA journey/EDIFACT tables |
 | Dimensional modelling (Q9–15) | Day 3 | The additivity classification drill (all ten items, including the two "not a fact measure" traps); the three fact-type failure scenarios |
-| Power Query (Q16–20) | Day 4 | The folder-combine pattern step order; both landmine walk-throughs (#5 and #7), redone from scratch rather than re-read |
+| Power Query (Q16–20) | Day 4 | The folder-combine pattern step order; landmine #5's walk-through and landmine #7's synthetic-example demonstration, both redone from scratch rather than re-read |
 | Relationships (Q21–25) | Day 5 | The two role-playing patterns and when each applies; the inactive-relationship diagnosis drill, rebuilt live rather than just re-read |
 
-**Time-boxing the quiz itself**: 60 minutes for 25 questions is roughly 2.4 minutes each, but the four written-answer items (Q2, Q5, Q10, Q14, Q19, Q24, Q25 — seven in total, two of which are the full written-explanation questions Q5 and Q14) genuinely need more like 4–5 minutes apiece to answer properly, which means the multiple-choice items need to move fast, close to a minute each including a re-read of the option list. Don't let one written answer eat ten minutes at the expense of three multiple-choice questions later — a checkpoint under real time pressure is itself a reasonable simulation of the pace a technical screening interview actually runs at.
+**Time-boxing the quiz itself**: 60 minutes for 25 questions is roughly 2.4 minutes each, but the seven written-answer items (Q2, Q5, Q10, Q14, Q19, Q24, Q25 — two of which are the full written-explanation questions Q5 and Q14) genuinely need more like 4–5 minutes apiece to answer properly, which means the multiple-choice items need to move fast, close to a minute each including a re-read of the option list. Don't let one written answer eat ten minutes at the expense of three multiple-choice questions later — a checkpoint under real time pressure is itself a reasonable simulation of the pace a technical screening interview actually runs at.
 
 ## Drill — the checkpoint quiz
 

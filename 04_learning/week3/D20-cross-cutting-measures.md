@@ -139,7 +139,7 @@ RETURN DIVIDE ( Top10Revenue, TotalRevenue )
 The naive version hardcodes a customer list computed once, as the book changes,
 this silently stops being "the top 10" and becomes "ten specific accounts," with no
 error raised. The correct version ranks by **`CustomerCode`** (the durable business
-key), not `CustomerKey`, `DimCustomer` is SCD2 (Day 13, Day 8 territory: 4,180 rows
+key), not `CustomerKey`, `DimCustomer` is SCD2 (Day 13, Day 8 territory: 4,171 rows
 for 3,200 current members), so ranking by the surrogate key can split one
 customer's revenue across several `CustomerKey` versions, understating true
 concentration by pretending one large customer is several smaller ones. `README`
