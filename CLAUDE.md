@@ -183,22 +183,63 @@ surrounding prose. Wrong-but-consistent is still wrong.
 
 ### The lesson prose itself needs the same discipline, not just the status docs
 
-A full adversarial pass over Weeks 4–6 (42 day files + solutions, previously
-unaudited beyond Week 3) turned up ~30 more real defects, none of them structural
-— wrong day-citations (a technique attributed to the wrong day, e.g. "Day 1" for
-something that's actually Day 11), KPI/domain counts that don't match
-`KPI_DICTIONARY.md`, arithmetic that doesn't reduce (a stated total that isn't the
-sum of its own line items), DAX that isn't valid syntax or uses the wrong function
-variant, and — the most load-bearing category — the same fact stated two
-different, contradictory ways in two different files (a bug's symptom described
-as "wrong" in one file and "returns nothing" in another; a design decision from
-one day flatly contradicted by a "recap" of it in a later day's solutions). None
-of these announce themselves — they read as fluent, confident prose exactly like
-the correct material around them. Before trusting or extending any specific claim
-in a day/solutions file (a number, a day cross-reference, a DAX snippet, "X is the
+A full adversarial pass over Weeks 4–6, then a second pass over Weeks 1–2 (all 42
+day files + solutions are now reviewed at least once), turned up ~65 real defects
+combined, almost none of them structural — wrong day-citations (a technique
+attributed to the wrong day, e.g. "Day 1" for something that's actually Day 11),
+KPI/domain/row counts that don't match `KPI_DICTIONARY.md` or the built data,
+arithmetic that doesn't reduce (a stated total that isn't the sum of its own line
+items), DAX that isn't valid syntax or uses the wrong function variant, and — the
+most load-bearing category — the same fact stated two different, contradictory
+ways in two different files (a bug's symptom described as "wrong" in one file and
+"returns nothing" in another; a design decision from one day flatly contradicted
+by a "recap" of it in a later day's solutions; a numeric column classified
+additive in one file and non-additive in another). None of these announce
+themselves — they read as fluent, confident prose exactly like the correct
+material around them. Before trusting or extending any specific claim in a
+day/solutions file (a number, a day cross-reference, a DAX snippet, "X is the
 largest/smallest of Y"), check it against the file it actually depends on
-(`KPI_DICTIONARY.md`, `SCHEMA_CONTRACT.md`, README §6, the cited day itself) rather
-than the file that states it.
+(`KPI_DICTIONARY.md`, `SCHEMA_CONTRACT.md`, README §6, the cited day itself, or —
+when the claim is about *why* the data looks a certain way — the generator source
+in `01_generator/meridian/`) rather than the file that states it.
+
+Three specific defects from these passes are worth knowing before you touch
+related content, because each one was load-bearing across many files, not a
+one-off typo:
+
+- **The `FactTarget` "unweighted mean" myth.** `FactTarget[TradeRegion=Americas,
+  Month=Jun-2025]`'s stored `ACT` value (74.71%) doesn't match the figure
+  recomputed live from `FactPortCall` via a `TradeRegion` bridge (66.22%), an
+  8.5-point gap used repeatedly as a worked example (Days 13, 36, 37, 39, 40, 41).
+  The plausible-sounding explanation that got invented and copied across ~10
+  files — "`FactTarget`'s `ACT` is itself an unweighted mean across trade lanes,
+  the same naive-averaging error Day 9 teaches" — is **false**. Check
+  `build_fact_target` in `01_generator/meridian/facts_land.py`: every
+  `TargetValue`, `ACT` scenario included, is drawn from an independent
+  `rng.uniform(0.60, 0.98, ...)` with no read of any transactional fact table at
+  all. `FactTarget`'s actual figure has zero arithmetic relationship to the live
+  data — it was never going to reconcile, which is a more significant finding
+  than a fixable averaging bug, and the correct one now shipped everywhere this
+  example appears.
+- **The `Revenue per FFE` / `Gross Profit per FFE` scope bug.** Air-mode
+  shipments carry `Revenue_usd > 0` but `Ffe = 0` (FFE is an ocean-container unit
+  and doesn't apply to air). An unfiltered `DIVIDE(SUM(Revenue_usd), SUM(Ffe))` —
+  which `KPI_DICTIONARY.md` itself shipped as the "correct" formula for
+  `OCN.REV.FFE`/`OCN.REV.GP.FFE` until this pass — silently keeps air's revenue in
+  the numerator while air contributes nothing to the denominator, inflating the
+  ratio. The fix, now the canonical form everywhere this measure is built or
+  re-foldered (Days 9, 10, 15, 16, 23, 37): wrap in
+  `CALCULATE(DIVIDE(SUM(Revenue_usd), SUM(Ffe)), KEEPFILTERS(FactShipment[Ffe] >
+  0))`. If you are extending or teaching this measure, start from the
+  `KEEPFILTERS` form — the unfiltered one is now the deliberate "naive" trap
+  variant, not the answer.
+- **`int32 yyyymmdd` DateKey columns compared against `Date`-typed values is
+  invalid DAX, not just imprecise.** Two separate exercises (Days 11 and 12)
+  originally compared `FactTable[DateKey]` (an `int32`) against `MAX(DimDate[Date])`
+  or `FORMAT(x, "YYYYMMDD")` (a `Date`/text value) — DAX rejects the comparison
+  outright rather than silently misbehaving. The fix is always to stay in the same
+  type on both sides: `MAX(DimDate[DateKey])` against the fact table's own
+  `int32` key column, never a `Date`-typed value against a `DateKey` column.
 
 ## Conventions worth knowing before editing generator or model code
 
