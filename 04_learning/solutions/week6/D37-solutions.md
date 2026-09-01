@@ -21,17 +21,24 @@ second, more visceral number for the same idea.
 Crisis Population :=
 FILTER (
     FactShipment,
-    RELATED ( DimLocation.LocationCode[LocationKeyPol] ) IN { "NLRTM", "USLAX" }
-        || RELATED ( DimLocation.LocationCode[LocationKeyPod] ) IN { "NLRTM", "USLAX" }
+    LOOKUPVALUE ( DimLocation[LocationCode], DimLocation[LocationKey], FactShipment[LocationKeyPol] ) IN { "NLRTM", "USLAX" }
+        || LOOKUPVALUE ( DimLocation[LocationCode], DimLocation[LocationKey], FactShipment[LocationKeyPod] ) IN { "NLRTM", "USLAX" }
 )
 ```
-(In practice, build this as two `CALCULATE`s, one filtered on POL and one on POD,
-unioned, since a shipment can touch either leg. Restrict `DimDate[Date]` to
-14 Jul-14 Sep for 2025 and again for 2024.)
+`LOOKUPVALUE`, not `RELATED`, on purpose: `FactShipment` carries multiple
+location-role foreign keys (`LocationKeyOrigin`/`Destination`/`Pol`/`Pod`) to the
+same `DimLocation`, so per Day 5's role-playing-dimension rule only one of those
+relationships can be active at a time — `RELATED(DimLocation[LocationCode])`
+alone would resolve through whichever one that is, not necessarily Pol or Pod.
+`LOOKUPVALUE` looks the code up directly by key, independent of which
+relationship happens to be active. (In practice, build this as two
+`CALCULATE`s, one filtered on POL and one on POD, unioned, since a shipment can
+touch either leg. Restrict `DimDate[Date]` to 14 Jul-14 Sep for 2025 and again
+for 2024.)
 
 **Compute.**
 ```dax
-Margin StdDev := STDEV.P ( FactShipment, FactShipment[GrossMarginPct] )
+Margin StdDev := STDEVX.P ( FactShipment, FactShipment[GrossMarginPct] )
 Loss-Making Share := DIVIDE ( CALCULATE ( COUNTROWS ( FactShipment ), FactShipment[GrossMarginPct] < 0 ), COUNTROWS ( FactShipment ) )
 ```
 Network-wide baseline: mean margin **0.1802**, loss-making share **2.26%** (README

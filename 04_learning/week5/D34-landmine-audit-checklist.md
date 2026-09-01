@@ -159,9 +159,9 @@ for the literal constant this landmine is built from, and read the ~15 lines
 around it. Explain, using what that code actually does (not what the one-line
 contract description implies), the most likely reason your measured count
 and the generator's target constant disagree — name the specific mechanism
-from `factio.py` (Day 30's Concept section covered it) that could shrink a
-table's row count post-generation without touching which rows survive being
-seeded any differently.
+in `factio.py` (not covered in any earlier day — find it by reading the file)
+that could shrink a table's row count post-generation without touching which
+rows survive being seeded any differently.
 
 ### Exercise 34.4 — build the checklist (20 min)
 Write `03_powerbi/landmine_audit_checklist.md`: a numbered, repeatable

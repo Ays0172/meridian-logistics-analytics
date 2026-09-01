@@ -43,7 +43,7 @@ it can't add revenue.
 | Role filter | `Revenue` under View As | vs. plain `SalesRegion = "APAC"` |
 |---|---|---|
 | `[SalesRegion] = "APAC"` (no guard) | **$965,503,550** | — |
-| `[SalesRegion] = "APAC" && [IsCurrent] = TRUE()` | **$883,716,500** | **−$81,786,850 (−8.47%)** |
+| `[SalesRegion] = "APAC" && [IsCurrent] = TRUE()` | **$883,716,500** | **−$81,787,050 (−8.47%)** |
 
 The guarded version is smaller by exactly the revenue tied to
 `FactShipment` rows whose `CustomerKey` resolves to one of the 368
@@ -113,34 +113,45 @@ same `TREATAS` bridge that made the measure work is what the role needs too.
 
 ## Exercise 31.4 — a role where the guard genuinely matters
 
-`CUS0003`: version 1 (`ScdVersion=1`, `IsCurrent=0`) carried
-`AccountManagerEmail = carlos.al-farsi@meridiangl.com`, valid through
-`2021-02-12`; version 2 (`ScdVersion=2`, `IsCurrent=1`) carries
-`yuki.obrien@meridiangl.com` from `2021-02-12` onward.
+`CUS0003` is the illustrative single case — version 1 (`ScdVersion=1`,
+`IsCurrent=0`) carried `AccountManagerEmail = carlos.al-farsi@meridiangl.com`,
+valid through `2021-02-12`; version 2 (`ScdVersion=2`, `IsCurrent=1`) carries
+`yuki.obrien@meridiangl.com` from `2021-02-13` onward — but Carlos is not
+`CUS0003`'s account manager alone. Checked against the shipped
+`DimCustomer.csv`: `carlos.al-farsi@meridiangl.com` appears on **75 rows
+across 70 distinct customers — 58 current versions and 17 non-current**.
 
 An ungated `AM - Carlos` role (`[AccountManagerEmail] =
-"carlos.al-farsi@meridiangl.com"`, no `IsCurrent` clause) matches only
-`CUS0003`'s **version-1** `DimCustomer` row — that row's own
-`AccountManagerEmail` is Carlos's, full stop, regardless of `IsCurrent`. It
-therefore lets through exactly the `FactShipment` rows keyed to version 1's
-`CustomerKey` — shipments booked **before 2021-02-12**, while Carlos was
-actually the account manager — and correctly excludes everything booked after
-the handover to Yuki, because those later rows key to version 2, whose
-`AccountManagerEmail` does not match Carlos's filter at all. **No revenue
-leaks past the handover either way; the guard is irrelevant here for exactly
-the same reason it mattered for `Sales - APAC`, just pointed the other
-direction.**
+"carlos.al-farsi@meridiangl.com"`, no `IsCurrent` clause) matches **all 75**
+of those `DimCustomer` rows, current and non-current alike, and therefore lets
+through every `FactShipment` row keyed to any of their `CustomerKey`s —
+including shipments booked while Carlos managed a customer he has since
+handed off (like `CUS0003` before 2021-02-12). Adding `IsCurrent = TRUE()`
+drops the 17 non-current rows, which means it drops every `FactShipment` row
+keyed to one of those 17 `CustomerKey`s too. **The guard changes the answer
+materially here** — this is the mirror image of `Sales - APAC`, not a repeat
+of it: because `AccountManagerEmail` genuinely varies across a customer's
+SCD2 versions (unlike `SalesRegion`, which never does), "all versions" and
+"current only" are two different, both-defensible questions with two
+different numbers, exactly as the Concept section predicted. Which one is
+"correct" depends on what the role is for: ungated answers *"every shipment
+Carlos was ever the account manager of record for, historically"* (the right
+scope for a departing-AM handover audit); gated answers *"only the shipments
+tied to customers currently on Carlos's book"* (the right scope for his live
+commission or territory report). Shipping the wrong one for the business
+question is the actual risk, not a `#NA`-style bug — pick deliberately, and
+document which question the role answers in `03_powerbi/rls_roles.md`.
 
 **The one fact that decides which way a given role behaves:** whether the
 *filtered column itself* changes value across a customer's SCD2 versions.
 `SalesRegion` never does (0 customers differ) — so restricting to
-`IsCurrent` only ever removes legitimately-matching historical rows, never
-protects against anything. `AccountManagerEmail` does vary by construction —
-so each version's row already carries exactly the value that was true when
-its fact rows were booked, and the row-level filter does the correct
-time-scoping on its own, with or without `IsCurrent`. Check which kind of
-column you're filtering on before deciding whether the guard helps, hurts, or
-does nothing — it is never safe to assume from habit.
+`IsCurrent` only ever removes legitimately-matching historical rows without
+changing which *customers* are in scope, which is why that guard turned out
+to be pure overhead for `Sales - APAC`. `AccountManagerEmail` does vary by
+construction — so gating by `IsCurrent` here changes *which customers* (and
+therefore which `FactShipment` rows) the role includes at all. Check which
+kind of column you're filtering on before deciding whether the guard helps,
+hurts, or does nothing — it is never safe to assume from habit.
 
 ---
 
@@ -151,7 +162,7 @@ does nothing — it is never safe to assume from habit.
 | Total frozen `FactShipment` revenue | $2,039,118,300 |
 | APAC revenue, all customer versions | $965,503,550 |
 | APAC revenue, `IsCurrent` guarded | $883,716,500 |
-| Revenue lost to the guard (APAC) | $81,786,850 (19,318 rows) |
+| Revenue lost to the guard (APAC) | $81,787,050 (19,318 rows) |
 | `FactShipment` rows keyed to a non-current `DimCustomer` version | 35,053 of 491,400 (7.13%) |
 | Americas revenue via `LocationKeyOrigin`/`Pol` | $423,986,200 |
 | Americas revenue via `LocationKeyDestination`/`Pod` | $425,010,800 |

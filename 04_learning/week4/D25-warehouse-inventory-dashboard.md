@@ -2,7 +2,8 @@
 
 > Time: 3.5 h · Spaced recall 10 min · Concept 45 min · Drill 95 min · Ship 30 min · Log 15 min
 
-Page 3, and the busiest KPI domain (18 of the 72). This page has to answer a
+Page 3, and the second-largest KPI domain (18 of the 72, behind Ocean liner's 22).
+This page has to answer a
 sharper question than "is the warehouse doing well": **is a given site's problem a
 people problem (labour, quality) or a stock problem (inventory, obsolescence)?**
 Those two failure modes have completely different fixes - training and staffing on
@@ -118,8 +119,9 @@ purchasing team should prioritise SKU-level review or category-level review.
 Build page `3 Warehouse & Inventory` with all eight visuals, laid out in the two
 visible zones described above, on-theme, nav bar intact. Add
 `[DO NOT USE] OTIF % (naive)` alongside the correct `OTIF %` to `_Measures`,
-display folder `03 Warehouse`, exactly matching Day 9's naming convention for
-naive variants.
+display folder `07 Warehouse & Inventory\Quality & Service` (`WHS.QLT.OTIF`'s
+own subfolder, per Week 3 Day 15's taxonomy), exactly matching Day 9's naming
+convention for naive variants.
 
 ```
 git add .

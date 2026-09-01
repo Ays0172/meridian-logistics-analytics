@@ -102,17 +102,32 @@ an append/redo cycle, and a redone day byte-identical to its first write.
 - ✅ `01_generator` — full generator, 3 independent checkers, live feed, unit tests
 - ✅ `02_data` — the 7.5M-row dataset, built and verified
 - ✅ `04_learning/week1` — Days 1–7 + solutions
-- ✅ `04_learning/week2` — Days 8–11 + solutions + 109 ground-truth reference answers
+- ✅ `04_learning/week2` — Days 8–14 + solutions + 109 ground-truth reference answers
+- ✅ `04_learning/week3` — Days 15–21 + solutions (the ~150-measure DAX library, by KPI domain then function)
+- ✅ `04_learning/week4` — Days 22–28 + solutions (the five report pages)
+- ✅ `04_learning/week5` — Days 29–35 + solutions (automation, RLS, performance, deployment)
+- ✅ `04_learning/week6` — Days 36–42 + solutions (SQL, case drills, PL-300, portfolio, capstone)
+- ✅ `04_learning/CURRICULUM_ROADMAP.md` — topic/deliverable index for Weeks 3–6
 
-### What is NOT built yet — be clear-eyed about this
+All 42 days are written, in the same prediction-first format, with a worked solution
+file for each. The curriculum is complete end to end — see §5 for how to work through it.
 
-- ⬜ `04_learning/week2` Days 12–14 (snapshot/event patterns, TREATAS/ABC/calculation groups, Checkpoint 2)
-- ⬜ `04_learning/week3–week6` (Days 15–42)
-- ⬜ `03_powerbi` — **empty.** No .pbip/TMDL semantic model, no measure library yet
-- ⬜ `05_sql` — **empty.** DuckDB build + graded exercises not written
-- ⬜ `06_portfolio` — **empty.** PL-300 mock, case drills, STAR stories not written
+### What you build as you go — empty by design, not by omission
 
-You have enough to start Monday and run for two full weeks without waiting on me.
+- ⬜ `03_powerbi` — **empty except `data_quality_findings.md`.** The .pbip/TMDL
+  semantic model and the measure library are not shipped pre-built — building them
+  *is* Weeks 1–3 (model in Weeks 1–2, the measure library in Week 3). Day 14's
+  checkpoint expects real committed measures already; Week 4 (Days 22–28) then
+  builds the five report pages on top of that model, and by Day 28 all five should
+  be live here.
+- ⬜ `05_sql` — **empty.** The DuckDB build and graded exercises are Day 36's deliverable.
+- ⬜ `06_portfolio` — **empty on disk; not a Week 6-only deliverable.** First written
+  on Day 9 (`notes-averaging.md`), added to again on Days 11, 22, 23, 28, 29 and 35,
+  then built out properly in Week 6 (Days 37–42: case drills, PL-300 gap analysis,
+  STAR stories, the case-study writeup, mock-interview results, retrospective).
+
+You have everything you need to start Monday and run the full six weeks without
+waiting on anyone.
 
 ---
 
@@ -156,17 +171,24 @@ Meridian-Logistics-Analytics/
 │   └── _validation/              ← checker reports. My verified run is shipped here
 │                                    for comparison; setup overwrites with yours
 │
-├── 03_powerbi/                   ← EMPTY. your .pbix and semantic model land here
+├── 03_powerbi/                   ← your .pbip/TMDL model and measures land here, built Weeks 1–3
+│   └── data_quality_findings.md  ← shipped; a worked audit of the live model, read from Days 30–34
 │
 ├── 04_learning/
+│   ├── CURRICULUM_ROADMAP.md     ← topic/deliverable index for Weeks 3–6
 │   ├── week1/D01…D07             ← domain, codes, modelling, PQ, relationships, dates+SCD2, checkpoint
-│   ├── week2/D08…D11             ← contexts, CALCULATE, iterators, time intelligence
+│   ├── week2/D08…D14             ← contexts, CALCULATE, iterators, time intelligence, snapshots,
+│   │                                TREATAS/ABC, calculation groups, checkpoint
 │   ├── week2/_reference_answers.json      ← 109 ground-truth values; every drill is checkable
 │   ├── week2/build_reference_answers.py    ← regenerates them after any rebuild
-│   └── solutions/week1, week2    ← full worked solutions. read AFTER attempting
+│   ├── week3/D15…D21             ← KPI→DAX method, the ~150-measure library by domain, checkpoint
+│   ├── week4/D22…D28             ← report shell, five dashboard pages, UX checkpoint
+│   ├── week5/D29…D35             ← live-feed automation, refresh, RLS, performance, TMDL, checkpoint
+│   ├── week6/D36…D42             ← SQL primer, case drills, PL-300 mapping, STAR stories, portfolio, capstone
+│   └── solutions/week1…week6     ← full worked solutions, one per day. read AFTER attempting
 │
-├── 05_sql/                       ← EMPTY
-└── 06_portfolio/                 ← EMPTY. Day 11 asks you to write your first file here
+├── 05_sql/                       ← EMPTY until Day 36
+└── 06_portfolio/                 ← EMPTY on disk; first written Day 9, built out in Weeks 4–6
 ```
 
 ---
@@ -262,9 +284,11 @@ python live_feed.py --redo 2026-08-24    # regenerate one day byte-identically
    the watermark stays put.
 
 **Automate it** with Windows Task Scheduler (recipe in `LIVE_FEED.md`, §"Daily
-automation"). The GitHub Actions + raw-URL version you chose is scheduled for
-Week 5 — that is where it belongs pedagogically, and Task Scheduler covers you
-until then.
+automation") if you're running this by hand. A GitHub Actions + raw-URL version
+already runs daily (`.github/workflows/live-feed.yml`) — Week 5 Day 29 doesn't
+build this from scratch, it has you read, understand, and formalize what's already
+live, which is where that belongs pedagogically. Task Scheduler is the fallback for
+anyone not using GitHub Actions.
 
 **Power BI note.** Point Power BI at the `02_data/raw` folder with Parquet + folder
 combine. Do not build on push/streaming datasets: Microsoft is retiring them and
@@ -289,8 +313,13 @@ PPU — plenty for a daily feed.
    It is regenerated by `04_learning/week2/build_reference_answers.py`, so if you ever
    change the generator, run that script or the answer key silently stops matching.
 
-Budget 15–20 hours a week. Week 1 is modelling and Power Query; Week 2 is DAX
-semantics, which is where the actual difficulty lives.
+Budget 15–20 hours a week, six weeks end to end. Week 1 is modelling and Power
+Query; Week 2 is DAX semantics, which is where the actual difficulty lives; Week 3
+turns that into the full measure library; Week 4 builds the five report pages; Week 5
+covers automation, security, and performance; Week 6 is SQL, interview prep, and the
+capstone retrospective. Weeks 1–5 each close with a checkpoint day (D07, D14, D21,
+D28, D35) that reviews the week before moving on; Week 6 closes with D42, a
+retrospective rather than a checkpoint.
 
 ---
 
@@ -312,8 +341,10 @@ Verified numbers you should be able to quote:
 
 Two facts that trip up almost everyone, both deliberately modelled:
 
-- **Schedule reliability (0.66) and delivery OTIF (0.91) are different metrics on
-  different fact tables.** One measures a vessel against its published schedule, the
+- **Schedule reliability (0.66) and delivery on-time (0.91) are different metrics on
+  different fact tables** — and neither one is OTIF, which is a separate, third
+  figure (~0.867, `WHS.QLT.OTIF`, Week 3). One measures a vessel against its
+  published schedule, the
   other measures cargo against a promise that carries slack. Conflating them is the
   single most common logistics-analytics error, and being able to explain the
   difference cold is worth more in an interview than any DAX trick.
@@ -353,17 +384,22 @@ tells you to** — finding them yourself in Power Query is the exercise.
 
 ---
 
-## 8. What I owe you next
+## 8. What's left, and whose it is
 
-In priority order, and this is the queue I will work through:
+The curriculum is done — all 42 days, Weeks 1–6, each with a worked solution file.
+What's left isn't more writing, it's the work each day asks you to do:
 
-1. **Week 2 Days 12–14** — snapshot and event patterns, TREATAS / SUMMARIZE / ABC
-   segmentation / calculation groups, Checkpoint 2
-2. **`03_powerbi`** — the .pbip/TMDL semantic model with all 19 dimensions and 11
-   facts wired, plus a ~150-measure DAX library organised into display folders
-3. **Weeks 3–6** — Days 15–42, including the five dashboards and the GitHub Actions
-   live feed in Week 5
-4. **`05_sql`** — DuckDB build over the same Parquet + 60 graded exercises
-5. **`06_portfolio`** — PL-300 mock exam, case drills, STAR stories, case-study PDF
+1. **`03_powerbi`** — build the .pbip/TMDL semantic model as Weeks 1–3 direct: 19
+   dimensions and 11 facts wired (Week 1), then the ~150-measure DAX library
+   organised into display folders (Week 3, on top of Week 2's DAX mechanics)
+2. **The five dashboard pages** — Week 4, Days 22–28, on top of that model
+3. **Automation, RLS, performance, deployment** — Week 5, Days 29–35, including the
+   GitHub Actions live feed formalized in Day 29
+4. **`05_sql`** — the DuckDB build and its graded exercises, Day 36
+5. **`06_portfolio`** — case drills, PL-300 gap analysis, STAR stories, case-study
+   writeup, mock interview, and the capstone retrospective, Days 37–42 (on top of
+   the design-rationale notes the folder already started collecting from Day 9
+   onward)
 
-Say the word and I will pick up at the top of that list.
+Start at `04_learning/week1/D01-domain-foundations.md` and work in order — each day
+tells you what it needs from the one before it.

@@ -23,7 +23,8 @@
    forced to reconcile by construction.
 5. Reusing the "chart type that makes a trap visible rather than requiring trust in
    an isolated number" idea from Day 23's reliability-vs-volume scatter, applied
-   here as the 100%-stacked reconciliation bar for Deadhead/Truck Utilisation.
+   here as the stacked (**not** 100%-stacked — that variant renormalises and would
+   hide the gap) reconciliation bar for Deadhead/Truck Utilisation.
 
 ---
 

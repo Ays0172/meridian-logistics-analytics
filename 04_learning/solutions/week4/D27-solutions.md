@@ -25,7 +25,9 @@
 5. Network-wide schedule reliability is **0.6598**. It barely moved (0.662 vs.
    0.670 for unaffected ports) because the 131 affected calls at Rotterdam/LA were
    only 3.2% of the total call population - a 40% local failure at that small a
-   share of volume shifts the network average by only about 1.3 points.
+   share of volume shifts the network average by only about 0.8 points in
+   absolute terms (README §6's "1.3%" is the same shift expressed relatively:
+   0.008/0.670 ≈ 1.3% of the unaffected baseline, not 1.3 percentage points).
 
 ---
 

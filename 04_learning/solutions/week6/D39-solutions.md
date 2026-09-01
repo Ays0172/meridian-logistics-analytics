@@ -13,8 +13,13 @@ them, plus notes on adapting them to a specific interview.
    arithmetic error Day 9 measured for lines-per-labour-hour, just sitting inside
    a static planning table instead of a live DAX measure.
 2. `-1` is the fixed sentinel for numeric surrogate keys and not-yet-happened
-   dates. For text columns, the equivalent should be a true `BLANK()`/`null`: the
-   Story 2 bug is exactly a case of `"#NA"` wrongly standing in for that.
+   dates, and its own row's text attributes carry the label `"Unknown"`
+   (README §7 — originally `"#NA"`, itself one of Story 2's twelve cosmetic
+   fixes). That's a *different* case from a real, non-unknown-member row whose
+   attribute genuinely doesn't apply: there, the column should hold a true
+   `BLANK()`/`null`, not a placeholder string — the Story 2 bug is exactly a
+   case of `"#NA"` wrongly standing in for that, on real rows rather than the
+   sentinel row.
 3. Because `OnHandValueUsd` is additive across SKU/warehouse/customer at one
    snapshot date but not across dates, a date-unfiltered `SUM` adds the same
    physical stock to itself once per one of the roughly 581 snapshot dates.

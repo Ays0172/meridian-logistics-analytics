@@ -56,7 +56,7 @@ for visual #3 rather than its own visual.
 
 **It stays on Ocean Liner, not here**, with only a compact trace of it on this
 page. The reasoning: the congestion event's full story (waiting-for-berth leading
-demurrage, the Day 1 sorting trap, the specific ports) is operationally dense and
+demurrage, the Day 11 sorting trap, the specific ports) is operationally dense and
 belongs where a reader can act on it - the Ocean Liner page, owned by Network Ops.
 What belongs on the CFO's page is the *containment* finding, which is arguably the
 more interesting exec-level fact: network-wide schedule reliability barely moved
@@ -127,10 +127,16 @@ purpose.
 ### Exercise 27.1: the SCOR scorecard (30 min)
 Build the SCOR Level-1 matrix using the full mapping table from
 `KPI_DICTIONARY.md` §5 (`XCT.SCOR.MAP`), not the abbreviated eight-row illustration
-in the DAX sample - you need the complete 65-KPI mapping (the profitability KPIs
-excluded by design) for the attainment percentage to mean anything. Predict, before
-building, which of the five attributes will show the widest spread across its
-underlying KPIs' target attainment, and why.
+in the DAX sample - you need the complete mapping (49 KPIs across the five
+attribute lists §5 actually prints) for the attainment percentage to mean
+anything, not the 18 profitability KPIs the dictionary excludes by design. Four
+codes (`LND.OPS.DET`, `LND.SUS.CO2`, `WHS.PRD.LPH`, `WHS.PRD.UPH`) appear in
+neither the five attribute lists nor the excluded-profitability list - this is a
+genuine gap in the dictionary itself, not something to guess an attribute for;
+log it as an open item the same way Day 21 logs an untranslated KPI, rather than
+inventing a classification for it. Predict, before building, which of the five
+attributes will show the widest spread across its underlying KPIs' target
+attainment, and why.
 
 ### Exercise 27.2: margin dispersion band (25 min)
 Build visual #2. Predict whether the P10-P90 spread is widening, narrowing, or
@@ -161,7 +167,9 @@ Build page `0 Executive Summary` with all six visuals, the SCOR scorecard using
 the complete mapping, both domain-link mechanisms wired for all four synthesis
 cards, and the containment footnote with its drillthrough. Add the four
 `Exec Headline *` wrapper measures to `_Measures`, display folder
-`05 Executive Synthesis`.
+`09 Cross-Cutting` — each one wraps a headline across an entire domain rather than
+translating one specific KPI code, so like `XCT.SCOR.MAP` (Day 20) it does not
+force into one of the four function subfolders; leave it at the domain level.
 
 ```
 git add .

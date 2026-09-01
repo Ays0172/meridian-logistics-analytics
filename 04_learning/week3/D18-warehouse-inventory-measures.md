@@ -105,7 +105,9 @@ compares them as if they were the same question asked twice.
 ## Concept: the rest, briefly
 
 Six more full builds below; the remaining ten are a checklist. All folder
-`07 Warehouse & Inventory`.
+`07 Warehouse & Inventory`, sub-foldered by function per Day 15 (`OPS`/`UTL`/`PRD`
+→ Rate & Utilisation, `INV`→ Volume & Mix, `QLT`→ Quality & Service, `CST`→ Revenue
+& Cost).
 
 **Dock-to-Stock Minutes, `WHS.OPS.D2S`** (reuses Day 12's sentinel discipline):
 ```dax
@@ -226,7 +228,9 @@ own build.
 
 ## Ship
 
-`07 Warehouse & Inventory` now holds all 18 KPIs (or logged remainder). Both ABC
+`07 Warehouse & Inventory` now holds all 18 KPIs (or logged remainder), each in its
+function subfolder — this is the one domain where all four (Volume & Mix, Rate &
+Utilisation, Revenue & Cost, Quality & Service) actually get used. Both ABC
 value-share measures shipped, each described with which classification basis it
 uses. Both `OTIF` variants and both `Inventory Turns` variants shipped, naive ones
 marked `[DO NOT USE]`.
@@ -247,7 +251,7 @@ What clicked / what did not / what to re-ask.
 ## Exit criteria
 
 - [ ] All 18 Warehouse & Inventory KPIs exist in `07 Warehouse & Inventory`, each
-      described with its `[KpiCode]`.
+      in its function subfolder per Day 15 and described with its `[KpiCode]`.
 - [ ] `OTIF %` and its naive twin both exist, and you can state the DIF/DOQ/DOT
       components and both headlines from memory.
 - [ ] Both ABC value-share measures exist, each clearly labelled with its

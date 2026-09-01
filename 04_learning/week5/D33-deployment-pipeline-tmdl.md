@@ -21,8 +21,8 @@ project work. Today is that work.
 3. Name the two things `data_quality_findings.md` records as "still open, not
    part of this pass" besides the TMDL export itself.
 4. What did the relationship audit find and fix on `FactContainerMove`, and
-   why didn't `validate.py`/`crosscheck.py` catch it (13 of 14 gates still
-   passed)?
+   why couldn't `validate.py`/`crosscheck.py` ever have caught it, regardless
+   of how many of their gates passed?
 5. State the incremental refresh archive/incremental window sizes from Day
    30, and which column each table's partition boundary is built on.
 
@@ -50,9 +50,8 @@ yLogistics_Live.SemanticModel/
         ... one file per table
 ```
 
-This is not a hypothetical layout — it's the real structure already sitting
-in `03_powerbi/tmdl-backup-2026-08-27-before-fixes/` from an earlier snapshot
-of this exact model. **TMDL** (Tabular Model Definition Language) is the text
+This is not a hypothetical layout — it's the real structure your own model
+takes the moment you do this. **TMDL** (Tabular Model Definition Language) is the text
 format inside those `.tmdl` files: every table, column, measure, relationship
 and role is a small, human-readable block. This is the whole point — a
 `.pbix` diff is "binary files differ," telling you nothing; a `.tmdl` diff is
@@ -159,12 +158,13 @@ hope nobody has to modify later.
 Predictions first, in `predictions.md`, every time.
 
 ### Exercise 33.1 — do the actual export (30 min)
-Save the live model as `.pbip` into `03_powerbi/`, replacing (not
-alongside) the stale `tmdl-backup-2026-08-27-before-fixes` folder's role as
-the canonical version. Predict, before opening any `.tmdl` file, whether the
-relationship count you'll find matches 108 (the audited, current figure) or
-the backup's 82 — then check `relationships.tmdl` and count `relationship`
-blocks yourself.
+Save the live model as `.pbip` into `03_powerbi/` — this is the first time
+this model has been exported to TMDL, per `data_quality_findings.md` §4
+("TMDL export... still pending"), so there is nothing to replace, only to
+create. Predict, before opening any `.tmdl` file, whether the relationship
+count you'll find matches 108 (the audited figure `data_quality_findings.md`
+§3 states after its fixes: "108 total, was 81") — then check
+`relationships.tmdl` and count `relationship` blocks yourself.
 
 ### Exercise 33.2 — read a real diff (20 min)
 Make one small, deliberate model change — rename a display folder, or add a
@@ -185,19 +185,19 @@ expect" discipline as Exercise 29.1, one layer up the stack.
 Look at `FactContainerMove`'s relationship to `DimDate` in the current
 (fixed) `relationships.tmdl`. Write two sentences: what would a PR reviewer
 reading only the `.tmdl` diff of the original bug (joined on
-`FactContainerMoveKey` instead of `EventDateKey`) have been able to catch
-just from the column names in the diff, without running any DAX at all?
+`ContainerMoveKey`, the table's own row-sequence surrogate key, instead of
+`EventDateKey`) have been able to catch just from the column names in the
+diff, without running any DAX at all?
 
 ---
 
 ## Ship
 
-Commit the real `.pbip` export to `03_powerbi/`, replacing the stale backup
-folder's role as the working copy (keep the backup itself as a dated
-snapshot for reference, don't delete history). Add a short
-`03_powerbi/README.md` documenting the branch-per-change workflow from the
-Concept section, so the next person to touch this model (including future
-you) doesn't have to rediscover it.
+Commit the real `.pbip` export to `03_powerbi/` — the first TMDL export this
+model has had, closing out `data_quality_findings.md` §4's last open item.
+Add a short `03_powerbi/README.md` documenting the branch-per-change
+workflow from the Concept section, so the next person to touch this model
+(including future you) doesn't have to rediscover it.
 
 ```
 git add .
@@ -216,7 +216,7 @@ What clicked / what did not / what to re-ask.
 
 - [ ] `.pbip` and its `.SemanticModel`/`.Report` folders exist in
       `03_powerbi/`, reflecting the current, fixed model state (108
-      relationships, not the stale 82).
+      relationships, matching `data_quality_findings.md` §3's audited figure).
 - [ ] You produced and read at least one real `.tmdl` diff, and can state
       what it shows that a `.pbix` diff never could.
 - [ ] You can explain, in one sentence, the one honest limitation of this

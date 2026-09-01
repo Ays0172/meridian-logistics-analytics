@@ -38,14 +38,20 @@ guess, it is the exact number `factio.py`'s own history fingerprint records
 for every table (`"files": 61` in `watermark.json`'s `history_fingerprint`
 block, one `part-000.parquet` per monthly partition).
 
-An archive-4-years + incremental-13-months policy covers `4×12 + 13 = 61`
-months — the same number, because the policy is deliberately sized to span the
-whole history exactly once on first load. **Predicted partition count: 61**
-(plus one more for each additional month the live feed has advanced past
-2026-08-20 by the time you build this). Power BI's reported partition count
-after the first refresh should land at 61 or 62, confirming the archive and
-incremental windows together reconstruct exactly the physical partition
-layout already on disk — the alignment is the point, not a coincidence.
+An archive-5-years policy is sized to cover the whole history in one window —
+5 years back from today lands at or before 2021-08-21, so nothing ages out.
+The separate 13-month incremental setting is a trailing subset *inside* that
+same 5-year archive window, not a second period stacked in front of it — Power
+BI's "archive" is the total retention window, and "incremental" is just which
+part of it keeps re-refreshing. **Predicted partition count: 61** (one per
+calendar month of the 61-month history, plus one more for each additional
+month the live feed has advanced past 2026-08-20 by the time you build this).
+Power BI's reported partition count after the first refresh should land at 61
+or 62, confirming the archive window reconstructs exactly the physical
+partition layout already on disk — the alignment is the point, not a
+coincidence. (A 4-year archive would have been wrong: at 48 months against a
+61-month history, it would silently drop the oldest ~13 months of data from
+the model rather than just leaving them unrefreshed.)
 
 ---
 

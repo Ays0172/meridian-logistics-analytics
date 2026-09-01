@@ -25,7 +25,9 @@ week is worth a re-skim before you finish today.
 3. **Week 3**, how many KPIs does the measure library cover, and across how many
    domains?
 4. **Week 4**, which of the five dashboard pages is built to answer "is the
-   company healthy," and what real event does it visualize?
+   company healthy," and on which *other* page does the Rotterdam/LA
+   congestion event actually get its full visual (Day 27 deliberately keeps
+   only a one-line footnote on the health page itself — why)?
 5. **Week 5**, what does `.pbip`/TMDL source control let you do that a `.pbix`
    file can't, and what's the daily-refresh limit on Power BI Pro licensing?
 6. **Week 6**, state, without notes, the number that reconciles (or fails to
@@ -93,8 +95,10 @@ notes), or **Gap** (never actually got comfortable with this).
 
 **Week 4, the five dashboards**
 - [ ] Can name all five pages and which business question each answers.
-- [ ] Can explain how the Rotterdam/LA congestion story became a visual on the
-      executive page.
+- [ ] Can explain why the Rotterdam/LA congestion story's full visual lives on
+      the Ocean Liner page (Day 23), not the Executive Summary, and what the
+      Executive page carries instead (a one-line footnote, by deliberate
+      design per Day 27).
 - [ ] Can explain one UX decision from the Checkpoint 4 polish pass (a bookmark,
       a drillthrough, an accessibility fix).
 

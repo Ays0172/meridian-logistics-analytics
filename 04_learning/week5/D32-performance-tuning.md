@@ -59,16 +59,20 @@ aggregation entirely.
 **Raw timestamp columns, and the hidden tables they silently create.** Eight
 columns across three fact tables carry second-level `dateTime` precision:
 `FactWarehouseTask.TaskStartTs`/`TaskEndTs`, `FactContainerMove.EventTs`,
-`FactPortCall.PromisedEtaTs`/`AtaTs`/`AtdTs`/`BerthTs`/`UnberthTs`. Each one is
-close to unique per row — a timestamp to the second, across millions of rows,
-essentially never repeats. Left with Power BI's **Auto Date/Time** setting on
-(the default), each of these columns silently spawns its **own hidden
-calendar table** — the model's actual TMDL export currently carries
-**14 separate `LocalDateTable_*` tables**, one per date-like column that
-Auto Date/Time decided needed a hierarchy, each one duplicating a full
-`DATE(2021,1,1)`–`DATE(2026,12,31)` calendar in miniature. Fourteen redundant
-hidden calendars, each with its own Year/Quarter/Month/Day hierarchy, sitting
-alongside the one real, purpose-built `DimDate` this model already has.
+`FactPortCall.PromisedEtaTs`/`AtaTs`/`AtdTs`/`BerthTs`/`UnberthTs` — eight
+columns just from this list, and Auto Date/Time isn't limited to only these:
+it fires on *any* `Date`/`DateTime`-typed column a visual touches, so other
+date-typed dimension attributes (e.g. `DimCustomer.OnboardedDate`,
+`ScdValidFrom`/`ScdValidTo`) can trigger it too. Each one is close to unique
+per row — a timestamp to the second, across millions of rows, essentially
+never repeats. Left with Power BI's **Auto Date/Time** setting on (the
+default), each of these columns silently spawns its **own hidden calendar
+table** — a `LocalDateTable_*`, duplicating a full
+`DATE(2021,1,1)`–`DATE(2026,12,31)` calendar in miniature, with its own
+Year/Quarter/Month/Day hierarchy, sitting alongside the one real,
+purpose-built `DimDate` this model already has. Exactly how many you find in
+your own model depends on which date-typed columns you've actually touched in
+a visual so far — that's what Exercise 32.1 has you count.
 
 The fix is two-part, and Exercise 32.1 has you verify whether it's still
 outstanding: **turn Auto Date/Time off** (File → Options → Data Load →
@@ -131,14 +135,18 @@ where you actually decide this, not defer it again (Exercise 32.3).
 
 **A relationship bug already found and fixed, worth knowing about even
 though it's resolved:** `FactContainerMove` was originally joined to
-`DimDate` on its own surrogate key instead of `EventDateKey` — a relationship
-that *runs* without error and returns *some* number, just not one filtered by
-date the way every other fact table's relationship is. It was caught during
-the relationship audit that took the model from 81 to 108 relationships, and
-it is exactly the shape of bug Performance Analyzer will not find for you —
-it doesn't make a query slow, it makes a query wrong. Cardinality tuning and
-correctness auditing are different disciplines that happen to use some of the
-same tools.
+`DimDate` on its own surrogate key (`ContainerMoveKey`, a row-sequence
+identifier) instead of `EventDateKey` — a relationship that *runs* without
+error, but because `ContainerMoveKey` and `DimDate[DateKey]` don't share a
+value domain at all (a row number versus a `yyyymmdd` integer), it silently
+returns **zero rows on any date filter** rather than something merely
+mis-filtered. It was caught during the relationship audit that took the model
+from 81 to 108 relationships, and it is exactly the shape of bug Performance
+Analyzer will not find for you — it doesn't make a query slow, it makes a
+query wrong, and it fails *totally* rather than subtly, which is actually the
+easier version of this bug to catch once you know to look. Cardinality tuning
+and correctness auditing are different disciplines that happen to use some of
+the same tools.
 
 **Calculated columns versus measures.** A calculated column is computed once,
 per row, at refresh time, and stored — it adds directly to a table's on-disk
@@ -159,12 +167,13 @@ Predictions first, in `predictions.md`, every time.
 
 ### Exercise 32.1 — the Auto Date/Time audit (25 min)
 Open the model and count the actual `LocalDateTable_*` hidden tables present
-right now. Predict, before checking, whether the number matches the 14 found
-in the last TMDL export, is lower (already partly cleaned up), or higher
-(more raw date/timestamp columns added since). For each of the 8 raw
-timestamp columns, confirm whether a `*DateKey` sibling column already exists
-on the same table that could carry the `DimDate` relationship instead. Turn
-Auto Date/Time off, delete the resulting orphaned hidden tables, and confirm
+right now. Predict, before checking, whether the count will be exactly 8 (one
+per raw timestamp column named above), lower (you haven't touched all of them
+in a visual yet), or higher (Auto Date/Time also caught a date-typed dimension
+attribute like `OnboardedDate`) — then check and note which. For each of the 8
+raw timestamp columns, confirm whether a `*DateKey` sibling column already
+exists on the same table that could carry the `DimDate` relationship instead.
+Turn Auto Date/Time off, delete the resulting orphaned hidden tables, and confirm
 report visuals that used a `LocalDateTable`'s hierarchy still work once
 repointed at `DimDate`.
 

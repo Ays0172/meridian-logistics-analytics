@@ -112,28 +112,38 @@ Incremental:  the trailing M months            → refreshed every scheduled run
 ```
 
 Given the history spans exactly 5 years (`2021-08-21 → 2026-08-20`) and the
-live feed adds roughly one day at a time going forward:
+live feed adds roughly one day at a time going forward, and given that Power
+BI's "archive" setting (**"Store rows in the last..."**) is the *total*
+retention window, not an additional period stacked in front of the
+incremental one — the incremental window is a trailing subset **inside** the
+archive window, refreshed every run, while the rest of the archive window is
+loaded once and then left alone:
 
-- **Archive period: 4 years.** The oldest four years of frozen history never
-  change — `LIVE_FEED.md` is explicit that nothing in the live feed's code
-  path can touch a history file — so there is zero reason to ever re-read
-  them after the first load.
+- **Archive period: 5 years.** Set to cover the entire frozen history, so
+  nothing ages out of the model — `LIVE_FEED.md` is explicit that nothing in
+  the live feed's code path can touch a history file, so there is zero reason
+  to ever re-read the older rows inside this window after their first load,
+  but there is also no reason to drop them: a 4-year archive would silently
+  exclude the oldest ~12 months of history from the model entirely, which is
+  data loss dressed up as a refresh policy.
 - **Incremental period: 13 months.** The most recent full year plus the
-  current month, refreshed every scheduled run. Wider than "just this month"
-  on purpose: it absorbs a `--redo` of a day inside the last few weeks (Day
-  29's Exercise 29.1 pattern) without needing a manual partition-boundary
-  adjustment, and it comfortably covers `FactInventorySnapshot`'s slower
-  cadence — its snapshots run weekly for anything older than the most recent
-  12 months and daily only inside that window (Day 12), so a 13-month
-  incremental range is what actually guarantees every daily-cadence snapshot
-  currently in play gets refreshed.
+  current month, refreshed every scheduled run — a trailing subset of the
+  5-year archive window above, not an additional period beyond it. Wider than
+  "just this month" on purpose: it absorbs a `--redo` of a day inside the last
+  few weeks (Day 29's Exercise 29.1 pattern) without needing a manual
+  partition-boundary adjustment, and it comfortably covers
+  `FactInventorySnapshot`'s slower cadence — its snapshots run weekly for
+  anything older than the most recent 12 months and daily only inside that
+  window (Day 12), so a 13-month incremental range is what actually
+  guarantees every daily-cadence snapshot currently in play gets refreshed.
 
 This means the partition boundary in Power BI's incremental refresh dialog is
-`RangeStart = <today> minus 4 years, floored to the 1st of the month` and
+`RangeStart = <today> minus 5 years, floored to the 1st of the month` and
 `RangeEnd = today`, applied against the table's primary date key from the
 list above — wrapped as `DimDate`-equivalent `Date` values in Power Query
 (`Date.From`), which is the format Power BI's `RangeStart`/`RangeEnd`
-parameters expect.
+parameters expect. The 13-month incremental setting is a *separate* dialog
+value inside that same window, not a second `RangeStart`.
 
 ### Full refresh vs incremental refresh, and where each still runs
 
@@ -155,14 +165,15 @@ Predictions first, in `predictions.md`, every time.
 ### Exercise 30.1 — build the policy for `FactWarehouseTask` (25 min)
 Configure incremental refresh on `FactWarehouseTask` in Desktop:
 `RangeStart`/`RangeEnd` filter on `TaskDateKey` (converted to a `Date`),
-archive period 4 years, incremental period 13 months. Predict, before you
+archive period 5 years (the whole history — see why a shorter archive window
+silently drops data, above), incremental period 13 months. Predict, before you
 apply it, how many monthly partitions this produces given the table's history
 span — then check the partition count Power BI reports after the first
 refresh.
 
 ### Exercise 30.2 — the `year=1900` trap, reasoned through (20 min)
 Without building anything, answer in writing: if you applied the exact same
-policy (archive 4 years / incremental 13 months) to `FactPortCall` on
+policy (archive 5 years / incremental 13 months) to `FactPortCall` on
 `AtaDateKey`, would a port call that departs today but has not yet arrived
 ever get refreshed once it eventually does arrive? Trace through what
 partition it lives in *before* arrival, and what has to happen for it to move
@@ -192,7 +203,7 @@ business day. Write the actual clock times (UTC) you'd configure.
 
 ## Ship
 
-Apply incremental refresh policies (archive 4 years / incremental 13 months,
+Apply incremental refresh policies (archive 5 years / incremental 13 months,
 primary-date-key partitioned per the table above) to all nine live-fed fact
 tables. Document the choice of partition column per table — including the
 `FactPortCall`/`AtaDateKey` sentinel caveat from Exercise 30.2 — in a new

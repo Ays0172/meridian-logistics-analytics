@@ -1,10 +1,11 @@
 MERIDIAN LOGISTICS ANALYTICS - package manifest
-Generated: 2026-08-21
+Generated: 2026-09-01 (file listing refreshed; SHA-256/byte counts recomputed for every tracked file)
 
 Every file shipped in the archive. 02_data/raw/ is NOT shipped - it is rebuilt
-byte-identically by setup_all.py from SEED = 20260824. Verified by building the
-unpacked archive from scratch and comparing all 699 partitions against the
-reference build: 699 identical, 0 different.
+byte-identically by setup_all.py from SEED = 20260824. Verified at original
+packaging (21 August 2026) by building the unpacked archive from scratch and
+comparing all 699 partitions against the reference build: 699 identical, 0
+different.
 
 Verify integrity after transfer:
   Windows : Get-FileHash -Algorithm SHA256 <file>
@@ -12,7 +13,8 @@ Verify integrity after transfer:
 
 SHA-256 (first 16)      BYTES  PATH
 ------------------------------------------------------------------------------
-605f2ae7b4e5e057          255  .gitignore
+5f5c989aab3f0bf1        1,684  .github/workflows/live-feed.yml
+d6a2c1211cb504b3          414  .gitignore
 aa36081846ceda42        3,694  00_docs/ADR/ADR-001-voyage-rotation-length.md
 7e523770d31faaf1        5,781  00_docs/ADR/ADR-002-build-determinism.md
 faacd4c255c7e562      116,293  00_docs/KPI_DICTIONARY.md
@@ -20,20 +22,17 @@ faacd4c255c7e562      116,293  00_docs/KPI_DICTIONARY.md
 4c15404e02cbcf1f        8,112  00_docs/LIVE_FEED.md
 60c750a3f3ac84c1       30,170  00_docs/SCHEMA_CONTRACT.md
 e142f2543d643270       24,908  00_docs/start-here.html
-3ed731b65d06150c           37  01_generator/.pytest_cache/.gitignore
-37dc88ef9a0abedd          191  01_generator/.pytest_cache/CACHEDIR.TAG
-73fd6fccdd802c41          302  01_generator/.pytest_cache/README.md
-449f7ef5249b8536        1,419  01_generator/.pytest_cache/v/cache/nodeids
 353ec1f9415949d9       19,475  01_generator/audit.py
 f90630ba9cda41ed        3,964  01_generator/build_dims.py
 1930266185470b27        6,992  01_generator/build_facts.py
+059e81f5536128b3        1,864  01_generator/build_manifest.py
 2a07f5b323741042        2,228  01_generator/config/scale.yaml
 0da86d2ed5eb3c47       17,036  01_generator/crosscheck.py
 f2a1e71c4ccff548       21,721  01_generator/live_feed.py
 8639478ce04e5547          258  01_generator/meridian/__init__.py
 cf80c35e8d93ad68        4,841  01_generator/meridian/config.py
 f58a47dd85eb069c      130,555  01_generator/meridian/dims.py
-07ca5845ae648e04       49,576  01_generator/meridian/dims_manifest.json
+06d2c232d60a6d7f       49,576  01_generator/meridian/dims_manifest.json
 5102daa35752a2e7        7,815  01_generator/meridian/factio.py
 2478218e201c2e88       54,365  01_generator/meridian/facts_core.py
 035cba68f95a084b       31,156  01_generator/meridian/facts_land.py
@@ -44,11 +43,13 @@ db34144ad249aca2        6,892  01_generator/revise_voyage_rotations.py
 1318126068a6142e        4,923  01_generator/tests/test_determinism.py
 07255df60d660ccc        8,405  01_generator/tests/test_util.py
 a15ce22cc78ebfae       12,472  01_generator/validate.py
-58c8e5f4f1c91293       10,534  02_data/_validation/audit_report.json
-1781c33fa3cc0dd7          357  02_data/_validation/build_timings.json
-f83c80355f3a5ec0        7,600  02_data/_validation/crosscheck_report.json
+c0ef0d03033d62bc       19,540  02_data/_state/manifest.json
+d87e979577b4e15c       29,088  02_data/_state/watermark.json
+24135d6ad02c3a0a       10,534  02_data/_validation/audit_report.json
+9fcc937819d18728          356  02_data/_validation/build_timings.json
+b887072360d605e4        7,602  02_data/_validation/crosscheck_report.json
 531fad9157f2bc31       10,833  02_data/_validation/facts_manifest.json
-801726c23b7c8267        2,454  02_data/_validation/integrity_report.json
+cb11aba975795513        2,454  02_data/_validation/integrity_report.json
 cee69bd19e47845a           43  02_data/curated/.gitkeep
 4650a87eeedc7ab0       15,488  02_data/reference/DimCarrier.csv
 6a643690af841de1        3,698  02_data/reference/DimChargeType.csv
@@ -70,6 +71,8 @@ b616038345323253       28,199  02_data/reference/DimVessel.csv
 3fa643e4981f389c    1,618,861  02_data/reference/DimVoyage.csv
 be6013a96a3c7c80        3,496  02_data/reference/DimWarehouse.csv
 cee69bd19e47845a           43  03_powerbi/.gitkeep
+fbb6c6497b918e6e        8,401  03_powerbi/data_quality_findings.md
+44f006280f58ef7c        8,437  04_learning/CURRICULUM_ROADMAP.md
 0d48a02ab412b7bc        9,831  04_learning/solutions/week1/D01-solutions.md
 f17d899d747c9322        8,569  04_learning/solutions/week1/D02-solutions.md
 402bde1aeb7b7e2e        9,945  04_learning/solutions/week1/D03-solutions.md
@@ -81,6 +84,37 @@ b3d8fa1960833768        7,585  04_learning/solutions/week2/D08-solutions.md
 d3359ce95352e602        8,037  04_learning/solutions/week2/D09-solutions.md
 42713eb8e1bd3641       10,387  04_learning/solutions/week2/D10-solutions.md
 bceff319ce697686       12,939  04_learning/solutions/week2/D11-solutions.md
+525a4cc047fdd739        7,176  04_learning/solutions/week2/D12-solutions.md
+f3e94efdc74634d7        8,490  04_learning/solutions/week2/D13-solutions.md
+13e4a4c8ab5f4d2a        5,783  04_learning/solutions/week2/D14-solutions.md
+ffb778b2ba2c483f        7,618  04_learning/solutions/week3/D15-solutions.md
+bd39e5e15994e42a        9,922  04_learning/solutions/week3/D16-solutions.md
+2c2912e7b7e8ef4d        8,828  04_learning/solutions/week3/D17-solutions.md
+38c4dba7086e84b0       10,617  04_learning/solutions/week3/D18-solutions.md
+16f47dfeb90fbf80        9,363  04_learning/solutions/week3/D19-solutions.md
+626a782fa03ffda4        7,978  04_learning/solutions/week3/D20-solutions.md
+9d1682b2ccc60667       11,523  04_learning/solutions/week3/D21-solutions.md
+f33be9f181c3632a        5,409  04_learning/solutions/week4/D22-solutions.md
+8680b1a82bd4d24c        5,580  04_learning/solutions/week4/D23-solutions.md
+e63c3f9fb955d842        4,627  04_learning/solutions/week4/D24-solutions.md
+cbd80430a84525a0        4,174  04_learning/solutions/week4/D25-solutions.md
+8daec128554e92e9        4,657  04_learning/solutions/week4/D26-solutions.md
+2e1fbf05a4494bf7        5,078  04_learning/solutions/week4/D27-solutions.md
+7ebc26ec47c826d9        7,031  04_learning/solutions/week4/D28-solutions.md
+13c2c70dc3481e7b        7,992  04_learning/solutions/week5/D29-solutions.md
+22e26e79aa7f1567        6,860  04_learning/solutions/week5/D30-solutions.md
+5105b3bf68c4cd3a        8,041  04_learning/solutions/week5/D31-solutions.md
+5d9c89c0354a2dca        9,374  04_learning/solutions/week5/D32-solutions.md
+93f2eae5e5487583        5,152  04_learning/solutions/week5/D33-solutions.md
+c686772b0c1b7813        7,560  04_learning/solutions/week5/D34-solutions.md
+1fd569ba98fb86bf        3,812  04_learning/solutions/week5/D35-solutions.md
+a4ef42b31f7655d5        8,328  04_learning/solutions/week6/D36-solutions.md
+4fffb8cd549e927c        9,556  04_learning/solutions/week6/D37-solutions.md
+56dc7774c9dbff5b        5,668  04_learning/solutions/week6/D38-solutions.md
+7333c23e2f63146c        5,643  04_learning/solutions/week6/D39-solutions.md
+05e7b63718bce7ce        4,963  04_learning/solutions/week6/D40-solutions.md
+bf3c33ecc69c20ec       12,065  04_learning/solutions/week6/D41-solutions.md
+32918e059be2a13b        5,824  04_learning/solutions/week6/D42-solutions.md
 28d2f536fe2f5783       28,701  04_learning/week1/D01-domain-foundations.md
 e2005ffad703c4fd       24,047  04_learning/week1/D02-code-systems.md
 f5065043eec737a3       22,919  04_learning/week1/D03-dimensional-modelling.md
@@ -92,16 +126,48 @@ f0017b30caf4ff87       14,202  04_learning/week1/D07-checkpoint-1.md
 19bff96502177e95       10,797  04_learning/week2/D09-calculate-and-the-averaging-trap.md
 2a5a25ba720da85c       10,010  04_learning/week2/D10-iterators-variables-weighted.md
 eef947fa55f0eefa       11,960  04_learning/week2/D11-time-intelligence.md
+aceeeb8ca93e9eeb       10,176  04_learning/week2/D12-snapshot-and-accumulating-patterns.md
+71e1ddb14e65cf0f       11,118  04_learning/week2/D13-treatas-summarize-abc.md
+2383441c4490fb7f        8,349  04_learning/week2/D14-calculation-groups-and-checkpoint-2.md
 f7dc71a40f7b731c        5,020  04_learning/week2/_reference_answers.json
 c7b6f42265635f55       14,048  04_learning/week2/build_reference_answers.py
 cee69bd19e47845a           43  04_learning/week3/.gitkeep
+0c012d8830f058f4       19,552  04_learning/week3/D15-kpi-to-dax-method.md
+95b858c1f7c08606       12,325  04_learning/week3/D16-ocean-liner-measures.md
+9cf5db98d575a2f1       13,781  04_learning/week3/D17-landside-measures.md
+cec1b880a4595331       13,100  04_learning/week3/D18-warehouse-inventory-measures.md
+c911becf6e0de0ca       10,649  04_learning/week3/D19-air-lcl-measures.md
+5c9f72cc96280883       12,947  04_learning/week3/D20-cross-cutting-measures.md
+7b0a722332419ace        9,143  04_learning/week3/D21-checkpoint-3.md
 cee69bd19e47845a           43  04_learning/week4/.gitkeep
+496b00285db392ab       13,746  04_learning/week4/D22-report-design-shell.md
+59c1513f0f0c12f3       10,469  04_learning/week4/D23-ocean-liner-dashboard.md
+260f88d40426bb12        8,827  04_learning/week4/D24-landside-dashboard.md
+252b642f18ceabc3        8,478  04_learning/week4/D25-warehouse-inventory-dashboard.md
+17610fc0f4e44595        8,560  04_learning/week4/D26-air-lcl-dashboard.md
+3b3a19084abc3a7e       10,644  04_learning/week4/D27-executive-summary-dashboard.md
+ef928f993443041a        8,403  04_learning/week4/D28-checkpoint-4-ux-pass.md
 cee69bd19e47845a           43  04_learning/week5/.gitkeep
+fec17e5d5b7b8273       15,870  04_learning/week5/D29-github-actions-live-feed.md
+88aa06072e860b6e       11,028  04_learning/week5/D30-scheduled-refresh-incremental.md
+f9a94b3cc31831f0       13,978  04_learning/week5/D31-row-level-security.md
+4f646a0d5c746d25       12,850  04_learning/week5/D32-performance-tuning.md
+24e8b03ce42f0670       10,398  04_learning/week5/D33-deployment-pipeline-tmdl.md
+899201ae39e344e5       11,570  04_learning/week5/D34-landmine-audit-checklist.md
+2e85a5f8f1209c36        6,871  04_learning/week5/D35-checkpoint-5.md
 cee69bd19e47845a           43  04_learning/week6/.gitkeep
+4bcf2a2b0601ceeb       16,233  04_learning/week6/D36-sql-primer-duckdb.md
+abb3eb4ce6957180       12,407  04_learning/week6/D37-case-drills.md
+1b43e63e7a40a173        9,892  04_learning/week6/D38-pl300-exam-mapping.md
+b7021da81a734f69       17,194  04_learning/week6/D39-star-stories.md
+dbc8b38b554b043f       10,530  04_learning/week6/D40-portfolio-packaging.md
+e1cea0f7c52889d3        7,397  04_learning/week6/D41-mock-interview.md
+2b31e0757f4a3d7e       10,124  04_learning/week6/D42-capstone-retrospective.md
 cee69bd19e47845a           43  05_sql/.gitkeep
 cee69bd19e47845a           43  06_portfolio/.gitkeep
-7314e00d85ba622c       17,907  README.md
+e5773004400635cd       10,484  CLAUDE.md
+f6fc8d8d3310477f       20,829  README.md
 e253f68357398ce2        2,141  SETUP.ps1
 1da3d13ee0c2ad57        4,817  setup_all.py
 ------------------------------------------------------------------------------
-91 files, 6,393,681 bytes (6.4 MB)
+156 files, 7,055,613 bytes (7.1 MB)

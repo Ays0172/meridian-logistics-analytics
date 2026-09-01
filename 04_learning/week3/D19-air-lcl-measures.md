@@ -186,9 +186,12 @@ dataset, restricting the comparison to LCL and air only as the watch-out demands
 
 ## Ship
 
-`08 Air & LCL` now holds all 9 KPIs. All three chargeable-weight/revenue-ton
-measures described with which rule population they belong to; `Yield per kg`'s
-naive twin marked `[DO NOT USE]`.
+`08 Air & LCL` now holds all 9 KPIs, each in its function subfolder per Day 15
+(`WT` → Volume & Mix, `TRN` → Rate & Utilisation, `REV`/`CST`/`SLS` → Revenue &
+Cost — Air & LCL has no Quality & Service bucket, no code in §4 carries a
+`QLT`/`SVC`/`CAR`/`SUS` segment). All three chargeable-weight/revenue-ton measures
+described with which rule population they belong to; `Yield per kg`'s naive twin
+marked `[DO NOT USE]`.
 
 ```
 git add .
@@ -205,9 +208,9 @@ What clicked / what did not / what to re-ask.
 
 ## Exit criteria
 
-- [ ] All 9 Air & LCL KPIs exist in `08 Air & LCL`, each described with its
-      `[KpiCode]` and, for the three weight/revenue-ton measures, which rule
-      population it belongs to.
+- [ ] All 9 Air & LCL KPIs exist in `08 Air & LCL`, each in its function subfolder
+      per Day 15, described with its `[KpiCode]` and, for the three
+      weight/revenue-ton measures, which rule population it belongs to.
 - [ ] `Yield per kg` and its naive twin both exist and you can state the gap and
       why it is the size it is.
 - [ ] You built the deliberate 1:1000-on-air error and can state the multiple by

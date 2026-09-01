@@ -23,7 +23,7 @@
    checker that validates row counts, key uniqueness, or referential
    integrity within a table has nothing to say about which column a
    cross-table relationship happens to be drawn on.
-5. Archive 4 years / incremental 13 months, partitioned on each table's
+5. Archive 5 years / incremental 13 months, partitioned on each table's
    primary date key (`BookingDateKey`, `ShipmentDateKey`,
    `BookingConfirmedDateKey`, `EventDateKey`, `AtaDateKey`, `ChargeDateKey`,
    `ActualPickupDateKey`, `TaskDateKey`, `SnapshotDateKey`) — chosen because
@@ -35,15 +35,13 @@
 ## Exercise 33.1 — do the actual export
 
 **Prediction:** the export should show **108** relationship blocks — the
-audited, current figure from `data_quality_findings.md` — not the stale
-backup's 82 (which is itself close to the "was 81" starting count that
-audit measured against, confirming the backup really is a pre-fix snapshot).
-`grep -c "^relationship " relationships.tmdl` against the fresh export is the
-direct check. If your count lands closer to 82, the export was taken from a
-version of the model that hasn't picked up the relationship audit's fixes —
-worth re-opening the live model and confirming those 27 additional
-role-playing relationships and the `FactContainerMove` rewiring are actually
-present before exporting again.
+audited, current figure `data_quality_findings.md` §3 states after its fixes
+("108 total, was 81"). `grep -c "^relationship " relationships.tmdl` against
+the fresh export is the direct check. If your count lands closer to 81, the
+export was taken from a version of the model that hasn't picked up the
+relationship audit's fixes — worth re-opening the live model and confirming
+those 27 additional role-playing relationships and the `FactContainerMove`
+rewiring are actually present before exporting again.
 
 ---
 
@@ -82,7 +80,7 @@ investigating before merging, not cosmetic noise to wave away.
 
 **What a reviewer could have caught from the diff alone:** the original,
 buggy relationship's TMDL block would show
-`fromColumn: FactContainerMove.FactContainerMoveKey` joined to
+`fromColumn: FactContainerMove.ContainerMoveKey` joined to
 `toColumn: DimDate.DateKey` — a surrogate primary key column joined directly
 to a date dimension's key. Any reviewer who knows this model's convention
 (surrogate keys are `<Table>Key`, date foreign keys are `<Something>DateKey`

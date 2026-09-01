@@ -132,7 +132,7 @@ once — `FactShipment` alone has `LocationKeyOrigin`, `LocationKeyDestination`,
 active relationship between any two tables at a time. That means for any fact
 table with multiple location roles, at most one of those foreign keys has an
 **active** relationship to `DimLocation` — the rest are necessarily inactive,
-the same role-playing-dimension shape Day 9 introduced `USERELATIONSHIP` for.
+the same role-playing-dimension shape Day 5 introduced `USERELATIONSHIP` for.
 
 **This is the sharp edge, and it is real, not hypothetical: an RLS filter on
 `DimLocation` only propagates through whichever relationship is active.** If
@@ -183,7 +183,7 @@ a role member without logging in as anyone else. It is necessary but not
 sufficient: View As applies the role's filters and shows you the *result*,
 but it will not tell you *which relationship* carried (or failed to carry)
 the filter to a given visual — that diagnosis is on you, using what you know
-about active/inactive relationships from Day 9 and this lesson. A role that
+about active/inactive relationships from Day 5 and this lesson. A role that
 "looks right" in a summary card can still be leaking an unrestricted number
 through one specific measure that happens to touch an inactive path — the
 only way to catch that is to deliberately build a visual against each

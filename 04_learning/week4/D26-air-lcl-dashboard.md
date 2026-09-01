@@ -2,7 +2,8 @@
 
 > Time: 3 h · Spaced recall 10 min · Concept 40 min · Drill 85 min · Ship 30 min · Log 15 min
 
-Page 4, the smallest domain (9 KPIs) and the one with the most conceptually
+Page 4, the second-smallest domain (9 KPIs, ahead only of Cross-cutting's 7) and
+the one with the most conceptually
 dangerous unit-conversion traps in the whole dictionary: three different
 chargeable-weight rules (air 1:6000, air 1:5000, ocean LCL 1:1000) that look like
 variations on one idea and are not. This page's job is commercial, not

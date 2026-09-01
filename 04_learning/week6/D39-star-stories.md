@@ -16,9 +16,10 @@ STAR format, so they're ready to say out loud rather than reconstructed live.
 
 1. Why does averaging `FactTarget`'s own actuals across lanes reproduce the exact
    same error class Day 9 taught you to distrust in DAX measures (Day 13/36/37)?
-2. What is `-1` reserved for in this project's conventions, and what is the
-   equivalent convention for text columns that should read as "no value" (README
-   §7, and today's Concept)?
+2. What is `-1` reserved for in this project's conventions, and its own text
+   label per README §7? Separately — for a *real, non-unknown-member* row whose
+   text attribute genuinely doesn't apply, what should the column hold instead
+   of a placeholder string (Story 2, below)?
 3. Why does `FactInventorySnapshot[OnHandValueUsd]` become roughly 500× too large
    under a naive `SUM` with no date filter (Day 12)?
 4. What does `EventDateKey` mean on `FactContainerMove`, versus the table's own
@@ -42,9 +43,10 @@ meant every date-filtered container report had been silently returning zero rows
 and after the fix the container dashboards started reflecting reality for the
 first time").
 
-The four stories below all come from real work on this project's own model: three
-from building it, one from a live cleanup pass on the finished semantic model this
-session. They share a structure worth noticing before you write your own version:
+The four stories below all come from real work on this project's own model: two
+from a live data-quality cleanup pass on the finished semantic model (Stories 1
+and 2), two from building it earlier in the curriculum (Story 3, Day 12; Story 4,
+Day 13). They share a structure worth noticing before you write your own version:
 each one is a case where the model *looked* fine (no error, no crash, a plausible
 number) and was actually wrong, which is the single most interview-relevant shape
 of bug in analytics work. Lead with that framing in your own delivery: "the
@@ -121,46 +123,53 @@ correct the whole time, only the relationship underneath them was wrong.
 problems (one cosmetic, one a real filter-logic trap), and fixed only the one
 that mattered, after checking which was which."
 
-**Situation.** Twelve columns across several dimension tables carried the literal
-text string `"#NA"` instead of a real label. At first glance this looked like one
+**Situation.** Seventeen columns across nine dimension tables carried the literal
+text string `"#NA"` instead of a real value. At first glance this looked like one
 bug to fix uniformly.
 
-**Task.** Determine whether `"#NA"` was doing the job the schema contract intends
-(marking the deliberate `-1` unknown-member row: `DimCarrier[AllianceName] =
-"#NA"` on the single synthetic "Unknown" carrier row is correct and expected, per
-this project's own conventions) or whether it had also leaked into real,
-populated rows as a stand-in for a genuine missing value, which is a materially
-different and more dangerous problem.
+**Task.** Determine, column by column, whether `"#NA"` was doing the job the
+schema contract intends (marking the deliberate `-1` unknown-member row: e.g.
+`DimVessel[FuelType] = "#NA"` on the single synthetic "Unknown" vessel row is
+expected, per this project's own convention) or whether it had also leaked into
+real, populated rows as a stand-in for a genuine missing value, which is a
+materially different and more dangerous problem — and each category still needed
+its own fix, not the same one.
 
-**Action.** I checked each of the twelve columns' `"#NA"` rows individually rather
-than assuming uniformity. Seven behaved exactly as designed: `"#NA"` appeared only
-on each dimension's single `-1` unknown-member row, matching the project's own
-documented convention exactly, nothing to fix. Five columns
+**Action.** I checked each of the seventeen columns' `"#NA"` rows individually
+rather than assuming uniformity. Twelve, across seven tables, behaved as
+designed: `"#NA"` appeared only on each dimension's single `-1` unknown-member
+row — correct in principle, but still an ugly, code-like label to surface in a
+report ("Carrier: #NA" instead of "Carrier: Unknown"), so I relabelled those
+twelve to `"Unknown"` in Power Query, a pure cosmetic fix that changes no
+filtering behaviour. Five columns, across four tables
 (`DimCommodity[ImdgClass]`, `DimCommodity[UnNumber]`, `DimCarrier[AllianceName]`,
-`DimLocation[IataCode]`, `DimMilestone[EdifactMessageType]`) had `"#NA"` on
+`DimLocation[IataCode]`, `DimMilestone[EdifactMessageType]`), had `"#NA"` on
 **many** real, non-unknown-member rows: a text placeholder standing in for what
-should have been a true `BLANK()`. That's the dangerous version: a DAX filter like
-`FactShipment.Commodity[ImdgClass] <> BLANK()`, written by anyone reasonably
+should have been a true `BLANK()`. That's the dangerous version: a DAX filter
+like `FactShipment.Commodity[ImdgClass] <> BLANK()`, written by anyone reasonably
 assuming that column follows normal null conventions, silently returns **every**
 row, including the ones that are genuinely not dangerous goods, because nothing
 in that column is ever actually blank: it's always either a real IMDG class or
-the string `"#NA"`. I fixed the five genuine cases with `Table.TransformColumns`
-steps in Power Query, replacing `"#NA"` with `null` conditionally, deliberately
-leaving the seven cosmetic, unknown-member-row cases untouched, since "fixing"
-those would have broken the documented `-1`/`"#NA"`/"Unknown" convention this
-whole model relies on elsewhere.
+the string `"#NA"`. I fixed those five with `Table.TransformColumns` steps in
+Power Query, replacing `"#NA"` with `null` conditionally — a different fix from
+the twelve cosmetic columns, because a genuinely-blank case and a mislabelled
+unknown-member case need different treatment even though they present
+identically in a column preview.
 
-**Result.** Five columns now support correct `<> BLANK()` filtering; any measure
-or visual built on them from this point forward behaves the way its author would
-reasonably expect. Just as importantly, I did **not** touch the seven cosmetic
-cases, avoiding a second bug (breaking the unknown-member convention) in the
-process of fixing the first one.
+**Result.** All seventeen columns are fixed, but not identically: the five
+structural cases now support correct `<> BLANK()` filtering, so any measure or
+visual built on them from this point forward behaves the way its author would
+reasonably expect; the twelve cosmetic cases now display a real label instead of
+a placeholder string, without changing any filter's behaviour. Treating all
+seventeen the same way — either "fix them all like the dangerous ones" or "leave
+them all alone because most are cosmetic" — would have been wrong in both
+directions.
 
 **Likely follow-ups:**
 - *"How would you have found this without already knowing where to look?"* Audit
   every text placeholder column with a `DISTINCT`/value-count query before trusting
-  any of them uniformly; the mistake to avoid is assuming all twelve columns share
-  one root cause just because they share one placeholder string.
+  any of them uniformly; the mistake to avoid is assuming all seventeen columns
+  share one root cause just because they share one placeholder string.
 - *"What would a downstream symptom of the un-fixed version have looked like?"*
   Not a crash. A dangerous-goods exposure report, or a customs-documentation
   completeness check, that silently includes rows it should have excluded: the

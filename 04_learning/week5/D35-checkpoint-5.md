@@ -32,9 +32,11 @@ Closed book except your predictions log. Without opening any file, write down:
 
 1. `live-feed.yml`'s cron schedule, in both UTC and your local time, and the
    three directories it commits.
-2. The RLS DAX filter expression for both roles you built on Day 31, including
-   the `TREATAS`/`USERELATIONSHIP` piece that makes the second one actually work
-   across the inactive relationship.
+2. The RLS DAX filter expression for both roles you built on Day 31 (`Sales -
+   APAC`'s plain filter, and `Region - Americas`'s added `TREATAS` rule that
+   closes the `FactTarget` gap), and why `USERELATIONSHIP` does **not** appear
+   anywhere in either role — what Day 31 found instead when it tried to use an
+   inactive relationship to extend a role's reach.
 3. The incremental refresh policy's RangeStart/RangeEnd parameter values and
    which date column they bind to.
 4. One VertiPaq anti-pattern Day 32 found in this specific model, and its fix.
@@ -84,8 +86,11 @@ box needs a one-line note: fix now, or a named future day.
 
 ### RLS re-test
 - [ ] Re-run both roles' View As tests from Day 31, including the specific
-      inactive-relationship case that failed before `USERELATIONSHIP` (or the
-      dedicated `FactTarget` rule) was added.
+      `FactTarget` case that leaked unrestricted data before the dedicated
+      `TREATAS` rule was added, and confirm the inactive-relationship leak
+      Day 31 documented as a known limitation on other tables is still
+      correctly logged, not silently "fixed" by something that doesn't touch
+      it.
 - [ ] Confirm a role with no matching rows (a `TradeRegion` or customer with
       zero visible data) shows a genuinely empty report, not an error and not
       an unfiltered fallback to everything.
