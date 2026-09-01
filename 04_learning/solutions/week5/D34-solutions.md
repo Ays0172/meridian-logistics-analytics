@@ -65,7 +65,7 @@ union would silently misalign).
 ## Exercise 34.2 — #1 and #7, checking whether they were even built
 
 **#1, fact side.** `FactShipment[VolumeCbm]`: **0.0% true nulls** across
-493,608 rows. `FactPortCall[RevisedEtaDateKey]`: **0.0% true nulls**, but
+491,400 rows. `FactPortCall[RevisedEtaDateKey]`: **0.0% true nulls**, but
 **55.76% hold the `-1` sentinel** — a different thing entirely, and the
 project's own documented convention (README §7: not-yet-happened dates hold
 `-1`, never `BLANK()`) for a column that simply hasn't been revised yet, not

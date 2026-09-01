@@ -144,15 +144,19 @@ Measured directly against `02_data/raw` and `02_data/reference`:
 | `DimCustomer[CustomerCode]` | 4,171 | **3,200** | 76.7% |
 | `DimSku[SkuKey]` | 12,000 | **12,000** | 100% |
 | `FactShipment[Revenue_usd]` | 491,400 | **488,207** | 99.35% |
-| `FactBooking[BookingNo]` | 575,881 | **573,415** | 99.57% |
+| `FactBooking[BookingNo]` | 575,881 | **575,569** | 99.95% |
 | `FactWarehouseTask[TaskStartTs]` | 740,136 | **639,602** | 86.4% |
+
+(`BookingNo`'s gap of 312 between row count and distinct count is not noise -
+it's exactly landmine #2, `DUPLICATE_BOOKING_REFS = 312`, Day 34's territory -
+312 `BookingNo` values each appearing on more than one row.)
 
 **Ranked ascending by absolute cardinality (the number that actually drives
 VertiPaq dictionary size):** `CustomerCode` (3,200) < `SkuKey` (12,000) <
-`Revenue_usd` (488,207) < `BookingNo` (573,415) < `TaskStartTs` (639,602).
+`Revenue_usd` (488,207) < `BookingNo` (575,569) < `TaskStartTs` (639,602).
 
 The instructive surprise: `TaskStartTs` is **less** unique per row than
-either `BookingNo` or `Revenue_usd` (86.4% vs. ~99%), yet has the **largest**
+either `BookingNo` or `Revenue_usd` (86.4% vs. ~99%+), yet has the **largest**
 absolute dictionary of the five, because `FactWarehouseTask` simply has more
 rows to draw distinct values from. **Absolute cardinality, not
 per-row uniqueness ratio, is what you rank by** — a column that's "only" 86%
