@@ -15,9 +15,12 @@ for your own Part C/D, which are the two sections most tempting to soften.
    five time-intelligence variants" multiplication problem.
 3. 72 KPIs across 5 domains (Ocean liner, Landside, Warehouse & inventory, Air &
    LCL, Cross-cutting).
-4. The Executive/cross-cutting page (Day 27); it visualizes the Rotterdam/LA
-   nine-week congestion event and the gap between the network-wide headline and
-   the two crisis ports' real performance.
+4. The Executive/cross-cutting page (Day 27) answers "is the company healthy."
+   The Rotterdam/LA congestion event's full visual (the combo chart, the shaded
+   window, the callout) lives on the **Ocean Liner** page instead (Day 23) —
+   Day 27 deliberately keeps only a one-line footnote on the SCOR Reliability
+   row of the Executive page, reasoning that duplicating the full callout
+   across two pages would cost more in page-purpose clarity than it gains.
 5. `.pbip`/TMDL gives a diffable, mergeable, code-reviewable text representation
    of the model; Power BI Pro allows 8 scheduled refreshes/day, PPU allows 48.
 6. `FactTarget`'s stored actual reads 74.71%; the recomputed, correctly-bridged

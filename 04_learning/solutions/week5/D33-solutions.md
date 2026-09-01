@@ -80,7 +80,7 @@ investigating before merging, not cosmetic noise to wave away.
 
 **What a reviewer could have caught from the diff alone:** the original,
 buggy relationship's TMDL block would show
-`fromColumn: FactContainerMove.FactContainerMoveKey` joined to
+`fromColumn: FactContainerMove.ContainerMoveKey` joined to
 `toColumn: DimDate.DateKey` — a surrogate primary key column joined directly
 to a date dimension's key. Any reviewer who knows this model's convention
 (surrogate keys are `<Table>Key`, date foreign keys are `<Something>DateKey`

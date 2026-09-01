@@ -50,7 +50,7 @@ domain (not every domain uses all four function buckets — see Day 15).
 | D24 | Landside dashboard | Page 2 |
 | D25 | Warehouse & Inventory dashboard | Page 3 |
 | D26 | Air & LCL dashboard | Page 4 |
-| D27 | Executive / cross-cutting summary — the "what would you put in front of a CFO" page, drilling through into the 4 domain pages; this is also where the Rotterdam/LA congestion story (README §6) becomes a visual | Page 5 (exec summary) |
+| D27 | Executive / cross-cutting summary — the "what would you put in front of a CFO" page, drilling through into the 4 domain pages; the Rotterdam/LA congestion story (README §6) gets only a one-line footnote here by design, its full visual stays on the Ocean Liner page (Day 23) | Page 5 (exec summary) |
 | D28 | **Checkpoint 4** — UX pass: tooltips, bookmarks, drillthrough wiring, mobile layout, basic accessibility (contrast, alt text) | 5-page report, polished |
 
 ## Week 5 — Automation, Security, Performance (Days 29–35)
@@ -76,7 +76,7 @@ not as a separate track, but as this week's actual work.
 | D36 | SQL primer over the same dataset via DuckDB — re-derive 3–4 of the measures you already wrote in DAX, in SQL, to prove the concepts transfer | First SQL queries against `02_data/raw` |
 | D37 | Case-style drills — timed "here's a business question, build the answer" exercises using the finished model | Drill log with timings |
 | D38 | PL-300 exam-pattern review — map what Weeks 1–6 covered onto the PL-300 skill areas, identify real gaps | Gap list |
-| D39 | STAR story-writing — turn this project's actual debugging into interview stories (the mis-wired `FactContainerMove` relationship, the `"#NA"`-vs-blank bug, the congestion-event KPI finding) | 3–4 STAR stories drafted |
+| D39 | STAR story-writing — turn this project's actual debugging into interview stories (the mis-wired `FactContainerMove` relationship, the `"#NA"`-vs-blank bug, the semi-additive trillion-dollar inventory rollup, the `TREATAS` budget-vs-actual reconciliation gap) | 4 STAR stories drafted |
 | D40 | Portfolio packaging — case-study writeup for `06_portfolio`, screenshots/GIFs of the 5-page report | Portfolio piece drafted |
 | D41 | Mock interview / mock exam, full run | Scored mock results |
 | D42 | Capstone review + retrospective — what changed since Day 1, what's genuinely still weak, what's next | Retrospective written |

@@ -43,7 +43,7 @@ it can't add revenue.
 | Role filter | `Revenue` under View As | vs. plain `SalesRegion = "APAC"` |
 |---|---|---|
 | `[SalesRegion] = "APAC"` (no guard) | **$965,503,550** | — |
-| `[SalesRegion] = "APAC" && [IsCurrent] = TRUE()` | **$883,716,500** | **−$81,786,850 (−8.47%)** |
+| `[SalesRegion] = "APAC" && [IsCurrent] = TRUE()` | **$883,716,500** | **−$81,787,050 (−8.47%)** |
 
 The guarded version is smaller by exactly the revenue tied to
 `FactShipment` rows whose `CustomerKey` resolves to one of the 368

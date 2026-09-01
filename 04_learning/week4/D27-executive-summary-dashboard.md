@@ -56,7 +56,7 @@ for visual #3 rather than its own visual.
 
 **It stays on Ocean Liner, not here**, with only a compact trace of it on this
 page. The reasoning: the congestion event's full story (waiting-for-berth leading
-demurrage, the Day 1 sorting trap, the specific ports) is operationally dense and
+demurrage, the Day 11 sorting trap, the specific ports) is operationally dense and
 belongs where a reader can act on it - the Ocean Liner page, owned by Network Ops.
 What belongs on the CFO's page is the *containment* finding, which is arguably the
 more interesting exec-level fact: network-wide schedule reliability barely moved
