@@ -1,12 +1,16 @@
-# Weeks 3–6 Roadmap (Days 15–42)
+# Curriculum Index — Days 1–42
 
-**Status: this is a proposed outline, not yet a set of written day-files.** Weeks 1–2
-(`week1/D01–D07`, `week2/D08–D11`) exist as full lesson files with solutions. Week 2
-Days 12–14 and everything below are currently just this roadmap — the `week3/` through
-`week6/` folders on disk are empty placeholders. Use this as the map; say which day to
-write first (or "write them all") and I'll produce the full lesson file the same way
-D01–D11 were built: prediction-first drills, checkable against this dataset, solutions
-shipped separately.
+**Status: complete.** All six weeks (`week1/D01` through `week6/D42`) exist as full
+lesson files, each with a matching worked solution in `solutions/`. Every day follows
+the same format — prediction-first drills, checkable against this exact dataset,
+solutions shipped separately — established in Week 1 and held for all 42 days:
+Spaced recall → Concept → Drill → Ship → Log → Exit criteria. Checkpoints land on
+Days 7, 14, 21, 28, and 35; Day 42 is the capstone retrospective.
+
+This file is the topic-and-deliverable map for Weeks 3–6 (Days 15–42) — use it to see
+what a week covers before opening the day file, or to find which day covers a given
+KPI domain or skill. For Weeks 1–2 (Days 1–14), see the directory map in the root
+`README.md` §2.
 
 Grounded in what's actually in the repo: the 72 KPIs in `00_docs/KPI_DICTIONARY.md`
 split into 5 domains (Ocean liner ×22, Landside ×16, Warehouse & inventory ×18, Air &
@@ -74,10 +78,19 @@ repo) get pulled in — not as a separate track, but as this week's actual conte
 
 ---
 
-## What this doesn't cover yet
+## What's left
 
-This is a topic-and-deliverable outline, not written lesson files. Week 1/2's format —
-prediction-first drills with worked solutions checked against this exact dataset — is
-the target format for D15–D42 too, but writing that out for 28 days is a large chunk of
-work I haven't started. Tell me where to start (a single day, a full week, or all of it)
-and I'll write it in that same format.
+The curriculum itself (all 42 day files + 42 solution files) is written and in place.
+What's still genuinely open, and owned by whoever is running the curriculum rather than
+by these files, is the actual work each day asks for:
+
+- `03_powerbi` — the .pbip/TMDL semantic model, dimensions, relationships, and the
+  ~150-measure DAX library. Started in Week 1, built out through Week 3, and still
+  empty on disk until you do the days that fill it in. Only `data_quality_findings.md`
+  is pre-shipped there.
+- `05_sql` — the DuckDB build and graded exercises are Day 36's deliverable, not
+  something shipped in advance.
+- `06_portfolio` — the case-study writeup, STAR stories, and mock-interview log are
+  Week 6's deliverables (Days 39–41), written as you go.
+
+In other words: the guide is complete, the guided work is not — that's by design.
