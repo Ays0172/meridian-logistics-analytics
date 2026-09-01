@@ -12,13 +12,19 @@
    buckets returned the whole table's count. Use `SUMMARIZECOLUMNS` or explicit
    `FILTER`+`COUNTROWS`/`SUMX` instead.
 3. Recomputed (pooled, from `FactPortCall`) = 66.22%; `FactTarget`'s stored `ACT`
-   (unweighted mean across 7 lanes) = 74.71%, an 8.5-point gap. Reasons: (1) the
-   stored actual averages 7 lane-level rows unweighted — the Day 9 averaging trap
-   recurring in a new context; (2) the two numbers may use different definitional
-   cutoffs (recomputed vs a separately-recorded planning snapshot).
-4. 2026-08-20 — the last snapshot date with full SKU coverage (1,584 SKUs); dates
-   after it in the live feed only touch a handful of SKUs per day, so "today" would
-   silently classify almost the whole catalog as having zero value.
+   = 74.71%, an 8.5-point gap. Reason: `FactTarget`'s `ACT` rows are not an
+   aggregation of `FactPortCall` at all — `build_fact_target`
+   (`01_generator/meridian/facts_land.py`) draws every `TargetValue`, `ACT`
+   included, from an independent `rng.uniform(0.60, 0.98, ...)` call, with no
+   read of any transactional fact table. The tempting guess (an unweighted mean
+   across 7 lane-level rows, the Day 9 averaging trap recurring) is worth
+   checking against the generator before reporting it as the cause — it doesn't
+   hold up here; `FactTarget` is a separately-generated planning snapshot with
+   no arithmetic relationship to the live data at all.
+4. 2026-08-20 — the last snapshot date with full SKU coverage (1,537 SKUs, per
+   Day 13's ABC-class counts — 269 + 389 + 879); dates after it in the live feed
+   only touch a handful of SKUs per day, so "today" would silently classify
+   almost the whole catalog as having zero value.
 
 ---
 

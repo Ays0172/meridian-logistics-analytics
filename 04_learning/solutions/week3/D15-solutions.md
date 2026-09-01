@@ -12,11 +12,18 @@
 2. Fiscal year starts 1 October and is named for the year it ends in (Oct 2025–Sep
    2026 = FY26). In DAX: `TOTALYTD ( <expr>, DimDate[Date], "09-30" )` or
    `DATESYTD ( DimDate[Date], "09-30" )`.
-3. It disagreed by 8.5 points because (1) `FactTarget`'s stored `ACT` value is an
-   unweighted mean of 7 trade-lane rows, the Day 9 averaging trap recurring, while
-   the recomputed measure pools all raw port calls; and (2) the two numbers may use
-   different definitional cutoffs (recomputed vs a separately-recorded planning
-   snapshot with its own assumptions).
+3. It disagreed by 8.5 points because `FactTarget`'s `ACT` rows are not an
+   aggregation of `FactPortCall` at all, by any method — `build_fact_target`
+   (`01_generator/meridian/facts_land.py`) draws every `TargetValue`, `ACT`
+   included, from an independent `rng.uniform(0.60, 0.98, ...)` call with no read
+   of any transactional table. The tempting first guess (an unweighted mean
+   across the 7 trade-lane rows, the Day 9 averaging trap recurring) is worth
+   checking against the generator before reporting it — it's exactly the shape of
+   explanation that sounds right and isn't, here. The real, checkable reason is
+   simpler and less flattering to the pattern-matching instinct: `FactTarget` is
+   a separately-generated planning-system snapshot with no arithmetic
+   relationship to the live data, so it is never guaranteed to reconcile with a
+   live recomputation, on this dataset or any other.
 4. Transaction fact (`FactShipment`, `FactBooking`, `FactContainerMove`, one row
    per event, fully additive); periodic snapshot (`FactInventorySnapshot`, a
    balance as of one date, semi-additive over time); accumulating snapshot

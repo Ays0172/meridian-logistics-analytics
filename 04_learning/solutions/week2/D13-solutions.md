@@ -26,17 +26,20 @@ Running the query as given returns:
 
 ```
 [Bucket]  [Cnt]
-High      6500
-Low       6500
+High      12000
+Low       12000
 ```
 
-Both buckets return the **same** count — 6,500, half of `DimSku`'s 12,000 rows —
-which is wrong; `SkuKey > 5000` on a 1..12000 key range should split roughly
-40/60, not 50/50, and the two numbers should differ in the first place. This is
-`SUMMARIZE`'s extension-column context-transition quirk reproducing exactly as
-described: `COUNTROWS(WithClass)` inside the extension expression is not being
-filtered down to each group's rows the way you'd assume from how grouping normally
-behaves.
+Both buckets return the **same** count — 12,000, all of `DimSku`'s rows, not a
+per-bucket count at all — which is the bug: `COUNTROWS(WithClass)` inside the
+extension expression is evaluated against the whole `WithClass` table, not the
+subset of rows belonging to the current `Bucket` group, so `SUMMARIZE`'s grouping
+had no effect on it whatsoever. This is `SUMMARIZE`'s extension-column
+context-transition quirk reproducing exactly as described. (`DimSku[SkuKey]` runs
+`-1` plus `1..11999`, so the correct, filtered counts are **6,999 High**
+(`SkuKey > 5000`, keys 5001-11999) and **5,001 Low** (`SkuKey <= 5000`, keys `-1`
+and 1-5000) — roughly a 58/42 split, and the two numbers should differ, which is
+the tell that something is wrong with the identical 12,000/12,000 result above.)
 
 The fix — bypass `SUMMARIZE`'s grouping mechanism entirely and filter explicitly:
 
@@ -84,19 +87,25 @@ CALCULATE (
 | Recomputed from `FactPortCall` (376 calls, 249 on time), Americas, June 2025 | **66.22%** |
 | `FactTarget`'s stored `ACT` rows, unweighted mean across 7 trade lanes, same scope | **74.71%** |
 
-**They do not match — an 8.5 percentage-point gap** — and the mechanism is the
-same trap from Day 9 wearing a new disguise: `FactTarget` stores one `ACT` row per
-trade lane, and averaging those 7 lane-level figures unweighted gives every lane
-equal vote regardless of how many port calls it actually had. The recomputed
-figure pools all 376 raw port calls together, which weights each lane by its real
-call volume — exactly the pooled-vs-naive distinction from the averaging-trap
-exercise, now surfacing as a budget-vs-actual reconciliation discrepancy instead of
-a warehouse productivity number. A second, non-competing explanation also holds:
-`FactTarget`'s `ACT` rows are a separately-recorded planning-system snapshot, not a
-live recomputation, and can carry their own definitional choices (a different
-on-time window, a different snapshot cutoff date) that a live DAX measure has no
-way to know about. **Both are real and worth naming when you report a
-budget-vs-actual gap like this — don't reach for the first explanation and stop.**
+**They do not match — an 8.5 percentage-point gap.** The tempting first
+explanation is the Day 9 averaging trap wearing a new disguise — `FactTarget`
+stores one `ACT` row per trade lane, so an unweighted mean across those 7 rows
+would give every lane equal vote regardless of call volume, unlike the recomputed
+figure which pools all 376 raw port calls. **Check this against the generator
+before reporting it, though: it is not what actually produced the gap here.**
+`01_generator/meridian/facts_land.py`'s `build_fact_target` sets every
+`TargetValue` — for every scenario, `ACT` included — from an independent
+`rng.uniform(0.60, 0.98, ...)` draw, with no read of any transactional fact table
+at all. `FactTarget`'s `ACT` rows are not an aggregation of real port-call data
+by any method, weighted or not; they are a separately-generated planning-system
+snapshot with no arithmetic relationship to `FactPortCall` whatsoever, which is
+also the honest, complete version of the explanation available before you check
+the source: a stored "actual" from a separate system of record is not guaranteed
+to reconcile with a live recomputation, and the *specific reason* it doesn't here
+turned out to be "unrelated data," not "a real but avoidable weighting choice."
+**The lesson to keep**: name a mechanism as the explanation only after you've
+checked it produces the gap, not because it's the most recently learned trap that
+would explain a gap this shape.
 
 ---
 

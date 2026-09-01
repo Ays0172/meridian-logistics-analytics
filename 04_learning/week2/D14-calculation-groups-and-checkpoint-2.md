@@ -92,8 +92,10 @@ today's drill will not need it at this model's current scale.
 ### Exercise 14.1 — build the group (30 min)
 Build the `Time Intelligence` calculation group exactly as shown, with all five
 items. Put `Revenue` and `Time Calc` together in a matrix with `DimDate[Year]` on
-rows. Predict, before checking: which item's numbers should be **identical** to
-plain `Current` in the very first year of data (2021), and why.
+rows. Predict, before checking: which item goes **blank** for every row in the
+very first year of data (2021), and why — and separately, which item matches
+plain `Revenue` in *every* year shown, 2021 included, simply by how it's defined
+rather than anything specific to 2021.
 
 ### Exercise 14.2 — apply it to a measure it should not touch (20 min)
 Put `DISTINCTCOUNT ( DimCarrier[CarrierKey] )` (wrapped as a measure,

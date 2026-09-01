@@ -27,7 +27,7 @@ column into a business-meaningful category with DAX instead of a spreadsheet.
 
 ### The problem `FactTarget` creates
 
-`FactTarget` holds budget/forecast/plan/actual figures for 17 of the 72 KPIs, at
+`FactTarget` holds budget/forecast/plan/actual figures for 16 of the 72 KPIs, at
 **KPI × region × month × scenario** grain — a completely different shape from every
 other fact table in this model. Look at its actual columns:
 
