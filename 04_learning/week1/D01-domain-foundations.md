@@ -29,7 +29,7 @@ A carrier does not sell "shipping." A carrier sells **capacity on a scheduled st
 This has three consequences that shape the entire data model:
 
 - **Capacity is measured in TEU (twenty-foot equivalent units) and FFE (forty-foot equivalent units), not in "shipments."** A vessel with a nominal capacity of 18,000 TEU has sold out when its *slots* are gone, regardless of how many customers or bookings that represents. `DimVessel.NominalTeuCapacity` and `DimVoyage.AllocatedTeuCapacity` exist because capacity, not shipment count, is the scarce resource.
-- **Capacity is perishable.** A slot that sails empty on Tuesday's voyage cannot be sold on Wednesday. This is why carriers will sell an empty container move at a loss rather than sail with unused space, and why `FactContainerMove` carries an `IsRepositioning` flag for the ~32% of moves that carry no revenue cargo at all — someone still has to pay to get the empty box back to where the next customer needs it.
+- **Capacity is perishable.** A slot that sails empty on Tuesday's voyage cannot be sold on Wednesday. This is why carriers will sell an empty container move at a loss rather than sail with unused space, and why `FactContainerMove` carries an `IsEmpty` flag for the ~32% of moves that carry no revenue cargo at all (README §6's "empty container share"). A smaller flag, `IsRepositioning` (~5% of moves), marks the subset of those empty boxes specifically being sent back to where the next customer needs one — someone still has to pay for that, even though no cargo is riding along.
 - **The schedule is the product.** A voyage is a published rotation — `DimVoyage.RotationString`, e.g. `CNSHA-CNNGB-SGSIN-INNSA-AEJEA` — repeating on a `DimService.ServiceFrequency` of Weekly or Fortnightly. Customers aren't really buying a container move; they're buying a seat on a train that leaves on a timetable, and the carrier's entire commercial credibility rests on making that timetable mean something.
 
 ### 2. The entity chain: booking → shipment → container → bill of lading
@@ -133,7 +133,7 @@ Learn these grouped by *where they sit in the box's actual journey*, not alphabe
 
 | Term | What it means |
 |---|---|
-| Voyage | One specific sailing of one specific vessel on one rotation — `DimVoyage`, ~6,800 of them in this dataset. |
+| Voyage | One specific sailing of one specific vessel on one rotation — `DimVoyage`, ~9,270 of them in this dataset. |
 | Service / string | The named, repeating rotation a voyage belongs to — `DimService`, e.g. service code `AE7`. |
 | Port call | One vessel's one call at one terminal within a voyage — `FactPortCall`, the grain that carries berth and crane productivity measures. |
 | Berth | The physical quay position a vessel occupies during a port call. |
@@ -181,7 +181,7 @@ Learn these grouped by *where they sit in the box's actual journey*, not alphabe
 | Repositioning | Moving empty containers to where the next booking needs them, with no revenue cargo attached — `FactContainerMove.IsRepositioning`. |
 | Feeder vs mainline | Mainline vessels run the long-haul legs between hubs; feeder vessels shuttle boxes between a hub and smaller regional ports — `DimVessel.VesselClass` spans Feeder through ULCV for exactly this reason. |
 
-That's 62 terms. You will not remember all of them after one read. You are not meant to — you're meant to recognise them cold when they show up in a drill, a client conversation, or an interview, because you've now seen each one anchored to the exact place it happens and the exact column that records it.
+That's 52 terms. You will not remember all of them after one read. You are not meant to — you're meant to recognise them cold when they show up in a drill, a client conversation, or an interview, because you've now seen each one anchored to the exact place it happens and the exact column that records it.
 
 ### 8. Reading a shipment like an insider — a mini case
 
@@ -223,7 +223,7 @@ git commit -m "day1: domain foundations — entity chain, actor incentives, D&D 
 
 Answer honestly, three lines each:
 - **What clicked**: which one concept today finally made a term you'd heard before actually make sense?
-- **What did not**: which of the 62 glossary terms, or which drill, are you still fuzzy on?
+- **What did not**: which of the 52 glossary terms, or which drill, are you still fuzzy on?
 - **What to re-ask tomorrow**: one specific question to carry into Day 2's code-systems session.
 
 ## Exit criteria

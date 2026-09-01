@@ -34,7 +34,7 @@ Pick any row where `[Folder Path]` contains `year=2023\month=07` (or `year=2023/
 
 ## Drill 4 — Landmine #5, walked into and fixed
 
-The naive step — `Table.SelectRows(Source, each [Amount_usd] >= 0)` — removes **every credit-note row**: per the contract, credit notes are 0.3% of `FactFreightCharge` lines, all with negative `Amount_usd` and `IsCreditNote = 1`. On the `prod`-scale fact volume of 1,180,000 charge lines, 0.3% is roughly **3,500 rows** removed — every single one of them a legitimate monetary correction, not an error. If your own count came out in that neighbourhood (order of a few thousand, all `IsCreditNote = 1`), you've correctly reproduced the landmine.
+The naive step — `Table.SelectRows(Source, each [Amount_usd] >= 0)` — removes **every credit-note row**: per the contract, credit notes are 0.3% of `FactFreightCharge` lines, all with negative `Amount_usd` and `IsCreditNote = 1`. On the built fact volume of 1,611,807 charge lines (README §1), 0.3% is roughly **4,835 rows** removed — every single one of them a legitimate monetary correction, not an error. If your own count came out in that neighbourhood (order of a few thousand, all `IsCreditNote = 1`), you've correctly reproduced the landmine.
 
 The corrected version replaces the sign-based filter entirely:
 
