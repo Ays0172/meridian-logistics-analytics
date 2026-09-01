@@ -134,14 +134,26 @@ Week 3 (`D15`–`D21`) turns the KPI dictionary's 72 codes into the ~150-measure
 mirroring `KPI_DICTIONARY.md` §1–§5 and Week 4's five dashboard pages 1:1); nested
 inside each domain is a function subfolder derived deterministically from the KPI
 code's own middle segment — `VOL/MIX/WT/INV → Volume & Mix`, `UTL/REL/TRN/OPS/PRD →
-Rate & Utilisation`, `REV/CST/FIN/SLS → Revenue & Cost`, `QLT/SVC/CAR/SUS → Quality &
-Service`. Every measure also carries a `[KpiCode]` prefix in its Description property
-— the join key back to the dictionary, checked by Day 21's checkpoint script logic
-(every one of the 72 codes must appear in exactly one measure's description, or be
-logged as a deliberate gap). A `[DO NOT USE] <Name> (naive)` measure always ships in
-the *same* domain+function subfolder as its correct sibling, never a separate
-"deprecated" folder — the trap needs to be visible to the next person who opens that
-folder, not hidden.
+Rate & Utilisation`, `REV/CST/FIN/SLS/CUS → Revenue & Cost` (`CUS` only because
+`XCT.CUS.CONC`, Revenue Concentration, is a revenue-share measure despite the
+customer-flavoured segment name — check the dictionary, not just the segment
+string, for anything that doesn't obviously fit), `QLT/SVC/CAR/SUS → Quality &
+Service`. **Not every domain gets all four subfolders** — a bucket only exists if
+one of its segments actually appears in that domain's own KPIs (Power BI won't
+render an empty folder anyway), and only Warehouse's 18 KPIs touch all four; Ocean,
+Landside and Air & LCL each produce 3, Cross-Cutting only 2. Treat "which buckets
+does domain X get" as something to verify against `KPI_DICTIONARY.md`'s actual
+segments before stating it, not something to assume uniformly — an earlier version
+of this taxonomy claimed "exactly four everywhere" and was wrong for 4 of 5
+domains, caught only by an explicit adversarial review. Every measure also carries
+a `[KpiCode]` prefix in its Description property — the join key back to the
+dictionary, checked by Day 21's checkpoint (every one of the 72 codes must appear
+in exactly one measure's description, or be logged as a deliberate gap, and
+`XCT.SCOR.MAP` is the one code that isn't a measure and never gets foldered at
+all). A `[DO NOT USE] <Name> (naive)` measure always ships in the *same*
+domain+function subfolder as its correct sibling, never a separate "deprecated"
+folder — the trap needs to be visible to the next person who opens that folder,
+not hidden.
 
 Week 4 (`D22`–`D28`) builds the five report pages this folder taxonomy feeds, one
 page per KPI domain plus an Executive Summary; each day's file specifies every
@@ -152,14 +164,22 @@ SQL (DuckDB), case drills, PL-300 mapping, and portfolio packaging — this is w
 
 ### Keeping docs in sync
 
-`README.md` §1 ("What is built") and `04_learning/CURRICULUM_ROADMAP.md` are status
-claims about what exists on disk, not just narrative — they have gone stale before
-(they described Weeks 2–6 as unwritten after those weeks were already committed).
+`README.md` §1 ("What is built"), `04_learning/CURRICULUM_ROADMAP.md`, and
+`MANIFEST.txt` are status claims about what exists on disk, not just narrative —
+all three have gone stale before (README/ROADMAP described Weeks 2–6 as unwritten
+after those weeks were already committed; MANIFEST.txt was still listing a build
+from before Weeks 3–6 existed, missing 56 files, until it was regenerated).
 **Any commit that adds/removes a day file, changes the folder taxonomy, or finishes a
-previously-empty `03_powerbi`/`05_sql`/`06_portfolio` deliverable should update these
-two files in the same commit**, not as a follow-up. Grep for the specific claim
-you're invalidating before writing the fix, rather than assuming the rest of the file
-is still accurate.
+previously-empty `03_powerbi`/`05_sql`/`06_portfolio` deliverable should update
+README/ROADMAP in the same commit**, not as a follow-up; regenerate `MANIFEST.txt`
+(sha256sum + byte count per `git ls-files`, excluding `02_data/raw/` — see its own
+header — and excluding itself from its own listing) whenever the file set changes
+non-trivially. Grep for the specific claim you're invalidating before writing the
+fix, rather than assuming the rest of the file is still accurate — and don't just
+assume the *new* claim is right either: a claim like "every domain gets N of these"
+needs checking against the actual data it generalizes over (here,
+`KPI_DICTIONARY.md`'s real segment lists), not just internal consistency with the
+surrounding prose. Wrong-but-consistent is still wrong.
 
 ## Conventions worth knowing before editing generator or model code
 
