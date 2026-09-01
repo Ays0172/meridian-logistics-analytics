@@ -143,18 +143,24 @@ two events straddling the date.
 
 ```dax
 Containers In Transit :=
-VAR AsOf = MAX ( DimDate[Date] )
+VAR AsOf = MAX ( DimDate[DateKey] )
 RETURN
     CALCULATE (
         DISTINCTCOUNT ( FactContainerMove[ContainerNo] ),
         FILTER (
             ALL ( FactShipmentMilestone ),
-            FactShipmentMilestone[VesselLoadDateKey] <= FORMAT ( AsOf, "YYYYMMDD" )
-                && ( FactShipmentMilestone[VesselDischargeDateKey] > FORMAT ( AsOf, "YYYYMMDD" )
+            FactShipmentMilestone[VesselLoadDateKey] <= AsOf
+                && ( FactShipmentMilestone[VesselDischargeDateKey] > AsOf
                      || FactShipmentMilestone[VesselDischargeDateKey] = -1 )
         )
     )
 ```
+
+`AsOf` is pulled from `DimDate[DateKey]`, not `DimDate[Date]` — both `VesselLoadDateKey`
+and `VesselDischargeDateKey` are `int32 yyyymmdd` integers (per the schema contract),
+not dates, so comparing them against a `Date` value (or a `FORMAT(...)`-produced text
+string) either compares the wrong types or fails outright; `DateKey` already carries
+the matching `yyyymmdd` integer, no conversion needed.
 
 The `= -1` branch is the part people forget: a container that has loaded and has no
 discharge date yet is still at sea. Omit it and every genuinely in-flight box

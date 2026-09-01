@@ -2,7 +2,13 @@
 
 All figures computed live against the connected model (`FactInventorySnapshot`:
 986,326 rows across 581 distinct snapshot dates, 2021-08-22 → 2026-08-27;
-`FactShipmentMilestone`: 493,608 rows).
+`FactShipmentMilestone`: 493,608 rows) — a few live-feed days past
+`README.md` §1's shipped baseline (983,262 / 491,765, watermark 2026-08-20).
+**These row counts and the exact snapshot-date range will differ slightly on
+your own build**, since `FactInventorySnapshot`/`FactShipmentMilestone` grow by
+one row per shipment/snapshot every day the live feed runs; the EOM values,
+ratios and the naive/correct comparisons below are what to check your own
+numbers against in shape, not these two counts to the digit.
 
 ---
 
@@ -42,10 +48,11 @@ error is not even constant — it drifts with the calendar**, which is exactly w
 "the naive number is usually close enough" is not a safe assumption to carry from
 one period to the next.
 
-At the full two-year history: naive unfiltered `SUM(OnHandValueUsd)` returns
-**$1,303,433,323,735** against a true point-in-time value on the order of **$2–3
-billion** — roughly **500×** too high, because it is summing 581 dates' worth of
-the same rotating stock.
+At the full 5.0-year history: naive unfiltered `SUM(OnHandValueUsd)` returns
+**$1,303,433,323,735** against a true point-in-time value on the order of **$2-3
+billion** — roughly **500×** too high (consistent with the figure Week 6's case
+drills and STAR stories use for this same bug), because it is summing 581 dates'
+worth of the same rotating stock.
 
 ---
 

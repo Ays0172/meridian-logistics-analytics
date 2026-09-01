@@ -58,12 +58,12 @@ The naive number is **4.04× too high** — almost exactly the count of weekly
 snapshots inside May, which is not a coincidence: you are not measuring stock, you
 are measuring how many times the calendar happened to sample it.
 
-Widen the mistake to the whole two-year history (581 distinct snapshot dates,
+Widen the mistake to the whole 5.0-year history (581 distinct snapshot dates,
 weekly-then-daily) and a plain `SUM` with no date filter at all returns
 **$1.30 trillion** for a company whose real month-end inventory value sits around
 **$2 billion**. That is not a rounding error, it is a measure that will pass code
-review, look like a real number, and be wrong by three orders of magnitude — the
-most dangerous kind of bug, because nothing about it looks broken.
+review, look like a real number, and be wrong by roughly 500× — the most
+dangerous kind of bug, because nothing about it looks broken.
 
 ### The fix: a point-in-time filter, not a sum
 
@@ -71,14 +71,20 @@ The general pattern for any semi-additive balance column:
 
 ```dax
 On Hand Value (as of) :=
-VAR AsOfDate = MAX ( DimDate[Date] )
+VAR AsOfDateKey = MAX ( DimDate[DateKey] )
 VAR LastSnapshotOnOrBefore =
     CALCULATE ( MAX ( FactInventorySnapshot[SnapshotDateKey] ),
-                FILTER ( ALL ( FactInventorySnapshot ), FactInventorySnapshot[SnapshotDateKey] <= AsOfDate ) )
+                FILTER ( ALL ( FactInventorySnapshot ), FactInventorySnapshot[SnapshotDateKey] <= AsOfDateKey ) )
 RETURN
     CALCULATE ( SUM ( FactInventorySnapshot[OnHandValueUsd] ),
                 FactInventorySnapshot[SnapshotDateKey] = LastSnapshotOnOrBefore )
 ```
+`AsOfDateKey` is pulled from `DimDate[DateKey]`, not `DimDate[Date]` — `SnapshotDateKey`
+is an `int32 yyyymmdd` integer, not a date, so comparing it against a `Date` value
+compares two different types and the filter never matches, leaving the measure
+blank on every row. This is the general shape of the mistake: whenever a fact
+column is named `*DateKey`, filter and compare it against `DimDate[DateKey]`, never
+`DimDate[Date]`.
 
 Built-in time-intelligence functions (`LASTDATE`, `CLOSINGBALANCEMONTH`) assume the
 fact table has a row for *every* date in the period, which is true here only for
