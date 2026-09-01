@@ -35,15 +35,13 @@
 ## Exercise 33.1 — do the actual export
 
 **Prediction:** the export should show **108** relationship blocks — the
-audited, current figure from `data_quality_findings.md` — not the stale
-backup's 82 (which is itself close to the "was 81" starting count that
-audit measured against, confirming the backup really is a pre-fix snapshot).
-`grep -c "^relationship " relationships.tmdl` against the fresh export is the
-direct check. If your count lands closer to 82, the export was taken from a
-version of the model that hasn't picked up the relationship audit's fixes —
-worth re-opening the live model and confirming those 27 additional
-role-playing relationships and the `FactContainerMove` rewiring are actually
-present before exporting again.
+audited, current figure `data_quality_findings.md` §3 states after its fixes
+("108 total, was 81"). `grep -c "^relationship " relationships.tmdl` against
+the fresh export is the direct check. If your count lands closer to 81, the
+export was taken from a version of the model that hasn't picked up the
+relationship audit's fixes — worth re-opening the live model and confirming
+those 27 additional role-playing relationships and the `FactContainerMove`
+rewiring are actually present before exporting again.
 
 ---
 
