@@ -28,7 +28,10 @@ applied at a wider scope than any single domain needed.
 
 ## Concept
 
-All 7 codes from `KPI_DICTIONARY.md` §5, folder `09 Cross-Cutting`.
+All 7 codes from `KPI_DICTIONARY.md` §5, folder `09 Cross-Cutting`, sub-foldered by
+function per Day 15 (`QLT`→ Quality & Service, `FIN`→ Revenue & Cost, `CUS`→ Volume
+& Mix). `XCT.SCOR.MAP` is the one exception - see below, it isn't a measure and
+doesn't get foldered at all.
 
 ### SCOR Level-1 Attribute Map, `XCT.SCOR.MAP`, a classification, not a ratio
 
@@ -226,7 +229,8 @@ combination is exactly the warning sign the KPI exists to catch.
 
 ## Ship
 
-`09 Cross-Cutting` now holds all 7 KPIs. `Cash-to-Cash Cycle Time (partial)` and
+`09 Cross-Cutting` now holds all 7 KPIs, each in its function subfolder.
+`Cash-to-Cash Cycle Time (partial)` and
 its two components clearly labelled as partial/proxy. Both `Top-10 Customer Share`
 variants shipped, naive one marked `[DO NOT USE]`. `SCORMap` exists (illustrative
 subset acceptable, full 72-row table logged as a follow-up if not completed today).
@@ -246,8 +250,9 @@ What clicked / what did not / what to re-ask.
 
 ## Exit criteria
 
-- [ ] All 7 Cross-Cutting KPIs exist in `09 Cross-Cutting`, each described with its
-      `[KpiCode]`.
+- [ ] All 7 Cross-Cutting KPIs exist in `09 Cross-Cutting`, each in its function
+      subfolder per Day 15 (except `XCT.SCOR.MAP`, unfoldered by design), described
+      with its `[KpiCode]`.
 - [ ] `Cash-to-Cash Cycle Time (partial)` is unambiguously labelled partial, and you
       can state from memory which component is not computable and why.
 - [ ] Both `Top-10 Customer Share` variants exist, and you can state why ranking by

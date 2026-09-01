@@ -81,6 +81,50 @@ Schedule Reliability (via TREATAS)` (Day 13) is a variant of `OCN.REL.SCHED`. Yo
 re-folder the first two today; the rest of Ocean and Warehouse pick up the pattern
 on Days 16 and 18.
 
+### A second level, inside each domain folder: function, not just domain
+
+Domain answers "which dashboard page." It does not answer "where in a 22-measure
+folder do I find the revenue ones" once `05 Ocean Liner` alone holds 22 measures
+and `07 Warehouse & Inventory` holds 18. A flat domain folder that size is exactly
+as unbrowsable as the mechanism folders it replaced. The fix is not a second,
+competing top-level taxonomy (a generic Sales/Logistics/Finance/SLA split sounds
+clean until you try to file `Demurrage Revenue` or `Rollover Ratio` into one of
+those four and realise they do not sort unambiguously) - it is a **second folder
+level, nested inside domain**, using a function grouping this project already hands
+you for free: every KPI code's middle segment is already a function tag. Collapse
+the ~19 segments that actually appear in this dictionary into four buckets, and
+every one of the 72 KPIs sorts into exactly one, no judgement calls:
+
+| Subfolder | KPI code segments | Covers |
+|---|---|---|
+| `Volume & Mix` | `VOL`, `MIX`, `WT`, `INV` | what moved, how much, what's held |
+| `Rate & Utilisation` | `UTL`, `REL`, `TRN`, `OPS`, `PRD` | speed, efficiency, throughput |
+| `Revenue & Cost` | `REV`, `CST`, `FIN`, `SLS` | money |
+| `Quality & Service` | `QLT`, `SVC`, `CAR`, `SUS` | did we deliver right - the SLA-flavoured bucket |
+
+The rule for a code that does not obviously carry one of those segments (`LND.CAR.SCORE`,
+`XCT.SCOR.MAP`): read what the measure actually reports, not the code, and place it
+by that - `LND.CAR.SCORE` is a delivered-service quality signal (`Quality &
+Service`), `XCT.SCOR.MAP` is a classification frame, not a measure, and does not
+get foldered at all (Day 20 covers why).
+
+**How to set it, mechanically:** in Power BI Desktop, select the measure in the
+Fields pane or Model view, and in the Properties pane's **Display Folder** field
+type the full path with a backslash separator, e.g. `05 Ocean Liner\Revenue &
+Cost`. Power BI creates the subfolder the first time any measure uses that exact
+path string and reuses it for every measure after - there is nothing to
+pre-create, unlike the placeholder trick Exercise 15.1 uses for the domain level.
+Because this model is TMDL-serialized on disk (`03_powerbi`, per the README), the
+same thing is one line per measure in the `.tmdl` file: `displayFolder: "05 Ocean
+Liner\Revenue & Cost"` - worth knowing before Day 33's deployment-pipeline day,
+where you will be reading these files directly rather than only clicking through
+the Properties pane.
+
+Every measure this week gets both levels from the moment it ships - there is no
+"re-folder into subfolders later" pass the way Week 2's measures got re-foldered
+into domains. `TEU Volume` and `FFE Volume`, below, are the first two built this
+way.
+
 ### Naming and description convention
 
 **Name:** Title Case, business language, matching the name a stakeholder would say
@@ -156,7 +200,9 @@ Laden TEU Volume :=
 CALCULATE ( SUM ( FactContainerMove[Teu] ), FactContainerMove[IsLaden] = 1 )
 ```
 
-**3. Place it.** New measure, in `_Measures`, display folder `05 Ocean Liner`.
+**3. Place it.** New measure, in `_Measures`, display folder `05 Ocean Liner\Volume
+& Mix` - `VOL` is the code's own middle segment, so the subfolder call is not a
+judgement call here.
 
 **4. Format.** Whole number, thousands separator, `TargetUnit = "TEU"` per
 `FactTarget`, not a currency and not a percentage.
@@ -190,6 +236,16 @@ will let two folders share the same leading number (`03 Iterators` and
 `03 Inventory (semi-additive)` already do), then go look at your own model and
 confirm what you predicted.
 
+Then, for `05 Ocean Liner` only, create its four function subfolders by setting one
+placeholder measure's Display Folder to each of `05 Ocean Liner\Volume & Mix`, `\Rate
+& Utilisation`, `\Revenue & Cost`, `\Quality & Service` in turn. Confirm all four
+appear as subfolders nested under `05 Ocean Liner` in the Fields pane, not as four
+new top-level folders - a stray space or a mismatched ampersand in the path string
+is enough to silently create a fifth, near-duplicate top-level folder instead of
+nesting, which is worth seeing happen once on a throwaway placeholder rather than
+on `OCN.REV.DEM` for real. Delete the placeholders once you've confirmed the
+nesting; Days 16-20 populate the real subfolders for their own domains as they go.
+
 ### Exercise 15.2: ship OCN.VOL.TEU and OCN.VOL.FFE (15 min)
 Build both exactly as shown in the walkthrough, plus `FFE Volume` (same pattern,
 `FactContainerMove[Ffe]`). Predict, before checking, which of the two, TEU or FFE,
@@ -198,18 +254,20 @@ what is a 20' box in each unit, per `00_docs/SCHEMA_CONTRACT.md` §1.9's
 `TeuFactor`/`FfeFactor`?)
 
 ### Exercise 15.3: re-folder two Week 2 measures into their domain home (15 min)
-Move `Revenue per FFE` (Day 9) into `05 Ocean Liner` and `Lines Per Labour Hour`
-(Day 9) into `07 Warehouse & Inventory`. Add the `[KpiCode]`-prefixed description
-to each, using `OCN.REV.FFE` and `WHS.PRD.LPH` respectively, pulling the one-line
-summary straight from the dictionary. This is not busywork: it is the first proof
-that the taxonomy from the Concept section actually organises measures you already
-trust, not just new ones.
+Move `Revenue per FFE` (Day 9) into `05 Ocean Liner\Revenue & Cost` (its code is
+`OCN.REV.FFE` - `REV` decides the subfolder) and `Lines Per Labour Hour` (Day 9)
+into `07 Warehouse & Inventory\Rate & Utilisation` (`WHS.PRD.LPH` - `PRD` maps to
+the rate/utilisation bucket per the table above). Add the `[KpiCode]`-prefixed
+description to each, pulling the one-line summary straight from the dictionary.
+This is not busywork: it is the first proof that the two-level taxonomy from the
+Concept section actually organises measures you already trust, not just new ones.
 
 ### Exercise 15.4: the naive/correct pair, formalised (20 min)
 `00_docs/KPI_DICTIONARY.md`'s `OCN.REL.SCHED` entry gives you both DAX blocks
 already written. Ship both, named per this day's convention:
 `Schedule Reliability Rolling 8wk` (correct) and
-`[DO NOT USE] Schedule Reliability Rolling 8wk (naive)`, both in `05 Ocean Liner`.
+`[DO NOT USE] Schedule Reliability Rolling 8wk (naive)`, both in `05 Ocean
+Liner\Rate & Utilisation` (`OCN.REL.SCHED` - `REL` is a rate/reliability segment).
 Predict, before building, roughly how far apart the two will land at the grand
 total across the full history (not just one congestion-affected window), will the
 gap be as dramatic as Day 9's Lines-per-Labour-Hour gap, smaller, or about the
@@ -229,14 +287,15 @@ the habit now than to retrofit it in Week 6.
 
 ## Ship
 
-`_Measures` now has all nine folders (`01`–`04` from Weeks 1–2, `05`–`09` new
-today), `TEU Volume`, `FFE Volume`, both `OCN.REL.SCHED` variants, and two
-re-foldered Week 2 measures with descriptions added. This is the seed the rest of
-the week builds on.
+`_Measures` now has all nine top-level folders (`01`–`04` from Weeks 1–2, `05`–`09`
+new today), `05 Ocean Liner`'s four function subfolders proven out, `TEU Volume`,
+`FFE Volume`, both `OCN.REL.SCHED` variants, and two re-foldered Week 2 measures -
+all correctly two-level foldered and described. This is the seed the rest of the
+week builds on.
 
 ```
 git add .
-git commit -m "Day 15: KPI-to-DAX translation method, domain folder taxonomy, naive/correct convention formalised"
+git commit -m "Day 15: KPI-to-DAX translation method, two-level domain/function folder taxonomy, naive/correct convention formalised"
 ```
 
 ---
@@ -251,12 +310,18 @@ What clicked / what did not / what to re-ask.
 
 - [ ] `_Measures` has all five domain folders (`05`–`09`), each containing at least
       one measure.
-- [ ] `TEU Volume` and `FFE Volume` exist, formatted correctly, described with the
-      `[KpiCode]` convention.
-- [ ] Both `OCN.REL.SCHED` variants exist, named per the `[DO NOT USE]` convention,
-      sitting in the same folder, and you can state from your own numbers how far
-      apart they land.
-- [ ] `Revenue per FFE` and `Lines Per Labour Hour` are re-foldered and described.
-- [ ] You can state, without notes, why the naming/description/folder convention
-      exists, not "because the instructions said so," but what it prevents.
+- [ ] `05 Ocean Liner` has its four function subfolders (`Volume & Mix`, `Rate &
+      Utilisation`, `Revenue & Cost`, `Quality & Service`) nested correctly under
+      it, not created as stray top-level folders.
+- [ ] `TEU Volume` and `FFE Volume` exist in `05 Ocean Liner\Volume & Mix`,
+      formatted correctly, described with the `[KpiCode]` convention.
+- [ ] Both `OCN.REL.SCHED` variants exist in `05 Ocean Liner\Rate & Utilisation`,
+      named per the `[DO NOT USE]` convention, sitting in the same subfolder, and
+      you can state from your own numbers how far apart they land.
+- [ ] `Revenue per FFE` and `Lines Per Labour Hour` are re-foldered into their
+      domain **and** function subfolder, and described.
+- [ ] You can state, without notes, why the naming/description/two-level-folder
+      convention exists, not "because the instructions said so," but what it
+      prevents, and why a second, competing top-level taxonomy (by business
+      function instead of domain) would have broken Week 4's page-per-folder plan.
 - [ ] Predictions recorded, misses annotated.

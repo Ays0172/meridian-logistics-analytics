@@ -63,13 +63,13 @@ fleet are never numerically comparable as a combined figure, only side by side.
 
 ```dax
 Revenue per FFE := DIVIDE ( SUM ( FactShipment[Revenue_usd] ), SUM ( FactShipment[Ffe] ) )
--- folder: 05 Ocean Liner
+-- folder: 05 Ocean Liner\Revenue & Cost   (OCN.REV.FFE -> REV)
 -- description: [OCN.REV.FFE] Average commercial yield per FFE carried; excludes
 -- empty repositioning by construction (no Revenue_usd row exists for an empty
 -- move). Non-additive weighted ratio, never average lane-level rates.
 
 Lines Per Labour Hour := DIVIDE ( SUM ( FactWarehouseTask[LinesProcessed] ), SUM ( FactWarehouseTask[LabourHours] ) )
--- folder: 07 Warehouse & Inventory
+-- folder: 07 Warehouse & Inventory\Rate & Utilisation   (WHS.PRD.LPH -> PRD)
 -- description: [WHS.PRD.LPH] Order lines processed per hour of direct labour, the
 -- primary warehouse productivity KPI. Non-additive weighted ratio; compare by
 -- RoleName/TenureBand, never as one site-wide number across TaskType.
@@ -94,7 +94,7 @@ RETURN
         COUNTROWS ( FILTER ( CallsInWindow, FactPortCall[IsOnTimeArrival] = 1 ) ),
         COUNTROWS ( CallsInWindow )
     )
--- folder: 05 Ocean Liner
+-- folder: 05 Ocean Liner\Rate & Utilisation   (OCN.REL.SCHED -> REL)
 -- description: [OCN.REL.SCHED] Share of port calls arriving within ±1 calendar day
 -- of the originally published (never revised) ETA, trailing 56 days. Non-additive;
 -- recompute per window, never average sub-window rates.
@@ -104,7 +104,7 @@ AVERAGEX (
     VALUES ( DimDate[ISOWeekLabel] ),
     CALCULATE ( AVERAGE ( FactPortCall[IsOnTimeArrival] ) )
 )
--- folder: 05 Ocean Liner (same folder as the correct version, deliberately)
+-- folder: 05 Ocean Liner\Rate & Utilisation (same subfolder as the correct version, deliberately)
 -- description: [DO NOT USE, OCN.REL.SCHED naive] Averages 8 pre-aggregated weekly
 -- rates with equal weight regardless of call volume. See "Schedule Reliability
 -- Rolling 8wk" for the pooled, correct version.

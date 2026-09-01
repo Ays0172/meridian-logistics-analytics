@@ -27,7 +27,9 @@ traps, one level more subtle.
 
 ## Concept
 
-All 16 codes come from `KPI_DICTIONARY.md` §2, folder `06 Landside`. Every measure
+All 16 codes come from `KPI_DICTIONARY.md` §2, folder `06 Landside`, sub-foldered
+by function per Day 15 (code segment decides: `CST`→Revenue & Cost, `SVC`/`QLT`→
+Quality & Service, `UTL`/`OPS`→Rate & Utilisation). Every measure
 below reads from `FactTransportLeg` (320,000 rows, one truck/rail movement) unless
 noted; `LND.CAR.SCORE` and `LND.SVC.DIFOT` also reach into `DimCarrier` and
 `FactShipment` respectively.
@@ -249,9 +251,9 @@ guarantee that?
 
 ## Ship
 
-`06 Landside` now holds all 16 KPIs (or a logged checklist remainder), three
-naive/correct pairs marked `[DO NOT USE]`, `Carrier Composite Score` shipped as a
-table-valued measure backing a matrix visual.
+`06 Landside` now holds all 16 KPIs (or a logged checklist remainder), each in its
+function subfolder, three naive/correct pairs marked `[DO NOT USE]`, `Carrier
+Composite Score` shipped as a table-valued measure backing a matrix visual.
 
 ```
 git add .
@@ -268,8 +270,8 @@ What clicked / what did not / what to re-ask.
 
 ## Exit criteria
 
-- [ ] All 16 Landside KPIs exist in `06 Landside`, each described with its
-      `[KpiCode]`.
+- [ ] All 16 Landside KPIs exist in `06 Landside`, each in its function subfolder
+      per Day 15 and described with its `[KpiCode]`.
 - [ ] Three naive/correct pairs shipped (`LND.CST.KM`, `LND.UTL.DEADHEAD`,
       `LND.SUS.CO2`), naive ones named `[DO NOT USE]`.
 - [ ] `DIFOT %` (joint condition) and the product-of-marginals comparison exist,

@@ -31,7 +31,10 @@ No new mechanism today: every measure below is `SUM`, `DIVIDE`, `AVERAGE`,
 `AVERAGEX`, `MEDIANX`, `PERCENTILEX.INC`, or a `CALCULATE` filter, all from Weeks 1
 and 2. The only new discipline is applying Day 15's method 22 times without letting
 quality slip on KPI #19 the way it didn't on KPI #1. All 22 codes, DAX pulled
-verbatim from `00_docs/KPI_DICTIONARY.md` §1, folder `05 Ocean Liner` for every one.
+verbatim from `00_docs/KPI_DICTIONARY.md` §1, folder `05 Ocean Liner` for every
+one, sub-foldered by function per Day 15's `Volume & Mix` / `Rate & Utilisation` /
+`Revenue & Cost` / `Quality & Service` split - the code's own middle segment
+(`VOL`, `REL`, `REV`, `QLT`...) tells you which.
 
 **One naming note before you start:** `OCN.VOL.TEU` and `OCN.VOL.FFE` are already
 shipped (Day 15). Do not rebuild them: confirm they're there, described, and move
@@ -206,9 +209,9 @@ specifies for inside the window.
 ## Ship
 
 `05 Ocean Liner` now holds all 22 KPIs (or a clean checklist of what's left, logged
-in your notes if you ran short on time, do not ship a half-built domain silently).
-Every naive variant named `[DO NOT USE]`, every measure described with its
-`[KpiCode]` prefix.
+in your notes if you ran short on time, do not ship a half-built domain silently),
+each in its function subfolder. Every naive variant named `[DO NOT USE]`, every
+measure described with its `[KpiCode]` prefix.
 
 ```
 git add .
@@ -225,8 +228,8 @@ What clicked / what did not / what to re-ask.
 
 ## Exit criteria
 
-- [ ] All 22 Ocean KPIs exist in `05 Ocean Liner`, each described with its
-      `[KpiCode]`.
+- [ ] All 22 Ocean KPIs exist in `05 Ocean Liner`, each in its function subfolder
+      per Day 15 and described with its `[KpiCode]`.
 - [ ] Both naive/correct pairs (`OCN.REL.SCHED`, `OCN.UTL.LF.HEAD`,
       `OCN.OPS.MPCH.GROSS`) are shipped side by side, naive ones named
       `[DO NOT USE]`.

@@ -66,6 +66,14 @@ could triage under real time pressure, but the gap must be **known and listed**,
 not silently missing. A measure library with an unknown number of untranslated
 KPIs is a worse state than one that honestly says "9 of 72 remain, here they are."
 
+While you're in Model view for this pass, also confirm the Day 15 two-level
+taxonomy held: every domain folder (`05`–`09`) should show exactly four function
+subfolders (`Volume & Mix`, `Rate & Utilisation`, `Revenue & Cost`, `Quality &
+Service`) and no measure sitting loose at the domain level with no subfolder,
+`XCT.SCOR.MAP` excepted. A stray top-level folder that looks like `05 Ocean
+Liner - Revenue & Cost` instead of nesting properly is the Exercise 15.1 typo
+trap, now caught for real instead of on a placeholder.
+
 ### Exercise 21.3: calculation-group cross-check (20 min)
 Apply Day 14's `Time Intelligence` calculation group to one measure from each
 domain: an additive one (`Demurrage Revenue`), a ratio (`Truck Utilisation %`), and
