@@ -28,11 +28,12 @@ traps, one level more subtle.
 ## Concept
 
 All 16 codes come from `KPI_DICTIONARY.md` §2, folder `06 Landside`, sub-foldered
-by function per Day 15 (code segment decides: `CST`→Revenue & Cost, `SVC`/`QLT`→
-Quality & Service, `UTL`/`OPS`→Rate & Utilisation). Every measure
-below reads from `FactTransportLeg` (320,000 rows, one truck/rail movement) unless
-noted; `LND.CAR.SCORE` and `LND.SVC.DIFOT` also reach into `DimCarrier` and
-`FactShipment` respectively.
+by function per Day 15 (code segment decides: `CST`/`REV` → Revenue & Cost,
+`SVC`/`CAR`/`SUS` → Quality & Service, `UTL`/`OPS` → Rate & Utilisation). Landside
+has no `Volume & Mix` bucket: no code in §2 carries a `VOL`/`MIX`/`WT`/`INV`
+segment. Every measure below reads from `FactTransportLeg` (320,000 rows, one
+truck/rail movement) unless noted; `LND.CAR.SCORE` and `LND.SVC.DIFOT` also reach
+into `DimCarrier` and `FactShipment` respectively.
 
 ---
 

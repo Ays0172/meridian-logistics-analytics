@@ -229,9 +229,11 @@ own build.
 ## Ship
 
 `07 Warehouse & Inventory` now holds all 18 KPIs (or logged remainder), each in its
-function subfolder. Both ABC value-share measures shipped, each described with
-which classification basis it uses. Both `OTIF` variants and both `Inventory
-Turns` variants shipped, naive ones marked `[DO NOT USE]`.
+function subfolder — this is the one domain where all four (Volume & Mix, Rate &
+Utilisation, Revenue & Cost, Quality & Service) actually get used. Both ABC
+value-share measures shipped, each described with which classification basis it
+uses. Both `OTIF` variants and both `Inventory Turns` variants shipped, naive ones
+marked `[DO NOT USE]`.
 
 ```
 git add .

@@ -32,9 +32,10 @@ No new mechanism today: every measure below is `SUM`, `DIVIDE`, `AVERAGE`,
 and 2. The only new discipline is applying Day 15's method 22 times without letting
 quality slip on KPI #19 the way it didn't on KPI #1. All 22 codes, DAX pulled
 verbatim from `00_docs/KPI_DICTIONARY.md` §1, folder `05 Ocean Liner` for every
-one, sub-foldered by function per Day 15's `Volume & Mix` / `Rate & Utilisation` /
-`Revenue & Cost` / `Quality & Service` split - the code's own middle segment
-(`VOL`, `REL`, `REV`, `QLT`...) tells you which.
+one, sub-foldered by function per Day 15's split — the code's own middle segment
+tells you which: `VOL`/`MIX` → Volume & Mix, `UTL`/`REL`/`TRN`/`OPS` → Rate &
+Utilisation, `REV` → Revenue & Cost. Ocean has no `Quality & Service` bucket: no
+code in §1 carries a `QLT`/`SVC`/`CAR`/`SUS` segment.
 
 **One naming note before you start:** `OCN.VOL.TEU` and `OCN.VOL.FFE` are already
 shipped (Day 15). Do not rebuild them: confirm they're there, described, and move

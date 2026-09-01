@@ -103,7 +103,7 @@ an append/redo cycle, and a redone day byte-identical to its first write.
 - ✅ `02_data` — the 7.5M-row dataset, built and verified
 - ✅ `04_learning/week1` — Days 1–7 + solutions
 - ✅ `04_learning/week2` — Days 8–14 + solutions + 109 ground-truth reference answers
-- ✅ `04_learning/week3` — Days 15–21 + solutions (the ~150-measure DAX library, by KPI domain)
+- ✅ `04_learning/week3` — Days 15–21 + solutions (the ~150-measure DAX library, by KPI domain then function)
 - ✅ `04_learning/week4` — Days 22–28 + solutions (the five report pages)
 - ✅ `04_learning/week5` — Days 29–35 + solutions (automation, RLS, performance, deployment)
 - ✅ `04_learning/week6` — Days 36–42 + solutions (SQL, case drills, PL-300, portfolio, capstone)
@@ -116,11 +116,15 @@ file for each. The curriculum is complete end to end — see §5 for how to work
 
 - ⬜ `03_powerbi` — **empty except `data_quality_findings.md`.** The .pbip/TMDL
   semantic model and the measure library are not shipped pre-built — building them
-  *is* Weeks 1–4. Day 14's checkpoint expects real committed measures already; by
-  Day 28 all five dashboard pages should be live here.
+  *is* Weeks 1–3 (model in Weeks 1–2, the measure library in Week 3). Day 14's
+  checkpoint expects real committed measures already; Week 4 (Days 22–28) then
+  builds the five report pages on top of that model, and by Day 28 all five should
+  be live here.
 - ⬜ `05_sql` — **empty.** The DuckDB build and graded exercises are Day 36's deliverable.
-- ⬜ `06_portfolio` — **empty.** The case-study writeup, STAR stories, and mock-interview
-  log are Week 6's deliverables (Days 39–41).
+- ⬜ `06_portfolio` — **empty on disk; not a Week 6-only deliverable.** First written
+  on Day 9 (`notes-averaging.md`), added to again on Days 11, 22, 23, 28, 29 and 35,
+  then built out properly in Week 6 (Days 37–42: case drills, PL-300 gap analysis,
+  STAR stories, the case-study writeup, mock-interview results, retrospective).
 
 You have everything you need to start Monday and run the full six weeks without
 waiting on anyone.
@@ -167,8 +171,8 @@ Meridian-Logistics-Analytics/
 │   └── _validation/              ← checker reports. My verified run is shipped here
 │                                    for comparison; setup overwrites with yours
 │
-├── 03_powerbi/                   ← your .pbip/TMDL model and measures land here, built Weeks 1–4
-│   └── data_quality_findings.md  ← shipped; the landmine hunt's write-up target
+├── 03_powerbi/                   ← your .pbip/TMDL model and measures land here, built Weeks 1–3
+│   └── data_quality_findings.md  ← shipped; a worked audit of the live model, read from Days 30–34
 │
 ├── 04_learning/
 │   ├── CURRICULUM_ROADMAP.md     ← topic/deliverable index for Weeks 3–6
@@ -177,14 +181,14 @@ Meridian-Logistics-Analytics/
 │   │                                TREATAS/ABC, calculation groups, checkpoint
 │   ├── week2/_reference_answers.json      ← 109 ground-truth values; every drill is checkable
 │   ├── week2/build_reference_answers.py    ← regenerates them after any rebuild
-│   ├── week3/D15…D21              ← KPI→DAX method, the ~150-measure library by domain, checkpoint
-│   ├── week4/D22…D28              ← report shell, five dashboard pages, UX checkpoint
-│   ├── week5/D29…D35              ← live-feed automation, refresh, RLS, performance, TMDL, checkpoint
-│   ├── week6/D36…D42              ← SQL primer, case drills, PL-300 mapping, STAR stories, portfolio, capstone
+│   ├── week3/D15…D21             ← KPI→DAX method, the ~150-measure library by domain, checkpoint
+│   ├── week4/D22…D28             ← report shell, five dashboard pages, UX checkpoint
+│   ├── week5/D29…D35             ← live-feed automation, refresh, RLS, performance, TMDL, checkpoint
+│   ├── week6/D36…D42             ← SQL primer, case drills, PL-300 mapping, STAR stories, portfolio, capstone
 │   └── solutions/week1…week6     ← full worked solutions, one per day. read AFTER attempting
 │
 ├── 05_sql/                       ← EMPTY until Day 36
-└── 06_portfolio/                 ← EMPTY until Week 6 (Days 39–41)
+└── 06_portfolio/                 ← EMPTY on disk; first written Day 9, built out in Weeks 4–6
 ```
 
 ---
@@ -280,9 +284,11 @@ python live_feed.py --redo 2026-08-24    # regenerate one day byte-identically
    the watermark stays put.
 
 **Automate it** with Windows Task Scheduler (recipe in `LIVE_FEED.md`, §"Daily
-automation"). The GitHub Actions + raw-URL version you chose is scheduled for
-Week 5 — that is where it belongs pedagogically, and Task Scheduler covers you
-until then.
+automation") if you're running this by hand. A GitHub Actions + raw-URL version
+already runs daily (`.github/workflows/live-feed.yml`) — Week 5 Day 29 doesn't
+build this from scratch, it has you read, understand, and formalize what's already
+live, which is where that belongs pedagogically. Task Scheduler is the fallback for
+anyone not using GitHub Actions.
 
 **Power BI note.** Point Power BI at the `02_data/raw` folder with Parquet + folder
 combine. Do not build on push/streaming datasets: Microsoft is retiring them and
@@ -311,8 +317,9 @@ Budget 15–20 hours a week, six weeks end to end. Week 1 is modelling and Power
 Query; Week 2 is DAX semantics, which is where the actual difficulty lives; Week 3
 turns that into the full measure library; Week 4 builds the five report pages; Week 5
 covers automation, security, and performance; Week 6 is SQL, interview prep, and the
-capstone retrospective. Each week closes with a checkpoint day (D07, D14, D21, D28,
-D35, D42) that reviews the week before moving on.
+capstone retrospective. Weeks 1–5 each close with a checkpoint day (D07, D14, D21,
+D28, D35) that reviews the week before moving on; Week 6 closes with D42, a
+retrospective rather than a checkpoint.
 
 ---
 
@@ -387,8 +394,10 @@ What's left isn't more writing, it's the work each day asks you to do:
 3. **Automation, RLS, performance, deployment** — Week 5, Days 29–35, including the
    GitHub Actions live feed formalized in Day 29
 4. **`05_sql`** — the DuckDB build and its graded exercises, Day 36
-5. **`06_portfolio`** — PL-300 mock exam, case drills, STAR stories, case-study
-   writeup, Days 37–41
+5. **`06_portfolio`** — case drills, PL-300 gap analysis, STAR stories, case-study
+   writeup, mock interview, and the capstone retrospective, Days 37–42 (on top of
+   the design-rationale notes the folder already started collecting from Day 9
+   onward)
 
 Start at `04_learning/week1/D01-domain-foundations.md` and work in order — each day
 tells you what it needs from the one before it.

@@ -4,9 +4,10 @@
 
 No new mechanism today. Six days ago you had a method and an empty `_Measures`
 table; today you should have a ~150-measure library covering all 72 KPIs, organised
-into five domain folders, with every naive trap named and every measure traceable
-back to `00_docs/KPI_DICTIONARY.md`. Before you trust any of it, verify it, closed
-book except your own model and the dictionary itself.
+into five domain folders each with its own function subfolders, with every naive
+trap named and every measure traceable back to `00_docs/KPI_DICTIONARY.md`. Before
+you trust any of it, verify it, closed book except your own model and the
+dictionary itself.
 
 ---
 
@@ -67,11 +68,21 @@ not silently missing. A measure library with an unknown number of untranslated
 KPIs is a worse state than one that honestly says "9 of 72 remain, here they are."
 
 While you're in Model view for this pass, also confirm the Day 15 two-level
-taxonomy held: every domain folder (`05`–`09`) should show exactly four function
-subfolders (`Volume & Mix`, `Rate & Utilisation`, `Revenue & Cost`, `Quality &
-Service`) and no measure sitting loose at the domain level with no subfolder,
-`XCT.SCOR.MAP` excepted. A stray top-level folder that looks like `05 Ocean
-Liner - Revenue & Cost` instead of nesting properly is the Exercise 15.1 typo
+taxonomy held, against the actual per-domain expectation, not "four everywhere":
+
+| Domain folder | Function subfolders it should show |
+|---|---|
+| `05 Ocean Liner` | Volume & Mix, Rate & Utilisation, Revenue & Cost |
+| `06 Landside` | Rate & Utilisation, Revenue & Cost, Quality & Service |
+| `07 Warehouse & Inventory` | all four |
+| `08 Air & LCL` | Volume & Mix, Rate & Utilisation, Revenue & Cost |
+| `09 Cross-Cutting` | Revenue & Cost, Quality & Service |
+
+Flag any domain with a subfolder outside this list (a sign a measure was
+misclassified) or missing one it should have, and confirm no measure sits loose at
+the domain level with no subfolder, `XCT.SCOR.MAP` excepted. A stray top-level
+folder that looks like `05 Ocean Liner - Revenue & Cost` (a hyphen where the
+backslash separator belongs) instead of nesting properly is the Exercise 15.1 typo
 trap, now caught for real instead of on a placeholder.
 
 ### Exercise 21.3: calculation-group cross-check (20 min)
@@ -90,8 +101,9 @@ List every naive/correct pair shipped this week. There should be roughly a dozen
 `OCN.REL.SCHED`, `OCN.UTL.LF.HEAD`, `OCN.OPS.MPCH.GROSS`, `LND.CST.KM`,
 `LND.UTL.DEADHEAD`, `LND.SUS.CO2`, `LND.CAR.SCORE`, `WHS.QLT.PICKACC`,
 `WHS.INV.TURNS`, `ALC.REV.YIELDKG`, `XCT.CUS.CONC`. Confirm every naive measure is
-named `[DO NOT USE] <Name> (naive)`, sits in the **same** domain folder as its
-correct sibling, and has a description stating the error mechanism in one line.
+named `[DO NOT USE] <Name> (naive)`, sits in the **same** domain-and-function
+subfolder as its correct sibling, and has a description stating the error
+mechanism in one line.
 Any pair that fails this check gets fixed now, not logged for later: this is the
 cheapest week to fix it in.
 
@@ -155,7 +167,8 @@ verification exercises found a real problem in your own model, and what was it?
       and you can state which of this week's measures the calculation group cannot
       meaningfully apply to, and why.
 - [ ] All ~11 naive/correct pairs verified: naive named `[DO NOT USE]`, same
-      folder as its correct sibling, error mechanism stated in its description.
+      domain-and-function subfolder as its correct sibling, error mechanism stated
+      in its description.
 - [ ] Checkpoint 3 Parts A–C complete, mismatches logged.
 - [ ] You can state, without notes, all five Week 3 domains and one representative
       trap from each, in one sentence per domain.

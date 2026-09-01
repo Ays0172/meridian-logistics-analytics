@@ -1,11 +1,14 @@
-# Curriculum Index — Days 1–42
+# Curriculum Index — Weeks 3–6 (Days 15–42)
 
 **Status: complete.** All six weeks (`week1/D01` through `week6/D42`) exist as full
-lesson files, each with a matching worked solution in `solutions/`. Every day follows
-the same format — prediction-first drills, checkable against this exact dataset,
-solutions shipped separately — established in Week 1 and held for all 42 days:
-Spaced recall → Concept → Drill → Ship → Log → Exit criteria. Checkpoints land on
-Days 7, 14, 21, 28, and 35; Day 42 is the capstone retrospective.
+lesson files, each with a matching worked solution in `solutions/`. Every day
+follows the same prediction-first method — drills checkable against this exact
+dataset, solutions shipped separately — established in Week 1. Most days share the
+same six-heading skeleton (Spaced recall → Concept → Drill → Ship → Log → Exit
+criteria); checkpoint and Part-A/B/C days (D14, D21, D28, D35) substitute a
+verification/checkpoint structure for Concept/Drill/Ship, and D42 substitutes a
+retrospective. Checkpoints land on Days 7, 14, 21, 28, and 35; Day 42 is the
+capstone retrospective, not a sixth checkpoint.
 
 This file is the topic-and-deliverable map for Weeks 3–6 (Days 15–42) — use it to see
 what a week covers before opening the day file, or to find which day covers a given
@@ -25,17 +28,18 @@ in the live model — Week 5 formalizes and automates what's already partially b
 
 The DAX skills from Week 2 (row/filter context, CALCULATE, iterators, time intelligence,
 snapshot patterns, calculation groups) get applied to build the real measure library —
-`03_powerbi`'s ~150 measures, organized by KPI domain.
+`03_powerbi`'s ~150 measures, organized by KPI domain, then by function within each
+domain (not every domain uses all four function buckets — see Day 15).
 
 | Day | Topic | Deliverable |
 |---|---|---|
-| D15 | KPI → DAX translation method; measure-table pattern (a dedicated `_Measures` table, not measures scattered across fact tables); display folder taxonomy | Empty `_Measures` table wired in, folder structure agreed |
+| D15 | KPI → DAX translation method; measure-table pattern (`_Measures`, created Day 8, not measures scattered across fact tables); two-level domain/function display folder taxonomy | `_Measures` carries its first domain-foldered, function-subfoldered measures; folder structure agreed |
 | D16 | Ocean liner measures (22 KPIs) — schedule reliability on the rolling 8-week window, headhaul/backhaul load factor, slot utilisation | ~22 measures, checked against `00_docs/KPI_DICTIONARY.md` §1 |
 | D17 | Landside measures (16 KPIs) — DIFOT, deadhead %, carrier composite score | ~16 measures, checked against §2 |
 | D18 | Warehouse & inventory measures (18 KPIs) — OTIF decomposed as DIF × DOQ × DOT, ABC class mix, inventory turns | ~18 measures, checked against §3 |
 | D19 | Air & LCL measures (9 KPIs) — the 1:6000 vs 1:5000 chargeable-weight variants, yield per kg | ~9 measures, checked against §4 |
 | D20 | Cross-cutting / executive measures (7 KPIs) — company-wide perfect order rate, cash-to-cash cycle time, margin dispersion, the SCOR level-1 map | ~7 measures, checked against §5 |
-| D21 | **Checkpoint 3** — every measure spot-checked against a known value (the numbers in README §6 — schedule reliability 0.6598, OTIF 0.9130, etc. — are the answer key); calc groups wired so every measure gets MTD/QTD/YTD for free instead of ×4 duplicated measures | Full measure library, verified, calc-group time intelligence live |
+| D21 | **Checkpoint 3** — every measure spot-checked against a known value (the numbers in README §6 — schedule reliability 0.6598, delivery on-time 0.9130, OTIF ~0.867, etc. — are the answer key); Day 14's calculation groups cross-checked against this week's measures so every measure gets MTD/QTD/YTD for free instead of ×4 duplicated measures | Full measure library, verified against the dictionary and calc-group time intelligence |
 
 ## Week 4 — Report Design & the Five Dashboards (Days 22–28)
 
@@ -63,8 +67,9 @@ snapshot patterns, calculation groups) get applied to build the real measure lib
 
 ## Week 6 — Capstone & Interview Readiness (Days 36–42)
 
-This is where `05_sql` and `06_portfolio` (currently empty, listed separately in the
-repo) get pulled in — not as a separate track, but as this week's actual content.
+This is where `05_sql` (empty until Day 36) and `06_portfolio` (empty on disk, but
+already collecting design-rationale notes since Day 9) get their main content —
+not as a separate track, but as this week's actual work.
 
 | Day | Topic | Deliverable |
 |---|---|---|
@@ -90,7 +95,9 @@ by these files, is the actual work each day asks for:
   is pre-shipped there.
 - `05_sql` — the DuckDB build and graded exercises are Day 36's deliverable, not
   something shipped in advance.
-- `06_portfolio` — the case-study writeup, STAR stories, and mock-interview log are
-  Week 6's deliverables (Days 39–41), written as you go.
+- `06_portfolio` — empty on disk, but not purely a Week 6 deliverable: design-
+  rationale notes get written there starting Day 9, and again on Days 11, 22, 23,
+  28, 29 and 35. The case drills, PL-300 gap analysis, STAR stories, case-study
+  writeup, mock-interview log and capstone retrospective are Week 6's (Days 37–42).
 
 In other words: the guide is complete, the guided work is not — that's by design.
