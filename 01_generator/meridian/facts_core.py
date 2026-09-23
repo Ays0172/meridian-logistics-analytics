@@ -1131,6 +1131,7 @@ def build_fact_shipment_milestone(
     bookings: pd.DataFrame,
     *,
     as_of: object | None = None,
+    seed_label: str = "FactShipmentMilestone",
 ) -> pd.DataFrame:
     """One row per shipment, 14 milestone date columns — §2.3.
 
@@ -1146,7 +1147,7 @@ def build_fact_shipment_milestone(
     'today' are therefore unset, which is what gives the model genuine
     in-flight shipments to reason about.
     """
-    rng = child_rng("FactShipmentMilestone")
+    rng = child_rng(seed_label)
     milestones = dims["DimMilestone"]
 
     n = len(shipments)

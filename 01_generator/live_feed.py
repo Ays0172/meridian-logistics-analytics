@@ -257,11 +257,15 @@ def _append_day(dims: dict, fx: pd.DataFrame, day: pd.Timestamp, wm: dict) -> di
     emit("FactShipment", sh)
 
     if len(sh):
-        ms = build_fact_shipment_milestone(dims, sh, bk, as_of=day)
+        ms = build_fact_shipment_milestone(
+            dims, sh, bk, as_of=day, seed_label=f"live:FactShipmentMilestone:{d}",
+        )
         emit("FactShipmentMilestone", ms)
 
         n_cm = _day_volume(daily["FactContainerMove"], day)
-        cm = build_fact_container_move(dims, sh, n_cm)
+        cm = build_fact_container_move(
+            dims, sh, n_cm, seed_label=f"live:FactContainerMove:{d}",
+        )
         if len(cm):
             cm["ContainerMoveKey"] = np.arange(
                 nk["FactContainerMove"], nk["FactContainerMove"] + len(cm), dtype=np.int64
@@ -270,7 +274,9 @@ def _append_day(dims: dict, fx: pd.DataFrame, day: pd.Timestamp, wm: dict) -> di
             emit("FactContainerMove", cm)
 
             n_fc = _day_volume(daily["FactFreightCharge"], day)
-            fc = build_fact_freight_charge(dims, sh, cm, fx, n_fc)
+            fc = build_fact_freight_charge(
+                dims, sh, cm, fx, n_fc, seed_label=f"live:FactFreightCharge:{d}",
+            )
             if len(fc):
                 fc["ChargeLineKey"] = np.arange(
                     nk["FactFreightCharge"], nk["FactFreightCharge"] + len(fc),
@@ -280,7 +286,9 @@ def _append_day(dims: dict, fx: pd.DataFrame, day: pd.Timestamp, wm: dict) -> di
                 emit("FactFreightCharge", fc)
 
         n_tl = _day_volume(daily["FactTransportLeg"], day)
-        tl = build_fact_transport_leg(dims, sh, n_tl)
+        tl = build_fact_transport_leg(
+            dims, sh, n_tl, seed_label=f"live:FactTransportLeg:{d}",
+        )
         if len(tl):
             tl["TransportLegKey"] = np.arange(
                 nk["FactTransportLeg"], nk["FactTransportLeg"] + len(tl), dtype=np.int64
@@ -289,7 +297,9 @@ def _append_day(dims: dict, fx: pd.DataFrame, day: pd.Timestamp, wm: dict) -> di
             emit("FactTransportLeg", tl)
 
         n_wt = _day_volume(daily["FactWarehouseTask"], day)
-        wt = build_fact_warehouse_task(dims, sh, n_wt)
+        wt = build_fact_warehouse_task(
+            dims, sh, n_wt, seed_label=f"live:FactWarehouseTask:{d}",
+        )
         if len(wt):
             wt["WarehouseTaskKey"] = np.arange(
                 nk["FactWarehouseTask"], nk["FactWarehouseTask"] + len(wt), dtype=np.int64
@@ -299,7 +309,9 @@ def _append_day(dims: dict, fx: pd.DataFrame, day: pd.Timestamp, wm: dict) -> di
 
     # ---- port calls arriving today
     n_pc = _day_volume(daily["FactPortCall"], day)
-    pc = build_fact_port_call(dims, max(n_pc * 3, 30))
+    pc = build_fact_port_call(
+        dims, max(n_pc * 3, 30), seed_label=f"live:FactPortCall:{d}",
+    )
     if len(pc):
         pc = pc.head(n_pc).copy()
         pc["PortCallKey"] = np.arange(
@@ -310,7 +322,9 @@ def _append_day(dims: dict, fx: pd.DataFrame, day: pd.Timestamp, wm: dict) -> di
 
     # ---- today's inventory snapshot
     n_iv = _day_volume(daily["FactInventorySnapshot"], day)
-    iv = build_fact_inventory_snapshot(dims, n_iv)
+    iv = build_fact_inventory_snapshot(
+        dims, n_iv, seed_label=f"live:FactInventorySnapshot:{d}",
+    )
     if len(iv):
         iv = iv.head(n_iv).copy()
         iv["InventorySnapshotKey"] = np.arange(

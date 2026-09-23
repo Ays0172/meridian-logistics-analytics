@@ -141,7 +141,8 @@ def _congested_keys(locations: pd.DataFrame) -> np.ndarray:
 
 
 def build_fact_transport_leg(
-    dims: dict[str, pd.DataFrame], shipments: pd.DataFrame, n_rows: int
+    dims: dict[str, pd.DataFrame], shipments: pd.DataFrame, n_rows: int,
+    *, seed_label: str = "FactTransportLeg",
 ) -> pd.DataFrame:
     """One truck or rail movement — §2.7. Transaction grain.
 
@@ -150,7 +151,7 @@ def build_fact_transport_leg(
     ``EmptyKm`` are stored instead, because those are additive and the ratio can
     be recomputed correctly at any grain.
     """
-    rng = child_rng("FactTransportLeg")
+    rng = child_rng(seed_label)
     locations = dims["DimLocation"]
     carriers = dims["DimCarrier"]
     warehouses = dims["DimWarehouse"]
@@ -367,7 +368,8 @@ def build_fact_transport_leg(
 
 
 def build_fact_warehouse_task(
-    dims: dict[str, pd.DataFrame], shipments: pd.DataFrame, n_rows: int
+    dims: dict[str, pd.DataFrame], shipments: pd.DataFrame, n_rows: int,
+    *, seed_label: str = "FactWarehouseTask",
 ) -> pd.DataFrame:
     """One receipt, pick, pack or ship line — §2.8.
 
@@ -375,7 +377,7 @@ def build_fact_warehouse_task(
     agency staff inside their first six months are measurably worse, which is
     what makes "find the shift pattern with a systematic problem" answerable.
     """
-    rng = child_rng("FactWarehouseTask")
+    rng = child_rng(seed_label)
     employees = dims["DimEmployee"]
     emp = employees[employees["EmployeeKey"] > 0]
     skus = dims["DimSku"]
@@ -524,7 +526,8 @@ def build_fact_warehouse_task(
 
 
 def build_fact_inventory_snapshot(
-    dims: dict[str, pd.DataFrame], n_rows: int
+    dims: dict[str, pd.DataFrame], n_rows: int,
+    *, seed_label: str = "FactInventorySnapshot",
 ) -> pd.DataFrame:
     """One SKU at one site on one day — §2.9. Periodic snapshot.
 
@@ -532,7 +535,7 @@ def build_fact_inventory_snapshot(
     is a real pattern (history gets thinned) and forces the learner to notice
     that a naive COUNT over this table is meaningless.
     """
-    rng = child_rng("FactInventorySnapshot")
+    rng = child_rng(seed_label)
     skus = dims["DimSku"]
     sku = skus[skus["SkuKey"] > 0]
     warehouses = dims["DimWarehouse"]

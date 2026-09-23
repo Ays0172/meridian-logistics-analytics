@@ -57,6 +57,15 @@ run order or run count. Two consequences: a day regenerated after a `--redo` is
 byte-identical to the original, and a day missed for a fortnight can be
 backfilled later and is still the day it should have been.
 
+Every fact builder the feed calls takes a `seed_label`, and `_append_day` must pass
+the per-day label to **all** of them (`tests/test_live_feed_seeding.py` enforces
+this). Until September 2026 only FactBooking and FactShipment did. The other seven
+fell back to their fixed history stream `child_rng("<Table>")`, so every live day
+drew the same random numbers. FactPortCall was the first *n* rows of an identical
+draw each day, so two days with the same volume (the same weekday, because volume
+follows weekly seasonality) were identical apart from keys and dates. Days
+appended before the fix carry this defect until they are regenerated.
+
 Surrogate keys are part of this. They are allocated in a **reserved block per
 date** — `history_max + (day_index − 1) × 50,000` — not from a running counter.
 A counter would have made a day's keys depend on how many rows preceded it, so

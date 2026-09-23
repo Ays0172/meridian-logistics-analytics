@@ -217,7 +217,9 @@ def _congested_port_keys(locations: pd.DataFrame) -> np.ndarray:
 # --------------------------------------------------------------------------- #
 
 
-def build_fact_port_call(dims: dict[str, pd.DataFrame], n_rows: int) -> pd.DataFrame:
+def build_fact_port_call(
+    dims: dict[str, pd.DataFrame], n_rows: int, *, seed_label: str = "FactPortCall"
+) -> pd.DataFrame:
     """One row per vessel call at one terminal — §2.5.
 
     Built by exploding each voyage's rotation string, so a call's port is always
@@ -225,8 +227,11 @@ def build_fact_port_call(dims: dict[str, pd.DataFrame], n_rows: int) -> pd.DataF
     originally published ETA and is never revised: schedule reliability measured
     against a revised ETA is the number carriers can flatter, and the model has
     to make that distinction available.
+
+    ``seed_label`` exists for the live feed, which calls this once per day and
+    must not draw the same stream every day (see build_fact_booking).
     """
-    rng = child_rng("FactPortCall")
+    rng = child_rng(seed_label)
     voyages = dims["DimVoyage"][dims["DimVoyage"]["VoyageKey"] > 0]
     locations = dims["DimLocation"]
     services = dims["DimService"].set_index("ServiceKey")
@@ -445,6 +450,8 @@ def build_fact_container_move(
     dims: dict[str, pd.DataFrame],
     shipments: pd.DataFrame,
     n_rows: int,
+    *,
+    seed_label: str = "FactContainerMove",
 ) -> pd.DataFrame:
     """One row per equipment event — §2.4. Transaction grain, the largest fact.
 
@@ -455,7 +462,7 @@ def build_fact_container_move(
       * standalone empty repositioning moves with ``ShipmentKey = -1``, which
         carry cost and no revenue and are what makes trade imbalance expensive.
     """
-    rng = child_rng("FactContainerMove")
+    rng = child_rng(seed_label)
     locations = dims["DimLocation"]
     equipment = dims["DimEquipment"].set_index("EquipmentKey")
     milestones = dims["DimMilestone"]
@@ -777,6 +784,8 @@ def build_fact_freight_charge(
     container_moves: pd.DataFrame,
     fx: pd.DataFrame,
     n_rows: int,
+    *,
+    seed_label: str = "FactFreightCharge",
 ) -> pd.DataFrame:
     """One row per charge line — §2.6. Transaction grain.
 
@@ -792,7 +801,7 @@ def build_fact_freight_charge(
     equipment event agree. A D&D figure that does not tie back to a container
     event is the single most common piece of nonsense in freight reporting.
     """
-    rng = child_rng("FactFreightCharge")
+    rng = child_rng(seed_label)
     charge_types = dims["DimChargeType"]
     ct = charge_types[charge_types["ChargeTypeKey"] > 0]
     key_by_code = ct.drop_duplicates("ChargeCode").set_index("ChargeCode")["ChargeTypeKey"]
