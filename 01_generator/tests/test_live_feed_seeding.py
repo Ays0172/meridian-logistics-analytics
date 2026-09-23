@@ -80,6 +80,27 @@ class TestLiveFeedCallsPassSeedLabels(unittest.TestCase):
         self.assertEqual(missing, [])
 
 
+class TestSeedLog(unittest.TestCase):
+    """The run log records which seed produced each table on each day."""
+
+    def test_seed_labels_cover_every_live_table(self):
+        import live_feed
+        seeds = live_feed._seed_labels("2026-09-24")
+        self.assertEqual(set(seeds), set(live_feed.LIVE_TABLES))
+        for table, label in seeds.items():
+            self.assertEqual(label, f"live:{table}:2026-09-24")
+
+    def test_append_day_records_master_seed_and_labels(self):
+        src = (GEN_DIR / "live_feed.py").read_text(encoding="utf-8")
+        tree = ast.parse(src)
+        append_day = next(n for n in ast.walk(tree)
+                          if isinstance(n, ast.FunctionDef) and n.name == "_append_day")
+        returned = [n.value for n in ast.walk(append_day) if isinstance(n, ast.Return)]
+        keys = {k.value for r in returned if isinstance(r, ast.Dict)
+                for k in r.keys if isinstance(k, ast.Constant)}
+        self.assertIn("seeds", keys)
+
+
 class TestBuildersFollowSeedLabel(unittest.TestCase):
     @classmethod
     def setUpClass(cls):

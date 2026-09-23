@@ -63,8 +63,13 @@ this). Until September 2026 only FactBooking and FactShipment did. The other sev
 fell back to their fixed history stream `child_rng("<Table>")`, so every live day
 drew the same random numbers. FactPortCall was the first *n* rows of an identical
 draw each day, so two days with the same volume (the same weekday, because volume
-follows weekly seasonality) were identical apart from keys and dates. Days
-appended before the fix carry this defect until they are regenerated.
+follows weekly seasonality) were identical apart from keys and dates. The days
+appended before the fix (2026-08-21 to 2026-09-23) were regenerated with the fix.
+
+Each run's entry in `_state/watermark.json` records its seeds:
+`"seeds": {"master_seed": 20260824, "labels": {"FactPortCall": "live:FactPortCall:2026-09-24", ...}}`.
+`child_rng(label)` derives the stream from `SeedSequence(master_seed, spawn_key=(stable_hash(label),))`,
+so the entry alone is enough to reproduce any table on any day.
 
 Surrogate keys are part of this. They are allocated in a **reserved block per
 date** — `history_max + (day_index − 1) × 50,000` — not from a running counter.

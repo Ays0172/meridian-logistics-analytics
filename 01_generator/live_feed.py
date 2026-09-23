@@ -51,7 +51,7 @@ import pandas as pd
 import yaml
 
 from meridian import factio
-from meridian.config import CONFIG_DIR, DATA_ROOT, FACT_END_DATE, RAW_DIR
+from meridian.config import CONFIG_DIR, DATA_ROOT, FACT_END_DATE, RAW_DIR, SEED
 from meridian.factio import PRIMARY_DATE_KEY
 from meridian.facts_core import (
     build_fact_booking,
@@ -92,6 +92,17 @@ LIVE_TABLES = [
 # that date. Surrogate keys have no requirement to be contiguous, so the gaps
 # between blocks cost nothing.
 DAILY_KEY_BLOCK = 50_000
+
+
+def _seed_labels(d: str) -> dict[str, str]:
+    """The RNG stream label for every live table on one date.
+
+    ``child_rng(label)`` derives the stream from the master SEED plus this label,
+    so each (table, date) pair has its own stream: a day reproduces exactly on
+    ``--redo`` whatever order it is generated in, and no two tables or days share
+    a stream. The labels are recorded in each run's log entry.
+    """
+    return {t: f"live:{t}:{d}" for t in LIVE_TABLES}
 
 
 def _load_watermark() -> dict:
@@ -213,6 +224,7 @@ def _append_day(dims: dict, fx: pd.DataFrame, day: pd.Timestamp, wm: dict) -> di
     daily = wm["daily_rows"]
     written: dict[str, list[str]] = {}
     rows: dict[str, int] = {}
+    seeds = _seed_labels(d)
 
     def emit(name: str, df: pd.DataFrame) -> None:
         if df is None or len(df) == 0:
@@ -229,7 +241,7 @@ def _append_day(dims: dict, fx: pd.DataFrame, day: pd.Timestamp, wm: dict) -> di
     n_bk = _day_volume(daily["FactBooking"], day)
     bk = build_fact_booking(
         dims, fx, n_bk, window=window,
-        seed_label=f"live:FactBooking:{d}", key_offset=nk["FactBooking"] - 1,
+        seed_label=seeds["FactBooking"], key_offset=nk["FactBooking"] - 1,
     )
     emit("FactBooking", bk)
 
@@ -238,7 +250,7 @@ def _append_day(dims: dict, fx: pd.DataFrame, day: pd.Timestamp, wm: dict) -> di
     n_sh = min(n_sh, max(1, int(len(bk) * 0.87)))
     sh = build_fact_shipment(
         dims, bk, fx, n_sh,
-        seed_label=f"live:FactShipment:{d}", key_offset=nk["FactShipment"] - 1,
+        seed_label=seeds["FactShipment"], key_offset=nk["FactShipment"] - 1,
     )
     # Force the departure onto today: in the live feed a shipment appears on the
     # day it sails, not on a date derived from its booking's lead time.
@@ -258,13 +270,13 @@ def _append_day(dims: dict, fx: pd.DataFrame, day: pd.Timestamp, wm: dict) -> di
 
     if len(sh):
         ms = build_fact_shipment_milestone(
-            dims, sh, bk, as_of=day, seed_label=f"live:FactShipmentMilestone:{d}",
+            dims, sh, bk, as_of=day, seed_label=seeds["FactShipmentMilestone"],
         )
         emit("FactShipmentMilestone", ms)
 
         n_cm = _day_volume(daily["FactContainerMove"], day)
         cm = build_fact_container_move(
-            dims, sh, n_cm, seed_label=f"live:FactContainerMove:{d}",
+            dims, sh, n_cm, seed_label=seeds["FactContainerMove"],
         )
         if len(cm):
             cm["ContainerMoveKey"] = np.arange(
@@ -275,7 +287,7 @@ def _append_day(dims: dict, fx: pd.DataFrame, day: pd.Timestamp, wm: dict) -> di
 
             n_fc = _day_volume(daily["FactFreightCharge"], day)
             fc = build_fact_freight_charge(
-                dims, sh, cm, fx, n_fc, seed_label=f"live:FactFreightCharge:{d}",
+                dims, sh, cm, fx, n_fc, seed_label=seeds["FactFreightCharge"],
             )
             if len(fc):
                 fc["ChargeLineKey"] = np.arange(
@@ -287,7 +299,7 @@ def _append_day(dims: dict, fx: pd.DataFrame, day: pd.Timestamp, wm: dict) -> di
 
         n_tl = _day_volume(daily["FactTransportLeg"], day)
         tl = build_fact_transport_leg(
-            dims, sh, n_tl, seed_label=f"live:FactTransportLeg:{d}",
+            dims, sh, n_tl, seed_label=seeds["FactTransportLeg"],
         )
         if len(tl):
             tl["TransportLegKey"] = np.arange(
@@ -298,7 +310,7 @@ def _append_day(dims: dict, fx: pd.DataFrame, day: pd.Timestamp, wm: dict) -> di
 
         n_wt = _day_volume(daily["FactWarehouseTask"], day)
         wt = build_fact_warehouse_task(
-            dims, sh, n_wt, seed_label=f"live:FactWarehouseTask:{d}",
+            dims, sh, n_wt, seed_label=seeds["FactWarehouseTask"],
         )
         if len(wt):
             wt["WarehouseTaskKey"] = np.arange(
@@ -310,7 +322,7 @@ def _append_day(dims: dict, fx: pd.DataFrame, day: pd.Timestamp, wm: dict) -> di
     # ---- port calls arriving today
     n_pc = _day_volume(daily["FactPortCall"], day)
     pc = build_fact_port_call(
-        dims, max(n_pc * 3, 30), seed_label=f"live:FactPortCall:{d}",
+        dims, max(n_pc * 3, 30), seed_label=seeds["FactPortCall"],
     )
     if len(pc):
         pc = pc.head(n_pc).copy()
@@ -323,7 +335,7 @@ def _append_day(dims: dict, fx: pd.DataFrame, day: pd.Timestamp, wm: dict) -> di
     # ---- today's inventory snapshot
     n_iv = _day_volume(daily["FactInventorySnapshot"], day)
     iv = build_fact_inventory_snapshot(
-        dims, n_iv, seed_label=f"live:FactInventorySnapshot:{d}",
+        dims, n_iv, seed_label=seeds["FactInventorySnapshot"],
     )
     if len(iv):
         iv = iv.head(n_iv).copy()
@@ -334,7 +346,8 @@ def _append_day(dims: dict, fx: pd.DataFrame, day: pd.Timestamp, wm: dict) -> di
         iv = _force_day(iv, "SnapshotDateKey", None, day)
         emit("FactInventorySnapshot", iv)
 
-    return {"date": d, "files": written, "rows": rows}
+    return {"date": d, "files": written, "rows": rows,
+            "seeds": {"master_seed": SEED, "labels": seeds}}
 
 
 def _force_day(df: pd.DataFrame, date_col: str, ts_col: str | None,
