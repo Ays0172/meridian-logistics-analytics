@@ -71,6 +71,15 @@ Each run's entry in `_state/watermark.json` records its seeds:
 `child_rng(label)` derives the stream from `SeedSequence(master_seed, spawn_key=(stable_hash(label),))`,
 so the entry alone is enough to reproduce any table on any day.
 
+### History as one file per table (for Power BI Service refresh)
+
+The `history-v1` release also carries one Parquet file per table (`FactShipment.parquet` … `FactTarget.parquet`, 11 files). Each file is that table's 61 monthly `part-000.parquet` files concatenated, with columns aligned by name, no Hive `year`/`month` columns and Snappy compression. They exist so the Power BI Service can download the frozen history anonymously, with no gateway. The yLogistics report reads:
+- history: `https://github.com/<repo>/releases/download/history-v1/<Table>.parquet`
+- live days: the URLs listed in `02_data/_state/manifest.json`
+- dimensions: `02_data/reference/*.csv` on `main`
+
+The history is frozen, so these files never need rebuilding unless the history itself is regenerated. If it is, rebuild all 11 and re-upload them with `gh release upload history-v1 <files> --clobber`.
+
 Surrogate keys are part of this. They are allocated in a **reserved block per
 date** — `history_max + (day_index − 1) × 50,000` — not from a running counter.
 A counter would have made a day's keys depend on how many rows preceded it, so
