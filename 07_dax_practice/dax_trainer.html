@@ -1,0 +1,1165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DAX Practice Trainer</title>
+<style>
+:root{
+  --bg:#f7f7f4; --fg:#1d2227; --muted:#59636e; --card:#ffffff; --border:#d6dbe0;
+  --accent:#1f5fbf; --accent-fg:#ffffff; --ok:#17703a; --ok-bg:#e4f4ea;
+  --bad:#b3261e; --bad-bg:#fbe9e7; --warn:#8a5a00; --warn-bg:#fff4d6;
+  --info:#31577f; --info-bg:#e6eff8; --code-bg:#eef1f4; --mark:#ffd84d;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#14181c; --fg:#e6e9ec; --muted:#9aa5b1; --card:#1c2228; --border:#35404a;
+    --accent:#6ea8ff; --accent-fg:#0b1118; --ok:#6fd195; --ok-bg:#16301f;
+    --bad:#ff8f86; --bad-bg:#3a1b19; --warn:#f2c36b; --warn-bg:#3a2e12;
+    --info:#8fbbe8; --info-bg:#17283a; --code-bg:#11161a; --mark:#7a6200;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#14181c; --fg:#e6e9ec; --muted:#9aa5b1; --card:#1c2228; --border:#35404a;
+  --accent:#6ea8ff; --accent-fg:#0b1118; --ok:#6fd195; --ok-bg:#16301f;
+  --bad:#ff8f86; --bad-bg:#3a1b19; --warn:#f2c36b; --warn-bg:#3a2e12;
+  --info:#8fbbe8; --info-bg:#17283a; --code-bg:#11161a; --mark:#7a6200;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;overflow-x:hidden}
+.wrap{max-width:860px;margin:0 auto;padding:16px}
+h1{font-size:1.35rem;margin:0 0 4px}
+.sub{color:var(--muted);margin:0 0 14px;font-size:.92rem}
+.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px;margin:0 0 14px}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.row.sp{justify-content:space-between}
+button,select,input{font:inherit;color:inherit}
+button{min-height:44px;padding:8px 14px;border-radius:8px;border:1px solid var(--border);background:var(--card);cursor:pointer}
+button:hover:not(:disabled){border-color:var(--accent)}
+button:disabled{opacity:.45;cursor:not-allowed}
+button.primary{background:var(--accent);color:var(--accent-fg);border-color:var(--accent);font-weight:600}
+button.lvl[aria-pressed="true"]{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
+select,input[type=number]{min-height:44px;padding:6px 10px;border-radius:8px;border:1px solid var(--border);background:var(--card)}
+select{max-width:100%;flex:1 1 200px}
+input[type=number]{width:110px}
+.badge{display:inline-block;font-size:.75rem;font-weight:600;padding:1px 8px;border-radius:999px;border:1px solid var(--border);color:var(--muted)}
+.badge.Beginner{color:var(--ok);border-color:var(--ok)}
+.badge.Intermediate{color:var(--info);border-color:var(--info)}
+.badge.Pro{color:var(--warn);border-color:var(--warn)}
+.prompt{font-size:1.05rem;margin:6px 0 4px}
+.meta{color:var(--muted);font-size:.88rem}
+textarea{display:block;width:100%;min-height:150px;resize:vertical;padding:10px;border-radius:8px;border:1px solid var(--border);background:var(--code-bg);color:var(--fg);font:16px/1.45 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;tab-size:2}
+textarea:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+pre,code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+pre{margin:6px 0;padding:10px;background:var(--code-bg);border-radius:8px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:.9rem}
+code{background:var(--code-bg);padding:0 4px;border-radius:4px;font-size:.9em}
+mark{background:var(--mark);color:inherit;border-radius:3px;padding:0 1px}
+.scroll{overflow-x:auto;max-width:100%}
+table{border-collapse:collapse;font-size:.88rem;width:100%}
+th,td{border:1px solid var(--border);padding:4px 8px;text-align:left;white-space:nowrap}
+th{background:var(--code-bg)}
+td.num{text-align:right;font-variant-numeric:tabular-nums}
+tr.miss td{background:var(--bad-bg)}
+.banner{border-radius:8px;padding:10px 12px;font-weight:600;margin:0 0 8px}
+.banner.ok{background:var(--ok-bg);color:var(--ok)}
+.banner.bad{background:var(--bad-bg);color:var(--bad)}
+.note{overflow-wrap:anywhere;border-radius:8px;padding:8px 12px;margin:8px 0;font-size:.93rem}
+.note.warn{background:var(--warn-bg);color:var(--warn)}
+.note.info{background:var(--info-bg);color:var(--info)}
+.note b.tag{font-size:.78rem;border:1px solid currentColor;border-radius:999px;padding:0 7px;margin-right:6px}
+details>summary{cursor:pointer;font-weight:600;min-height:32px}
+.tbls{display:grid;gap:12px;margin-top:8px}
+.tbls h3{margin:0 0 4px;font-size:.9rem}
+#score{color:var(--muted);font-size:.9rem}
+#selftest-out{display:none}
+body.selftest #selftest-out{display:block;white-space:pre-wrap;font-size:.8rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>DAX Practice Trainer</h1>
+  <p class="sub">Random logistics data, one question at a time. Type a DAX measure, press Check, and it is run against the data and compared with a reference measure. Runs entirely in your browser.</p>
+
+  <div class="card">
+    <div class="row" role="group" aria-label="Level" id="levels"></div>
+    <div class="row" style="margin-top:8px">
+      <button id="prev" aria-label="Previous challenge">&larr;</button>
+      <select id="picker" aria-label="Challenge"></select>
+      <button id="next" aria-label="Next challenge">&rarr;</button>
+    </div>
+    <div class="row sp" style="margin-top:8px">
+      <div class="row">
+        <label for="seed" class="meta">Seed</label>
+        <input id="seed" type="number" inputmode="numeric" min="0" step="1">
+        <button id="newdata">New data</button>
+      </div>
+      <span id="score"></span>
+    </div>
+  </div>
+
+  <div class="card" id="promptCard"></div>
+
+  <div class="card">
+    <details id="preview">
+      <summary>Data preview (first rows of each table)</summary>
+      <div class="tbls" id="previewBody"></div>
+    </details>
+  </div>
+
+  <div class="card">
+    <label for="editor" class="meta">Your DAX measure (Ctrl+Enter to check)</label>
+    <textarea id="editor" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="Total Revenue = SUM(Shipment[Revenue])"></textarea>
+    <div class="row" style="margin-top:8px">
+      <button id="check" class="primary">Check</button>
+      <button id="hint">Show hint</button>
+      <button id="answer" disabled title="Make an attempt or open the hint first">Show answer</button>
+    </div>
+  </div>
+
+  <div class="card" id="result" aria-live="polite" hidden></div>
+  <pre id="selftest-out"></pre>
+</div>
+
+<script>
+"use strict";
+/* =====================================================================
+   1. Seeded PRNG + random data
+   ===================================================================== */
+function mulberry32(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};}
+const TABLES={
+  Shipment:{key:'ShipmentID',cols:['ShipmentID','CustomerKey','Mode','Region','Revenue','Cost','Ffe','IsOnTime','DateKey']},
+  Customer:{key:'CustomerKey',cols:['CustomerKey','CustomerName','Segment']},
+  Date:{key:'DateKey',cols:['DateKey','Date','Year','Month']}
+};
+const MODES=['Ocean','Air','Road'], REGIONS=['Asia','Europe','Americas'];
+const CUST_NAMES=['Northwind Foods','Apex Retail','Blue Harbor Co','Cedar Textiles','Delta Motors','Evergreen Pharma','Falcon Electronics','Granite Tools','Harbor Toys','Iris Home'];
+
+const DATE_ROWS=(function(){
+  const rows=[];
+  for(let y=2025;y<=2026;y++){
+    for(let m=1;m<=12;m++){
+      const dim=new Date(Date.UTC(y,m,0)).getUTCDate();
+      for(let d=1;d<=dim;d++){
+        rows.push({DateKey:y*10000+m*100+d,Date:y+'-'+String(m).padStart(2,'0')+'-'+String(d).padStart(2,'0'),Year:y,Month:m});
+      }
+    }
+  }
+  return rows;
+})();
+
+function buildData(seed,attempt){
+  const r=mulberry32((seed*2654435761+attempt*40503+12345)>>>0);
+  const ri=(a,b)=>a+Math.floor(r()*(b-a+1));
+  const pick=a=>a[Math.floor(r()*a.length)];
+  const nCust=8;
+  const names=CUST_NAMES.slice().sort(()=>r()-0.5).slice(0,nCust);
+  const customers=names.map((nm,i)=>({CustomerKey:i+1,CustomerName:nm,Segment:i<3?'Key':'Standard'}));
+  // shuffle segments so Key customers are not always the first keys
+  const segs=customers.map(c=>c.Segment).sort(()=>r()-0.5);
+  customers.forEach((c,i)=>c.Segment=segs[i]);
+  const ships=[];
+  for(let i=1;i<=40;i++){
+    const u=r(); const mode=u<0.5?'Ocean':(u<0.7?'Air':'Road');
+    const rev=mode==='Ocean'?ri(3000,9000):(mode==='Air'?ri(1500,6000):ri(500,3000));
+    const cost=Math.round(rev*(0.55+r()*0.42));
+    ships.push({ShipmentID:i,CustomerKey:ri(1,nCust),Mode:mode,Region:pick(REGIONS),Revenue:rev,Cost:cost,
+      Ffe:mode==='Air'?0:(mode==='Ocean'?ri(1,6):ri(1,2)),IsOnTime:r()<0.75?1:0,DateKey:pick(DATE_ROWS).DateKey});
+  }
+  return {Shipment:ships,Customer:customers,Date:DATE_ROWS,seed:seed};
+}
+// derive challenge parameters and reject data that would make a challenge degenerate
+function deriveParams(D){
+  const S=D.Shipment;
+  for(const m of MODES) if(S.filter(s=>s.Mode===m).length<4) return null;
+  for(const g of REGIONS) if(S.filter(s=>s.Region===g).length<4) return null;
+  if(!S.some(s=>s.Mode==='Air'&&s.Revenue>0)) return null;
+  const seg={}; D.Customer.forEach(c=>seg[c.CustomerKey]=c.Segment);
+  for(const m of MODES){
+    if(!S.some(s=>s.Mode===m&&seg[s.CustomerKey]==='Key')) return null;
+    if(!S.some(s=>s.Mode===m&&seg[s.CustomerKey]==='Standard')) return null;
+    if(new Set(S.filter(s=>s.Mode===m).map(s=>s.CustomerKey)).size>=D.Customer.length) return null;
+  }
+  if(new Set(S.map(s=>s.IsOnTime)).size<2) return null;
+  // n: customers with more than n shipments
+  const cnt={}; S.forEach(s=>cnt[s.CustomerKey]=(cnt[s.CustomerKey]||0)+1);
+  const counts=Object.values(cnt);
+  let n=null;
+  const cands=[...new Set(counts)].sort((a,b)=>a-b);
+  for(const c of cands){
+    if(counts.some(x=>x===c)&&counts.some(x=>x>c)&&counts.some(x=>x>=1&&x<c)) {n=c;if(c>=4)break;}
+  }
+  if(n===null) return null;
+  // T: shipments with profit above T
+  const profits=S.map(s=>s.Revenue-s.Cost).sort((a,b)=>a-b);
+  const T=profits[Math.floor(profits.length*0.6)];
+  const gt=S.filter(s=>s.Revenue-s.Cost>T).length, ge=S.filter(s=>s.Revenue-s.Cost>=T).length;
+  if(gt===ge||gt<2) return null;
+  if(S.filter(s=>s.Revenue>T).length===gt) return null;
+  // key-customer margin must differ from overall margin
+  return {n:n,T:T};
+}
+function generateData(seed){
+  for(let a=0;a<2000;a++){
+    const D=buildData(seed,a); const P=deriveParams(D);
+    if(P){D.params=P;D.attempt=a;return D;}
+  }
+  throw new Error('Could not generate valid data for seed '+seed);
+}
+
+/* =====================================================================
+   2. Tokenizer
+   ===================================================================== */
+class DaxError extends Error{constructor(msg,pos,len){super(msg);this.pos=(pos==null?-1:pos);this.len=len||1;}}
+function tokenize(src){
+  const toks=[];let i=0;const n=src.length;
+  while(i<n){
+    const c=src[i];
+    if(/\s/.test(c)){i++;continue;}
+    if((c==='/'&&src[i+1]==='/')||(c==='-'&&src[i+1]==='-')){while(i<n&&src[i]!=='\n')i++;continue;}
+    if(c==='/'&&src[i+1]==='*'){const e=src.indexOf('*/',i+2);if(e<0)throw new DaxError("This comment started with /* but is never closed with */",i,2);i=e+2;continue;}
+    if(/[0-9]/.test(c)||(c==='.'&&/[0-9]/.test(src[i+1]||''))){
+      let j=i;while(j<n&&/[0-9]/.test(src[j]))j++;
+      if(src[j]==='.'){j++;while(j<n&&/[0-9]/.test(src[j]))j++;}
+      toks.push({type:'num',v:parseFloat(src.slice(i,j)),pos:i,end:j});i=j;continue;
+    }
+    if(c==='"'){
+      let j=i+1,s='';
+      for(;;){
+        if(j>=n)throw new DaxError('This text string is missing its closing double quote (")',i,1);
+        if(src[j]==='"'){if(src[j+1]==='"'){s+='"';j+=2;continue;}break;}
+        s+=src[j++];
+      }
+      toks.push({type:'str',v:s,pos:i,end:j+1});i=j+1;continue;
+    }
+    if(c==="'"){
+      const e=src.indexOf("'",i+1);if(e<0)throw new DaxError("This quoted table name is missing its closing apostrophe (')",i,1);
+      toks.push({type:'qid',v:src.slice(i+1,e),pos:i,end:e+1});i=e+1;continue;
+    }
+    if(c==='['){
+      const e=src.indexOf(']',i+1);if(e<0)throw new DaxError("This column/measure name is missing its closing bracket ]",i,1);
+      toks.push({type:'br',v:src.slice(i+1,e),pos:i,end:e+1});i=e+1;continue;
+    }
+    if(/[A-Za-z_]/.test(c)){
+      let j=i;while(j<n&&/[A-Za-z0-9_]/.test(src[j]))j++;
+      toks.push({type:'id',v:src.slice(i,j),pos:i,end:j});i=j;continue;
+    }
+    const two=src.slice(i,i+2);
+    if(two==='=='||two==='!='||two==='=>')throw new DaxError(two==='!='?"DAX does not use != ; write <> for 'not equal'":"DAX compares with a single = (not "+two+")",i,2);
+    if(['<=','>=','<>','&&','||'].includes(two)){toks.push({type:'op',v:two,pos:i,end:i+2});i+=2;continue;}
+    if('+-*/=<>&(),{}'.includes(c)){toks.push({type:'op',v:c,pos:i,end:i+1});i++;continue;}
+    if(c===';')throw new DaxError('Separate arguments with a comma (,) - semicolons are not accepted here',i,1);
+    if(c===':')throw new DaxError("Use = to define a measure (Name = expression), not :=",i,1);
+    throw new DaxError("Unexpected character '"+c+"'",i,1);
+  }
+  toks.push({type:'eof',v:'',pos:n,end:n});
+  return toks;
+}
+
+/* =====================================================================
+   3. Parser (recursive descent) -> AST
+   ===================================================================== */
+function parseFormula(src){
+  let toks=tokenize(src);
+  // optional "Measure Name =" prefix
+  if(toks[0].type==='id'&&toks[0].v.toUpperCase()!=='VAR'||toks[0].type==='qid'){
+    let i=0;
+    while(toks[i].type==='id'&&!['VAR','RETURN'].includes(toks[i].v.toUpperCase())||(i===0&&toks[i].type==='qid'))i++;
+    if(i>0&&i<=6&&toks[i].type==='op'&&toks[i].v==='=')toks=toks.slice(i+1);
+  }
+  if(toks.length===1)throw new DaxError('The formula is empty. Write an expression such as SUM(Shipment[Revenue])',0,1);
+  let p=0;
+  const peek=()=>toks[p], next=()=>toks[p++];
+  const isOp=v=>toks[p].type==='op'&&toks[p].v===v;
+  const isKw=k=>toks[p].type==='id'&&toks[p].v.toUpperCase()===k;
+  const show=t=>t.type==='eof'?'the end of the formula':"'"+src.slice(t.pos,t.end)+"'";
+  const fail=(msg,t)=>{t=t||peek();throw new DaxError(msg,t.pos,Math.max(1,t.end-t.pos));};
+
+  function parseExpr(){
+    if(isKw('VAR')){
+      const vars=[];
+      while(isKw('VAR')){
+        next();const nt=next();
+        if(nt.type!=='id')fail('Expected a variable name after VAR but found '+show(nt),nt);
+        if(!isOp('='))fail("Expected '=' after the variable name '"+nt.v+"' but found "+show(peek()));
+        next();
+        vars.push({name:nt.v,e:parseExpr(),pos:nt.pos});
+      }
+      if(!isKw('RETURN'))fail('Expected RETURN after the VAR definitions but found '+show(peek()));
+      next();
+      return {t:'let',vars:vars,body:parseExpr()};
+    }
+    return parseOr();
+  }
+  function parseOr(){let l=parseAnd();while(isOp('||')){const o=next();l={t:'bin',op:'||',l:l,r:parseAnd(),pos:o.pos};}return l;}
+  function parseAnd(){let l=parseCmp();while(isOp('&&')){const o=next();l={t:'bin',op:'&&',l:l,r:parseCmp(),pos:o.pos};}return l;}
+  function parseCmp(){
+    let l=parseConcat();
+    for(;;){
+      const t=peek();
+      if(t.type==='op'&&['=','<>','<','>','<=','>='].includes(t.v)){next();l={t:'bin',op:t.v,l:l,r:parseConcat(),pos:t.pos};}
+      else if(isKw('IN')){next();l={t:'bin',op:'in',l:l,r:parseConcat(),pos:t.pos};}
+      else return l;
+    }
+  }
+  function parseConcat(){let l=parseAdd();while(isOp('&')){const o=next();l={t:'bin',op:'&',l:l,r:parseAdd(),pos:o.pos};}return l;}
+  function parseAdd(){let l=parseMul();while(isOp('+')||isOp('-')){const o=next();l={t:'bin',op:o.v,l:l,r:parseMul(),pos:o.pos};}return l;}
+  function parseMul(){let l=parseUnary();while(isOp('*')||isOp('/')){const o=next();l={t:'bin',op:o.v,l:l,r:parseUnary(),pos:o.pos};}return l;}
+  function parseUnary(){
+    if(isOp('-')){const o=next();return {t:'un',op:'-',e:parseUnary(),pos:o.pos};}
+    if(isOp('+')){next();return parseUnary();}
+    return parsePrimary();
+  }
+  function parsePrimary(){
+    const t=next();
+    if(t.type==='num')return {t:'num',v:t.v,pos:t.pos};
+    if(t.type==='str')return {t:'str',v:t.v,pos:t.pos};
+    if(t.type==='op'&&t.v==='('){
+      const e=parseExpr();
+      if(!isOp(')')){
+        if(peek().type==='eof')fail("Missing ')' - the '(' at position "+(t.pos+1)+" is never closed",peek());
+        fail("Expected ')' but found "+show(peek()));
+      }
+      next();return e;
+    }
+    if(t.type==='op'&&t.v==='{'){
+      const items=[];
+      if(!isOp('}')){for(;;){items.push(parseExpr());if(isOp(',')){next();continue;}break;}}
+      if(!isOp('}'))fail("Expected '}' to close the list but found "+show(peek()));
+      next();return {t:'list',items:items,pos:t.pos};
+    }
+    if(t.type==='br')return {t:'mref',name:t.v,pos:t.pos,end:t.end};
+    if(t.type==='qid'||t.type==='id'){
+      if(t.type==='id'&&isOp('(')){
+        const open=next();const args=[];
+        if(!isOp(')')){
+          for(;;){
+            args.push(parseExpr());
+            if(isOp(',')){next();continue;}
+            break;
+          }
+        }
+        if(!isOp(')')){
+          if(peek().type==='eof')fail("Missing ')' - the '(' after "+t.v+" at position "+(open.pos+1)+" is never closed",peek());
+          fail("Expected ',' or ')' in the arguments of "+t.v+" but found "+show(peek()));
+        }
+        next();
+        return {t:'call',name:t.v.toUpperCase(),raw:t.v,args:args,pos:t.pos,end:t.end};
+      }
+      if(peek().type==='br'){const b=next();return {t:'col',table:t.v,col:b.v,pos:t.pos,end:b.end};}
+      if(t.type==='qid')return {t:'id',name:t.v,pos:t.pos,end:t.end};
+      const u=t.v.toUpperCase();
+      if(u==='TRUE')return {t:'bool',v:true,pos:t.pos};
+      if(u==='FALSE')return {t:'bool',v:false,pos:t.pos};
+      if(u==='RETURN'||u==='VAR')fail("'"+t.v+"' is not expected here",t);
+      return {t:'id',name:t.v,pos:t.pos,end:t.end};
+    }
+    if(t.type==='eof')fail('The formula ends too early - an expression is missing here',t);
+    fail('Unexpected '+show(t)+' - an expression (a number, column or function) was expected',t);
+  }
+  const ast=parseExpr();
+  if(peek().type!=='eof'){
+    const t=peek();
+    if(t.type==='op'&&t.v===')')fail("Unexpected ')' - there is no matching '(' for it",t);
+    fail('Unexpected '+show(t)+" - did you forget an operator or a comma before it?",t);
+  }
+  return ast;
+}
+const parseCache=new Map();
+function parseCached(src){
+  if(parseCache.has(src)){const c=parseCache.get(src);if(c.err)throw c.err;return c.ast;}
+  try{const ast=parseFormula(src);parseCache.set(src,{ast:ast});return ast;}
+  catch(e){if(e instanceof DaxError)parseCache.set(src,{err:e});throw e;}
+}
+
+/* =====================================================================
+   4. Evaluator
+   ===================================================================== */
+let DB=null; // current dataset
+const TABLE_LC={}; Object.keys(TABLES).forEach(t=>TABLE_LC[t.toLowerCase()]=t);
+function lev(a,b){const m=a.length,n=b.length,d=[];for(let i=0;i<=m;i++){d[i]=[i];}for(let j=1;j<=n;j++)d[0][j]=j;
+  for(let i=1;i<=m;i++)for(let j=1;j<=n;j++)d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(a[i-1]===b[j-1]?0:1));return d[m][n];}
+function nearest(name,list){let best=null,bd=99;for(const x of list){const d=lev(name.toLowerCase(),x.toLowerCase());if(d<bd){bd=d;best=x;}}return bd<=Math.max(2,Math.floor(name.length/3))?best:null;}
+function norm(v){return v==null?'\u0000null':(typeof v==='string'?v.toLowerCase():v);}
+function inter(a,b){const o=new Set();for(const x of a)if(b.has(x))o.add(x);return o;}
+function resolveTable(name,node){
+  const t=TABLE_LC[name.toLowerCase()];
+  if(!t){const s=nearest(name,Object.keys(TABLES));
+    throw new DaxError("Unknown table '"+name+"'."+(s?" Did you mean "+s+"?":" Tables are: Shipment, Customer, Date."),node&&node.pos,name.length);}
+  return t;
+}
+function resolveCol(n){
+  if(n._r)return n._r;
+  const T=resolveTable(n.table,n);
+  const c=TABLES[T].cols.find(x=>x.toLowerCase()===n.col.toLowerCase());
+  if(!c){const s=nearest(n.col,TABLES[T].cols);
+    throw new DaxError("Table "+T+" has no column '"+n.col+"'."+(s?" Did you mean "+T+"["+s+"]?":" Columns: "+TABLES[T].cols.join(', ')+"."),n.pos,(n.end||n.pos)-n.pos);}
+  return n._r={T:T,col:c};
+}
+function mkCtx(f){return {f:f||new Map(),cache:{}};}
+function ctxEntries(ctx,T){
+  const c=ctx.cache;c.ent=c.ent||{};
+  if(c.ent[T])return c.ent[T];
+  const out=[],pre=T+'[';
+  for(const [k,s] of ctx.f)if(k.startsWith(pre))out.push([k.slice(pre.length,-1),s]);
+  return c.ent[T]=out;
+}
+function visibleRows(T,ctx){
+  const c=ctx.cache;c.rows=c.rows||{};
+  if(c.rows[T])return c.rows[T];
+  let rows=DB[T];
+  const ent=ctxEntries(ctx,T);
+  if(ent.length)rows=rows.filter(r=>ent.every(([col,s])=>s.has(norm(r[col]))));
+  if(T==='Shipment'){
+    for(const [P,fk] of [['Customer','CustomerKey'],['Date','DateKey']]){
+      if(ctxEntries(ctx,P).length){
+        const keys=new Set(visibleRows(P,ctx).map(r=>r[fk]));
+        rows=rows.filter(r=>keys.has(r[fk]));
+      }
+    }
+  }
+  return c.rows[T]=rows;
+}
+function allValues(T,col){const seen=new Set(),out=[];for(const r of DB[T]){const k=norm(r[col]);if(!seen.has(k)){seen.add(k);out.push(r[col]);}}return out;}
+function mkTable(T,cols,rows,full){return {isTable:true,table:T,cols:cols,rows:rows,full:!!full};}
+const truthy=v=>v===true;
+function sc(v,node){
+  if(v&&v.isTable)throw new DaxError('A table was used where a single value is needed. Wrap it in an aggregation such as COUNTROWS(...) or SUMX(...).',node&&node.pos);
+  if(v&&v.isList)throw new DaxError('A list {...} can only be used on the right side of IN.',node&&node.pos);
+  return v;
+}
+function numOf(v,node){
+  if(v==null)return null;
+  if(typeof v==='number')return v;
+  if(typeof v==='boolean')return v?1:0;
+  const x=Number(v);if(v!==''&&Number.isFinite(x))return x;
+  throw new DaxError("Cannot use the text '"+v+"' as a number.",node&&node.pos);
+}
+function cmpVals(a,b){
+  if(a==null&&b==null)return 0;
+  if(a==null)a=(typeof b==='string')?'':(typeof b==='boolean'?false:0);
+  if(b==null)b=(typeof a==='string')?'':(typeof a==='boolean'?false:0);
+  if(typeof a==='string'||typeof b==='string'){a=String(a).toLowerCase();b=String(b).toLowerCase();}
+  return a<b?-1:(a>b?1:0);
+}
+function arity(n,min,max){
+  const k=n.args.length;
+  if(k<min||k>max)throw new DaxError(n.name+' expects '+(min===max?min:min+(max===Infinity?' or more':' to '+max))+' argument'+(max===1&&min===1?'':'s')+' but got '+k+'.',n.pos,n.name.length);
+}
+function needCol(a,fname){
+  if(a.t==='mref')ev(a,{ctx:null,rows:[],vars:{}});
+  if(a.t!=='col')throw new DaxError(fname+' needs a single column such as Shipment[Revenue] - not an expression. To aggregate an expression use '+(fname==='SUM'?'SUMX':fname==='AVERAGE'?'AVERAGEX':fname==='MIN'?'MINX':fname==='MAX'?'MAXX':'an iterator')+'(table, expression).',a.pos);
+  return resolveCol(a);
+}
+function lookupRow(env,node){
+  const {T,col}=resolveCol(node);
+  for(let i=env.rows.length-1;i>=0;i--){
+    const e=env.rows[i];
+    if(e.table===T){
+      if(e.row)return e.row[col];
+      if(Object.prototype.hasOwnProperty.call(e.cols,col))return e.cols[col];
+    }
+  }
+  const hasShipRow=env.rows.some(e=>e.table==='Shipment'&&e.row);
+  let msg=T+'['+col+'] is a whole column, so it needs a row context or an aggregation like SUM('+T+'['+col+']).';
+  if(hasShipRow&&T!=='Shipment')msg=T+'['+col+'] belongs to another table. Inside a row context on Shipment, fetch it with RELATED('+T+'['+col+']).';
+  throw new DaxError(msg,node.pos,(node.end||node.pos)-node.pos);
+}
+function tableArg(a,env){
+  const v=ev(a,env);
+  if(!v||!v.isTable)throw new DaxError('A table is needed here (for example Shipment, FILTER(...), VALUES(...)).',a.pos);
+  return v;
+}
+function withRow(env,tv,row){
+  return {ctx:env.ctx,vars:env.vars,rows:env.rows.concat([tv.full?{table:tv.table,row:row}:{table:tv.table,cols:row}])};
+}
+function aggVals(a,env){
+  const {T,col}=needCol(a,'');
+  return visibleRows(T,env.ctx).map(r=>r[col]);
+}
+function numVals(vals,node){return vals.filter(v=>v!=null).map(v=>numOf(v,node));}
+
+function isPredicate(n){return n.t==='bin'&&['=','<>','<','>','<=','>=','&&','||','in'].includes(n.op);}
+function splitAnd(n){return (n.t==='bin'&&n.op==='&&')?splitAnd(n.l).concat(splitAnd(n.r)):[n];}
+const PRED_OK=new Set(['BLANK','TRUE','FALSE','NOT','AND','OR']);
+function predCols(n,out){
+  switch(n.t){
+    case 'col':{const r=resolveCol(n);out.set(r.T+'['+r.col+']',r);break;}
+    case 'call':
+      if(!PRED_OK.has(n.name))throw new DaxError("A True/False filter inside CALCULATE can't call "+n.name+"(). Use FILTER(table, condition) instead.",n.pos,n.name.length);
+      n.args.forEach(a=>predCols(a,out));break;
+    case 'bin':predCols(n.l,out);predCols(n.r,out);break;
+    case 'un':predCols(n.e,out);break;
+    case 'list':n.items.forEach(a=>predCols(a,out));break;
+    case 'let':throw new DaxError('VAR cannot be used inside a True/False filter.',n.pos);
+  }
+}
+function predToSet(p,env){
+  const cols=new Map();predCols(p,cols);
+  if(cols.size===0)throw new DaxError('This True/False filter does not reference a column (for example Shipment[Mode] = "Ocean").',p.pos);
+  if(cols.size>1)throw new DaxError('A True/False filter can only use one column (this one uses '+[...cols.keys()].join(' and ')+'). Split it into separate filter arguments, or use FILTER(table, condition).',p.pos);
+  const {T,col}=[...cols.values()][0];
+  const out=new Set();
+  for(const v of allValues(T,col)){
+    const e={table:T,cols:{[col]:v}};
+    const r=ev(p,{ctx:env.ctx,vars:env.vars,rows:env.rows.concat([e])});
+    if(truthy(r))out.add(norm(v));
+  }
+  return {key:T+'['+col+']',set:out};
+}
+function collectFilter(a,env,removes,sets,keeps,keep){
+  if(a.t==='call'){
+    if(a.name==='KEEPFILTERS'){arity(a,1,1);return collectFilter(a.args[0],env,removes,sets,keeps,true);}
+    if(a.name==='ALL'||a.name==='REMOVEFILTERS'){
+      if(a.args.length===0){Object.keys(TABLES).forEach(T=>removes.push({T:T}));return;}
+      if(a.args.length!==1)throw new DaxError(a.name+' with several columns is not supported by this trainer - use one ALL(...) per column.',a.pos);
+      const x=a.args[0];
+      if(x.t==='col'){const r=resolveCol(x);removes.push({T:r.T,col:r.col});return;}
+      if(x.t==='id'&&!(x.name.toLowerCase() in env.vars)){removes.push({T:resolveTable(x.name,x)});return;}
+      throw new DaxError(a.name+' takes a table (ALL(Shipment)) or a column (ALL(Shipment[Mode])).',a.pos);
+    }
+  }
+  if(isPredicate(a)){
+    for(const part of splitAnd(a)){const s=predToSet(part,env);(keep?keeps:sets).push(s);}
+    return;
+  }
+  const v=ev(a,env);
+  if(!v||!v.isTable)throw new DaxError('CALCULATE filter arguments must be a True/False test like Shipment[Mode] = "Ocean", or a table such as FILTER(...) / ALL(...) / VALUES(...).',a.pos);
+  if(v.full){
+    const key=TABLES[v.table].key;
+    if(!keep)removes.push({T:v.table});
+    (keep?keeps:sets).push({key:v.table+'['+key+']',set:new Set(v.rows.map(r=>norm(r[key])))});
+  }else{
+    const col=v.cols[0];
+    (keep?keeps:sets).push({key:v.table+'['+col+']',set:new Set(v.rows.map(r=>norm(r[col])))});
+  }
+}
+function fnCalculate(n,env){
+  if(n.args.length<1)throw new DaxError('CALCULATE needs an expression as its first argument.',n.pos,9);
+  const f=new Map(env.ctx.f);
+  // context transition: every active row context becomes filters on its columns
+  for(const e of env.rows){
+    if(e.row){for(const c of TABLES[e.table].cols)f.set(e.table+'['+c+']',new Set([norm(e.row[c])]));}
+    else{for(const c of Object.keys(e.cols))f.set(e.table+'['+c+']',new Set([norm(e.cols[c])]));}
+  }
+  const removes=[],sets=[],keeps=[];
+  for(const a of n.args.slice(1))collectFilter(a,env,removes,sets,keeps,false);
+  for(const r of removes){
+    if(r.col)f.delete(r.T+'['+r.col+']');
+    else for(const k of [...f.keys()])if(k.startsWith(r.T+'['))f.delete(k);
+  }
+  const rep=new Map();
+  for(const s of sets)rep.set(s.key,rep.has(s.key)?inter(rep.get(s.key),s.set):s.set);
+  for(const [k,s] of rep)f.set(k,s);
+  for(const s of keeps)f.set(s.key,f.has(s.key)?inter(f.get(s.key),s.set):s.set);
+  return ev(n.args[0],{ctx:mkCtx(f),rows:[],vars:env.vars});
+}
+function iterate(n,env,fn){
+  arity(n,2,2);
+  const tv=tableArg(n.args[0],env);
+  const out=[];
+  for(const row of tv.rows)out.push(fn(ev(n.args[1],withRow(env,tv,row))));
+  return out;
+}
+const FN={
+  SUM(n,env){arity(n,1,1);const {T,col}=needCol(n.args[0],'SUM');const v=numVals(visibleRows(T,env.ctx).map(r=>r[col]),n);return v.length?v.reduce((a,b)=>a+b,0):null;},
+  AVERAGE(n,env){arity(n,1,1);const {T,col}=needCol(n.args[0],'AVERAGE');const v=numVals(visibleRows(T,env.ctx).map(r=>r[col]),n);return v.length?v.reduce((a,b)=>a+b,0)/v.length:null;},
+  MIN(n,env){if(n.args.length===2){const a=sc(ev(n.args[0],env)),b=sc(ev(n.args[1],env));return a==null?b:(b==null?a:Math.min(a,b));}
+    arity(n,1,1);const {T,col}=needCol(n.args[0],'MIN');const v=numVals(visibleRows(T,env.ctx).map(r=>r[col]),n);return v.length?Math.min(...v):null;},
+  MAX(n,env){if(n.args.length===2){const a=sc(ev(n.args[0],env)),b=sc(ev(n.args[1],env));return a==null?b:(b==null?a:Math.max(a,b));}
+    arity(n,1,1);const {T,col}=needCol(n.args[0],'MAX');const v=numVals(visibleRows(T,env.ctx).map(r=>r[col]),n);return v.length?Math.max(...v):null;},
+  COUNT(n,env){arity(n,1,1);const {T,col}=needCol(n.args[0],'COUNT');return visibleRows(T,env.ctx).filter(r=>r[col]!=null).length;},
+  COUNTA(n,env){return FN.COUNT(n,env);},
+  DISTINCTCOUNT(n,env){arity(n,1,1);const {T,col}=needCol(n.args[0],'DISTINCTCOUNT');return new Set(visibleRows(T,env.ctx).map(r=>norm(r[col]))).size;},
+  COUNTROWS(n,env){arity(n,1,1);return tableArg(n.args[0],env).rows.length;},
+  SUMX(n,env){const v=iterate(n,env,x=>sc(x,n)).filter(x=>x!=null).map(x=>numOf(x,n));return v.length?v.reduce((a,b)=>a+b,0):null;},
+  AVERAGEX(n,env){const v=iterate(n,env,x=>sc(x,n)).filter(x=>x!=null).map(x=>numOf(x,n));return v.length?v.reduce((a,b)=>a+b,0)/v.length:null;},
+  MAXX(n,env){const v=iterate(n,env,x=>sc(x,n)).filter(x=>x!=null).map(x=>numOf(x,n));return v.length?Math.max(...v):null;},
+  MINX(n,env){const v=iterate(n,env,x=>sc(x,n)).filter(x=>x!=null).map(x=>numOf(x,n));return v.length?Math.min(...v):null;},
+  COUNTX(n,env){return iterate(n,env,x=>sc(x,n)).filter(x=>x!=null).length;},
+  FILTER(n,env){
+    arity(n,2,2);
+    const tv=tableArg(n.args[0],env);
+    const rows=tv.rows.filter(row=>truthy(sc(ev(n.args[1],withRow(env,tv,row)),n)));
+    return mkTable(tv.table,tv.cols,rows,tv.full);
+  },
+  ALL(n,env){
+    arity(n,1,1);const x=n.args[0];
+    if(x.t==='col'){const {T,col}=resolveCol(x);return mkTable(T,[col],allValues(T,col).map(v=>({[col]:v})),false);}
+    if(x.t==='id'&&!(x.name.toLowerCase() in env.vars)){const T=resolveTable(x.name,x);return mkTable(T,TABLES[T].cols,DB[T],true);}
+    throw new DaxError('ALL takes a table (ALL(Shipment)) or one column (ALL(Shipment[Mode])).',n.pos,3);
+  },
+  VALUES(n,env){
+    arity(n,1,1);const x=n.args[0];
+    if(x.t==='col'){
+      const {T,col}=resolveCol(x);
+      const seen=new Set(),vals=[];
+      for(const r of visibleRows(T,env.ctx)){const k=norm(r[col]);if(!seen.has(k)){seen.add(k);vals.push(r[col]);}}
+      return mkTable(T,[col],vals.map(v=>({[col]:v})),false);
+    }
+    const t=tableArg(x,env);return mkTable(t.table,t.cols,t.rows,t.full);
+  },
+  DISTINCT(n,env){return FN.VALUES(n,env);},
+  CALCULATE(n,env){return fnCalculate(n,env);},
+  KEEPFILTERS(n){throw new DaxError('KEEPFILTERS only works as a filter argument of CALCULATE, e.g. CALCULATE(..., KEEPFILTERS(Shipment[Ffe] > 0)).',n.pos,11);},
+  REMOVEFILTERS(n){throw new DaxError('REMOVEFILTERS only works as a filter argument of CALCULATE.',n.pos,13);},
+  RELATED(n,env){
+    arity(n,1,1);const x=n.args[0];
+    if(x.t!=='col')throw new DaxError('RELATED takes a column, e.g. RELATED(Customer[Segment]).',n.pos,7);
+    const {T,col}=resolveCol(x);
+    if(T==='Shipment')throw new DaxError('RELATED fetches a column from the ONE side of a relationship (Customer or Date). Shipment is the many side, so just use '+T+'['+col+'] directly in a row context.',n.pos,7);
+    let e=null;for(let i=env.rows.length-1;i>=0;i--)if(env.rows[i].table==='Shipment'&&env.rows[i].row){e=env.rows[i];break;}
+    if(!e)throw new DaxError('RELATED needs a row context on Shipment - use it inside an iterator such as SUMX(Shipment, ...) or FILTER(Shipment, ...).',n.pos,7);
+    const fk=T==='Customer'?'CustomerKey':'DateKey';
+    const hit=DB[T].find(r=>r[fk]===e.row[fk]);
+    return hit?hit[col]:null;
+  },
+  DIVIDE(n,env){
+    arity(n,2,3);
+    const a=numOf(sc(ev(n.args[0],env),n),n),b=numOf(sc(ev(n.args[1],env),n),n);
+    if(b==null||b===0)return n.args.length===3?sc(ev(n.args[2],env),n):null;
+    if(a==null)return null;
+    return a/b;
+  },
+  IF(n,env){
+    arity(n,2,3);
+    const c=sc(ev(n.args[0],env),n);
+    if(truthy(c))return sc(ev(n.args[1],env),n);
+    return n.args.length===3?sc(ev(n.args[2],env),n):null;
+  },
+  AND(n,env){arity(n,2,2);return truthy(sc(ev(n.args[0],env),n))&&truthy(sc(ev(n.args[1],env),n));},
+  OR(n,env){arity(n,2,2);return truthy(sc(ev(n.args[0],env),n))||truthy(sc(ev(n.args[1],env),n));},
+  NOT(n,env){arity(n,1,1);return !truthy(sc(ev(n.args[0],env),n));},
+  BLANK(n){arity(n,0,0);return null;},
+  TRUE(n){arity(n,0,0);return true;},
+  FALSE(n){arity(n,0,0);return false;},
+  ISBLANK(n,env){arity(n,1,1);return sc(ev(n.args[0],env),n)==null;},
+  ABS(n,env){arity(n,1,1);const v=numOf(sc(ev(n.args[0],env),n),n);return v==null?null:Math.abs(v);},
+  ROUND(n,env){arity(n,2,2);const v=numOf(sc(ev(n.args[0],env),n),n),d=numOf(sc(ev(n.args[1],env),n),n)||0;if(v==null)return null;const m=Math.pow(10,d);return Math.sign(v)*Math.round(Math.abs(v)*m+1e-9)/m;}
+};
+function ev(n,env){
+  switch(n.t){
+    case 'num':case 'str':case 'bool':return n.v;
+    case 'list':return {isList:true,items:n.items.map(x=>sc(ev(x,env),x))};
+    case 'col':return lookupRow(env,n);
+    case 'mref':{
+      const hit=Object.keys(TABLES).filter(T=>TABLES[T].cols.some(c=>c.toLowerCase()===n.name.toLowerCase()));
+      throw new DaxError("There is no measure named ["+n.name+"]."+(hit.length?" ["+n.name+"] is a column - columns need their table name: "+hit[0]+"["+TABLES[hit[0]].cols.find(c=>c.toLowerCase()===n.name.toLowerCase())+"].":" Columns are written Table[Column], e.g. Shipment[Revenue]."),n.pos,n.end-n.pos);
+    }
+    case 'id':{
+      const k=n.name.toLowerCase();
+      if(k in env.vars)return env.vars[k];
+      const T=TABLE_LC[k];
+      if(T)return mkTable(T,TABLES[T].cols,visibleRows(T,env.ctx),true);
+      const all=Object.keys(TABLES).concat(Object.keys(env.vars));
+      const s=nearest(n.name,all);
+      throw new DaxError("Unknown name '"+n.name+"'."+(s?" Did you mean "+s+"?":""),n.pos,n.name.length);
+    }
+    case 'let':{
+      const vars=Object.create(env.vars);
+      const e2={ctx:env.ctx,rows:env.rows,vars:vars};
+      for(const v of n.vars)vars[v.name.toLowerCase()]=ev(v.e,e2);
+      return ev(n.body,e2);
+    }
+    case 'un':{const v=numOf(sc(ev(n.e,env),n),n);return v==null?null:-v;}
+    case 'call':{
+      const f=FN[n.name];
+      if(!f){const s=nearest(n.name,Object.keys(FN));throw new DaxError("Unknown function "+n.raw+"()."+(s?" Did you mean "+s+"()?":" This trainer supports: "+Object.keys(FN).join(', ')+"."),n.pos,n.raw.length);}
+      return f(n,env);
+    }
+    case 'bin':{
+      const op=n.op;
+      if(op==='&&')return truthy(sc(ev(n.l,env),n))&&truthy(sc(ev(n.r,env),n));
+      if(op==='||')return truthy(sc(ev(n.l,env),n))||truthy(sc(ev(n.r,env),n));
+      if(op==='in'){
+        const l=sc(ev(n.l,env),n),r=ev(n.r,env);
+        let items;
+        if(r&&r.isList)items=r.items;
+        else if(r&&r.isTable&&r.cols.length===1)items=r.rows.map(x=>x[r.cols[0]]);
+        else throw new DaxError('IN needs a list such as {"Ocean","Air"} or a one-column table on its right.',n.pos,2);
+        return items.some(x=>cmpVals(l,x)===0);
+      }
+      const l=sc(ev(n.l,env),n.l),r=sc(ev(n.r,env),n.r);
+      switch(op){
+        case '=':return cmpVals(l,r)===0;
+        case '<>':return cmpVals(l,r)!==0;
+        case '<':return cmpVals(l,r)<0;
+        case '>':return cmpVals(l,r)>0;
+        case '<=':return cmpVals(l,r)<=0;
+        case '>=':return cmpVals(l,r)>=0;
+        case '&':return (l==null?'':String(l))+(r==null?'':String(r));
+        default:{
+          const a=numOf(l,n),b=numOf(r,n);
+          if(op==='/'){
+            if(b===0||b==null){if(a==null)return null;return a===0?NaN:(a>0?Infinity:-Infinity);}
+            if(a==null)return null;
+            return a/b;
+          }
+          if(a==null&&b==null)return null;
+          const x=a||0,y=b||0;
+          return op==='+'?x+y:(op==='-'?x-y:x*y);
+        }
+      }
+    }
+  }
+  throw new DaxError('Unsupported expression',n.pos);
+}
+// filters: [{col:'Shipment[Mode]', vals:['Ocean']}]
+function evalMeasure(code,filters){
+  const ast=parseCached(code);
+  const f=new Map();
+  for(const x of (filters||[]))f.set(x.col,new Set(x.vals.map(norm)));
+  const v=ev(ast,{ctx:mkCtx(f),rows:[],vars:{}});
+  if(v&&v.isTable)throw new DaxError('A measure must return one value, but this returns a table. Wrap it in an aggregation such as COUNTROWS(...).',0);
+  if(v&&v.isList)throw new DaxError('A measure must return one value, not a list.',0);
+  return v;
+}
+function fmt(v){
+  if(v==null)return '(blank)';
+  if(typeof v==='boolean')return v?'TRUE':'FALSE';
+  if(typeof v==='number'){
+    if(Number.isNaN(v))return 'NaN';
+    if(!Number.isFinite(v))return v>0?'Infinity':'-Infinity';
+    return v.toLocaleString('en-US',{maximumFractionDigits:4});
+  }
+  return String(v);
+}
+
+/* =====================================================================
+   5. Challenges
+   ===================================================================== */
+const SR='Shipment[Revenue]', SC='Shipment[Cost]';
+const CHALLENGES=[
+ /* ---------------- Beginner ---------------- */
+ {id:'b1',level:'Beginner',title:'Total Revenue',by:'Shipment[Mode]',checks:['slash','unqual','sumxRedundant'],
+  prompt:()=>'Write a measure that returns total revenue: the sum of the Revenue column of Shipment.',
+  hint:'SUM adds up one column. Columns are written Table[Column], so here it is Shipment[Revenue].',
+  ref:()=>'SUM(Shipment[Revenue])',
+  alts:[{code:'SUMX(Shipment, Shipment[Revenue])',warn:'sumxRedundant'}],
+  wrongs:[{code:'SUM(Shipment[Cost])'},{code:'COUNTROWS(Shipment)'}],
+  why:'SUM(Shipment[Revenue]) respects whatever filters are active (e.g. each Mode row in a visual) and adds up the column.'},
+ {id:'b2',level:'Beginner',title:'Shipment Count',by:'Shipment[Mode]',checks:['slash','unqual'],
+  prompt:()=>'Write a measure that counts the shipments (one row of Shipment = one shipment).',
+  hint:'COUNTROWS counts the rows of a table. Give it the table itself, with no column.',
+  ref:()=>'COUNTROWS(Shipment)',
+  alts:[{code:'COUNT(Shipment[ShipmentID])'},{code:'DISTINCTCOUNT(Shipment[ShipmentID])'}],
+  wrongs:[{code:'DISTINCTCOUNT(Shipment[CustomerKey])'},{code:'SUM(Shipment[IsOnTime])'}],
+  why:'COUNTROWS(Shipment) counts the shipment rows left visible by the current filters.'},
+ {id:'b3',level:'Beginner',title:'Average Cost',by:'Shipment[Mode]',checks:['slash','unqual'],
+  prompt:()=>'Write a measure for the average Cost per shipment.',
+  hint:'AVERAGE takes a column and averages its values.',
+  ref:()=>'AVERAGE(Shipment[Cost])',
+  alts:[{code:'DIVIDE(SUM(Shipment[Cost]), COUNTROWS(Shipment))'},{code:'AVERAGEX(Shipment, Shipment[Cost])'}],
+  wrongs:[{code:'SUM(Shipment[Cost])'},{code:'AVERAGE(Shipment[Revenue])'}],
+  why:'AVERAGE(Shipment[Cost]) is the sum of Cost divided by the number of shipments, in the current filter context.'},
+ {id:'b4',level:'Beginner',title:'Distinct Customers',by:'Shipment[Mode]',checks:['slash','unqual'],
+  prompt:()=>'How many different customers have shipped? Count each customer once, no matter how many shipments they have.',
+  hint:'DISTINCTCOUNT counts unique values in a column. Which column identifies the customer on each shipment?',
+  ref:()=>'DISTINCTCOUNT(Shipment[CustomerKey])',
+  alts:[{code:'COUNTROWS(VALUES(Shipment[CustomerKey]))'}],
+  wrongs:[{code:'COUNTROWS(Shipment)'},{code:'DISTINCTCOUNT(Customer[CustomerKey])'}],
+  why:'Use the key on the fact table. DISTINCTCOUNT(Customer[CustomerKey]) counts every customer in the dimension, even ones with no visible shipments, because filters on Shipment do not flow to Customer.'},
+ {id:'b5',level:'Beginner',title:'Total Profit',by:'Shipment[Mode]',checks:['slash','unqual','sumxRedundant'],
+  prompt:()=>'Write a measure for total profit: total Revenue minus total Cost.',
+  hint:'You can subtract two aggregations: SUM(...) - SUM(...). A row-by-row SUMX also works.',
+  ref:()=>'SUM(Shipment[Revenue]) - SUM(Shipment[Cost])',
+  alts:[{code:'SUMX(Shipment, Shipment[Revenue] - Shipment[Cost])'}],
+  wrongs:[{code:'SUM(Shipment[Revenue])'},{code:'AVERAGE(Shipment[Revenue]) - AVERAGE(Shipment[Cost])'}],
+  why:'Both forms give the same answer: the sum of per-row profits equals total revenue minus total cost.'},
+ /* ---------------- Intermediate ---------------- */
+ {id:'i1',level:'Intermediate',title:'Ocean Revenue',by:'Shipment[Region]',checks:['slash','unqual','filterInCalc'],
+  prompt:()=>'Total revenue of Ocean shipments only. It will be shown by Region, so the Region filter must still apply.',
+  hint:'CALCULATE(expression, filter). A True/False filter on one column, such as Shipment[Mode] = "Ocean", is enough.',
+  ref:()=>'CALCULATE(SUM(Shipment[Revenue]), Shipment[Mode] = "Ocean")',
+  alts:[{code:'CALCULATE(SUM(Shipment[Revenue]), FILTER(Shipment, Shipment[Mode] = "Ocean"))',warn:'filterInCalc'},
+        {code:'CALCULATE(SUM(Shipment[Revenue]), KEEPFILTERS(Shipment[Mode] = "Ocean"))'},
+        {code:'SUMX(FILTER(Shipment, Shipment[Mode] = "Ocean"), Shipment[Revenue])'}],
+  wrongs:[{code:'SUM(Shipment[Revenue])'},{code:'CALCULATE(SUM(Shipment[Revenue]), Shipment[Mode] = "Air")'}],
+  why:'CALCULATE changes the filter context: Shipment[Mode] = "Ocean" replaces any existing Mode filter, while the Region filter from the visual is kept.'},
+ {id:'i2',level:'Intermediate',title:'Margin %',by:'Shipment[Mode]',checks:['slash','unqual','avgRatio'],
+  prompt:()=>'Margin % = (Revenue - Cost) / Revenue, computed on totals. Return BLANK rather than an error when revenue is zero.',
+  hint:'Use DIVIDE(numerator, denominator). Both parts are sums, not averages of per-shipment percentages.',
+  ref:()=>'DIVIDE(SUM(Shipment[Revenue]) - SUM(Shipment[Cost]), SUM(Shipment[Revenue]))',
+  alts:[{code:'DIVIDE(SUMX(Shipment, Shipment[Revenue] - Shipment[Cost]), SUM(Shipment[Revenue]))'},
+        {code:'(SUM(Shipment[Revenue]) - SUM(Shipment[Cost])) / SUM(Shipment[Revenue])',warn:'slash'}],
+  wrongs:[{code:'AVERAGEX(Shipment, DIVIDE(Shipment[Revenue] - Shipment[Cost], Shipment[Revenue]))',warn:'avgRatio'},
+          {code:'SUM(Shipment[Revenue]) - SUM(Shipment[Cost])'}],
+  why:'A ratio must be built from totals (ratio of sums). Averaging per-shipment percentages gives small shipments the same weight as large ones.'},
+ {id:'i3',level:'Intermediate',title:'On-Time %',by:'Shipment[Mode]',checks:['slash','unqual'],
+  prompt:()=>'Share of shipments that were on time. IsOnTime is 1 when on time and 0 otherwise.',
+  hint:'IsOnTime is 0/1, so its average is already the on-time rate. DIVIDE(on-time count, all shipments) works as well.',
+  ref:()=>'DIVIDE(SUM(Shipment[IsOnTime]), COUNTROWS(Shipment))',
+  alts:[{code:'AVERAGE(Shipment[IsOnTime])'},{code:'DIVIDE(CALCULATE(COUNTROWS(Shipment), Shipment[IsOnTime] = 1), COUNTROWS(Shipment))'}],
+  wrongs:[{code:'SUM(Shipment[IsOnTime])'},{code:'DIVIDE(COUNTROWS(Shipment), SUM(Shipment[IsOnTime]))'}],
+  why:'A 0/1 flag averages into a rate: AVERAGE(IsOnTime) = SUM(IsOnTime) / COUNTROWS.'},
+ {id:'i4',level:'Intermediate',title:'Key-Segment Revenue',by:'Shipment[Mode]',checks:['slash','unqual','filterInCalc'],
+  prompt:()=>'Total revenue from customers whose Segment is "Key". Segment lives on the Customer table, not on Shipment.',
+  hint:'A filter on Customer[Segment] flows down the relationship to Shipment. CALCULATE(SUM(...), Customer[Segment] = "Key").',
+  ref:()=>'CALCULATE(SUM(Shipment[Revenue]), Customer[Segment] = "Key")',
+  alts:[{code:'CALCULATE(SUM(Shipment[Revenue]), FILTER(Customer, Customer[Segment] = "Key"))'},
+        {code:'SUMX(FILTER(Shipment, RELATED(Customer[Segment]) = "Key"), Shipment[Revenue])'}],
+  wrongs:[{code:'SUM(Shipment[Revenue])'},{code:'CALCULATE(SUM(Shipment[Revenue]), Customer[Segment] = "Standard")'}],
+  why:'Filters on a dimension (Customer) propagate to the fact table (Shipment) through the many-to-one relationship.'},
+ {id:'i5',level:'Intermediate',title:'Revenue Share of All Modes',by:'Shipment[Mode]',checks:['slash','unqual','allTable'],
+  prompt:()=>'Each Mode\'s revenue as a share of the revenue of ALL modes. In a Mode row the denominator must ignore the Mode filter.',
+  hint:'The denominator needs CALCULATE(SUM(...), ALL(Shipment[Mode])) to remove only the Mode filter.',
+  ref:()=>'DIVIDE(SUM(Shipment[Revenue]), CALCULATE(SUM(Shipment[Revenue]), ALL(Shipment[Mode])))',
+  alts:[{code:'DIVIDE(SUM(Shipment[Revenue]), CALCULATE(SUM(Shipment[Revenue]), REMOVEFILTERS(Shipment[Mode])))'},
+        {code:'DIVIDE(SUM(Shipment[Revenue]), CALCULATE(SUM(Shipment[Revenue]), ALL(Shipment)))',warn:'allTable'},
+        {code:'SUM(Shipment[Revenue]) / CALCULATE(SUM(Shipment[Revenue]), ALL(Shipment[Mode]))',warn:'slash'}],
+  wrongs:[{code:'DIVIDE(SUM(Shipment[Revenue]), SUM(Shipment[Revenue]))'},
+          {code:'DIVIDE(SUM(Shipment[Revenue]), CALCULATE(SUM(Shipment[Revenue]), Shipment[Mode] = "Ocean"))'}],
+  why:'ALL(Shipment[Mode]) removes the Mode filter from the denominator only, so each row is divided by the grand total.'},
+ /* ---------------- Pro ---------------- */
+ {id:'p1',level:'Pro',title:'Revenue per FFE',by:'Shipment[Mode]',checks:['slash','unqual','ffeScope'],
+  prompt:()=>'Revenue per FFE (Revenue divided by Ffe). Air shipments carry revenue but have Ffe = 0 because FFE is an ocean-container unit, so they must not be counted.',
+  hint:'Scope the whole ratio to shipments with Ffe > 0: CALCULATE(DIVIDE(...), KEEPFILTERS(Shipment[Ffe] > 0)).',
+  ref:()=>'CALCULATE(DIVIDE(SUM(Shipment[Revenue]), SUM(Shipment[Ffe])), KEEPFILTERS(Shipment[Ffe] > 0))',
+  alts:[{code:'CALCULATE(DIVIDE(SUM(Shipment[Revenue]), SUM(Shipment[Ffe])), Shipment[Ffe] > 0)'},
+        {code:'DIVIDE(CALCULATE(SUM(Shipment[Revenue]), Shipment[Ffe] > 0), SUM(Shipment[Ffe]))'}],
+  wrongs:[{code:'DIVIDE(SUM(Shipment[Revenue]), SUM(Shipment[Ffe]))',warn:'ffeScope'},
+          {code:'DIVIDE(SUM(Shipment[Revenue]), COUNTROWS(Shipment))'}],
+  why:'The naive DIVIDE(SUM(Revenue), SUM(Ffe)) keeps Air revenue in the numerator while Air adds nothing to the denominator, which inflates the ratio. Wrapping in CALCULATE(..., KEEPFILTERS(Shipment[Ffe] > 0)) removes the Ffe = 0 rows from both parts. KEEPFILTERS intersects with any Ffe filter already in the context instead of overwriting it.'},
+ {id:'p2',level:'Pro',title:'Key-Customer Margin %',by:'Shipment[Mode]',checks:['slash','unqual','avgRatio'],
+  prompt:()=>'Margin % ((Revenue - Cost) / Revenue) for Key-segment customers only, as a ratio of totals, not an average of per-shipment margins.',
+  hint:'Compute both the profit and the revenue under Customer[Segment] = "Key" (CALCULATE or VAR), then DIVIDE.',
+  ref:()=>'DIVIDE(\n  CALCULATE(SUM(Shipment[Revenue]) - SUM(Shipment[Cost]), Customer[Segment] = "Key"),\n  CALCULATE(SUM(Shipment[Revenue]), Customer[Segment] = "Key")\n)',
+  alts:[{code:'VAR Rev = CALCULATE(SUM(Shipment[Revenue]), Customer[Segment] = "Key")\nVAR Cost = CALCULATE(SUM(Shipment[Cost]), Customer[Segment] = "Key")\nRETURN DIVIDE(Rev - Cost, Rev)'},
+        {code:'CALCULATE(DIVIDE(SUM(Shipment[Revenue]) - SUM(Shipment[Cost]), SUM(Shipment[Revenue])), Customer[Segment] = "Key")'}],
+  wrongs:[{code:'AVERAGEX(FILTER(Shipment, RELATED(Customer[Segment]) = "Key"), DIVIDE(Shipment[Revenue] - Shipment[Cost], Shipment[Revenue]))',warn:'avgRatio'},
+          {code:'DIVIDE(SUM(Shipment[Revenue]) - SUM(Shipment[Cost]), SUM(Shipment[Revenue]))'}],
+  why:'Filter first, then divide totals. AVERAGEX over per-row margins weights a small shipment the same as a large one.'},
+ {id:'p3',level:'Pro',title:'High-Profit Shipments',by:'Shipment[Mode]',checks:['slash','unqual','filterInCalc'],
+  prompt:P=>'Count shipments whose profit (Revenue - Cost) is greater than '+P.T+'.',
+  hint:'The condition uses two columns, so a simple CALCULATE true/false filter will not do. Count the rows of FILTER(Shipment, ...), or sum an IF.',
+  ref:P=>'COUNTROWS(FILTER(Shipment, Shipment[Revenue] - Shipment[Cost] > '+P.T+'))',
+  alts:P=>[{code:'SUMX(Shipment, IF(Shipment[Revenue] - Shipment[Cost] > '+P.T+', 1, 0))'},
+           {code:'COUNTX(FILTER(Shipment, Shipment[Revenue] - Shipment[Cost] > '+P.T+'), Shipment[ShipmentID])'}],
+  wrongs:P=>[{code:'COUNTROWS(FILTER(Shipment, Shipment[Revenue] - Shipment[Cost] >= '+P.T+'))'},
+             {code:'CALCULATE(COUNTROWS(Shipment), Shipment[Revenue] > '+P.T+')'}],
+  why:'The test is on a calculated value (Revenue - Cost), so evaluate it row by row with FILTER over the table. The condition is strictly greater than, not greater-or-equal.'},
+ {id:'p4',level:'Pro',title:'Revenue per Shipment vs Overall',by:'Shipment[Mode]',checks:['slash','unqual'],
+  prompt:()=>'Average revenue per shipment in the current selection minus the average revenue per shipment across ALL shipments. Use VAR / RETURN.',
+  hint:'VAR CurrentAvg = AVERAGE(...)  VAR OverallAvg = CALCULATE(AVERAGE(...), ALL(Shipment))  RETURN CurrentAvg - OverallAvg',
+  ref:()=>'VAR CurrentAvg = AVERAGE(Shipment[Revenue])\nVAR OverallAvg = CALCULATE(AVERAGE(Shipment[Revenue]), ALL(Shipment))\nRETURN CurrentAvg - OverallAvg',
+  alts:[{code:'AVERAGE(Shipment[Revenue]) - CALCULATE(AVERAGE(Shipment[Revenue]), ALL(Shipment))'}],
+  wrongs:[{code:'AVERAGE(Shipment[Revenue])'},
+          {code:'VAR CurrentAvg = AVERAGE(Shipment[Revenue])\nVAR OverallAvg = AVERAGE(Shipment[Revenue])\nRETURN CurrentAvg - OverallAvg'}],
+  why:'VAR values are fixed where they are defined. OverallAvg needs ALL(Shipment) to ignore the current Mode; without it both VARs are the same number and the difference is always 0.'},
+ {id:'p5',level:'Pro',title:'Revenue from Busy Customers',by:'Customer[Segment]',checks:['slash','unqual'],
+  prompt:P=>'Total revenue from customers with more than '+P.n+' shipments (in the current filter context). Shown by customer Segment.',
+  hint:'Iterate the customers: SUMX(FILTER(VALUES(Shipment[CustomerKey]), <shipments of this customer> > n), <revenue of this customer>). Each inner measure needs CALCULATE to apply the current customer.',
+  ref:P=>'SUMX(\n  FILTER(VALUES(Shipment[CustomerKey]), CALCULATE(COUNTROWS(Shipment)) > '+P.n+'),\n  CALCULATE(SUM(Shipment[Revenue]))\n)',
+  alts:P=>[{code:'SUMX(FILTER(Customer, CALCULATE(COUNTROWS(Shipment)) > '+P.n+'), CALCULATE(SUM(Shipment[Revenue])))'},
+           {code:'SUMX(FILTER(VALUES(Customer[CustomerKey]), CALCULATE(COUNTROWS(Shipment)) > '+P.n+'), CALCULATE(SUM(Shipment[Revenue])))'}],
+  wrongs:P=>[{code:'SUM(Shipment[Revenue])'},
+             {code:'SUMX(FILTER(VALUES(Shipment[CustomerKey]), CALCULATE(COUNTROWS(Shipment)) >= '+P.n+'), CALCULATE(SUM(Shipment[Revenue])))'},
+             {code:'SUMX(FILTER(VALUES(Shipment[CustomerKey]), COUNTROWS(Shipment) > '+P.n+'), SUM(Shipment[Revenue]))'}],
+  why:'Inside an iterator, CALCULATE turns the current row (the current customer) into a filter - context transition. Without CALCULATE, COUNTROWS and SUM ignore the current customer and see every shipment.'}
+];
+const LEVELS=['Beginner','Intermediate','Pro'];
+const lst=(x,P)=>typeof x==='function'?x(P):(x||[]);
+function chRef(ch,P){return ch.ref(P);}
+function chAlts(ch,P){return lst(ch.alts,P);}
+function chWrongs(ch,P){return lst(ch.wrongs,P);}
+
+/* =====================================================================
+   6. Pattern checks (AST predicates)
+   ===================================================================== */
+function walk(n,fn){
+  if(!n||typeof n!=='object')return;
+  fn(n);
+  if(n.l)walk(n.l,fn);if(n.r)walk(n.r,fn);if(n.e)walk(n.e,fn);
+  if(n.args)n.args.forEach(a=>walk(a,fn));
+  if(n.items)n.items.forEach(a=>walk(a,fn));
+  if(n.vars)n.vars.forEach(v=>walk(v.e,fn));
+  if(n.body)walk(n.body,fn);
+}
+function countCols(n){const s=new Set();let calls=0;walk(n,x=>{if(x.t==='col')s.add((x.table+'['+x.col+']').toLowerCase());if(x.t==='call')calls++;});return {cols:s.size,calls:calls};}
+const RULES={
+  slash:{level:'Intermediate',kind:'warn',test(ast){let hit=false;walk(ast,n=>{if(n.t==='bin'&&n.op==='/')hit=true;});return hit;},
+    msg:'`/` returns Infinity (or an error) when the denominator is 0.',fix:'Use DIVIDE(numerator, denominator) - it returns BLANK instead.'},
+  unqual:{level:'Beginner',kind:'warn',test(ast){let hit=false;walk(ast,n=>{if(n.t==='mref')hit=true;});return hit;},
+    msg:'A name in [brackets] with no table in front is read as a measure, not a column.',fix:'Write columns with their table: Shipment[Revenue].'},
+  filterInCalc:{level:'Intermediate',kind:'info',test(ast){
+      let hit=false;
+      walk(ast,n=>{if(n.t==='call'&&n.name==='CALCULATE')n.args.slice(1).forEach(a=>{
+        if(a.t==='call'&&a.name==='FILTER'&&a.args.length===2&&a.args[0].t==='id'){const c=countCols(a.args[1]);if(c.cols===1&&c.calls===0)hit=true;}});});
+      return hit;},
+    msg:'FILTER(table, simple condition) inside CALCULATE works, but it iterates the whole table and overrides more context than needed.',fix:'A plain column filter is shorter and faster: CALCULATE(..., Shipment[Mode] = "Ocean").'},
+  avgRatio:{level:'Pro',kind:'warn',test(ast){let hit=false;walk(ast,n=>{if(n.t==='call'&&n.name==='AVERAGEX'&&n.args[1]){walk(n.args[1],m=>{if((m.t==='bin'&&m.op==='/')||(m.t==='call'&&m.name==='DIVIDE'))hit=true;});}});return hit;},
+    msg:'AVERAGEX over a per-row ratio is an average of ratios; every shipment counts equally, whatever its size.',fix:'Build the ratio from totals: DIVIDE(SUM(numerator), SUM(denominator)).'},
+  ffeScope:{level:'Pro',kind:'warn',test(ast){
+      let scoped=false;
+      walk(ast,n=>{if(n.t==='bin'&&['>','<>','>='].includes(n.op)&&n.l.t==='col'&&n.l.col.toLowerCase()==='ffe'&&n.r.t==='num')scoped=true;});
+      return !scoped;},
+    msg:'Nothing restricts the ratio to Ffe > 0. Air shipments have Revenue but Ffe = 0, so their revenue inflates the numerator while adding nothing to the denominator.',fix:'CALCULATE(DIVIDE(SUM(Shipment[Revenue]), SUM(Shipment[Ffe])), KEEPFILTERS(Shipment[Ffe] > 0)) - KEEPFILTERS intersects with any existing Ffe filter instead of replacing it.'},
+  allTable:{level:'Intermediate',kind:'info',test(ast){let hit=false;walk(ast,n=>{if(n.t==='call'&&n.name==='ALL'&&n.args.length===1&&n.args[0].t==='id')hit=true;});return hit;},
+    msg:'ALL(Shipment) clears every filter on Shipment, more than this question needs.',fix:'ALL(Shipment[Mode]) clears only the Mode filter, which is what a share-of-all-modes denominator wants.'},
+  sumxRedundant:{level:'Beginner',kind:'info',test(ast){let hit=false;walk(ast,n=>{if(n.t==='call'&&n.name==='SUMX'&&n.args.length===2&&n.args[0].t==='id'&&n.args[1].t==='col'&&n.args[0].name.toLowerCase()===n.args[1].table.toLowerCase())hit=true;});return hit;},
+    msg:'SUMX(Shipment, Shipment[Column]) works, but it is just a longer SUM(Shipment[Column]).',fix:'Use SUM(Shipment[Column]) when you only add up a single column; keep SUMX for row-by-row calculations.'}
+};
+function runChecks(ch,ast){
+  const out=[];
+  if(!ast)return out;
+  for(const id of ch.checks){const r=RULES[id];if(r&&r.test(ast))out.push({rule:id,level:r.level,kind:r.kind,msg:r.msg,fix:r.fix});}
+  return out;
+}
+
+/* =====================================================================
+   7. Grading
+   ===================================================================== */
+function contextsFor(ch){
+  const [T,col]=ch.by.replace(']','').split('[');
+  const vals=allValues(T,col).slice().sort((a,b)=>String(a).localeCompare(String(b)));
+  const list=[{label:'Grand total',filters:[]}];
+  for(const v of vals)list.push({label:ch.by+' = '+v,filters:[{col:ch.by,vals:[v]}]});
+  return list;
+}
+function sameVal(a,b,tol){
+  if(a==null&&b==null)return true;
+  if(a==null)a=0;if(b==null)b=0;   // BLANK and 0 are treated as equal when grading
+  if(typeof a==='number'&&typeof b==='number'){
+    if(a===b)return true;
+    if(!Number.isFinite(a)||!Number.isFinite(b))return false;
+    return Math.abs(a-b)<=tol*Math.max(1,Math.abs(a),Math.abs(b));
+  }
+  return a===b;
+}
+function normCode(s){return s.replace(/\/\/.*$/gm,'').replace(/--.*$/gm,'').replace(/^\s*[A-Za-z_][A-Za-z0-9_ ]*=\s*(?!=)/,'').replace(/\s+/g,'').toLowerCase();}
+// returns {status:'parse'|'runtime'|'ok'|'wrong', error, rows, warnings}
+function grade(ch,code,P){
+  let ast=null;
+  try{ast=parseCached(code);}
+  catch(e){if(e instanceof DaxError)return {status:'parse',error:e,rows:[],warnings:[]};throw e;}
+  const warnings=runChecks(ch,ast);
+  const ref=chRef(ch,P),tol=ch.tolerance||1e-6;
+  const rows=[];let err=null;
+  for(const c of contextsFor(ch)){
+    const exp=evalMeasure(ref,c.filters);
+    let got=null,bad=false;
+    try{got=evalMeasure(code,c.filters);}catch(e){if(e instanceof DaxError){err=err||e;bad=true;}else throw e;}
+    rows.push({label:c.label,user:got,exp:exp,match:!bad&&sameVal(got,exp,tol),err:bad});
+  }
+  if(err)return {status:'runtime',error:err,rows:rows,warnings:warnings};
+  return {status:rows.every(r=>r.match)?'ok':'wrong',rows:rows,warnings:warnings};
+}
+
+/* =====================================================================
+   8. UI
+   ===================================================================== */
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const LS_KEY='daxTrainer.v1';
+function lsLoad(){try{return JSON.parse(localStorage.getItem(LS_KEY))||{};}catch(e){return {};}}
+function lsSave(o){try{localStorage.setItem(LS_KEY,JSON.stringify(o));}catch(e){}}
+const state={level:'Beginner',idx:0,seed:1,D:null,attempted:false,hinted:false,saved:{solved:{}}};
+function levelList(){return CHALLENGES.filter(c=>c.level===state.level);}
+function current(){return levelList()[state.idx];}
+function persist(){lsSave({solved:state.saved.solved,level:state.level,idx:state.idx,seed:state.seed});}
+function setData(seed){state.seed=seed;state.D=generateData(seed);DB=state.D;$('seed').value=seed;renderPreview();}
+function renderLevels(){
+  $('levels').innerHTML=LEVELS.map(l=>'<button class="lvl" data-level="'+l+'" aria-pressed="'+(l===state.level)+'">'+l+'</button>').join('');
+  $('levels').querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{state.level=b.dataset.level;state.idx=0;renderAll();persist();}));
+}
+function renderPicker(){
+  const L=levelList();
+  $('picker').innerHTML=L.map((c,i)=>'<option value="'+i+'">'+(i+1)+'. '+esc(c.title)+(state.saved.solved[c.id]?'  (solved)':'')+'</option>').join('');
+  $('picker').value=String(state.idx);
+  $('prev').disabled=state.idx===0;$('next').disabled=state.idx===L.length-1;
+  const solved=L.filter(c=>state.saved.solved[c.id]).length;
+  $('score').textContent=state.level+': '+solved+' / '+L.length+' solved';
+}
+function renderPrompt(){
+  const ch=current(),P=state.D.params;
+  $('promptCard').innerHTML='<div class="row"><span class="badge '+ch.level+'">'+ch.level+'</span><strong>'+esc(ch.title)+'</strong></div>'+
+    '<p class="prompt">'+esc(ch.prompt(P))+'</p>'+
+    '<div class="meta">Your measure is tested on the grand total and once per <code>'+esc(ch.by)+'</code> value.</div>'+
+    '<div id="hintBox"></div><div id="answerBox"></div>';
+}
+function renderPreview(){
+  const D=state.D;
+  const mk=(name,cols)=>'<div><h3>'+name+' ('+D[name].length+' rows)</h3><div class="scroll"><table><thead><tr>'+cols.map(c=>'<th>'+c+'</th>').join('')+'</tr></thead><tbody>'+
+    D[name].slice(0,10).map(r=>'<tr>'+cols.map(c=>'<td'+(typeof r[c]==='number'?' class="num"':'')+'>'+esc(r[c])+'</td>').join('')+'</tr>').join('')+'</tbody></table></div></div>';
+  $('previewBody').innerHTML=mk('Shipment',TABLES.Shipment.cols)+mk('Customer',TABLES.Customer.cols)+mk('Date',TABLES.Date.cols)+
+    '<div class="meta">Relationships: Shipment[CustomerKey] &rarr; Customer[CustomerKey] and Shipment[DateKey] &rarr; Date[DateKey] (many-to-one). Air shipments have Ffe = 0.</div>';
+}
+function renderAll(){
+  renderLevels();renderPicker();renderPrompt();
+  state.attempted=false;state.hinted=false;updateAnswerBtn();
+  $('editor').value='';$('result').hidden=true;$('result').innerHTML='';
+}
+function updateAnswerBtn(){$('answer').disabled=!(state.attempted||state.hinted);}
+function snippet(code,e){
+  if(e.pos==null||e.pos<0||e.pos>code.length)return '<pre>'+esc(code)+'</pre>';
+  const a=Math.min(e.pos,code.length),b=Math.min(code.length,a+Math.max(1,e.len||1));
+  return '<pre>'+esc(code.slice(0,a))+'<mark>'+esc(code.slice(a,b)||' ')+'</mark>'+esc(code.slice(b))+'</pre>';
+}
+function renderResult(ch,code,res){
+  let h='';
+  if(res.status==='parse'||res.status==='runtime'){
+    h+='<div class="banner bad">&#10060; '+(res.status==='parse'?'This formula cannot be parsed':'This formula raised an error when evaluated')+'</div>';
+    h+='<p>'+esc(res.error.message)+'</p>'+snippet(code,res.error);
+    if(res.status==='runtime')h+=tableHtml(res.rows,true);
+  }else{
+    const nb=res.rows.filter(r=>!r.match).length;
+    if(res.status==='ok'){
+      h+='<div class="banner ok">&#9989; Correct - your measure matches the reference in all '+res.rows.length+' contexts.</div>';
+      h+='<p>'+esc(ch.why)+'</p>';
+      if(normCode(code)!==normCode(chRef(ch,state.D.params)))h+='<details><summary>Another way to write it</summary><pre>'+esc(chRef(ch,state.D.params))+'</pre></details>';
+      h+='<details><summary>Results by context</summary>'+tableHtml(res.rows)+'</details>';
+    }else{
+      h+='<div class="banner bad">&#10060; Not quite - your measure differs from the reference in '+nb+' of '+res.rows.length+' contexts.</div>';
+      h+=tableHtml(res.rows);
+      h+='<p><strong>Why:</strong> '+esc(ch.why)+'</p>';
+    }
+  }
+  if(res.warnings.length){
+    h+=res.warnings.map(w=>'<div class="note '+(w.kind==='warn'?'warn':'info')+'">'+(w.kind==='warn'?'&#9888; ':'&#8505; ')+'<b class="tag">'+w.level+'</b>'+esc(w.msg)+' <em>'+esc(w.fix)+'</em></div>').join('');
+  }
+  const box=$('result');box.innerHTML=h;box.hidden=false;
+}
+function tableHtml(rows,showErr){
+  return '<div class="scroll"><table><thead><tr><th>Context</th><th>Your result</th><th>Expected</th></tr></thead><tbody>'+
+    rows.map(r=>'<tr class="'+(r.match?'':'miss')+'"><td>'+esc(r.label)+'</td><td class="num">'+(r.err?'error':esc(fmt(r.user)))+'</td><td class="num">'+esc(fmt(r.exp))+'</td></tr>').join('')+'</tbody></table></div>';
+}
+function doCheck(){
+  const code=$('editor').value;
+  if(!code.trim()){renderResult(current(),code,{status:'parse',error:new DaxError('Type a DAX measure first, for example SUM(Shipment[Revenue]).',0,1),rows:[],warnings:[]});return;}
+  const ch=current();
+  const res=grade(ch,code,state.D.params);
+  state.attempted=true;updateAnswerBtn();
+  renderResult(ch,code,res);
+  if(res.status==='ok'){state.saved.solved[ch.id]=true;persist();renderPicker();}
+}
+function bind(){
+  $('check').addEventListener('click',doCheck);
+  $('editor').addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key==='Enter'){e.preventDefault();doCheck();}});
+  $('hint').addEventListener('click',()=>{state.hinted=true;updateAnswerBtn();$('hintBox').innerHTML='<div class="note info"><b class="tag">Hint</b>'+esc(current().hint)+'</div>';});
+  $('answer').addEventListener('click',()=>{const ch=current();$('answerBox').innerHTML='<div class="note info"><b class="tag">Answer</b><pre>'+esc(chRef(ch,state.D.params))+'</pre>'+esc(ch.why)+'</div>';});
+  $('prev').addEventListener('click',()=>{if(state.idx>0){state.idx--;renderAll();persist();}});
+  $('next').addEventListener('click',()=>{if(state.idx<levelList().length-1){state.idx++;renderAll();persist();}});
+  $('picker').addEventListener('change',()=>{state.idx=parseInt($('picker').value,10)||0;renderAll();persist();});
+  $('newdata').addEventListener('click',()=>{
+    let s=Math.floor(Math.random()*100000);if(s===state.seed)s++;
+    setData(s);renderPrompt();state.attempted=false;state.hinted=false;updateAnswerBtn();$('result').hidden=true;persist();
+  });
+  $('seed').addEventListener('change',()=>{
+    const s=parseInt($('seed').value,10);if(!(s>=0))return;
+    setData(s);renderPrompt();$('result').hidden=true;persist();
+  });
+}
+
+/* =====================================================================
+   9. Self-test  (open with ?selftest  or  ?selftest&seed=N)
+   ===================================================================== */
+function runSelfTest(seed){
+  const lines=[];let pass=0,total=0;
+  const log=(ok,msg)=>{total++;if(ok)pass++;const l=(ok?'PASS ':'FAIL ')+msg;lines.push(l);console.log(l);};
+  const D=generateData(seed);DB=D;const P=D.params;
+  console.log('seed='+seed+' attempt='+D.attempt+' params='+JSON.stringify(P));
+  for(const ch of CHALLENGES){
+    const ref=chRef(ch,P);
+    let r=grade(ch,ref,P);
+    log(r.status==='ok','ref   '+ch.id+' '+ch.title+(r.status==='ok'?'':' -> '+r.status+(r.error?' '+r.error.message:'')));
+    for(const a of chAlts(ch,P)){
+      r=grade(ch,a.code,P);
+      let ok=r.status==='ok';
+      if(ok&&a.warn)ok=r.warnings.some(w=>w.rule===a.warn);
+      log(ok,'alt   '+ch.id+' '+(a.warn?'[expects warn '+a.warn+'] ':'')+a.code.replace(/\s+/g,' ').slice(0,70)+(ok?'':' -> '+r.status+(r.error?' '+r.error.message:'')));
+    }
+    for(const w of chWrongs(ch,P)){
+      r=grade(ch,w.code,P);
+      let ok=r.status==='wrong';
+      if(ok&&w.warn)ok=r.warnings.some(x=>x.rule===w.warn);
+      log(ok,'wrong '+ch.id+' '+(w.warn?'[expects warn '+w.warn+'] ':'')+w.code.replace(/\s+/g,' ').slice(0,70)+(ok?'':' -> '+r.status+(r.error?' '+r.error.message:'')));
+    }
+  }
+  // ---- engine tests against independent JS computations ----
+  const S=D.Shipment,C=D.Customer;
+  const sum=(a,f)=>a.reduce((x,s)=>x+f(s),0);
+  const seg={};C.forEach(c=>seg[c.CustomerKey]=c.Segment);
+  const dateOf={};D.Date.forEach(d=>dateOf[d.DateKey]=d);
+  const eq=(a,b)=>a===b||(a==null&&b==null)||(typeof a==='number'&&typeof b==='number'&&Math.abs(a-b)<1e-9*Math.max(1,Math.abs(b)));
+  const T=(name,code,expected,filters)=>{
+    let got,ok;
+    try{got=evalMeasure(code,filters);ok=eq(got,expected);}catch(e){got='ERR '+e.message;ok=false;}
+    log(ok,'engine '+name+' got='+(typeof got==='number'?got:JSON.stringify(got))+' expected='+JSON.stringify(expected));
+  };
+  const TE=(name,code,frag)=>{
+    let msg='(no error)';try{evalMeasure(code);}catch(e){msg=e.message;}
+    log(msg.toLowerCase().includes(frag.toLowerCase()),'engine error: '+name+' -> '+msg.slice(0,80));
+  };
+  const totalRev=sum(S,s=>s.Revenue);
+  T('date year filter propagates','CALCULATE(SUM(Shipment[Revenue]), Date[Year] = 2026)',sum(S.filter(s=>dateOf[s.DateKey].Year===2026),s=>s.Revenue));
+  T('date year+month (two filters)','CALCULATE(COUNTROWS(Shipment), Date[Year] = 2025, Date[Month] <= 6)',S.filter(s=>dateOf[s.DateKey].Year===2025&&dateOf[s.DateKey].Month<=6).length);
+  T('context transition over Customer rows','SUMX(Customer, CALCULATE(SUM(Shipment[Revenue])))',totalRev);
+  T('no transition without CALCULATE','SUMX(Customer, SUM(Shipment[Revenue]))',totalRev*C.length);
+  T('transition over VALUES(col)','SUMX(VALUES(Shipment[Mode]), CALCULATE(SUM(Shipment[Revenue])))',totalRev);
+  T('transition per Shipment row','SUMX(Shipment, CALCULATE(COUNTROWS(Shipment)))',S.length);
+  T('ALL(Shipment) under Mode filter','CALCULATE(SUM(Shipment[Revenue]), ALL(Shipment))',totalRev,[{col:'Shipment[Mode]',vals:['Ocean']}]);
+  T('ALL(col) removes only that column','CALCULATE(SUM(Shipment[Revenue]), ALL(Shipment[Mode]))',sum(S.filter(s=>s.Region==='Asia'),s=>s.Revenue),[{col:'Shipment[Mode]',vals:['Ocean']},{col:'Shipment[Region]',vals:['Asia']}]);
+  T('boolean filter replaces column filter','CALCULATE(SUM(Shipment[Revenue]), Shipment[Mode] = "Air")',sum(S.filter(s=>s.Mode==='Air'),s=>s.Revenue),[{col:'Shipment[Mode]',vals:['Ocean']}]);
+  T('KEEPFILTERS intersects (disjoint -> blank)','CALCULATE(SUM(Shipment[Revenue]), KEEPFILTERS(Shipment[Mode] = "Air"))',null,[{col:'Shipment[Mode]',vals:['Ocean']}]);
+  T('KEEPFILTERS intersects (overlap)','CALCULATE(COUNTROWS(Shipment), KEEPFILTERS(Shipment[Mode] IN {"Ocean","Air"}))',S.filter(s=>s.Mode==='Ocean').length,[{col:'Shipment[Mode]',vals:['Ocean']}]);
+  T('two filters on one column intersect','CALCULATE(COUNTROWS(Shipment), Shipment[Revenue] > 2000, Shipment[Revenue] < 5000)',S.filter(s=>s.Revenue>2000&&s.Revenue<5000).length);
+  T('&& splits into separate column filters','CALCULATE(COUNTROWS(Shipment), Shipment[Mode] = "Ocean" && Shipment[Region] = "Asia")',S.filter(s=>s.Mode==='Ocean'&&s.Region==='Asia').length);
+  T('IN list filter','CALCULATE(COUNTROWS(Shipment), Shipment[Mode] IN {"Ocean","Road"})',S.filter(s=>s.Mode!=='Air').length);
+  T('Customer filter propagates to Shipment','CALCULATE(COUNTROWS(Shipment), Customer[Segment] = "Key")',S.filter(s=>seg[s.CustomerKey]==='Key').length);
+  T('Shipment filter does not filter Customer','COUNTROWS(Customer)',C.length,[{col:'Shipment[Mode]',vals:['Air']}]);
+  T('VALUES reflects Shipment filter',"COUNTROWS(VALUES(Shipment[CustomerKey]))",new Set(S.filter(s=>s.Mode==='Air').map(s=>s.CustomerKey)).size,[{col:'Shipment[Mode]',vals:['Air']}]);
+  T('FILTER(ALL(col)) as CALCULATE filter','CALCULATE(COUNTROWS(Shipment), FILTER(ALL(Shipment[Mode]), Shipment[Mode] <> "Air"))',S.filter(s=>s.Mode!=='Air').length);
+  T('RELATED in iterator','SUMX(Shipment, IF(RELATED(Customer[Segment]) = "Key", Shipment[Revenue], 0))',sum(S.filter(s=>seg[s.CustomerKey]==='Key'),s=>s.Revenue));
+  T('case-insensitive text compare','CALCULATE(COUNTROWS(Shipment), Shipment[Mode] = "oCeAn")',S.filter(s=>s.Mode==='Ocean').length);
+  T('measure-name prefix is stripped','Total Revenue = SUM(Shipment[Revenue])',totalRev);
+  T('VAR / RETURN','VAR a = SUM(Shipment[Revenue])\nVAR b = COUNTROWS(Shipment)\nRETURN DIVIDE(a, b)',totalRev/S.length);
+  T('VAR is not re-evaluated by CALCULATE','VAR a = SUM(Shipment[Revenue]) RETURN CALCULATE(a, Shipment[Mode] = "Air")',totalRev);
+  T('comments are ignored','// c1\nSUM(Shipment[Revenue]) -- c2\n/* c3 */',totalRev);
+  T('DIVIDE by zero is blank','DIVIDE(1, 0)',null);
+  T('DIVIDE alternate result','DIVIDE(1, 0, -1)',-1);
+  T('/ by zero is Infinity','1 / 0',Infinity);
+  T('MAXX / MINX over rows','MAXX(Shipment, Shipment[Revenue]) - MINX(Shipment, Shipment[Revenue])',Math.max(...S.map(s=>s.Revenue))-Math.min(...S.map(s=>s.Revenue)));
+  T('SUM of no rows is blank','CALCULATE(SUM(Shipment[Revenue]), Shipment[Mode] = "Nope")',null);
+  TE('naked column','Shipment[Revenue]','aggregation');
+  TE('unknown function','SUMM(Shipment[Revenue])','Did you mean SUM');
+  TE('unknown column','SUM(Shipment[Revenu])','Did you mean Shipment[Revenue]');
+  TE('unknown table','SUM(Shipments[Revenue])','Did you mean Shipment');
+  TE('unbalanced paren','SUM(Shipment[Revenue]',"Missing ')'");
+  TE('extra paren','SUM(Shipment[Revenue]))','no matching');
+  TE('unqualified column','SUM([Revenue])','Shipment[Revenue]');
+  TE('RELATED outside row context','RELATED(Customer[Segment])','row context');
+  TE('== is rejected','CALCULATE(SUM(Shipment[Revenue]), Shipment[Mode] == "Air")','single =');
+  TE('function in boolean filter','CALCULATE(SUM(Shipment[Revenue]), Shipment[Revenue] > AVERAGE(Shipment[Revenue]))','FILTER');
+  const out=(pass===total?'SELFTEST PASS ':'SELFTEST FAIL ')+pass+'/'+total+' (seed '+seed+')';
+  lines.push(out);
+  console.log(out);
+  window.__selftest={pass:pass,total:total,lines:lines,ok:pass===total};
+  return lines;
+}
+
+/* =====================================================================
+   10. Boot
+   ===================================================================== */
+(function boot(){
+  const q=new URLSearchParams(location.search);
+  if(q.has('selftest')){
+    document.body.classList.add('selftest');
+    const seed=parseInt(q.get('seed'),10);
+    let lines;
+    try{lines=runSelfTest(Number.isFinite(seed)?seed:20260824);}
+    catch(e){lines=['SELFTEST FAIL exception: '+e.message];console.log(lines[0]);window.__selftest={ok:false,pass:0,total:0,lines:lines};}
+    $('selftest-out').textContent=lines.join('\n');
+    return;
+  }
+  const saved=lsLoad();
+  state.saved.solved=saved.solved||{};
+  if(LEVELS.includes(saved.level))state.level=saved.level;
+  if(Number.isInteger(saved.idx)&&saved.idx>=0&&saved.idx<levelList().length)state.idx=saved.idx;
+  const qs=parseInt(q.get('seed'),10);
+  const seed=Number.isFinite(qs)?qs:(Number.isInteger(saved.seed)?saved.seed:Math.floor(Math.random()*100000));
+  setData(seed);
+  bind();renderAll();
+})();
+</script>
+</body>
+</html>
