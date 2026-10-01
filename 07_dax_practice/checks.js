@@ -171,8 +171,9 @@ function sameVal(a,b,tol){
     if(!Number.isFinite(a)||!Number.isFinite(b))return false;
     return Math.abs(a-b)<=tol*Math.max(1,Math.abs(a),Math.abs(b));
   }
-  return a===b;
+  return a===b;   // text (and dates) compare exactly: case, spaces and punctuation all count
 }
+function textMismatch(a,b){return typeof a==='string'&&typeof b==='string'&&a!==b;}
 function normCode(s){return s.replace(/\/\/.*$/gm,'').replace(/--.*$/gm,'').replace(/^\s*[A-Za-z_][A-Za-z0-9_ %#.$\-]*=\s*(?!=)/,'').replace(/\s+/g,'').toLowerCase();}
 function evalIn(code,c){return evalMeasure(code,{slicers:c.slicers,rowFilters:c.rowFilters,groupBy:c.groupBy});}
 // returns {status:'parse'|'runtime'|'ok'|'wrong', error, rows, warnings}
@@ -187,7 +188,9 @@ function grade(ch,code,P){
     const exp=evalIn(ref,c);
     let got=null,bad=false;
     try{got=evalIn(code,c);}catch(e){if(e instanceof DaxError){err=err||e;bad=true;}else throw e;}
-    rows.push({label:c.label,user:got,exp:exp,match:!bad&&sameVal(got,exp,tol),err:bad});
+    const tm=!bad&&textMismatch(got,exp);
+    rows.push({label:c.label,user:got,exp:exp,match:!bad&&sameVal(got,exp,tol),err:bad,textDiff:tm,
+      textNote:tm?(got.toLowerCase()===exp.toLowerCase()?'differs only in upper/lower case':(got.trim()===exp.trim()?'differs only in leading/trailing spaces':'different text')):''});
   }
   if(err)return {status:'runtime',error:err,rows:rows,warnings:warnings};
   return {status:rows.every(r=>r.match)?'ok':'wrong',rows:rows,warnings:warnings};

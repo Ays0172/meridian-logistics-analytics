@@ -100,7 +100,13 @@ function parseFormula(src0){
     return parseOr();
   }
   function parseOr(){let l=parseAnd();while(isOp('||')){const o=next();l={t:'bin',op:'||',l:l,r:parseAnd(),pos:o.pos};}return l;}
-  function parseAnd(){let l=parseCmp();while(isOp('&&')){const o=next();l={t:'bin',op:'&&',l:l,r:parseCmp(),pos:o.pos};}return l;}
+  function parseAnd(){let l=parseNot();while(isOp('&&')){const o=next();l={t:'bin',op:'&&',l:l,r:parseNot(),pos:o.pos};}return l;}
+  // NOT as a prefix operator (NOT ISBLANK(x), NOT [Flag]): lower precedence than comparisons. NOT(x) stays an ordinary call.
+  function parseNot(){
+    const t=peek();
+    if(t.type==='id'&&t.v.toUpperCase()==='NOT'&&!(toks[p+1]&&toks[p+1].type==='op'&&toks[p+1].v==='(')){next();return {t:'un',op:'NOT',e:parseNot(),pos:t.pos};}
+    return parseCmp();
+  }
   function parseCmp(){
     let l=parseConcat();
     for(;;){
@@ -335,14 +341,16 @@ function extremum(vals,isMax,node){
 }
 
 /* ---------------- Filter arguments of CALCULATE ---------------- */
-function isPredicate(n){return (n.t==='bin'&&['=','<>','<','>','<=','>=','&&','||','in'].includes(n.op))||(n.t==='call'&&['NOT','AND','OR'].includes(n.name));}
+function isPredicate(n){return (n.t==='bin'&&['=','<>','<','>','<=','>=','&&','||','in'].includes(n.op))||(n.t==='un'&&n.op==='NOT')||(n.t==='call'&&['NOT','AND','OR'].includes(n.name));}
 function splitAnd(n){return (n.t==='bin'&&n.op==='&&')?splitAnd(n.l).concat(splitAnd(n.r)):[n];}
 const PRED_OK=new Set(['BLANK','TRUE','FALSE','NOT','AND','OR','DATE','YEAR','MONTH','DAY','EOMONTH','INT','MOD','ABS','ROUND']);
+// a scalar sub-expression with no column, measure or table references (constants, VARs, arithmetic, IF/COALESCE/...) is fine inside a True/False filter
+function scalarOnly(n){let ok=true;(function w(x){if(!x||typeof x!=='object'||!ok)return;if(x.t==='col'||x.t==='mref'||x.t==='let'||(x.t==='id'&&TABLE_LC[x.name.toLowerCase()])){ok=false;return;}for(const k of ['l','r','e'])if(x[k])w(x[k]);for(const k of ['args','items'])if(x[k])x[k].forEach(w);})(n);return ok;}
 function predCols(n,out){
   switch(n.t){
     case 'col':{const r=resolveCol(n);out.set(r.T+'['+r.col+']',r);break;}
     case 'call':
-      if(!PRED_OK.has(n.name))throw new DaxError("A True/False filter inside CALCULATE can't call "+n.name+"(). Use FILTER(table, condition) instead, or compute the value in a VAR first.",n.pos,n.name.length);
+      if(!PRED_OK.has(n.name)&&!scalarOnly(n))throw new DaxError("A True/False filter inside CALCULATE can't call "+n.name+"(). Use FILTER(table, condition) instead, or compute the value in a VAR first.",n.pos,n.name.length);
       n.args.forEach(a=>predCols(a,out));break;
     case 'mref':throw new DaxError("A True/False filter inside CALCULATE can't use the measure ["+n.name+"]. Store it in a VAR first, or use FILTER(table, condition).",n.pos,(n.end||n.pos)-n.pos);
     case 'bin':predCols(n.l,out);predCols(n.r,out);break;
@@ -594,17 +602,17 @@ const FN={
     arity(n,1,1);const {T,col}=needCol(n.args[0],'MIN');return extremum(colVals(T,col,env.ctx),false,n);},
   MAX(n,env){if(n.args.length===2){const a=sc(ev(n.args[0],env)),b=sc(ev(n.args[1],env));return a==null?b:(b==null?a:Math.max(a,b));}
     arity(n,1,1);const {T,col}=needCol(n.args[0],'MAX');return extremum(colVals(T,col,env.ctx),true,n);},
-  COUNT(n,env){arity(n,1,1);const {T,col}=needCol(n.args[0],'COUNT');return colVals(T,col,env.ctx).filter(v=>v!=null).length;},
+  COUNT(n,env){arity(n,1,1);const {T,col}=needCol(n.args[0],'COUNT');const k=colVals(T,col,env.ctx).filter(v=>v!=null).length;return k||null;},   // COUNT of nothing is BLANK, as in DAX
   COUNTA(n,env){return FN.COUNT(n,env);},
   COUNTBLANK(n,env){arity(n,1,1);const {T,col}=needCol(n.args[0],'COUNTBLANK');return colVals(T,col,env.ctx).filter(v=>v==null||v==='').length;},
-  DISTINCTCOUNT(n,env){arity(n,1,1);const {T,col}=needCol(n.args[0],'DISTINCTCOUNT');return new Set(colVals(T,col,env.ctx).map(norm)).size;},
-  COUNTROWS(n,env){arity(n,1,1);return tableArg(n.args[0],env).rows.length;},
+  DISTINCTCOUNT(n,env){arity(n,1,1);const {T,col}=needCol(n.args[0],'DISTINCTCOUNT');const k=new Set(colVals(T,col,env.ctx).map(norm)).size;return k||null;},
+  COUNTROWS(n,env){arity(n,1,1);const k=tableArg(n.args[0],env).rows.length;return k||null;},   // COUNTROWS of an empty table is BLANK, as in DAX
   ISEMPTY(n,env){arity(n,1,1);return tableArg(n.args[0],env).rows.length===0;},
   SUMX(n,env){return sumNums(iterVals(n,env).map(x=>numOf(x,n)));},
   AVERAGEX(n,env){const v=iterVals(n,env).map(x=>numOf(x,n));return v.length?v.reduce((a,b)=>a+b,0)/v.length:null;},
   MAXX(n,env){return extremum(iterVals(n,env),true,n);},
   MINX(n,env){return extremum(iterVals(n,env),false,n);},
-  COUNTX(n,env){return iterVals(n,env).length;},
+  COUNTX(n,env){return iterVals(n,env).length||null;},
   CONCATENATEX(n,env){
     arity(n,2,Infinity);
     const tv=tableArg(n.args[0],env);
@@ -925,7 +933,7 @@ function ev(n,env){
       for(const v of n.vars)vars[v.name.toLowerCase()]=ev(v.e,e2);
       return ev(n.body,e2);
     }
-    case 'un':{const v=numOf(sc(ev(n.e,env),n),n);return v==null?null:-v;}
+    case 'un':{if(n.op==='NOT')return !truthy(sc(ev(n.e,env),n));const v=numOf(sc(ev(n.e,env),n),n);return v==null?null:-v;}
     case 'call':{
       const f=FN[n.name];
       if(!f){const s=nearest(n.name,Object.keys(FN));throw new DaxError("Unknown function "+n.raw+"()."+(s?" Did you mean "+s+"()?":" This trainer supports: "+Object.keys(FN).join(', ')+"."),n.pos,n.raw.length);}

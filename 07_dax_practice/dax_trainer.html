@@ -47,7 +47,7 @@ input[type=number]{width:110px}
 .badge.Beginner{color:var(--ok);border-color:var(--ok)}
 .badge.Intermediate{color:var(--info);border-color:var(--info)}
 .badge.Pro{color:var(--warn);border-color:var(--warn)}
-.prompt{font-size:1.05rem;margin:6px 0 4px}
+.prompt{font-size:1.05rem;margin:6px 0 4px;white-space:pre-line}
 .meta{color:var(--muted);font-size:.88rem}
 textarea{display:block;width:100%;min-height:150px;resize:vertical;padding:10px;border-radius:8px;border:1px solid var(--border);background:var(--code-bg);color:var(--fg);font:16px/1.45 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;tab-size:2}
 textarea:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
@@ -352,7 +352,7 @@ function tableHtml(rows,showAll){
     note='<div class="meta mt">Showing '+idx.length+' of '+rows.length+' rows (mismatches first). <button id="showAllRows">Show all '+rows.length+' rows</button></div>';
   }else if(showAll&&rows.length>MAX_ROWS)note='<div class="meta mt"><button id="showAllRows">Show fewer rows</button></div>';
   return '<div class="scroll"><table><thead><tr><th>Context</th><th>Your result</th><th>Expected</th></tr></thead><tbody>'+
-    idx.map(i=>{const r=rows[i];return '<tr class="'+(r.match?'':'miss')+'"><td>'+esc(r.label)+'</td><td class="num">'+(r.err?'error':esc(fmt(r.user)))+'</td><td class="num">'+esc(fmt(r.exp))+'</td></tr>';}).join('')+'</tbody></table></div>'+note;
+    idx.map(i=>{const r=rows[i];return '<tr class="'+(r.match?'':'miss')+'"><td>'+esc(r.label)+'</td><td class="num">'+(r.err?'error':(r.textDiff?'"'+esc(r.user)+'"':esc(fmt(r.user))))+'</td><td class="num">'+(r.textDiff?'"'+esc(r.exp)+'"<div class="meta">text must match exactly: '+esc(r.textNote)+'</div>':esc(fmt(r.exp)))+'</td></tr>';}).join('')+'</tbody></table></div>'+note;
 }
 function renderResult(ch,code,res){
   state.last={ch:ch,code:code,res:res};

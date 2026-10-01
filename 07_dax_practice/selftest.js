@@ -159,6 +159,21 @@ function engineTests(D,log){
   T('Weight column exists','SUM(Shipment[Weight])',sum(S,s=>s.Weight));
   T('Date[Date] MAX is a date','MAX(Date[Date]) = DATE(2026,12,31)',true);
   T('DeliveryDate relationship is inactive by default','CALCULATE(COUNTROWS(Shipment), Date[Year] = 2026)',S.filter(s=>s._d.Year===2026).length);
+  T('scalar VAR in a True/False filter','VAR T = 5000 RETURN CALCULATE([Total Revenue], Shipment[Revenue] > T)',sum(S.filter(s=>s.Revenue>5000),s=>s.Revenue));
+  T('scalar expression in a True/False filter','VAR T = 2500 RETURN CALCULATE(COUNTROWS(Shipment), Shipment[Revenue] > T * 2, Shipment[Revenue] <= IF(T > 0, 3 * T, 0))',S.filter(s=>s.Revenue>5000&&s.Revenue<=7500).length);
+  T('VAR holding an aggregate in a filter','VAR A = AVERAGE(Shipment[Revenue]) RETURN CALCULATE(COUNTROWS(Shipment), Shipment[Revenue] > A)',S.filter(s=>s.Revenue>totalRev/S.length).length);
+  T('row-context VAR in a filter','SUMX(Customer, VAR k = Customer[CustomerKey] RETURN CALCULATE(COUNTROWS(Shipment), Shipment[CustomerKey] = k))',S.length);
+  T('NOT as a prefix operator','CALCULATE(COUNTROWS(Shipment), NOT Shipment[Mode] = "Air")',S.filter(s=>s.Mode!=='Air').length);
+  T('NOT prefix binds looser than comparison','IF(NOT 1 > 2, "y", "n")','y');
+  T('NOT prefix on a function call','IF(NOT ISBLANK(CALCULATE(SUM(Shipment[Revenue]), Shipment[Mode] = "Nope")), 1, 2)',2);
+  T('NOT(x) call form still works','IF(NOT(1 > 2) && NOT(ISBLANK(1)), 1, 0)',1);
+  T('COUNTROWS of an empty table is blank','CALCULATE(COUNTROWS(Shipment), Shipment[Mode] = "Nope")',null);
+  T('COUNTROWS(FILTER) with no match is blank','COUNTROWS(FILTER(Shipment, Shipment[Revenue] < 0))',null);
+  T('COUNT of no rows is blank','CALCULATE(COUNT(Shipment[Revenue]), Shipment[Mode] = "Nope")',null);
+  T('DISTINCTCOUNT of no rows is blank','CALCULATE(DISTINCTCOUNT(Shipment[CustomerKey]), Shipment[Mode] = "Nope")',null);
+  T('blank COUNTROWS + 0 stays numeric','CALCULATE(COUNTROWS(Shipment), Shipment[Mode] = "Nope") + 0',0);
+  T('blank COUNTROWS equals 0','CALCULATE(COUNTROWS(Shipment), Shipment[Mode] = "Nope") = 0',true);
+  TE('aggregation of another column in a filter stays rejected','CALCULATE(COUNTROWS(Shipment), Shipment[Revenue] > AVERAGE(Shipment[Cost]))','VAR');
   TE('naked column','Shipment[Revenue]','aggregation');
   TE('unknown function','SUMM(Shipment[Revenue])','Did you mean SUM');
   TE('unknown column','SUM(Shipment[Revenu])','Did you mean Shipment[Revenue]');
@@ -211,7 +226,7 @@ function tinyTests(log){
   T('TOPN n=3 -> 3 rows, sum 440','SUMX(TOPN(3, ALL(Customer), [Total Revenue]), [Total Revenue])',440);
   T('TOPN ASC n=2 -> Delta + Gamma = 150','SUMX(TOPN(2, ALL(Customer), [Total Revenue], ASC), [Total Revenue])',150);
   T('TOPN as CALCULATE filter (one column)','CALCULATE([Total Revenue], TOPN(3, ALL(Customer[CustomerName]), [Total Revenue]))',440);
-  T('TOPN n=0 is empty','COUNTROWS(TOPN(0, ALL(Customer), [Total Revenue]))',0);
+  T('TOPN n=0 is empty','COUNTROWS(TOPN(0, ALL(Customer), [Total Revenue]))',null);
   // DATEADD / month ends
   T('DATEADD -1 MONTH of Mar 2024 = Feb 2024 (29 days)','COUNTROWS(DATEADD(Date[Date], -1, MONTH))',29,rf(YM,'2024-03'));
   T('DATEADD -1 MONTH of Mar 2025 = Feb 2025 (28 days)','COUNTROWS(DATEADD(Date[Date], -1, MONTH))',28,rf(YM,'2025-03'));

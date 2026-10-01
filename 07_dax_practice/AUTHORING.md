@@ -22,7 +22,7 @@ Each topic is one file `topics/Txx_name.js` that calls `registerTopic({id, title
  oracle:(D,ctx)=>value } // REQUIRED, see below
 ```
 
-Rules: `ref` and every alt must be valid real DAX (no engine-only shortcuts, `NOT(x)` needs parentheses, time intelligence takes `Date[Date]`). Every wrong must differ from the oracle on at least one graded row. Library measures (`[Total Revenue]`, `[Total Cost]`, `[Profit]`, `[Shipments]`, `[Total FFE]`, `[On-Time %]`) may be used from Topic 2 on; a measure ref inside an iterator is evaluated with an implicit CALCULATE. BLANK and 0 compare equal when grading. Keep grids at or below 60 result rows (one level by Date[YearMonth] is 31).
+Rules: `ref` and every alt must be valid real DAX (no engine-only shortcuts, time intelligence takes `Date[Date]`; `NOT` works both as `NOT(x)` and as a prefix operator `NOT ISBLANK(x)`, with lower precedence than comparisons). Every wrong must differ from the oracle on at least one graded row. Library measures (`[Total Revenue]`, `[Total Cost]`, `[Profit]`, `[Shipments]`, `[Total FFE]`, `[On-Time %]`) may be used from Topic 2 on; a measure ref inside an iterator is evaluated with an implicit CALCULATE. BLANK and 0 compare equal when grading. Keep grids at or below 60 result rows (one level by Date[YearMonth] is 31).
 
 Pattern rules (`checks`, `warn`): `slash`, `unqual`, `filterInCalc`, `avgRatio`, `ffeScope`, `allTable`, `sumxRedundant`, `hardcodedPeriod`, `varRepeat`. A ref must not trigger a warn-kind rule (set `refWarns:['rule']` on the challenge to allow one).
 
@@ -60,12 +60,13 @@ Aggregation: SUM AVERAGE MIN MAX (also 2-arg scalar MIN/MAX, dates) COUNT COUNTA
 
 ## Known limits and deviations from real DAX
 
-- A True/False filter in CALCULATE may use one column, no aggregations or measure refs (use FILTER or a VAR), like real DAX. A table used as a filter must have one column or be a whole table (multi-column virtual tables and multi-column TREATAS are rejected; use one per column).
+- A True/False filter in CALCULATE may use one column of the filtered table. The other side may be a constant, a scalar VAR, or a scalar expression with no column or measure references (`VAR T = 5000 RETURN CALCULATE([Total Revenue], Shipment[Revenue] > T)`); aggregations of columns and measure refs are rejected, like real DAX (store them in a VAR, or use FILTER). A table used as a filter must have one column or be a whole table (multi-column virtual tables and multi-column TREATAS are rejected; use one per column).
 - A filter on `Date[Date]` removes the other filters on the Date table (marked date table); the removal also applies to the Date filters of the outer context only, not to other filter arguments in the same CALCULATE.
 - Time intelligence reads the visible `Date[Date]`; DATEADD/SAMEPERIODLASTYEAR need a contiguous selection; a whole-month selection shifts to the whole shifted month (Feb 2025 -> all of Feb 2024). A single 29 Feb shifts to 28 Feb. DATESINPERIOD from a month-end uses month-end arithmetic (31 Mar, -3 MONTH = 1 Jan..31 Mar). Results are clipped to the date table (2024-2026). PREVIOUSMONTH/QUARTER/YEAR use the first visible date; NEXTMONTH the last. Real DAX edge cases beyond these may differ.
 - PREVIOUSMONTH and DATEADD differ on the grand total (first date vs whole range), so such challenges set `noTotal:true`.
 - RANKX: BLANK current value returns BLANK; blank row values are ignored; a bare SUM(...) as the expression does not transition (all rows tie), as in DAX. TOPN keeps ties; blank sorts lowest.
 - ISINSCOPE is true for the `groupBy` columns of the row and is cleared when ALL/REMOVEFILTERS/ALLSELECTED on that column or its table is applied in a CALCULATE (approximation of real scope handling).
 - ALLSELECTED restores the outer slicer filters of the named columns/table (the shadow filter context); other row filters of the visual stay.
-- SUMMARIZE can group Shipment by Customer or Date columns, not Customer by Shipment columns. No GENERATESERIES, CROSSFILTER, IFERROR, UNION, LOOKUPVALUE, FORMAT, SELECTCOLUMNS or user-defined functions. Text comparison is case-insensitive. Date vs int comparisons raise the DateKey error; Date vs text is rejected.
+- SUMMARIZE can group Shipment by Customer or Date columns, not Customer by Shipment columns. No GENERATESERIES, CROSSFILTER, IFERROR, UNION, LOOKUPVALUE, FORMAT, SELECTCOLUMNS or user-defined functions. Date vs int comparisons raise the DateKey error; Date vs text is rejected.
+- COUNT, COUNTA, COUNTX, COUNTROWS and DISTINCTCOUNT over no rows return BLANK (not 0), like SUM; BLANK = 0 is still TRUE and grading treats them as equal. Text comparison inside formulas is case-insensitive, but a text result is graded exactly (case, spaces, punctuation) and a mismatch is reported in the result table.
 - BLANK + number counts BLANK as 0; `/` by zero is Infinity (DIVIDE is blank), as in DAX.

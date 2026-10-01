@@ -31,7 +31,7 @@ registerTopic({
   challenges:[
     {id:'T12-01',level:'Pro',title:'YoY % growth, blank-safe',by:['Date[Year]','Date[MonthNo]'],checks:['slash','unqual','hardcodedPeriod','varRepeat'],
      slicer:[{col:'Shipment[Region]',vals:['Asia','Europe']}],
-     prompt:`Year-over-year growth % of revenue, shown by year with the months below it (the slicer limits the report to Asia and Europe). Steps: 1) Cur = revenue of the row; 2) PY = revenue of the same period one year earlier; 3) return BLANK when PY is blank or 0 (the whole first year, and any month without prior-year revenue); 4) otherwise (Cur - PY) / PY. A year row compares with the whole previous year.`,
+     prompt:`Year-over-year growth % of revenue, shown by year with the months below it (the slicer limits the report to Asia and Europe).\nSteps:\n1) Cur = revenue of the row\n2) PY = revenue of the same period one year earlier\n3) return BLANK when PY is blank or 0 (the whole first year, and any month without prior-year revenue)\n4) otherwise (Cur - PY) / PY. A year row compares with the whole previous year.`,
      hint:`VAR Cur = [Total Revenue]  VAR PY = CALCULATE([Total Revenue], SAMEPERIODLASTYEAR(Date[Date]))  RETURN IF(...PY is not blank..., DIVIDE(Cur - PY, PY))`,
      ref:`VAR Cur = [Total Revenue]
 VAR PY = CALCULATE([Total Revenue], SAMEPERIODLASTYEAR(Date[Date]))
@@ -51,7 +51,7 @@ RETURN IF(NOT(ISBLANK(PY)), DIVIDE(Cur - PY, PY))`},
 
     {id:'T12-02',level:'Pro',title:'Pareto: cumulative % of revenue by customer',by:['Customer[CustomerName]'],checks:['slash','unqual','varRepeat'],
      slicer:[{col:'Shipment[Mode]',vals:['Ocean','Road']}],
-     prompt:`Pareto cumulative %: customers ranked by revenue (highest first); for each customer, the % of total revenue earned by that customer PLUS all customers with higher revenue. The slicer limits the report to Ocean and Road, and the percentages are of what the slicer leaves. The best customer shows its own share, the last one 100%. The total row stays BLANK. Steps: 1) CustRev = revenue of the row (a VAR, because it must not change inside the filter); 2) AllRev = revenue of all selected customers; 3) Running = sum of revenue of the customers whose revenue >= CustRev; 4) return Running / AllRev.`,
+     prompt:`Pareto cumulative %: customers ranked by revenue (highest first); for each customer, the % of total revenue earned by that customer PLUS all customers with higher revenue. The slicer limits the report to Ocean and Road, and the percentages are of what the slicer leaves. The best customer shows its own share, the last one 100%. The total row stays BLANK.\nSteps:\n1) CustRev = revenue of the row (a VAR, because it must not change inside the filter)\n2) AllRev = revenue of all selected customers\n3) Running = sum of revenue of the customers whose revenue >= CustRev\n4) return Running / AllRev.`,
      hint:`VAR Running = SUMX(FILTER(ALLSELECTED(Customer[CustomerName]), [Total Revenue] >= CustRev), [Total Revenue]). The comparison must use the VAR: inside FILTER, [Total Revenue] is re-evaluated for each customer, so comparing it with itself is always true.`,
      ref:`VAR CustRev = [Total Revenue]
 VAR AllRev = CALCULATE([Total Revenue], ALLSELECTED(Customer[CustomerName]))
@@ -80,7 +80,7 @@ RETURN IF(HASONEVALUE(Customer[CustomerName]), DIVIDE(Running, AllRev))`}],
 
     {id:'T12-03',level:'Pro',title:'ABC classification of customers',by:['Customer[CustomerName]'],checks:['slash','unqual','varRepeat'],
      slicer:[{col:'Shipment[Region]',vals:['Asia','Europe']}],
-     prompt:`ABC class of each customer, as text. Customers are ranked by revenue (highest first) and the Pareto cumulative % (this customer plus all higher ones, as a share of the revenue the slicer leaves: Asia and Europe) decides the class: "A" when the cumulative % is 80% or less, "B" when it is 95% or less, otherwise "C". The total row stays BLANK. Steps: 1) CustRev; 2) AllRev; 3) CumPct = revenue of customers with revenue >= CustRev, divided by AllRev; 4) SWITCH(TRUE(), ...) on CumPct.`,
+     prompt:`ABC class of each customer, as text. Customers are ranked by revenue (highest first) and the Pareto cumulative % (this customer plus all higher ones, as a share of the revenue the slicer leaves: Asia and Europe) decides the class: "A" when the cumulative % is 80% or less, "B" when it is 95% or less, otherwise "C". The total row stays BLANK.\nSteps:\n1) CustRev\n2) AllRev\n3) CumPct = revenue of customers with revenue >= CustRev, divided by AllRev\n4) SWITCH(TRUE(), ...) on CumPct.`,
      hint:`Same Pareto building blocks as the previous challenge, then RETURN IF(HASONEVALUE(...), SWITCH(TRUE(), CumPct <= 0.8, "A", CumPct <= 0.95, "B", "C")). SWITCH(TRUE(), ...) returns the first branch whose test is true, so test the smallest limit first.`,
      ref:`VAR CustRev = [Total Revenue]
 VAR AllRev = CALCULATE([Total Revenue], ALLSELECTED(Customer[CustomerName]))
@@ -113,7 +113,7 @@ RETURN IF(HASONEVALUE(Customer[CustomerName]), SWITCH(TRUE(), CumPct <= 0.95, "B
      oracle:(D,c)=>{const v=cumShare(D,c);if(v==null)return null;return v<=0.8?'A':(v<=0.95?'B':'C');}},
 
     {id:'T12-04',level:'Pro',title:'Budget vs actual with TREATAS',by:['Date[Year]','Shipment[Region]'],checks:['slash','unqual'],
-     prompt:`Budget variance %: (actual revenue - budget) / budget, shown by year with the regions below it. The budget lives in the Target table (YearMonth, Region, TargetRevenue), which has no relationship, so TREATAS must carry the filters. Steps: 1) Actual = revenue of the row; 2) Budget = SUM(Target[TargetRevenue]) for the months of the row (the row's Date[YearMonth] values) and the regions of the row (Shipment[Region] values); 3) Variance = Actual - Budget; 4) return Variance / Budget, BLANK when there is no budget. The total row covers all months and regions.`,
+     prompt:`Budget variance %: (actual revenue - budget) / budget, shown by year with the regions below it. The budget lives in the Target table (YearMonth, Region, TargetRevenue), which has no relationship, so TREATAS must carry the filters.\nSteps:\n1) Actual = revenue of the row\n2) Budget = SUM(Target[TargetRevenue]) for the months of the row (the row's Date[YearMonth] values) and the regions of the row (Shipment[Region] values)\n3) Variance = Actual - Budget\n4) return Variance / Budget, BLANK when there is no budget. The total row covers all months and regions.`,
      hint:`CALCULATE(SUM(Target[TargetRevenue]), TREATAS(VALUES(Date[YearMonth]), Target[YearMonth]), TREATAS(VALUES(Shipment[Region]), Target[Region])). The two TREATAS arguments narrow the Target table by month and by region.`,
      ref:`VAR Actual = [Total Revenue]
 VAR Budget = CALCULATE(
@@ -145,7 +145,7 @@ RETURN IF(NOT(ISBLANK(Budget)), DIVIDE(Actual - Budget, Budget))`}],
        return (act-bud)/bud;}},
 
     {id:'T12-05',level:'Pro',title:'New customers in the month',by:['Date[YearMonth]'],checks:['unqual'],
-     prompt:`Number of NEW customers per month: customers whose very first shipment (over all time) falls inside the month of the row. The total row counts the customers whose first shipment is anywhere in the data (all of them). Steps: 1) MonthFirst and MonthLast = first and last DateKey of the row; 2) for each customer, FirstShip = the earliest Shipment[DateKey] over all dates; 3) keep customers with FirstShip between MonthFirst and MonthLast; 4) count them.`,
+     prompt:`Number of NEW customers per month: customers whose very first shipment (over all time) falls inside the month of the row. The total row counts the customers whose first shipment is anywhere in the data (all of them).\nSteps:\n1) MonthFirst and MonthLast = first and last DateKey of the row\n2) for each customer, FirstShip = the earliest Shipment[DateKey] over all dates\n3) keep customers with FirstShip between MonthFirst and MonthLast\n4) count them.`,
      hint:`Inside FILTER(VALUES(Customer[CustomerName]), ...) use CALCULATE(MIN(Shipment[DateKey]), ALL(Date)): the customer comes from the row, ALL(Date) removes the month so MIN sees every shipment. Keep both sides int DateKeys (Date[DateKey]); do not compare an int with a Date.`,
      ref:`VAR MonthFirst = MIN(Date[DateKey])
 VAR MonthLast = MAX(Date[DateKey])
@@ -177,7 +177,7 @@ RETURN COUNTROWS(FILTER(VALUES(Customer[CustomerName]), CALCULATE(MIN(Shipment[D
      oracle:(D,c)=>{const r=range(D,c);if(!r)return null;const first={};D.Shipment.forEach(s=>{if(first[s.CustomerKey]==null||s._n<first[s.CustomerKey])first[s.CustomerKey]=s._n;});return Object.values(first).filter(n=>n>=r.min&&n<=r.max).length;}},
 
     {id:'T12-06',level:'Pro',title:'3-month moving average, blank until 3 months exist',by:['Date[YearMonth]'],noTotal:true,checks:['slash','unqual','varRepeat'],
-     prompt:`3-month moving average of monthly revenue: the revenue of the current month and the two months before it, divided by 3. The Date table starts in January 2024, so January and February 2024 do not have three months behind them and must show BLANK (not a smaller average). The grand total row is not graded. Steps: 1) Last3M = the three-month window ending at the last date of the row; 2) MonthsInWindow = how many calendar months of the Date table fall in that window; 3) Revenue3M = revenue in the window; 4) BLANK unless MonthsInWindow = 3, otherwise Revenue3M / MonthsInWindow.`,
+     prompt:`3-month moving average of monthly revenue: the revenue of the current month and the two months before it, divided by 3. The Date table starts in January 2024, so January and February 2024 do not have three months behind them and must show BLANK (not a smaller average). The grand total row is not graded.\nSteps:\n1) Last3M = the three-month window ending at the last date of the row\n2) MonthsInWindow = how many calendar months of the Date table fall in that window\n3) Revenue3M = revenue in the window\n4) BLANK unless MonthsInWindow = 3, otherwise Revenue3M / MonthsInWindow.`,
      hint:`DATESINPERIOD(Date[Date], MAX(Date[Date]), -3, MONTH) in a VAR; CALCULATE(DISTINCTCOUNT(Date[YearMonth]), Last3M) counts the months that really exist in it.`,
      ref:`VAR LastDate = MAX(Date[Date])
 VAR Last3M = DATESINPERIOD(Date[Date], LastDate, -3, MONTH)
@@ -200,7 +200,7 @@ RETURN CALCULATE([Total Revenue], Last3M)`}],
 
     {id:'T12-07',level:'Pro',title:'On-time % vs same month last year (points)',by:['Date[YearMonth]'],checks:['slash','unqual','hardcodedPeriod','varRepeat'],
      slicer:[{col:'Shipment[Mode]',vals:['Ocean','Road']}],
-     prompt:`Change in on-time % versus the same period last year, in PERCENTAGE POINTS (a move from 70% to 75% shows 5, not 0.05 and not 7%). The slicer limits the report to Ocean and Road. Use the [On-Time %] measure. Steps: 1) Now = on-time % of the row; 2) PY = on-time % of the same period one year earlier; 3) BLANK when either is blank (the whole first year); 4) otherwise (Now - PY) * 100. The total row compares the whole period with the period a year earlier.`,
+     prompt:`Change in on-time % versus the same period last year, in PERCENTAGE POINTS (a move from 70% to 75% shows 5, not 0.05 and not 7%). The slicer limits the report to Ocean and Road. Use the [On-Time %] measure.\nSteps:\n1) Now = on-time % of the row\n2) PY = on-time % of the same period one year earlier\n3) BLANK when either is blank (the whole first year)\n4) otherwise (Now - PY) * 100. The total row compares the whole period with the period a year earlier.`,
      hint:`VAR PY = CALCULATE([On-Time %], SAMEPERIODLASTYEAR(Date[Date])). Test both VARs with ISBLANK before subtracting, because BLANK - number is not BLANK in DAX.`,
      ref:`VAR Now = [On-Time %]
 VAR PY = CALCULATE([On-Time %], SAMEPERIODLASTYEAR(Date[Date]))
@@ -222,7 +222,7 @@ RETURN IF(NOT(ISBLANK(PY)), DIVIDE(Now, PY) - 1)`}],
      oracle:(D,c)=>{const r=range(D,c);if(!r)return null;const p=shifted(r,-12);const ot=rows=>rows.length?H.sum(rows,s=>s.IsOnTime)/rows.length:null;const now=ot(H.vis(D,c));const py=ot(H.vis(D,c,{drop:['Date'],from:p.min,to:p.max}));if(now==null||py==null)return null;return (now-py)*100;}},
 
     {id:'T12-08',level:'Pro',title:'Revenue bridge: price effect vs last year',by:['Date[YearMonth]'],noTotal:true,checks:['slash','unqual','varRepeat'],
-     prompt:`Revenue bridge, price effect: how much of the revenue change versus the same month last year comes from a different average revenue per shipment (price/mix), holding the number of shipments at this year's level. Price effect = (AvgNow - AvgPY) * ShipmentsNow, where Avg = revenue / shipments. Steps: 1) RevNow and CntNow; 2) RevPY and CntPY for the same period one year earlier; 3) AvgNow and AvgPY; 4) BLANK when there is no prior-year shipment, otherwise the price effect. The grand total row is not graded.`,
+     prompt:`Revenue bridge, price effect: how much of the revenue change versus the same month last year comes from a different average revenue per shipment (price/mix), holding the number of shipments at this year's level. Price effect = (AvgNow - AvgPY) * ShipmentsNow, where Avg = revenue / shipments.\nSteps:\n1) RevNow and CntNow\n2) RevPY and CntPY for the same period one year earlier\n3) AvgNow and AvgPY\n4) BLANK when there is no prior-year shipment, otherwise the price effect. The grand total row is not graded.`,
      hint:`Compute the prior-year dates once: VAR PYDates = SAMEPERIODLASTYEAR(Date[Date]), then CALCULATE([Total Revenue], PYDates) and CALCULATE([Shipments], PYDates). Check your work by returning the volume effect (CntNow - CntPY) * AvgPY too: volume + price = RevNow - RevPY.`,
      ref:`VAR RevNow = [Total Revenue]
 VAR CntNow = [Shipments]
@@ -232,7 +232,7 @@ VAR CntPY = CALCULATE([Shipments], PYDates)
 VAR AvgNow = DIVIDE(RevNow, CntNow)
 VAR AvgPY = DIVIDE(RevPY, CntPY)
 RETURN
-    IF(CntPY > 0, (AvgNow - AvgPY) * CntNow)`,
+    IF(NOT ISBLANK(CntPY), (AvgNow - AvgPY) * CntNow)`,
      alts:[{code:`VAR CntNow = [Shipments]
 VAR AvgNow = DIVIDE([Total Revenue], CntNow)
 VAR AvgPY = CALCULATE(DIVIDE([Total Revenue], [Shipments]), SAMEPERIODLASTYEAR(Date[Date]))

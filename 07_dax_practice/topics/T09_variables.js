@@ -1,5 +1,5 @@
 "use strict";
-/* Topic 9 - Variables. Stub: add challenges (see AUTHORING.md). */
+/* Topic 9 - Variables. */
 registerTopic({
   id:'T09',title:'Variables',order:9,
   concept:[

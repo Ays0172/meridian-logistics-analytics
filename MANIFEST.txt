@@ -166,11 +166,28 @@ c308928424f568b5       10,641  04_learning/week6/D40-portfolio-packaging.md
 9267e2a99f73c1c9       10,427  04_learning/week6/D42-capstone-retrospective.md
 cee69bd19e47845a           43  05_sql/.gitkeep
 cee69bd19e47845a           43  06_portfolio/.gitkeep
-bdd6ae5b7b497115        1,473  07_dax_practice/README.md
-2115b0cb0b974b6e       73,313  07_dax_practice/dax_trainer.html
+31d335aa44e5084a        9,917  07_dax_practice/AUTHORING.md
+f3c0582acb59b894        5,761  07_dax_practice/README.md
+2a096c0e324690a8       13,527  07_dax_practice/checks.js
+c2852a686c8bfd9e       15,414  07_dax_practice/data.js
+c395e454ffaef1a0       27,573  07_dax_practice/dax_trainer.html
+32c3082d04445718       57,092  07_dax_practice/engine.js
+06d16c7a6a6b2e56       31,110  07_dax_practice/selftest.js
+cf3802165f3aee3c        7,788  07_dax_practice/topics/T01_aggregations.js
+11e201399c970e36        9,065  07_dax_practice/topics/T02_measures_divide.js
+b6db41c481da8ffb       11,032  07_dax_practice/topics/T03_iterators.js
+c744526888be87b6       12,250  07_dax_practice/topics/T04_calculate_basics.js
+dc2f9377a201fee0       13,332  07_dax_practice/topics/T05_removing_filters.js
+142bf0b920040a64       12,006  07_dax_practice/topics/T06_filter_table_functions.js
+2e3ef532be12e4c4       12,321  07_dax_practice/topics/T07_context_transition.js
+c131f7e84611bf1b       13,142  07_dax_practice/topics/T08_logic_scope.js
+238e51b177be6b30       14,124  07_dax_practice/topics/T09_variables.js
+583ddd1654d5e937       15,841  07_dax_practice/topics/T10_time_intelligence.js
+36a21c41b2cef4b0       14,938  07_dax_practice/topics/T11_ranking_topn.js
+83cd67fc54b0ccd0       24,499  07_dax_practice/topics/T12_capstone.js
 e70706fe51482094       16,268  CLAUDE.md
-a4d3055fb559ab35       21,236  README.md
+87a771833c227221       21,399  README.md
 e253f68357398ce2        2,141  SETUP.ps1
 1da3d13ee0c2ad57        4,817  setup_all.py
 ------------------------------------------------------------------------------
-159 files, 7,309,011 bytes (7.3 MB)
+176 files, 7,555,120 bytes (7.6 MB)

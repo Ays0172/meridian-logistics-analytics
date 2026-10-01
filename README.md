@@ -125,8 +125,9 @@ file for each. The curriculum is complete end to end — see §5 for how to work
   on Day 9 (`notes-averaging.md`), added to again on Days 11, 22, 23, 28, 29 and 35,
   then built out properly in Week 6 (Days 37–42: case drills, PL-300 gap analysis,
   STAR stories, the case-study writeup, mock-interview results, retrospective).
-- ✅ `07_dax_practice` — **built.** `dax_trainer.html`, a single-file DAX practice page (random
-  data, in-browser mini-DAX grader); independent of the seeded Meridian dataset.
+- ✅ `07_dax_practice` — **built (v2).** `dax_trainer.html` plus its JS files: a 12-topic DAX course with
+  102 graded challenges (aggregations to time intelligence, ranking and a big-DAX capstone), random
+  seeded data and an in-browser mini-DAX grader; independent of the seeded Meridian dataset. See its README.
 
 You have everything you need to start Monday and run the full six weeks without
 waiting on anyone.
@@ -191,7 +192,7 @@ Meridian-Logistics-Analytics/
 │
 ├── 05_sql/                       ← EMPTY until Day 36
 ├── 06_portfolio/                 ← EMPTY on disk; first written Day 9, built out in Weeks 4–6
-└── 07_dax_practice/              ← dax_trainer.html: standalone DAX practice page (random data, in-browser grader)
+└── 07_dax_practice/              ← DAX trainer v2: dax_trainer.html + JS files, 12 topics / 102 challenges (random data, in-browser grader)
 ```
 
 ---

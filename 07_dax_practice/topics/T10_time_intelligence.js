@@ -109,7 +109,7 @@
        prompt:'Revenue by DELIVERY month: each shipment counts in the month of its DeliveryDateKey instead of the month of its order date. The relationship Shipment[DeliveryDateKey] to Date[DateKey] exists but is inactive.',
        hint:'CALCULATE(expression, USERELATIONSHIP(Shipment[DeliveryDateKey], Date[DateKey])) switches the active relationship for that calculation only.',
        ref:'CALCULATE([Total Revenue], USERELATIONSHIP(Shipment[DeliveryDateKey], Date[DateKey]))',
-       alts:[{code:'CALCULATE(SUM(Shipment[Revenue]), USERELATIONSHIP(Shipment[DeliveryDateKey], Date[DateKey]))'},{code:'CALCULATE([Total Revenue], USERELATIONSHIP(Date[DateKey], Shipment[DeliveryDateKey]))'}],
+       alts:[{code:'CALCULATE(SUM(Shipment[Revenue]), USERELATIONSHIP(Shipment[DeliveryDateKey], Date[DateKey]))'}],
        wrongs:[{code:'[Total Revenue]'},{code:'CALCULATE([Total Revenue], USERELATIONSHIP(Shipment[DateKey], Date[DateKey]))'},{code:'CALCULATE([Total Revenue], DATEADD(Date[Date], 1, MONTH))'}],
        why:'Only one relationship between two tables can be active. USERELATIONSHIP activates the inactive one inside CALCULATE, so the month filter of the row now selects shipments by delivery date. Do not try to filter Shipment[DeliveryDateKey] against Date[Date]: an int key and a Date are different types.',
        oracle:(D,c)=>H.sumOrNull(H.vis(D,c,{dateField:'DeliveryDateKey'}),REV)}
