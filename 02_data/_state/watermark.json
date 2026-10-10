@@ -1,7 +1,7 @@
 {
   "history_start": "2021-08-21",
   "history_end": "2026-08-20",
-  "last_appended_date": "2026-10-09",
+  "last_appended_date": "2026-10-10",
   "daily_rows": {
     "FactBooking": 313.96,
     "FactShipment": 269.11,
@@ -2969,6 +2969,64 @@
           "FactTransportLeg": "live:FactTransportLeg:2026-10-09",
           "FactWarehouseTask": "live:FactWarehouseTask:2026-10-09",
           "FactInventorySnapshot": "live:FactInventorySnapshot:2026-10-09"
+        }
+      }
+    },
+    {
+      "date": "2026-10-10",
+      "files": {
+        "FactBooking": [
+          "/home/runner/work/meridian-logistics-analytics/meridian-logistics-analytics/02_data/raw/FactBooking/year=2026/month=10/part-20261010-00.parquet"
+        ],
+        "FactShipment": [
+          "/home/runner/work/meridian-logistics-analytics/meridian-logistics-analytics/02_data/raw/FactShipment/year=2026/month=10/part-20261010-00.parquet"
+        ],
+        "FactShipmentMilestone": [
+          "/home/runner/work/meridian-logistics-analytics/meridian-logistics-analytics/02_data/raw/FactShipmentMilestone/year=1900/month=01/part-20261010-00.parquet",
+          "/home/runner/work/meridian-logistics-analytics/meridian-logistics-analytics/02_data/raw/FactShipmentMilestone/year=2026/month=10/part-20261010-00.parquet"
+        ],
+        "FactContainerMove": [
+          "/home/runner/work/meridian-logistics-analytics/meridian-logistics-analytics/02_data/raw/FactContainerMove/year=2026/month=10/part-20261010-00.parquet"
+        ],
+        "FactFreightCharge": [
+          "/home/runner/work/meridian-logistics-analytics/meridian-logistics-analytics/02_data/raw/FactFreightCharge/year=2026/month=10/part-20261010-00.parquet"
+        ],
+        "FactTransportLeg": [
+          "/home/runner/work/meridian-logistics-analytics/meridian-logistics-analytics/02_data/raw/FactTransportLeg/year=2026/month=10/part-20261010-00.parquet"
+        ],
+        "FactWarehouseTask": [
+          "/home/runner/work/meridian-logistics-analytics/meridian-logistics-analytics/02_data/raw/FactWarehouseTask/year=2026/month=10/part-20261010-00.parquet"
+        ],
+        "FactPortCall": [
+          "/home/runner/work/meridian-logistics-analytics/meridian-logistics-analytics/02_data/raw/FactPortCall/year=2026/month=10/part-20261010-00.parquet"
+        ],
+        "FactInventorySnapshot": [
+          "/home/runner/work/meridian-logistics-analytics/meridian-logistics-analytics/02_data/raw/FactInventorySnapshot/year=2026/month=10/part-20261010-00.parquet"
+        ]
+      },
+      "rows": {
+        "FactBooking": 301,
+        "FactShipment": 258,
+        "FactShipmentMilestone": 258,
+        "FactContainerMove": 1017,
+        "FactFreightCharge": 843,
+        "FactTransportLeg": 229,
+        "FactWarehouseTask": 380,
+        "FactPortCall": 69,
+        "FactInventorySnapshot": 516
+      },
+      "seeds": {
+        "master_seed": 20260824,
+        "labels": {
+          "FactBooking": "live:FactBooking:2026-10-10",
+          "FactShipment": "live:FactShipment:2026-10-10",
+          "FactShipmentMilestone": "live:FactShipmentMilestone:2026-10-10",
+          "FactPortCall": "live:FactPortCall:2026-10-10",
+          "FactContainerMove": "live:FactContainerMove:2026-10-10",
+          "FactFreightCharge": "live:FactFreightCharge:2026-10-10",
+          "FactTransportLeg": "live:FactTransportLeg:2026-10-10",
+          "FactWarehouseTask": "live:FactWarehouseTask:2026-10-10",
+          "FactInventorySnapshot": "live:FactInventorySnapshot:2026-10-10"
         }
       }
     }
