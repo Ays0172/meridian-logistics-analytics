@@ -62,7 +62,8 @@
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactBooking/year=2026/month=10/part-20261015-00.parquet",
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactBooking/year=2026/month=10/part-20261016-00.parquet",
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactBooking/year=2026/month=10/part-20261017-00.parquet",
-      "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactBooking/year=2026/month=10/part-20261018-00.parquet"
+      "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactBooking/year=2026/month=10/part-20261018-00.parquet",
+      "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactBooking/year=2026/month=10/part-20261019-00.parquet"
     ],
     "FactContainerMove": [
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactContainerMove/year=2026/month=08/part-20260821-00.parquet",
@@ -123,7 +124,8 @@
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactContainerMove/year=2026/month=10/part-20261015-00.parquet",
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactContainerMove/year=2026/month=10/part-20261016-00.parquet",
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactContainerMove/year=2026/month=10/part-20261017-00.parquet",
-      "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactContainerMove/year=2026/month=10/part-20261018-00.parquet"
+      "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactContainerMove/year=2026/month=10/part-20261018-00.parquet",
+      "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactContainerMove/year=2026/month=10/part-20261019-00.parquet"
     ],
     "FactFreightCharge": [
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactFreightCharge/year=2026/month=08/part-20260821-00.parquet",
@@ -184,7 +186,8 @@
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactFreightCharge/year=2026/month=10/part-20261015-00.parquet",
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactFreightCharge/year=2026/month=10/part-20261016-00.parquet",
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactFreightCharge/year=2026/month=10/part-20261017-00.parquet",
-      "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactFreightCharge/year=2026/month=10/part-20261018-00.parquet"
+      "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactFreightCharge/year=2026/month=10/part-20261018-00.parquet",
+      "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactFreightCharge/year=2026/month=10/part-20261019-00.parquet"
     ],
     "FactInventorySnapshot": [
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactInventorySnapshot/year=2026/month=08/part-20260821-00.parquet",
@@ -245,7 +248,8 @@
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactInventorySnapshot/year=2026/month=10/part-20261015-00.parquet",
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactInventorySnapshot/year=2026/month=10/part-20261016-00.parquet",
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactInventorySnapshot/year=2026/month=10/part-20261017-00.parquet",
-      "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactInventorySnapshot/year=2026/month=10/part-20261018-00.parquet"
+      "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactInventorySnapshot/year=2026/month=10/part-20261018-00.parquet",
+      "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactInventorySnapshot/year=2026/month=10/part-20261019-00.parquet"
     ],
     "FactPortCall": [
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactPortCall/year=2026/month=08/part-20260821-00.parquet",
@@ -306,7 +310,8 @@
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactPortCall/year=2026/month=10/part-20261015-00.parquet",
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactPortCall/year=2026/month=10/part-20261016-00.parquet",
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactPortCall/year=2026/month=10/part-20261017-00.parquet",
-      "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactPortCall/year=2026/month=10/part-20261018-00.parquet"
+      "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactPortCall/year=2026/month=10/part-20261018-00.parquet",
+      "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactPortCall/year=2026/month=10/part-20261019-00.parquet"
     ],
     "FactShipment": [
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactShipment/year=2026/month=08/part-20260821-00.parquet",
@@ -367,7 +372,8 @@
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactShipment/year=2026/month=10/part-20261015-00.parquet",
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactShipment/year=2026/month=10/part-20261016-00.parquet",
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactShipment/year=2026/month=10/part-20261017-00.parquet",
-      "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactShipment/year=2026/month=10/part-20261018-00.parquet"
+      "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactShipment/year=2026/month=10/part-20261018-00.parquet",
+      "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactShipment/year=2026/month=10/part-20261019-00.parquet"
     ],
     "FactShipmentMilestone": [
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactShipmentMilestone/year=1900/month=01/part-20260821-00.parquet",
@@ -429,6 +435,7 @@
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactShipmentMilestone/year=1900/month=01/part-20261016-00.parquet",
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactShipmentMilestone/year=1900/month=01/part-20261017-00.parquet",
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactShipmentMilestone/year=1900/month=01/part-20261018-00.parquet",
+      "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactShipmentMilestone/year=1900/month=01/part-20261019-00.parquet",
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactShipmentMilestone/year=2026/month=08/part-20260821-00.parquet",
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactShipmentMilestone/year=2026/month=08/part-20260822-00.parquet",
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactShipmentMilestone/year=2026/month=08/part-20260823-00.parquet",
@@ -487,7 +494,8 @@
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactShipmentMilestone/year=2026/month=10/part-20261015-00.parquet",
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactShipmentMilestone/year=2026/month=10/part-20261016-00.parquet",
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactShipmentMilestone/year=2026/month=10/part-20261017-00.parquet",
-      "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactShipmentMilestone/year=2026/month=10/part-20261018-00.parquet"
+      "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactShipmentMilestone/year=2026/month=10/part-20261018-00.parquet",
+      "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactShipmentMilestone/year=2026/month=10/part-20261019-00.parquet"
     ],
     "FactTransportLeg": [
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactTransportLeg/year=2026/month=08/part-20260821-00.parquet",
@@ -548,7 +556,8 @@
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactTransportLeg/year=2026/month=10/part-20261015-00.parquet",
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactTransportLeg/year=2026/month=10/part-20261016-00.parquet",
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactTransportLeg/year=2026/month=10/part-20261017-00.parquet",
-      "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactTransportLeg/year=2026/month=10/part-20261018-00.parquet"
+      "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactTransportLeg/year=2026/month=10/part-20261018-00.parquet",
+      "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactTransportLeg/year=2026/month=10/part-20261019-00.parquet"
     ],
     "FactWarehouseTask": [
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactWarehouseTask/year=2026/month=08/part-20260821-00.parquet",
@@ -609,7 +618,8 @@
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactWarehouseTask/year=2026/month=10/part-20261015-00.parquet",
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactWarehouseTask/year=2026/month=10/part-20261016-00.parquet",
       "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactWarehouseTask/year=2026/month=10/part-20261017-00.parquet",
-      "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactWarehouseTask/year=2026/month=10/part-20261018-00.parquet"
+      "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactWarehouseTask/year=2026/month=10/part-20261018-00.parquet",
+      "https://raw.githubusercontent.com/Ays0172/meridian-logistics-analytics/main/02_data/raw/FactWarehouseTask/year=2026/month=10/part-20261019-00.parquet"
     ]
   }
 }
